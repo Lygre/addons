@@ -1,0 +1,89 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <antrax>
+            <race>5</race>
+        </antrax>
+        <autoupdate>true</autoupdate>
+        <blinking>
+            <all>
+                <always>false</always>
+                <combat>true</combat>
+                <target>false</target>
+            </all>
+            <follow>
+                <always>true</always>
+                <combat>false</combat>
+                <target>false</target>
+            </follow>
+            <others>
+                <always>true</always>
+                <combat>false</combat>
+                <target>false</target>
+            </others>
+            <party>
+                <always>true</always>
+                <combat>false</combat>
+                <target>false</target>
+            </party>
+            <self>
+                <always>true</always>
+                <combat>true</combat>
+                <target>false</target>
+            </self>
+        </blinking>
+        <brrrr>
+
+        </brrrr>
+        <chronoviper>
+
+        </chronoviper>
+        <lyger>
+
+        </lyger>
+        <lygre>
+
+        </lygre>
+        <nacholibre>
+
+        </nacholibre>
+        <others>
+
+        </others>
+        <profiles>
+
+        </profiles>
+        <replacements>
+            <body>
+
+            </body>
+            <face>
+
+            </face>
+            <feet>
+
+            </feet>
+            <hands>
+
+            </hands>
+            <head>
+
+            </head>
+            <legs>
+
+            </legs>
+            <main>
+
+            </main>
+            <race>
+
+            </race>
+            <ranged>
+
+            </ranged>
+            <sub>
+
+            </sub>
+        </replacements>
+    </global>
+</settings>

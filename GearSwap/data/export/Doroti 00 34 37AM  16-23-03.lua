@@ -1,0 +1,17 @@
+sets.exported={
+    main="Bolelabunga",
+    sub="Culminus",
+    range="Dunna",
+    head="Azimuth Hood",
+    body={ name="Hagondes Coat +1", augments={'Phys. dmg. taken -3%','Magic dmg. taken -3%','"Mag.Atk.Bns."+22',}},
+    hands="Geomancy Mitaines",
+    legs="Psycloth Lappas",
+    feet={ name="Bagua Sandals", augments={'Enhances "Radial Arcana" effect',}},
+    neck="Twilight Torque",
+    waist="Isa Belt",
+    left_ear="Gifted Earring",
+    right_ear="Ethereal Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Lifestream Cape", augments={'Geomancy Skill +1','Indi. eff. dur. +20','Pet: Damage taken -1%',}},
+}

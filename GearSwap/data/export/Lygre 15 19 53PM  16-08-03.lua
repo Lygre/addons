@@ -1,0 +1,17 @@
+sets.exported={
+    main="Bolelabunga",
+    sub="Genmei Shield",
+    ammo="Homiliary",
+    head="Befouled Crown",
+    body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    hands={ name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}},
+    legs={ name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+4','Phys. dmg. taken -3%','CHR+7',}},
+    feet="Arbatel Loafers +1",
+    neck="Loricate Torque",
+    waist="Slipor Sash",
+    left_ear="Sanare Earring",
+    right_ear="Zennaroi Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Defending Ring",
+    back="Solemnity Cape",
+}

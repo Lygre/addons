@@ -1,0 +1,16 @@
+sets.exported={
+    main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Divinator",
+    head={ name="Herculean Helm", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: Haste+4',}},
+    body={ name="Pitre Tobe +1", augments={'Enhances "Overdrive" effect',}},
+    hands={ name="Herculean Gloves", augments={'Pet: Accuracy+29 Pet: Rng. Acc.+29','Pet: "Dbl. Atk."+2','Pet: Attack+14 Pet: Rng.Atk.+14',}},
+    legs={ name="Herculean Trousers", augments={'Pet: "Store TP"+11','Pet: INT+1','Pet: Attack+11 Pet: Rng.Atk.+11','Pet: "Mag.Atk.Bns."+11',}},
+    feet={ name="Herculean Boots", augments={'Pet: Accuracy+20 Pet: Rng. Acc.+20','Pet: "Store TP"+8','Pet: "Mag.Atk.Bns."+13',}},
+    neck="Empath Necklace",
+    waist="Ukko Sash",
+    left_ear="Burana Earring",
+    right_ear="Infused Earring",
+    left_ring="Defending Ring",
+    right_ring="Sheltered Ring",
+    back="Penetrating Cape",
+}

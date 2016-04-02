@@ -1,0 +1,17 @@
+sets.exported={
+    main="Beneficus",
+    sub="Genmei Shield",
+    ammo="Homiliary",
+    head={ name="Telchine Cap", augments={'Mag. Evasion+12','"Cure" potency +7%','Enh. Mag. eff. dur. +10',}},
+    body={ name="Telchine Chas.", augments={'Mag. Evasion+8','"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+    hands={ name="Telchine Gloves", augments={'Mag. Evasion+5','"Cure" potency +6%','Enh. Mag. eff. dur. +10',}},
+    legs={ name="Telchine Braconi", augments={'Mag. Evasion+8','"Cure" potency +6%','Enh. Mag. eff. dur. +10',}},
+    feet="Ebers Duckbills +1",
+    neck="Incanter's Torque",
+    waist="Olympus Sash",
+    left_ear="Andoaa Earring",
+    right_ear="Zennaroi Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    back={ name="Mending Cape", augments={'Healing magic skill +10','Enha.mag. skill +10','Mag. Acc.+5',}},
+}

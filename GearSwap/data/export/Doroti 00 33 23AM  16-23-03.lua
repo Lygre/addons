@@ -1,0 +1,17 @@
+sets.exported={
+    main="Bolelabunga",
+    sub="Culminus",
+    range="Dunna",
+    head="Azimuth Hood",
+    body={ name="Bagua Tunic", augments={'Enhances "Bolster" effect',}},
+    hands="Geomancy Mitaines",
+    legs={ name="Bagua Pants", augments={'Enhances "Mending Halation" effect',}},
+    feet="Azimuth Gaiters",
+    neck="Twilight Torque",
+    waist="Isa Belt",
+    left_ear="Gifted Earring",
+    right_ear="Ethereal Earring",
+    left_ring="Shneddick Ring",
+    right_ring="Defending Ring",
+    back={ name="Lifestream Cape", augments={'Geomancy Skill +1','Indi. eff. dur. +20','Pet: Damage taken -1%',}},
+}

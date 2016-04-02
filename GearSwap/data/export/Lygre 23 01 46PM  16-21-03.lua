@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Colada", augments={'Phys. dmg. taken -2%','STR+12','Accuracy+15','Attack+15','DMG:+15',}},
+    sub={ name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}},
+    ammo="Vanir Battery",
+    head={ name="Amalric Coif", augments={'INT+10','Mag. Acc.+20','Enmity-5',}},
+    body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    hands={ name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}},
+    feet="Ahosi Leggings",
+    neck="Warder's Charm",
+    waist="Flume Belt +1",
+    left_ear="Sanare Earring",
+    right_ear="Eabani Earring",
+    left_ring="Defending Ring",
+    right_ring="Warp Ring",
+    back="Solemnity Cape",
+}

@@ -1,0 +1,233 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <options>
+            <message_printing>false</message_printing>
+        </options>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <bg>
+                <alpha>255</alpha>
+                <blue>0</blue>
+                <green>0</green>
+                <red>0</red>
+                <visible>true</visible>
+            </bg>
+            <flags>
+                <bold>false</bold>
+                <bottom>false</bottom>
+                <draggable>true</draggable>
+                <italic>false</italic>
+                <right>false</right>
+            </flags>
+            <padding>0</padding>
+            <pos>
+                <x>0</x>
+                <y>0</y>
+            </pos>
+            <text>
+                <alpha>255</alpha>
+                <blue>255</blue>
+                <font>Consolas</font>
+                <fonts>
+
+                </fonts>
+                <green>255</green>
+                <red>255</red>
+                <size>12</size>
+                <stroke>
+                    <alpha>-64770</alpha>
+                    <blue>0</blue>
+                    <green>0</green>
+                    <red>0</red>
+                    <width>0</width>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </global>
+    <antrax>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>499</x>
+                <y>2</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </antrax>
+    <brrrr>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>561</x>
+                <y>-1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </brrrr>
+    <chronoviper>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>551</x>
+                <y>4</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </chronoviper>
+    <dooor>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>633</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </dooor>
+    <doroti>
+        <text_box_settings>
+            <pos>
+                <x>575</x>
+                <y>309</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </doroti>
+    <lyger>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>479</x>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </lyger>
+    <lygre>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>501</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </lygre>
+    <mexico>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>644</x>
+                <y>-2</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </mexico>
+    <nacholibre>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>558</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </nacholibre>
+    <redcurrybun>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>509</x>
+                <y>-2</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </redcurrybun>
+    <salmahayek>
+        <strings>
+            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+        </strings>
+        <text_box_settings>
+            <pos>
+                <x>557</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </salmahayek>
+</settings>

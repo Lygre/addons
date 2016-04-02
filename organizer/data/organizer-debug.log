@@ -1,0 +1,413 @@
+Organizer loaded at 04/01/16 17:12:52
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding inventory to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding locker to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding safe to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding sack to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding case to the pull list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding safe to the push list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding case to the push list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding locker to the push list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding sack to the push list
+2016-04-01 17:12:52| Organizer [VERBOSE] Adding safe2 to the push list
+2016-04-01 17:12:52| Organizer [VERBOSE] Non-equipment items set to retain
+2016-04-01 17:12:52| Organizer [VERBOSE] Slips set to retain
+2016-04-01 17:58:17| Organizer [MSG] Starting...
+2016-04-01 17:58:17| Organizer [VERBOSE] Getting!
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Medium's Sabots) from Safe 77 to Inventory 71)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Heka's Kalasiris) from Sack 65 to Inventory 72)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Safe 76 to Inventory 73)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Chironic Hose) from Safe 2 80 to Inventory 74)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Doyen Pants) from Sack 64 to Inventory 75)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Safe 2 79 to Inventory 76)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Umuthi Hat) from Locker 74 to Inventory 77)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Onca Suit) from Locker 73 to Inventory 78)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Shango Robe) from Safe 75 to Inventory 79)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Merlinic Crackows not found.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-04-01 17:58:17| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-04-01 17:58:17| Organizer [WARN] Unable to move item.
+2016-04-01 17:58:17| Organizer [VERBOSE] Got 8 item(s), and failed getting 45 item(s)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 80 to Safe 74)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 79 to Safe 75)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Nibiru Cudgel) from Inventory 78 to Safe 76)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Reiki Yotai) from Inventory 77 to Safe 77)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Carmine Cuisses) from Inventory 76 to Safe 78)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Combatant's Torque) from Inventory 75 to Safe 79)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Adhemar Jacket) from Inventory 74 to Safe 2 78)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Cheruski Needle) from Inventory 73 to Safe 2 79)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Novio Earring) from Inventory 72 to Locker 72)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Buquwik Cape) from Inventory 71 to Locker 73)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Buremte Gloves) from Inventory 70 to Locker 74)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Carmine Mask) from Inventory 69 to Locker 75)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Jukukik Feather) from Inventory 68 to Locker 76)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Leyline Gloves) from Inventory 67 to Locker 77)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Amalric Nails) from Inventory 66 to Locker 78)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Warder's Charm) from Inventory 65 to Locker 79)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Brutal Earring) from Inventory 64 to Sack 63)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Lithelimb Cap) from Inventory 63 to Sack 64)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Rawhide Gloves) from Inventory 62 to Sack 65)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Rajas Ring) from Inventory 61 to Sack 66)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Ifrit Ring +1) from Inventory 60 to Sack 67)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Suppanomimi) from Inventory 59 to Sack 68)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Asperity Necklace) from Inventory 58 to Sack 69)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Nibiru Cudgel) from Inventory 57 to Sack 70)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Colada) from Inventory 56 to Sack 71)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Samnuha Coat) from Inventory 55 to Sack 72)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Floestone) from Inventory 54 to Sack 73)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Rawhide Mask) from Inventory 53 to Sack 74)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Olseni Belt) from Inventory 52 to Sack 75)
+2016-04-01 17:58:17| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Epona's Ring) from Inventory 51 to Sack 76)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Mekosu. Harness) from Inventory 50 to Sack 77)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Abnoba Kaftan) from Inventory 49 to Sack 78)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Samnuha Tights) from Inventory 48 to Sack 79)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 47 to Case 51)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 46 to Case 52)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 45 to Case 53)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Ground. Mantle +1) from Inventory 44 to Case 54)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Caudata Belt) from Inventory 43 to Case 55)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Ifrit Ring +1) from Inventory 42 to Case 56)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 41 to Case 57)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 40 to Case 58)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Colada) from Inventory 39 to Case 59)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Windbuffet Belt +1) from Inventory 38 to Case 60)
+2016-04-01 17:58:17| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 17:58:17| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Ahosi Leggings) from Inventory 37 to Case 61)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Helios Band) from Inventory 36 to Case 62)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Telos Earring) from Inventory 35 to Case 63)
+2016-04-01 17:58:17| Organizer [VERBOSE] Moving item! (Thereoid Greaves) from Inventory 34 to Case 64)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Eabani Earring) from Inventory 33 to Case 65)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Adhemar Bonnet) from Inventory 32 to Case 66)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Bleating Mantle) from Inventory 31 to Case 67)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Cornflower Cape) from Inventory 30 to Case 68)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Ginsen) from Inventory 29 to Case 69)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Taeon Tabard) from Inventory 28 to Case 70)
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Beatific Earring) from Inventory 27 to Case 71)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Petrov Ring) from Inventory 26 to Case 72)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [VERBOSE] Remainder: 45 Current: 25
+2016-04-01 17:58:18| Organizer [VERBOSE] Getting!
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Mafic Cudgel) from Safe 80 to Inventory 25)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Niobid Strap) from Safe 2 80 to Inventory 26)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Kaykaus Mitra) from Locker 80 to Inventory 27)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Safe 79 to Inventory 28)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Akademos) from Safe 78 to Inventory 29)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Akademos) from Sack 80 to Inventory 30)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Shedir Seraweels) from Locker 79 to Inventory 31)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Gende. Gages +1) from Safe 77 to Inventory 32)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Grioavolr) from Safe 76 to Inventory 33)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Hasty Pinion +1) from Safe 75 to Inventory 34)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Chironic Hat) from Locker 78 to Inventory 35)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Assid. Pants +1) from Safe 2 79 to Inventory 36)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Fulcio Grip) from Safe 2 78 to Inventory 37)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Bolelabunga) from Safe 2 77 to Inventory 38)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Malison Medallion) from Safe 2 76 to Inventory 39)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Mephitis Grip) from Locker 77 to Inventory 40)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Kaykaus Bliaut) from Locker 76 to Inventory 41)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Twilight Cloak) from Safe 2 75 to Inventory 42)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Herald's Gaiters) from Locker 75 to Inventory 43)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Dominance Earring) from Sack 79 to Inventory 44)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Zuuxowu Grip) from Sack 78 to Inventory 45)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Kaykaus Cuffs) from Sack 77 to Inventory 46)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Hieros Mittens) from Safe 2 74 to Inventory 47)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 74 to Inventory 48)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 73 to Inventory 49)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 72 to Inventory 50)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 71 to Inventory 51)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 70 to Inventory 52)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Thrace Strap) from Sack 76 to Inventory 53)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 73 to Inventory 54)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 72 to Inventory 55)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 69 to Inventory 56)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 68 to Inventory 57)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Vanya Clogs) from Sack 75 to Inventory 58)
+2016-04-01 17:58:18| Organizer [WARN] Merlinic Crackows not found.
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 67 to Inventory 59)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 66 to Inventory 60)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Befouled Crown) from Sack 74 to Inventory 61)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Safe 2 65 to Inventory 62)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Sack 73 to Inventory 63)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Rubicundity) from Sack 72 to Inventory 64)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Anhur Robe) from Safe 2 64 to Inventory 65)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 63 to Inventory 66)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 62 to Inventory 67)
+2016-04-01 17:58:18| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 61 to Inventory 68)
+2016-04-01 17:58:18| Organizer [VERBOSE] Got 44 item(s), and failed getting 0 item(s)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Mitra). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Grioavolr). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hat). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Bliaut). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Cuffs). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Vanya Clogs). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Rubicundity). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [VERBOSE] Remainder: 1 Current: 69
+2016-04-01 17:58:18| Organizer [VERBOSE] Getting!
+2016-04-01 17:58:18| Organizer [WARN] Merlinic Crackows not found.
+2016-04-01 17:58:18| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Mitra). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Grioavolr). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hat). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Bliaut). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Cuffs). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Vanya Clogs). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Rubicundity). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Mitra). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Grioavolr). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hat). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Bliaut). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Kaykaus Cuffs). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Vanya Clogs). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Rubicundity). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 17:58:18| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 17:58:18| Organizer [MSG] Done! - 65 items matched and 1 items missing!
+2016-04-01 17:58:18| Organizer [VERBOSE] Item Missing: merlinic crackows {""Mag.Atk.Bns."+9", "Phys. dmg. taken -4%", "MND+5"}
+2016-04-01 18:01:49| Organizer [MSG] Starting...
+2016-04-01 18:01:49| Organizer [VERBOSE] Getting!
+2016-04-01 18:01:49| Organizer [VERBOSE] Moving item! (Battlecast Gaiters) from Locker 74 to Inventory 70)
+2016-04-01 18:01:49| Organizer [VERBOSE] Got 1 item(s), and failed getting 0 item(s)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Mitra). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Grioavolr). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Chironic Hat). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Bliaut). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Cuffs). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Vanya Clogs). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Rubicundity). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Mitra). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Pigaches). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Coif). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Cap). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Grioavolr). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Chironic Hat). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Psycloth Lappas). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Bliaut). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Kaykaus Cuffs). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Amalric Doublet) because it is currently equipped.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Gages). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Vanya Clogs). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Chas.). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Medium's Sabots). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Rubicundity). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Braconi). It has already been moved.
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Chironic Hose). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Amalric Slops). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [WARN] Cannot move the item (Telchine Gloves). It has already been moved.
+2016-04-01 18:01:49| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-01 18:01:49| Organizer [MSG] Done! - 67 items matched and 0 items missing!

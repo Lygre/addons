@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Colada", augments={'Phys. dmg. taken -2%','STR+12','Accuracy+15','Attack+15','DMG:+15',}},
+    sub={ name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}},
+    ammo="Sapience Orb",
+    head={ name="Rawhide Mask", augments={'Attack+10','Pet: Mag. Acc.+15','Pet: "Mag.Atk.Bns."+10',}},
+    body="Mekosu. Harness",
+    hands="Serpentes Cuffs",
+    legs={ name="Herculean Trousers", augments={'Accuracy+21 Attack+21','Phys. dmg. taken -1%','DEX+6',}},
+    feet="Serpentes Sabots",
+    neck="Loricate Torque",
+    waist="Flume Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Infused Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    back="Solemnity Cape",
+}

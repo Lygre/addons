@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Ohtas", augments={'Accuracy+70','Pet: Accuracy+70','Pet: Haste+10%',}},
+    range="Divinator",
+    ammo="Automat. Oil +3",
+    head={ name="Anwig Salade", augments={'Accuracy+3','Pet: Haste+5','Attack+3','Pet: Damage taken -10%',}},
+    body={ name="Pitre Tobe +1", augments={'Enhances "Overdrive" effect',}},
+    hands={ name="Taeon Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','Pet: Haste+1',}},
+    legs={ name="Taeon Tights", augments={'Pet: "Mag.Atk.Bns."+16','"Fast Cast"+3','Crit. hit damage +2%',}},
+    feet={ name="Taeon Boots", augments={'Pet: Mag. Acc.+25','"Dual Wield"+5','DEX+2',}},
+    neck="Empath Necklace",
+    waist="Ukko Sash",
+    left_ear="Burana Earring",
+    right_ear="Charivari Earring",
+    left_ring="Defending Ring",
+    right_ring="Overbearing Ring",
+    back="Penetrating Cape",
+}

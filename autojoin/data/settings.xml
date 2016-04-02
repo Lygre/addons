@@ -1,0 +1,12 @@
+<?xml version="1.1" ?>
+<settings>
+    <global>
+        <autodecline>false</autodecline>
+        <blacklist />
+        <mode>whitelist</mode>
+        <whitelist />
+    </global>
+    <lygre>
+        <mode>blacklist</mode>
+    </lygre>
+</settings>
