@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>1.687355262514e+084</alpha>
+                    <alpha>-4.3027559194107e+086</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>1.687355262514e+084</alpha>
+                    <alpha>-4.3027559194107e+086</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>1.687355262514e+084</alpha>
+                    <alpha>-4.3027559194107e+086</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -328,13 +328,13 @@
             </52>
             <53>
                 <id>53</id>
-                <level>55.5</level>
+                <level>56.2</level>
                 <name>Leathercraft</name>
                 <short_name>leathercraft</short_name>
             </53>
             <54>
                 <id>54</id>
-                <level>104.7</level>
+                <level>105.4</level>
                 <name>Bonecraft</name>
                 <short_name>bonecraft</short_name>
             </54>
