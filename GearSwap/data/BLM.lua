@@ -71,9 +71,9 @@ function job_post_precast(spell, action, spellMap, eventArgs)
         if state.CastingMode.value == 'Proc' then
             classes.CustomClass = 'Proc'
         end
-	elseif state.CastingMode.value == 'Death' then
-		classes.CustomClass = 'Death'
-	end
+	--elseif state.CastingMode.value == 'Death' then
+		--classes.CustomClass = 'Death'
+	--end
 
 end
 

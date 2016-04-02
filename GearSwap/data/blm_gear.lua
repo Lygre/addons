@@ -53,11 +53,11 @@ function init_gear_sets()
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
 
 	sets.precast.FC.Death = {main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
-		head=gear.MB_head,neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
+		head="Pixie hairpin +1",neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
 		body="Amalric doublet",hands="Amalric gages",ring1="Mujin band",ring2="Locus ring",
 		back="Bane Cape",waist="Eschan Stone", legs="Amalric slops",feet=gear.MB_feet}
 		
-	sets.precast.FC.Death.Aspir = {ammo="Pemphredo tathlum"}
+	sets.precast.FC.Aspir.Death = {ammo="Pemphredo tathlum"}
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
