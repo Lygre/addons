@@ -71,14 +71,12 @@ function job_post_precast(spell, action, spellMap, eventArgs)
         if state.CastingMode.value == 'Proc' then
             classes.CustomClass = 'Proc'
         end
-    end
-end
-
-function job_precast(spell, action, spellMap, eventArgs)
-	if state.CastingMode.value == 'Death' then
+	elseif state.CastingMode.value == 'Death' then
 		classes.CustomClass = 'Death'
 	end
+
 end
+
 function job_state_change(stateField, newValue, oldValue)
     if stateField == 'Offense Mode' then
         if newValue == 'Normal' then

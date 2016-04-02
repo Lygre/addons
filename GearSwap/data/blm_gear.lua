@@ -42,18 +42,22 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
 
-    sets.precast.FC = {main="Marin Staff",sub="Vivid Strap",ammo="Sapience orb",
+    sets.precast.FC = {main="Grioavolr",sub="Vivid Strap",ammo="Sapience orb",
         head=gear.FC_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Anhur Robe",hands="Helios gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.nuke_feet}
+        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.MB_feet}
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
 
-	sets.precast.FC.Death = {}
-	sets.precast.FC.Death['Aspir'] = {}
+	sets.precast.FC.Death = {main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
+		head=gear.MB_head,neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
+		body="Amalric doublet",hands="Amalric gages",ring1="Mujin band",ring2="Locus ring",
+		back="Bane Cape",waist="Eschan Stone", legs="Amalric slops",feet=gear.MB_feet}
+		
+	sets.precast.FC.Death.Aspir = {ammo="Pemphredo tathlum"}
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -62,7 +66,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {head="Befouled crown",neck="Fotia gorget",
         body="Onca suit",hands=empty,ring1="Rajas Ring",
-        back="Repulse Mantle",waist="Fotia belt",legs=empty,feet=empty}
+        back="Solemnity cape",waist="Fotia belt",legs=empty,feet=empty}
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Myrkr'] = {ammo="Psilomene",
@@ -73,7 +77,7 @@ function init_gear_sets()
 
     ---- Midcast Sets ----
 
-    sets.midcast.FastRecast = {
+    sets.midcast.FastRecast = {ammo="Sapience orb",
         head=gear.nuke_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Shango Robe",hands="Helios gloves",ring1="Prolix Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Amalric nails"}
@@ -85,7 +89,7 @@ function init_gear_sets()
 
     sets.midcast.Curaga = sets.midcast.Cure
 
-    sets.midcast['Enhancing Magic'] = {
+    sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
 	head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
       body="Telchine Chasuble",hands="Telchine gloves",
       back="Fi follet cape",waist="Olympus sash",legs="Telchine Braconi",feet="Telchine pigaches"}
@@ -103,27 +107,27 @@ function init_gear_sets()
 		{feet=gear.merllegs_dt})
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
-		{head="Amalric coif",waist="Emphatikos Rope"})
+		{head="Amalric coif",waist="Emphatikos Rope",legs="Shedir seraweels"})
 
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], 
-		{waist="Siegel Sash",neck="Nodens gorget"})
+		{waist="Siegel Sash",neck="Nodens gorget",legs="Shedir seraweels"})
 
     sets.midcast['Enfeebling Magic'] = {main="Lathi",sub="Mephitis Grip",ammo="Pemphredo tathlum",
-        head=gear.nuke_head,neck="Incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
-        body="Shango robe",hands="Lurid mitts",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-        back="Refraction Cape",waist="Eschan Stone",legs="Psycloth lappas",feet="Medium's sabots"}
+        head="Amalric coif",neck="Incanter's torque",ear1="Gwati Earring",ear2="Digni. Earring",
+        body=gear.nuke_body,hands="Amalric gages",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
+        back="Aurist's cape +1",waist="Luminary sash",legs="Psycloth lappas",feet="Medium's sabots"}
         
 	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'], { })	
 
     sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
-    sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genbu's shield",ammo="Pemphredo tathlum",
-        head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
+    sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
+        head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Digni. earring",
         body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
-        back="Bane Cape",waist="Eschan stone",legs="Psycloth lappas",feet=gear.DA_feet}
+        back="Bane Cape",waist="Luminary sash",legs="Psycloth lappas",feet=gear.DA_feet}
 
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{ring1="Evanescence Ring",
-        waist="Fucho-no-obi"})
+        waist="Fucho-no-obi",legs=gear.DA_legs})
     
     sets.midcast.Aspir = sets.midcast.Drain
 
@@ -138,7 +142,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {main="Lathi",sub="Niobid strap",ammo="Dosis tathlum",
         head=gear.nuke_head,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.nuke_body,hands="Amalric gages",ring1="Shiva ring +1",ring2="Shiva Ring +1",
-        back="Toro Cape",waist="Refoccilation Stone",legs=gear.nuke_legs,feet=gear.nuke_feet}
+        back="Toro Cape",waist="Refoccilation Stone",legs=gear.nuke_legs,feet=gear.MB_feet}
 
 	sets.midcast['Elemental Magic'].Mid = set_combine(sets.midcast['Elemental Magic'], 
 		{ammo="Pemphredo tathlum",
