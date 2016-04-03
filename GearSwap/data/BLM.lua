@@ -22,9 +22,10 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
     state.OffenseMode:options('None', 'Normal')
-    state.CastingMode:options('Normal', 'Mid', 'Resistant', 'Proc')
+    state.CastingMode:options('Normal', 'Mid', 'DeathMode', 'Resistant', 'Proc')
     state.IdleMode:options('Normal', 'PDT', 'IdleBurst')
-  
+	--state.DeathMode = M(false, 'DeathMode')
+
   	MagicBurstIndex = 0
     state.MagicBurst = M(false, 'Magic Burst')
 	state.TreasureHunter = M(false, 'TH')
@@ -71,12 +72,16 @@ function job_post_precast(spell, action, spellMap, eventArgs)
         if state.CastingMode.value == 'Proc' then
             classes.CustomClass = 'Proc'
         end
-	--elseif state.CastingMode.value == 'Death' then
-		--classes.CustomClass = 'Death'
-	--end
+	elseif state.CastingMode.value == 'DeathMode' then
+		classes.CustomClass = 'DeathMode'
+	end
 
 end
-
+--function job_precast(spell, action, spellMap, eventArgs)
+	--if state.CastingMode.value == 'DeathMode' then
+		--classes.CustomClass = 'DeathMode'
+	--end
+--end
 function job_state_change(stateField, newValue, oldValue)
     if stateField == 'Offense Mode' then
         if newValue == 'Normal' then
@@ -85,20 +90,20 @@ function job_state_change(stateField, newValue, oldValue)
             enable('main','sub','range')
         end
     end
-	if stateField == 'Casting Mode' then
-		if newValue == 'Death' then
-			state.EquipStop:set('precast')
-		else
-			state.EquipStop:reset()
-		end
-	end
+	--if stateField == 'DeathMode' then
+		--if newValue ~= false then
+			--state.EquipStop:set('precast')
+		--else
+			--state.EquipStop:reset()
+		--end
+	--end
 end
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
     if player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
-    if state.CastingMode.value == 'Death' then
+    if state.CastingMode.value == 'DeathMode' then
 		idleSet = set_combine(idleSet, sets.idle.Death)
 	end
     return idleSet

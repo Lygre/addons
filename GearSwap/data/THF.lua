@@ -138,7 +138,7 @@ function init_gear_sets()
 
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Ginsen",
-		head="Adhemar bonnet",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
+		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
         body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Canny cape",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {body="Adhemar jacket",back="Grounded Mantle +1"})
@@ -159,7 +159,7 @@ function init_gear_sets()
     sets.precast.WS['Dancing Edge'].SATA = set_combine(sets.precast.WS['Dancing Edge'].Mod, {})
 
     sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {
-        head="Adhemar bonnet",
+        head=gear.adhemarhead_melee,
 		back="Rancorous mantle"
 		})
     sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS['Evisceration'], {ammo="Honed Tathlum"})
@@ -224,7 +224,7 @@ function init_gear_sets()
 
     -- Ranged gear
     sets.midcast.RA = {
-        head="Adhemar bonnet",neck="Combatant's torque",ear1="Telos Earring",ear2="Enervating Earring",
+        head=gear.adhemarhead_melee,neck="Combatant's torque",ear1="Telos Earring",ear2="Enervating Earring",
         body=gear.hercbody_melee,hands="Iuitl Wristbands",
         waist="Eschan stone",legs="Nahtirah Trousers",feet=gear.hercfeet }
 
@@ -241,17 +241,17 @@ function init_gear_sets()
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 
     sets.idle = {
-        head="Adhemar bonnet",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
         body="Abnoba kaftan",hands="Floral gauntlets",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity cape",waist="Flume belt +1",legs="Samnuha tights",feet="Skadi's jambeaux +1"}
 
     sets.idle.Town = {
-        head="Adhemar bonnet",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
         body="Abnoba kaftan",hands="Floral gauntlets",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity cape",waist="Flume belt +1",legs="Samnuha tights",feet="Skadi's jambeaux +1"}
 
     sets.idle.Weak = {
-        head="Adhemar bonnet",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
         body="Abnoba kaftan",hands="Floral gauntlets",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet }
 
@@ -259,7 +259,7 @@ function init_gear_sets()
     -- Defense sets
 
     sets.defense.Evasion = {
-        head="Adhemar bonnet",neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
+        head=gear.adhemarhead_melee,neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
         body="Adhemar jacket",hands=gear.herchands_acc,ring1="Defending Ring",ring2="Beeline Ring",
         back="Solemnity Cape",waist="Flume Belt +1",legs="Samnuha Tights",feet=gear.hercfeet }
 
@@ -280,7 +280,7 @@ function init_gear_sets()
 
     -- Normal melee group
     sets.engaged = {ammo="Ginsen",
-        head="Adhemar bonnet",neck="Defiant collar",ear1="Eabani Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Defiant collar",ear1="Eabani Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
     sets.engaged.Acc = {ammo="Honed tathlum",
@@ -298,20 +298,20 @@ function init_gear_sets()
     sets.engaged.Mod2 = {}
 
     sets.engaged.Evasion = {
-        head="Adhemar bonnet",neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
+        head=gear.adhemarhead_melee,neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
         body="Adhemar jacket",hands=gear.herchands_acc,ring1="Defending Ring",
         back="Solemnity Cape",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet }
     sets.engaged.Acc.Evasion = {
-        head="Adhemar bonnet",neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
+        head=gear.adhemarhead_melee,neck="Combatant's torque",ear1="Eabani earring",ear2="Infused earring",
         body="Adhemar jacket",hands=gear.herchands_acc,ring1="Defending Ring",
         back="Solemnity Cape",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet }
 
     sets.engaged.PDT = {
-        head="Adhemar bonnet",neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands=gear.herclegs_melee,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
     sets.engaged.Acc.PDT = {
-        head="Adhemar bonnet",neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands=gear.herclegs_melee,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
 

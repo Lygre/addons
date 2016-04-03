@@ -1,0 +1,18 @@
+sets.exported={
+    main="Oneiros Knife",
+    sub="Legion Scutum",
+    range="Fail-Not",
+    ammo="Chrono Arrow",
+    head="Amini Gapette +1",
+    body="Amini Caban +1",
+    hands="Amini Glove. +1",
+    legs={ name="Herculean Trousers", augments={'Rng.Acc.+29','Crit. hit damage +2%','DEX+4','Rng.Atk.+5',}},
+    feet={ name="Herculean Boots", augments={'Rng.Acc.+22 Rng.Atk.+22','Weapon skill damage +2%','DEX+15',}},
+    neck="Ocachi Gorget",
+    waist="Yemaya Belt",
+    left_ear="Telos Earring",
+    right_ear="Enervating Earring",
+    left_ring="Rajas Ring",
+    right_ring="Petrov Ring",
+    back={ name="Lutian Cape", augments={'STR+3','AGI+1','"Store TP"+3','"Snapshot"+2',}},
+}

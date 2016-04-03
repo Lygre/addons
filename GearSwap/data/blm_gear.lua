@@ -1,8 +1,7 @@
 function job_setup()
     state.OffenseMode:options('None', 'Normal')
-    state.CastingMode:options('Normal', 'Mid', 'Death', 'Resistant', 'Proc')
+    state.CastingMode:options('Normal', 'Mid', 'DeathMode','Resistant', 'Proc')
     state.IdleMode:options('Normal', 'PDT', 'IdleBurst')
-  
   	MagicBurstIndex = 0
     state.MagicBurst = M(false, 'Magic Burst')
 	state.TreasureHunter = M(false, 'TH')
@@ -52,12 +51,14 @@ function init_gear_sets()
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
 
-	sets.precast.FC.Death = {main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
+	sets.precast.FC.DeathMode = {main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
 		head="Pixie hairpin +1",neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
 		body="Amalric doublet",hands="Amalric gages",ring1="Mujin band",ring2="Locus ring",
 		back="Bane Cape",waist="Eschan Stone", legs="Amalric slops",feet=gear.MB_feet}
 		
-	sets.precast.FC.Aspir.Death = {ammo="Pemphredo tathlum"}
+	sets.precast.FC.Aspir = {ammo="Pemphredo tathlum"}
+	sets.precast.FC.Aspir.DeathMode = {ammo="Pemphredo tathlum"}
+	
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -128,9 +129,13 @@ function init_gear_sets()
 
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{ring1="Evanescence Ring",
         waist="Fucho-no-obi",legs=gear.DA_legs})
-    
+    sets.midcast.Drain.DeathMode = sets.midcast.Drain
     sets.midcast.Aspir = sets.midcast.Drain
-
+	sets.midcast.Aspir.DeathMode = {main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
+		head="Pixie hairpin +1",neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
+		body="Amalric doublet",hands="Amalric gages",ring1="Mujin band",ring2="Locus ring",
+		back="Bane Cape",waist="Eschan Stone", legs="Amalric slops",feet=gear.MB_feet}
+		
     sets.midcast.Stun = {main="Lathi",sub="Arbuda Grip",ammo="Pemphredo tathlum",
         head="Amalric coif",neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
         body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Prolix Ring",
@@ -175,7 +180,7 @@ function init_gear_sets()
     -- Minimal damage gear for procs.
     sets.midcast['Elemental Magic'].Proc = {main="Earth Staff", sub="Mephitis Grip",ammo="Impatiens",
         head="Nahtirah Hat",neck="Loricate torque +1",ear1="Gwati earring",ear2="Loquacious Earring",
-        body="Telchine Chasuble",hands="Serpentes Cuffs",ring1="Lebeche Ring",ring2="Paguroidea Ring",
+        body="Telchine Chasuble",hands="Telchine gloves",ring1="Lebeche Ring",ring2="Paguroidea Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Assiduity pants +1",feet="Vanya clogs"}
 
 	sets.magic_burst = {
@@ -195,10 +200,10 @@ function init_gear_sets()
     -- Idle sets
     
     -- Normal refresh idle set
-    sets.idle = {main="Bolelabunga", sub="Genbu's shield",ammo="Impatiens",
+    sets.idle = {main="Bolelabunga", sub="Genmei shield",ammo="Sapience orb",
         head="Befouled crown",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare Earring",
-        body="Amalric doublet",hands="Serpentes cuffs",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Serpentes Sabots"}
+        body="Amalric doublet",hands="Amalric gages",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet=gear.merlfeet_refresh}
 
     -- Idle mode that keeps PDT gear on, but doesn't prevent normal gear swaps for precast/etc.
     sets.idle.PDT = {main="Bolelabunga", sub="Genmei shield",ammo="Sapience orb",
@@ -211,7 +216,7 @@ function init_gear_sets()
         body=gear.nuke_body,hands="Amalric gages",ring1="Locus Ring",ring2="Mujin band",
         back="Bane Cape",waist="Eschan Stone",legs=gear.MB_legs,feet=gear.MB_feet}
 
-	sets.idle.Death = {feet=gear.merlfeet_refresh}
+	sets.idle.Death = {ammo="Vanir battery"}
 	
     -- Idle mode scopes:
     -- Idle mode when weak.

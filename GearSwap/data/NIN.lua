@@ -90,12 +90,12 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Yetshila",
-        head="Adhemar bonnet",neck="Fotia Gorget",ear1="Telos earring",ear2="Moonshade Earring",
+        head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Telos earring",ear2="Moonshade Earring",
         body="Abnoba Kaftan",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
         back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha tights",feet=gear.tp_tfeet}
     sets.precast.WS.Acc = set_combine(sets.precast.WS, 
 		{ammo="Amar Cluster",
-		head="Adhemar bonnet",
+		head=gear.adhemarhead_melee,
 		body="adhemar jacket",
 			back="Grounded Mantle +1",legs="Hattori hakama +1"}) 
 
@@ -110,7 +110,7 @@ function init_gear_sets()
 		back="Rancorous Mantle"})
 
     sets.precast.WS['Blade: Hi'] = set_combine(sets.precast.WS,
-        {head="Adhemar bonnet",
+        {head=gear.adhemarhead_melee,
 		body="Adhemar jacket",hands="Kobo Kote",
 		back="Rancorous Mantle",legs=gear.herclegs_melee})
     sets.precast.WS['Blade: Hi'].Acc = set_combine(sets.precast.WS['Blade: Hi'],
@@ -222,7 +222,7 @@ function init_gear_sets()
 
     -- Custom melee group: High Haste (~20% DW)
     sets.engaged.HighHaste = {ammo="Happo Shuriken",
-        head="Adhemar bonnet",neck="Defiant collar",ear1="Brutal earring",ear2="Telos Earring",
+        head=gear.adhemarhead_melee,neck="Defiant collar",ear1="Brutal earring",ear2="Telos Earring",
         body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Thereoid greaves"}
     sets.engaged.Acc.HighHaste = {ammo="Happo Shuriken",
@@ -258,11 +258,11 @@ function init_gear_sets()
 
     -- Custom melee group: Max Haste (0% DW)
     sets.engaged.MaxHaste = {ammo="Happo Shuriken",
-        head="Adhemar bonnet",neck="Lissome necklace",ear1="Suppanomimi",ear2="Telos earring",
+        head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Suppanomimi",ear2="Telos earring",
         body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.engaged.Acc.MaxHaste = {ammo="Happo Shuriken",
-        head="Adhemar bonnet",neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
+        head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
         body="Reiki osode",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Yokaze Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.engaged.PDT.MaxHaste = {ammo="Happo Shuriken",

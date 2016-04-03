@@ -1,0 +1,18 @@
+sets.exported={
+    main="Oneiros Knife",
+    sub="Legion Scutum",
+    range="Fail-Not",
+    ammo="Chrono Arrow",
+    head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body="Abnoba Kaftan",
+    hands="Kobo Kote",
+    legs="Amini Brague +1",
+    feet="Orion Socks +1",
+    neck="Loricate Torque +1",
+    waist="Yemaya Belt",
+    left_ear="Infused Earring",
+    right_ear="Genmei Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Defending Ring",
+    back={ name="Lutian Cape", augments={'STR+3','AGI+1','"Store TP"+3','"Snapshot"+2',}},
+}

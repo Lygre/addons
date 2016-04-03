@@ -18,6 +18,8 @@ function job_setup()
 	state.Buff.Barrage = buffactive.Barrage or false
 	state.Buff.Camouflage = buffactive.Camouflage or false
 	state.Buff['Unlimited Shot'] = buffactive['Unlimited Shot'] or false
+	
+	update_combat_form()
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -26,27 +28,15 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-	state.RangedMode:options('Normal', 'Acc','STP','Crit')
-	state.WeaponskillMode:options('Normal', 'Acc')
+	state.OffenseMode:options('Normal', 'Acc')
+	state.RangedMode:options('Normal', 'Acc', 'STP', 'Crit')
+	state.WeaponskillMode:options('Normal', 'Mid', 'Acc')
 	
 	gear.default.weaponskill_neck = "Fotia Gorget"
-	gear.default.weaponskill_waist = "Fotia Belt"
-	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
+	gear.default.weaponskill_waist = "Fotia Belt"	
 
-	SnapBoots = {name="Taeon Boots", augments={'"Snapshot"+5','"Snapshot"+3',}}
-	MidBoots = { name="Taeon Boots", augments={'Rng.Acc.+15 Rng.Atk.+15','Crit.hit rate+3','Crit.hit damage+3%',}}
-	gear.melee_feet = {name="Taeon Boots", augments={'Accuracy+23','"Dual Wield"+5','DEX+2',}}	
-
-	gear.melee_head = {name="Taeon Chapeau", augments={'Accuracy+17 Attack+17','"Triple Atk."+2','STR+10',}}
-
-	gear.hercfeet = {name="Herculean Boots", augments={'Rng.Acc.+21 Rng.Atk.+21','Crit. hit damage +2%','STR+3','Rng.Acc.+5','Rng.Atk.+12',}}
-	gear.herchands = {name="Herculean Gloves", augments={'Rng.Acc.+24 Rng.Atk.+24','DEX+10','Rng.Acc.+3','Rng.Atk.+7',}}
-	gear.herclegs = {name="Herculean Trousers", augments={'Rng.Acc.+15 Rng.Atk.+15','Crit. hit damage +3%','DEX+8','Rng.Acc.+9',}}
-	gear.herclegs_racc = {name="Herculean Trousers", augments={'Rng.Acc.+28','Crit.hit rate+3','DEX+11',}}
-	
-
-	DefaultAmmo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet"}
-	U_Shot_Ammo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet"}
+	DefaultAmmo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet", ['Fail-Not'] = "Chrono arrow"}
+	U_Shot_Ammo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet", ['Fail-Not'] = "Chrono arrow"}
 
 	select_default_macro_book()
 
@@ -73,15 +63,15 @@ function init_gear_sets()
 	sets.precast.JA['Camouflage'] = {body="Orion Jerkin +1"}
 	sets.precast.JA['Scavenge'] = {feet="Orion Socks +1"}
 	sets.precast.JA['Shadowbind'] = {hands="Orion Bracers +1"}
-	sets.precast.JA['Sharpshot'] = {legs="Orion Braccae"}
+	sets.precast.JA['Sharpshot'] = {legs="Orion Braccae +1"}
 
 
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		head="Haruspex Hat",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-		hands="Leyline gloves",ring1="Prolix Ring",ring2="Lebeche ring",
-		}
+		head="Carmine mask",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon ring",
+		feet=gear.hercfeet_fc }
 
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {})
 
@@ -96,35 +86,31 @@ function init_gear_sets()
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
-	sets.precast.WS.Melee = {
-		head="Adhemar Bonnet",neck="Fotia gorget",ear1="Moonshade Earring",ear2="Zennaroi Earring",
+	sets.precast.WS = {
+		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Moonshade Earring",ear2="Zennaroi Earring",
 		body="Adhemar Jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid Greaves" }
 
-	sets.precast.WS.Melee.Acc = set_combine(sets.precast.WS.Melee, {
-		head=gear.melee_head,
-		ring2="Begrudging Ring",
+	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
+		head="Carmine mask",
 		back="Grounded Mantle +1",feet=gear.melee_feet})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	
-	sets.precast.WS.Ranged = {
-		head="Adhemar bonnet",neck="Fotia gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
-		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",
-		back="Lutian Cape",waist="Fotia Belt",legs=gear.herclegs,feet=gear.hercfeet }
 
     sets.precast.WS['Last Stand'] = {
-        head="Adhemar bonnet",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
-        body="Amini Caban +1",hands="Kobo Kote",ring1="Shiva Ring +1",ring2="Petrov Ring",
-        back="Lutian Cape",waist="Fotia Belt",legs=gear.herclegs,feet="Amini Bottillons +1"}
+        head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
+        body="Amini Caban +1",hands="Kobo Kote",ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Lutian Cape",waist="Fotia Belt",legs="Amini brague +1",feet="Amini Bottillons +1"}
 
-sets.precast.WS['Jishnu\'s Radiance'] = set_combine(sets.precast.WS.Ranged, 
-	{ear2="Enervating Earring",
-	hands=gear.herchands,
-	back="Rancorous mantle",feet="Thereoid greaves"})
+	sets.precast.WS['Jishnu\'s Radiance'] = {
+		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Dominance Earring",
+		body="Amini caban +1",hands=gear.taeonhands_rng_crit,ring1="Rajas Ring",ring2="Petrov ring",
+		back="Rancorous mantle",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
 	
 	sets.precast.WS['Jishnu\'s Radiance'].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'],
-		{feet=gear.hercfeet})
+		{hands="Kobo Kote",
+		back="Lutian cape",legs=gear.herclegs_rng_racc,feet=gear.hercfeet_rng_jishnu})
 
 	--------------------------------------
 	-- Midcast sets
@@ -142,18 +128,13 @@ sets.precast.WS['Jishnu\'s Radiance'] = set_combine(sets.precast.WS.Ranged,
 	-- Ranged sets
 
 	sets.midcast.RA = {
-		head="Arcadian Beret +1",neck="Ocachi Gorget",ear1="Neritic earring",ear2="Enervating Earring",
+		head="Arcadian Beret +1",neck="Ocachi Gorget",ear1="Telos earring",ear2="Enervating Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
 	
 	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
-		{head="Amini gapette +1",neck="Iqabi necklace",
-		hands="Kobo kote",ring1="Paqichikaji ring",ring2="Hajduk Ring",
-		legs=gear.herclegs,feet=gear.hercfeet})
-
-	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
-		{
-		back="Rancorous Mantle",legs=gear.herclegs,feet=gear.hercfeet})
+		{head="Amini gapette +1",neck="Sanctity necklace",
+		legs=gear.herclegs_rng_acc,feet=gear.taeonfeet_rng_crit })
 
 	sets.midcast.RA.Annihilator = set_combine(sets.midcast.RA, {hands="Amini glovelettes +1"})
 
@@ -175,25 +156,25 @@ sets.precast.WS['Jishnu\'s Radiance'] = set_combine(sets.precast.WS.Ranged,
 	-- Idle sets
 	sets.idle = {
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused Earring",ear2="Genmei Earring",
-		body="Kirin's Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+		body="Reiki Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
 		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
 
 	sets.idle.Town = {
-		range="Annihilator",ammo="Achiyalabopa bullet",
+		range="Fail-Not",ammo="Chrono arrow",
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused Earring",ear2="Genmei Earring",
-		body="Kirin's Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+		body="Reiki Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
 		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
 
 	-- Defense sets
 	sets.defense.PDT = {
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused earring",ear2="Genmei earring",
-		body="Adhemar jacket",hands="Umuthi gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-		back="Solemnity cape",waist="Flume Belt",legs=gear.herclegs,feet=gear.hercfeet}
+		body="Adhemar jacket",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+		back="Solemnity cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
 	sets.defense.MDT = {
-		head="Adhemar bonnet",neck="Loricate torque +1",ear1="Zennaroi earring",ear2="Sanare earring",
+		head=gear.adhemarhead_rng,neck="Loricate torque +1",ear1="Zennaroi earring",ear2="Sanare earring",
 		body="Abnoba kaftan",hands="Floral gauntlets",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-		back="Solemnity cape",waist="Flume Belt",legs=gear.herclegs,feet=gear.hercfeet}
+		back="Solemnity cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
 	sets.Kiting = {feet="Orion socks +1"}
 
@@ -203,22 +184,22 @@ sets.precast.WS['Jishnu\'s Radiance'] = set_combine(sets.precast.WS.Ranged,
 	--------------------------------------
 
 	sets.engaged = {
-		head="adhemar bonnet",neck="Asperity necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-		body="Abnoba kaftan", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Kentarch Belt",legs="Samnuha tights",feet=gear.hercfeet}
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Kentarch Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
 
 	sets.engaged.Acc = set_combine(sets.engaged, {
-		head=gear.melee_head,neck="Iqabi necklace",
+		head=gear.adhemarhead_melee,neck="Iqabi necklace",
 		body="Adhemar jacket", hands="Floral gauntlets",ring2="Petrov Ring",
 		back="Grounded Mantle +1",waist="Kentarch Belt"})
 
 	sets.engaged.DW = {
-		head=gear.melee_head,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.melee_feet}
+		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		neck="Iqabi Necklace",
+		neck="Lissome Necklace",
 		ring2="Petrov Ring",
 		back="Grounded Mantle +1"})
 
@@ -246,11 +227,12 @@ function job_precast(spell, action, spellMap, eventArgs)
 		check_ammo(spell, action, spellMap, eventArgs)
 	end
 	
-	if state.DefenseMode.value ~= 'None' and spell.type == 'WeaponSkill' then
+	--[[if state.DefenseMode.value ~= 'None' and spell.type == 'WeaponSkill' then
 		-- Don't gearswap for weaponskills when Defense is active.
 		eventArgs.handled = true
-	end
+	end]]
 end
+
 
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
@@ -277,6 +259,19 @@ function job_buff_change(buff, gain)
 			enable('body')
 		end
 	end
+end
+
+function job_update(cmdParams, eventArgs)
+    update_combat_form()
+end
+
+function update_combat_form()
+    -- Check for H2H or single-wielding
+    if player.equipment.sub == 'empty' then
+        state.CombatForm:reset()
+    else
+        state.CombatForm:set('DW')
+    end
 end
 
 -------------------------------------------------------------------------------------------------------------------

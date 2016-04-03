@@ -122,7 +122,7 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        head="Adhemar Bonnet",
+        head=gear.adhemarhead_melee,
         body="Adhemar jacket",
         legs="Nahtirah Trousers"}
         
@@ -149,7 +149,7 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head="Adhemar bonnet",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
+        head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating mantle",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet}
 
@@ -162,7 +162,7 @@ function init_gear_sets()
     sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {legs="Nahtirah Trousers"})
 
     sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
-        head="Adhemar Bonnet",neck="Fotia Gorget",ear1="Enervating Earring",ear2="Moonshade Earring",
+        head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Enervating Earring",ear2="Moonshade Earring",
         body="Adhemar jacket",hands="Pursuer's Cuffs",ring1="Petrov Ring",ring2="Arvina Ringlet +1",
         back="Gunslinger's Cape",waist="Fotia Belt",legs="Nahtirah Trousers",feet=gear.hercfeet}
 
@@ -199,7 +199,7 @@ function init_gear_sets()
 		
     -- Ranged gear
     sets.midcast.RA = {ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Ocachi Gorget",ear1="Neritic Earring",ear2="Enervating Earring",
+        head=gear.adhemarhead_melee,neck="Ocachi Gorget",ear1="Neritic Earring",ear2="Enervating Earring",
         body="Laksamana's Frac +1",hands=gear.herchands,ring1="Rajas Ring",ring2="Petrov Ring",
         back="Gunslinger's Cape",waist="Yemaya Belt",legs=gear.herclegs,feet=gear.hercfeet}
 
@@ -227,18 +227,18 @@ function init_gear_sets()
         back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs,feet="Skadi's jambeaux +1"}
     
     sets.idle.PDT = {sub="Legion Scutum",range="Compensator",ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
         body="Lanun Frac +1",hands=gear.herchands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs,feet="Lanun Bottes +1"}
 
     -- Defense sets
     sets.defense.PDT = {
-        head="Adhemar Bonnet",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
         body="Lanun Frac +1",hands=gear.herchands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs,feet="Lanun Bottes +1"}
 
     sets.defense.MDT = {
-        head="Adhemar Bonnet",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
+        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
         body="Lanun Frac +1",hands=gear.herchands,ring1="Archon Ring",ring2="Defending Ring",
         back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs,feet="Chass. Bottes +1"}
     
@@ -254,22 +254,22 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Brutal earring",
+        head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Brutal earring",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Kentarch Belt",legs="Samnuha Tights",feet=gear.hercfeet}
     
     sets.engaged.Acc = {ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Lissome necklace",ear1="Zennaroi Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Zennaroi Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Petrov Ring",
         back="Grounded Mantle +1",waist="Kentarch Belt",legs="Samnuha Tights",feet=MeleeBoots}
 
     sets.engaged.DW = {ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Lissome Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Kentarch Belt",legs="Samnuha Tights",feet=MeleeBoots}
     
     sets.engaged.DW.Acc = {ammo=gear.RAbullet,
-        head="Adhemar Bonnet",neck="Lissome necklace",ear1="Zennaroi Earring",ear2="Suppanomimi",
+        head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Zennaroi Earring",ear2="Suppanomimi",
         body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Petrov Ring",
         back="Grounded Mantle +1",waist="Kentarch Belt",legs="Samnuha Tights",feet=MeleeBoots}
 

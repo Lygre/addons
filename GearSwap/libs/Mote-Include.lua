@@ -126,12 +126,12 @@ function init_include()
     gear = {}
     gear.default = {}
 
-    gear.ElementalGorget = {name=""}
-    gear.ElementalBelt = {name=""}
-    gear.ElementalObi = {name=""}
-    gear.ElementalCape = {name=""}
+    gear.ElementalGorget = {name="Fotia Gorget"}
+    gear.ElementalBelt = {name="Fotia Belt"}
+    gear.ElementalObi = {name="Hachirin-no-Obi"}
+    gear.ElementalCape = {name="Twilight Cape"}
     gear.ElementalRing = {name=""}
-    gear.FastcastStaff = {name=""}
+    gear.FastcastStaff = {name="Grioavolr"}
     gear.RecastStaff = {name=""}
 
 

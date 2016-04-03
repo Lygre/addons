@@ -62,29 +62,34 @@ function define_global_sets()
 	
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
-	gear.fc_tfeet = {name="Taeon Boots", augments={'Mag. Acc.+10','Crit.hit rate+3','Crit. hit damage +3%',}}
 	
-	SnapBoots = {name="Taeon Boots", augments={'"Snapshot"+5','"Snapshot"+3',}}
+	
+	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
 	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
+	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+30','Phys. dmg. taken -2%','Attack+2',}}
+	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
 	gear.herclegs_melee = {name="Herculean Trousers", augments={'Accuracy+29','Crit.hit rate+3','STR+9','Attack+10',}}
+	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
 	gear.hercfeet_acc = {name="Herculean Boots", augments={'"Triple Atk."+3','AGI+10','Accuracy+15','Attack+12',}}
-	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+30','Phys. dmg. taken -2%','Attack+2',}}
-	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
 	gear.hercfeet_fc = {name="Herculean Boots", augments={'VIT+9','"Fast Cast"+5','Chance of successful block +8','Accuracy+20 Attack+20',}}
-	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
-	gear.herclegs = {name="Herculean Trousers", augments={'Rng.Acc.+15 Rng.Atk.+15','Crit. hit damage +3%','DEX+8','Rng.Acc.+9',}}
-	gear.hercfeet = {name="Herculean Boots", augments={'Rng.Acc.+16 Rng.Atk.+16','"Rapid Shot"+4','AGI+12','Rng.Acc.+15',}}
+	----RNG-------
+	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
+	gear.taeonhands_rng_crit = {name="Taeon Gloves", augments={'Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+3','Crit. hit damage +2%',}}
+	gear.herclegs_rng_racc = {name="Herculean Trousers", augments={'Rng.Acc.+29','Crit. hit damage +2%','DEX+4','Rng.Atk.+5',}}
+	gear.herclegs_rng_crit = {name="Herculean Trousers", augments={'Rng.Atk.+22','Crit. hit damage +4%','AGI+5','Rng.Acc.+6',}}
+	gear.hercfeet_rng_jishnu = {name="Herculean Boots", augments={'Rng.Acc.+22 Rng.Atk.+22','Weapon skill damage +2%','DEX+15',}}
+	gear.taeonfeet_rng_crit = {name="Taeon Boots", augments={'Rng.Acc.+24','Crit.hit rate+3','Crit. hit damage +3%',}}
+	SnapBoots = {name="Taeon Boots", augments={'"Snapshot"+5','"Snapshot"+3',}}
+
+
 	----PUP--------
  	gear.herchead_pup = {name="Herculean Helm", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: Haste+4',}}
 	gear.hercbody_pup_stp = {name="Herculean Vest", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Pet: "Store TP"+9','Pet: STR+6','Pet: "Mag.Atk.Bns."+12',}}
 	gear.herchands_pup = {name="Herculean Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Store TP"+11','Pet: Attack+11 Pet: Rng.Atk.+11','Pet: "Mag.Atk.Bns."+3',}}
-	gear.herclegs_pup_acc = {name="Herculean Trousers", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Pet: "Dbl. Atk."+4','Pet: STR+7','Pet: Attack+11 Pet: Rng.Atk.+11','Pet: "Mag.Atk.Bns."+11',}}
-	gear.herclegs_pup_mab = {name="Herculean Trousers", augments={'Pet: Mag. Acc.+25','Pet: "Dbl. Atk."+1','Pet: AGI+9','Pet: Attack+8 Pet: Rng.Atk.+8','Pet: "Mag.Atk.Bns."+15',}}
 	gear.herclegs_pup_stp = {name="Herculean Trousers", augments={'Pet: Accuracy+27 Pet: Rng. Acc.+27','Pet: "Store TP"+11','Pet: DEX+3',}}
 	gear.hercfeet_pup_stp = {name="Herculean Boots", augments={'Pet: Accuracy+29 Pet: Rng. Acc.+29','Pet: "Store TP"+11','Pet: DEX+7','Pet: "Mag.Atk.Bns."+14',}}
-	gear.hercfeet_pup_mab = {name="Herculean Boots", augments={'Pet: Mag. Acc.+27','Pet: "Regen"+1','Pet: AGI+1','Pet: Attack+15 Pet: Rng.Atk.+15','Pet: "Mag.Atk.Bns."+12',}}
 	
 	gear.repair_hands = { name="Taeon Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','Pet: Haste+1',}}
     gear.repair_head = { name="Taeon Chapeau", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','CHR+10',}}
