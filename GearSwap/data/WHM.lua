@@ -242,8 +242,8 @@ function init_gear_sets()
     
     -- Defense sets
 
-    sets.defense.PDT = {main="Mafic cudgel",sub="Genmei shield",ammo="Brigantia pebble",
-        head="Chironic hat",neck="Loricate torque +1",ear1="Impregnable earring",ear2="Genmei earring",
+    sets.defense.PDT = {main="Mafic cudgel",sub="Genmei shield",ammo="Amar Cluster",
+        head="Chironic hat",neck="Loricate torque +1",ear1="Cryptic earring",ear2="Genmei earring",
         body="Onca suit",hands=empty,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Slipor sash",legs=empty,feet=empty}
 

@@ -112,6 +112,11 @@ function init_gear_sets()
 		{hands="Kobo Kote",
 		back="Lutian cape",legs=gear.herclegs_rng_racc,feet=gear.hercfeet_rng_jishnu})
 
+	sets.precast.WS['Apex Arrow'] = {
+		head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade earring",ear2="Neritic Earring",
+		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",--[[ring1="Garuda Ring +1",ring2="Garuda Ring +1",]]
+		back="Lutian cape",waist="Yemaya belt",legs=gear.herclegs_rng_crit,feet=gear.hercfeet_rng_jishnu }
+}
 	--------------------------------------
 	-- Midcast sets
 	--------------------------------------
