@@ -89,8 +89,7 @@ function expand_entry(entry)
             augments = {entry.augment}
         end
         if entry.bag and type(entry.bag) == 'string' then
---MY CHANGES		
-            local bag_list = {inventory = 0, wardrobe = 8, wardrobe2= 10}
+            local bag_list = {inventory = 0, wardrobe = 8, wardrobe2 = 10}
             bag = bag_list[entry.bag:lower()]
         end
     elseif type(entry) == 'string' and entry ~= '' then
@@ -120,7 +119,7 @@ function unpack_equip_list(equip_list)
             equip_list[slot_name] = nil
         end
     end
---MY CHANGES!!!!!!!!!!!!!	
+    
     local inventories = {[0]=items.inventory,[8]=items.wardrobe,[10]=items.wardrobe2}
     
     for bag_id,inventory in pairs(inventories) do
@@ -253,10 +252,10 @@ function to_names_set(equipment)
     for ind,cur_item in pairs(equipment) do
         local name = 'empty'
         if type(cur_item) == 'table' and cur_item.slot ~= empty then
-            if items[to_windower_api(res.bags[cur_item.bag_id].english)][cur_item.slot].id == 0 then return {} end
+            if items[to_bag_api(res.bags[cur_item.bag_id].english)][cur_item.slot].id == 0 then return {} end
             -- refresh_player() can run after equip packets arrive but before the item array is fully loaded,
             -- which results in the id still being the initialization value.
-            name = res.items[items[to_windower_api(res.bags[cur_item.bag_id].english)][cur_item.slot].id][language]
+            name = res.items[items[to_bag_api(res.bags[cur_item.bag_id].english)][cur_item.slot].id][language]
         end
         
         if tonumber(ind) and ind >= 0 and ind <= 15 and math.floor(ind) == ind then
@@ -286,12 +285,12 @@ function equip_piece(eq_slot_id,bag_id,inv_slot_id)
     local cur_eq_tab = items.equipment[toslotname(eq_slot_id)]
     
     if cur_eq_tab.slot ~= empty then
-        items[to_windower_api(res.bags[cur_eq_tab.bag_id].english)][cur_eq_tab.slot].status = 0
+        items[to_bag_api(res.bags[cur_eq_tab.bag_id].english)][cur_eq_tab.slot].status = 0
     end
     
     if inv_slot_id ~= empty then
         items.equipment[toslotname(eq_slot_id)] = {slot=inv_slot_id,bag_id=bag_id}
-        items[to_windower_api(res.bags[bag_id].english)][inv_slot_id].status = 5
+        items[to_bag_api(res.bags[bag_id].english)][inv_slot_id].status = 5
         return string.char(inv_slot_id,eq_slot_id,bag_id,0)
     else
         items.equipment[toslotname(eq_slot_id)] = {slot=empty,bag_id=0}
