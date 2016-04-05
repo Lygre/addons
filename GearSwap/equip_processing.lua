@@ -89,7 +89,8 @@ function expand_entry(entry)
             augments = {entry.augment}
         end
         if entry.bag and type(entry.bag) == 'string' then
-            local bag_list = {inventory = 0, wardrobe = 8}
+--MY CHANGES		
+            local bag_list = {inventory = 0, wardrobe = 8, wardrobe2= 10}
             bag = bag_list[entry.bag:lower()]
         end
     elseif type(entry) == 'string' and entry ~= '' then
@@ -119,8 +120,8 @@ function unpack_equip_list(equip_list)
             equip_list[slot_name] = nil
         end
     end
-    
-    local inventories = {[0]=items.inventory,[8]=items.wardrobe}
+--MY CHANGES!!!!!!!!!!!!!	
+    local inventories = {[0]=items.inventory,[8]=items.wardrobe,[10]=items.wardrobe2}
     
     for bag_id,inventory in pairs(inventories) do
         for _,item_tab in ipairs(inventory) do

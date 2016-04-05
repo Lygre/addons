@@ -116,7 +116,7 @@ function init_gear_sets()
 		head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade earring",ear2="Neritic Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",--[[ring1="Garuda Ring +1",ring2="Garuda Ring +1",]]
 		back="Lutian cape",waist="Yemaya belt",legs=gear.herclegs_rng_crit,feet=gear.hercfeet_rng_jishnu }
-}
+
 	--------------------------------------
 	-- Midcast sets
 	--------------------------------------
@@ -138,7 +138,7 @@ function init_gear_sets()
 		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
 	
 	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
-		{head="Amini gapette +1",neck="Sanctity necklace",
+		{head="Amini gapette +1",neck="Combatant's Torque",
 		legs=gear.herclegs_rng_acc,feet=gear.taeonfeet_rng_crit })
 
 	sets.midcast.RA.Annihilator = set_combine(sets.midcast.RA, {hands="Amini glovelettes +1"})
@@ -189,14 +189,14 @@ function init_gear_sets()
 	--------------------------------------
 
 	sets.engaged = {
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Kentarch Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_acc }
 
 	sets.engaged.Acc = set_combine(sets.engaged, {
-		head=gear.adhemarhead_melee,neck="Iqabi necklace",
-		body="Adhemar jacket", hands="Floral gauntlets",ring2="Petrov Ring",
-		back="Grounded Mantle +1",waist="Kentarch Belt"})
+		head=gear.adhemarhead_melee,neck="Combatant's torque",
+		body="Adhemar jacket", hands="Floral gauntlets",
+		back="Grounded Mantle +1",waist="Olseni belt"})
 
 	sets.engaged.DW = {
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
@@ -204,8 +204,7 @@ function init_gear_sets()
 		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		neck="Lissome Necklace",
-		ring2="Petrov Ring",
+		neck="Combatant's torque",
 		back="Grounded Mantle +1"})
 
 	--------------------------------------

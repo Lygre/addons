@@ -102,7 +102,7 @@ function init_gear_sets()
     sets.midcast.Cure = {ammo="Psilomene",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati Earring",
         body="Kaykaus bliaut",hands="Telchine gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
-        back="Tempered cape +1",waist="Bishop's sash",legs="Chironic Hose",feet="Vanya clogs"}
+        back="Tempered cape +1",waist="Bishop's sash",legs="Academic's pants +1",feet="Vanya clogs"}
 
     sets.midcast.CureWithLightWeather = {main="Chatoyant staff",sub="Arbuda grip",ammo="Psilomene",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati earring",
@@ -116,7 +116,7 @@ function init_gear_sets()
     sets.midcast.Cursna = set_combine(sets.midcast.FastRecast,{
         head="Kaykaus mitra",neck="Malison Medallion",ear1="Calamitous Earring",
         body="Pedagogy gown +1",hands="Hieros Mittens",ring1="Ephedra Ring",ring2="Sirona's Ring",
-        back="Tempered cape +1",waist="Ninurta's sash",legs="Chironic hose",feet="Vanya clogs"})
+        back="Tempered cape +1",waist="Ninurta's sash",legs="Academic's pants +1",feet="Vanya clogs"})
 
     sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",ammo="Savant's Treatise",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",

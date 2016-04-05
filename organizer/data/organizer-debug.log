@@ -1,81 +1,14 @@
-Organizer loaded at 04/03/16 09:41:32
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding inventory to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding locker to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding safe2 to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding safe to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding sack to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding case to the pull list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding safe to the push list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding case to the push list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding locker to the push list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding sack to the push list
-2016-04-03 09:41:32| Organizer [VERBOSE] Adding safe2 to the push list
-2016-04-03 09:41:32| Organizer [VERBOSE] Non-equipment items set to retain
-2016-04-03 09:41:32| Organizer [VERBOSE] Slips set to retain
-2016-04-03 09:49:13| Organizer [MSG] Starting...
-2016-04-03 09:49:14| Organizer [VERBOSE] Getting!
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Steelflash Earring) from Sack 78 to Inventory 74)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Bladeborn Earring) from Sack 77 to Inventory 75)
-2016-04-03 09:49:14| Organizer [VERBOSE] Got 2 item(s), and failed getting 0 item(s)
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Lutian Cape) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Annihilator) from Inventory 76 to Safe 77)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Achiyal. Bullet) from Inventory 75 to Safe 78)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Ifrit Ring +1) from Inventory 74 to Safe 79)
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Oneiros Knife) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Olseni Belt) from Inventory 73 to Safe 2 64)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Ifrit Ring +1) from Inventory 72 to Safe 2 65)
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Perun) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Carmine Mask). It has already been moved.
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Mekosu. Harness) from Inventory 71 to Safe 2 66)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Taeon Boots) from Inventory 70 to Safe 2 67)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Umbani Cap) from Inventory 69 to Safe 2 68)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 68 to Safe 2 69)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Windbuffet Belt +1) from Inventory 67 to Safe 2 70)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 66 to Safe 2 71)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Legion Scutum) from Inventory 65 to Safe 2 72)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Carmine Cuisses) from Inventory 64 to Safe 2 73)
-2016-04-03 09:49:14| Organizer [VERBOSE] Moving item! (Brutal Earring) from Inventory 63 to Safe 2 74)
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Arcadian Beret +1). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
-2016-04-03 09:49:14| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Lutian Cape) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Oneiros Knife) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [VERBOSE] Skipping item: (Perun) because it is currently equipped.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Carmine Mask). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Arcadian Beret +1). It has already been moved.
-2016-04-03 09:49:14| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
-2016-04-03 09:49:14| Organizer [MSG] Done! - 59 items matched and 0 items missing!
-2016-04-03 09:51:54| Organizer [MSG] Starting...
-2016-04-03 09:51:54| Organizer [VERBOSE] Getting!
-2016-04-03 09:51:54| Organizer [VERBOSE] Moving item! (Taeon Boots) from Safe 2 75 to Inventory 62)
-2016-04-03 09:51:54| Organizer [VERBOSE] Got 1 item(s), and failed getting 0 item(s)
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
-2016-04-03 09:51:54| Organizer [VERBOSE] Skipping item: (Lutian Cape) because it is currently equipped.
-2016-04-03 09:51:54| Organizer [VERBOSE] Skipping item: (Oneiros Knife) because it is currently equipped.
-2016-04-03 09:51:54| Organizer [VERBOSE] Skipping item: (Perun) because it is currently equipped.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Carmine Mask). It has already been moved.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Arcadian Beret +1). It has already been moved.
-2016-04-03 09:51:54| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
-2016-04-03 09:51:54| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
-2016-04-03 09:51:55| Organizer [VERBOSE] Skipping item: (Lutian Cape) because it is currently equipped.
-2016-04-03 09:51:55| Organizer [VERBOSE] Skipping item: (Oneiros Knife) because it is currently equipped.
-2016-04-03 09:51:55| Organizer [VERBOSE] Skipping item: (Perun) because it is currently equipped.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Carmine Mask). It has already been moved.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Arcadian Beret +1). It has already been moved.
-2016-04-03 09:51:55| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
-2016-04-03 09:51:55| Organizer [MSG] Done! - 60 items matched and 0 items missing!
+Organizer loaded at 04/05/16 03:09:50
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding inventory to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding locker to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding safe to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding sack to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding case to the pull list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding safe to the push list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding case to the push list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding locker to the push list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding sack to the push list
+2016-04-05 03:09:50| Organizer [VERBOSE] Adding safe2 to the push list
+2016-04-05 03:09:50| Organizer [VERBOSE] Non-equipment items set to retain
+2016-04-05 03:09:50| Organizer [VERBOSE] Slips set to retain

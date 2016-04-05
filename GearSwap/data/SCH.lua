@@ -105,11 +105,15 @@ end
 ------------------------------------------------------------------
 function job_precast(spell, action, spellMap)
 	if not midaction() then
-        if string.find(spell.english,'Cur') and spell.english ~= "Cursna" then
-            equip(sets.precast.FC.Cure)
-		end
-        if spell.english == "Impact" then
-            equip(set_combine(sets.precast.FC,{body="Twilight Cloak"}))
+	    if (spell.type:endswith('Magic') or spell.type == "Ninjutsu") and buffactive.silence then -- Auto Use Echo Drops If You Are Silenced --
+		cancel_spell()
+		send_command('input /item "Echo Drops" <me>')
+			if string.find(spell.english,'Cur') and spell.english ~= "Cursna" then
+				equip(sets.precast.FC.Cure)
+			end
+			if spell.english == "Impact" then
+				equip(set_combine(sets.precast.FC,{body="Twilight Cloak"}))
+			end
 		end
 	end
 end

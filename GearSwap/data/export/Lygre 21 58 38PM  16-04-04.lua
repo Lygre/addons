@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Queller Rod", augments={'MP+80','"Cure" potency +15%','Enmity-5',}},
+    sub="Mafic Cudgel",
+    ammo="Amar Cluster",
+    head={ name="Chironic Hat", augments={'Mag. Acc.+30','"Resist Silence"+10',}},
+    body={ name="Kaykaus Bliaut", augments={'MP+60','"Cure" potency +5%','"Conserve MP"+6',}},
+    hands="Gazu Bracelet +1",
+    legs={ name="Telchine Braconi", augments={'Mag. Evasion+8','"Cure" potency +6%','Enh. Mag. eff. dur. +10',}},
+    feet="Battlecast Gaiters",
+    neck="Lissome Necklace",
+    waist="Windbuffet Belt +1",
+    left_ear="Eabani Earring",
+    right_ear="Suppanomimi",
+    left_ring="Rajas Ring",
+    right_ring="Petrov Ring",
+    back="Aurist's Cape +1",
+}
