@@ -50,8 +50,8 @@ function init_gear_sets()
     sets.precast.FC = {ammo="Sapience orb",
 		main="Grioavolr",sub="Vivid Strap",
         head="Nahtirah Hat",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-        body="Shango Robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Lengo Pants",feet="Regal Pumps"}
+        body="Anhur Robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        back="Alaunus's Cape",waist="Witful Belt",legs="Lengo Pants",feet="Regal Pumps"}
         
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
@@ -62,20 +62,20 @@ function init_gear_sets()
     sets.precast.FC.StatusRemoval = sets.precast.FC['Healing Magic']
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], 
-		{main="Queller Rod",sub="Genmei Shield",ammo="Sapience Orb",
-		body="Heka's Kalasiris",feet="Hygieia Clogs",back="Pahtli Cape"})
+		{main="Queller Rod",sub="Genmei Shield",
+		body="Heka's Kalasiris",feet="Hygieia Clogs"})
 		
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     sets.precast.FC.CureSolace = sets.precast.FC.Cure
     -- CureMelee spell map should default back to Healing Magic.
     
     -- Precast sets to enhance JAs
-    sets.precast.JA.Benediction = {body="Piety Briault"}
+    sets.precast.JA.Benediction = {body="Piety Briault +1"}
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
         head="Nahtirah Hat",ear1="Roundel earring",
-        body="Vanya Robe",hands="Fanatic gloves",
+        body="Vanya Robe",hands="Fanatic gloves",ring1="Askelpian Ring",
         back="Pahtli Cape",legs="Ebers pantaloons +1",feet="Vanya clogs"}
     
     
@@ -90,7 +90,7 @@ function init_gear_sets()
     
     -- Midcast Sets
     
-    sets.midcast.FastRecast = {ammo="Sapience Orb",
+    sets.midcast.FastRecast = {main="Grioavolr",sub="Vivid strap",ammo="Sapience Orb",
         head="Nahtirah Hat",neck="Orison locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Shango robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Witful belt",legs="Lengo Pants",feet="Regal pumps"}
@@ -98,18 +98,18 @@ function init_gear_sets()
     ------------ Cure sets-------------------
 
 	sets.midcast.CureWithLightWeather = {main="Chatoyant Staff",sub="Achaq Grip",ammo="Psilomene",
-		head="Ebers cap +1",neck="Incanter's torque",ear1="Roundel earring",ear2="Glorious earring",
+		head="Ebers cap +1",neck="Incanter's torque",ear1="Nourishing earring +1",ear2="Glorious earring",
 		body="Ebers Bliaud +1",hands="Kaykaus cuffs",ring1="Sirona's Ring",ring2="Lebeche Ring",
 		back="Twilight Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
 
     sets.midcast.CureSolace = {main="Queller Rod",sub="Genbu's Shield",ammo="Psilomene",
-        head="Kaykaus Mitra",neck="Nodens gorget",ear1="Glorious Earring",ear2="Roundel Earring",
+        head="Kaykaus Mitra",neck="Nodens gorget",ear1="Nourishing earring +1",ear2="Glorious Earring",
         body="Ebers bliaud +1",hands="Theophany mitts +1",ring1="Lebeche Ring",ring2="Sirona's Ring",
-        back="Solemnity cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Vanya Clogs"}
+        back="Alaunus's Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Vanya Clogs"}
 
     sets.midcast.Cure = {main="Queller Rod",sub="Genbu's shield",ammo="Psilomene",
         head="Gendewitha Caubeen",neck="Incanter's torque",ear1="Beatific Earring",ear2="Healing Earring",
-        body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Ephedra ring",ring2="Sirona's Ring",
+        body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Sirona's Ring",
         back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
 
     sets.midcast.Curaga = {main="Queller Rod",sub="Genbu's shield",ammo="Psilomene",
@@ -124,13 +124,13 @@ function init_gear_sets()
 
     sets.midcast.Cursna = {main="Ababinili +1",sub="Arbuda Grip",ammo="Sapience Orb",
         head="Ebers cap +1",neck="Malison Medallion",ear1="Loquacious earring",ear2="Enchanter earring +1",
-        body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Ephedra Ring",ring2="Sirona's ring",
-        back="Mending Cape",waist="Ninurta's sash",legs="Piety Pantaloons +1",feet="Vanya clogs"}
+        body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Haoma's Ring",ring2="Haoma's ring",
+        back="Alaunus's Cape",waist="Ninurta's sash",legs="Theophany Pantaloons +1",feet="Vanya clogs"}
 
     sets.midcast.StatusRemoval = {ammo="Sapience Orb",
         head="Ebers cap +1",neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
 		body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Mending Cape",waist="Ninurta's Sash",legs="Ebers pantaloons +1",feet="Regal Pumps"}
+		back="Alaunus's Cape",waist="Ninurta's Sash",legs="Ebers pantaloons +1",feet="Regal Pumps"}
 
 --------------ENHANCING AND SUCH---------------------
 

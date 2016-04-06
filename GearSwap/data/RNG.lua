@@ -101,12 +101,12 @@ function init_gear_sets()
     sets.precast.WS['Last Stand'] = {
         head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
         body="Amini Caban +1",hands="Kobo Kote",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Lutian Cape",waist="Fotia Belt",legs="Amini brague +1",feet="Amini Bottillons +1"}
+        back="Belenus's Cape",waist="Fotia Belt",legs="Amini brague +1",feet="Amini Bottillons +1"}
 
 	sets.precast.WS['Jishnu\'s Radiance'] = {
 		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Dominance Earring",
 		body="Amini caban +1",hands=gear.taeonhands_rng_crit,ring1="Rajas Ring",ring2="Petrov ring",
-		back="Rancorous mantle",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
+		back="Belenus's cape",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
 	
 	sets.precast.WS['Jishnu\'s Radiance'].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'],
 		{hands="Kobo Kote",

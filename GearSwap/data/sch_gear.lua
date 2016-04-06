@@ -69,7 +69,7 @@ function init_gear_sets()
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
-    sets.precast.FC['Enhancing Magic'].Stoneskin = set_combine(sets.precast.FC, {head="Umuthi Hat",waist="Siegel Sash",legs="Doyen pants"})
+    sets.precast.FC['Enhancing Magic'].Stoneskin = set_combine(sets.precast.FC, {hands="Carapacho cuffs",waist="Siegel Sash",legs="Doyen pants"})
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkarole earring"})
 
@@ -87,21 +87,21 @@ function init_gear_sets()
     
 	sets.precast.WS['Myrkr'] = {ammo="Psilomene",
 		head="Kaykaus Mitra",neck="Nodens gorget",ear1="loquacious earring", ear2="Moonshade earring",
-		body="Amalric doublet", hands="Kaykaus cuffs", ring1="Sangoma ring", ring2="Lebeche Ring",
+		body="Amalric doublet", hands="Kaykaus cuffs", ring1="Sangoma ring", ring2="Mephitas's Ring",
 		back="Aurist's cape +1", waist="Fucho-no-obi", legs="Amalric slops", feet="Arbatel loafers +1"}
 
 
 
     -- Midcast Sets 
 
-    sets.midcast.FastRecast = {ammo="Sapience orb",
-        head=gear.FC_head,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-        body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
+    sets.midcast.FastRecast = {main="Grioavolr",sub="Thrace strap",ammo="Hasty pinion +1",
+        head=gear.FC_head,neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchanter earring +1",
+        body="Shango robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
     sets.midcast.Cure = {ammo="Psilomene",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati Earring",
-        body="Kaykaus bliaut",hands="Telchine gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+        body="Kaykaus bliaut",hands="Telchine gloves",ring1="Haoma's Ring",ring2="Sirona's Ring",
         back="Tempered cape +1",waist="Bishop's sash",legs="Academic's pants +1",feet="Vanya clogs"}
 
     sets.midcast.CureWithLightWeather = {main="Chatoyant staff",sub="Arbuda grip",ammo="Psilomene",
@@ -115,7 +115,7 @@ function init_gear_sets()
  
     sets.midcast.Cursna = set_combine(sets.midcast.FastRecast,{
         head="Kaykaus mitra",neck="Malison Medallion",ear1="Calamitous Earring",
-        body="Pedagogy gown +1",hands="Hieros Mittens",ring1="Ephedra Ring",ring2="Sirona's Ring",
+        body="Pedagogy gown +1",hands="Hieros Mittens",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Tempered cape +1",waist="Ninurta's sash",legs="Academic's pants +1",feet="Vanya clogs"})
 
     sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",ammo="Savant's Treatise",

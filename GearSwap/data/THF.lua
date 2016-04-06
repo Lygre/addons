@@ -266,7 +266,7 @@ function init_gear_sets()
     sets.defense.PDT = { ammo="Brigantia pebble",
         head="Lithelimb cap",neck="Loricate torque +1",ear1="Impregnable earring",ear2="Genmei Earring",
         body="Adhemar jacket",hands="Umuthi gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity cape",waist="Flume Belt +1",legs=gear.herclegs_melee,feet=gear.hercfeet_melee }
+        back="Solemnity cape",waist="Flume Belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
     sets.defense.MDT = {
         head="Skormoth mask",neck="Loricate torque +1",ear1="Eabani Earring",ear2="Sanare Earring",
@@ -308,11 +308,11 @@ function init_gear_sets()
 
     sets.engaged.PDT = {
         head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
-        body="Adhemar jacket",hands=gear.herclegs_melee,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Adhemar jacket",hands="Samnuha tights",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
     sets.engaged.Acc.PDT = {
         head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
-        body="Adhemar jacket",hands=gear.herclegs_melee,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Adhemar jacket",hands="Samnuha tights",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
 end

@@ -112,7 +112,7 @@ function init_gear_sets()
     sets.precast.WS['Blade: Hi'] = set_combine(sets.precast.WS,
         {head=gear.adhemarhead_melee,
 		body="Adhemar jacket",hands="Kobo Kote",
-		back="Rancorous Mantle",legs=gear.herclegs_melee})
+		back="Rancorous Mantle",legs="Samnuha tights"})
     sets.precast.WS['Blade: Hi'].Acc = set_combine(sets.precast.WS['Blade: Hi'],
         {head="Ryuo somen",
 		body="Reiki Osode",hands="Floral gauntlets"})
@@ -182,7 +182,7 @@ function init_gear_sets()
     sets.defense.PDT = {ammo="Amar Cluster",
         head="Genmei kabuto",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Impregnable Earring",
         body="Reiki osode",hands="Macabre gauntlets",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Flume belt +1",legs=gear.herclegs_melee,feet="Amm greaves"}
+        back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm greaves"}
 
     sets.defense.MDT = {ammo="Amar Cluster",
         head="Skormoth mask",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare Earring",
@@ -218,7 +218,7 @@ function init_gear_sets()
     sets.engaged.Acc.PDT = {ammo="Happo Shuriken",
 		head="Ryuo somen",neck="Combatant's torque",ear1="impregnable earring",ear2="Genmei Earring",
 		body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-		back="Agema cape",waist="Reiki yotai",legs=gear.herclegs_melee,feet=gear.hercfeet_melee}
+		back="Agema cape",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
     -- Custom melee group: High Haste (~20% DW)
     sets.engaged.HighHaste = {ammo="Happo Shuriken",
@@ -236,7 +236,7 @@ function init_gear_sets()
     sets.engaged.Acc.PDT.HighHaste = {ammo="Happo Shuriken",
         head="Ryuo somen",neck="Combatant's torque",ear1="Genmei earring",ear2="Telos Earring",
         body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-        back="Agema cape",waist="Flume belt +1",legs=gear.herclegs_melee,feet=gear.hercfeet_melee}
+        back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
     -- Custom melee group: Embrava Haste (7% DW)
     sets.engaged.EmbravaHaste = {ammo="Happo Shuriken",
@@ -254,7 +254,7 @@ function init_gear_sets()
     sets.engaged.Acc.PDT.EmbravaHaste = {ammo="Happo Shuriken",
         head="Ryuo somen",neck="Combatant's torque",ear1="Suppanomimi",ear2="Telos Earring",
         body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-        back="Agema cape",waist="Flume belt +1",legs=gear.herclegs_melee,feet=gear.hercfeet_melee}
+        back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
     -- Custom melee group: Max Haste (0% DW)
     sets.engaged.MaxHaste = {ammo="Happo Shuriken",
@@ -272,7 +272,7 @@ function init_gear_sets()
     sets.engaged.Acc.PDT.MaxHaste = {ammo="Happo Shuriken",
         head="Ryuo somen",neck="Combatant's torque",ear1="Suppanomimi",ear2="Telos Earring",
         body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-        back="Agema cape",waist="Flume belt +1",legs=gear.herclegs_melee,feet=gear.hercfeet_melee}
+        back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
     --------------------------------------
     -- Custom buff sets

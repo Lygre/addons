@@ -11,6 +11,7 @@
         <ShowSatchel>true</ShowSatchel>
         <ShowStorage>true</ShowStorage>
         <ShowWardrobe>true</ShowWardrobe>
+        <ShowWardrobe2>true</ShowWardrobe2>
         <display>
             <bg>
                 <alpha>150</alpha>

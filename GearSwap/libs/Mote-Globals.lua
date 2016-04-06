@@ -69,7 +69,6 @@ function define_global_sets()
 	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
 	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+30','Phys. dmg. taken -2%','Attack+2',}}
 	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
-	gear.herclegs_melee = {name="Herculean Trousers", augments={'Accuracy+29','Crit.hit rate+3','STR+9','Attack+10',}}
 	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
 	gear.hercfeet_acc = {name="Herculean Boots", augments={'"Triple Atk."+3','AGI+10','Accuracy+15','Attack+12',}}
