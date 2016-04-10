@@ -119,26 +119,77 @@ windower.register_event('addon command',function (...)
                                 end
                 elseif cmd[1]:lower() == "start" then
                         local player = windower.ffxi.get_player()
+						--local spellRecasts = windower.ffxi.get_spell_recasts()
+						currentStrats = get_current_strategem_count()
                         if Telem:contains(element) then
                                 if S(player.buffs):contains(359) or S(player.buffs):contains(402) then
-                                        set_elements()
-                                        get_spells()
-                                        windower.send_command('input /ja "Immanence" <me>')
-                                        windower.send_command('@wait 1.5;input /ma "'..sp1..'" <t>')
-                                        windower.send_command('input /p Opening Schillchain '..skillchain..' - [Magic Burst: '..burst..']')
+                                    set_elements()
+                                    get_spells()
+									get_recast_timers()
+									get_ability_recasts()
+									--if sp1 ~= '' then
+									rctime1 = recasts[sp1] or 0		--Cooldown remaining for current tier
+									rctime2 = recasts[sp2] or 0		--Cooldown remaining for current tier
+
+										if rctime1 = 0 and rctime2 < 4 then
+											if currentStrats > 1 or (currentStrats = 1 and abil_recasts[231] < 37) then
+												windower.send_command('input /ja "Immanence" <me>')
+												windower.send_command('@wait 1.5;input /ma "'..sp1..'" <t>')
+												windower.send_command('input /p Opening Schillchain [Magic Burst: '..burst..']')
+											else
+												windower.add_to_chat(209,'Not enough Stratagems and/or time to successfully skillchain: Current #Stratagems: '..currentStrats..', Next in: '..math.floor(abil_recasts[231] / 33 - currentStrats * 33)..'s')
+											end
+										else
+											windower.add_to_chat(209,'Recasts of one or more Skillchain Spells not ready: '..sp1..': '..rctime1..'s, '..sp2..': '..rctime2..'s')
+										end
+									--else 
+									--	windower.add_to_chat(209,'Recasts of both Helices tiers not ready! Aborting!')
+									--end
                                 else
-                                        windower.add_to_chat(209,"Oops! Dark Arts isn't active!")
+                                    windower.add_to_chat(209,"Oops! Dark Arts isn't active!")
                                 end
                         else
                                 windower.add_to_chat(209,"Select an element first.")
                         end
                 elseif cmd[1]:lower() == "end" then
-                        windower.send_command('input /ja "Immanence" <me>')
-                        windower.send_command('@wait 1.5;input /ma "'..sp2..'" <t>')
-                        windower.send_command('input /p Closing Schillchain '..skillchain..' - [Magic Burst: '..burst..']')
+                    local player = windower.ffxi.get_player()
+					get_recast_timers()
+					get_ability_recasts()
+					currentStrats = get_current_strategem_count()
+					--if sp2 ~= '' then
+						rctime2 = recasts[sp2] or 0		--Cooldown remaining for current tier
+
+						if rctime2 > 0 then
+							if currentStrats = 1 or currentStrats > 1 then
+								windower.send_command('input /ja "Immanence" <me>')
+								windower.send_command('@wait 1.5;input /ma "'..sp2..'" <t>')
+								windower.send_command('input /p Closing Schillchain [Magic Burst: '..burst..']')
+							else
+								windower.add_to_chat(209,'Not enough Stratagems to complete skillchain!: Current #Stratagems: '..currentStrats..', Next in: '..math.floor(abil_recasts[231] / 33 - currentStrats * 33)..'s')
+							end
+						else
+							windower.add_to_chat(209,'Recast of Closing Spell is not ready! If swift enough will automatically try again: '..sp2..': '..rctime2..'s')
+							if rctime2 < 2 then
+								windower.send_command('@wait 1.5;sch end')
+							else 
+								windower.add_to_chat(209,'Recast of '..sp2..' too long to automatically attempt closing again.. Aborting.')
+							end
+						end
+					--else 
+					--	windower.add_to_chat(209,'Recasts of both Helices tiers not ready! Aborting!')
+					--end
                 end
     end)
  
+function get_recast_timers()
+	return windower.ffxi.get_spell_recasts()
+end
+
+function get_ability_recasts()
+	local abil_recasts = windower.ffxi.get_ability_recasts()
+	return abil_recasts
+end
+
 function set_elements()
         if element == 'trans' then
                 skillchain = "Transfixion"
@@ -238,10 +289,35 @@ function set_elements()
 end
  
 function get_spells()
+		recasts = get_recast_timers()			--Cooldown timers for spells/abilities
+		--local rctime = recasts[sp1.recast_id] or 0		--Cooldown remaining for current tier
+
         if ele1 == "Darkness" then
-                sp1 = "Noctohelix"
+            sp1 = "Noctohelix"
+			rctime = recasts[284] or 0		--Cooldown remaining for current tier
+
+			if rctime > 0 then
+				sp1 = "Noctohelix II"
+				windower.add_to_chat(209,'Noctohelix recast not ready: Automatically changing to '..sp1..'')
+				--local rctime = recasts[891] or 0 
+				--if rctime > 0 then 
+				--- aborts if neither tier helices' recast is up
+				--	sp1 = ''
+				--end
+			end
         elseif ele1 == "Light" then
-                sp1 = "Luminohelix"
+            sp1 = "Luminohelix"
+			rctime = recasts[285] or 0		--Cooldown remaining for current tier
+
+			if rctime > 0 then
+				sp1 = "Luminohelix II"
+				windower.add_to_chat(209,'Luminohelix recast not ready: Automatically changing to '..sp1..'')
+				--local rctime = recasts[892] or 0		--Cooldown remaining for current tier
+				--if rctime > 0 then 
+				--- aborts if neither tier helices' recast is up
+				--	sp1 = ''
+				--end
+			end
         elseif ele1 == "Earth" then
                 sp1 = '"Stone'..tier1..'"'
         elseif ele1 == "Water" then
@@ -256,9 +332,31 @@ function get_spells()
                 sp1 = '"Thunder'..tier1..'"'
         end
         if ele2 == "Darkness" then
-                sp2 = "Noctohelix"
+            sp2 = "Noctohelix"
+			rctime = recasts[284] or 0		--Cooldown remaining for current tier
+
+			if rctime > 0 then
+				sp2 = "Noctohelix II"
+				windower.add_to_chat(209,'Noctohelix recast not ready: Automatically changing to '..sp2..'')
+				--local rctime = recasts[891] or 0		--Cooldown remaining for current tier
+				--if rctime > 0 then 
+				--- aborts if neither tier helices' recast is up
+				--	sp2 = ''
+				--end
+			end
         elseif ele2 == "Light" then
-                sp2 = "Luminohelix"
+            sp2 = "Luminohelix"
+			rctime = recasts[285] or 0		--Cooldown remaining for current tier
+			if rctime > 0 then
+				sp2 = "Luminohelix II"
+				windower.add_to_chat(209,'Luminohelix recast not ready: Automatically changing to '..sp2..'')
+				--local rctime = recasts[892] or 0		--Cooldown remaining for current tier
+
+				--if rctime > 0 then 
+				--- aborts if neither tier helices' recast is up
+				--	sp2 = ''
+				end
+			end
         elseif ele2 == "Earth" then
                 sp2 = '"Stone'..tier2..'"'
         elseif ele2 == "Water" then
@@ -272,4 +370,19 @@ function get_spells()
         elseif ele2 == "Lightning" then
                 sp2 = '"Thunder'..tier2..'"'
         end
+end
+
+function get_current_strategem_count()
+    -- returns recast in seconds.
+    local allRecasts = windower.ffxi.get_ability_recasts()
+    local stratsRecast = allRecasts[231]
+
+    --[[local maxStrategems = (player.main_job_level + 10) / 20]]
+	local maxStrategems = 5
+	
+    local fullRechargeTime = 5*33
+
+    local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)
+
+    return currentCharges
 end

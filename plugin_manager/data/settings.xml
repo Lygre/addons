@@ -10,6 +10,7 @@
 		<plugin>delaymenot</plugin>
 		<plugin>FFXIDB</plugin>
 		<plugin>Fishingcrashfix</plugin>
+		<plugin>config</plugin>
 		<addon>aecho</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>

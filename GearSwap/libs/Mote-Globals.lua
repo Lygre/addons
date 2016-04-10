@@ -52,6 +52,8 @@ function define_global_sets()
 	gear.nuke_legs = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}
 	gear.nuke_hands = {name="Chironic Gloves", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Spell interruption rate down -6%','CHR+13','"Mag.Atk.Bns."+13',}}
 
+	
+	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
 	gear.macc_hands = {name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}}
 	gear.chirbody = {name="Chironic Doublet", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+14',}}
 	gear.chirhands_sc = {name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
@@ -59,6 +61,7 @@ function define_global_sets()
 	gear.merllegs_phalanx = {name="Merlinic Shalwar", augments={'Mag. Acc.+5','Magic dmg. taken -3%','Phalanx +2','Accuracy+1 Attack+1',}}
 	gear.merlfeet_dt = {}
 	gear.merlfeet_refresh = {name="Merlinic Crackows", augments={'"Store TP"+1','Pet: Attack+21 Pet: Rng.Atk.+21','"Refresh"+1','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
+	gear.chirfeet = {name="Chironic Slippers", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Cure" potency +1%','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}
 	
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}

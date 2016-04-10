@@ -1,0 +1,17 @@
+sets.exported={
+    main="Mafic Cudgel",
+    sub="Genmei Shield",
+    ammo="Brigantia Pebble",
+    head={ name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}},
+    body="Vrikodara Jupon",
+    hands={ name="Gende. Gages +1", augments={'Phys. dmg. taken -4%',}},
+    legs={ name="Merlinic Shalwar", augments={'Phys. dmg. taken -4%',}},
+    feet={ name="Chironic Slippers", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Cure" potency +1%','Mag. Acc.+9','"Mag.Atk.Bns."+15',}},
+    neck="Loricate Torque +1",
+    waist="Slipor Sash",
+    left_ear="Impreg. Earring",
+    right_ear="Genmei Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Defending Ring",
+    back="Solemnity Cape",
+}

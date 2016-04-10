@@ -335,7 +335,7 @@ function init_gear_sets()
     sets.buff['Ebullience'] = {head="Arbatel Bonnet +1"}
     sets.buff['Rapture'] = {head="Arbatel Bonnet +1"}
     sets.buff['Perpetuance'] = {hands="Arbatel bracers +1"}
-    sets.buff['Immanence'] = {hands="Arbatel bracers +1"}
+    sets.buff['Immanence'] = {hands="Arbatel bracers +1",back="Lugh's cape",legs="Amalric slops"}
     sets.buff['Penury'] = {}
     sets.buff['Parsimony'] = {}
     sets.buff['Celerity'] = {feet="Pedagogy Loafers +1"}

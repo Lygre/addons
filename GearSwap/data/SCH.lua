@@ -622,8 +622,9 @@ function get_current_strategem_count()
     local allRecasts = windower.ffxi.get_ability_recasts()
     local stratsRecast = allRecasts[231]
 
-    local maxStrategems = (player.main_job_level + 10) / 20
-
+    --[[local maxStrategems = (player.main_job_level + 10) / 20]]
+	local maxStrategems = 5
+	
     local fullRechargeTime = 5*33
 
     local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)

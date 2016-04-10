@@ -51,9 +51,7 @@ _static = {
         sack=6,
         case=7,
         wardrobe=8,
-        safe2=9,
-		--Lygre changes
-		wardrobe2=10
+        safe2=9
     }
 }
 
@@ -69,7 +67,7 @@ _valid_dump = {}
 
 default_settings = {
     dump_bags = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4},
-    bag_priority = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4,['Satchel']=5,['Sack']=6,['Case']=7,['Inventory']=8,['Wardrobe']=9,['Wardrobe 2']=10},
+    bag_priority = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4,['Satchel']=5,['Sack']=6,['Case']=7,['Inventory']=8,['Wardrobe']=9},
     item_delay = 0,
     ignore = {},
     retain = {
@@ -216,9 +214,6 @@ function options_load( )
     _valid_pull[0] = 1
     _valid_dump[8] = 1
     _valid_pull[8] = 1
-	--Lygre changes
-	_valid_dump[10] = 1 
-	_valid_pull[10] = 1
 
 end
 
