@@ -81,7 +81,7 @@ function init_gear_sets()
 	sets.precast.RA = {
 		head="Amini gapette +1",
 		body="Amini Caban +1",hands="Iuitl Wristbands",back="Lutian Cape",
-		waist="Impulse Belt",legs="Nahtirah Trousers",feet=SnapBoots}
+		back="Belenus's cape",waist="Impulse Belt",legs="Nahtirah Trousers",feet=SnapBoots}
 
 
 	-- Weaponskill sets
@@ -109,13 +109,13 @@ function init_gear_sets()
 		back="Belenus's cape",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
 	
 	sets.precast.WS['Jishnu\'s Radiance'].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'],
-		{hands="Kobo Kote",
-		back="Lutian cape",legs=gear.herclegs_rng_racc,feet=gear.hercfeet_rng_jishnu})
+		{body=gear.hercbody_rng_crit,hands="Kobo Kote",
+		back="Belenus's cape",legs=gear.herclegs_rng_racc,feet=gear.hercfeet_rng_jishnu})
 
 	sets.precast.WS['Apex Arrow'] = {
 		head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade earring",ear2="Neritic Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",--[[ring1="Garuda Ring +1",ring2="Garuda Ring +1",]]
-		back="Lutian cape",waist="Yemaya belt",legs=gear.herclegs_rng_crit,feet=gear.hercfeet_rng_jishnu }
+		back="Belenus's cape",waist="Yemaya belt",legs=gear.herclegs_rng_crit,feet=gear.hercfeet_rng_jishnu }
 
 	--------------------------------------
 	-- Midcast sets
@@ -135,7 +135,7 @@ function init_gear_sets()
 	sets.midcast.RA = {
 		head="Arcadian Beret +1",neck="Ocachi Gorget",ear1="Telos earring",ear2="Enervating Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",
-		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
+		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
 	
 	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
 		{head="Amini gapette +1",neck="Combatant's Torque",

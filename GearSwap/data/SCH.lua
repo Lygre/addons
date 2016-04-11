@@ -249,7 +249,7 @@ end
 
 -- buff remaining timers.
 
-function adjust_timers(spell, spellMap)
+--[[function adjust_timers(spell, spellMap)
     local current_time = os.time()
     local temp_timer_list = {}
     local dur = calculate_duration(spell, spellName, spellMap)
@@ -352,7 +352,7 @@ function reset_timers()
         send_command('timers delete "'..i..'"')
     end
     custom_timers = {}
-end
+end]]
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
@@ -414,7 +414,9 @@ function job_get_spell_map(spell, default_spell_map)
         elseif spell.skill == 'Enfeebling Magic' then
             if spell.type == 'WhiteMagic' then
                 return 'MndEnfeebles'
-            else
+            elseif spell.english == 'Frazzle' or spell.english == 'Distract' then
+				return 'SpecialEnfeebles'
+			else
                 return 'IntEnfeebles'
             end
         elseif spell.skill == 'Elemental Magic' then

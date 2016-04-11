@@ -203,7 +203,7 @@ function init_gear_sets()
     sets.idle = {main="Bolelabunga",sub="Genmei shield",range="Dunna",ammo=empty,
         head="Befouled Crown",neck="Sanctity Necklace",ear1="Sanare Earring",ear2="Genmei Earring",
         body="Geomancy tunic +1",hands="Bagua Mitaines +1",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity Pants +1",feet="Azimuth gaiters +1"}
+        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity Pants +1",feet=gear.merlfeet_refresh }
 
     sets.idle.PDT = {main="Solstice",sub="Genmei shield",range="Dunna",ammo=empty,
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
@@ -390,7 +390,7 @@ function select_default_macro_book()
     set_macro_page(1, 6)
 end
 
--------------------------------------------------------------------
+--[[-------------------------------------------------------------------
 -- Function to create custom buff-remaining timers with the Timers plugin,
 
 -- keeping only the actual valid songs rather than spamming the default
@@ -527,5 +527,5 @@ function reset_timers()
 
     custom_timers = {}
 
-end
+end]]
 

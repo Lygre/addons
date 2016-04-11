@@ -100,7 +100,7 @@ function init_gear_sets()
 	sets.midcast.CureWithLightWeather = {main="Chatoyant Staff",sub="Achaq Grip",ammo="Psilomene",
 		head="Ebers cap +1",neck="Incanter's torque",ear1="Nourishing earring +1",ear2="Glorious earring",
 		body="Ebers Bliaud +1",hands="Kaykaus cuffs",ring1="Sirona's Ring",ring2="Lebeche Ring",
-		back="Twilight Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
+		back="Alaunus's Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
 
     sets.midcast.CureSolace = {main="Queller Rod",sub="Genbu's Shield",ammo="Psilomene",
         head="Kaykaus Mitra",neck="Nodens gorget",ear1="Nourishing earring +1",ear2="Glorious Earring",
@@ -221,8 +221,8 @@ function init_gear_sets()
 
     sets.idle.PDT = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
-        body="Vridokara jupon",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Slipor sashor",legs="Assiduity pants +1",feet="Battlecast gaiters"}
+        body="Vrikodara jupon",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Battlecast gaiters"}
 
 	sets.idle.MDT = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",

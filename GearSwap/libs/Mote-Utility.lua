@@ -40,7 +40,9 @@ function cancel_conflicting_buffs(spell, action, spellMap, eventArgs)
         elseif spell.english:startswith('Monomi') then
             send_command('@wait 1.0;cancel sneak')
         elseif spell.english == 'Utsusemi: Ichi' then
-            send_command('@wait 1.7;cancel copy image,copy image (2)')
+            send_command('@wait 0.5;cancel copy image,copy image (2)')
+		elseif spell.english == 'Utsusemi: Ni' then
+			send_command('@wait 0.5;cancel copy image (4+)')
         elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
             cast_delay(0.2)
             send_command('cancel saber dance')

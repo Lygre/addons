@@ -1,0 +1,18 @@
+sets.exported={
+    main="Oneiros Knife",
+    sub="Legion Scutum",
+    range="Fail-Not",
+    ammo="Chrono Arrow",
+    head="Genmei Kabuto",
+    body="Reiki Osode",
+    hands="Kobo Kote",
+    legs={ name="Herculean Trousers", augments={'Rng.Acc.+26','Crit. hit damage +4%','DEX+6',}},
+    feet={ name="Herculean Boots", augments={'Rng.Acc.+3 Rng.Atk.+3','Crit. hit damage +5%','Rng.Acc.+14','Rng.Atk.+14',}},
+    neck="Loricate Torque +1",
+    waist="Yemaya Belt",
+    left_ear="Infused Earring",
+    right_ear="Genmei Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Defending Ring",
+    back={ name="Lutian Cape", augments={'STR+3','AGI+1','"Store TP"+3','"Snapshot"+2',}},
+}

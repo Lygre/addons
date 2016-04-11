@@ -78,17 +78,17 @@ function define_global_sets()
 	gear.hercfeet_fc = {name="Herculean Boots", augments={'VIT+9','"Fast Cast"+5','Chance of successful block +8','Accuracy+20 Attack+20',}}
 	----RNG-------
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
+	gear.hercbody_rng_crit = {name="Herculean Vest", augments={'Rng.Acc.+23 Rng.Atk.+23','Crit. hit damage +4%','Rng.Atk.+8',}}
 	gear.taeonhands_rng_crit = {name="Taeon Gloves", augments={'Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+3','Crit. hit damage +2%',}}
-	gear.herclegs_rng_racc = {name="Herculean Trousers", augments={'Rng.Acc.+29','Crit. hit damage +2%','DEX+4','Rng.Atk.+5',}}
+	gear.herclegs_rng_racc = {name="Herculean Trousers", augments={'Rng.Acc.+26','Crit. hit damage +4%','DEX+6',}}
 	gear.herclegs_rng_crit = {name="Herculean Trousers", augments={'Rng.Atk.+22','Crit. hit damage +4%','AGI+5','Rng.Acc.+6',}}
-	gear.hercfeet_rng_jishnu = {name="Herculean Boots", augments={'Rng.Acc.+22 Rng.Atk.+22','Weapon skill damage +2%','DEX+15',}}
+	gear.hercfeet_rng_jishnu = {name="Herculean Boots", augments={'Rng.Acc.+3 Rng.Atk.+3','Crit. hit damage +5%','Rng.Acc.+14','Rng.Atk.+14',}}
 	gear.taeonfeet_rng_crit = {name="Taeon Boots", augments={'Rng.Acc.+24','Crit.hit rate+3','Crit. hit damage +3%',}}
 	SnapBoots = {name="Taeon Boots", augments={'"Snapshot"+5','"Snapshot"+3',}}
 
 
 	----PUP--------
  	gear.herchead_pup = {name="Herculean Helm", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: Haste+4',}}
-	gear.hercbody_pup_stp = {name="Herculean Vest", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Pet: "Store TP"+9','Pet: STR+6','Pet: "Mag.Atk.Bns."+12',}}
 	gear.herchands_pup = {name="Herculean Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Store TP"+11','Pet: Attack+11 Pet: Rng.Atk.+11','Pet: "Mag.Atk.Bns."+3',}}
 	gear.herclegs_pup_stp = {name="Herculean Trousers", augments={'Pet: Accuracy+27 Pet: Rng. Acc.+27','Pet: "Store TP"+11','Pet: DEX+3',}}
 	gear.hercfeet_pup_stp = {name="Herculean Boots", augments={'Pet: Accuracy+29 Pet: Rng. Acc.+29','Pet: "Store TP"+11','Pet: DEX+7','Pet: "Mag.Atk.Bns."+14',}}
