@@ -27,7 +27,7 @@
                 <target>false</target>
             </party>
             <self>
-                <always>true</always>
+                <always>false</always>
                 <combat>true</combat>
                 <target>false</target>
             </self>
@@ -53,6 +53,9 @@
         <profiles>
 
         </profiles>
+        <redcurrybun>
+
+        </redcurrybun>
         <replacements>
             <body>
 

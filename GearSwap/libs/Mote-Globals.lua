@@ -70,7 +70,6 @@ function define_global_sets()
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
 	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
-	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+30','Phys. dmg. taken -2%','Attack+2',}}
 	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
 	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
@@ -80,6 +79,7 @@ function define_global_sets()
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
 	gear.hercbody_rng_crit = {name="Herculean Vest", augments={'Rng.Acc.+23 Rng.Atk.+23','Crit. hit damage +4%','Rng.Atk.+8',}}
 	gear.taeonhands_rng_crit = {name="Taeon Gloves", augments={'Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+3','Crit. hit damage +2%',}}
+	gear.herchands_rng_crit = {name="Herculean Gloves", augments={'Rng.Acc.+24 Rng.Atk.+24','Crit. hit damage +3%',}}
 	gear.herclegs_rng_racc = {name="Herculean Trousers", augments={'Rng.Acc.+26','Crit. hit damage +4%','DEX+6',}}
 	gear.herclegs_rng_crit = {name="Herculean Trousers", augments={'Rng.Atk.+22','Crit. hit damage +4%','AGI+5','Rng.Acc.+6',}}
 	gear.hercfeet_rng_jishnu = {name="Herculean Boots", augments={'Rng.Acc.+3 Rng.Atk.+3','Crit. hit damage +5%','Rng.Acc.+14','Rng.Atk.+14',}}
@@ -140,6 +140,7 @@ function global_on_load()
 	send_command('bind ^f10 gs c cycle PhysicalDefenseMode')
 	send_command('bind !f10 gs c toggle Kiting')
 	send_command('bind f11 gs c set DefenseMode Magical')
+	send_command('bind !f11 gs c cycle MagicalDefenseMode')
 	send_command('bind ^f11 gs c cycle CastingMode')
 	send_command('bind f12 gs c update user')
 	send_command('bind ^f12 gs c cycle IdleMode')

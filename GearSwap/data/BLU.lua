@@ -29,8 +29,8 @@ function job_setup()
     state.HybridMode:options('Normal','PDT', 'MDT','Meva')
     state.WeaponskillMode:options('Normal', 'Acc', 'Mod')
     state.CastingMode:options('Normal', 'Resistant')
-    state.PhysicalDefenseMode:options('Normal','PDT')
-	state.MagicalDefenseMode:options('Normal','MDT','Meva')
+    state.PhysicalDefenseMode:options('PDT')
+	state.MagicalDefenseMode:options('MDT','Meva')
 	
 
 	
@@ -103,25 +103,25 @@ function job_setup()
 
     -- Magical spells with the typical Int mod
     blue_magic_maps.Magical = S{
-        'Blastbomb','Blazing Bound','Bomb Toss','Corrosive Ooze','Cursed Sphere','Entomb','Dark Orb','Death Ray',
+        'Anvil Lightning','Blastbomb','Blazing Bound','Blinding Fulgor','Bomb Toss','Corrosive Ooze','Cursed Sphere','Entomb','Dark Orb','Death Ray',
         'Diffusion Ray','Droning Whirlwind','Embalming Earth','Firespit','Foul Waters',
         'Ice Break','Leafstorm','Maelstrom','Regurgitation','Rending Deluge',
-        'Retinal Glare','Spectral Floe','Subduction','Tem. Upheaval','Tenebral Crush','Water Bomb'
+        'Retinal Glare','Spectral Floe','Silent Storm','Subduction','Tem. Upheaval','Tenebral Crush','Water Bomb'
     }
 
     -- Magical spells with a primary Mnd mod
     blue_magic_maps.MagicalMnd = S{
-        'Acrid Stream','Evryone. Grudge','Magic Hammer','Mind Blast','Rail Cannon','Diffusion Ray','Scouring Spate'
+        'Acrid Stream','Evryone. Grudge','Magic Hammer','Mind Blast','Rail Cannon','Scouring Spate'
     }
 
     -- Magical spells with a primary Agi mod
     blue_magic_maps.MagicalAgi = S{
-        'Benthic Typhoon','Silent Storm'
+        'Benthic Typhoon'
     }
 
     -- Magical spells with a primary Chr mod
     blue_magic_maps.MagicalChr = S{
-        'Eyes On Me','Mysterious Light','Blinding Fulgor'
+        'Eyes On Me','Mysterious Light'
     }
 
     -- Magical spells with a Vit stat mod (on top of Int)
@@ -131,7 +131,7 @@ function job_setup()
 
     -- Magical spells with a Dex stat mod (on top of Int)
     blue_magic_maps.MagicalDex = S{
-        'Charged Whisker','Gates of Hades','Anvil Lightning'
+        'Charged Whisker','Gates of Hades'
     }
             
     -- Magical spells (generally debuffs) that we want to focus on magic accuracy over damage.
@@ -184,9 +184,9 @@ function job_setup()
     
     -- Spells that require Unbridled Learning to cast.
     unbridled_spells = S{
-        'Absolute Terror','Bilgestorm','Blistering Roar','Bloodrake','Carcharian Verve',
-        'Droning Whirlwind','Gates of Hades','Harden Shell','Mighty Guard','Pyric Bulwark','Thunderbolt',
-        'Tourbillion'
+        'Absolute Terror','Bilgestorm','Blistering Roar','Bloodrake','Carcharian Verve','Crashing Thunder','Cruel Joke',
+        'Droning Whirlwind','Gates of Hades','Harden Shell','Mighty Guard','Polar Roar','Pyric Bulwark','Thunderbolt',
+        'Tourbillion','Uproot'
     }
 
         -- Additional local binds
@@ -198,6 +198,9 @@ function job_setup()
     select_default_macro_book()
 	determine_haste_group()
 	
+	organizer_items = {
+		genshield = "Genmei Shield"
+		}
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -226,13 +229,13 @@ function init_gear_sets()
     sets.buff.Convergence = {}
     sets.buff.Diffusion = {feet="Luhlaza Charuqs +1"}
     sets.buff.Enchainment = {}
-    sets.buff.Efflux = {legs="Hashishin Tayt"}
+    sets.buff.Efflux = {legs="Hashishin Tayt +1"}
 
     
     -- Precast Sets
     
     -- Precast sets to enhance JAs
-    sets.precast.JA['Azure Lore'] = {hands="Mirage Bazubands +2"}
+    sets.precast.JA['Azure Lore'] = {--[[hands="Mirage Bazubands +2"]]}
 
 
     -- Waltz set (chr and vit)
@@ -265,13 +268,13 @@ function init_gear_sets()
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Requiescat'] = {ammo="Ginsen",
         head="Telchine cap",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-        body="Rawhide vest",hands="Leyline gloves",ring1="Sirona's Ring",ring2="Epona's Ring",
+        body="Mekosu. Harness",hands="Leyline gloves",ring1="Sirona's Ring",ring2="Epona's Ring",
         back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Telchine Pigaches"}
     
     sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
         head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
         body="Amalric doublet",hands="Amalric Gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-        back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet="Mavi basmask +1"}
+        back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet="Amalric nails"}
 
     sets.precast.WS['Savage Blade'] = {ammo="Floestone",
         head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
@@ -366,13 +369,14 @@ function init_gear_sets()
 
     -- Magical Spells --
     
-    sets.midcast['Blue Magic'].Magical = {ammo="Dosis Tathlum",
-        head="Helios band",neck="Sanctity necklace",ear1="Novio Earring",ear2="Friomisi Earring",
+    sets.midcast['Blue Magic'].Magical = {ammo="Pemphredo Tathlum",
+        head="Amalric coif",neck="Sanctity necklace",ear1="Novio Earring",ear2="Friomisi Earring",
         body="Amalric doublet",hands="Amalric Gages",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
         back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet="Amalric nails"}
 
     sets.midcast['Blue Magic'].Magical.Resistant = set_combine(sets.midcast['Blue Magic'].Magical,
-        {neck="Sanctity Necklace",back="Cornflower cape"})
+        {ear1="Digni. Earring",ear2="Gwati Earring",
+		feet="Hashishin Basmak +1"})
     
     sets.midcast['Blue Magic'].MagicalMnd = set_combine(sets.midcast['Blue Magic'].Magical,
         {hands="Hashishin Bazubands +1",ring1="Globidonta Ring",ring2="Shiva Ring +1",waist="Eschan Stone",
@@ -385,10 +389,10 @@ function init_gear_sets()
 
     sets.midcast['Blue Magic'].MagicalDex = set_combine(sets.midcast['Blue Magic'].Magical)
 
-    sets.midcast['Blue Magic'].MagicAccuracy = {ammo="Mavi Tathlum",
-        head="Amalric coif",neck="Sanctity necklace",ear1="Enchanter earring +1",ear2="Gwati Earring",
-        body="Samnuha coat",hands="Rawhide gloves",ring1="Shiva ring +1",ring2="Weatherspoon Ring",
-        back="Cornflower cape",waist="Eschan Stone",legs="Hashishin tayt +1",feet="Hashishin Basmak +1"}
+    sets.midcast['Blue Magic'].MagicAccuracy = {ammo="Pemphredo Tathlum",
+        head="Amalric coif",neck="Sanctity necklace",ear1="Digni. earring",ear2="Gwati Earring",
+        body="Amalric doublet",hands="Amalric gages",ring1="Sangoma Ring",ring2="Weatherspoon Ring",
+        back="Cornflower cape",waist="Luminary sash",legs="Psycloth lappas",feet="Hashishin Basmak +1"}
 
     -- Breath Spells --
     
@@ -414,13 +418,13 @@ function init_gear_sets()
 	
     sets.midcast['Blue Magic'].Healing = {
         head="Telchine Cap",neck="Incanter's Torque",ear1="Beatific Earring",ear2="Calamitous earring",
-        body="Vrikodara jupon",hands="Telchine Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+        body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's ring",ring2="Sirona's Ring",
         back="Solemnity cape",waist="Bishop's Sash",legs="Carmine cuisses",feet="Telchine pigaches"}
 
     sets.midcast['Blue Magic'].SkillBasedBuff = {ammo="Mavi Tathlum",
         neck="Incanter's Torque",
 		hands="Hashishin Bazubands +1",
-        back="Cornflower Cape",legs="Hashishin tayt"}
+        back="Cornflower Cape",legs="Hashishin tayt +1"}
 
     sets.midcast['Blue Magic'].Buff = set_combine(sets.midcast['Blue Magic'].SkillBasedBuff, {hands="Hashishin bazubands +1"})
     
@@ -448,22 +452,22 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {ammo="Sapience Orb",
         head="Rawhide mask",neck="Loricate torque +1",ear1="Telos Earring",ear2="Infused Earring",
-        body="Mekosu. Harness",hands=gear.herchands_dt,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+        body="Mekosu. Harness",hands=gear.herchands_acc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity Cape",waist="Flume Belt +1",legs="Amalric slops",feet="Ahosi leggings"}
 
     sets.idle.PDT = {ammo="Brigantia pebble",
         head="Lithelimb cap",neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
-        body="Vrikodara jupon",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Vrikodara jupon",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings"}
 
 	sets.idle.MDT = {ammo="Vanir Battery",
         head="Amalric coif",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Eabani earring",
-        body="Mekosu. Harness",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Mekosu. Harness",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity cape",waist="Flume belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings"}
 
     sets.idle.Town = {ammo="Sapience Orb",
         head="Rawhide mask",neck="Loricate torque +1",ear1="Telos Earring",ear2="Infused Earring",
-        body="Mekosu. Harness",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Mekosu. Harness",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume Belt +1",legs="Carmine cuisses",feet="Ahosi leggings"}
 
     sets.idle.Learning = set_combine(sets.idle, sets.Learning)
@@ -471,13 +475,13 @@ function init_gear_sets()
     
     -- Defense sets
     sets.defense.PDT = {ammo="Brigantia pebble",
-        head="Lithlelimb cap",neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
-        body="Vrikodara jupon",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        head="Lithelimb cap",neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
+        body="Vrikodara jupon",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
     sets.defense.MDT = {ammo="Vanir battery",
         head="Amalric coif",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Eabani earring",
-        body="Amalric doublet",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Amalric doublet",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
     sets.defense.Meva = {ammo="Vanir battery",
         head="Amalric coif",neck="Warder's charm",ear1="Sanare Earring",ear2="Eabani earring",
@@ -494,7 +498,7 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
     
     -- Normal melee group
-    sets.engaged = {sub="Genmei shield",ammo="Ginsen",
+    sets.engaged = {ammo="Ginsen",
         head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
         body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee}
@@ -518,11 +522,11 @@ function init_gear_sets()
         back="Grounded mantle +1",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
-		body="Adhemar jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings"}
 	sets.engaged.DW.Acc.PDT = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Genmei earring",
-		body="Adhemar jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 	sets.engaged.DW.Acc.MDT = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Eabani earring",
@@ -545,7 +549,7 @@ function init_gear_sets()
         back="Grounded mantle +1",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT.HighHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
-		body="Adhemar jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings"}
 	--sets.engaged.DW.Meva.HighHaste = {ammo="Vanir battery",
 		--head=gear.adhemarhead_melee, neck="warder's charm", ear1="Sanare earring", ear2="Eabani earring",
@@ -553,7 +557,7 @@ function init_gear_sets()
 		--back="Engulfer cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 	sets.engaged.DW.Acc.PDT.HighHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Genmei earring",
-		body="Adhemar jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 	sets.engaged.DW.Acc.MDT.HighHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Sanare earring",
@@ -575,7 +579,7 @@ function init_gear_sets()
         back="Grounded mantle +1",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_acc }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
-		body="Abnoba kaftan", hands=gear.herchands_dt, ring1="Defending ring", ring2="Epona's Ring",
+		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Defending ring", ring2="Epona's Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings"}
 	sets.engaged.DW.Acc.PDT.MaxHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Genmei earring",
@@ -597,7 +601,7 @@ function init_gear_sets()
 
     sets.engaged.DW.Refresh = {ammo="Ginsen",
         head="Rawhide mask",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
-        body="Mekosu. Harness",hands=gear.herchands_dt,ring1="Rajas Ring",ring2="Epona's Ring",
+        body="Mekosu. Harness",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Flume Belt +1",legs="Samnuha tights",feet="Ahosi leggings"}
 
 
@@ -614,7 +618,7 @@ end
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
 function job_precast(spell, action, spellMap, eventArgs)
-    if unbridled_spells:contains(spell.english) and not state.Buff['Unbridled Learning'] then
+    if unbridled_spells:contains(spell.english) and not (state.Buff['Unbridled Learning'] or buffactive['Unbridled Wisdom']) then
         eventArgs.cancel = true
         windower.send_command('@input /ja "Unbridled Learning" <me>; wait 1.5; input /ma "'..spell.name..'" '..spell.target.name)
     end

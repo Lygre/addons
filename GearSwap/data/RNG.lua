@@ -105,7 +105,7 @@ function init_gear_sets()
 
 	sets.precast.WS['Jishnu\'s Radiance'] = {
 		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Dominance Earring",
-		body="Amini caban +1",hands=gear.taeonhands_rng_crit,ring1="Rajas Ring",ring2="Petrov ring",
+		body="Amini caban +1",hands=gear.herchands_rng_crit,ring1="Rajas Ring",ring2="Petrov ring",
 		back="Belenus's cape",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
 	
 	sets.precast.WS['Jishnu\'s Radiance'].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'],
@@ -125,21 +125,22 @@ function init_gear_sets()
 	
 	sets.midcast.FastRecast = {
 		head="Orion Beret +1",ear1="Loquacious Earring",
-		ring1="Prolix Ring",
-		waist="Ninurta's sash",legs="Orion Braccae +1",feet="Orion Socks +1"}
+		body=gear.fc_tbody,ring1="Prolix Ring",ring2="weatherspoon ring",
+		waist="Ninurta's sash",legs="Orion Braccae +1",feet=gear.hercfeet_fc }
 
 	sets.midcast.Utsusemi = {}
 
 	-- Ranged sets
 
 	sets.midcast.RA = {
-		head="Arcadian Beret +1",neck="Ocachi Gorget",ear1="Telos earring",ear2="Enervating Earring",
+		head="Pursuer's beret",neck="Ocachi Gorget",ear1="Telos earring",ear2="Enervating Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
 	
 	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
-		{head="Amini gapette +1",neck="Combatant's Torque",
-		legs=gear.herclegs_rng_acc,feet=gear.taeonfeet_rng_crit })
+		{head=gear.adhemarhead_rng,neck="Combatant's Torque",
+		body=gear.hercbody_rng_crit,ring2="Hajduk ring +1",
+		legs=gear.herclegs_rng_acc,feet=gear.hercfeet_rng_jishnu })
 
 	sets.midcast.RA.Annihilator = set_combine(sets.midcast.RA, {hands="Amini glovelettes +1"})
 
@@ -162,18 +163,18 @@ function init_gear_sets()
 	sets.idle = {
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused Earring",ear2="Genmei Earring",
 		body="Reiki Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
+		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
 
 	sets.idle.Town = {
 		range="Fail-Not",ammo="Chrono arrow",
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused Earring",ear2="Genmei Earring",
 		body="Reiki Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-		back="Lutian Cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
+		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
 
 	-- Defense sets
 	sets.defense.PDT = {
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused earring",ear2="Genmei earring",
-		body="Adhemar jacket",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
 	sets.defense.MDT = {
