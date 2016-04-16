@@ -15,6 +15,8 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
 --    sets.precast.JA['Tactical Switch'] = {feet="Cirque Scarpe +2"}
     
+	sets.precast.JA['Activate'] = {back="Visucius's mantle"}
+	
     sets.precast.JA['Repair'] = {
 		head=gear.repair_head,ear1="Guignol Earring",
 		body=gear.repair_body,

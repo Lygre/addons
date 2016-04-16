@@ -61,6 +61,47 @@
                 <slot17>dark orb</slot17>
                 <slot18>magic barrier</slot18>
             </failtest>
+            <hightiermeleesolo>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>quad. continuum</slot03>
+                <slot04>blazing bound</slot04>
+                <slot05>molting plumage</slot05>
+                <slot06>erratic flutter</slot06>
+                <slot07>empty thrash</slot07>
+                <slot08>heavy strike</slot08>
+                <slot09>thrashing assault</slot09>
+                <slot10>sinker drill</slot10>
+                <slot11>fantod</slot11>
+                <slot12>sudden lunge</slot12>
+                <slot13>nat. meditation</slot13>
+                <slot14>anvil lightning</slot14>
+                <slot15>white wind</slot15>
+                <slot16>blank gaze</slot16>
+                <slot17>diffusion ray</slot17>
+                <slot18>cocoon</slot18>
+                <slot19>battery charge</slot19>
+                <slot20>barrier tusk</slot20>
+            </hightiermeleesolo>
+            <solocleave>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>erratic flutter</slot03>
+                <slot04>spectral floe</slot04>
+                <slot05>occultation</slot05>
+                <slot06>subduction</slot06>
+                <slot07>silent storm</slot07>
+                <slot08>entomb</slot08>
+                <slot09>dream flower</slot09>
+                <slot10>tenebral crush</slot10>
+                <slot11>anvil lightning</slot11>
+                <slot12>white wind</slot12>
+                <slot13>blank gaze</slot13>
+                <slot14>magic hammer</slot14>
+                <slot15>cocoon</slot15>
+                <slot16>battery charge</slot16>
+                <slot17>barrier tusk</slot17>
+            </solocleave>
             <vagaryfeet>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

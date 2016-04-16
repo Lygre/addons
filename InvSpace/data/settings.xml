@@ -76,12 +76,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>1059</x>
-                <y>369</y>
+                <x>1056</x>
+                <y>329</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>

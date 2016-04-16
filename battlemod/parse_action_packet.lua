@@ -251,8 +251,10 @@ function parse_action_packet(act)
             if m.has_add_effect and m.add_effect_message ~= 0 and add_effect_valid[act.category] then
                 local targ = assemble_targets(act.actor,v.target,act.category,m.add_effect_message)
                 local color = color_filt(res.action_messages[m.add_effect_message].color,v.target[1].id==Self.id)
-                if m.add_effect_message > 287 and m.add_effect_message < 303 then m.simp_add_name = skillchain_arr[m.add_effect_message-287]
-                elseif m.add_effect_message > 384 and m.add_effect_message < 399 then m.simp_add_name = skillchain_arr[m.add_effect_message-384]
+                if (m.add_effect_message > 287 and m.add_effect_message < 303) then m.simp_add_name = skillchain_arr[m.add_effect_message-287]
+				elseif (m.add_effect_message > 766 and m.add_effect_message < 769) then m.simp_add_name = skillchain_arr[m.add_effect_message-766]
+                elseif (m.add_effect_message > 384 and m.add_effect_message < 399) then m.simp_add_name = skillchain_arr[m.add_effect_message-384]
+				elseif (m.add_effect_message > 768 and m.add_effect_message < 771) then m.simp_add_name = skillchain_arr[m.add_effect_message-768]
                 elseif m.add_effect_message ==603 then m.simp_add_name = 'TH'
                 else m.simp_add_name = 'AE'
                 end

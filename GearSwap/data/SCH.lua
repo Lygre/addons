@@ -31,6 +31,13 @@ function get_sets()
     include('Mote-Include.lua')
 end
 
+
+function user_setup()
+	send_command('bind ^f10 gs c toggle MagicBurst')
+	send_command('bind !f11 gs c cycle MagicalDefenseMode')
+
+end
+
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     info.addendumNukes = S{"Stone IV", "Water IV", "Aero IV", "Fire IV", "Blizzard IV", "Thunder IV",
@@ -79,7 +86,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 
 function user_unload()
-    send_command('unbind ^`')
+    send_command('unbind !^`')
 end
 
 

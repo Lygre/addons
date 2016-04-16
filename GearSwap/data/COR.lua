@@ -97,7 +97,7 @@ function init_gear_sets()
 
     
     sets.precast.CorsairRoll = {range="Compensator",head="Lanun Tricorne",hands="Chasseur's gants +1",ring1="Barataria ring",
-	legs="Desultor tassets"}
+		back="Camulus's Mantle",legs="Desultor tassets"}
     
     sets.precast.CorsairRoll["Caster's Roll"] = set_combine(sets.precast.CorsairRoll, {legs="Chasseur's Culottes"})
     sets.precast.CorsairRoll["Courser's Roll"] = set_combine(sets.precast.CorsairRoll, {feet="Chasseur's Bottes +1"})

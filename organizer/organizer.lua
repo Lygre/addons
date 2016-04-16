@@ -51,9 +51,7 @@ _static = {
         sack=6,
         case=7,
         wardrobe=8,
-        safe2=9,
-		--Lygre changes
-		wardrobe2=10
+        safe2=9
     }
 }
 
@@ -69,7 +67,7 @@ _valid_dump = {}
 
 default_settings = {
     dump_bags = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4},
-    bag_priority = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4,['Satchel']=5,['Sack']=6,['Case']=7,['Inventory']=8,['Wardrobe']=9,['Wardrobe 2']=10},
+    bag_priority = {['Safe']=1,['Safe2']=2,['Locker']=3,['Storage']=4,['Satchel']=5,['Sack']=6,['Case']=7,['Inventory']=8,['Wardrobe']=9},
     item_delay = 0,
     ignore = {},
     retain = {
@@ -203,7 +201,7 @@ function options_load( )
 		
         if(settings.retain.slips == true) then
             org_verbose("Slips set to retain")
-            slips = {29312,29313,29314,29315,29316,29317,29318,29319,29320,29321,29322,29323,29324,29325,29326,29327,29328,29329,29330,29331,29332}
+            slips = {29312,29313,29314,29315,29316,29317,29318,29319,29320,29321,29322,29323,29324,29325,29326,29327,29328,29329,29330,29331,29332,29333,29334}
             for _,slips_id in pairs(slips) do
                 _retain[slips_id] = "slips"
                 org_debug("settings", "Adding ("..res.items[slips_id].english..') to slip retain list')
@@ -216,9 +214,6 @@ function options_load( )
     _valid_pull[0] = 1
     _valid_dump[8] = 1
     _valid_pull[8] = 1
-	--Lygre changes
-	_valid_dump[10] = 1 
-	_valid_pull[10] = 1
 
 end
 

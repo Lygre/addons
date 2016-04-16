@@ -92,7 +92,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {
         head="Befouled crown",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Vitivation Tabard +1",hands="Atrophy Gloves +1",
-        back="Estoqueur's Cape",waist="Olympus Sash",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
+        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
 
     sets.midcast.Refresh = {head="Amalric coif",legs="Estoqueur's Fuseau +2"}
 
@@ -101,7 +101,7 @@ function init_gear_sets()
     sets.midcast['Enfeebling Magic'] = {main="Marin staff",sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head="Chironic hat",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter Earring +1",
         body="Chironic doublet",hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
-        back="Aurist's cape +1",waist="Demonry Sash",legs="Chironic hose",feet="Bokwus Boots"}
+        back="Sucellos's cape",waist="Demonry Sash",legs="Chironic hose",feet="Bokwus Boots"}
 
     sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau +1"})
 

@@ -133,7 +133,7 @@ function init_gear_sets()
         body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         waist="Ninurta's sash",legs=gear.fc_tlegs,feet="Amm greaves"}
         
-    sets.midcast.Utsusemi = set_combine(sets.midcast.NinjutsuBuff, {feet="Hattori Kyahan"})
+    sets.midcast.Utsusemi = set_combine(sets.midcast.NinjutsuBuff, {back="Andartia's Mantle",feet="Hattori Kyahan"})
 
 	sets.midcast.NinjutsuBuff = set_combine(sets.midcast.FastRecast, {neck="Incanter's torque"})	
 

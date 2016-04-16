@@ -31,7 +31,7 @@ function init_gear_sets()
     ---- Precast Sets ----
     
     -- Precast sets to enhance JAs
-    sets.precast.JA['Mana Wall'] = {feet="Goetia Sabots +2"}
+    sets.precast.JA['Mana Wall'] = {}
 
     sets.precast.JA.Manafont = {body="Sorcerer's Coat +2"}
     
@@ -249,7 +249,7 @@ function init_gear_sets()
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     
-    sets.buff['Mana Wall'] = {}
+    sets.buff['Mana Wall'] = {back="Taranus's cape",feet="Goetia Sabots +2"}
 
     -- Engaged sets
 

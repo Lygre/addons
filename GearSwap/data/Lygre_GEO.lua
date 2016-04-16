@@ -45,7 +45,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
     sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
-    sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic +1"}
+    sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic +1",back="Nantosuelta's cape"}
 	sets.precast.JA['Full Circle'] = {head="Azimuth hood +1",hands="Bagua Mitaines +1"}
 	sets.precast.JA['Radial Arcana'] = {feet="Bagua sandals +1"}
 

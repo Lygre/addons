@@ -341,7 +341,7 @@ function display_current_state()
         if state.HybridMode.value ~= 'Normal' then
             msg = msg .. '/' .. state.HybridMode.value
         end
-        msg = msg .. ', WS: ' .. state.WeaponskillMode.value
+        msg = msg .. ', WS: ' .. state.WeaponskillMode.value .. ', '
       
 		msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..'],'
         if state.DefenseMode.value ~= 'None' then

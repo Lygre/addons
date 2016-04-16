@@ -18,7 +18,9 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- User setup functions for this job.  Recommend that these be overridden in a sidecar file.
 -------------------------------------------------------------------------------------------------------------------
-
+function user_setup()
+	send_command('bind !f11 gs c toggle MagicBurst')
+end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
     state.OffenseMode:options('None', 'Normal')

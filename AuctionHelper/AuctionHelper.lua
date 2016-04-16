@@ -29,8 +29,8 @@ settings = config.load(default)
 auction_list = texts.new(settings.display)
 
 zones = {}
-zones.ah = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin'}
-zones.mh = {}
+zones.ah = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin'}
+zones.mh = L{'Mhaura','Selbina','Norg','Rabao','Kazham','Tavnazian Safehold','Nashmau'}
 
 function timef(ts)
     --return string.format('%.2d:%.2d:%.2d',ts/(60*60), ts/60%60, ts%60);
@@ -97,10 +97,15 @@ windower.register_event('addon command', function(...)
         end
         commands[1] = commands[1]:lower()
         if (commands[1] == 'buy' or commands[1] == 'sell') and commands[4] then
-            if ah_proposal(commands[1],table.concat(commands, ' ',2,#commands-2):lower(),commands[#commands-1]:lower(),commands[#commands]) then lclock = now+3 end
+            if ah_proposal(commands[1],table.concat(commands, ' ',2,#commands-2):lower(),commands[#commands-1]:lower(),commands[#commands]) then lclock = now+1 end
         elseif commands[1] == 'clear' and commands[2] and commands[2]:lower() == 'sold' and auction_box then
             remove_sold()
             return
+		elseif commands[1] == 'mog' then
+			if #commands == 1 then
+				local mog_house = packets.new('incoming', 0x02E)
+				packets.inject(mog_house)
+			end
         end
     end
     if commands[1] == 'hide' then
@@ -127,7 +132,7 @@ end)
 windower.register_event('unhandled command', function(...)
     local commands = {...}
     commands[1] = commands[1]:lower()
-    if commands[1] ~= 'bazaar' and commands[1] ~= 'buy' and commands[1] ~= 'sell' and commands[1] ~= 'inbox' and commands[1] ~= 'outbox' and commands[1] ~= 'ibox' and commands[1] ~= 'obox' then return end
+    if commands[1] ~= 'bazaar' and commands[1] ~= 'buy' and commands[1] ~= 'sell' and commands[1] ~= 'inbox' and commands[1] ~= 'outbox' and commands[1] ~= 'dbox' and commands[1] ~= 'obox' then return end
     if commands[1] == 'bazaar' and #commands >= 3 then
         bazaar_item(table.concat(commands, ' ',2,#commands-1):lower(),commands[#commands])
     end
@@ -139,13 +144,13 @@ windower.register_event('unhandled command', function(...)
             local obox = string.char(0x4B,0x0A,0x00,0x00,0x0D,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x01,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF)
             --print('Modified packet 0x04B: %s\n%s bytes':format(space_hex(obox:hex()),#obox))
             windower.packets.inject_incoming(0x4B,obox)
-        elseif (commands[1] == 'inbox' or commands[1] == 'ibox') then
+        elseif (commands[1] == 'inbox' or commands[1] == 'dbox') then
             lclock = now+3
             local ibox = string.char(0x4B,0x0A,0x00,0x00,0x0E,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x01,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF)
             --print('Modified packet 0x04B: %s\n%s bytes':format(space_hex(ibox:hex()),#ibox))
             windower.packets.inject_incoming(0x4B,ibox)
         elseif (commands[1] == 'buy' or commands[1] == 'sell') and commands[4] then
-            if ah_proposal(commands[1],table.concat(commands, ' ',2,#commands-2):lower(),commands[#commands-1]:lower(),commands[#commands]) then lclock = now+3 end
+            if ah_proposal(commands[1],table.concat(commands, ' ',2,#commands-2):lower(),commands[#commands-1]:lower(),commands[#commands]) then lclock = now+1 end
         end
     end
 end)
@@ -249,6 +254,7 @@ windower.register_event('incoming chunk', function(id, original, modified, injec
                 windower.add_to_chat(207, 'Bid Failed')
             end
         end
+
     end
 end)
 

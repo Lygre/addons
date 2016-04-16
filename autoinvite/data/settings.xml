@@ -7,4 +7,8 @@
         <tellback>on</tellback>
         <whitelist />
     </global>
+    <lygre>
+        <keywords>Inv</keywords>
+        <mode>blacklist</mode>
+    </lygre>
 </settings>

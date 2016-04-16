@@ -14,7 +14,7 @@
 		<addon>aecho</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
-		<!-- <addon>autoSynth</addon> -->
+		<addon>autoSynth</addon>
 		<addon>azuresets</addon>
 		<addon>battlemod</addon>
 		<addon>cancel</addon>
