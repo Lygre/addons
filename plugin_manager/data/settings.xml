@@ -2,7 +2,7 @@
 	<global>
 		<!-- This will be used for all the characters that you don't make a specific set of plugins/addons for -->
 		<plugin>AutoExec</plugin>
-		<plugin>Bidder</plugin>
+		<!-- <plugin>Bidder</plugin> -->
 		<plugin>Binder</plugin>
 		<plugin>jazero</plugin>
 		<plugin>Timers</plugin>
@@ -12,6 +12,7 @@
 		<plugin>Fishingcrashfix</plugin>
 		<plugin>config</plugin>
 		<addon>aecho</addon>
+		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>

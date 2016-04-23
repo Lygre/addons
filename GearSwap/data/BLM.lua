@@ -24,14 +24,15 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
     state.OffenseMode:options('None', 'Normal')
-    state.CastingMode:options('Normal', 'Mid', 'DeathMode', 'Resistant', 'Proc')
+    state.CastingMode:options('Normal', 'Mid', 'Resistant', 'Proc')
     state.IdleMode:options('Normal', 'PDT', 'IdleBurst')
-	--state.DeathMode = M(false, 'DeathMode')
+	--state.DeatCast = M(false, 'DeathMode')
 
   	MagicBurstIndex = 0
     state.MagicBurst = M(false, 'Magic Burst')
-	state.TreasureHunter = M(false, 'TH')
 	state.ConsMP = M(false, 'Conserve MP')
+    state.DeatCast = M(false, 'Death Mode')
+
 
     lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
         'Stone II', 'Water II', 'Aero II', 'Fire II', 'Blizzard II', 'Thunder II',
@@ -55,7 +56,8 @@ function user_unload()
     send_command('unbind @`')
 end
 
-
+function init_gear_sets()
+end
 -- Define sets and vars used by this job file.
 
 -------------------------------------------------------------------------------------------------------------------
@@ -74,10 +76,7 @@ function job_post_precast(spell, action, spellMap, eventArgs)
         if state.CastingMode.value == 'Proc' then
             classes.CustomClass = 'Proc'
         end
-	elseif state.CastingMode.value == 'DeathMode' then
-		classes.CustomClass = 'DeathMode'
 	end
-
 end
 --function job_precast(spell, action, spellMap, eventArgs)
 	--if state.CastingMode.value == 'DeathMode' then
@@ -102,12 +101,12 @@ function job_state_change(stateField, newValue, oldValue)
 end
 -- Modify the default idle set after it was constructed.
 function customize_idle_set(idleSet)
+	if state.DeatCast.value then
+		idleSet = set_combine(idleSet,sets.precast.FC['Death'])
+	end
     if player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
-    if state.CastingMode.value == 'DeathMode' then
-		idleSet = set_combine(idleSet, sets.idle.Death)
-	end
     return idleSet
 end
 

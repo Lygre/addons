@@ -210,7 +210,7 @@ function init_gear_sets()
 
     sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Hasty Pinion +1",
         head=gear.FC_head,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
-        body=gear.nuke_body,hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Evanescence Ring",
+        body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
     sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Grioavolr"})

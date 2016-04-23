@@ -168,6 +168,36 @@
 					<5>Smoke Discharger</5>
 				</stun>
 			</ou>
+			<zerde>
+				<stun>
+					<1>Just Desserts</1>
+					<2>Sloughy Sputum</2>
+					<3>Crowning Flatus</3>
+					<4>Chymous Reek</4>
+					<5>Rancid Reflux</5>
+					<6>Gnash 'n Guttle</6>
+					<7>Slimy Proposal</7>
+				</stun>
+			</zerde>
+			<vinipata>
+				<stun>
+					<1>Raksha Stance</1>
+					<2>Raksha: Judgment</2>
+					<3>Raksha: Illusion</3>
+					<4>Raksha: Vengeance</4>
+					<5>Yaksha Stance</5>
+					<6>Yaksha: Damnation</6>
+					<7>Yaksha: Bliss</7>
+					<8>Yaksha: Oblivion</8>
+					<9>Sakra Storm</9>
+					<10>Yama's Judgment</10>
+				</stun>
+			</vinipata>
+			<albumen>
+				<stun>
+					<1>Petalback Spin</1>
+				</stun>
+			</abumen>
         </profile>
     </global>
 </settings>
