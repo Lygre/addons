@@ -69,7 +69,7 @@ windower.register_event('login', initialize)
 windower.register_event('job change', initialize:cond(function(job) return job == 16 end))
 
 function set_spells(spellset)
-    if windower.ffxi.get_player()['main_job_id'] ~= 16 --[[and windower.ffxi.get_player()['sub_job_id'] ~= 16]] then return nil end
+    if windower.ffxi.get_player()['main_job_id'] ~= 16 and windower.ffxi.get_player()['sub_job_id'] ~= 16 then return nil end
     if settings.spellsets[spellset] == nil then return end
     if settings.spellsets[spellset]:equals(get_current_spellset()) then
         error(spellset..' was already equipped.')
@@ -105,7 +105,7 @@ function set_spells_from_spellset(spellset,slot)
 end
 
 function set_single_spell(setspell,slot)
-    if windower.ffxi.get_player()['main_job_id'] ~= 16 --[[and windower.ffxi.get_player()['sub_job_id'] ~= 16]] then return nil end
+    if windower.ffxi.get_player()['main_job_id'] ~= 16 and windower.ffxi.get_player()['sub_job_id'] ~= 16 then return nil end
     
     local tmpTable = T(get_current_spellset())
     for key,val in pairs(tmpTable) do
@@ -129,25 +129,43 @@ function set_single_spell(setspell,slot)
 end
 
 function get_current_spellset()
-    if windower.ffxi.get_player()['main_job_id'] ~= 16 --[[and windower.ffxi.get_player()['sub_job_id'] ~= 16]] then return nil end
+    if windower.ffxi.get_player()['main_job_id'] ~= 16 and windower.ffxi.get_player()['sub_job_id'] ~= 16 then return nil end
     local spellTable = T{}
     local tmpTable = T{}
-    if windower.ffxi.get_player()['main_job_id'] == 16 then
-        local tmpTable = T(windower.ffxi.get_mjob_data()['spells'])
-        local i,id
-        for i = 1, #tmpTable do
-            local t = ''
-            if tonumber(tmpTable[i]) ~= 512 then
-                for spell in spells:it() do
-                    if tonumber(tmpTable[i]) == tonumber(spell['id']) then
-                        if i < 10 then t = '0' end
-                        spellTable['slot'..t..i] = spell['english']:lower()
-                        break
-                    end
-                end
-            end
-        end
-    end
+    if windower.ffxi.get_player()['main_job_id'] == 16 or windower.ffxi.get_player()['sub_job_id'] == 16 then
+		if windower.ffxi.get_player()['main_job_id'] == 16 then 
+			local tmpTable = T(windower.ffxi.get_mjob_data()['spells'])
+			local i,id
+			for i = 1, #tmpTable do
+				local t = ''
+				if tonumber(tmpTable[i]) ~= 512 then
+					for spell in spells:it() do
+						if tonumber(tmpTable[i]) == tonumber(spell['id']) then
+							if i < 10 then t = '0' end
+							spellTable['slot'..t..i] = spell['english']:lower()
+							break
+						end
+					end
+				end
+			end
+		end
+		if windower.ffxi.get_player()['sub_job_id'] == 16 then
+			local tmpTable = T(windower.ffxi.get_sjob_data()['spells'])
+			local i,id
+			for i = 1, #tmpTable do
+				local t = ''
+				if tonumber(tmpTable[i]) ~= 512 then
+					for spell in spells:it() do
+						if tonumber(tmpTable[i]) == tonumber(spell['id']) then
+							if i < 10 then t = '0' end
+							spellTable['slot'..t..i] = spell['english']:lower()
+							break
+						end
+					end
+				end
+			end
+		end
+	end
     return spellTable
 end
 
@@ -186,8 +204,8 @@ function get_spellset_content(spellset)
 end
 
 windower.register_event('addon command', function(...)
-    if windower.ffxi.get_player()['main_job_id'] ~= 16 --[[and windower.ffxi.get_player()['sub_job_id'] ~= 16]] then
-        error('You are not on (main) Blue Mage.')
+    if windower.ffxi.get_player()['main_job_id'] ~= 16 and windower.ffxi.get_player()['sub_job_id'] ~= 16 then
+        error('You are not on (main) or (sub) Blue Mage.')
         return nil 
     end
     local args = T{...}

@@ -386,8 +386,8 @@ function display_current_caster_state()
 
     msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..']'
 
-	if state.MagicBurst.value then
-		msg = msg .. ', ' .. 'MBurst: On'
+	if state.MagicBurst.value == true then
+		msg = msg .. ', Magic Burst'
 	end
 
     if state.DefenseMode.value ~= 'None' then

@@ -7,7 +7,7 @@
 -- Buff utility functions.
 -------------------------------------------------------------------------------------------------------------------
 
-local cancel_spells_to_check = S{'Sneak', 'Stoneskin', 'Spectral Jig', 'Trance', 'Monomi: Ichi', 'Utsusemi: Ichi'}
+local cancel_spells_to_check = S{'Sneak', 'Stoneskin', 'Spectral Jig', 'Trance', 'Monomi: Ichi', 'Utsusemi: Ichi', 'Utsusemi: Ni'}
 local cancel_types_to_check = S{'Waltz', 'Samba'}
 
 -- Function to cancel buffs if they'd conflict with using the spell you're attempting.
@@ -40,9 +40,9 @@ function cancel_conflicting_buffs(spell, action, spellMap, eventArgs)
         elseif spell.english:startswith('Monomi') then
             send_command('@wait 1.0;cancel sneak')
         elseif spell.english == 'Utsusemi: Ichi' then
-            send_command('@wait 0.5;cancel copy image,copy image (2)')
+            send_command('@wait 0.65;cancel copy image,copy image (2),copy image (3),copy image (4+)')
 		elseif spell.english == 'Utsusemi: Ni' then
-			send_command('@wait 0.5;cancel copy image (4+)')
+			send_command('cancel copy image (4+)')
         elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
             cast_delay(0.2)
             send_command('cancel saber dance')

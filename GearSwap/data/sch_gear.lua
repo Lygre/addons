@@ -168,7 +168,17 @@ function init_gear_sets()
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
         back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
 
-    sets.midcast.IntEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
+    sets.midcast.Dispel = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
+        head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
+        body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
+        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+
+	sets.midcast.Dispel.Resistant = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
+        head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
+        body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
+        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+
+	sets.midcast.IntEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
         back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
@@ -181,11 +191,10 @@ function init_gear_sets()
 	sets.midcast.SpecialEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis grip",ammo="Pemphredo tathlum",
 		head="Kaykaus mitra",neck="Incanter's torque",ear1="Barkarole earring", ear2="Digni. earring",
 		body=gear.nuke_body,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon ring",
-		back="Aurist's cape +1",waist="Luminary sash",legs="Chironic hose",feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary sash",legs="Chironic hose",feet="Medium's sabots"}
 		
 	sets.midcast.SpecialEnfeebles.Resistant = set_combine(sets.midcast.SpecialEnfeebles,
-		{head="Amalric coif",
-		back="Lugh's cape"})
+		{head="Amalric coif"})
 
     sets.midcast.ElementalEnfeeble = sets.midcast.IntEnfeebles
 

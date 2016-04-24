@@ -19,6 +19,17 @@
                 <slot12>battery charge</slot12>
                 <slot13>nat. meditation</slot13>
             </avatars>
+            <blusub>
+                <slot01>foot kick</slot01>
+                <slot02>claw cyclone</slot02>
+                <slot03>sound blast</slot03>
+                <slot04>metallic body</slot04>
+                <slot05>cocoon</slot05>
+                <slot06>cursed sphere</slot06>
+                <slot07>blank gaze</slot07>
+                <slot08>jettatura</slot08>
+                <slot09>geist wall</slot09>
+            </blusub>
             <cleave>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

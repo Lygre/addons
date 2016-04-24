@@ -132,9 +132,9 @@ function init_gear_sets()
     -- Fast cast sets for spells
     
     sets.precast.FC = {
-		head="Haruspex Hat",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		head=gear.herchead_pup,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's Sash",
+		waist="Ninurta's Sash",feet=gear.hercfeet_fc
 	}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})

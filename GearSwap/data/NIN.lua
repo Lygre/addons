@@ -80,7 +80,7 @@ function init_gear_sets()
     sets.precast.FC = {ammo="Sapience orb",
 		head=gear.fc_thead,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's sash",legs=gear.fc_tlegs,feet=gear.fc_tfeet}
+		waist="Ninurta's sash",legs=gear.fc_tlegs,feet=gear.hercfeet_fc}
 		
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 
@@ -91,7 +91,7 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Yetshila",
         head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Telos earring",ear2="Moonshade Earring",
-        body="Abnoba Kaftan",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
+        body="Abnoba Kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
         back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha tights",feet=gear.tp_tfeet}
     sets.precast.WS.Acc = set_combine(sets.precast.WS, 
 		{ammo="Amar Cluster",
@@ -129,9 +129,9 @@ function init_gear_sets()
     --------------------------------------
 
     sets.midcast.FastRecast = {ammo="Sapience Orb",
-        head=gear.fc_thead,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+        head=gear.herchead_pup,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        waist="Ninurta's sash",legs=gear.fc_tlegs,feet="Amm greaves"}
+        back="Grounded mantle +1",waist="Ninurta's sash",legs=gear.fc_tlegs,feet="Amm greaves"}
         
     sets.midcast.Utsusemi = set_combine(sets.midcast.NinjutsuBuff, {back="Andartia's Mantle",feet="Hattori Kyahan"})
 
@@ -222,7 +222,7 @@ function init_gear_sets()
 
     -- Custom melee group: High Haste (~20% DW)
     sets.engaged.HighHaste = {ammo="Happo Shuriken",
-        head=gear.adhemarhead_melee,neck="Defiant collar",ear1="Brutal earring",ear2="Telos Earring",
+        head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos Earring",
         body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Thereoid greaves"}
     sets.engaged.Acc.HighHaste = {ammo="Happo Shuriken",
@@ -263,7 +263,7 @@ function init_gear_sets()
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.engaged.Acc.MaxHaste = {ammo="Happo Shuriken",
         head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
-        body="Reiki osode",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        body="Reiki osode",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
         back="Yokaze Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.engaged.PDT.MaxHaste = {ammo="Happo Shuriken",
         head="ryuo somen",neck="agitator's collar",ear1="Suppanomimi",ear2="Genmei Earring",
@@ -294,9 +294,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     if state.Buff.Doom then
         equip(sets.buff.Doom)
     end
-	if spell.english == "Utsusemi: San" then
-		equip({feet="Hattori Kyahan"})
-	end
 end
 
 
@@ -305,6 +302,7 @@ function job_aftercast(spell, action, spellMap, eventArgs)
     if not spell.interrupted and spell.english == "Migawari: Ichi" then
         state.Buff.Migawari = true
     end
+	
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -367,6 +365,9 @@ function customize_melee_set(meleeSet)
     if state.Buff.Doom then
         meleeSet = set_combine(meleeSet, sets.buff.Doom)
     end
+	--[[if state.buff.Yonin then
+		meleeSet = set_combine(meleeSet, sets.buff.Yonin)
+	end]]
     return meleeSet
 end
 
