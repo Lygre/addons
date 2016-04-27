@@ -426,6 +426,7 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
     if spell_recasts[spell.recast_id] > 0 then
         if spell_index > 1 then
             newSpell = degrade_array[spell.element][spell_index - 1]
+            add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
             send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
             eventArgs.cancel = true
         end
