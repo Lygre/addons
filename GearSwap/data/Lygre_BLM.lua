@@ -327,7 +327,9 @@ function job_precast(spell, action, spellMap, eventArgs)
 	if state.DeatCast.value then
 		eventArgs.handled = true
 		equip(sets.precast.FC['Death'])
-	end
+	else
+        refine_various_spells()
+    end
 end
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 function job_midcast(spell, action, spellMap, eventArgs)
@@ -392,7 +394,70 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 end
 
 
+function refine_various_spells(spell, action, spellMap, eventArgs)
+    aspirs = S{'Aspir','Aspir II','Aspir III'}
+    sleeps = S{'Sleep','Sleep II'}
+    sleepgas = S{'Sleepga','Sleepga II'}
 
+    local degrade_array = {
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
+        ['Firaga'] = {'Firaga','Firaga II','Firaga III','Firaja'},
+        ['Blizzard'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
+        ['Blizzaga'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
+        ['Aero'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
+        ['Aeroga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
+        ['Stone'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+        ['Stonega'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
+        ['Thunder'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
+        ['Thundaga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
+        ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
+        ['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'}
+}
+    if not spell.skill == 'Elemental Magic' and not sleepgas:contains(spell.english) and not sleeps:contains(spell.english) and not aspirs:contains(spell.english) then
+        return
+    end
+
+    local newSpell = spell.english
+    local spell_recasts = windower.ffxi.get_spell_recasts()
+    local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
+
+    local spell_index = table.find(degrade_array,spell.name)
+
+    if spell_recasts[spell.recast_id] > 0 then
+        if spell_index > 1 then
+            newSpell = degrade_array[spell_index - 1]
+            send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+            eventArgs.cancel = true
+        end
+        --[[if aspirs:contains(spell.english) then
+            if spell.english == 'Aspir' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Aspir II' then
+                newSpell = 'Aspir'
+            elseif spell.english == 'Aspir III' then
+                newSpell = 'Aspir II'
+            end         
+        elseif sleeps:contains(spell.english) then
+            if spell.english == 'Sleep' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Sleep II' then
+                newSpell = 'Sleep'
+            end
+        elseif sleepgas:contains(spell.english) then
+            if spell.english == 'Sleepga' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Sleepga II' then
+                newSpell = 'Sleepga'
+            end
+        end]]
+    end
+end
 --[[function adjust_timers(spell, spellMap)
     local current_time = os.time()
     
