@@ -1,14 +1,114 @@
-Organizer loaded at 04/23/16 22:39:45
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding inventory to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding locker to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding safe2 to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding safe to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding sack to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding case to the pull list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding safe to the push list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding case to the push list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding locker to the push list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding sack to the push list
-2016-04-23 22:39:45| Organizer [VERBOSE] Adding safe2 to the push list
-2016-04-23 22:39:45| Organizer [VERBOSE] Non-equipment items set to retain
-2016-04-23 22:39:45| Organizer [VERBOSE] Slips set to retain
+Organizer loaded at 04/26/16 23:41:50
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding inventory to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding locker to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding safe to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding sack to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding case to the pull list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding safe to the push list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding case to the push list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding locker to the push list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding sack to the push list
+2016-04-26 23:41:50| Organizer [VERBOSE] Adding safe2 to the push list
+2016-04-26 23:41:50| Organizer [VERBOSE] Non-equipment items set to retain
+2016-04-26 23:41:50| Organizer [VERBOSE] Slips set to retain
+2016-04-27 00:47:58| Organizer [MSG] Starting...
+2016-04-27 00:47:58| Organizer [VERBOSE] Getting!
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Samnuha Tights) from Locker 80 to Inventory 29)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Umuthi Gloves) from Sack 80 to Inventory 30)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Taeon Tabard) from Safe 74 to Inventory 31)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Herculean Boots) from Safe 73 to Inventory 32)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Herculean Boots) from Safe 72 to Inventory 33)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Rajas Ring) from Safe 2 78 to Inventory 34)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Honed Tathlum) from Locker 79 to Inventory 35)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Reiki Yotai) from Sack 79 to Inventory 36)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Lithelimb Cap) from Sack 78 to Inventory 37)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Skd. Jambeaux +1) from Sack 77 to Inventory 38)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Ginsen) from Locker 78 to Inventory 39)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Brutal Earring) from Safe 2 77 to Inventory 40)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Epona's Ring) from Safe 71 to Inventory 41)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Combatant's Torque) from Sack 76 to Inventory 42)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Abnoba Kaftan) from Case 53 to Inventory 43)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Nahtirah Trousers) from Case 52 to Inventory 44)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Leyline Gloves) from Sack 75 to Inventory 45)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Defiant Collar) from Safe 2 76 to Inventory 46)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Ground. Mantle +1) from Case 51 to Inventory 47)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Petrov Ring) from Locker 77 to Inventory 48)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Eabani Earring) from Sack 74 to Inventory 49)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Adhemar Bonnet) from Locker 76 to Inventory 50)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Floral Gauntlets) from Safe 2 75 to Inventory 51)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Windbuffet Belt +1) from Safe 2 74 to Inventory 52)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Yetshila) from Safe 2 73 to Inventory 53)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Skormoth Mask) from Safe 2 72 to Inventory 54)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Iuitl Wristbands) from Sack 73 to Inventory 55)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Samnuha Coat) from Sack 72 to Inventory 56)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Suppanomimi) from Sack 71 to Inventory 57)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Bleating Mantle) from Locker 75 to Inventory 58)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Rancorous Mantle) from Sack 70 to Inventory 59)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Enervating Earring) from Case 50 to Inventory 60)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Telos Earring) from Locker 74 to Inventory 61)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 49 to Inventory 62)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Adhemar Jacket) from Sack 69 to Inventory 63)
+2016-04-27 00:47:58| Organizer [VERBOSE] Got 36 item(s), and failed getting 0 item(s)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 64 to Safe 70)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 63 to Safe 71)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 62 to Safe 72)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 61 to Safe 73)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Lugh's Cape) from Inventory 60 to Safe 74)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 59 to Safe 75)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 58 to Safe 76)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 57 to Safe 77)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 56 to Safe 78)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 55 to Safe 79)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 54 to Safe 2 71)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 53 to Safe 2 72)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 52 to Safe 2 73)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 51 to Safe 2 74)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 50 to Safe 2 75)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 49 to Safe 2 76)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 48 to Safe 2 77)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 47 to Safe 2 78)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 46 to Safe 2 79)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 45 to Locker 73)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 44 to Locker 74)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 43 to Locker 75)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 42 to Locker 76)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Gende. Gages +1) from Inventory 41 to Locker 77)
+2016-04-27 00:47:58| Organizer [VERBOSE] Moving item! (Mephitas's Ring) from Inventory 40 to Locker 78)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Coat). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
+2016-04-27 00:47:58| Organizer [VERBOSE] Remainder: 1 Current: 39
+2016-04-27 00:47:58| Organizer [VERBOSE] Getting!
+2016-04-27 00:47:58| Organizer [WARN] Samnuha Tights not found.
+2016-04-27 00:47:58| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Coat). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
+2016-04-27 00:47:58| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Tights). It has already been moved.
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Leyline Gloves). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Floral Gauntlets). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Iuitl Wristbands). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Samnuha Coat). It has already been moved.
+2016-04-27 00:47:58| Organizer [WARN] Cannot move the item (Adhemar Jacket). It has already been moved.
+2016-04-27 00:47:58| Organizer [MSG] Done! - 35 items matched and 1 items missing!
+2016-04-27 00:47:58| Organizer [VERBOSE] Item Missing: samnuha tights 

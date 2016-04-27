@@ -197,7 +197,14 @@
 				<stun>
 					<1>Petalback Spin</1>
 				</stun>
-			</abumen>
+			</albumen>
+			<khimaira>
+				<stun>
+					<1>Fulmination</1>
+					<2>Plague Swipe</2>
+					<3>Dreadstorm</3>
+				</stun>
+			</khimaira>
         </profile>
     </global>
 </settings>
