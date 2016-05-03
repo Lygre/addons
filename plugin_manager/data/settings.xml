@@ -6,7 +6,7 @@
 		<plugin>Binder</plugin>
 		<plugin>jazero</plugin>
 		<plugin>Timers</plugin>
-		<plugin>guildwork</plugin>
+		<!-- <plugin>guildwork</plugin> -->
 		<plugin>delaymenot</plugin>
 		<plugin>FFXIDB</plugin>
 		<plugin>Fishingcrashfix</plugin>
@@ -21,7 +21,7 @@
 		<addon>cancel</addon>
 		<addon>clock</addon>
 		<addon>consoleBG</addon>
-		<addon>debuffed</addon>
+		<!-- <addon>debuffed</addon> -->
 		<addon>distance</addon>
 		<addon>dressup</addon>
 		<addon>enternity</addon>
@@ -37,7 +37,7 @@
 		<addon>partybuffs</addon>
 		<addon>pet_fix</addon>
 		<addon>pettp</addon>
-		<addon>plugin_manager</addon>
+		<!-- <addon>plugin_manager</addon> -->
 		<addon>pointwatch</addon>
 		<addon>pricer</addon>
 		<addon>rolltracker</addon>
@@ -46,9 +46,9 @@
 		<addon>sellnpc</addon>
 		<addon>stna</addon>
 		<addon>shortcuts</addon>
-		<addon>skillchains</addon>
+		<!-- <addon>skillchains</addon> -->
 		<addon>skillchain</addon>
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<addon>sparks</addon>
 		<addon>speedchecker</addon>
 		<addon>stopwatch</addon>

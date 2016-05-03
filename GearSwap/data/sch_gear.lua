@@ -37,6 +37,8 @@ function job_setup()
     update_active_strategems()
     select_default_macro_book()
 
+	organizer_items = {aeonic="Khatvanga"}
+
 	custom_timers = {}
 end
 
@@ -56,13 +58,13 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {main="Grioavolr",sub="Arbuda grip",ammo="Sapience orb",
-        head=gear.FC_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
+        head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Anhur Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 	
 	--main="Apamajas II",sub="Arbuda grip", 
     sets.precast.FC.Stun = {ammo="Sapience orb",
-        head=gear.FC_head,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
@@ -91,12 +93,15 @@ function init_gear_sets()
 		body="Amalric doublet", hands="Kaykaus cuffs", ring1="Sangoma ring", ring2="Mephitas's Ring",
 		back="Aurist's cape +1", waist="Fucho-no-obi", legs="Amalric slops", feet="Arbatel loafers +1"}
 
-
+	sets.precast.WS['Shattersoul'] = {ammo="Pemphredo tathlum",
+		head=gear.chirhead,neck="Fotia gorget", ear1="Barkarole earring", ear2="Moonshade earring",
+		body="Kaykaus bliaut",hands=gear.chirhands_sc,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+		back="Lugh's cape",waist="Fotia belt", legs="Amalric slops",feet=gear.merlfeet_refresh }
 
     -- Midcast Sets 
 
     sets.midcast.FastRecast = {main="Grioavolr",sub="Thrace strap",ammo="Hasty pinion +1",
-        head=gear.FC_head,neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchanter earring +1",
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchanter earring +1",
         body="Shango robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
@@ -108,7 +113,7 @@ function init_gear_sets()
     sets.midcast.CureWithLightWeather = {main="Chatoyant staff",sub="Arbuda grip",ammo="Psilomene",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati earring",
         body="Kaykaus bliaut",hands="Kaykaus cuffs",ring1="Lebeche Ring",ring2="Sirona's Ring",
-        back="Twilight cape",waist="Hachirin-no-obi",legs="Chironic Hose",feet="Vanya clogs"}
+        back="Twilight cape",waist="Hachirin-no-obi",legs=gear.chirlegs,feet="Vanya clogs"}
 
     sets.midcast.Curaga = sets.midcast.Cure
 
@@ -161,37 +166,37 @@ function init_gear_sets()
     sets.midcast.MndEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-        back="Aurist's cape +1",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Aurist's cape +1",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 
 	sets.midcast.MndEnfeebles.Resistant = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 
     sets.midcast.Dispel = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
-        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 
 	sets.midcast.Dispel.Resistant = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
-        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 
 	sets.midcast.IntEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 
     sets.midcast.IntEnfeebles.Resistant = {main=gear.EnfeebStaff,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's torque",ear1="Digni. Earring",ear2="Barkarole Earring",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Weatherspoon Ring",
-        back="Lugh's cape",waist="Luminary Sash",legs="Chironic Hose",feet="Medium's sabots"}
+        back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
 	
 	sets.midcast.SpecialEnfeebles = {main=gear.EnfeebStaff,sub="Mephitis grip",ammo="Pemphredo tathlum",
 		head="Kaykaus mitra",neck="Incanter's torque",ear1="Barkarole earring", ear2="Digni. earring",
-		body=gear.nuke_body,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon ring",
-		back="Lugh's cape",waist="Luminary sash",legs="Chironic hose",feet="Medium's sabots"}
+		body=gear.merlbody_nuke,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon ring",
+		back="Lugh's cape",waist="Luminary sash",legs=gear.chirlegs,feet="Medium's sabots"}
 		
 	sets.midcast.SpecialEnfeebles.Resistant = set_combine(sets.midcast.SpecialEnfeebles,
 		{head="Amalric coif"})
@@ -201,38 +206,38 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
         head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Gwati Earring",
         body="Shango robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
-        back=gear.HelixCape,waist="Eschan Stone",legs="Pedagogy pants +1",feet=gear.DA_feet}
+        back=gear.HelixCape,waist="Eschan Stone",legs="Pedagogy pants +1",feet=gear.merlfeet_da}
 
     sets.midcast.Kaustra = {main="Rubicundity",sub="Genmei shield",range=empty,ammo="Pemphredo tathlum",
         head="Pixie Hairpin +1",neck="Incanter's torque",ear1="Barkarole Earring",ear2="Friomisi Earring",
-        body=gear.nuke_body,hands="Amalric gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-        back="Lugh's cape",waist="Refoccilation Stone",legs=gear.nuke_legs,feet=gear.MB_feet}
+        body=gear.merlbody_nuke,hands="Amalric gages",ring1="Shiva Ring +1",ring2="Archon Ring",
+        back="Lugh's cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb}
 
 	
 
     sets.midcast.Drain = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
         head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Gwati Earring",
-        body="Shango robe",hands=gear.DA_hands,ring1="Evanescence Ring",ring2="Archon Ring",
-        back=gear.HelixCape,waist="Fucho-no-obi",legs=gear.DA_legs,feet=gear.DA_feet}
+        body="Shango robe",hands=gear.chirhands_da,ring1="Evanescence Ring",ring2="Archon Ring",
+        back=gear.HelixCape,waist="Fucho-no-obi",legs=gear.merllegs_da,feet=gear.merlfeet_da}
 
     sets.midcast.Aspir = sets.midcast.Drain
 
     sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Hasty Pinion +1",
-        head=gear.FC_head,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
     sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Grioavolr"})
 	
 	sets.midcast.Helix = {main=gear.NukeStaff,sub="Thrace Strap",ammo="Dosis Tathlum",
-		head=gear.nuke_head, neck="Saevus pendant +1", ear1="Friomisi Earring", ear2="Barkarole earring",
-		body=gear.nuke_body, hands=gear.nuke_hands, ring1="Shiva Ring +1", ring2="Shiva Ring +1",
-		back="Lugh's cape", waist="Refoccilation Stone", legs=gear.nuke_legs, feet=gear.MB_feet }
+		head=gear.merlhead_nuke, neck="Saevus pendant +1", ear1="Friomisi Earring", ear2="Barkarole earring",
+		body=gear.merlbody_nuke, hands=gear.chirhands_nuke, ring1="Shiva Ring +1", ring2="Shiva Ring +1",
+		back="Lugh's cape", waist="Refoccilation Stone", legs=gear.merllegs_nuke, feet=gear.merlfeet_mb }
 
 	sets.midcast.Helix.Resistant = {main=gear.NukeStaff,sub="Thrace Strap",ammo="Pemphredo Tathlum",
-		head=gear.nuke_head, neck="Sanctity Necklace", ear1="Friomisi Earring", ear2="Barkarole earring",
-		body=gear.nuke_body, hands=gear.nuke_hands, ring1="Shiva Ring +1", ring2="Shiva Ring +1",
-		back="Lugh's cape", waist="Eschan Stone", legs=gear.nuke_legs, feet=gear.MB_feet }
+		head=gear.merlhead_nuke, neck="Sanctity Necklace", ear1="Friomisi Earring", ear2="Barkarole earring",
+		body=gear.merlbody_nuke, hands=gear.chirhands_nuke, ring1="Shiva Ring +1", ring2="Shiva Ring +1",
+		back="Lugh's cape", waist="Eschan Stone", legs=gear.merllegs_nuke, feet=gear.merlfeet_mb }
 
 	sets.midcast['Luminohelix II'] = set_combine(sets.midcast.Helix, {ring1="Weatherspoon Ring"})
 	
@@ -240,14 +245,14 @@ function init_gear_sets()
 
     -- Elemental Magic sets are default for handling low-tier nukes.
     sets.midcast['Elemental Magic'] = {main=gear.NukeStaff,sub="Zuuxowu grip",ammo="Dosis Tathlum",
-        head=gear.nuke_head,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
-        body=gear.nuke_body,hands=gear.nuke_hands,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Lugh's cape",waist="Refoccilation Stone",legs=gear.nuke_legs,feet=gear.chirfeet}
+        head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
+        body=gear.merlbody_nuke,hands=gear.chirhands_nuke,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+        back="Lugh's cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.chirfeet}
 
     sets.midcast['Elemental Magic'].Resistant = {main=gear.NukeStaff,sub="Niobid strap",ammo="Pemphredo tathlum",
-        head=gear.nuke_head,neck="Sanctity necklace",ear1="Barkarole Earring",ear2="Friomisi Earring",
-        body=gear.nuke_body,hands=gear.macc_hands,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Lugh's cape",waist="Eschan Stone",legs=gear.nuke_legs,feet=gear.chirfeet}
+        head=gear.merlhead_nuke,neck="Sanctity necklace",ear1="Barkarole Earring",ear2="Friomisi Earring",
+        body=gear.merlbody_nuke,hands=gear.chirhands_macc,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+        back="Lugh's cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.chirfeet}
 
     
 
@@ -260,16 +265,16 @@ function init_gear_sets()
 		{})
 
 	sets.magic_burst = {main=gear.NukeStaff,
-		head=gear.MB_head,
+		head=gear.merlhead_mb,
 		hands="Amalric gages", ring1="Mujin Band", 
-		legs=gear.MB_legs,feet=gear.MB_feet}
+		legs=gear.merllegs_mb,feet=gear.merlfeet_mb}
 
 
 
     sets.midcast.Impact = {main=gear.EnfeebStaff,sub="Thrace strap",ammo="Pemphredo tathlum",
         head=empty,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Gwati Earring",
-        body="Twilight Cloak",hands=gear.macc_hands,ring1="Weatherspoon Ring",ring2="Archon Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs=gear.nuke_legs,feet=gear.MB_feet}
+        body="Twilight Cloak",hands=gear.chirhands_macc,ring1="Weatherspoon Ring",ring2="Archon Ring",
+        back="Lugh's cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb}
 
 
     -- Sets to return to when not performing an action.
@@ -284,7 +289,7 @@ function init_gear_sets()
 
     sets.idle.Town = {main=gear.NukeStaff,sub="Niobid strap",ammo="Homiliary",
         head="Arbatel bonnet +1",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Infused Earring",
-        body=gear.nuke_body,hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+        body=gear.merlbody_nuke,hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity Cape",waist="Slipor Sash",legs="Assiduity pants +1",feet="Herald's gaiters"}
 
     sets.idle.Field = {main="Bolelabunga",sub="Genmei shield",ammo="Homiliary",
@@ -318,12 +323,12 @@ function init_gear_sets()
     sets.defense.PDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Brigantia Pebble",
         head=gear.chirhead,neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
         body="Vrikodara jupon",hands="Gendewitha Gages +1",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Slipor Sash",legs=gear.merllegs_dt,feet="Battlecast gaiters"}
+        back="Solemnity Cape",waist="Slipor Sash",legs=gear.merllegs_dt,feet=gear.merlfeet_dt}
 	--35% discounting main/sub
     sets.defense.MDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Vanir Battery",
         head=gear.chirhead,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body="Vrikodara Jupon",hands=gear.macc_hands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity cape",waist="Slipor Sash",legs=gear.merllegs_phalanx,feet="Vanya clogs"}
+        body="Vrikodara Jupon",hands=gear.chirhands_macc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+        back="Solemnity cape",waist="Slipor Sash",legs=gear.merllegs_phalanx,feet=gear.merlfeet_dt }
     
 	sets.defense.Meva = set_combine(sets.defense.MDT,{head=gear.chirhead,ear2="Dominance Earring"})
 
@@ -342,7 +347,7 @@ function init_gear_sets()
     sets.engaged = {
         head="Befouled Crown",neck="Loricate torque +1",
         body="Vrikodara jupon",hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Eschan Stone",legs=gear.merllegs_dt,feet="Battlecast gaiters" }
+        back="Solemnity Cape",waist="Eschan Stone",legs=gear.merllegs_dt,feet=gear.merlfeet_dt }
 
 
     -- Elemental Obi/Twilight Cape --

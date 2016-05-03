@@ -19,7 +19,9 @@ function job_setup()
 	    state.OffenseMode:options('None', 'Normal')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'PDT','MDT')
-
+	state.PhysicalDefenseMode:options('PDT', 'Shield')
+	state.Skillup = M(false, 'Boost Spell')
+	
 		AutoAga = 1
 		Curaga_benchmark = 30
 		Enmity = 1
@@ -29,7 +31,6 @@ function job_setup()
 		
     select_default_macro_book()
 
-	custom_timers = {}
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -74,9 +75,9 @@ function init_gear_sets()
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
-        head="Nahtirah Hat",ear1="Roundel earring",
-        body="Vanya Robe",hands="Fanatic gloves",ring1="Askelpian Ring",
-        back="Pahtli Cape",legs="Ebers pantaloons +1",feet="Vanya clogs"}
+        head="Nahtirah Hat",ear1="Roundel earring",ear2="Thureous earring",
+        body="Vanya Robe",hands="Fanatic gloves",ring1="Asklepian Ring",
+        back="Solemnity cape",legs="Ebers pantaloons +1",feet="Vanya clogs"}
     
     
     -- Weaponskill sets
@@ -107,12 +108,12 @@ function init_gear_sets()
         body="Ebers bliaud +1",hands="Theophany mitts +1",ring1="Lebeche Ring",ring2="Sirona's Ring",
         back="Alaunus's Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Vanya Clogs"}
 
-    sets.midcast.Cure = {main="Queller Rod",sub="Genbu's shield",ammo="Psilomene",
+    sets.midcast.Cure = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
         head="Gendewitha Caubeen",neck="Incanter's torque",ear1="Beatific Earring",ear2="Healing Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Sirona's Ring",
         back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
 
-    sets.midcast.Curaga = {main="Queller Rod",sub="Genbu's shield",ammo="Psilomene",
+    sets.midcast.Curaga = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
         head="Gendewitha Caubeen",neck="Incanter's torque",ear1="Glorious Earring",ear2="Orison Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Lebeche Ring",ring2="Globidonta Ring",
         back="Mending Cape",waist="Pythia sash +1",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
@@ -149,7 +150,7 @@ function init_gear_sets()
 	sets.midcast.Storm = sets.midcast['Enhancing Magic']
 	
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
-		{head="Chironic hat",
+		{head=gear.chirhead,
 		waist="Emphatikos Rope",legs="Shedir seraweels"})	
 
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], 
@@ -185,24 +186,24 @@ function init_gear_sets()
 
     sets.midcast['Dark Magic'] = {main="Rubicundity", sub="Genbu's Shield",ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
-        body="Shango robe",hands=gear.macc_hands,ring1="Archon Ring",ring2="Weatherspoon ring",
+        body="Shango robe",hands=gear.chirhands_macc,ring1="Archon Ring",ring2="Weatherspoon ring",
         back="Perimede cape",waist="Eschan Stone",legs="Telchine Braconi",feet="Medium's sabots"}
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Mephitis Grip",ammo="Pemphredo Tathlum",
-        head="Chironic hat",neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
+        head=gear.chirhead,neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon Ring",
-        back="Aurist's cape +1",waist="Eschan Stone",legs="Chironic hose",feet="Medium's sabots"}
+        back="Aurist's cape +1",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
 
     sets.midcast.IntEnfeebles = {main="Ababinili +1", sub="Mephitis grip",ammo="Pemphredo Tathlum",
-        head="Chironic hat",neck="incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
+        head=gear.chirhead,neck="incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Aurist's cape +1",waist="Eschan Stone",legs="Chironic hose",feet="Medium's sabots"}
+        back="Aurist's cape +1",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
 
     sets.midcast.Impact = {main="Grioavolr",sub="Niobid strap",ammo="Pemphredo Tathlum",
         head=empty,neck="Incanter's torque",ear1="Enchanter Earring +1",ear2="Gwati Earring",
-        body="Twilight Cloak",hands=gear.macc_hands,ring1="Archon Ring",ring2="Sangoma Ring",
-        back="Toro Cape",waist="Eschan Stone",legs="Chironic hose",feet="Medium's sabots"}
+        body="Twilight Cloak",hands=gear.chirhands_macc,ring1="Archon Ring",ring2="Sangoma Ring",
+        back="Toro Cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
     	
 
     -- Sets to return to when not performing an action.
@@ -220,9 +221,9 @@ function init_gear_sets()
         back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Vanya clogs"}
 
     sets.idle.PDT = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
-        head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
+        head="Befouled crown",neck="Loricate torque +1",ear1="Thureous Earring",ear2="Genmei Earring",
         body="Vrikodara jupon",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Battlecast gaiters"}
+        back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet=gear.chirfeet_block }
 
 	sets.idle.MDT = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
@@ -242,15 +243,45 @@ function init_gear_sets()
     
     -- Defense sets
 
-    sets.defense.PDT = {main="Mafic cudgel",sub="Genmei shield",ammo="Amar Cluster",
-        head="Chironic hat",neck="Loricate torque +1",ear1="Cryptic earring",ear2="Genmei earring",
-        body="Onca suit",hands=empty,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Slipor sash",legs=empty,feet=empty}
-
+    sets.defense.PDT = {
+		main="Mafic cudgel", -- 10% PDT;
+		sub="Genmei shield", -- 10% PDT; Block +6; Counter +4
+		ammo="Brigantia pebble",
+        head=gear.chirhead_pdt, -- 2% MDT; Block +3
+		neck="Loricate torque +1", -- 6% DT
+		ear1="Thureous earring", -- Block +2
+		ear2="Genmei earring", --  2% PDT; Counter +1
+        body="Vrikodara jupon", -- 3% PDT
+		hands="Gendewitha gages +1", -- Block +4
+		ring1="Defending Ring", -- 10% DT
+		ring2=gear.DarkRing.PDT, -- 5% PDT; 4% MDT
+        back="Solemnity Cape", -- 4% DT
+		waist="Slipor sash", -- 3% MDT
+		legs=gear.chirlegs_dt, -- Block +3
+		feet=gear.chirfeet_pdt -- 2% PDT; Block +4
+		}
+    sets.defense.Shield = {
+		main="Mafic cudgel", -- 10% PDT;
+		sub="Genmei shield", -- 10% PDT; Block +6; Counter +4
+		ammo="Brigantia pebble",
+        head=gear.chirhead_block, -- 2% MDT; Block +3
+		neck="Loricate torque +1", -- 6% DT
+		ear1="Thureous earring", -- Block +2
+		ear2="Genmei earring", --  2% PDT; Counter +1
+        body="Vrikodara jupon", -- 3% PDT
+		hands=gear.chirhands_block, -- Block +4
+		ring1="Defending Ring", -- 10% DT
+		ring2=gear.DarkRing.PDT, -- 5% PDT; 4% MDT
+        back="Solemnity Cape", -- 4% DT
+		waist="Slipor sash", -- 3% MDT
+		legs=gear.chirlegs_block, -- Block +3
+		feet=gear.chirfeet_block -- 2% PDT; Block +4
+		}
+	
     sets.defense.MDT = {main="Mafic Cudgel", sub="Genmei shield",ammo="Vanir battery",
-        head="Chironic hat",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body=gear.chirbody,hands=gear.macc_hands,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity cape",waist="Slipor sash",legs="Chironic hose",feet="Vanya clogs"}
+        head=gear.chirhead_block,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body=gear.chirbody,hands=gear.chirhands_macc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity cape",waist="Slipor sash",legs=gear.chirlegs_block,feet="Vanya clogs"}
 
     sets.Kiting = {feet="Herald's gaiters"}
 
@@ -265,9 +296,9 @@ function init_gear_sets()
     
     -- Basic set for if no TP weapon is defined.
     sets.engaged = {main="Mafic Cudgel",sub="Genmei shield",ammo="Homiliary",
-        head="Befouled crown",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare Earring",
-        body="Onca suit",hands=empty,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Ninurta's sash",legs=empty,feet=empty}
+        head=gear.chirhead_block,neck="Lissome Necklace",ear1="Digni. Earring",ear2="Zennaroi Earring",
+        body="Kaykaus Bliaut",hands=gear.chirhands_block,ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Solemnity Cape",waist="Ninurta's sash",legs=gear.chirlegs_block,feet=gear.chirfeet_block }
 
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
@@ -381,131 +412,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     end
 end
 
---function job_aftercast(spell, action, spellMap, eventArgs)
---    if spell.skill == 'Enhancing Magic' then
---            adjust_timers(spell, spellMap)
---	end
---end
--- Function to create custom buff-remaining timers with the Timers plugin,
-
--- keeping only the actual valid songs rather than spamming the default
-
--- buff remaining timers.
-
-function adjust_timers(spell, spellMap)
-    local current_time = os.time()
-    
-    -- custom_timers contains a table of song names, with the os time when they
-    -- will expire.
-    
-    -- Eliminate songs that have already expired from our local list.
-    local temp_timer_list = {}
-    local dur = calculate_duration(spell, spellName, spellMap)
-         custom_timers[spell.name] = nil
-         send_command('timers delete "'..spell.name..' ['..spell.target.name..']"')
-         custom_timers[spell.name] = current_time + dur
-         send_command('timers create "'..spell.name..' ['..spell.target.name..']" '..dur..' down')
-end
-
-
-
-
--- Function to calculate the duration of a song based on the equipment used to cast it.
-
--- Called from adjust_timers(), which is only called on aftercast().
-
-function calculate_duration(spell, spellName, spellMap)
-
-    local mult = 1.00
-
-	if player.equipment.Head == 'Telchine Cap' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Telchine Chas.' then mult = mult + 0.08 end
-	if player.equipment.Hands == 'Telchine Gloves' then mult = mult + 0.09 end
-	if player.equipment.Legs == 'Telchine Braconi' then mult = mult + 0.08 end
-	if player.equipment.Feet == 'Telchine Pigaches' then mult = mult + 0.08 end
-	
-	if player.equipment.Feet == 'Estq. Houseaux +2' then mult = mult + 0.20 end
-	if player.equipment.Legs == 'Futhark Trousers' then mult = mult + 0.10 end
-	if player.equipment.Legs == 'Futhark Trousers +1' then mult = mult + 0.20 end
-	if player.equipment.Hands == 'Atrophy Gloves' then mult = mult + 0.15 end
-	if player.equipment.Hands == 'Atrophy Gloves +1' then mult = mult + 0.16 end
-	if player.equipment.Back == 'Estoqueur\'s Cape' then mult = mult + 0.10 end
-	if player.equipment.Hands == 'Dynasty Mitts' then mult = mult + 0.05 end
-	if player.equipment.Body == 'Shabti Cuirass' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Shabti Cuirass +1' then mult = mult + 0.10 end
-	if player.equipment.Feet == 'Leth. Houseaux' then mult = mult + 0.25 end
-	if player.equipment.Feet == 'Leth. Houseaux +1' then mult = mult + 0.30 end
-
-
-	local base = 0
-
-	if spell.name == 'Haste' then base = base + 180 end
-	if spell.name == 'Stoneskin' then base = base + 300 end
-	if string.find(spell.name,'Bar') then base = base + 480 end
-	if spell.name == 'Blink' then base = base + 300 end
-	if spell.name == 'Aquaveil' then base = base + 600 end
-	if string.find(spell.name,'storm') then base = base + 180 end
-	if spell.name == 'Auspice' then base = base + 180 end
-	if string.find(spell.name,'Boost') then base = base + 300 end
-	if spell.name == 'Phalanx' then base = base + 180 end
-	if string.find(spell.name,'Protect') then base = base + 1800 end
-	if string.find(spell.name,'Shell') then base = base + 1800 end
-	if string.find(spell.name,'Refresh') then base = base + 150 end
-	if string.find(spell.name,'Regen') then base = base + 60 end
-	if spell.name == 'Adloquium' then base = base + 180 end
-	if string.find(spell.name,'Animus') then base = base + 180 end
-	if spell.name == 'Crusade' then base = base + 300 end
-	if spell.name == 'Embrava' then base = base + 90 end
-	if string.find(spell.name,'En') then base = base + 180 end
-	if string.find(spell.name,'Flurry') then base = base + 180 end
-	if spell.name == 'Foil' then base = base + 30 end
-	if string.find(spell.name,'Gain') then base = base + 180 end
-	if spell.name == 'Reprisal' then base = base + 60 end
-	if string.find(spell.name,'Temper') then base = base + 180 end
-	if string.find(spell.name,'Spikes') then base = base + 180 end
-
-	if buffactive['Perpetuance'] then
-		if player.equipment.Hands == 'Arbatel Bracers' then
-			mult = mult*2.5
-		elseif player.equipment.Hands == 'Arbatel Bracers +1' then
-			mult = mult*2.55
-		else
-			mult = mult*2
-		end
-	end
-
-	if buffactive['Composure'] then
-		if spell.target.type == 'SELF' then
-			mult = mult*3
-		else
-			mult = mult
-		end
-	end
-			
-			
-
-    local totalDuration = math.floor(mult*base)
-
-	--print(totalDuration)
-
-
-    return totalDuration
-
-end
--- Function to reset timers.
-
-function reset_timers()
-
-    for i,v in pairs(custom_timers) do
-
-        send_command('timers delete "'..i..'"')
-
-    end
-
-    custom_timers = {}
-
-end
-
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
 -------------------------------------------------------------------------------------------------------------------
@@ -521,7 +427,17 @@ function job_state_change(stateField, newValue, oldValue)
     end
 end
 
-
+---Auto Boost spell
+function job_buff_change(buff, gain)
+	if state.Skillup.value then
+		if not buffactive['AGI Boost'] then
+			if buff == 'AGI Boost' and gain == false then
+				send_command('input /ma "Boost-AGI" <me>')
+			end
+		send_command('input /ma "Boost-AGI" <me>')
+		end
+	end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
@@ -667,3 +583,6 @@ function select_default_macro_book()
     -- Default macro set/book
     set_macro_page(10, 14)
 end
+
+--[[function nix_all_blinking()
+	send_command('@dressup bmn all target T')]]

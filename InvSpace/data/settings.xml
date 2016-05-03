@@ -51,6 +51,7 @@
                 </stroke>
             </text>
         </display>
+        <showtotal>true</showtotal>
     </global>
     <antrax>
         <display>
@@ -157,12 +158,12 @@
     <lygre>
         <display>
             <pos>
-                <x>1041</x>
-                <y>338</y>
+                <x>1023</x>
+                <y>295</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4211734020</alpha>
+                    <alpha>-2.7386800471527e+014</alpha>
                 </stroke>
             </text>
         </display>

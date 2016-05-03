@@ -19,8 +19,8 @@ _addon.author = 'Seth VanHeulen (Acacia@Odin)'
 
 require('pack')
 
-enabled = false
-speed = 80
+enabled = true
+speed = 58
 prev_update = nil
 
 function check_incoming_chunk(id, original, modified, injected, blocked)

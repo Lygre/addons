@@ -18,8 +18,8 @@
             </flags>
             <padding>5</padding>
             <pos>
-                <x>0</x>
-                <y>50</y>
+                <x>826</x>
+                <y>300</y>
             </pos>
             <show>false</show>
             <text>
@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.819313040547e+096</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.819313040547e+096</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -101,7 +101,7 @@
                 <x>794</x>
                 <y>373</y>
             </pos>
-            <show>false</show>
+            <show>true</show>
             <text>
                 <alpha>255</alpha>
                 <blue>255</blue>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.819313040547e+096</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -190,7 +190,7 @@
             </3>
             <30>
                 <id>30</id>
-                <level>251</level>
+                <level>334.1</level>
                 <name>Shield</name>
                 <short_name>shield</short_name>
             </30>
@@ -202,7 +202,7 @@
             </31>
             <32>
                 <id>32</id>
-                <level>16</level>
+                <level>349.8</level>
                 <name>Divine Magic</name>
                 <short_name>divine_magic</short_name>
             </32>

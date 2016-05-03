@@ -57,7 +57,7 @@ function init_gear_sets()
     -- 80% Fast Cast (including trait) for all spells, plus 5% quick cast
     -- No other FC sets necessary.
     sets.precast.FC = {
-        head=gear.FC_head,
+        head=gear.merlhead_fc,
         body="Vitivation Tabard",hands="Leyline gloves",ring1="Weatherspoon Ring",
         back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas"}
 
@@ -77,14 +77,14 @@ function init_gear_sets()
     -- Midcast Sets
     
     sets.midcast.FastRecast = {
-        head=gear.FC_head,
+        head=gear.merlhead_fc,
         body="Vitivation Tabard",hands="Leyline gloves",ring1="Weatherspoon Ring",
         back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas"}
 
     sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Roundel Earring",ear2="Beatific Earring",
         body="Kaykaus Bliaut",hands="Telchine Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
-        back="Swith Cape +1",waist="Bishop's sash",legs="Chironic hose",feet="Medium's Sabots"}
+        back="Swith Cape +1",waist="Bishop's sash",legs=gear.chirlegs,feet="Medium's Sabots"}
         
     sets.midcast.Curaga = sets.midcast.Cure
     sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
@@ -99,9 +99,9 @@ function init_gear_sets()
     sets.midcast.Stoneskin = {neck="Nodens gorget",waist="Siegel Sash"}
     
     sets.midcast['Enfeebling Magic'] = {main="Marin staff",sub="Mephitis Grip",ammo="Pemphredo tathlum",
-        head="Chironic hat",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter Earring +1",
+        head=gear.chirhead,neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter Earring +1",
         body="Chironic doublet",hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
-        back="Sucellos's cape",waist="Demonry Sash",legs="Chironic hose",feet="Bokwus Boots"}
+        back="Sucellos's cape",waist="Demonry Sash",legs=gear.chirlegs,feet="Bokwus Boots"}
 
     sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau +1"})
 
@@ -110,27 +110,27 @@ function init_gear_sets()
     sets.midcast['Paralyze II'] = set_combine(sets.midcast['Enfeebling Magic'], {feet="Vitivation Boots +1"})
     
     sets.midcast['Elemental Magic'] = {main="Marin staff",sub="Niobid strap",ammo="Pemphredo Tathlum",
-        head=gear.nuke_head,neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
-        body=gear.nuke_body,hands=gear.nuke_hands,ring1="Shiva ring +1",ring2="Shiva ring +1",
-        back="Toro Cape",waist=gear.ElementalObi,legs=gear.nuke_legs,feet=gear.nuke_feet }
+        head=gear.merlhead_nuke,neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
+        body=gear.merlbody_nuke,hands=gear.chirhands_nuke,ring1="Shiva ring +1",ring2="Shiva ring +1",
+        back="Toro Cape",waist=gear.ElementalObi,legs=gear.merllegs_nuke,feet=gear.nuke_feet }
     
 	sets.magic_burst = {
-		head=gear.MB_head,neck="Mizukage-no-kubikazari",
+		head=gear.merlhead_mb,neck="Mizukage-no-kubikazari",
 		hands="Amalric gages",ring1="Mujin band",
-		back="Seshaw cape",legs=gear.MB_legs,feet=gear.MB_feet
+		back="Seshaw cape",legs=gear.merllegs_mb,feet=gear.merlfeet_mb
 		}
 	
     sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'], {head=empty,body="Twilight Cloak"})
 
     sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
         head="Pixie hairpin +1",neck="Incanter's Torque",ear1="Friomisi Earring",ear2="Gwati Earring",
-        body="Shango robe",hands=gear.macc_hands,ring1="Weatherspoon Ring",ring2="Archon Ring",
+        body="Shango robe",hands=gear.chirhands_macc,ring1="Weatherspoon Ring",ring2="Archon Ring",
         back="Perimede Cape",waist="Eschan Stone",legs="Psycloth lappas",feet=gear.nuke_feet }
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
 
-    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {hands=gear.DA_hands, 
-		waist="Fucho-no-Obi",legs=gear.DA_legs,feet=gear.DA_feet })
+    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {hands=gear.chirhands_da, 
+		waist="Fucho-no-Obi",legs=gear.merllegs_da,feet=gear.merlfeet_da })
 
     sets.midcast.Aspir = sets.midcast.Drain
 

@@ -52,14 +52,14 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
-        head=gear.FC_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+        head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Anhur Robe",hands="Helios gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Lifestream Cape",waist="Witful Belt",legs="Geomancy Pants +1",feet=gear.MB_feet}
+        back="Lifestream Cape",waist="Witful Belt",legs="Geomancy Pants +1",feet=gear.merlfeet_mb}
 
 	sets.precast.FC.Stun = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
-		head=gear.FC_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
+		head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
 		body="Shango Robe",hands="Helios gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Lifestream Cape",waist="Witful Belt",legs="Geomancy pants +1",feet=gear.MB_feet}
+		back="Lifestream Cape",waist="Witful Belt",legs="Geomancy pants +1",feet=gear.merlfeet_mb}
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {main="Tamaxchi",sub="Genbu's shield",
 		body="Heka's Kalasiris",
@@ -78,9 +78,9 @@ function init_gear_sets()
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Flash Nova'] = {range=empty,ammo="Dosis Tathlum",
-        head=gear.nuke_head,neck="Fotia gorget",ear1="Friomisi Earring",ear2="Moonshade Earring",
+        head=gear.merlhead_nuke,neck="Fotia gorget",ear1="Friomisi Earring",ear2="Moonshade Earring",
         body="Amalric doublet",hands="Helios gloves",ring1="Shiva Ring +1",ring2="Weatherspoon Ring",
-        back="Toro Cape",waist="Fotia Belt",legs=gear.MB_legs,feet=gear.nuke_feet}
+        back="Toro Cape",waist="Fotia Belt",legs=gear.merllegs_mb,feet=gear.nuke_feet}
 
     sets.precast.WS['Starlight'] = {ear2="Moonshade Earring"}
 
@@ -93,14 +93,14 @@ function init_gear_sets()
 
     -- Base fast recast for spells
     sets.midcast.FastRecast = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
-        head=gear.FC_head,neck="Voltsurge torque",ear1="loquacious earring",ear2="Enchanter earring +1",
+        head=gear.merlhead_fc,neck="Voltsurge torque",ear1="loquacious earring",ear2="Enchanter earring +1",
         body="Shango robe",hands="Helios gloves",ring1="Prolix ring",ring2="Weatherspoon ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Geomancy Pants +1",feet=gear.nuke_feet}
 
 	sets.midcast.Stun = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
-		head=gear.FC_head,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
+		head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
 		body="Shango Robe",hands="Helios gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Lifestream Cape",waist="Witful Belt",legs="Geomancy pants +1",feet=gear.MB_feet}
+		back="Lifestream Cape",waist="Witful Belt",legs="Geomancy pants +1",feet=gear.merlfeet_mb}
 
 
     sets.midcast.Geomancy = {main="Solstice",sub="Genmei shield",range="Dunna",ammo=empty,
@@ -156,36 +156,36 @@ function init_gear_sets()
 	sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",range=empty,ammo="Pemphredo tathlum",
         head="Bagua galero +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Gwati Earring",
 	   body="Shango robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
-        back="Perimede Cape",waist="Fucho-no-obi",legs="Azimuth tights +1",feet=gear.DA_feet}
+        back="Perimede Cape",waist="Fucho-no-obi",legs="Azimuth tights +1",feet=gear.merlfeet_da}
 
-    sets.midcast['Drain'] = set_combine(sets.midcast['Dark Magic'], {head="Pixie Hairpin +1", legs=gear.DA_legs})
+    sets.midcast['Drain'] = set_combine(sets.midcast['Dark Magic'], {head="Pixie Hairpin +1", legs=gear.merllegs_da})
 
     sets.midcast['Aspir'] = sets.midcast['Drain']
 
 	sets.midcast['Enfeebling Magic'] = {main="Solstice",sub="Genmei shield", ammo="Pemphredo tathlum",
-		head=gear.nuke_head, neck="Incanter's torque", ear1="Gwati earring", ear2="Enchanter earring +1",
+		head=gear.merlhead_nuke, neck="Incanter's torque", ear1="Gwati earring", ear2="Enchanter earring +1",
 		body="Shango Robe", hands="Helios gloves", ring1="Weatherspoon Ring", ring2="Sangoma Ring",
 		back="Lifestream cape", waist="Rumination sash", legs="Psycloth lappas", feet="Bagua sandals +1"
 	}
     sets.midcast['Elemental Magic'] = {main="Solstice",sub="Culminus",range=empty,ammo="Pemphredo tathlum",
-        head=gear.nuke_head,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
-        body=gear.nuke_body,hands="Amalric gages",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Toro Cape",waist="Refoccilation Stone",legs=gear.nuke_legs,feet=gear.nuke_feet}
+        head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
+        body=gear.merlbody_nuke,hands="Amalric gages",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+        back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
 
     sets.midcast['Elemental Magic'].Resistant = {main="Solstice",sub="Culminus",range=empty,ammo="Pemphredo tathlum",
-        head=gear.nuke_head,neck="Sanctity Necklace",ear1="Barkarole Earring",ear2="Friomisi Earring",
-        body=gear.nuke_body,hands="Amalric gages",ring1="Weatherspoon Ring",ring2="Shiva Ring +1",
-        back="Toro Cape",waist="Eschan Stone",legs=gear.nuke_legs,feet=gear.nuke_feet}
+        head=gear.merlhead_nuke,neck="Sanctity Necklace",ear1="Barkarole Earring",ear2="Friomisi Earring",
+        body=gear.merlbody_nuke,hands="Amalric gages",ring1="Weatherspoon Ring",ring2="Shiva Ring +1",
+        back="Toro Cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
 
 	sets.midcast.Impact = {main="Solstice",sub="Genmei shield",range=empty,ammo="Pemphredo Tathlum",
         head=empty,neck="Sanctity necklace",ear1="Barkarole Earring",ear2="Gwati Earring",
         body="Twilight Cloak",hands="Amalric gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-        back="Toro cape",waist="Eschan Stone",legs=gear.nuke_legs,feet=gear.nuke_feet}
+        back="Toro cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
 
 	sets.magic_burst = {main="Solstice", sub="Genmei shield",
-		head=gear.MB_head,neck="Mizukage-no-Kubikazari",
+		head=gear.merlhead_mb,neck="Mizukage-no-Kubikazari",
 		hands="Amalric gages", ring1="Mujin Band",
-		back="Seshaw cape",legs=gear.MB_legs,feet=gear.MB_feet}
+		back="Seshaw cape",legs=gear.merllegs_mb,feet=gear.merlfeet_mb}
 
     ---------
 -----------------------------

@@ -110,7 +110,7 @@ function init_gear_sets()
 		back="Rancorous Mantle"})
 
     sets.precast.WS['Blade: Hi'] = set_combine(sets.precast.WS,
-        {head=gear.adhemarhead_melee,
+        {head=gear.adhemarhead_melee,ear1="Ishvara earring",
 		body="Adhemar jacket",hands="Kobo Kote",
 		back="Rancorous Mantle",legs="Samnuha tights"})
     sets.precast.WS['Blade: Hi'].Acc = set_combine(sets.precast.WS['Blade: Hi'],

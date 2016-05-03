@@ -36,32 +36,40 @@ function define_global_sets()
 	gear.default.recast_staff = ""
 	
 	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
-	
-	gear.MB_head = {name="Merlinic Hood", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Magic burst mdg.+8%','INT+8','"Mag.Atk.Bns."+12',}}
-	gear.MB_legs = {name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Magic burst mdg.+11%','CHR+9','Mag. Acc.+14',}}
-	gear.MB_feet = {name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}}
 
-	gear.FC_head = {name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}}
 
-	gear.DA_hands = {name="Chironic Gloves", augments={'"Drain" and "Aspir" potency +10','INT+6','"Mag.Atk.Bns."+14',}}
-	gear.DA_legs = {name="Merlinic Shalwar", augments={'Mag. Acc.+25','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+14',}}
-	gear.DA_feet = {name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+3','Mag. Acc.+11','"Mag.Atk.Bns."+15',}}	
-
-	gear.nuke_body = {name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Enmity-2','MND+5','Mag. Acc.+6','"Mag.Atk.Bns."+15',}}
-	gear.nuke_head = {name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}
-	gear.nuke_legs = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}
-	gear.nuke_hands = {name="Chironic Gloves", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Spell interruption rate down -6%','CHR+13','"Mag.Atk.Bns."+13',}}
+	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Enmity-2','MND+5','Mag. Acc.+6','"Mag.Atk.Bns."+15',}}
+	gear.merlhead_nuke = {name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}
+	gear.merllegs_nuke = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}
 
 	
+	gear.merlhead_mb = {name="Merlinic Hood", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Magic burst mdg.+8%','INT+8','"Mag.Atk.Bns."+12',}}
+	gear.merlhead_fc = {name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}}
 	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
-	gear.macc_hands = {name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}}
+	gear.chirhead_block = {name="Chironic Hat", augments={'Chance of successful block +4','CHR+6','Accuracy+13',}}
+	gear.chirhead_pdt = {name="Chironic Hat", augments={'Attack+12','Phys. dmg. taken -4%',}}
 	gear.chirbody = {name="Chironic Doublet", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+14',}}
+	gear.merlhands_pdt = {name="Merlinic Dastanas", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Phys. dmg. taken -2%','MND+7','Mag. Acc.+14','"Mag.Atk.Bns."+2',}}
+	gear.chirhands_macc = {name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}}
 	gear.chirhands_sc = {name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
+	gear.chirhands_da = {name="Chironic Gloves", augments={'"Drain" and "Aspir" potency +10','INT+6','"Mag.Atk.Bns."+14',}}
+	gear.chirhands_nuke = {name="Chironic Gloves", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Spell interruption rate down -6%','CHR+13','"Mag.Atk.Bns."+13',}}
+	gear.chirhands_block = {name="Chironic Gloves", augments={'Attack+10','Chance of successful block +4','CHR+9',}}
 	gear.merllegs_dt = {name="Merlinic Shalwar", augments={'Phys. dmg. taken -4%',}}
+	gear.merllegs_da = {name="Merlinic Shalwar", augments={'Mag. Acc.+25','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+14',}}
+	gear.merllegs_mb = {name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Magic burst mdg.+11%','CHR+9','Mag. Acc.+14',}}
 	gear.merllegs_phalanx = {name="Merlinic Shalwar", augments={'Mag. Acc.+5','Magic dmg. taken -3%','Phalanx +2','Accuracy+1 Attack+1',}}
-	gear.merlfeet_dt = {}
+	gear.chirlegs = {name="Chironic Hose", augments={'Mag. Acc.+30','Haste+2','MND+10','"Mag.Atk.Bns."+10',}}
+	gear.chirlegs_block = {name="Chironic Hose", augments={'Chance of successful block +4','Attack+12',}}
+	gear.chirlegs_dt = {name="Chironic Hose", augments={'Damage taken-3%','CHR+2','Accuracy+1',}}
+	gear.merlfeet_dt = {name="Merlinic Crackows", augments={'Mag. Acc.+14','Damage taken-3%','DEX+2',}}
 	gear.merlfeet_refresh = {name="Merlinic Crackows", augments={'"Store TP"+1','Pet: Attack+21 Pet: Rng.Atk.+21','"Refresh"+1','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
+	gear.merlfeet_fc = {name="Merlinic Crackows", augments={'Accuracy+13','"Fast Cast"+6','MND+1','Mag. Acc.+9','"Mag.Atk.Bns."+7',}}
+	gear.merlfeet_da = {name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+3','Mag. Acc.+11','"Mag.Atk.Bns."+15',}}	
+	gear.merlfeet_mb = {name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}}
 	gear.chirfeet = {name="Chironic Slippers", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Cure" potency +1%','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}
+	gear.chirfeet_block = {name="Chironic Slippers", augments={'Chance of successful block +4','Attack+2',}}
+	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
@@ -200,3 +208,31 @@ function user_buff_change(buff, gain, eventArgs)
 	end
 end
 
+sprint_enabled = true
+sprint_speed = 59
+prev_update = nil
+
+windower.raw_register_event('incoming chunk',function(id, original, modified, injected, blocked)
+    if id == 0x37 then
+        prev_update = original
+        if sprint_enabled then
+            return original:sub(1, 44) .. 'C':pack(sprint_speed) .. original:sub(46)
+        end
+    end
+end)
+
+fixed_pos = ''
+fixed_ts = os.time()
+ 
+windower.raw_register_event('outgoing chunk',function(id,original,modified,injected,blocked)
+    if not blocked then
+        if id == 0x15 then
+            if (gearswap.cued_packet or midaction()) and fixed_pos ~= '' and os.time()-fixed_ts < 10 then
+                return original:sub(1,4)..fixed_pos..original:sub(17)
+            else
+                fixed_pos = original:sub(5,16)
+                fixed_ts = os.time()
+            end
+        end
+    end
+end)
