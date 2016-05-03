@@ -18,6 +18,9 @@ Addon to make setting blue spells easier.
  8. //aset help --Shows this menu.
  
 **Changes:**  
+v2.25
+ * Added functionality for main or subjob BLU
+
 v1.15 - v1.22  
  * Fixed spells that were missing
  * Recoded for 4.1
