@@ -1,7 +1,9 @@
 **Author:** Ricky Gall  
-**Version:** 1.21  
+**Version:** 2.25
+**Contributor:** Hugh Broome
 **Description:**  
-Addon to make setting blue spells easier. Currently only works as blu main.
+Addon to make setting blue spells easier. 
+**This modified version allows setting spells as main or subjob BLU
 
 **Abbreviations:** aset, azureset
 
