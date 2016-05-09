@@ -28,7 +28,7 @@ function job_setup()
 		Safe_benchmark = 70
 		Sublimation_benchmark = 30
 		Sublimation = 1
-		
+	get_current_strategem_count()
     select_default_macro_book()
 
 end
@@ -383,6 +383,12 @@ function job_precast(spell, action, spellMap, eventArgs)
     end
 end
 
+function job_post_precast(spell,action,spellMap,eventArgs)
+	local abil_recasts = windower.ffxi.get_ability_recasts()
+	local currentCharges = get_current_strategem_count()
+	if Lyna:contains(spell.english) and (not buffactive[366]) and abil_recasts[]
+
+
 function job_midcast(spell, action, spellMap, eventArgs)
 	if spell.skill == 'Healing Magic' then
 		if Cures:contains(spell.name) then
@@ -549,6 +555,7 @@ end
 
 -- Called by the 'update' self-command.
 function job_update(cmdParams, eventArgs)
+	get_current_strategem_count()
     if cmdParams[1] == 'user' and not areas.Cities:contains(world.area) then
         local needsArts = 
             player.sub_job:lower() == 'sch' and
@@ -586,3 +593,18 @@ end
 
 --[[function nix_all_blinking()
 	send_command('@dressup bmn all target T')]]
+	
+function get_current_strategem_count()
+    -- returns recast in seconds.
+    local allRecasts = windower.ffxi.get_ability_recasts()
+    local stratsRecast = allRecasts[231]
+
+    --[[local maxStrategems = (player.main_job_level + 10) / 20]]
+	local maxStrategems = 5
+	
+    local fullRechargeTime = 5*33
+
+    local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)
+
+    return currentCharges
+end

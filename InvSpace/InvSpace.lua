@@ -116,6 +116,9 @@ initialize = function(text, settings)
     if settings.ShowLocker then
         properties:append(' ${loc_current|0}${loc_max|0}${loc_diff|0}')
     end
+	if settings.ShowTotal then
+		properties:append(' ${total_current|0}${total_max|0}${total_diff|0}')
+	end
     if settings.ShowGil then
         properties:append(' ${gil|0}')
     end
@@ -367,6 +370,12 @@ windower.register_event('prerender', function()
                 '\\cs(0,255,0)' .. (' → ' .. (get.locker.max - get.locker.count):string():lpad(' ', 2))
             or 
                 '\\cs(255,128,0)' .. (' → '.. (get.locker.max - get.locker.count):string():lpad(' ', 2))) .. '\\cr'
+		info.total_current = (
+			'\\cs(255,255,0)' .. ('Total:	'.. (get.safe.count + get.safe2.count + get.sack.count + get.satchel.count + get.locker.count + get.inventory.count + get.case.count + get.wardrobe.count + get.wardrobe2.count + get.storage.count):string():lpad(' ', 2))) .. '\\cr'
+		info.total_max = (
+			'\\cs(255,255,0)' .. ('/'.. (get.safe.max + get.safe2.max + get.sack.max + get.satchel.max + get.locker.max + get.inventory.max + get.case.max + get.wardrobe.max + get.wardrobe2.max + get.storage.max):string():lpad(' ', 2))) .. '\\cr'
+		info.total_diff = (
+			'\\cs(255,255,0)' .. (' → '.. ((get.safe.max + get.safe2.max + get.sack.max + get.satchel.max + get.locker.max + get.inventory.max + get.case.max + get.wardrobe.max + get.wardrobe2.max + get.storage.max) - (get.safe.count + get.safe2.count + get.sack.count + get.satchel.count + get.locker.count + get.inventory.count + get.case.count + get.wardrobe.count + get.wardrobe2.count + get.storage.count)):string():lpad(' ', 2))) .. '\\cr'
         local gil = comma_value(giles)
         info.gil = (
             comma_value(giles) == 0 and

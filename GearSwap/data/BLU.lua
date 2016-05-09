@@ -190,7 +190,7 @@ function job_setup()
     }
 
         -- Additional local binds
-    send_command('bind ^` input /ja "Chain Affinity" <me>')
+    send_command('bind ^` input /chantducygne <t>')
     send_command('bind !` input /ja "Efflux" <me>')
     send_command('bind @` input /ja "Burst Affinity" <me>')
 
@@ -267,9 +267,9 @@ function init_gear_sets()
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Requiescat'] = {ammo="Ginsen",
-        head="Telchine cap",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+        head="Carmine Mask",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
         body="Mekosu. Harness",hands="Leyline gloves",ring1="Sirona's Ring",ring2="Epona's Ring",
-        back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Telchine Pigaches"}
+        back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Carmine Greaves"}
     
     sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
         head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
@@ -283,8 +283,8 @@ function init_gear_sets()
     
     sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
         head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-        body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's ring",
-        back="Cornflower Cape",waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
+        body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's ring",
+        back="Rancorous mantle",waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
     
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Jukukik feather",
         head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
@@ -404,7 +404,9 @@ function init_gear_sets()
     -- Other Types --
     
     sets.midcast['Blue Magic'].Stun = set_combine(sets.midcast['Blue Magic'].MagicAccuracy,
-        {waist="Chaac Belt"})
+        {head="Carmine mask",
+		body="Samnuha coat",hands="Leyline gloves",
+		waist="Eschan stone",legs="Mes'yohi slacks",feet=gear.hercfeet_fc })
         
     sets.midcast['Blue Magic']['White Wind'] = { ammo="Psilomene",
         head="Telchine cap",neck="Sanctity necklace",ear1="Calamitous Earring",ear2="Loquacious Earring",

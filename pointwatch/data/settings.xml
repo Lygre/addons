@@ -127,12 +127,11 @@
     <lygre>
         <text_box_settings>
             <pos>
-                <x>501</x>
-                <y>1</y>
+                <x>505</x>
             </pos>
             <text>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </text_box_settings>

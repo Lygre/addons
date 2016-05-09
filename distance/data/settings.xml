@@ -39,4 +39,15 @@
             </stroke>
         </text>
     </global>
+    <lygre>
+        <pos>
+            <x>-97</x>
+            <y>2</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>-64770</alpha>
+            </stroke>
+        </text>
+    </lygre>
 </settings>
