@@ -30,8 +30,28 @@ function job_setup()
                        "Stone IV", "Water IV", "Aero IV", "Fire IV", "Blizzard IV", "Thunder IV",}
     info.high_nukes = S{"Stone V", "Water V", "Aero V", "Fire V", "Blizzard V", "Thunder V"}
 
-    send_command('bind ^` input /ma Stun <t>')
-    send_command('bind @` gs c toggle MagicBurst')
+    send_command('bind ^` gs c scholar dark')
+    send_command('bind @` gs c scholar light')
+    send_command('bind !` sch start')
+    send_command('bind ^F1 sch end')
+    send_command('bind !F1 sch liqu')
+    send_command('bind @F1 sch indu')
+    send_command('bind ^F2 sch deto')
+    send_command('bind !F2 sch scis')
+    send_command('bind @F2 sch impa')
+    send_command('bind ^F3 sch reve')
+    send_command('bind !F3 sch comp')
+    send_command('bind @F3 sch tran')
+    send_command('bind ^F4 sch fusi')
+    send_command('bind !F4 sch frag')
+    send_command('bind @F4 sch grav')
+    send_command('bind ^F5 sch dist')
+    send_command('bind !F5 gs c scholar aoe')
+    send_command('bind ^F6 input /sublimation')
+    send_command('bind !F6 input /enlightenment')
+
+
+
 		
     state.Buff['Sublimation: Activated'] = buffactive['Sublimation: Activated'] or false
     update_active_strategems()

@@ -3,7 +3,31 @@
     <global>
         <assimilation>5</assimilation>
         <language>English</language>
+        <setmode>PreserveTraits</setmode>
+        <setspeed>0.65</setspeed>
         <spellsets>
+            <IntenseAmbVDMay>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>sinker drill</slot03>
+                <slot04>water bomb</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>empty thrash</slot06>
+                <slot07>blazing bound</slot07>
+                <slot08>sudden lunge</slot08>
+                <slot09>nat. meditation</slot09>
+                <slot10>quad. continuum</slot10>
+                <slot11>fantod</slot11>
+                <slot12>heavy strike</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>blank gaze</slot14>
+                <slot15>molting plumage</slot15>
+                <slot16>tenebral crush</slot16>
+                <slot17>chaotic eye</slot17>
+                <slot18>white wind</slot18>
+                <slot19>occultation</slot19>
+                <slot20>paralyzing triad</slot20>
+            </IntenseAmbVDMay>
             <avatars>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

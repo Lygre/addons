@@ -4,4 +4,7 @@
         <AutoUpdate>true</AutoUpdate>
         <CheckInterval>300</CheckInterval>
     </global>
+    <lygre>
+        <CheckInterval>360</CheckInterval>
+    </lygre>
 </settings>

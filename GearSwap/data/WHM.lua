@@ -36,8 +36,23 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- User setup functions for this job.  Recommend that these be overridden in a sidecar file.
 -------------------------------------------------------------------------------------------------------------------
+function user_setup()
+    send_command('bind ^` input /sacrosanctity')
+    send_command('bind !` input /asylum')
+    send_command('bind @` input /divinecaress')
+    send_command('bind ^F1 input /aurorastorm <me>')
+    send_command('bind !F1 input /accession')
+    send_command('bind @F1 input /reraise4')
+    send_command('bind ^F2 input /celerity')
+    send_command('bind !F2 input /divinecaress')
 
+
+end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
+function user_unload()
+    send_command('unbind ^`')
+    send_command('unbind !`')
+end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
@@ -386,7 +401,13 @@ end
 function job_post_precast(spell,action,spellMap,eventArgs)
 	local abil_recasts = windower.ffxi.get_ability_recasts()
 	local currentCharges = get_current_strategem_count()
-	if Lyna:contains(spell.english) and (not buffactive[366]) and abil_recasts[]
+	if Lyna:contains(spell.english) and (not buffactive[366]) and (currentCharges > 0) then
+        if (not buffactive[453]) and abil_recasts[453] == 0 then
+            eventArgs.cancel = true
+            send_command('@input /ja "accession" <me>;wait 1.5;input /ma "'..spell.name..'" '..spell.target.name)
+        end
+    end
+end        
 
 
 function job_midcast(spell, action, spellMap, eventArgs)
@@ -600,9 +621,9 @@ function get_current_strategem_count()
     local stratsRecast = allRecasts[231]
 
     --[[local maxStrategems = (player.main_job_level + 10) / 20]]
-	local maxStrategems = 5
+	local maxStrategems = 2
 	
-    local fullRechargeTime = 5*33
+    local fullRechargeTime = maxStrategems * 120
 
     local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)
 

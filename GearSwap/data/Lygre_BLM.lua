@@ -75,7 +75,7 @@ function init_gear_sets()
 
     sets.precast.FC = {main="Grioavolr",sub="Vivid Strap",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-        body="Anhur Robe",hands="Helios gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        body="Anhur Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
@@ -85,12 +85,12 @@ function init_gear_sets()
 
     --Death sets
     sets.precast.FC['Death'] = { main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
-		head="Pixie hairpin +1",neck="Mizukage-no-Kubikazari",ear1="Barkarole earring", ear2="Friomisi earring",
-		body="Amalric doublet",hands="Amalric gages",ring1="Mujin band",ring2="Locus ring",
-		back="Bane Cape",waist="Eschan Stone", legs="Amalric slops",feet=gear.merlfeet_fc }
+		head="Amalric coif",neck="Voltsurge torque",ear1="Barkarole earring", ear2="Loquacious earring",
+		body="Vrikodara jupon",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon ring",
+		back="Bane Cape",waist="Channeler's Stone", legs="Psycloth lappas",feet=gear.merlfeet_fc }
      
     sets.midcast['Death'] = { main=gear.death_staff,sub="Niobid strap",ammo="Psilomene",
-        head="Pixie hairpin +1", neck="Mizu. Kubikazari", ear1="Barkarole earring", ear2="Static Earring",
+        head="Pixie hairpin +1", neck="Mizu. Kubikazari", ear1="Barkarole earring", ear2="Friomisi Earring",
         body=gear.MB_body, hands="Amalric gages",ring1="Mephitas's ring +1",ring2="Archon Ring",
         back="Taranus's Cape", waist="Hachirin-no-obi", legs="Amalric slops", feet=gear.merlfeet_mb }
         --death specific MB set

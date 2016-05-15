@@ -85,7 +85,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.6873552625137e+084</alpha>
+                    <alpha>-4.3027559194099e+086</alpha>
                 </stroke>
             </text>
         </display>
@@ -130,7 +130,6 @@
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </doroti>
     <lyger>
         <display>
@@ -140,7 +139,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>6.1371317645048e+069</alpha>
+                    <alpha>-1.5649685999487e+072</alpha>
                 </stroke>
             </text>
         </display>
@@ -153,7 +152,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-3.8629265826016e+216</alpha>
+                    <alpha>4.1650225429896e+228</alpha>
                 </stroke>
             </text>
         </display>
@@ -194,7 +193,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-7.5297816100864e+028</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                 </stroke>
             </text>
         </display>

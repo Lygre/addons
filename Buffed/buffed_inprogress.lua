@@ -5,7 +5,7 @@ _addon.version = '1.00'
 require('luau')
 packets = require('packets')
 
-abil_ids = {
+local abil_ids = {
     [33] = S{569,1782,1851,1952,3024,3093,3132,3220,3664,3978}, --Haste
     [34] = S{632,1789,3024,3522}, --BlazeSpikes
     [35] = S{878}, --Icespikes
@@ -100,7 +100,7 @@ abil_ids = {
     [556] = S{3515}, --Magic Evasion Boost
     [611] = S{3515}, --Magic Evasion Boost
 }
-spell_ids = {
+local spell_ids = {
     [33] = S{57,530}, --Haste
     [34] = S{249}, --Blaze Spikes
     [35] = S{250}, --Ice Spikes
@@ -143,9 +143,10 @@ spell_ids = {
     [545] = S{269,482}, --AGI Boost
 
 }
+local buff_ids = abil_ids:union(spell_ids)
 
 windower.register_event('incoming chunk', function(id, data)
-    if enabled and (id == 0x28) then
+    if id == 0x28 then
         local ai = get_action_info(id, data)
         local actor = windower.ffxi.get_mob_by_id(ai.actor_id)
         local target = windower.ffxi.get_mob_by_target()

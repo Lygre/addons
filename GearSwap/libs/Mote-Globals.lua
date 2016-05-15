@@ -81,7 +81,9 @@ function define_global_sets()
 	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
 	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
-	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+21','"Triple Atk."+3','STR+10',}}
+	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
+	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
+	gear.hercfeet_mab = {name="Herculean Boots", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','MND+2','Mag. Acc.+2','"Mag.Atk.Bns."+12',}}
 	gear.hercfeet_fc = {name="Herculean Boots", augments={'VIT+9','"Fast Cast"+5','Chance of successful block +8','Accuracy+20 Attack+20',}}
 	----RNG-------
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
@@ -209,7 +211,7 @@ function user_buff_change(buff, gain, eventArgs)
 end
 
 sprint_enabled = true
-sprint_speed = 59
+sprint_speed = 60
 prev_update = nil
 
 windower.raw_register_event('incoming chunk',function(id, original, modified, injected, blocked)
