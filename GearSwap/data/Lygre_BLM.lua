@@ -358,6 +358,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.skill == 'Elemental Magic' and state.ConsMP.value then
         equip(sets.ConsMP)
     end
+<<<<<<< HEAD
 	if not spell.interrupted then
         if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
             send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
@@ -382,6 +383,20 @@ function job_aftercast(spell, action, spellMap, eventArgs)
     --[[elseif spell.skill == 'Enhancing Magic' then
         adjust_timers(spell, spellMap)]]
 	end
+    if not spell.interrupted then
+        if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
+            send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Sleep" or spell.english == "Sleepga" then -- Sleep & Sleepga Countdown --
+            send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Break" then -- Break Countdown --
+            send_command('wait 25;input /echo Break Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Paralyze" then -- Paralyze Countdown --
+             send_command('wait 115;input /echo Paralyze Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Slow" then -- Slow Countdown --
+            send_command('wait 115;input /echo Slow Effect: [WEARING OFF IN 5 SEC.]')        
+        end
+    end
+
 end
 
 

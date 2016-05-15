@@ -56,10 +56,10 @@ function init_gear_sets()
     
     -- 80% Fast Cast (including trait) for all spells, plus 5% quick cast
     -- No other FC sets necessary.
-    sets.precast.FC = {
-        head=gear.merlhead_fc,
-        body="Vitivation Tabard",hands="Leyline gloves",ring1="Weatherspoon Ring",
-        back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas"}
+    sets.precast.FC = {ammo="Sapience Orb"
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+        body="Vitivation Tabard +1",hands="Leyline gloves",ring1="Weatherspoon Ring",ring2="Rahab Ring",
+        back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
     sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
        
@@ -76,32 +76,29 @@ function init_gear_sets()
     
     -- Midcast Sets
     
-    sets.midcast.FastRecast = {
-        head=gear.merlhead_fc,
-        body="Vitivation Tabard",hands="Leyline gloves",ring1="Weatherspoon Ring",
-        back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas"}
+    sets.midcast.FastRecast = sets.precast.FC
 
-    sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
+    sets.midcast.Cure = {main="Chatoyant Staff",sub="Achaq Grip",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Roundel Earring",ear2="Beatific Earring",
-        body="Kaykaus Bliaut",hands="Telchine Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+        body="Kaykaus Bliaut",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Sirona's Ring",
         back="Swith Cape +1",waist="Bishop's sash",legs=gear.chirlegs,feet="Medium's Sabots"}
         
     sets.midcast.Curaga = sets.midcast.Cure
     sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
-    sets.midcast['Enhancing Magic'] = {
-        head="Befouled crown",neck="Incanter's Torque",ear1="Andoaa earring",
-        body="Vitivation Tabard +1",hands="Atrophy Gloves +1",
+    sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio Grip",
+        head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
+        body="Telchine Braconi",hands="Atrophy Gloves +1",
         back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
 
-    sets.midcast.Refresh = {head="Amalric coif",legs="Estoqueur's Fuseau +2"}
+    sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'],{head="Amalric coif",legs="Estoqueur's Fuseau +2"})
 
-    sets.midcast.Stoneskin = {neck="Nodens gorget",waist="Siegel Sash"}
+    sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],{neck="Nodens gorget",waist="Siegel Sash"})
     
-    sets.midcast['Enfeebling Magic'] = {main="Marin staff",sub="Mephitis Grip",ammo="Pemphredo tathlum",
-        head=gear.chirhead,neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter Earring +1",
+    sets.midcast['Enfeebling Magic'] = {main="Grioavolr",sub="Mephitis Grip",ammo="Pemphredo tathlum",
+        head=gear.chirhead,neck="Incanter's Torque",ear1="Digni. Earring",ear2="Enchanter Earring +1",
         body="Chironic doublet",hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
-        back="Sucellos's cape",waist="Demonry Sash",legs=gear.chirlegs,feet="Bokwus Boots"}
+        back="Sucellos's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's Sabots"}
 
     sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau +1"})
 
@@ -109,10 +106,10 @@ function init_gear_sets()
 
     sets.midcast['Paralyze II'] = set_combine(sets.midcast['Enfeebling Magic'], {feet="Vitivation Boots +1"})
     
-    sets.midcast['Elemental Magic'] = {main="Marin staff",sub="Niobid strap",ammo="Pemphredo Tathlum",
+    sets.midcast['Elemental Magic'] = {main="Grioavolr",sub="Niobid strap",ammo="Pemphredo Tathlum",
         head=gear.merlhead_nuke,neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
         body=gear.merlbody_nuke,hands=gear.chirhands_nuke,ring1="Shiva ring +1",ring2="Shiva ring +1",
-        back="Toro Cape",waist=gear.ElementalObi,legs=gear.merllegs_nuke,feet=gear.nuke_feet }
+        back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.chirfeet }
     
 	sets.magic_burst = {
 		head=gear.merlhead_mb,neck="Mizukage-no-kubikazari",
@@ -125,7 +122,7 @@ function init_gear_sets()
     sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
         head="Pixie hairpin +1",neck="Incanter's Torque",ear1="Friomisi Earring",ear2="Gwati Earring",
         body="Shango robe",hands=gear.chirhands_macc,ring1="Weatherspoon Ring",ring2="Archon Ring",
-        back="Perimede Cape",waist="Eschan Stone",legs="Psycloth lappas",feet=gear.nuke_feet }
+        back="Perimede Cape",waist="Eschan Stone",legs="Psycloth lappas",feet=gear.chirfeet }
 
     --sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {})
 
@@ -142,7 +139,8 @@ function init_gear_sets()
 		body="Telchine chasuble",hands="Atrophy Gloves +1",
 		back="Estoqueur's Cape",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
         
-    sets.buff.ComposureOther = {head="Estoqueur's Chappel +2",
+    sets.buff.ComposureOther = {main="Grioavolr",
+        head="Estoqueur's Chappel +2",
         body="Estoqueur's Sayon +2",hands="Atrophy gloves +1",
         back="Estoqueur's Cape",legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
 
@@ -157,8 +155,8 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
         head="Vitivation Chapeau +1",neck="Sanctity necklace",ear1="Impregnable Earring",ear2="Genmei Earring",
-        body="Amalric doublet",hands="Serpentes Gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity Cape",waist="Flume Belt +1",legs="Psycloth lappas",feet="Serpentes Sabots"}
+        body="Amalric doublet",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Flume Belt +1",legs="Psycloth lappas",feet=gear.merlfeet_refresh }
 
     sets.idle.Town = set_combine(sets.idle,{legs="Carmine cuisses"})
     
@@ -215,116 +213,19 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 end
 
 function job_aftercast(spell, spellMap, eventArgs)
-    if spell.skill == 'Enhancing Magic' then
-            adjust_timers(spell, spellMap)
-	end
-end
-
-function adjust_timers(spell, spellMap)
-    local current_time = os.time()
-    
-    -- custom_timers contains a table of song names, with the os time when they
-    -- will expire.
-    
-    -- Eliminate songs that have already expired from our local list.
-    local temp_timer_list = {}
-    local dur = calculate_duration(spell, spellName, spellMap)
-         custom_timers[spell.name] = nil
-         send_command('timers delete "'..spell.name..' ['..spell.target.name..']"')
-         custom_timers[spell.name] = current_time + dur
-         send_command('@wait 1;timers create "'..spell.name..' ['..spell.target.name..']" '..dur..' down')
-end
-
-function calculate_duration(spell, spellName, spellMap)
-
-    local mult = 1.00
-
-	if player.equipment.Head == 'Telchine Cap' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Telchine Chas.' then mult = mult + 0.09 end
-	if player.equipment.Hands == 'Telchine Gloves' then mult = mult + 0.09 end
-	if player.equipment.Legs == 'Telchine Braconi' then mult = mult + 0.09 end
-	if player.equipment.Feet == 'Telchine Pigaches' then mult = mult + 0.08 end
-	
-	if player.equipment.Feet == 'Estq. Houseaux +2' then mult = mult + 0.20 end
-	if player.equipment.Legs == 'Futhark Trousers' then mult = mult + 0.10 end
-	if player.equipment.Legs == 'Futhark Trousers +1' then mult = mult + 0.20 end
-	if player.equipment.Hands == 'Atrophy Gloves' then mult = mult + 0.15 end
-	if player.equipment.Hands == 'Atrophy Gloves +1' then mult = mult + 0.16 end
-	if player.equipment.Back == 'Estoqueur\'s Cape' then mult = mult + 0.10 end
-	if player.equipment.Hands == 'Dynasty Mitts' then mult = mult + 0.05 end
-	if player.equipment.Body == 'Shabti Cuirass' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Shabti Cuirass +1' then mult = mult + 0.10 end
-	if player.equipment.Feet == 'Leth. Houseaux' then mult = mult + 0.25 end
-	if player.equipment.Feet == 'Leth. Houseaux +1' then mult = mult + 0.30 end
-
-
-	local base = 0
-
-	if spell.name == 'Haste' then base = base + 180 end
-	if spell.name == 'Stoneskin' then base = base + 300 end
-	if string.find(spell.name,'Bar') then base = base + 480 end
-	if spell.name == 'Blink' then base = base + 300 end
-	if spell.name == 'Aquaveil' then base = base + 600 end
-	if string.find(spell.name,'storm') then base = base + 180 end
-	if spell.name == 'Auspice' then base = base + 180 end
-	if string.find(spell.name,'Boost') then base = base + 300 end
-	if spell.name == 'Phalanx' then base = base + 180 end
-	if string.find(spell.name,'Protect') then base = base + 1800 end
-	if string.find(spell.name,'Shell') then base = base + 1800 end
-	if string.find(spell.name,'Refresh') then base = base + 150 end
-	if string.find(spell.name,'Regen') then base = base + 60 end
-	if spell.name == 'Adloquium' then base = base + 180 end
-	if string.find(spell.name,'Animus') then base = base + 180 end
-	if spell.name == 'Crusade' then base = base + 300 end
-	if spell.name == 'Embrava' then base = base + 90 end
-	if string.find(spell.name,'En') then base = base + 180 end
-	if string.find(spell.name,'Flurry') then base = base + 180 end
-	if spell.name == 'Foil' then base = base + 30 end
-	if string.find(spell.name,'Gain') then base = base + 180 end
-	if spell.name == 'Reprisal' then base = base + 60 end
-	if string.find(spell.name,'Temper') then base = base + 180 end
-	if string.find(spell.name,'Spikes') then base = base + 180 end
-
-	if buffactive['Perpetuance'] then
-		if player.equipment.Hands == 'Arbatel Bracers' then
-			mult = mult*2.5
-		elseif player.equipment.Hands == 'Arbatel Bracers +1' then
-			mult = mult*2.55
-		else
-			mult = mult*2
-		end
-	end
-
-	if buffactive['Composure'] then
-		if spell.target.type == 'SELF' then
-			mult = mult*3
-		else
-			mult = mult + 0.35
-		end
-	end
-			
-			
-
-    local totalDuration = math.floor(mult*base)
-
-	--print(totalDuration)
-
-
-    return totalDuration
-
-end
--- Function to reset timers.
-
-function reset_timers()
-
-    for i,v in pairs(custom_timers) do
-
-        send_command('timers delete "'..i..'"')
-
+    if not spell.interrupted then
+        if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
+            send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Sleep" or spell.english == "Sleepga" then -- Sleep & Sleepga Countdown --
+            send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Break" then -- Break Countdown --
+            send_command('wait 25;input /echo Break Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Paralyze" then -- Paralyze Countdown --
+             send_command('wait 115;input /echo Paralyze Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Slow" then -- Slow Countdown --
+            send_command('wait 115;input /echo Slow Effect: [WEARING OFF IN 5 SEC.]')        
+        end
     end
-
-    custom_timers = {}
-
 end
 
 -------------------------------------------------------------------------------------------------------------------
