@@ -334,52 +334,42 @@ function job_precast(spell, action, spellMap, eventArgs)
 end
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 function job_midcast(spell, action, spellMap, eventArgs)
-	equipSet = {}
-    if spell.type:endswith('Magic') or spell.type == 'Ninjutsu' or spell.type == 'BardSong' then
-        equipSet = sets.midcast
-        if state.DeatCast.value then
-            eventArgs.handled = true
-            equipSet = equipSet['Death']
-        end
-	end
-    --[[if equipSet[spell.english] then
-        equipSet = equipSet[spell.english]
-    end]]
-    equip(equipSet)
+    if state.DeatCast.value then
+        equip(sets.midcast['Death'])
+        eventArgs.handled = true
+    end
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-    if spell.skill == 'Elemental Magic' and state.MagicBurst.value then
-        equip(sets.magic_burst)
+    if spell.type == 'BlackMagic' and state.MagicBurst.value then
+        if spell.english == 'Death' and state.Death.value then
+            equip(set_combine(sets.midcast['Death'],sets.MB_death))
+        else
+            equip(sets.magic_burst)
+        end
     end
-	   if spell.skill == 'Elemental Magic' then
-			if spell.element == world.day_element or spell.element == world.weather_element then
-				equip(equipSet, sets.Obi)
-				if string.find(spell.english,'helix') then
-					equip(sets.midcast.Helix)
-				end
-			end
-	   end
-	if spell.skill == 'Elemental Magic' and state.ConsMP.value then
-		equip(sets.ConsMP)
-	end
-    --Death specific MB rule
-    if spell.english == 'Death' and state.DeatCast.value and state.MagicBurst.value then
-        equip(set_combine(sets.midcast['Death'],sets.MB_death))
+    if spell.element == world.day_element or spell.element == world.weather_element then
+        if string.find(spell.english,'helix') then
+            equip(sets.midcast.Helix)
+        else 
+            equip(sets.Obi)
+        end
     end
-
+    if spell.skill == 'Elemental Magic' and state.ConsMP.value then
+        equip(sets.ConsMP)
+    end
 	if not spell.interrupted then
-                if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
-                        send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
-                elseif spell.english == "Sleep" or spell.english == "Sleepga" then -- Sleep & Sleepga Countdown --
-                        send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
-                elseif spell.english == "Break" then -- Break Countdown --
-                        send_command('wait 25;input /echo Break Effect: [WEARING OFF IN 5 SEC.]')
-                elseif spell.english == "Paralyze" then -- Paralyze Countdown --
-                         send_command('wait 115;input /echo Paralyze Effect: [WEARING OFF IN 5 SEC.]')
-                elseif spell.english == "Slow" then -- Slow Countdown --
-                        send_command('wait 115;input /echo Slow Effect: [WEARING OFF IN 5 SEC.]')        
-                end
+        if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
+            send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Sleep" or spell.english == "Sleepga" then -- Sleep & Sleepga Countdown --
+            send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Break" then -- Break Countdown --
+            send_command('wait 25;input /echo Break Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Paralyze" then -- Paralyze Countdown --
+             send_command('wait 115;input /echo Paralyze Effect: [WEARING OFF IN 5 SEC.]')
+        elseif spell.english == "Slow" then -- Slow Countdown --
+            send_command('wait 115;input /echo Slow Effect: [WEARING OFF IN 5 SEC.]')        
+        end
     end
 end
 
@@ -460,110 +450,6 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
         end]]
     end
 end
---[[function adjust_timers(spell, spellMap)
-    local current_time = os.time()
-    
-    local temp_timer_list = {}
-    local dur = calculate_duration(spell, spellName, spellMap)
-         custom_timers[spell.name] = nil
-         send_command('timers delete "'..spell.name..' ['..spell.target.name..']"')
-         custom_timers[spell.name] = current_time + dur
-         send_command('@wait 1;timers create "'..spell.name..' ['..spell.target.name..']" '..dur..' down')
-end
-
-
-
-function calculate_duration(spell, spellName, spellMap)
-
-    local mult = 1.00
-
-	if player.equipment.Head == 'Telchine Cap' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Telchine Chas.' then mult = mult + 0.09 end
-	if player.equipment.Hands == 'Telchine Gloves' then mult = mult + 0.09 end
-	if player.equipment.Legs == 'Telchine Braconi' then mult = mult + 0.09 end
-	if player.equipment.Feet == 'Telchine Pigaches' then mult = mult + 0.08 end
-	
-	if player.equipment.Feet == 'Estq. Houseaux +2' then mult = mult + 0.20 end
-	if player.equipment.Legs == 'Futhark Trousers' then mult = mult + 0.10 end
-	if player.equipment.Legs == 'Futhark Trousers +1' then mult = mult + 0.20 end
-	if player.equipment.Hands == 'Atrophy Gloves' then mult = mult + 0.15 end
-	if player.equipment.Hands == 'Atrophy Gloves +1' then mult = mult + 0.16 end
-	if player.equipment.Back == 'Estoqueur\'s Cape' then mult = mult + 0.10 end
-	if player.equipment.Hands == 'Dynasty Mitts' then mult = mult + 0.05 end
-	if player.equipment.Body == 'Shabti Cuirass' then mult = mult + 0.09 end
-	if player.equipment.Body == 'Shabti Cuirass +1' then mult = mult + 0.10 end
-	if player.equipment.Feet == 'Leth. Houseaux' then mult = mult + 0.25 end
-	if player.equipment.Feet == 'Leth. Houseaux +1' then mult = mult + 0.30 end
-
-
-	local base = 0
-
-	if spell.name == 'Haste' then base = base + 180 end
-	if spell.name == 'Stoneskin' then base = base + 300 end
-	if string.find(spell.name,'Bar') then base = base + 480 end
-	if spell.name == 'Blink' then base = base + 300 end
-	if spell.name == 'Aquaveil' then base = base + 600 end
-	if string.find(spell.name,'storm') then base = base + 180 end
-	if spell.name == 'Auspice' then base = base + 180 end
-	if string.find(spell.name,'Boost') then base = base + 300 end
-	if spell.name == 'Phalanx' then base = base + 180 end
-	if string.find(spell.name,'Protect') then base = base + 1800 end
-	if string.find(spell.name,'Shell') then base = base + 1800 end
-	if string.find(spell.name,'Refresh') then base = base + 150 end
-	if string.find(spell.name,'Regen') then base = base + 60 end
-	if spell.name == 'Adloquium' then base = base + 180 end
-	if string.find(spell.name,'Animus') then base = base + 180 end
-	if spell.name == 'Crusade' then base = base + 300 end
-	if spell.name == 'Embrava' then base = base + 90 end
-	if string.find(spell.name,'En') then base = base + 180 end
-	if string.find(spell.name,'Flurry') then base = base + 180 end
-	if spell.name == 'Foil' then base = base + 30 end
-	if string.find(spell.name,'Gain') then base = base + 180 end
-	if spell.name == 'Reprisal' then base = base + 60 end
-	if string.find(spell.name,'Temper') then base = base + 180 end
-	if string.find(spell.name,'Spikes') then base = base + 180 end
-
-	if buffactive['Perpetuance'] then
-		if player.equipment.Hands == 'Arbatel Bracers' then
-			mult = mult*2.5
-		elseif player.equipment.Hands == 'Arbatel Bracers +1' then
-			mult = mult*2.55
-		else
-			mult = mult*2
-		end
-	end
-
-	if buffactive['Composure'] then
-		if spell.target.type == 'SELF' then
-			mult = mult*3
-		else
-			mult = mult
-		end
-	end
-			
-			
-
-    local totalDuration = math.floor(mult*base)
-
-	--print(totalDuration)
-
-
-    return totalDuration
-
-end
--- Function to reset timers.
-
-function reset_timers()
-
-    for i,v in pairs(custom_timers) do
-
-        send_command('timers delete "'..i..'"')
-
-    end
-
-    custom_timers = {}
-
-end]]
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.

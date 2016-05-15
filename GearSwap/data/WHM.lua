@@ -22,13 +22,13 @@ function job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'Shield')
 	state.Skillup = M(false, 'Boost Spell')
 	
-		AutoAga = 1
-		Curaga_benchmark = 30
-		Enmity = 1
-		Safe_benchmark = 70
-		Sublimation_benchmark = 30
-		Sublimation = 1
-	get_current_strategem_count()
+    state.AutoAga = M(false, 'Auto Curaga')
+	Curaga_benchmark = 30
+	Enmity = 1
+	Safe_benchmark = 70
+	Sublimation_benchmark = 30
+	Sublimation = 1
+	--get_current_strategem_count()
     select_default_macro_book()
 
 end
@@ -45,7 +45,7 @@ function user_setup()
     send_command('bind @F1 input /reraise4')
     send_command('bind ^F2 input /celerity')
     send_command('bind !F2 input /divinecaress')
-
+    send_command('bind ^F3 gs c toggle AutoAga')
 
 end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
@@ -109,7 +109,7 @@ function init_gear_sets()
     sets.midcast.FastRecast = {main="Grioavolr",sub="Vivid strap",ammo="Sapience Orb",
         head="Nahtirah Hat",neck="Orison locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Shango robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Swith Cape +1",waist="Witful belt",legs="Lengo Pants",feet="Regal pumps"}
+        back="Alaunus's cape",waist="Witful belt",legs="Lengo Pants",feet="Regal pumps"}
     
     ------------ Cure sets-------------------
 
@@ -197,7 +197,7 @@ function init_gear_sets()
     sets.midcast['Divine Magic'] = {main="Ababinili +1",sub="Niobid Strap",ammo="Pemphredo Tathlum",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
         body="Vanya Robe",hands="Fanatic gloves",ring1="Globidonta ring",ring2="Weatherspoon Ring",
-        back="Aurist's cape +1",waist="Luminary Sash",legs="Telchine Braconi",feet="Medium's sabots"}
+        back="Alaunus's cape",waist="Luminary Sash",legs="Telchine Braconi",feet="Medium's sabots"}
 
     sets.midcast['Dark Magic'] = {main="Rubicundity", sub="Genbu's Shield",ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
@@ -208,7 +208,7 @@ function init_gear_sets()
     sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Mephitis Grip",ammo="Pemphredo Tathlum",
         head=gear.chirhead,neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon Ring",
-        back="Aurist's cape +1",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
+        back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
 
     sets.midcast.IntEnfeebles = {main="Ababinili +1", sub="Mephitis grip",ammo="Pemphredo Tathlum",
         head=gear.chirhead,neck="incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
@@ -218,7 +218,7 @@ function init_gear_sets()
     sets.midcast.Impact = {main="Grioavolr",sub="Niobid strap",ammo="Pemphredo Tathlum",
         head=empty,neck="Incanter's torque",ear1="Enchanter Earring +1",ear2="Gwati Earring",
         body="Twilight Cloak",hands=gear.chirhands_macc,ring1="Archon Ring",ring2="Sangoma Ring",
-        back="Toro Cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
+        back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
     	
 
     -- Sets to return to when not performing an action.
@@ -325,39 +325,50 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function party_index_lookup(name)
-    for i=1,party.count do
-        if party[i].name == name then
-            return i
+    for n=1,party.count do
+        if party[n].name == name then
+            return n
         end
     end
     return nil
 end
 
-function pretarget(spell, action)
+function pretarget(spell, action, spellMap, eventArgs)
 	if spell.action_type == 'Magic' and buffactive.silence then -- Auto Use Echo Drops If You Are Silenced --
-		cancel_spell()
+		eventArgs.cancel = true
 		send_command('input /item "Echo Drops" <me>')
 	end
-    if T{"Cure","Cure II","Cure III","Cure IV"}:contains(spell.name) and spell.target.type == 'PLAYER' and not spell.target.charmed and AutoAga == 1 then
+    if T{"Cure","Cure II","Cure III","Cure IV"}:contains(spell.name) and spell.target.type == 'PLAYER' and not spell.target.charmed and state.AutoAga.value then
         if not party_index_lookup(spell.target.name) then
             return
         end
-        local target_count = 0
-        local total_hpp_deficit = 0
-        for i=1,party.count do          
-		if party[i].hpp<75 and party[i].status_id ~= 2 and party[i].status_id ~= 3 then
-			target_count = target_count + 1
-			total_hpp_deficit = total_hpp_deficit + (100 - party[i].hpp)
-		end
-	end
-	if target_count > 1 then
-		cancel_spell()
-		if total_hpp_deficit / target_count > Curaga_benchmark then           
-			send_command(';input /ma "Curaga IV" '..spell.target.name..';')
-		else
-			send_command(';input /ma "Curaga III" '..spell.target.name..';')
-		end
-	end
+        local inrange = 1
+        local hpp_deficit = 0
+        local memindex = party_index_lookup(spell.target.name)
+        for i=party.count,1,-1 do
+            --[[local current_int = i - 1
+            local current_mem = i - current_int 
+            while current_int > 0 do]]
+            if i ~= memindex then
+                local memdist = (party[i].x - party[memindex].x)^2 + (party[i].y - party[memindex].y)^2 + (party[i].z - party[memindex].z)^2
+                if math.sqrt(memdist) < 15 then
+                    if party[i].hpp<75 and party[i].status_id ~= 2 and party[i].status_id ~= 3 then
+                        inrange = inrange + 1
+                        hpp_deficit = hpp_deficit + (100 - party[i].hpp)
+                    end
+                end
+            else 
+                hpp_deficit = hpp_deficit + (100 - party[i].hpp)
+            end
+        end
+        if inrange > 1 then
+            eventArgs.cancel = true
+            if hpp_deficit / inrange > AgaBenchmark then
+                send_command('input /ma "Curaga IV" '..spell.target.name)
+            else 
+                send_command('input /ma "Curaga III" '..spell.target.name)
+            end
+        end         
     end 
 end 
 
@@ -400,11 +411,13 @@ end
 
 function job_post_precast(spell,action,spellMap,eventArgs)
 	local abil_recasts = windower.ffxi.get_ability_recasts()
-	local currentCharges = get_current_strategem_count()
-	if Lyna:contains(spell.english) and (not buffactive[366]) and (currentCharges > 0) then
-        if (not buffactive[453]) and abil_recasts[453] == 0 then
-            eventArgs.cancel = true
-            send_command('@input /ja "accession" <me>;wait 1.5;input /ma "'..spell.name..'" '..spell.target.name)
+    if player.sub_job == 'SCH' then
+    	local currentCharges = get_current_strategem_count()
+    	if Lyna:contains(spell.english) and (not buffactive[366]) and (currentCharges > 0) then
+            if (not buffactive[453]) and abil_recasts[453] == 0 then
+                eventArgs.cancel = true
+                send_command('@input /ja "accession" <me>;wait 1.5;input /ma "'..spell.name..'" '..spell.target.name)
+            end
         end
     end
 end        
@@ -616,16 +629,18 @@ end
 	send_command('@dressup bmn all target T')]]
 	
 function get_current_strategem_count()
-    -- returns recast in seconds.
-    local allRecasts = windower.ffxi.get_ability_recasts()
-    local stratsRecast = allRecasts[231]
+    if player.sub_job == 'SCH' then
+        -- returns recast in seconds.
+        local allRecasts = windower.ffxi.get_ability_recasts()
+        local stratsRecast = allRecasts[231]
 
-    --[[local maxStrategems = (player.main_job_level + 10) / 20]]
-	local maxStrategems = 2
-	
-    local fullRechargeTime = maxStrategems * 120
+        --[[local maxStrategems = (player.main_job_level + 10) / 20]]
+    	local maxStrategems = 2
+    	
+        local fullRechargeTime = maxStrategems * 120
 
-    local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)
+        local currentCharges = math.floor(maxStrategems - maxStrategems * stratsRecast / fullRechargeTime)
 
-    return currentCharges
+        return currentCharges
+    end
 end
