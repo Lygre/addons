@@ -47,6 +47,7 @@ function job_setup()
     send_command('bind @F4 sch grav')
     send_command('bind ^F5 sch dist')
     send_command('bind !F5 gs c scholar aoe')
+    send_command('bind @F5 gs c scholar power')
     send_command('bind ^F6 input /sublimation')
     send_command('bind !F6 input /enlightenment')
 
@@ -80,7 +81,7 @@ function init_gear_sets()
     sets.precast.FC = {main="Grioavolr",sub="Arbuda grip",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Anhur Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-        back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
+        back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 	
 	--main="Apamajas II",sub="Arbuda grip", 
     sets.precast.FC.Stun = {ammo="Sapience orb",

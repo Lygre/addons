@@ -201,8 +201,10 @@ function job_setup()
     send_command('bind @F2 input /berserk')
     send_command('bind ^F3 input /aggressor')
     send_command('bind !F3 input /natmeditation')
-
-
+    send_command('bind @F3 input /burstaffinity')
+    send_command('bind ^F4 input /dreamflower')
+    send_command('bind !F4 input /Subduction')
+    send_command('bind @F4 input /spectralfloe')
 
 
 
@@ -620,7 +622,7 @@ function init_gear_sets()
 		body="Adhemar jacket", hands=gear.herchands_acc , ring1="Defending ring", ring2="Epona's Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 		
-    sets.engaged.RefreshWeapons = {main="Colada",sub="Colada"}
+    sets.engaged.Meleeing = {main=gear.Colada_highd,sub=gear.Colada_datk}
 
     sets.engaged.Nuke = {main="Nibiru cudgel",sub="Nibiru cudgel"}
 

@@ -26,7 +26,31 @@ function job_setup()
 	state.MagicBurst = M(false, 'Magic Burst')
     state.Buff.Saboteur = buffactive.saboteur or false
 	
-	custom_timers = {}
+    send_command('bind ^` gs c toggle MagicBurst')
+    send_command('bind !` input /convert')
+    send_command('bind @` input /Chainspell')
+    send_command('bind ^F1 input /composure')
+    send_command('bind !F1 input /Paralyze2')
+    send_command('bind @F1 input /slow2')
+    send_command('bind ^F2 input /dia3')
+    send_command('bind !F2 input /silence')
+    send_command('bind @F2 hb on')
+    send_command('bind ^F3 hb off')
+    send_command('bind @F3 input /Distract3')
+    send_command('bind ^F4 input /Frazzle3')
+    send_command('bind !F4 input /Haste2')
+    send_command('bind @F4 input /Refresh2')
+    send_command('bind ^F5 input /addle2')
+    send_command('bind !F5 input /bind')
+    send_command('bind @F5 input /gravity')
+    send_command('bind ^F6 input /sleep2')
+    send_command('bind !F6 input /Break')
+    send_command('bind @F6 input /dispel')
+    send_command('bind ^F7 input /saboteur')
+    send_command('bind !F7 input /spontaneity')
+    send_command('bind @F7 input /stymie')
+
+
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -56,7 +80,7 @@ function init_gear_sets()
     
     -- 80% Fast Cast (including trait) for all spells, plus 5% quick cast
     -- No other FC sets necessary.
-    sets.precast.FC = {ammo="Sapience Orb"
+    sets.precast.FC = {ammo="Sapience Orb",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Vitivation Tabard +1",hands="Leyline gloves",ring1="Weatherspoon Ring",ring2="Rahab Ring",
         back="Perimede Cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
@@ -88,12 +112,19 @@ function init_gear_sets()
 
     sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio Grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
-        body="Telchine Braconi",hands="Atrophy Gloves +1",
-        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
+        body="Telchine Chasuble",hands="Atrophy Gloves +1",
+        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}
 
-    sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'],{head="Amalric coif",legs="Estoqueur's Fuseau +2"})
+    sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'],{head="Amalric coif",waist="Gishdubar Sash",legs="Lethargy Fuseau +1"})
 
-    sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],{neck="Nodens gorget",waist="Siegel Sash"})
+    sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'],
+        {legs=gear.merllegs_phalanx})
+
+    sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
+        {head=gear.chirhead,
+        waist="Emphatikos Rope",legs="Shedir seraweels"})   
+
+    sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash",neck="Nodens Gorget",legs="Shedir seraweels"})
     
     sets.midcast['Enfeebling Magic'] = {main="Grioavolr",sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's Torque",ear1="Digni. Earring",ear2="Enchanter Earring +1",
@@ -134,17 +165,18 @@ function init_gear_sets()
 
     -- Sets for special buff conditions on spells.
 
-    sets.midcast.EnhancingDuration = {
-		head="Telchine cap",
-		body="Telchine chasuble",hands="Atrophy Gloves +1",
-		back="Estoqueur's Cape",legs="Telchine braconi",feet="Estoqueur's Houseaux +2"}
+    --[[sets.midcast.EnhancingDuration = {
+		main="Grioavolr",sub="Fulcio Grip",
+        head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
+        body="Telchine Braconi",hands="Atrophy Gloves +1",
+        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}]]
         
     sets.buff.ComposureOther = {main="Grioavolr",
-        head="Estoqueur's Chappel +2",
-        body="Estoqueur's Sayon +2",hands="Atrophy gloves +1",
-        back="Estoqueur's Cape",legs="Estoqueur's Fuseau +2",feet="Estoqueur's Houseaux +2"}
+        head="Lethargy Chappel +1",
+        body="Lethargy Sayon +1",hands="Atrophy gloves +1",
+        back="Sucellos's Cape",legs="Lethargy Fuseau +1",feet="Lethargy Houseaux +1"}
 
-    sets.buff.Saboteur = {hands="Estoqueur's Gantherots +2"}
+    sets.buff.Saboteur = {hands="Lethargy Gantherots"}
     
 
     -- Sets to return to when not performing an action.
@@ -185,7 +217,10 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
     
     -- Normal melee group
-    sets.engaged = {}
+    sets.engaged = {ammo="Ginsen",
+        head="Carmine Mask",neck="Lissome Necklace",ear1="Telos Earring",ear2="Eabani earring",
+        hands="Gazu bracelet +1",ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Carmine cuisses"}
 	
     sets.engaged.Defense = {}
 
@@ -197,13 +232,86 @@ end
 
 -- Run after the default midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.
+function job_precast(spell, action, spellMap, eventArgs)
+    if spell.skill == 'Elemental Magic' then
+        refine_various_spells(spell, action, spellMap, eventArgs)
+    end
+end
+
+function refine_various_spells(spell, action, spellMap, eventArgs)
+    aspirs = S{'Aspir','Aspir II','Aspir III'}
+    sleeps = S{'Sleep','Sleep II'}
+    sleepgas = S{'Sleepga','Sleepga II'}
+
+    local degrade_array = {
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
+        --['Firaga'] = {'Firaga','Firaga II','Firaga III','Firaja'},
+        ['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
+        --['Blizzaga'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
+        ['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
+        --['Aeroga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
+        ['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+        --['Stonega'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
+        ['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
+        --['Thundaga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
+        ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'}
+        --['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'}
+}
+    --[[if not spell.skill == 'Elemental Magic' and not sleepgas:contains(spell.english) and not sleeps:contains(spell.english) and not aspirs:contains(spell.english) then
+        return
+    end]]
+
+    local newSpell = spell.english
+    local spell_recasts = windower.ffxi.get_spell_recasts()
+    local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
+
+    local spell_index = table.find(degrade_array[spell.element],spell.name)
+
+    if spell_recasts[spell.recast_id] > 0 then
+        if spell_index > 1 then
+            newSpell = degrade_array[spell.element][spell_index - 1]
+            add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+            send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+            eventArgs.cancel = true
+        end
+        --[[if aspirs:contains(spell.english) then
+            if spell.english == 'Aspir' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Aspir II' then
+                newSpell = 'Aspir'
+            elseif spell.english == 'Aspir III' then
+                newSpell = 'Aspir II'
+            end         
+        elseif sleeps:contains(spell.english) then
+            if spell.english == 'Sleep' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Sleep II' then
+                newSpell = 'Sleep'
+            end
+        elseif sleepgas:contains(spell.english) then
+            if spell.english == 'Sleepga' then
+                add_to_chat(122,cancelling)
+                eventArgs.cancel = true
+                return
+            elseif spell.english == 'Sleepga II' then
+                newSpell = 'Sleepga'
+            end
+        end]]
+    end
+end
+
 function job_post_midcast(spell, action, spellMap, eventArgs)
     if spell.skill == 'Enfeebling Magic' and state.Buff.Saboteur then
         equip(sets.buff.Saboteur)
     elseif spell.skill == 'Enhancing Magic' then
-        equip(sets.midcast.EnhancingDuration)
-        if buffactive.composure and spell.target.type == 'PLAYER' then
-            equip(sets.buff.ComposureOther)
+        if buffactive['Composure'] then
+            if spell.target.type ~= 'SELF' then
+                equip(sets.buff.ComposureOther)
+            end
         end
     elseif spellMap == 'Cure' and spell.target.type == 'SELF' then
         equip(sets.midcast.CureSelf)
@@ -243,6 +351,17 @@ function job_state_change(stateField, newValue, oldValue)
     end
 end
 
+function job_buff_change(buff, gain)
+    if buff == "Commitment" and not gain then
+        equip({ring2="Capacity Ring"})
+        if player.equipment.right_ring == "Capacity Ring" then
+            disable("ring2")
+            send_command('@wait 9; input /item "Capacity Ring" <me>;')
+        else
+            enable("ring2")
+        end
+    end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
@@ -276,6 +395,6 @@ function select_default_macro_book()
     elseif player.sub_job == 'THF' then
         set_macro_page(4, 4)
     else
-        set_macro_page(1, 4)
+        set_macro_page(2, 5)
     end
 end

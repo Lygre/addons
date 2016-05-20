@@ -25,11 +25,15 @@
         <mage2>
             <1>Haste II</1>
             <2>Refresh II</2>
-            <3>Phalanx II</3>
+            <3>Thunderstorm</3>
         </mage2>
         <mage3>
             <1>Refresh II</1>
         </mage3>
+        <mage4>
+            <1>Refresh II</1>
+            <2>Haste II</2>
+        </mage4>
         <melee>
             <1>Haste II</1>
             <2>Phalanx II</2>

@@ -6,28 +6,6 @@
         <setmode>PreserveTraits</setmode>
         <setspeed>0.65</setspeed>
         <spellsets>
-            <IntenseAmbVDMay>
-                <slot01>barbed crescent</slot01>
-                <slot02>delta thrust</slot02>
-                <slot03>sinker drill</slot03>
-                <slot04>water bomb</slot04>
-                <slot05>erratic flutter</slot05>
-                <slot06>empty thrash</slot06>
-                <slot07>blazing bound</slot07>
-                <slot08>sudden lunge</slot08>
-                <slot09>nat. meditation</slot09>
-                <slot10>quad. continuum</slot10>
-                <slot11>fantod</slot11>
-                <slot12>heavy strike</slot12>
-                <slot13>thrashing assault</slot13>
-                <slot14>blank gaze</slot14>
-                <slot15>molting plumage</slot15>
-                <slot16>tenebral crush</slot16>
-                <slot17>chaotic eye</slot17>
-                <slot18>white wind</slot18>
-                <slot19>occultation</slot19>
-                <slot20>paralyzing triad</slot20>
-            </IntenseAmbVDMay>
             <avatars>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
@@ -118,6 +96,50 @@
                 <slot19>battery charge</slot19>
                 <slot20>barrier tusk</slot20>
             </hightiermeleesolo>
+            <intenseambvdmay>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>sinker drill</slot03>
+                <slot04>water bomb</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>empty thrash</slot06>
+                <slot07>blazing bound</slot07>
+                <slot08>sudden lunge</slot08>
+                <slot09>nat. meditation</slot09>
+                <slot10>quad. continuum</slot10>
+                <slot11>fantod</slot11>
+                <slot12>heavy strike</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>blank gaze</slot14>
+                <slot15>molting plumage</slot15>
+                <slot16>tenebral crush</slot16>
+                <slot17>chaotic eye</slot17>
+                <slot18>white wind</slot18>
+                <slot19>occultation</slot19>
+                <slot20>paralyzing triad</slot20>
+            </intenseambvdmay>
+            <skirmishsolo>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>sinker drill</slot03>
+                <slot04>empty thrash</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>blazing bound</slot06>
+                <slot07>sudden lunge</slot07>
+                <slot08>nat. meditation</slot08>
+                <slot09>quad. continuum</slot09>
+                <slot10>subduction</slot10>
+                <slot11>fantod</slot11>
+                <slot12>heavy strike</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>molting plumage</slot14>
+                <slot15>battery charge</slot15>
+                <slot16>white wind</slot16>
+                <slot17>winds of promy.</slot17>
+                <slot18>paralyzing triad</slot18>
+                <slot19>cocoon</slot19>
+                <slot20>glutinous dart</slot20>
+            </skirmishsolo>
             <solocleave>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
@@ -209,6 +231,28 @@
                 <slot15>white wind</slot15>
                 <slot16>cocoon</slot16>
             </warsub>
+            <warsubsolo>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>sinker drill</slot03>
+                <slot04>empty thrash</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>blazing bound</slot06>
+                <slot07>sudden lunge</slot07>
+                <slot08>nat. meditation</slot08>
+                <slot09>quad. continuum</slot09>
+                <slot10>fantod</slot10>
+                <slot11>blank gaze</slot11>
+                <slot12>heavy strike</slot12>
+                <slot13>thrashing assault</slot13>
+                <slot14>molting plumage</slot14>
+                <slot15>diffusion ray</slot15>
+                <slot16>white wind</slot16>
+                <slot17>cocoon</slot17>
+                <slot18>paralyzing triad</slot18>
+                <slot19>barrier tusk</slot19>
+                <slot20>magic hammer</slot20>
+            </warsubsolo>
         </spellsets>
     </global>
 </settings>

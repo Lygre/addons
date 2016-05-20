@@ -9,7 +9,7 @@
             <all>
                 <always>false</always>
                 <combat>true</combat>
-                <target>false</target>
+                <target>true</target>
             </all>
             <follow>
                 <always>true</always>

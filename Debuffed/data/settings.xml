@@ -3,8 +3,8 @@
     <global>
         <bg>
             <alpha>128</alpha>
-            <blue>255</blue>
-            <green>4</green>
+            <blue>0</blue>
+            <green>0</green>
             <red>0</red>
             <visible>true</visible>
         </bg>
@@ -22,12 +22,12 @@
         </pos>
         <text>
             <alpha>255</alpha>
-            <blue>234</blue>
+            <blue>255</blue>
             <font>Courier New</font>
             <fonts>
 
             </fonts>
-            <green>0</green>
+            <green>255</green>
             <red>255</red>
             <size>10</size>
             <stroke>
