@@ -38,7 +38,8 @@ function job_setup()
 
     
     -- Additional local binds
-    send_command('bind ^] input /automove')
+    send_command('bind ^` gs c toggle MagicBurst')
+    send_command('bind !` gs c toggle ConsMP')
     send_command('bind @` gs c toggle DeatCast')
 
 	custom_timers = {}
@@ -173,15 +174,15 @@ function init_gear_sets()
         waist="Fucho-no-obi",legs=gear.merllegs_da})
     sets.midcast.Aspir = sets.midcast.Drain
 		
-    sets.midcast.Stun = {main="Lathi",sub="Arbuda Grip",ammo="Pemphredo tathlum",
-        head="Amalric coif",neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
-        body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Prolix Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Amalric nails"}
+    sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
+        body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
+        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
 
     -- Elemental Magic sets
     
-    sets.midcast['Elemental Magic'] = {main="Lathi",sub="Niobid strap",ammo="Dosis tathlum",
+    sets.midcast['Elemental Magic'] = {main="Lathi",sub="Niobid strap",ammo="Pemphredo tathlum",
         head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.merlbody_nuke,hands="Amalric gages",ring1="Shiva ring +1",ring2="Shiva Ring +1",
         back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb }
@@ -328,7 +329,7 @@ function job_precast(spell, action, spellMap, eventArgs)
 	if state.DeatCast.value then
 		eventArgs.handled = true
 		equip(sets.precast.FC['Death'])
-	elseif spell.skill == 'Elemental Magic' then
+	elseif spell.type == 'Magic' then
         refine_various_spells(spell, action, spellMap, eventArgs)
     end
 end
@@ -357,20 +358,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
     end
     if spell.skill == 'Elemental Magic' and state.ConsMP.value then
         equip(sets.ConsMP)
-    end
-<<<<<<< HEAD
-	if not spell.interrupted then
-        if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
-            send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
-        elseif spell.english == "Sleep" or spell.english == "Sleepga" then -- Sleep & Sleepga Countdown --
-            send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
-        elseif spell.english == "Break" then -- Break Countdown --
-            send_command('wait 25;input /echo Break Effect: [WEARING OFF IN 5 SEC.]')
-        elseif spell.english == "Paralyze" then -- Paralyze Countdown --
-             send_command('wait 115;input /echo Paralyze Effect: [WEARING OFF IN 5 SEC.]')
-        elseif spell.english == "Slow" then -- Slow Countdown --
-            send_command('wait 115;input /echo Slow Effect: [WEARING OFF IN 5 SEC.]')        
-        end
     end
 end
 
@@ -401,9 +388,9 @@ end
 
 
 function refine_various_spells(spell, action, spellMap, eventArgs)
-    aspirs = S{'Aspir','Aspir II','Aspir III'}
-    sleeps = S{'Sleep','Sleep II'}
-    sleepgas = S{'Sleepga','Sleepga II'}
+    local aspirs = S{'Aspir','Aspir II','Aspir III'}
+    local sleeps = S{'Sleep','Sleep II'}
+    local sleepgas = S{'Sleepga','Sleepga II'}
 
     local degrade_array = {
         ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
@@ -416,8 +403,10 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
         --['Stonega'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
         ['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
         --['Thundaga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
-        ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'}
-        --['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'}
+        ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
+        --['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
+        ['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
+        ['Sleepgas'] = {'Sleepga','Sleepga II'}
 }
     --[[if not spell.skill == 'Elemental Magic' and not sleepgas:contains(spell.english) and not sleeps:contains(spell.english) and not aspirs:contains(spell.english) then
         return
@@ -427,42 +416,34 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
     local spell_recasts = windower.ffxi.get_spell_recasts()
     local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
 
-    local spell_index = table.find(degrade_array[spell.element],spell.name)
+    local spell_index 
+    if spell.skill == 'Elemental Magic' then
+        spell_index = table.find(degrade_array[spell.element],spell.name)
+    elseif aspirs:contains(spell.english) then
+        spell_index = table.find(degrade_array['Aspirs'],spell.name)
+    elseif sleepgas:contains(spell.english) then
+        spell_index = table.find(degrade_array['Sleepgas'],spell.name)
+    end
 
     if spell_recasts[spell.recast_id] > 0 then
         if spell_index > 1 then
-            newSpell = degrade_array[spell.element][spell_index - 1]
-            add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
-            send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
-            eventArgs.cancel = true
+            if spell.skill == 'Elemental Magic' then
+                newSpell = degrade_array[spell.element][spell_index - 1]
+                add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+                eventArgs.cancel = true
+            elseif aspirs:contains(spell.english) then
+                newSpell = degrade_array['Aspirs'][spell_index - 1]
+                add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+                eventArgs.cancel = true
+            elseif sleepgas:contains(spell.english) then
+                newSpell = degrade_array['Sleepgas'][spell_index - 1]
+                add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+                eventArgs.cancel = true
+            end
         end
-        --[[if aspirs:contains(spell.english) then
-            if spell.english == 'Aspir' then
-                add_to_chat(122,cancelling)
-                eventArgs.cancel = true
-                return
-            elseif spell.english == 'Aspir II' then
-                newSpell = 'Aspir'
-            elseif spell.english == 'Aspir III' then
-                newSpell = 'Aspir II'
-            end         
-        elseif sleeps:contains(spell.english) then
-            if spell.english == 'Sleep' then
-                add_to_chat(122,cancelling)
-                eventArgs.cancel = true
-                return
-            elseif spell.english == 'Sleep II' then
-                newSpell = 'Sleep'
-            end
-        elseif sleepgas:contains(spell.english) then
-            if spell.english == 'Sleepga' then
-                add_to_chat(122,cancelling)
-                eventArgs.cancel = true
-                return
-            elseif spell.english == 'Sleepga II' then
-                newSpell = 'Sleepga'
-            end
-        end]]
     end
 end
 
@@ -484,7 +465,6 @@ function job_buff_change(buff, gain)
 		equip({ring2="Capacity Ring"})
 		if player.equipment.right_ring == "Capacity Ring" then
 			disable("ring2")
-			send_command('@wait 9; input /item "Capacity Ring" <me>;')
 		else
 			enable("ring2")
 		end
