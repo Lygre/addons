@@ -37,7 +37,7 @@ function define_global_sets()
 	
 	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
 
-	gear.Colada_highd = {name="Colada", augments={'Phys. dmg. taken -2%','STR+12','Accuracy+15','Attack+15','DMG:+15',}}
+	gear.Colada_highd = {name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}}
 	gear.Colada_datk = {name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}}
 
 	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Enmity-2','MND+5','Mag. Acc.+6','"Mag.Atk.Bns."+15',}}

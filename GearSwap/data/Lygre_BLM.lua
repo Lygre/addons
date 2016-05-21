@@ -23,12 +23,12 @@ end
 function job_setup()
     state.OffenseMode:options('None', 'Normal')
     state.CastingMode:options('Normal', 'Mid', 'Resistant')
-    state.IdleMode:options('Normal', 'PDT',)
+    state.IdleMode:options('Normal', 'PDT')
   
   	MagicBurstIndex = 0
     state.MagicBurst = M(false, 'Magic Burst')
 	state.ConsMP = M(false, 'Conserve MP')
-    state.DeatCast = M(['description']='Death Mode', false, 'Death Mode')
+    state.DeatCast = M(false, 'Death Mode')
 
 
     lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
@@ -39,8 +39,10 @@ function job_setup()
 
     
     -- Additional local binds
-    send_command('bind ^` input /automove')
-    send_command('bind !` gs c toggle DeatCast')
+    send_command('bind ^` gs c toggle MagicBurst')
+    send_command('bind !` gs c toggle ConsMP')
+    send_command('bind @` gs c toggle DeatCast')
+
 
 	custom_timers = {}
 
@@ -94,8 +96,8 @@ function init_gear_sets()
      
     sets.midcast['Death'] = { main=gear.death_staff,sub="Niobid strap",ammo="Psilomene",
         head="Pixie hairpin +1", neck="Mizu. Kubikazari", ear1="Barkarole earring", ear2="Friomisi Earring",
-        body=gear.MB_body, hands="Amalric gages",ring1="Mephitas's ring +1",ring2="Archon Ring",
-        back="Taranus's Cape", waist="Hachirin-no-obi", legs="Amalric slops", feet=gear.merlfeet_mb }
+        body=gear.MB_body, hands="Amalric gages",ring1="Mephitas's ring",ring2="Archon Ring",
+        back="Taranus's Cape", waist="Shinjutsu-no-obi", legs="Amalric slops", feet=gear.merlfeet_mb }
 
         --death specific MB set
     sets.MB_death = { main=gear.death_staff,sub="Niobid strap",ammo="Psilomene",
@@ -338,7 +340,8 @@ function job_precast(spell, action, spellMap, eventArgs)
 end
 
 function job_post_precast(spell, action, spellMap, eventArgs)
-    if state.DeatCast.value and eventArgs.handled = true then return
+    if state.DeatCast.value and eventArgs.handled then 
+        return
     else
         if spell.english == "Impact" then
             equip({head=empty,body="Twilight Cloak"})
@@ -390,7 +393,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
                 equip(sets.MB_death)
             elseif spell.skill == 'Elemental Magic' then
                 equip(sets.magic_burst)
-            elseif 
             end
         end
     end
@@ -439,15 +441,15 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
 
     local degrade_array = {
         ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
-        ['Firaga'] = {'Firaga','Firaga II','Firaga III','Firaja'},
+        ['Firega'] = {'Firaga','Firaga II','Firaga III','Firaja'},
         ['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
-        ['Blizzaga'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
+        ['Icega'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
         ['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
-        ['Aeroga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
+        ['Windga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
         ['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
-        ['Stonega'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
+        ['Earthga'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
         ['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
-        ['Thundaga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
+        ['Lightningga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
         ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
         ['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
         ['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
@@ -461,17 +463,28 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
     local spell_recasts = windower.ffxi.get_spell_recasts()
     local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
 
-    local spell_index 
+    local spell_index
 
     if spell_recasts[spell.recast_id] > 0 then
         if spell.skill == 'Elemental Magic' then
-            if 
-            spell_index = table.find(degrade_array[spell.element],spell.name)
-            if spell_index > 1 then
-                newSpell = degrade_array[spell.element][spell_index - 1]
-                add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
-                send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
-                eventArgs.cancel = true
+            local ele = tostring(spell.element):append('ga')
+            --local ele2 = string.sub(ele,1,-2)
+            if table.find(degrade_array[ele],spell.name) then
+                spell_index = table.find(degrade_array[ele],spell.name)
+                if spell_index > 1 then
+                    newSpell = degrade_array[ele][spell_index - 1]
+                    add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+                    send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+                    eventArgs.cancel = true
+                end
+            else 
+                spell_index = table.find(degrade_array[spell.element],spell.name)
+                if spell_index > 1 then
+                    newSpell = degrade_array[spell.element][spell_index - 1]
+                    add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+                    send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+                    eventArgs.cancel = true
+                end
             end
         elseif aspirs:contains(spell.name) then
             spell_index = table.find(degrade_array['Aspirs'],spell.name)

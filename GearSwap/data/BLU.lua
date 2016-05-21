@@ -302,7 +302,7 @@ function init_gear_sets()
     
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Jukukik feather",
         head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
-        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        body="Sayadio's kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Rosmerta's Cape",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
     
 
@@ -594,16 +594,16 @@ function init_gear_sets()
 	
 		--Max Haste engaged sets, approx 43.75% haste
     sets.engaged.DW.MaxHaste = {ammo="Ginsen",
-        head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
+        head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Telos earring",ear2="Brutal earring",
         body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta }
     sets.engaged.DW.Acc.MaxHaste = {ammo="Ginsen",
-        head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
+        head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Digni. earring",
         body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Rosmerta's Cape",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_acc }
+        back="Rosmerta's Cape",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_ta }
     sets.engaged.DW.HighAcc.MaxHaste = {ammo="Ginsen",
         head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
-        body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        body="Sayadio's kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Rosmerta's Cape",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_acc }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",

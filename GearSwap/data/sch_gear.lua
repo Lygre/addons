@@ -248,7 +248,8 @@ function init_gear_sets()
         body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
-    sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Grioavolr"})
+    sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Grioavolr",
+        ring1="Rahab Ring",back="Perimede cape"})
 	
 	sets.midcast.Helix = {main=gear.NukeStaff,sub="Thrace Strap",ammo="Dosis Tathlum",
 		head=gear.merlhead_nuke, neck="Saevus pendant +1", ear1="Friomisi Earring", ear2="Barkarole earring",
@@ -349,7 +350,7 @@ function init_gear_sets()
     sets.defense.MDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Vanir Battery",
         head=gear.chirhead,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
         body="Vrikodara Jupon",hands=gear.chirhands_macc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity cape",waist="Slipor Sash",legs=gear.merllegs_phalanx,feet=gear.merlfeet_dt }
+        back="Solemnity cape",waist="Slipor Sash",legs=gear.chirlegs_dt,feet=gear.merlfeet_dt }
     
 	sets.defense.Meva = set_combine(sets.defense.MDT,{head=gear.chirhead,ear2="Dominance Earring"})
 
