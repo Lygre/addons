@@ -44,8 +44,6 @@ function job_setup()
     send_command('bind @` gs c toggle DeatCast')
 
 
-	custom_timers = {}
-
 	organizer_items = {aeonic="Khatvanga"}
     select_default_macro_book()
 end
@@ -89,21 +87,60 @@ function init_gear_sets()
     --Death sets
     sets.DeatCastIdle = {ammo="Vanir battery"}
 
-    sets.precast.FC['Death'] = { main="Grioavolr",sub="Niobid strap",ammo="Psilomene",
-		head="Amalric coif",neck="Voltsurge torque",ear1="Barkarole earring", ear2="Loquacious earring",
-		body="Vrikodara jupon",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon ring",
-		back="Bane Cape",waist="Channeler's Stone", legs="Psycloth lappas",feet=gear.merlfeet_fc }
-     
-    sets.midcast['Death'] = { main=gear.death_staff,sub="Niobid strap",ammo="Psilomene",
-        head="Pixie hairpin +1", neck="Mizu. Kubikazari", ear1="Barkarole earring", ear2="Friomisi Earring",
-        body=gear.MB_body, hands="Amalric gages",ring1="Mephitas's ring",ring2="Archon Ring",
-        back="Taranus's Cape", waist="Shinjutsu-no-obi", legs="Amalric slops", feet=gear.merlfeet_mb }
-
+    sets.precast.FC['Death'] = { 
+        main="Grioavolr",       
+        sub="Niobid strap",         -- 20
+        ammo="Psilomene",           -- 45
+		head="Amalric coif",        -- 121
+        neck="Voltsurge torque",    -- 20
+        ear1="Barkarole earring",   -- 25 
+        ear2="Loquacious earring",  -- 30
+		body=gear.merlbody_nuke,    -- 67
+        hands="Helios gloves",      -- 44
+        ring1="Rahab Ring",         -- 30
+        ring2="Weatherspoon ring",
+		back="Bane Cape",           -- 90
+        waist="Witful Belt", 
+        legs="Psycloth lappas",     -- 109
+        feet=gear.merlfeet_fc       -- 20
+    }
+                                    --[[TOTAL: +621    ]]
+    sets.midcast['Death'] = { 
+        main=gear.death_staff,
+        sub="Niobid strap",         -- 20
+        ammo="Psilomene",           -- 45
+        head="Pixie hairpin +1",    -- 120
+        neck="Mizu. Kubikazari",    
+        ear1="Barkarole earring",   -- 25
+        ear2="Friomisi Earring",
+        body=gear.MB_body, 
+        hands="Amalric gages",      -- 26 (86)
+        ring1="Mephitas's ring",    -- 100
+        ring2="Archon Ring",
+        back="Taranus's Cape",      -- 60
+        waist="Shinjutsu-no-obi",   -- 80
+        legs="Amalric slops",       -- 160
+        feet=gear.merlfeet_mb       -- 20
+    }
+                                    --[[Total: +723 (783 with gages aug change)]]
         --death specific MB set
-    sets.MB_death = { main=gear.death_staff,sub="Niobid strap",ammo="Psilomene",
-        head="Pixie hairpin +1", neck="Mizu. Kubikazari", ear1="Barkarole earring", ear2="Static Earring",
-        body=gear.MB_body, hands="Amalric gages",ring1="Mephitas's ring +1",ring2="Archon Ring",
-        back="Taranus's Cape", waist="Hachirin-no-obi", legs="Amalric slops", feet=gear.merlfeet_mb }
+    sets.MB_death = { 
+        main=gear.death_staff,
+        sub="Niobid strap",
+        ammo="Psilomene",
+        head="Pixie hairpin +1", 
+        neck="Mizu. Kubikazari", 
+        ear1="Barkarole earring", 
+        ear2="Static Earring",
+        body=gear.MB_body, 
+        hands="Amalric gages",
+        ring1="Mujin Band",
+        ring2="Archon Ring",
+        back="Taranus's Cape", 
+        waist="Hachirin-no-obi", 
+        legs="Amalric slops", 
+        feet=gear.merlfeet_mb 
+    }
 			
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
 
@@ -177,15 +214,15 @@ function init_gear_sets()
         waist="Fucho-no-obi",legs=gear.merllegs_da})
     sets.midcast.Aspir = sets.midcast.Drain
 		
-    sets.midcast.Stun = {main="Lathi",sub="Arbuda Grip",ammo="Pemphredo tathlum",
-        head="Amalric coif",neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
-        body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Prolix Ring",
-        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Amalric nails"}
+    sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
+        head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
+        body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
+        back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
 
     -- Elemental Magic sets
     
-    sets.midcast['Elemental Magic'] = {main="Lathi",sub="Niobid strap",ammo="Dosis tathlum",
+    sets.midcast['Elemental Magic'] = {main="Lathi",sub="Niobid strap",ammo="Pemphredo tathlum",
         head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.merlbody_nuke,hands="Amalric gages",ring1="Shiva ring +1",ring2="Shiva Ring +1",
         back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb }
@@ -313,7 +350,8 @@ function job_precast(spell, action, spellMap, eventArgs)
 	if state.DeatCast.value then
         if spell.type == 'Magic' then
             equipSet = {}
-            equipSet = sets.precast.FC                                           
+            equipSet = sets.precast.FC 
+            equip(equipSet.HighMP)                                          
             eventArgs.handled = true
             if equipSet[spell.type].HighMP then
                 equip(equipSet[spell.type].HighMP)
@@ -332,9 +370,10 @@ function job_precast(spell, action, spellMap, eventArgs)
                 end
             else 
         		equip(equipSet['Death'])
+                equipSet = equipSet['Death']
             end
         end
-	elseif spell.skill == 'Elemental Magic' then
+	elseif spell.type == 'Magic' then
         refine_various_spells(spell, action, spellMap, eventArgs)
     end
 end
@@ -435,9 +474,9 @@ end
 
 
 function refine_various_spells(spell, action, spellMap, eventArgs)
-    aspirs = S{'Aspir','Aspir II','Aspir III'}
-    sleeps = S{'Sleep','Sleep II'}
-    sleepgas = S{'Sleepga','Sleepga II'}
+    local aspirs = S{'Aspir','Aspir II','Aspir III'}
+    local sleeps = S{'Sleep','Sleep II'}
+    local sleepgas = S{'Sleepga','Sleepga II'}
 
     local degrade_array = {
         ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
@@ -454,10 +493,6 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
         ['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
         ['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
         ['Sleepgas'] = {'Sleepga','Sleepga II'}
-}
-    --[[if not spell.skill == 'Elemental Magic' and not sleepgas:contains(spell.english) and not sleeps:contains(spell.english) and not aspirs:contains(spell.english) then
-        return
-    end]]
 
     local newSpell = spell.english
     local spell_recasts = windower.ffxi.get_spell_recasts()
@@ -524,7 +559,6 @@ function job_buff_change(buff, gain)
 		equip({ring2="Capacity Ring"})
 		if player.equipment.right_ring == "Capacity Ring" then
 			disable("ring2")
-			send_command('@wait 9; input /item "Capacity Ring" <me>;')
 		else
 			enable("ring2")
 		end
