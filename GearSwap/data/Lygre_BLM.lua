@@ -74,10 +74,28 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
 
-    sets.precast.FC = {main="Grioavolr",sub="Vivid Strap",ammo="Sapience orb",
+    sets.precast.FC = {main="Grioavolr",sub="Clerisy Strap",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Anhur Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
+
+    sets.precast.FC.HighMP = {
+        main="Grioavolr",           --~66
+        sub="Clerisy Strap",        
+        ammo="Psilomene",           -- 45
+        head="Amalric coif",        -- 121
+        neck="Voltsurge torque",    -- 20
+        ear1="Influx earring",      -- 55 
+        ear2="Loquacious earring",  -- 30
+        body="Amalric doublet",     -- 133
+        hands="Helios gloves",      -- 44
+        ring1="Rahab Ring",         -- 30
+        ring2="Weatherspoon ring",
+        back="Bane Cape",           -- 90
+        waist="Witful Belt", 
+        legs="Psycloth lappas",     -- 109
+        feet="Amalric nails"        -- 86
+}
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
@@ -85,26 +103,41 @@ function init_gear_sets()
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
 
     --Death sets
-    sets.DeatCastIdle = {ammo="Vanir battery"}
-
+    sets.DeatCastIdle = {
+        main="Grioavolr",           --~66    
+        sub="Clemency Grip",        -- 30
+        ammo="Psilomene",           -- 45
+        head="Amalric coif",        -- 121
+        neck="Dualism Collar",    -- 45
+        ear1="Influx earring",      -- 55 
+        ear2="Loquacious earring",  -- 30
+        body="Amalric doublet",     -- 133
+        hands="Amalric gages",      -- 86
+        ring1="Sangoma Ring",       -- 70
+        ring2="Mephitas's ring",    -- 100
+        back="Bane Cape",           -- 90
+        waist="Shinjutsu-no-obi",   -- 80 
+        legs="Amalric slops",       -- 160
+        feet=gear.merlfeet_refresh  -- 20
+}               ---Total +MP: 1131
+    
     sets.precast.FC['Death'] = { 
-        main="Grioavolr",       
-        sub="Niobid strap",         -- 20
+        main="Grioavolr",           --~66
+        sub="Clerisy Strap",        
         ammo="Psilomene",           -- 45
 		head="Amalric coif",        -- 121
         neck="Voltsurge torque",    -- 20
-        ear1="Barkarole earring",   -- 25 
+        ear1="Influx earring",      -- 55 
         ear2="Loquacious earring",  -- 30
-		body=gear.merlbody_nuke,    -- 67
+		body="Amalric doublet",     -- 133
         hands="Helios gloves",      -- 44
         ring1="Rahab Ring",         -- 30
         ring2="Weatherspoon ring",
 		back="Bane Cape",           -- 90
         waist="Witful Belt", 
         legs="Psycloth lappas",     -- 109
-        feet=gear.merlfeet_fc       -- 20
-    }
-                                    --[[TOTAL: +621    ]]
+        feet="Amalric nails"        -- 86
+    }               --[[TOTAL: +829    ]]
     sets.midcast['Death'] = { 
         main=gear.death_staff,
         sub="Niobid strap",         -- 20
@@ -210,10 +243,12 @@ function init_gear_sets()
         body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
         back="Bane Cape",waist="Luminary sash",legs="Psycloth lappas",feet=gear.merlfeet_da }
 
-    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{ring1="Evanescence Ring",
-        waist="Fucho-no-obi",legs=gear.merllegs_da})
+    sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
     sets.midcast.Aspir = sets.midcast.Drain
-		
+	
+    sets.midcast.Aspir.HighMP = set_combine(sets.DeatCastIdle,
+        {back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
+
     sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
         body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
@@ -334,7 +369,7 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {
         head="Blistering sallet",neck="Loricate torque +1",ear1="Telos Earring",ear2="Zennaroi Earring",
-        body="Vrikodara jupon",hands=empty,ring1="Defending Ring",ring2="Cacoethic ring",
+        body="Vrikodara jupon",hands="Gazu bracelet +1",ring1="Defending Ring",ring2="Cacoethic ring",
         back="Aurist's cape +1",waist="Ninurta's sash",legs="Telchine braconi",feet="Battlecast gaiters"}
 
 end
@@ -349,50 +384,31 @@ function job_precast(spell, action, spellMap, eventArgs)
     enable('feet','back')
 	if state.DeatCast.value then
         if spell.type == 'Magic' then
-            equipSet = {}
-            equipSet = sets.precast.FC 
-            equip(equipSet.HighMP)                                          
-            eventArgs.handled = true
-            if equipSet[spell.type].HighMP then
-                equip(equipSet[spell.type].HighMP)
-                equipSet = equipSet[spell.type]
-                if equipSet[spell.skill].HighMP then
-                    equip(equipSet[spell.skill].HighMP)
-                    equipSet = equipSet[spell.skill]
-                    if equipSet[spell.spellMap].HighMP then
-                        equip(equipSet[spell.spellMap].HighMP) --May only have to be spellMap, rather than spell.spellMap
-                        equipSet = equipSet[spell.spellMap]
-                        if equipSet[spell.english].HighMP then
-                            equip(equipSet[spell.english].HighMP)
-                            equipSet = equipSet[spell.english]
-                        end
-                    end
-                end
-            else 
-        		equip(equipSet['Death'])
-                equipSet = equipSet['Death']
-            end
+            classes.CustomClass = 'HighMP'
         end
-	elseif spell.type == 'Magic' then
+	elseif spell.type == 'BlackMagic' then
         refine_various_spells(spell, action, spellMap, eventArgs)
     end
 end
 
 function job_post_precast(spell, action, spellMap, eventArgs)
-    if state.DeatCast.value and eventArgs.handled then 
-        return
-    else
+    --[[if state.DeatCast.value and eventArgs.handled then 
+        eventArgs.handled = true
+    else]]
+        if state.DeatCast.value then
+            classes.CustomClass = 'HighMP'
+        end
         if spell.english == "Impact" then
             equip({head=empty,body="Twilight Cloak"})
         end
         if spellMap == 'Cure' or spellMap == 'Curaga' then
             gear.default.obi_waist = "Hachirin-no-obi"
-        elseif spell.skill == 'Elemental Magic' then
+        --[[elseif spell.skill == 'Elemental Magic' then
             if state.CastingMode.value == 'Proc' then
                 classes.CustomClass = 'Proc'
-            end
+            end]]
         end
-    end
+    --end
 end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
@@ -493,6 +509,7 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
         ['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
         ['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
         ['Sleepgas'] = {'Sleepga','Sleepga II'}
+    }
 
     local newSpell = spell.english
     local spell_recasts = windower.ffxi.get_spell_recasts()

@@ -1,0 +1,7 @@
+alias one ah buy Iron ore 0 100;wait 20;
+alias five one;one;one;one;one;
+alias tfive five;five;five;five;five;
+alias hund tfive;tfive;tfive;tfive;tfive;
+alias thund hund;hund;hund;hund;hund;
+alias fhund thund;thund;thund;thund;thund;
+alias thous fhund;fhund;
