@@ -77,24 +77,24 @@
             <hightiermeleesolo>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
-                <slot03>quad. continuum</slot03>
-                <slot04>blazing bound</slot04>
-                <slot05>molting plumage</slot05>
-                <slot06>erratic flutter</slot06>
-                <slot07>empty thrash</slot07>
-                <slot08>heavy strike</slot08>
-                <slot09>thrashing assault</slot09>
-                <slot10>sinker drill</slot10>
-                <slot11>fantod</slot11>
-                <slot12>sudden lunge</slot12>
-                <slot13>nat. meditation</slot13>
-                <slot14>anvil lightning</slot14>
-                <slot15>white wind</slot15>
-                <slot16>blank gaze</slot16>
-                <slot17>diffusion ray</slot17>
-                <slot18>cocoon</slot18>
-                <slot19>battery charge</slot19>
-                <slot20>barrier tusk</slot20>
+                <slot03>sinker drill</slot03>
+                <slot04>sudden lunge</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>quad. continuum</slot06>
+                <slot07>thrashing assault</slot07>
+                <slot08>barrier tusk</slot08>
+                <slot09>diffusion ray</slot09>
+                <slot10>heavy strike</slot10>
+                <slot11>nat. meditation</slot11>
+                <slot12>white wind</slot12>
+                <slot13>cocoon</slot13>
+                <slot14>molting plumage</slot14>
+                <slot15>occultation</slot15>
+                <slot16>blazing bound</slot16>
+                <slot17>anvil lightning</slot17>
+                <slot18>empty thrash</slot18>
+                <slot19>blank gaze</slot19>
+                <slot20>fantod</slot20>
             </hightiermeleesolo>
             <intenseambvdmay>
                 <slot01>barbed crescent</slot01>
@@ -159,6 +159,27 @@
                 <slot16>battery charge</slot16>
                 <slot17>barrier tusk</slot17>
             </solocleave>
+            <tonberrysolo>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>sinker drill</slot03>
+                <slot04>sudden lunge</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>anvil lightning</slot06>
+                <slot07>quad. continuum</slot07>
+                <slot08>thrashing assault</slot08>
+                <slot09>occultation</slot09>
+                <slot10>heavy strike</slot10>
+                <slot11>tenebral crush</slot11>
+                <slot12>nat. meditation</slot12>
+                <slot13>white wind</slot13>
+                <slot14>cocoon</slot14>
+                <slot15>barrier tusk</slot15>
+                <slot16>molting plumage</slot16>
+                <slot17>blazing bound</slot17>
+                <slot18>empty thrash</slot18>
+                <slot19>fantod</slot19>
+            </tonberrysolo>
             <vagaryfeet>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

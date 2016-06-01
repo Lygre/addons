@@ -98,7 +98,9 @@ function init_gear_sets()
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkarole earring"})
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, 
-		{body="Heka's Kalasiris",legs="Doyen Pants"})
+		{ear1="Mendicant's earring",
+        body="Heka's Kalasiris",
+        legs="Doyen Pants"})
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
 
@@ -127,13 +129,13 @@ function init_gear_sets()
         back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
     sets.midcast.Cure = {ammo="Psilomene",
-        head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati Earring",
-        body="Kaykaus bliaut",hands="Telchine gloves",ring1="Haoma's Ring",ring2="Sirona's Ring",
+        head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Mendicant's earring",
+        body="Kaykaus bliaut",hands="Telchine gloves",ring1="Haoma's Ring",ring2="Lebeche Ring",
         back="Tempered cape +1",waist="Bishop's sash",legs="Academic's pants +1",feet="Vanya clogs"}
 
     sets.midcast.CureWithLightWeather = {main="Chatoyant staff",sub="Arbuda grip",ammo="Psilomene",
-        head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Gwati earring",
-        body="Kaykaus bliaut",hands="Kaykaus cuffs",ring1="Lebeche Ring",ring2="Sirona's Ring",
+        head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Mendicant's earring",
+        body="Kaykaus bliaut",hands="Kaykaus cuffs",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Twilight cape",waist="Hachirin-no-obi",legs=gear.chirlegs,feet="Vanya clogs"}
 
     sets.midcast.Curaga = sets.midcast.Cure
@@ -266,7 +268,7 @@ function init_gear_sets()
 	sets.midcast['Noctohelix II'] = set_combine(sets.midcast.Helix, {head="Pixie Hairpin +1",ring1="Archon Ring"})
 
     -- Elemental Magic sets are default for handling low-tier nukes.
-    sets.midcast['Elemental Magic'] = {main=gear.NukeStaff,sub="Zuuxowu grip",ammo="Dosis Tathlum",
+    sets.midcast['Elemental Magic'] = {main=gear.NukeStaff,sub="Thrace strap",ammo="Dosis Tathlum",
         head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.merlbody_nuke,hands=gear.chirhands_nuke,ring1="Shiva Ring +1",ring2="Shiva Ring +1",
         back="Lugh's cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.chirfeet}
@@ -317,7 +319,7 @@ function init_gear_sets()
     sets.idle.Field = {main="Bolelabunga",sub="Genmei shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
         body="Amalric doublet",hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Slipor Sash",legs="Assiduity pants +1",feet="Arbatel loafers +1"}
+        back="Solemnity Cape",waist="Slipor Sash",legs="Assiduity pants +1",feet=gear.merlfeet_refresh }
 
     sets.idle.Field.PDT = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",

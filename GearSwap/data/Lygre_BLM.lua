@@ -167,8 +167,8 @@ function init_gear_sets()
         back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
     sets.midcast.Cure = {
-        head="Telchine cap",neck="Incanter's Torque",ear1="Roundel earring",ear2="Beatific Earring",
-        body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Sirona's Ring",
+        head="Telchine cap",neck="Incanter's Torque",ear1="Mendicant's earring earring",ear2="Beatific Earring",
+        body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Solemnity cape",waist="Bishop's sash",legs="Telchine braconi",feet="Vanya clogs"}
 
     sets.midcast.Curaga = sets.midcast.Cure
@@ -293,7 +293,7 @@ function init_gear_sets()
 	
     -- Idle mode scopes:
     -- Idle mode when weak.
-    sets.idle.Weak = {main="Earth Staff", sub="Zuuxowu Grip",ammo="Impatiens",
+    sets.idle.Weak = {main="Earth Staff", sub="Thrace Strap",ammo="Psilomene",
         head="Befouled crown",neck="Loricate torque +1",ear1="Infused earring",ear2="Loquacious Earring",
         body="Vrikodara jupon",hands="Amalric gages",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity cape",waist="Witful Belt",legs="Hagondes Pants",feet=gear.merlfeet_dt }
