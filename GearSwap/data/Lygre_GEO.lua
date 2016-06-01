@@ -291,12 +291,17 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
     if not spell.interrupted then
         if spell.english:startswith('Indi') then
-            if not classes.CustomIdleGroups:contains('Indi') then
-                classes.CustomIdleGroups:append('Indi')
-            end
-            send_command('@timers d "'..indi_timer..'"')
             indi_timer = spell.english
-            send_command('@timers c "'..indi_timer..'" '..indi_duration..' down spells/00136.png')
+            if spell.target.type == 'SELF' then
+                if not classes.CustomIdleGroups:contains('Indi') then
+                    classes.CustomIdleGroups:append('Indi')
+                end
+                send_command('@timers d "'..indi_timer..'"')
+                send_command('@timers c "'..indi_timer..'" '..indi_duration..' down spells/00136.png')
+            else 
+                send_command('@timers d "'..indi_timer..' [Entrust]"')
+                send_command('@timers c "'..indi_timer..' [Entrust]" '..indi_duration..' down spells/00136.png')
+            end
 		elseif spell.skill == 'Enhancing Magic' then
             --adjust_timers(spell, spellMap)
         elseif spell.english == 'Sleep' or spell.english == 'Sleepga' then
