@@ -65,3 +65,54 @@ Reposed									= S{'Repose','Flash'}
 Potency									= S{'Slow','Paralyze'}
 Defense									= S{'Stoneskin'}
 
+---------------------------------------------------------------
+function party_index_lookup(name)
+    for n=1,party.count do
+        if party[n].name == name then
+            return n
+        end
+    end
+    return nil
+end
+
+function determine_party_distance()
+	AgaBenchmark = 30
+	if not party_index_lookup(spell.target.name) then
+		return
+	end
+	local inrange = 1
+	local hpp_deficit = 0
+	local memindex = party_index_lookup(spell.target.name)
+	for i=party.count,1,-1 do
+		--[[local current_int = i - 1
+		local current_mem = i - current_int 
+		while current_int > 0 do]]
+		if i ~= memindex then
+			local memdist = (party[i].x - party[memindex].x)^2 + (party[i].y - party[memindex].y)^2 + (party[i].z - party[memindex].z)^2
+			if math.sqrt(memdist) < 15 then
+				if party[i].hpp<75 and party[i].status_id ~= 2 and party[i].status_id ~= 3 then
+					inrange = inrange + 1
+					hpp_deficit = hpp_deficit + (100 - party[i].hpp)
+				end
+			end
+		else 
+			hpp_deficit = hpp_deficit + (100 - party[i].hpp)
+		end
+	end
+	if inrange > 1 then
+		eventArgs.cancel = true
+		if hpp_deficit / inrange > AgaBenchmark then
+			send_command('input /ma "Curaga IV" '..spell.target.name)
+		else 
+			send_command('input /ma "Curaga III" '..spell.target.name)
+		end
+	end			
+end
+
+function job_post_precast(spell, action, spellMap, eventArgs)
+	if spell.type == 'WeaponSkill' or spell.name:endswith('Shot') then
+		if spell.element == world.weather_element or spell.element == world.day_element then
+			equip(sets.Obi)
+		end
+	end
+end

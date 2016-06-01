@@ -25,7 +25,7 @@ end
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     -- Whether to use Luzaf's Ring
-    state.LuzafRing = M(false, "Luzaf's Ring")
+    state.LuzafRing = M(true, "Luzaf's Ring")
     -- Whether a warning has been given for low ammo
     state.warned = M(false)
 	
