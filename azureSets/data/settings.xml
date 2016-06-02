@@ -237,20 +237,22 @@
             <warsub>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
-                <slot03>quad. continuum</slot03>
-                <slot04>blazing bound</slot04>
-                <slot05>molting plumage</slot05>
-                <slot06>erratic flutter</slot06>
-                <slot07>empty thrash</slot07>
-                <slot08>heavy strike</slot08>
-                <slot09>thrashing assault</slot09>
-                <slot10>sinker drill</slot10>
-                <slot11>fantod</slot11>
-                <slot12>sudden lunge</slot12>
-                <slot13>nat. meditation</slot13>
-                <slot14>occultation</slot14>
-                <slot15>white wind</slot15>
-                <slot16>cocoon</slot16>
+                <slot03>heavy strike</slot03>
+                <slot04>sinker drill</slot04>
+                <slot05>erratic flutter</slot05>
+                <slot06>nat. meditation</slot06>
+                <slot07>diffusion ray</slot07>
+                <slot08>barrier tusk</slot08>
+                <slot09>molting plumage</slot09>
+                <slot10>fantod</slot10>
+                <slot11>quad. continuum</slot11>
+                <slot12>white wind</slot12>
+                <slot14>empty thrash</slot14>
+                <slot15>paralyzing triad</slot15>
+                <slot16>anvil lightning</slot16>
+                <slot18>sudden lunge</slot18>
+                <slot19>thrashing assault</slot19>
+                <slot20>blazing bound</slot20>
             </warsub>
             <warsubsolo>
                 <slot01>barbed crescent</slot01>

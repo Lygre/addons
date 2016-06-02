@@ -22,7 +22,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
     state.OffenseMode:options('None', 'Normal')
-    state.CastingMode:options('Normal', 'Mid', 'Resistant')
+    state.CastingMode:options('Normal', 'Mid', 'Resistant', 'DeatMB')
     state.IdleMode:options('Normal', 'PDT')
   
   	MagicBurstIndex = 0
@@ -79,7 +79,7 @@ function init_gear_sets()
         body="Anhur Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
-    sets.precast.FC.HighMP = {
+    sets.precast.FC.DeatMB = {
         main="Grioavolr",           --~66
         sub="Clerisy Strap",        
         ammo="Psilomene",           -- 45
@@ -139,15 +139,15 @@ function init_gear_sets()
         feet="Amalric nails"        -- 86
     }               --[[TOTAL: +829    ]]
     sets.midcast['Death'] = { 
-        main=gear.death_staff,
+        main="Grioavolr",
         sub="Niobid strap",         -- 20
         ammo="Psilomene",           -- 45
         head="Pixie hairpin +1",    -- 120
         neck="Mizu. Kubikazari",    
         ear1="Barkarole earring",   -- 25
         ear2="Friomisi Earring",
-        body=gear.MB_body, 
-        hands="Amalric gages",      -- 26 (86)
+        body="Amalric doublet", 
+        hands="Amalric gages",      -- 86
         ring1="Mephitas's ring",    -- 100
         ring2="Archon Ring",
         back="Taranus's Cape",      -- 60
@@ -158,20 +158,20 @@ function init_gear_sets()
                                     --[[Total: +723 (783 with gages aug change)]]
         --death specific MB set
     sets.MB_death = { 
-        main=gear.death_staff,
+        main="Grioavolr",
         sub="Niobid strap",
         ammo="Psilomene",
         head="Pixie hairpin +1", 
         neck="Mizu. Kubikazari", 
         ear1="Barkarole earring", 
         ear2="Static Earring",
-        body=gear.MB_body, 
+        --body="Amalric doublet", 
         hands="Amalric gages",
         ring1="Mujin Band",
-        ring2="Archon Ring",
+        --ring2="Archon Ring",
         back="Taranus's Cape", 
-        waist="Hachirin-no-obi", 
-        legs="Amalric slops", 
+        --waist="Hachirin-no-obi", 
+        legs=gear.merllegs_mb, 
         feet=gear.merlfeet_mb 
     }
 			
@@ -246,7 +246,7 @@ function init_gear_sets()
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
     sets.midcast.Aspir = sets.midcast.Drain
 	
-    sets.midcast.Aspir.HighMP = set_combine(sets.DeatCastIdle,
+    sets.midcast.Aspir.DeatMB = set_combine(sets.DeatCastIdle,
         {back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
 
     sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
@@ -384,65 +384,42 @@ function job_precast(spell, action, spellMap, eventArgs)
     enable('feet','back')
 	if state.DeatCast.value then
         if spell.type == 'Magic' then
-            classes.CustomClass = 'HighMP'
+            if spell.english == "Death" then
+                equip(sets.precast.FC['Death'])
+            else 
+                state.CastingMode:set('DeatMB')
+            end
         end
-	elseif spell.type == 'BlackMagic' then
+	elseif spell.type == 'BlackMagic' and spell.target.type == 'MONSTER' then
         refine_various_spells(spell, action, spellMap, eventArgs)
     end
 end
 
 function job_post_precast(spell, action, spellMap, eventArgs)
-    --[[if state.DeatCast.value and eventArgs.handled then 
-        eventArgs.handled = true
-    else]]
-        if state.DeatCast.value then
-            classes.CustomClass = 'HighMP'
-        end
-        if spell.english == "Impact" then
-            equip({head=empty,body="Twilight Cloak"})
-        end
-        if spellMap == 'Cure' or spellMap == 'Curaga' then
-            gear.default.obi_waist = "Hachirin-no-obi"
-        --[[elseif spell.skill == 'Elemental Magic' then
-            if state.CastingMode.value == 'Proc' then
-                classes.CustomClass = 'Proc'
-            end]]
-        end
-    --end
+    if state.DeatCast.value then
+        return
+    elseif spell.english == "Impact" then
+        equip({head=empty,body="Twilight Cloak"})
+    elseif spellMap == 'Cure' or spellMap == 'Curaga' then
+        gear.default.obi_waist = "Hachirin-no-obi"
+    end
 end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 function job_midcast(spell, action, spellMap, eventArgs)
     if state.DeatCast.value then
-        if spell.type == 'Magic' then
-            equipSet = {}
-            equipSet = sets.midcast
-            eventArgs.handled = true
-            if equipSet[spell.type].HighMP then
-                equip(equipSet[spell.type].HighMP)
-                equipSet = equipSet[spell.type]
-                if equipSet[spell.skill].HighMP then
-                    equip(equipSet[spell.skill].HighMP)
-                    equipSet = equipSet[spell.skill]
-                    if equipSet[spell.spellMap].HighMP then
-                        equip(equipSet[spell.spellMap].HighMP)
-                        equipSet = equipSet[spell.spellMap]
-                        if equipSet[spell.english].HighMP then
-                            equip(equipSet[spell.english].HighMP)
-                            equipSet = equipSet[spell.english]
-                        end
-                    end
-                end
-            else 
-                equip(equipSet['Death'])
-                equipSet = equipSet['Death']
+        if spell.action_type == 'Magic' then
+            if spell.english == 'Death' then
+                equip(sets.midcast['Death'])
+            else
+                state.CastingMode:set('DeatMB')
             end
         end
     end
 end
 
 function job_post_midcast(spell, action, spellMap, eventArgs)
-    if spell.type == 'BlackMagic' and state.MagicBurst.value then
+    if spell.action_type == 'Magic' and state.MagicBurst.value then
         if state.Death.value then
             if spell.english == 'Death' then
                 equip(sets.MB_death)
@@ -591,6 +568,12 @@ function job_state_change(stateField, newValue, oldValue)
             enable('main','sub','range')
         end
     end
+    if stateField == 'Death Mode' then
+        if newValue == true then
+            state.OffenseMode:set('Normal')
+            --[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
+        end
+    end            
 end
 
 

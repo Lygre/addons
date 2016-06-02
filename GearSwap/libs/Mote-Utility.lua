@@ -7,7 +7,7 @@
 -- Buff utility functions.
 -------------------------------------------------------------------------------------------------------------------
 
-local cancel_spells_to_check = S{'Sneak', 'Stoneskin', 'Spectral Jig', 'Trance', 'Monomi: Ichi', 'Utsusemi: Ichi', 'Utsusemi: Ni'}
+local cancel_spells_to_check = S{'Sneak', 'Stoneskin', 'Spectral Jig', 'Trance', 'Monomi: Ichi', 'Utsusemi: Ichi'}
 local cancel_types_to_check = S{'Waltz', 'Samba'}
 
 -- Function to cancel buffs if they'd conflict with using the spell you're attempting.
@@ -41,8 +41,8 @@ function cancel_conflicting_buffs(spell, action, spellMap, eventArgs)
             send_command('@wait 1.0;cancel sneak')
         elseif spell.english == 'Utsusemi: Ichi' then
             send_command('@wait 0.65;cancel copy image,copy image (2),copy image (3),copy image (4+)')
-		elseif spell.english == 'Utsusemi: Ni' then
-			send_command('cancel copy image (4+)')
+        elseif spell.english == 'Utsusemi: Ni' then
+            send_command('cancel copy image (4+)')
         elseif (spell.english == 'Trance' or spell.type=='Waltz') and buffactive['saber dance'] then
             cast_delay(0.2)
             send_command('cancel saber dance')
@@ -453,10 +453,10 @@ function set_elemental_obi_cape_ring(spell)
     gear.ElementalObi.name = obi_name or gear.default.obi_waist  or ""
     
     if obi_name then
-        if player.inventory['Twilight Cape'] or player.wardrobe['Twilight Cape'] then
+        if player.inventory['Twilight Cape'] or player.wardrobe['Twilight Cape'] or player.wardrobe2['Twilight Cape'] then
             gear.ElementalCape.name = "Twilight Cape"
         end
-        if (player.inventory['Zodiac Ring'] or player.wardrobe['Zodiac Ring']) and spell.english ~= 'Impact' and
+        if (player.inventory['Zodiac Ring'] or player.wardrobe['Zodiac Ring'] or player.wardrobe2['Zodiac Ring']) and spell.english ~= 'Impact' and
             not S{'Divine Magic','Dark Magic','Healing Magic'}:contains(spell.skill) then
             gear.ElementalRing.name = "Zodiac Ring"
         end
@@ -499,7 +499,7 @@ function get_elemental_item_name(item_type, valid_elements, restricted_to_elemen
     local item_map = elements[item_type:lower()..'_of']
     
     for element in (potential_elements.it or it)(potential_elements) do
-        if valid_elements:contains(element) and (player.inventory[item_map[element]] or player.wardrobe[item_map[element]]) then
+        if valid_elements:contains(element) and (player.inventory[item_map[element]] or player.wardrobe[item_map[element]] or player.wardrobe2[item_map[element]]) then
             return item_map[element]
         end
     end

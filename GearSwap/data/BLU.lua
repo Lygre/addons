@@ -208,7 +208,7 @@ function job_setup()
 	send_command('bind ^F5 input /Entomb')
 	send_command('bind !F5 input /Tenebralcrush')
 	send_command('bind @F5 input /anvillightning')
-
+    send_command('bind ^F6 input /defender')
 
 	update_combat_form()
 	select_default_macro_book()
@@ -267,7 +267,7 @@ function init_gear_sets()
 	sets.precast.FC = {ammo="Sapience orb",
 		head="Carmine Mask",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Amalric nails"}
+		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Carmine greaves"}
 		
 	sets.precast.FC['Blue Magic'] = set_combine(sets.precast.FC, {body="Hashishin mintan +1"})
 
@@ -290,7 +290,7 @@ function init_gear_sets()
 	sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
 		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
 		body="Amalric doublet",hands="Amalric Gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet="Amalric nails"}
+		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet=gear.amalricfeet_consmp }
 
 	sets.precast.WS['Savage Blade'] = {ammo="Floestone",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
@@ -314,7 +314,7 @@ function init_gear_sets()
 	sets.midcast.FastRecast = {ammo="Sapience orb",
 		head="Amalric coif",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body="Taeon Tabard",hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Amalric nails"}
+		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.amalricfeet_consmp }
 		
 	sets.midcast['Enhancing Magic'] = {
 		head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
@@ -388,7 +388,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].Magical = {ammo="Pemphredo Tathlum",
 		head="Amalric coif",neck="Sanctity necklace",ear1="Novio Earring",ear2="Friomisi Earring",
 		body="Amalric doublet",hands="Amalric Gages",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet="Amalric nails"}
+		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet=gear.amalricfeet_consmp }
 
 	sets.midcast['Blue Magic'].Magical.Resistant = set_combine(sets.midcast['Blue Magic'].Magical,
 		{ear1="Digni. Earring",ear2="Gwati Earring",

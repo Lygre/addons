@@ -73,6 +73,9 @@ function define_global_sets()
 	gear.chirfeet_block = {name="Chironic Slippers", augments={'Chance of successful block +4','Attack+2',}}
 	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
+	gear.amalricfeet_consmp = {name="Amalric Nails", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Conserve MP"+6',}}
+	gear.amalricfeet_death = {name="Amalric Nails", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
+
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
 	
