@@ -26,9 +26,9 @@ function init_gear_sets()
 
 	sets.precast.JA.Ventriloquy = {legs="Pitre churidars"}
 
-    sets.precast.JA.Maneuver = {neck="Buffoon's Collar",ear1="Burana earring",
+    sets.precast.JA.Maneuver = {main="Midnights",sub=empty,neck="Buffoon's Collar",ear1="Burana earring",
 		body="Karagoz Farsetto",hands="Foire Dastanas +1",
-		back="Dispersal Mantle"}
+		back="Visucius's Mantle"}
 
 
 
@@ -110,7 +110,7 @@ function init_gear_sets()
     sets.idle = {range="Divinator",ammo="Automat. oil +3",
         head="Pitre Taj",neck="Empath necklace",ear1="Burana Earring",ear2="Infused Earring",
         body=gear.repair_body,hands="Rao kote",ring1="Defending ring",ring2="Sheltered Ring",
-        back="Contriver's cape",waist="Isa Belt",legs="Rao haidate",feet="Rao sune-ate +1"}
+        back="Visucius's Mantle",waist="Isa Belt",legs="Rao haidate",feet="Rao sune-ate +1"}
 
     sets.idle.Town = set_combine(sets.idle, {})
 
@@ -140,12 +140,12 @@ function init_gear_sets()
 --		{head=gear.repair_head,hands="Naga Tekko",legs=gear.repair_legs,feet=gear.pet_tpfeet})
     sets.idle.Pet.Engaged.Ranged = { head="Anwig Salade",neck="Shepherd's chain",ear1="Handler's Earring",ear2="Handler's earring +1",
         body=gear.pet_tpbody,hands="Rao kote",ring1="Defending Ring",ring2="Overbearing Ring",
-        back="Contriver's Cape",waist="Isa belt",legs="Rao Haidate",feet=gear.pet_tpfeet }
+        back="Visucius's Mantle",waist="Isa belt",legs="Rao Haidate",feet=gear.pet_tpfeet }
 
 	sets.idle.Pet.Engaged.Tank = {
 	    head="Anwig Salade",neck="Shepherd's chain",ear1="Handler's Earring",ear2="Handler's earring +1",
         body=gear.pet_tpbody,hands="Rao kote",ring1="Defending Ring",ring2="Overbearing Ring",
-        back="Penetrating Cape",waist="Isa belt",legs="Rao Haidate",feet="Rao Sune-ate +1" }
+        back="Visucius's Mantle",waist="Isa belt",legs="Rao Haidate",feet="Rao Sune-ate +1" }
 
 
 --    sets.idle.Pet.Engaged.Nuke = set_combine(sets.idle.Pet.Engaged, 
@@ -154,7 +154,7 @@ function init_gear_sets()
 		{
 		head="Naga Somen",neck="Shepherd's chain",ear1="Handler's earring",ear2="Handler's earring +1",
 		body="Naga Samue",hands="Naga tekko",
-		back="Contriver's cape",waist="Ukko Sash",legs="Pitre Churidars",feet="Rao sune-ate +1"})
+		back="Visucius's Mantle",waist="Ukko Sash",legs="Pitre Churidars",feet="Rao sune-ate +1"})
 
 --    sets.idle.Pet.Engaged.Magic = set_combine(sets.idle.Pet.Engaged.Nuke, 
 --		{legs="Pitre Churidars",feet=gear.pet_tpfeet})
@@ -162,7 +162,7 @@ function init_gear_sets()
 		{
 		head="Naga Somen",neck="Shepherd's chain",ear1="Handler's earring",ear2="Handler's earring +1",
 		body="Naga Samue",hands="Naga tekko",
-		back="Contriver's cape",waist="Ukko Sash",legs="Pitre Churidars"})
+		back="Visucius's",waist="Ukko Sash",legs="Pitre Churidars"})
 
 
     -- Defense sets

@@ -124,17 +124,17 @@ function init_gear_sets()
         back="Alaunus's Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Vanya Clogs"}
 
     sets.midcast.Cure = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
-        head="Gendewitha Caubeen",neck="Incanter's torque",ear1="Beatific Earring",ear2="Healing Earring",
+        head="Gendewitha Caubeen +1",neck="Incanter's torque",ear1="Mendicant's Earring",ear2="Glorious Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Sirona's Ring",
         back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
 
     sets.midcast.Curaga = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
-        head="Gendewitha Caubeen",neck="Incanter's torque",ear1="Glorious Earring",ear2="Orison Earring",
+        head="Gendewitha Caubeen +1",neck="Incanter's torque",ear1="Glorious Earring",ear2="Mendicant's Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Lebeche Ring",ring2="Globidonta Ring",
         back="Mending Cape",waist="Pythia sash +1",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
 
     sets.midcast.CureMelee = {ammo="Sapience Orb",
-        head="Gendewitha Caubeen",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Orison Earring",
+        head="Gendewitha Caubeen +1",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Mendicant's Earring",
         body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Sirona's Ring",
         back="Mending Cape",waist=gear.ElementalObi,legs="Ebers pantaloons +1",feet="Piety Duckbills +1"}
 

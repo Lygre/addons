@@ -84,7 +84,7 @@ function init_gear_sets()
         back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 	
 	--main="Apamajas II",sub="Arbuda grip", 
-    sets.precast.FC.Stun = {ammo="Sapience orb",
+    sets.precast.FC.Stun = {main="Grioavolr",sub="Clerisy strap",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
@@ -245,9 +245,9 @@ function init_gear_sets()
 
     sets.midcast.Aspir = sets.midcast.Drain
 
-    sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Hasty Pinion +1",
+    sets.midcast.Stun = {main="Grioavolr",sub="Clerisy Strap",ammo="Hasty Pinion +1",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
-        body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        body=gear.merlbody_nuke,hands="Gendewitha Gages +1",ring1="Rahab Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
     sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Grioavolr",

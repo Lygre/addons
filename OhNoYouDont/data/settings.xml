@@ -204,6 +204,15 @@
 					<3>Dreadstorm</3>
 				</stun>
 			</khimaira>
+                                            <arciela>
+                                                        <stun>
+                                                                <1>Naakual's Vengeance</1>
+                                                                <2>Ascension</2>
+                                                                <3>Descension</3>
+                                                                <4>Unceasing Dread</4>
+                                                        </stun>
+                                             </arciela>
+                                                       
         </profile>
     </global>
 </settings>
