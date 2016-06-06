@@ -48,6 +48,7 @@ function user_setup()
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Normal', 'Acc', 'Mod')
     state.PhysicalDefenseMode:options('Evasion', 'PDT')
+    state.IdleMode:options('Normal','STP')
 
 
     gear.default.weaponskill_neck = "Asperity Necklace"
@@ -78,13 +79,11 @@ function init_gear_sets()
     sets.ExtraRegen = {head="Ocelomeh Headpiece +1"}
     sets.Kiting = {feet="Skadi's Jambeaux +1"}
 
-    sets.buff['Sneak Attack'] = {
-        hands="Pillager's Armlets +1",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Canny Cape",waist="Chaac Belt",legs="Samnuha tights" }
+    sets.buff['Sneak Attack'] = {}
+        --hands="Pillager's Armlets +1"}
 
-    sets.buff['Trick Attack'] = {
-        hands="Pillager's Armlets +1",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Canny Cape",waist="Chaac Belt",legs="Samnuha tights" }
+    sets.buff['Trick Attack'] = {}
+        --hands="Pillager's Armlets +1" }
 
     -- Actions we want to use to tag TH.
     sets.precast.Step = sets.TreasureHunter
@@ -170,7 +169,10 @@ function init_gear_sets()
 
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {})
     sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS["Rudra's Storm"], {})
-    sets.precast.WS["Rudra's Storm"].Mod = set_combine(sets.precast.WS["Rudra's Storm"], {})
+    sets.precast.WS["Rudra's Storm"].Mod = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Falcon Eye",
+        head=gear.adhemarhead_melee,ear2="Ishvara earring",
+        ring2="Petrov Ring",
+        back="Rancorous mantle",feet=gear.hercfeet_ta })
     sets.precast.WS["Rudra's Storm"].SA = set_combine(sets.precast.WS["Rudra's Storm"].Mod, {
         })
     sets.precast.WS["Rudra's Storm"].TA = set_combine(sets.precast.WS["Rudra's Storm"].Mod, {
@@ -254,6 +256,11 @@ function init_gear_sets()
         head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare earring",
         body="Abnoba kaftan",hands="Floral gauntlets",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
         back="Solemnity cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet }
+
+        sets.idle.STP = set_combine(sets.idle,{ammo="Ginsen",
+            neck="Combatant's torque",ear1="Telos earring",ear2="Enervating earring",
+            ring1="Rajas Ring",ring2="Petrov Ring",
+            legs="Samnuha tights",feet="Carmine Greaves"})
 
 
     -- Defense sets

@@ -74,4 +74,4 @@ end
 
 -- register event callbacks
 
-windower.raw_register_event('incoming chunk', check_incoming_chunk)
+windower.register_event('incoming chunk', check_incoming_chunk)

@@ -26,8 +26,6 @@ box:show()
 frame_time = 0
 debuffed_mobs = {}
 
-helixes = S{278,279,280,281,282,283,284,285,
-    885,886,887,888,889,890,891,892}
 
 buffs = {
     [33] = S{569,1782,1851,1952,3024,3093,3132,3220,3664,3978,57,530}, --Haste
@@ -155,12 +153,12 @@ function apply_dot(target, spell)
     end
 end
 
-function apply_helix(target, spell)
+--[[function apply_helix(target, spell)
     if not debuffed_mobs[target] then
         debuffed_mobs[target] = {}
     end
     debuffed_mobs[target][186] = {name = spell, timer = os.clock() + 230}
-end
+end]]
 
 function show_bio(debuff_table)
     if debuff_table then
