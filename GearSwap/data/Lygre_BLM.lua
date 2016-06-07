@@ -98,9 +98,16 @@ function init_gear_sets()
 }
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
+	sets.precast.FC['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
 
-
+	sets.precast.FC['Enfeebling Magic'] = sets.precast.FC
+	sets.precast.FC['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
+	
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
+	sets.precast.FC['Elemental Magic'].DeatMB = sets.precast.FC.DeatMB
+
+	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
+	sets.precast.FC['Healing Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	--Death sets
 	sets.DeatCastIdle = {
@@ -175,8 +182,6 @@ function init_gear_sets()
 		feet=gear.merlfeet_mb 
 	}
 			
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
-
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
 
 	-- Weaponskill sets
@@ -193,6 +198,7 @@ function init_gear_sets()
 
 
 	---- Midcast Sets ----
+	--sets.midcast.DeatMB = sets.precast.FC['Death']
 
 	sets.midcast.FastRecast = {ammo="Sapience orb",
 		head=gear.merlhead_nuke,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
@@ -203,38 +209,36 @@ function init_gear_sets()
 		head="Telchine cap",neck="Incanter's Torque",ear1="Mendicant's earring",ear2="Beatific Earring",
 		body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Haoma's Ring",
 		back="Solemnity cape",waist="Bishop's sash",legs="Telchine braconi",feet="Vanya clogs"}
-
 	sets.midcast.Curaga = sets.midcast.Cure
+	sets.midcast['Healing Magic'] = sets.midcast.Cure
 
 	sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
 		head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
 		body="Telchine Chasuble",hands="Telchine gloves",
 		back="Fi follet cape",waist="Olympus sash",legs="Telchine Braconi",feet="Telchine pigaches"}
-	sets.midcast['Enhancing Magic'].DeatMB = set_combine(sets.midcast['Enhancing Magic'].DeatMB, {ring2="Mephitas's Ring"})
 
-	sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'],
+	sets.midcast['Enhancing Magic'].Refresh = set_combine(sets.midcast['Enhancing Magic'],
 		{head="Amalric coif",waist="Gishdubar sash"})
 
-	sets.midcast.Haste = set_combine(sets.midcast['Enhancing Magic'], 
+	sets.midcast['Enhancing Magic'].Haste = set_combine(sets.midcast['Enhancing Magic'], 
 		{ammo="Sapience orb",
 		neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
 		ring1="Prolix ring",
 		back="Swith cape +1",waist="Ninurta's sash"})
 
-	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'],
+	sets.midcast['Enhancing Magic'].Phalanx = set_combine(sets.midcast['Enhancing Magic'],
 		{feet=gear.merllegs_dt})
 
-	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
+	sets.midcast['Enhancing Magic'].Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
 		{head="Amalric coif",waist="Emphatikos Rope",legs="Shedir seraweels"})
 
-	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], 
+	sets.midcast['Enhancing Magic'].Stoneskin = set_combine(sets.midcast['Enhancing Magic'], 
 		{waist="Siegel Sash",neck="Nodens gorget",legs="Shedir seraweels"})
 
 	sets.midcast['Enfeebling Magic'] = {main="Lathi",sub="Mephitis Grip",ammo="Pemphredo tathlum",
 		head="Amalric coif",neck="Incanter's torque",ear1="Gwati Earring",ear2="Digni. Earring",
 		body=gear.merlbody_nuke,hands="Amalric gages",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-		back="Aurist's cape +1",waist="Luminary sash",legs="Psycloth lappas",feet="Medium's sabots"}
-		
+		back="Aurist's cape +1",waist="Luminary sash",legs="Psycloth lappas",feet="Medium's sabots"}	
 	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'], { })	
 
 	sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
@@ -244,17 +248,12 @@ function init_gear_sets()
 		body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
 		back="Bane Cape",waist="Luminary sash",legs="Psycloth lappas",feet=gear.merlfeet_da }
 
-	sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
-	sets.midcast.Aspir = sets.midcast.Drain
-	
-	sets.midcast.Aspir.DeatMB = set_combine(sets.DeatCastIdle,
-		{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
-
-	sets.midcast.Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
+	sets.midcast['Dark Magic'].Drain = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
+	sets.midcast['Dark Magic'].Aspir = sets.midcast['Dark Magic'].Drain
+	sets.midcast['Dark Magic'].Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
 		body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
-
 
 	-- Elemental Magic sets
 	
@@ -299,6 +298,16 @@ function init_gear_sets()
 		body="Twilight Cloak",hands="Amalric Gages",ring1="Weatherspoon Ring",ring2="Archon Ring",
 		back="Bane cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_refresh }
 
+	--Death Midcast subtables
+	sets.midcast['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
+	sets.midcast['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
+	sets.midcast['Dark Magic'].DeatMB =  sets.DeatCastIdle
+	sets.midcast['Healing Magic'].DeatMB = set_combine(sets.DeatCastIdle,
+		{ear2="Mendicant's earring",
+		ring1="Lebeche Ring",
+		back="Tempered Cape +1",feet="Telchine Pigaches"})
+	sets.midcast['Dark Magic'].Aspir.DeatMB = set_combine(sets.DeatCastIdle,{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
+	sets.midcast.FastRecast.DeatMB = sets.precast.FC.DeatMB
 
 
 	-- Minimal damage gear for procs.
@@ -425,7 +434,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
 				equip(sets.midcast['Death'])
 			else
 				state.CastingMode:set('DeatMB')
-				--classes.CustomClass = 'DeatMB'
+				classes.CustomClass = 'DeatMB'
 			end
 		end
 	end
@@ -584,6 +593,7 @@ function job_state_change(stateField, newValue, oldValue)
 	if stateField == 'Death Mode' then
 		if newValue == true then
 			state.OffenseMode:set('Normal')
+			state.CastingMode:set('DeatMB')
 			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
 		end
 	end            
@@ -686,5 +696,5 @@ end]]
 
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
-	set_macro_page(1, 5)
+	set_macro_page(1, 19)
 end
