@@ -540,8 +540,8 @@ function init_gear_sets()
 		back=gear.blucape_ws,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.HighAcc = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
-		body="Adhemar Jacket",hands="Leyline gloves",ring1="Rajas Ring",ring2="Epona's Ring",
-		back=gear.blucape_ws,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
+		back=gear.blucape_dw,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
@@ -569,8 +569,8 @@ function init_gear_sets()
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.HighAcc.HighHaste = {ammo="Falcon Eye",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Brutal earring",
-		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
 		back=gear.blucape_dw,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT.HighHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
@@ -600,7 +600,7 @@ function init_gear_sets()
 		back=gear.blucape_ws,waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_ta }
 	sets.engaged.DW.HighAcc.MaxHaste = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
-		body="Sayadio's kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+		body="Sayadio's kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
 		back=gear.bluecape_ws,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_acc }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
