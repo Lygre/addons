@@ -106,9 +106,7 @@ function init_gear_sets()
 
 	sets.midcast.FastRecast = {}
 
-	sets.midcast.Cure = {}
-	sets.midcast.Curaga = sets.midcast.Cure
-	sets.midcast['Healing Magic'] = sets.midcast.Cure
+	sets.midcast['Healing Magic'] = {}
 
 	sets.midcast['Enhancing Magic'] = {}
 
