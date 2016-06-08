@@ -79,7 +79,8 @@ function define_global_sets()
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
 	
-	
+	gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
+	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
 	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
@@ -203,6 +204,11 @@ function user_midcast(spell, action, spellMap, eventArgs)
 	end
 end
 
+--[[function user_aftercast(spell, action, spellMap, eventArgs)
+	if spell.action_type == 'Weaponskill' then
+		windower.add_to_chat(5, 'TP Return: '..player.tp..'')
+	end
+end]]
 -- Global intercept on buff change.
 function user_buff_change(buff, gain, eventArgs)
 	-- Create a timer when we gain weakness.  Remove it when weakness is gone.
@@ -215,7 +221,7 @@ function user_buff_change(buff, gain, eventArgs)
 	end
 end
 
-sprint_enabled = true
+--[[sprint_enabled = true
 sprint_speed = 60
 prev_update = nil
 
@@ -226,7 +232,7 @@ windower.raw_register_event('incoming chunk',function(id, original, modified, in
             return original:sub(1, 44) .. 'C':pack(sprint_speed) .. original:sub(46)
         end
     end
-end)
+end)]]
 
 fixed_pos = ''
 fixed_ts = os.time()

@@ -208,7 +208,7 @@ function job_setup()
 	send_command('bind ^F5 input /Entomb')
 	send_command('bind !F5 input /Tenebralcrush')
 	send_command('bind @F5 input /anvillightning')
-    send_command('bind ^F6 input /defender')
+	send_command('bind ^F6 input /defender')
 
 	update_combat_form()
 	select_default_macro_book()
@@ -245,7 +245,7 @@ function init_gear_sets()
 	sets.buff.Convergence = {}
 	sets.buff.Diffusion = {feet="Luhlaza Charuqs +1"}
 	sets.buff.Enchainment = {}
-	sets.buff.Efflux = {back="Rosmerta's Cape",legs="Hashishin Tayt +1"}
+	sets.buff.Efflux = {back=gear.blucape_ws,legs="Hashishin Tayt +1"}
 
 	
 	-- Precast Sets
@@ -277,7 +277,7 @@ function init_gear_sets()
 	sets.precast.WS = {ammo="Ginsen",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
 		body="Abnoba kaftan",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_melee}
+		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_melee}
 	
 	sets.precast.WS.acc = set_combine(sets.precast.WS, {ear1="Telos Earring"})
 
@@ -300,12 +300,12 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
 		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's ring",
-		back="Rosmerta's Cape",waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
+		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
 	
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
 		body="Sayadio's kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
+		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	
 
 
@@ -535,13 +535,13 @@ function init_gear_sets()
 		body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
 	sets.engaged.DW.Acc = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Eabani earring",ear2="Suppanomimi",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Eabani earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
-	sets.engaged.DW.HighAcc = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
+		back=gear.blucape_ws,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
+	sets.engaged.DW.HighAcc = {ammo="Falcon Eye",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Leyline gloves",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+		back=gear.blucape_ws,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
@@ -565,13 +565,13 @@ function init_gear_sets()
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee}
 	sets.engaged.DW.Acc.HighHaste = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
-	sets.engaged.DW.HighAcc.HighHaste = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
+		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee }
+	sets.engaged.DW.HighAcc.HighHaste = {ammo="Falcon Eye",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Brutal earring",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+		back=gear.blucape_dw,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT.HighHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
@@ -595,13 +595,13 @@ function init_gear_sets()
 		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta }
 	sets.engaged.DW.Acc.MaxHaste = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Digni. earring",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Digni. earring",
 		body="Abnoba kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_ta }
-	sets.engaged.DW.HighAcc.MaxHaste = {ammo="Ginsen",
-		head="Carmine mask",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
+		back=gear.blucape_ws,waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_ta }
+	sets.engaged.DW.HighAcc.MaxHaste = {ammo="Falcon Eye",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
 		body="Sayadio's kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Rosmerta's Cape",waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_acc }
+		back=gear.bluecape_ws,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_acc }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Defending ring", ring2="Epona's Ring",
@@ -644,56 +644,66 @@ end
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
 function job_precast(spell, action, spellMap, eventArgs)
 	if buffactive.sleep or buffactive.petrification or buffactive.terror then 
-	   add_to_chat(3,'Canceling Action - Asleep/Petrified/Terror!')
-	   cancel_spell()
-	   return
+		add_to_chat(3,'Canceling Action - Asleep/Petrified/Terror!')
+		cancel_spell()
+		return
 	else 
 		handle_equipping_gear(player.status)
 		if spell.name ~= 'Ranged' and spell.type ~= 'WeaponSkill' and spell.type ~= 'Scholar' then
-		  	if spell.action_type == 'Ability' then
+			if spell.action_type == 'Ability' then
 				if buffactive.Amnesia then
-			  		cancel_spell()
-			  		add_to_chat(3,'Canceling Ability - Currently have Amnesia')
-			  		return
+					cancel_spell()
+					add_to_chat(3,'Canceling Ability - Currently have Amnesia')
+					return
 				else
-			  		recasttime = windower.ffxi.get_ability_recasts()[spell.recast_id] 
-			  		if spell and (recasttime >= 1) then
+					recasttime = windower.ffxi.get_ability_recasts()[spell.recast_id] 
+					if spell and (recasttime >= 1) then
 						add_to_chat(3,'Ability Canceled:'..spell.name..' - Waiting on Recast:(seconds) '..recasttime..'')
 						cancel_spell()
 						return
-			  		end
+					end
 				end
-	  		elseif spell.action_type == 'Magic' then
+			elseif spell.action_type == 'Magic' then
 				if buffactive.Silence then
-		  			cancel_spell()
-		  			echodrops = "Echo Drops"
-		  			numberofecho = player.inventory[echodrops].count
-		  			if numberofecho < 4 then 
+					cancel_spell()
+					echodrops = "Echo Drops"
+					numberofecho = player.inventory[echodrops].count
+					if numberofecho < 4 then 
 						add_to_chat(2,'Silenced - Consider using Echo Drops. QTY:'..player.inventory[echodrops].count..'')
-		  			else 
+					else 
 						add_to_chat(3,'Silenced - Using Echo Drops.  QTY:'..numberofecho..'')
 						send_command('input /item "Echo Drops" <me>')
-		  			end
-		  			return
+					end
+					return
 				else 
-		  			if (spell.name == 'Refresh' and (buffactive["Sublimation: Complete"] or buffactive["Sublimation: Activated"]) and spell.target.type == 'SELF') then
-		   				add_to_chat(3,'Cancel Refresh - Have Sublimation Already')
-		   				cancel_spell()
-		   				return
-		  			end
-		  			recasttime = windower.ffxi.get_spell_recasts()[spell.recast_id] / 100
-		  			if spell and (recasttime >= 1) then
-		   				add_to_chat(2,'Spell Canceled:'..spell.name..' - Waiting on Recast:(seconds) '..recasttime..'')
-		   				cancel_spell()
-		   				return
-		  			end
+					if (spell.name == 'Refresh' and (buffactive["Sublimation: Complete"] or buffactive["Sublimation: Activated"]) and spell.target.type == 'SELF') then
+						add_to_chat(3,'Cancel Refresh - Have Sublimation Already')
+						cancel_spell()
+						return
+					end
+					recasttime = windower.ffxi.get_spell_recasts()[spell.recast_id] / 100
+					if spell and (recasttime >= 1) then
+						add_to_chat(2,'Spell Canceled:'..spell.name..' - Waiting on Recast:(seconds) '..recasttime..'')
+						cancel_spell()
+						return
+					end
 				end
-	  		end
-		end
-		if spell.type == 'WeaponSkill' and buffactive.Amnesia then
-		  	cancel_spell()
-		  	add_to_chat(3,'Canceling Ability - Currently have Amnesia')
-		  	return      
+			end
+		elseif spell.type == 'WeaponSkill' then
+			if spell.target.distance > spell.range then
+				eventArgs.cancel = true
+				windower.add_to_chat(3,'Target too far, cancelling Weaponskill: '..spell.english..'')
+			elseif midaction() then
+				eventArgs.cancel = true
+				windower.add_to_chat(3,'Currently midaction, cancelling Weaponskill: '..spell.english..'')				
+			elseif player.tp < 1000 then
+				eventArgs.cancel = true
+				windower.add_to_chat(3,'Not enough TP, cancelling Weaponskill: '..spell.english..'')
+			elseif buffactive.amnesia then
+				eventArgs.cancel = true
+				add_to_chat(3,'Canceling Ability - Currently have Amnesia')
+				return      
+			end
 		end
 		if unbridled_spells:contains(spell.english) and not (state.Buff['Unbridled Learning'] or buffactive['Unbridled Wisdom']) then
 			eventArgs.cancel = true
@@ -720,6 +730,12 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 	-- If in learning mode, keep on gear intended to help with that, regardless of action.
 	if state.OffenseMode.value == 'Learning' then
 		equip(sets.Learning)
+	end
+end
+
+function job_aftercast(spell, action, spellMap, eventArgs)
+	if spell.type == 'Weaponskill' and not spell.interrupted then
+		windower.add_to_chat(5, 'TP Return ['..spell.english..']: '..player.tp..'')
 	end
 end
 

@@ -81,6 +81,7 @@ function init_gear_sets()
 		{main="Queller Rod",sub="Genmei Shield",
 		body="Heka's Kalasiris",feet="Hygieia Clogs"})
 		
+    sets.precast.FC.Impact = {head=empty,body="Twilight Cloak"}
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     sets.precast.FC.CureSolace = sets.precast.FC.Cure
     -- CureMelee spell map should default back to Healing Magic.
@@ -186,7 +187,7 @@ function init_gear_sets()
 		{main="Ababinili +1",sub="Fulcio grip",ammo="Homiliary",
 		feet="Ebers duckbills +1"})
     sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {main="Bolelabunga",sub="Genmei Shield",
-        body="Piety Briault +1",hands="Ebers mitts +1"})
+        head="Inyanga tiara +1",body="Piety Briault +1",hands="Ebers mitts +1"})
 
     sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring1="Sheltered Ring",feet="Piety Duckbills +1"})
 
@@ -206,9 +207,9 @@ function init_gear_sets()
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Mephitis Grip",ammo="Pemphredo Tathlum",
-        head=gear.chirhead,neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
-        body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon Ring",
-        back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
+        head="Inyanga tiara +1",neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
+        body=gear.chirbody,hands="Inyanga Dastanas +1",ring1="Globidonta ring",ring2="Weatherspoon Ring",
+        back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Inyanga crackows +1"}
 
     sets.midcast.IntEnfeebles = {main="Ababinili +1", sub="Mephitis grip",ammo="Pemphredo Tathlum",
         head=gear.chirhead,neck="incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
@@ -294,9 +295,9 @@ function init_gear_sets()
 		}
 	
     sets.defense.MDT = {main="Mafic Cudgel", sub="Genmei shield",ammo="Vanir battery",
-        head=gear.chirhead_block,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body=gear.chirbody,hands=gear.chirhands_macc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-        back="Solemnity cape",waist="Slipor sash",legs=gear.chirlegs_block,feet="Vanya clogs"}
+        head="Inyanga tiara +1",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body=gear.chirbody,hands="Inyanga Dastanas +1",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity cape",waist="Slipor sash",legs="Inyanga shalwar +1",feet="Inyanga crackows +1"}
 
     sets.Kiting = {feet="Herald's gaiters"}
 
@@ -338,7 +339,7 @@ function pretarget(spell, action, spellMap, eventArgs)
 		eventArgs.cancel = true
 		send_command('input /item "Echo Drops" <me>')
 	end
-    if T{"Cure","Cure II","Cure III","Cure IV"}:contains(spell.name) and spell.target.type == 'PLAYER' and not spell.target.charmed and state.AutoAga.value then
+    --[[if T{"Cure","Cure II","Cure III","Cure IV"}:contains(spell.name) and spell.target.type == 'PLAYER' and not spell.target.charmed and state.AutoAga.value then
         if not party_index_lookup(spell.target.name) then
             return
         end
@@ -346,9 +347,9 @@ function pretarget(spell, action, spellMap, eventArgs)
         local hpp_deficit = 0
         local memindex = party_index_lookup(spell.target.name)
         for i=party.count,1,-1 do
-            --[[local current_int = i - 1
+            local current_int = i - 1
             local current_mem = i - current_int 
-            while current_int > 0 do]]
+            while current_int > 0 do
             if i ~= memindex then
                 local memdist = (party[i].x - party[memindex].x)^2 + (party[i].y - party[memindex].y)^2 + (party[i].z - party[memindex].z)^2
                 if math.sqrt(memdist) < 15 then
@@ -369,7 +370,11 @@ function pretarget(spell, action, spellMap, eventArgs)
                 send_command('input /ma "Curaga III" '..spell.target.name)
             end
         end         
-    end 
+    end]]
+    if spell.name == 'Impact' then
+        equip(sets.precast.FC.Impact)
+        eventArgs.handled = true
+    end
 end 
 
 
@@ -396,16 +401,11 @@ Defense									= S{'Stoneskin'}
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
 function job_precast(spell, action, spellMap, eventArgs)
     if spell.english == "Impact" then
-        equip(set_combine(sets.precast.FC,{body="Twilight Cloak"}))
+        equip(sets.precast.FC,sets.precast.FC.Impact)
     end
     if spell.english == "Paralyna" and buffactive.Paralyzed then
         -- no gear swaps if we're paralyzed, to avoid blinking while trying to remove it.
         eventArgs.handled = true
-    end
-    if spell.skill == 'Healing Magic' then
-        gear.default.obi_back = "Mending Cape"
-    else
-        gear.default.obi_back = "Toro Cape"
     end
 end
 
