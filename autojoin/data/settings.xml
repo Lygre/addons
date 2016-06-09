@@ -6,6 +6,9 @@
         <mode>whitelist</mode>
         <whitelist />
     </global>
+    <antrax>
+        <whitelist>Lyger,Lygre</whitelist>
+    </antrax>
     <lygre>
         <mode>blacklist</mode>
     </lygre>

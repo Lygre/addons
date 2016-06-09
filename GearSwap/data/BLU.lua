@@ -690,7 +690,8 @@ function job_precast(spell, action, spellMap, eventArgs)
 				end
 			end
 		elseif spell.type == 'WeaponSkill' then
-			if spell.target.distance > spell.range then
+			local ws_dist = 6
+			if spell.target.distance > ws_dist then
 				eventArgs.cancel = true
 				windower.add_to_chat(3,'Target too far, cancelling Weaponskill: '..spell.english..'')
 			elseif midaction() then
