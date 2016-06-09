@@ -6,7 +6,6 @@
 -- Elemental mappings for element relationships and certain types of spells and gear.
 -------------------------------------------------------------------------------------------------------------------
 
--- Basic elements
 elements = {}
 
 elements.list = S{'Light','Dark','Fire','Ice','Wind','Earth','Lightning','Water'}
@@ -166,7 +165,7 @@ spell_maps = {
     ['Teleport-Vahzl']='Teleport',['Recall-Pashh']='Teleport',['Recall-Meriph']='Teleport',['Recall-Jugner']='Teleport',
     ['Valor Minuet']='Minuet',['Valor Minuet II']='Minuet',['Valor Minuet III']='Minuet',['Valor Minuet IV']='Minuet',['Valor Minuet V']='Minuet',
     ["Knight's Minne"]='Minne',["Knight's Minne II"]='Minne',["Knight's Minne III"]='Minne',["Knight's Minne IV"]='Minne',["Knight's Minne V"]='Minne',
-    ['Advancing March']='March',['Victory March']='March',
+    ['Advancing March']='March',['Victory March']='March',['Honor March']='March', --Whether you want this mapped or not is highly dependent on your BRD lua
     ['Sword Madrigal']='Madrigal',['Blade Madrigal']='Madrigal',
     ["Hunter's Prelude"]='Prelude',["Archer's Prelude"]='Prelude',
     ['Sheepfoe Mambo']='Mambo',['Dragonfoe Mambo']='Mambo',
@@ -179,6 +178,7 @@ spell_maps = {
     ['Fire Carol II']='Carol',['Ice Carol II']='Carol',['Wind Carol II']='Carol',['Earth Carol II']='Carol',['Lightning Carol II']='Carol',['Water Carol II']='Carol',['Light Carol II']='Carol',['Dark Carol II']='Carol',
     ['Foe Lullaby']='Lullaby',['Foe Lullaby II']='Lullaby',['Horde Lullaby']='Lullaby',['Horde Lullaby II']='Lullaby',
     ['Fire Threnody']='Threnody',['Ice Threnody']='Threnody',['Wind Threnody']='Threnody',['Earth Threnody']='Threnody',['Lightning Threnody']='Threnody',['Water Threnody']='Threnody',['Light Threnody']='Threnody',['Dark Threnody']='Threnody',
+    ['Fire Threnody II']='Threnody',['Ice Threnody II']='Threnody',['Wind Threnody II']='Threnody',['Earth Threnody II']='Threnody',['Lightning Threnody II']='Threnody',['Water Threnody II']='Threnody',['Light Threnody II']='Threnody',['Dark Threnody II']='Threnody',
     ['Battlefield Elegy']='Elegy',['Carnage Elegy']='Elegy',
     ['Foe Requiem']='Requiem',['Foe Requiem II']='Requiem',['Foe Requiem III']='Requiem',['Foe Requiem IV']='Requiem',['Foe Requiem V']='Requiem',['Foe Requiem VI']='Requiem',['Foe Requiem VII']='Requiem',
     ['Utsusemi: Ichi']='Utsusemi',['Utsusemi: Ni']='Utsusemi',['Utsusemi: San']='Utsusemi',
@@ -190,8 +190,8 @@ spell_maps = {
     ['Doton: San'] = 'ElementalNinjutsu',['Huton: San'] = 'ElementalNinjutsu',['Hyoton: San'] = 'ElementalNinjutsu',
     ['Banish']='Banish',['Banish II']='Banish',['Banish III']='Banish',['Banishga']='Banish',['Banishga II']='Banish',
     ['Holy']='Holy',['Holy II']='Holy',['Drain']='Drains',['Drain II']='Drains',['Aspir']='Aspirs',['Aspir II']='Aspirs',['Aspir III']='Aspirs',
-    ['Absorb-Str']='Absorb',['Absorb-Dex']='Absorb',['Absorb-Vit']='Absorb',['Absorb-Agi']='Absorb',['Absorb-Int']='Absorb',['Absorb-Mnd']='Absorb',['Absorb-Chr']='Absorb',
-    ['Absorb-Acc']='Absorb',['Absorb-TP']='Absorb',['Absorb-Attri']='Absorb',
+    ['Absorb-STR']='Absorb',['Absorb-DEX']='Absorb',['Absorb-VIT']='Absorb',['Absorb-AGI']='Absorb',['Absorb-INT']='Absorb',['Absorb-MND']='Absorb',['Absorb-CHR']='Absorb',
+    ['Absorb-ACC']='Absorb',['Absorb-TP']='Absorb',['Absorb-Attri']='Absorb',
     ['Burn']='ElementalEnfeeble',['Frost']='ElementalEnfeeble',['Choke']='ElementalEnfeeble',['Rasp']='ElementalEnfeeble',['Shock']='ElementalEnfeeble',['Drown']='ElementalEnfeeble',
     ['Pyrohelix']='Helix',['Cryohelix']='Helix',['Anemohelix']='Helix',['Geohelix']='Helix',['Ionohelix']='Helix',['Hydrohelix']='Helix',['Luminohelix']='Helix',['Noctohelix']='Helix',
     ['Pyrohelix II']='Helix',['Cryohelix II']='Helix',['Anemohelix II']='Helix',['Geohelix II']='Helix',['Ionohelix II']='Helix',['Hydrohelix II']='Helix',['Luminohelix II']='Helix',['Noctohelix II']='Helix',
