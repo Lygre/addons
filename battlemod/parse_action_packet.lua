@@ -193,76 +193,76 @@ function parse_action_packet(act)
 
 --                if m.message == 93 or m.message == 273 then m.status=color_it('Vanish',color_arr['statuscol']) end
 
-                -- Special Message Handling
-                if m.message == 93 or m.message == 273 then
-                    m.status=color_it('Vanish',color_arr['statuscol'])
-                elseif m.message == 522 and simplify then
-                    targ = targ..' (stunned)'
-                elseif T{158,188,245,324,592,658}:contains(m.message) and simplify then
-                    -- When you miss a WS or JA. Relevant for condensed battle.
-                    m.status = 'Miss' --- This probably doesn't work due to the if a==nil statement below.
-                elseif m.message == 653 or m.message == 654 then
-                    m.status = color_it('Immunobreak',color_arr['statuscol'])
-                elseif m.message == 655 or m.message == 656 then
-                    m.status = color_it('Completely Resists',color_arr['statuscol'])
-                elseif m.message == 85 or m.message == 284 then
-                    m.status = color_it('Resists',color_arr['statuscol'])
-                elseif m.message == 351 then
-                    m.status = color_it('status ailments',color_arr['statscol'])
-                    m.simp_name = color_it('remedy',color_arr['itemcol'])
-                elseif T{75,114,156,189,248,283,312,323,336,355,408,422,423,425,659}:contains(m.message) then
-                    m.status = color_it('No effect',color_arr['statuscol']) -- The status code for "No Effect" is 255, so it might actually work without this line
-                end
-                if m.message == 188 then
-                    m.simp_name = m.simp_name..' (Miss)'
-            --    elseif m.message == 189 then
-            --        m.simp_name = m.simp_name..' (No Effect)'
-                elseif T{78,198,328}:contains(m.message) then
-                    m.simp_name = '(Too Far)'
-                end
-                local msg,numb = simplify_message(m.message)
-                if not color_arr[act.actor.owner or act.actor.type] then windower.add_to_chat(123,'Battlemod error, missing filter:'..tostring(act.actor.owner)..' '..tostring(act.actor.type)) end
-                if m.fields.status then numb = m.status else numb = pref_suf((m.cparam or m.param),m.message) end
-    
-                if msg and m.message == 70 and not simplify then -- fix pronoun on parry
-                    if act.actor.race == 0 then
-                        msg = msg:gsub(' his ',' its ')
-                    elseif female_races:contains(act.actor.race) then
-                        msg = msg:gsub(' his ',' her ')
-                    end
-                end
-            
-                windower.add_to_chat(color,make_condensedamage_number(m.number)..( (msg or tostring(m.message))
-                    :gsub('${spell}',color_it(act.action.spell or 'ERROR 111',color_arr.spellcol))
-                    :gsub('${ability}',color_it(act.action.ability or 'ERROR 112',color_arr.abilcol))
-                    :gsub('${item}',color_it(act.action.item or 'ERROR 113',color_arr.itemcol))
-                    :gsub('${item2}',color_it(act.action.item2 or 'ERROR 121',color_arr.itemcol))
-                    :gsub('${weapon_skill}',color_it(act.action.weapon_skill or 'ERROR 114',color_arr.wscol))
-                    :gsub('${abil}',m.simp_name or 'ERROR 115')
-                    :gsub('${numb}',numb or 'ERROR 116')
-                    :gsub('${actor}',color_it(act.actor.name or 'ERROR 117',color_arr[act.actor.owner or act.actor.type]))
-                    :gsub('${target}',targ)
-                    :gsub('${lb}','\7')
-                    :gsub('${number}',act.action.number or m.param)
-                    :gsub('${status}',m.status or 'ERROR 120')
-                    :gsub('${gil}',m.param..' gil')))
-                m.message = 0
-            end
-            if m.has_add_effect and m.add_effect_message ~= 0 and add_effect_valid[act.category] then
-                local targ = assemble_targets(act.actor,v.target,act.category,m.add_effect_message)
-                local color = color_filt(res.action_messages[m.add_effect_message].color,v.target[1].id==Self.id)
-                local sc_index 
-                sc_index = table.find(skillchain_arr['Skillchains'],string.gsub(string.find(res.action_messages[m.add_effect_message].en, '[%u][%l+]%.'), '%.', ':'))
-                if m.add_effect_message > 287 and m.add_effect_message < 303 then m.simp_add_name = skillchain_arr['Skillchains'][sc_index]
-				elseif m.add_effect_message > 766 and m.add_effect_message < 769 then m.simp_add_name = skillchain_arr['Skillchains'][sc_index]
-                elseif m.add_effect_message > 384 and m.add_effect_message < 399 then m.simp_add_name = skillchain_arr['Skillchains'][sc_index]
-				elseif m.add_effect_message > 768 and m.add_effect_message < 771 then m.simp_add_name = skillchain_arr['Skillchains'][sc_index]
-                elseif m.add_effect_message ==603 then m.simp_add_name = 'TH'
-                else m.simp_add_name = 'AE'
-                end
-                local msg,numb = simplify_message(m.add_effect_message)
-                if m.add_effect_fields.status then numb = m.add_effect_status else numb = pref_suf((m.cadd_effect_param or m.add_effect_param),m.add_effect_message) end
-                if not act.action then
+				-- Special Message Handling
+				if m.message == 93 or m.message == 273 then
+					m.status=color_it('Vanish',color_arr['statuscol'])
+				elseif m.message == 522 and simplify then
+					targ = targ..' (stunned)'
+				elseif T{158,188,245,324,592,658}:contains(m.message) and simplify then
+					-- When you miss a WS or JA. Relevant for condensed battle.
+					m.status = 'Miss' --- This probably doesn't work due to the if a==nil statement below.
+				elseif m.message == 653 or m.message == 654 then
+					m.status = color_it('Immunobreak',color_arr['statuscol'])
+				elseif m.message == 655 or m.message == 656 then
+					m.status = color_it('Completely Resists',color_arr['statuscol'])
+				elseif m.message == 85 or m.message == 284 then
+					m.status = color_it('Resists',color_arr['statuscol'])
+				elseif m.message == 351 then
+					m.status = color_it('status ailments',color_arr['statscol'])
+					m.simp_name = color_it('remedy',color_arr['itemcol'])
+				elseif T{75,114,156,189,248,283,312,323,336,355,408,422,423,425,659}:contains(m.message) then
+					m.status = color_it('No effect',color_arr['statuscol']) -- The status code for "No Effect" is 255, so it might actually work without this line
+				end
+				if m.message == 188 then
+					m.simp_name = m.simp_name..' (Miss)'
+			--    elseif m.message == 189 then
+			--        m.simp_name = m.simp_name..' (No Effect)'
+				elseif T{78,198,328}:contains(m.message) then
+					m.simp_name = '(Too Far)'
+				end
+				local msg,numb = simplify_message(m.message)
+				if not color_arr[act.actor.owner or act.actor.type] then windower.add_to_chat(123,'Battlemod error, missing filter:'..tostring(act.actor.owner)..' '..tostring(act.actor.type)) end
+				if m.fields.status then numb = m.status else numb = pref_suf((m.cparam or m.param),m.message) end
+	
+				if msg and m.message == 70 and not simplify then -- fix pronoun on parry
+					if act.actor.race == 0 then
+						msg = msg:gsub(' his ',' its ')
+					elseif female_races:contains(act.actor.race) then
+						msg = msg:gsub(' his ',' her ')
+					end
+				end
+			
+				windower.add_to_chat(color,make_condensedamage_number(m.number)..( (msg or tostring(m.message))
+					:gsub('${spell}',color_it(act.action.spell or 'ERROR 111',color_arr.spellcol))
+					:gsub('${ability}',color_it(act.action.ability or 'ERROR 112',color_arr.abilcol))
+					:gsub('${item}',color_it(act.action.item or 'ERROR 113',color_arr.itemcol))
+					:gsub('${item2}',color_it(act.action.item2 or 'ERROR 121',color_arr.itemcol))
+					:gsub('${weapon_skill}',color_it(act.action.weapon_skill or 'ERROR 114',color_arr.wscol))
+					:gsub('${abil}',m.simp_name or 'ERROR 115')
+					:gsub('${numb}',numb or 'ERROR 116')
+					:gsub('${actor}',color_it(act.actor.name or 'ERROR 117',color_arr[act.actor.owner or act.actor.type]))
+					:gsub('${target}',targ)
+					:gsub('${lb}','\7')
+					:gsub('${number}',act.action.number or m.param)
+					:gsub('${status}',m.status or 'ERROR 120')
+					:gsub('${gil}',m.param..' gil')))
+				m.message = 0
+			end
+			if m.has_add_effect and m.add_effect_message ~= 0 and add_effect_valid[act.category] then
+				local targ = assemble_targets(act.actor,v.target,act.category,m.add_effect_message)
+				local color = color_filt(res.action_messages[m.add_effect_message].color,v.target[1].id==Self.id)
+				if m.add_effect_message > 287 and m.add_effect_message < 303 then m.simp_add_name = skillchain_arr[m.add_effect_message-287]
+				--elseif m.add_effect_message > 766 and m.add_effect_message < 769 then m.simp_add_name = skillchain_arr[sc_index]					
+				--elseif (m.add_effect_message > 766 and m.add_effect_message < 769) then m.simp_add_name = skillchain_arr[m.add_effect_message-766]
+				elseif m.add_effect_message > 384 and m.add_effect_message < 399 then m.simp_add_name = skillchain_arr[m.add_effect_message-384]
+				--elseif m.add_effect_message > 768 and m.add_effect_message < 771 then m.simp_add_name = skillchain_arr[sc_index]
+				--elseif (m.add_effect_message > 768 and m.add_effect_message < 771) then m.simp_add_name = skillchain_arr[m.add_effect_message-768]
+				elseif m.add_effect_message ==603 then m.simp_add_name = 'TH'
+				else m.simp_add_name = 'AE'
+				end
+				local msg,numb = simplify_message(m.add_effect_message)
+				if m.add_effect_fields.status then numb = m.add_effect_status else numb = pref_suf((m.cadd_effect_param or m.add_effect_param),m.add_effect_message) end
+				if not act.action then
 --                    windower.add_to_chat(color, 'act.action==nil : '..m.message..' - '..m.add_effect_message..' - '..msg)
 				else
 					windower.add_to_chat(color,make_condensedamage_number(m.add_effect_number)..(msg
