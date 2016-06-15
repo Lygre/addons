@@ -258,7 +258,7 @@ function init_gear_sets()
 	---------------------------------
 
 	sets.buff['Burst Affinity'] = {hands=gear.herchands_mb,feet="Hashishin Basmak +1"}
-	sets.buff['Chain Affinity'] = {head="Hashishin Kavuk", feet="Assimilator's Charuqs +1"}
+	sets.buff['Chain Affinity'] = {--[[head="Hashishin Kavuk",feet="Assimilator's Charuqs +1"]]}
 	sets.buff.Convergence = {}
 	sets.buff.Diffusion = {feet="Luhlaza Charuqs +1"}
 	sets.buff.Enchainment = {}
@@ -474,7 +474,7 @@ function init_gear_sets()
 	-- Sets to return to when not performing an action.
 
 	-- Gear for learning spells: +skill and AF hands.
-	sets.Learning = {ammo="Mavi Tathlum",hands="Magus Bazubands"}
+	sets.Learning = {ammo="Mavi Tathlum"}
 		--head="Luhlaza Keffiyeh",  
 		--body="Assimilator's Jubbah",hands="Magus Bazubands",
 		--back="Cornflower Cape",legs="Mavi Tayt +2",feet="Luhlaza Charuqs"}
@@ -739,16 +739,16 @@ function job_precast(spell, action, spellMap, eventArgs)
 		elseif spell.type == 'WeaponSkill' then
 			local ws_dist = 6
 			if spell.target.distance > ws_dist then
-				eventArgs.cancel = true
+				cancel_spell()
 				windower.add_to_chat(3,'Target too far, cancelling Weaponskill: '..spell.english..'')
 			elseif midaction() then
-				eventArgs.cancel = true
+				cancel_spell()
 				windower.add_to_chat(3,'Currently midaction, cancelling Weaponskill: '..spell.english..'')				
 			elseif player.tp < 1000 then
-				eventArgs.cancel = true
+				cancel_spell()
 				windower.add_to_chat(3,'Not enough TP, cancelling Weaponskill: '..spell.english..'')
 			elseif buffactive.amnesia then
-				eventArgs.cancel = true
+				cancel_spell()
 				add_to_chat(3,'Canceling Ability - Currently have Amnesia')
 				return      
 			end
@@ -782,7 +782,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 end
 
 function job_aftercast(spell, action, spellMap, eventArgs)
-	if spell.type == 'Weaponskill' and not spell.interrupted then
+	if spell.type == 'WeaponSkill' and not spell.interrupted then
 		windower.add_to_chat(5, 'TP Return ['..spell.english..']: '..player.tp..'')
 	end
 end
@@ -858,23 +858,23 @@ function determine_haste_group()
 	-----different setup
 	if buffactive[604] then --[604] is the resource id for Mighty Guard
 		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march then
+		if buffactive.march == 1 then
 			classes.CustomMeleeGroups:append('HighHaste')
 		end
-		if buffactive.haste or buffactive.march > 1 then
+		if buffactive.haste or buffactive.march == 2 then
 			classes.CustomMeleeGroups:append('MaxHaste')
 		end
-	elseif buffactive.march then
+	elseif buffactive.march == 1 then
 		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march > 1 then
+		if buffactive.march == 2 then
 			classes.CustomMeleeGroups:append('HighHaste')
 		end
-		if buffactive.haste > 0 then
+		if buffactive.haste then
 			classes.CustomMeleeGroups:append('MaxHaste')
 		end
 	elseif buffactive.haste then
 		classes.CustomMeleeGroups:append('HighHaste')
-		if buffactive.haste > 1 or buffactive.march then
+		if buffactive.haste == 2 or buffactive.march then
 			classes.CustomMeleeGroups:append('MaxHaste')
 		end
 	end
