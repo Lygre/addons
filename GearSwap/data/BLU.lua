@@ -231,6 +231,23 @@ function user_unload()
 	send_command('unbind ^`')
 	send_command('unbind !`')
 	send_command('unbind @`')
+	send_command('bind ^F1')
+	send_command('bind !F1')
+	send_command('bind @F1')
+	send_command('bind ^F2')
+	send_command('bind !F2')
+	send_command('bind @F2')
+	send_command('bind ^F3')
+	send_command('bind !F3')
+	send_command('bind @F3')
+	send_command('bind ^F4')
+	send_command('bind !F4')
+	send_command('bind @F4')
+	send_command('bind ^F5')
+	send_command('bind !F5')
+	send_command('bind @F5')
+	send_command('bind ^F6')
+
 end
 
 
@@ -559,6 +576,36 @@ function init_gear_sets()
 		body="Adhemar jacket", hands=gear.herchands_melee, ring1="Defending ring", ring2="Epona's Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 		
+		--Low Haste engaged sets, approx 15% haste
+	sets.engaged.DW.LowHaste = {ammo="Ginsen",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani earring",ear2="Suppanomimi",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+		back=gear.blucape_dw,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
+	sets.engaged.DW.Acc.LowHaste = {ammo="Ginsen",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee }
+	sets.engaged.DW.HighAcc.LowHaste = {ammo="Falcon Eye",
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
+		back=gear.blucape_dw,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+	sets.engaged.DW.PDT.LowHaste = {ammo="Brigantia pebble",
+		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
+		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings"}
+	sets.engaged.DW.Acc.PDT.LowHaste = {ammo="Ginsen",
+		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Genmei earring",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
+		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
+	sets.engaged.DW.Acc.MDT.LowHaste = {ammo="Ginsen",
+		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Sanare earring",
+		body="Adhemar jacket", hands=gear.herchands_melee, ring1="Defending ring", ring2="Epona's Ring",
+		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
+	sets.engaged.DW.Acc.Meva.LowHaste = {ammo="Ginsen",
+		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Eabani earring",
+		body="Adhemar jacket", hands=gear.herchands_melee, ring1="Defending ring", ring2="Epona's Ring",
+		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
+
 		--High Haste engaged sets, approx 30% haste
 	sets.engaged.DW.HighHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Suppanomimi",
@@ -749,7 +796,7 @@ end
 -- buff == buff gained or lost
 -- gain == true if the buff was gained, false if it was lost.
 function job_buff_change(buff, gain)
-	if S{'haste','march','embrava','haste samba','mighty guard'}:contains(buff:lower()) then
+	if S{'haste','march','embrava','mighty guard'}:contains(buff:lower()) then
 		determine_haste_group()
 		handle_equipping_gear(player.status)
 	elseif state.Buff[buff] ~= nil then
@@ -807,8 +854,32 @@ end
 function determine_haste_group()
 
 	classes.CustomMeleeGroups:clear()
-	
-	if buffactive[604] == 1 and buffactive.haste then
+
+	-----different setup
+	if buffactive[604] then --[604] is the resource id for Mighty Guard
+		classes.CustomMeleeGroups:append('LowHaste')
+		if buffactive.march then
+			classes.CustomMeleeGroups:append('HighHaste')
+		end
+		if buffactive.haste or buffactive.march > 1 then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	elseif buffactive.march then
+		classes.CustomMeleeGroups:append('LowHaste')
+		if buffactive.march > 1 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		end
+		if buffactive.haste > 0 then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	elseif buffactive.haste then
+		classes.CustomMeleeGroups:append('HighHaste')
+		if buffactive.haste > 1 or buffactive.march then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	end
+
+	--[[if buffactive[604] == 1 and buffactive.haste then
 		classes.CustomMeleeGroups:append('MaxHaste')
 	elseif buffactive.march == 2 and buffactive.haste then
 		classes.CustomMeleeGroups:append('MaxHaste')
@@ -820,7 +891,7 @@ function determine_haste_group()
 		classes.CustomMeleeGroups:append('HighHaste')
 	elseif buffactive.march == 2 then
 		classes.CustomMeleeGroups:append('HighHaste')
-	end
+	end]]
 end
 
 
