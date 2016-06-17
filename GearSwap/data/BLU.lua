@@ -857,25 +857,26 @@ function determine_haste_group()
 
 	-----different setup
 	if buffactive[604] then --[604] is the resource id for Mighty Guard
-		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march == 1 then
-			classes.CustomMeleeGroups:append('HighHaste')
-		end
-		if buffactive.haste or buffactive.march == 2 then
+		if (buffactive.haste or buffactive.march == 2) then
 			classes.CustomMeleeGroups:append('MaxHaste')
-		end
-	elseif buffactive.march == 1 then
-		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march == 2 then
+		elseif buffactive.march == 1 then
 			classes.CustomMeleeGroups:append('HighHaste')
+		else 
+			classes.CustomMeleeGroups:append('LowHaste')
 		end
+	elseif buffactive.march then
 		if buffactive.haste then
 			classes.CustomMeleeGroups:append('MaxHaste')
+		elseif buffactive.march == 2 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		else
+			classes.CustomMeleeGroups:append('LowHaste')
 		end
 	elseif buffactive.haste then
-		classes.CustomMeleeGroups:append('HighHaste')
-		if buffactive.haste == 2 or buffactive.march then
+		if (buffactive.haste == 2 or buffactive.march) then
 			classes.CustomMeleeGroups:append('MaxHaste')
+		else
+			classes.CustomMeleeGroups:append('HighHaste')
 		end
 	end
 
