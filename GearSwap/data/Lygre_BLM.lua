@@ -29,7 +29,8 @@ function job_setup()
 	state.MagicBurst = M(false, 'Magic Burst')
 	state.ConsMP = M(false, 'Conserve MP')
 	state.DeatCast = M(false, 'Death Mode')
-
+    element_table = L{'Stone','Aero','Blizzard','Fire','Water','Thunder'}
+    state.AOE = M(false, 'AOE')
 
 	lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
 		'Stone II', 'Water II', 'Aero II', 'Fire II', 'Blizzard II', 'Thunder II',
@@ -37,7 +38,22 @@ function job_setup()
 		'Stonega', 'Waterga', 'Aeroga', 'Firaga', 'Blizzaga', 'Thundaga',
 		'Stonega II', 'Waterga II', 'Aeroga II', 'Firaga II', 'Blizzaga II', 'Thundaga II'}
 
-	
+	degrade_array = {
+        ['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
+        ['Firega'] = {'Firaga','Firaga II','Firaga III','Firaja'},
+        ['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
+        ['Icega'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
+        ['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
+        ['Windga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
+        ['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+        ['Earthga'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
+        ['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
+        ['Lightningga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
+        ['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
+        ['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
+        ['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
+        ['Sleepgas'] = {'Sleepga','Sleepga II'}
+    }
 	-- Additional local binds
 	send_command('bind ^` gs c toggle MagicBurst')
 	send_command('bind !` gs c toggle ConsMP')
@@ -487,28 +503,36 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 
 end
 
+function nuke(spell, action, spellMap, eventArgs)
+    if state.AOE.value then
+        send_command('input /ma '..degrade_array[element_table:append('ga')][#degrade_array[element_table:append('ga')]]..' '..tostring(player.target.raw))
+    else
+        send_command('input /ma '..element_table..' VI '..tostring(player.target.raw))
+    end
+end
+
+function job_self_command(commandArgs, eventArgs)
+    if commandArgs[1] == 'element' then
+        if commandArgs[2] then
+            if tostring(element_table):contains(commandArgs[2]) then
+                element_table = commandArgs[2]
+            else
+                add_to_chat(5,'Incorrect Element value')
+                return
+            end
+        else
+            add_to_chat(5,'No element specified')
+        end
+    elseif commandArgs[1] == 'nuke' then
+        nuke()
+    end
+end
+
 
 function refine_various_spells(spell, action, spellMap, eventArgs)
 	local aspirs = S{'Aspir','Aspir II','Aspir III'}
 	local sleeps = S{'Sleep','Sleep II'}
 	local sleepgas = S{'Sleepga','Sleepga II'}
-
-	local degrade_array = {
-		['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
-		['Firega'] = {'Firaga','Firaga II','Firaga III','Firaja'},
-		['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
-		['Icega'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
-		['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
-		['Windga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
-		['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
-		['Earthga'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
-		['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
-		['Lightningga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
-		['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
-		['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
-		['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
-		['Sleepgas'] = {'Sleepga','Sleepga II'}
-	}
 
 	local newSpell = spell.english
 	local spell_recasts = windower.ffxi.get_spell_recasts()
