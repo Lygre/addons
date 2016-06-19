@@ -22,7 +22,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
 	state.OffenseMode:options('None', 'Normal')
-	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP', 'DeatMB')
+	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP')
 	state.IdleMode:options('Normal', 'PDT')
   
 	MagicBurstIndex = 0
@@ -114,16 +114,16 @@ function init_gear_sets()
 }
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
-	sets.precast.FC['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
+	--sets.precast.FC['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	sets.precast.FC['Enfeebling Magic'] = sets.precast.FC
-	sets.precast.FC['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
+	--sets.precast.FC['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
 	
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
-	sets.precast.FC['Elemental Magic'].DeatMB = sets.precast.FC.DeatMB
+	--sets.precast.FC['Elemental Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
-	sets.precast.FC['Healing Magic'].DeatMB = sets.precast.FC.DeatMB
+	--sets.precast.FC['Healing Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	--Death sets
 	sets.DeatCastIdle = {
@@ -231,7 +231,7 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
 		head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
 		body="Telchine Chasuble",hands="Telchine gloves",
-		back="Fi follet cape",waist="Olympus sash",legs="Telchine Braconi",feet="Telchine pigaches"}
+		legs="Telchine Braconi",feet="Telchine pigaches"}
 
 	sets.midcast['Enhancing Magic'].Refresh = set_combine(sets.midcast['Enhancing Magic'],
 		{head="Amalric coif",waist="Gishdubar sash"})
@@ -315,15 +315,16 @@ function init_gear_sets()
 		back="Bane cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_refresh }
 
 	--Death Midcast subtables
-	sets.midcast['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.midcast['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.midcast['Dark Magic'].DeatMB =  sets.DeatCastIdle
-	sets.midcast['Healing Magic'].DeatMB = set_combine(sets.DeatCastIdle,
+    sets.midcast.DeatMB = sets.midcast['Death']
+    sets.midcast.DeatMB['Enhancing Magic'] = set_combine(sets.precast.FC.DeatMB,sets.midcast['Enhancing Magic'])
+	sets.midcast.DeatMB['Enfeebling Magic'] = sets.precast.FC.DeatMB
+	sets.midcast.DeatMB['Dark Magic'] =  sets.DeatCastIdle
+	sets.midcast.DeatMB['Healing Magic'] = set_combine(sets.DeatCastIdle,
 		{ear2="Mendicant's earring",
 		ring1="Lebeche Ring",
 		back="Tempered Cape +1",feet="Telchine Pigaches"})
-	sets.midcast['Dark Magic'].Aspir.DeatMB = set_combine(sets.DeatCastIdle,{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
-	sets.midcast.FastRecast.DeatMB = sets.precast.FC.DeatMB
+	sets.midcast.DeatMB['Dark Magic'].Aspir = set_combine(sets.DeatCastIdle,{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
+	sets.midcast.DeatMB.FastRecast = sets.precast.FC.DeatMB
 
 
 	-- Minimal damage gear for procs.
@@ -423,7 +424,7 @@ function job_precast(spell, action, spellMap, eventArgs)
 			if spell.english == "Death" then
 				equip(sets.precast.FC['Death'])
 			else 
-				state.CastingMode:set('DeatMB')
+				--state.CastingMode:set('DeatMB')
 				classes.CustomClass = 'DeatMB'
 			end
 		end
@@ -449,7 +450,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
 			if spell.english == 'Death' then
 				equip(sets.midcast['Death'])
 			else
-				state.CastingMode:set('DeatMB')
+				--state.CastingMode:set('DeatMB')
 				classes.CustomClass = 'DeatMB'
 			end
 		end
@@ -617,7 +618,7 @@ function job_state_change(stateField, newValue, oldValue)
 	if stateField == 'Death Mode' then
 		if newValue == true then
 			state.OffenseMode:set('Normal')
-			state.CastingMode:set('DeatMB')
+			--state.CastingMode:set('DeatMB')
 			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
 		end
 	end            
