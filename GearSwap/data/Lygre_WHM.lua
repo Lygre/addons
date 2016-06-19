@@ -142,7 +142,7 @@ function init_gear_sets()
     sets.midcast.Cursna = {main="Ababinili +1",sub="Arbuda Grip",ammo="Sapience Orb",
         head="Ebers cap +1",neck="Malison Medallion",ear1="Loquacious earring",ear2="Enchanter earring +1",
         body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Haoma's Ring",ring2="Haoma's ring",
-        back="Alaunus's Cape",waist="Ninurta's sash",legs="Theophany Pantaloons +1",feet="Gendewitha Galoshes +1"}
+        back="Alaunus's Cape",waist="Ninurta's sash",legs="Piety Pantaloons +1",feet="Gendewitha Galoshes +1"}
 
     sets.midcast.StatusRemoval = {ammo="Sapience Orb",
         head="Ebers cap +1",neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",

@@ -65,8 +65,9 @@ function custom_aftermath_timers_precast(spell)
         local relic_ws = data.weaponskills.relic[player.equipment.main] or data.weaponskills.relic[player.equipment.range]
         local mythic_ws = data.weaponskills.mythic[player.equipment.main] or data.weaponskills.mythic[player.equipment.range]
         local empy_ws = data.weaponskills.empyrean[player.equipment.main] or data.weaponskills.empyrean[player.equipment.range]
-        
-        if not relic_ws and not mythic_ws and not empy_ws then
+        local aeonic_ws = data.weaponskills.aeonic[player.equipment.main] or data.weaponskills.aeonic[player.equipment.range]
+
+        if not relic_ws and not mythic_ws and not empy_ws and not aeonic_ws then
             return
         end
 
@@ -84,6 +85,7 @@ function custom_aftermath_timers_precast(spell)
                 info.aftermath.duration = 20
             end
         elseif spell.english == empy_ws then
+            --assumes 119 III weapon
             -- nothing can overwrite lvl 3
             if buffactive['Aftermath: Lv.3'] then
                 return
@@ -94,7 +96,7 @@ function custom_aftermath_timers_precast(spell)
             end
             
             -- duration is based on aftermath level
-            info.aftermath.duration = 30 * info.aftermath.level
+            info.aftermath.duration = 60 * info.aftermath.level
         elseif spell.english == mythic_ws then
             -- nothing can overwrite lvl 3
             if buffactive['Aftermath: Lv.3'] then
@@ -105,6 +107,7 @@ function custom_aftermath_timers_precast(spell)
                 return
             end
 
+
             -- Assume mythic is lvl 80 or higher, for duration
                         
             if info.aftermath.level == 1 then
@@ -114,6 +117,14 @@ function custom_aftermath_timers_precast(spell)
             else
                 info.aftermath.duration = 180
             end
+        elseif spell.english == aeonic_ws then
+            if buffactive['Aftermath: Lv.3'] then
+                return
+            end
+            if info.aftermath.level ~= 3 and buffactive['Aftermath: Lv.2'] then
+                return
+            end
+            info.aftermath.duration = 180
         end
     end
 end
@@ -128,7 +139,7 @@ function custom_aftermath_timers_aftercast(spell)
         send_command('timers d "Aftermath: Lv.1"')
         send_command('timers d "Aftermath: Lv.2"')
         send_command('timers d "Aftermath: Lv.3"')
-        send_command('timers c "'..aftermath_name..'" '..tostring(info.aftermath.duration)..' down abilities/00027.png')
+        send_command('timers c "'..aftermath_name..'" '..tostring(info.aftermath.duration)..' down')
 
         info.aftermath = {}
     end
