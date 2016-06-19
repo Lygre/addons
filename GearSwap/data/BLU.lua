@@ -610,7 +610,7 @@ function init_gear_sets()
 	sets.engaged.DW.HighHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee}
+		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee}
 	sets.engaged.DW.Acc.HighHaste = {ammo="Ginsen",
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
@@ -666,7 +666,7 @@ function init_gear_sets()
 		body="Adhemar jacket", hands=gear.herchands_acc , ring1="Defending ring", ring2="Epona's Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 		
-	sets.engaged.Meleeing = {main=gear.Colada_highd,sub=gear.Colada_datk}
+	sets.engaged.Meleeing = {main="Sequence",sub=gear.Colada_highd}
 
 	sets.engaged.Nuke = {main="Nibiru cudgel",sub="Nibiru cudgel"}
 
@@ -692,27 +692,27 @@ end
 function job_precast(spell, action, spellMap, eventArgs)
 	if buffactive.sleep or buffactive.petrification or buffactive.terror then 
 		add_to_chat(3,'Canceling Action - Asleep/Petrified/Terror!')
-		cancel_spell()
+		eventArgs.cancel = true
 		return
 	else 
 		handle_equipping_gear(player.status)
 		if spell.name ~= 'Ranged' and spell.type ~= 'WeaponSkill' and spell.type ~= 'Scholar' then
 			if spell.action_type == 'Ability' then
 				if buffactive.Amnesia then
-					cancel_spell()
+					eventArgs.cancel = true
 					add_to_chat(3,'Canceling Ability - Currently have Amnesia')
 					return
 				else
 					recasttime = windower.ffxi.get_ability_recasts()[spell.recast_id] 
 					if spell and (recasttime >= 1) then
 						add_to_chat(3,'Ability Canceled:'..spell.name..' - Waiting on Recast:(seconds) '..recasttime..'')
-						cancel_spell()
+						eventArgs.cancel = true
 						return
 					end
 				end
 			elseif spell.action_type == 'Magic' then
 				if buffactive.Silence then
-					cancel_spell()
+					eventArgs.cancel = true
 					echodrops = "Echo Drops"
 					numberofecho = player.inventory[echodrops].count
 					if numberofecho < 4 then 
@@ -723,15 +723,20 @@ function job_precast(spell, action, spellMap, eventArgs)
 					end
 					return
 				else 
+					if midaction() then
+						eventArgs.cancel = true
+						windower.add_to_chat(3,'Currently midaction, cancelling casting: '..spell.english..'')				
+						return
+					end
 					if (spell.name == 'Refresh' and (buffactive["Sublimation: Complete"] or buffactive["Sublimation: Activated"]) and spell.target.type == 'SELF') then
 						add_to_chat(3,'Cancel Refresh - Have Sublimation Already')
-						cancel_spell()
+						eventArgs.cancel = true
 						return
 					end
 					recasttime = windower.ffxi.get_spell_recasts()[spell.recast_id] / 100
 					if spell and (recasttime >= 1) then
 						add_to_chat(2,'Spell Canceled:'..spell.name..' - Waiting on Recast:(seconds) '..recasttime..'')
-						cancel_spell()
+						eventArgs.cancel = true
 						return
 					end
 				end
@@ -739,18 +744,20 @@ function job_precast(spell, action, spellMap, eventArgs)
 		elseif spell.type == 'WeaponSkill' then
 			local ws_dist = 6
 			if spell.target.distance > ws_dist then
-				cancel_spell()
+				eventArgs.cancel = true
 				windower.add_to_chat(3,'Target too far, cancelling Weaponskill: '..spell.english..'')
 			elseif midaction() then
-				cancel_spell()
+				eventArgs.cancel = true
 				windower.add_to_chat(3,'Currently midaction, cancelling Weaponskill: '..spell.english..'')				
 			elseif player.tp < 1000 then
-				cancel_spell()
+				eventArgs.cancel = true
 				windower.add_to_chat(3,'Not enough TP, cancelling Weaponskill: '..spell.english..'')
 			elseif buffactive.amnesia then
-				cancel_spell()
+				eventArgs.cancel = true
 				add_to_chat(3,'Canceling Ability - Currently have Amnesia')
 				return      
+			else 
+				custom_aftermath_timers_precast(spell)
 			end
 		end
 		if unbridled_spells:contains(spell.english) and not (state.Buff['Unbridled Learning'] or buffactive['Unbridled Wisdom']) then
@@ -784,6 +791,7 @@ end
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if spell.type == 'WeaponSkill' and not spell.interrupted then
 		windower.add_to_chat(5, 'TP Return ['..spell.english..']: '..player.tp..'')
+		custom_aftermath_timers_aftercast(spell)
 	end
 end
 

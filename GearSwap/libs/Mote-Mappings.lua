@@ -127,6 +127,22 @@ data.weaponskills.empyrean = {
     ["Hvergelmir"] = "Myrkr",
     ["Gandiva"] = "Jishnu's Radiance",
     ["Armageddon"] = "Wildfire"}
+    data.weaponskills.aeonic = {
+    ["Godhands"] = "Shijin Spiral",
+    ["Aeneas"] = "Exenterator",
+    ["Sequence"] = "Requiescat",
+    ["Lionheart"] = "Resolution",
+    ["Tri-Edge"] = "Ruinator",
+    ["Chango"] = "Upheaval",
+    ["Anguta"] = "Entropy",
+    ["Trishula"] = "Stardiver",
+    ["Heishi Shorinken"] = "Blade: Shun",
+    ["Dojikiri Yasutsuna"] = "Tachi: Shoha",
+    ["Tishtrya"] = "Realmrazer",
+    ["Khatvanga"] = "Shattersoul",
+    ["Fail-Not"] = "Apex Arrow",
+    ["Fomalhaut"] = "Last Stand"
+}
 
 -- Weaponskills that can be used at range.
 data.weaponskills.ranged = S{"Flaming Arrow", "Piercing Arrow", "Dulling Arrow", "Sidewinder", "Arching Arrow",
