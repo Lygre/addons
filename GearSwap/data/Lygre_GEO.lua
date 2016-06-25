@@ -210,6 +210,11 @@ function init_gear_sets()
         body="Vrikodara jupon",hands="Geomancy Mitaines +1",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Slipor sash",legs=gear.merllegs_dt,feet="Azimuth gaiters +1"}
 
+    sets.idle.MDT = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
+        head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body="Vrikodara Jupon",hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+        back="Solemnity cape",waist="Slipor Sash",legs="Assiduity pants +1",feet="Vanya clogs"}
+
     -- .Pet sets are for when Luopan is present.
     sets.idle.Pet = {main="Solstice",sub="Genmei shield",range="Dunna",ammo=empty,
         head="Azimuth Hood +1",neck="Loricate torque +1",ear1="Handler's Earring",ear2="Handler's Earring +1",
@@ -219,6 +224,11 @@ function init_gear_sets()
     sets.idle.PDT.Pet = set_combine(sets.idle.Pet, 
 		{body="Vrikodara jupon",
 		legs="Psycloth lappas"})
+
+    sets.idle.MDT.Pet = {main="Bolelabunga",sub="Genmei Shield",ammo="Homiliary",
+        head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body="Vrikodara Jupon",hands=gear.chirhands_sc,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
+        back="Solemnity cape",waist="Slipor Sash",legs="Assiduity pants +1",feet="Vanya clogs"}
 
     -- .Indi sets are for when an Indi-spell is active.
     sets.idle.Indi = set_combine(sets.idle, {neck="Loricate torque +1"})
