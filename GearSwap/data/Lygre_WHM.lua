@@ -66,7 +66,7 @@ function init_gear_sets()
     sets.precast.FC = {ammo="Sapience orb",
 		main="Grioavolr",sub="Vivid Strap",
         head="Nahtirah Hat",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-        body="Anhur Robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Alaunus's Cape",waist="Witful Belt",legs="Lengo Pants",feet="Regal Pumps"}
         
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
@@ -79,7 +79,7 @@ function init_gear_sets()
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], 
 		{main="Queller Rod",sub="Genmei Shield",
-		body="Heka's Kalasiris",feet="Hygieia Clogs"})
+		body="Inyanga jubbah +1",feet="Hygieia Clogs"})
 		
     sets.precast.FC.Impact = {head=empty,body="Twilight Cloak"}
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -109,7 +109,7 @@ function init_gear_sets()
     
     sets.midcast.FastRecast = {main="Grioavolr",sub="Vivid strap",ammo="Sapience Orb",
         head="Nahtirah Hat",neck="Orison locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
-        body="Shango robe",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+        body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Alaunus's cape",waist="Witful belt",legs="Lengo Pants",feet="Regal pumps"}
     
     ------------ Cure sets-------------------
@@ -197,7 +197,7 @@ function init_gear_sets()
 
     sets.midcast['Divine Magic'] = {main="Ababinili +1",sub="Niobid Strap",ammo="Pemphredo Tathlum",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
-        body="Vanya Robe",hands="Fanatic gloves",ring1="Globidonta ring",ring2="Weatherspoon Ring",
+        body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Globidonta ring",ring2="Weatherspoon Ring",
         back="Alaunus's cape",waist="Luminary Sash",legs="Telchine Braconi",feet="Medium's sabots"}
 
     sets.midcast['Dark Magic'] = {main="Rubicundity", sub="Genbu's Shield",ammo="Pemphredo Tathlum",
@@ -243,13 +243,13 @@ function init_gear_sets()
 
 	sets.idle.MDT = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
         head="Befouled crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body="Ebers bliaud +1",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Inyanga jubbah +1",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Vanya clogs"}
 
 
     sets.idle.Town = {main="Bolelabunga", sub="Genmei Shield",ammo="Homiliary",
         head="Befouled Crown",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi earring",
-        body="Ebers Bliaud +1",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Inyanga jubbah +1",hands=gear.chirhands_sc,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity Cape",waist="Slipor sash",legs="Assiduity pants +1",feet="Herald's gaiters"}
     
     sets.idle.Weak = {main="Bolelabunga", sub="Genmei shield",ammo="Homiliary",
@@ -296,7 +296,7 @@ function init_gear_sets()
 	
     sets.defense.MDT = {main="Mafic Cudgel", sub="Genmei shield",ammo="Vanir battery",
         head="Inyanga tiara +1",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body=gear.chirbody,hands="Inyanga Dastanas +1",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        body="Inyanga jubbah +1",hands="Inyanga Dastanas +1",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
         back="Solemnity cape",waist="Slipor sash",legs="Inyanga shalwar +1",feet="Inyanga crackows +1"}
 
     sets.Kiting = {feet="Herald's gaiters"}

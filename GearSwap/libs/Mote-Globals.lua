@@ -27,9 +27,9 @@ function define_global_sets()
 	gear.DarkRing = {}
 
 	-- Default items for utility gear values.
-	gear.default.weaponskill_neck = "Asperity Necklace"
-	gear.default.weaponskill_waist = "Caudata Belt"
-	gear.default.obi_waist = "Cognition Belt"
+	gear.default.weaponskill_neck = "Fotia Gorget"
+	gear.default.weaponskill_waist = "Fotia Belt"
+	gear.default.obi_waist = "Hachirin-no-obi"
 	gear.default.obi_back = "Toro Cape"
 	gear.default.obi_ring = "Strendu Ring"
 	gear.default.fastcast_staff = ""

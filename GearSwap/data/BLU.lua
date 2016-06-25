@@ -214,6 +214,8 @@ function job_setup()
 	select_default_macro_book()
 	determine_haste_group()
 	
+	send_command('wait 2;input /lockstyleset 13')
+
 	organizer_items = {
 		genshield = "Genmei Shield"
 		}

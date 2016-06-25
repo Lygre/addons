@@ -34,6 +34,8 @@ function get_sets()
     
     -- Load and initialize the include file.
     include('Mote-Include.lua')
+    include('organizer-lib')
+
 end
 
 
@@ -67,7 +69,6 @@ function user_setup()
 
     gear.default.weaponskill_neck = "Asperity Necklace"
     gear.default.weaponskill_waist = "Caudata Belt"
-    gear.AugQuiahuiz = {name="Quiahuiz Trousers", augments={'Haste+2','"Snapshot"+2','STR+8'}}
 
     -- Additional local binds
     send_command('bind ^= gs c cycle mainstep')
@@ -111,12 +112,12 @@ function init_gear_sets()
     sets.precast.Waltz = {ammo="Sonia's Plectrum",
         head="Horos Tiara",ear1="Roundel Earring",
         body="Maxixi Casaque",hands="Buremte Gloves",ring1="Asklepian Ring",
-        back="Toetapper Mantle",waist="Caudata Belt",legs="Nahtirah Trousers",feet="Maxixi Toe Shoes"}
+        back="Toetapper Mantle",waist="Caudata Belt",legs="Samnuha Tights",feet="Rawhide Boots"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
     
-    sets.precast.Samba = {head="Maxixi Tiara"}
+    sets.precast.Samba = {--[[head="Maxixi Tiara",]]back="Senuna's mantle"}
 
     sets.precast.Jig = {legs="Horos Tights", feet="Maxixi Toe Shoes"}
 
@@ -124,115 +125,115 @@ function init_gear_sets()
     sets.precast.Step['Feather Step'] = {feet="Charis Shoes +2"}
 
     sets.precast.Flourish1 = {}
-    sets.precast.Flourish1['Violent Flourish'] = {ear1="Psystorm Earring",ear2="Lifestorm Earring",
-        body="Horos Casaque",hands="Buremte Gloves",ring2="Sangoma Ring",
-        waist="Chaac Belt",legs="Iuitl Tights",feet="Iuitl Gaiters +1"} -- magic accuracy
+    sets.precast.Flourish1['Violent Flourish'] = {ear1="Dignitary's Earring",ear2="Gwati Earring",
+        body="Horos Casaque",hands="Buremte Gloves",ring1="Weatherspoon Ring", ring2="Sangoma Ring",
+        waist="Chaac Belt",legs="Rawhide Trousers",feet=gear.hercfeet_acc} -- magic accuracy
     sets.precast.Flourish1['Desperate Flourish'] = {ammo="Charis Feather",
-        head="Whirlpool Mask",neck="Ej Necklace",
+        head="Dampening Tam",neck="Combatant's Torque",
         body="Horos Casaque",hands="Buremte Gloves",ring1="Beeline Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"} -- acc gear
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc} -- acc gear
 
     sets.precast.Flourish2 = {}
-    sets.precast.Flourish2['Reverse Flourish'] = {hands="Charis Bangles +2"}
+    sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +1"}
 
     sets.precast.Flourish3 = {}
-    sets.precast.Flourish3['Striking Flourish'] = {body="Charis Casaque +2"}
-    sets.precast.Flourish3['Climactic Flourish'] = {head="Charis Tiara +2"}
+    sets.precast.Flourish3['Striking Flourish'] = {body="Maculele Casaque +1"}
+    sets.precast.Flourish3['Climactic Flourish'] = {head="Maculele Tiara +1"}
 
     -- Fast cast sets for spells
     
-    sets.precast.FC = {ammo="Impatiens",head="Haruspex Hat",ear2="Loquacious Earring",hands="Thaumas Gloves",ring1="Prolix Ring"}
+    sets.precast.FC = {ammo="Sapience Orb",
+        neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+        body=gear.fc_tbody, hands="Leyline Gloves",ring1="Rahab Ring", ring2="Weatherspoon Ring",
+        legs="Rawhide Trousers",feet=gear.hercfeet_fc }
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 
        
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
-    sets.precast.WS = {ammo="Thew Bomblet",
-        head="Whirlpool Mask",neck=gear.ElementalGorget,ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Qaaxo Harness",hands="Buremte Gloves",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist=gear.ElementalBelt,legs="Manibozho Brais",feet="Iuitl Gaiters +1"}
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Honed Tathlum", back="Toetapper Mantle"})
+    sets.precast.WS = {ammo="Jukukik feather",
+        head="Dampening Tam",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Falcon Eye", back="Toetapper Mantle"})
     
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {neck="Houyi's Gorget",
-        hands="Iuitl Wristbands",ring1="Stormsoul Ring",
-        waist="Caudata Belt",legs="Nahtirah Trousers"})
-    sets.precast.WS['Exenterator'].Acc = set_combine(sets.precast.WS['Exenterator'], {ammo="Honed Tathlum", back="Toetapper Mantle"})
+        hands="Adhemar Wristbands",ring1="Stormsoul Ring",
+        waist="Caudata Belt",legs="Samnuha Tights"})
+    sets.precast.WS['Exenterator'].Acc = set_combine(sets.precast.WS['Exenterator'], {ammo="Falcon Eye", back="Toetapper Mantle"})
     sets.precast.WS['Exenterator'].Fodder = set_combine(sets.precast.WS['Exenterator'], {waist=gear.ElementalBelt})
 
-    sets.precast.WS['Pyrrhic Kleos'] = set_combine(sets.precast.WS, {hands="Iuitl Wristbands"})
-    sets.precast.WS['Pyrrhic Kleos'].Acc = set_combine(sets.precast.WS.Acc, {hands="Iuitl Wristbands"})
+    sets.precast.WS['Pyrrhic Kleos'] = set_combine(sets.precast.WS, {hands="Adhemar Wristbands"})
+    sets.precast.WS['Pyrrhic Kleos'].Acc = set_combine(sets.precast.WS.Acc, {hands="Adhemar Wristbands"})
 
-    sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {ammo="Charis Feather",head="Uk'uxkaj Cap",neck="Rancor Collar"})
-    sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS['Evisceration'], {ammo="Honed Tathlum", back="Toetapper Mantle"})
+    sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {ammo="Charis Feather"})
+    sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS['Evisceration'], {ammo="Falcon Eye", back="Toetapper Mantle"})
 
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {ammo="Charis Feather",ear1="Brutal Earring",ear2="Moonshade Earring"})
-    sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Honed Tathlum", back="Toetapper Mantle"})
+    sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Falcon Eye", back="Toetapper Mantle"})
 
-    sets.precast.WS['Aeolian Edge'] = {ammo="Charis Feather",
-        head="Wayfarer Circlet",neck="Stoicheion Medal",ear1="Friomisi Earring",ear2="Moonshade Earring",
-        body="Wayfarer Robe",hands="Wayfarer Cuffs",ring1="Acumen Ring",ring2="Demon's Ring",
-        back="Toro Cape",waist="Chaac Belt",legs="Shneddick Tights +1",feet="Wayfarer Clogs"}
+    sets.precast.WS['Aeolian Edge'] = {}
     
-    sets.precast.Skillchain = {hands="Charis Bangles +2"}
+    sets.precast.Skillchain = {hands="Maculele Bangles +1"}
     
     
     -- Midcast Sets
     
     sets.midcast.FastRecast = {
-        head="Felistris Mask",ear2="Loquacious Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",
-        legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,ear2="Loquacious Earring",
+        body="Samnuha Coat",hands="Adhemar Wristbands",
+        legs="Samnuha Tights",feet=gear.hercfeet_acc}
         
     -- Specific spells
     sets.midcast.Utsusemi = {
-        head="Felistris Mask",neck="Ej Necklace",ear2="Loquacious Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Beeline Ring",
-        back="Toetapper Mantle",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,neck="Combatant's Torque",ear2="Loquacious Earring",
+        body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Beeline Ring",
+        back="Toetapper Mantle",legs="Samnuha Tights",feet=gear.hercfeet_acc}
 
     
     -- Sets to return to when not performing an action.
     
     -- Resting sets
-    sets.resting = {head="Ocelomeh Headpiece +1",neck="Wiglen Gorget",
-        ring1="Sheltered Ring",ring2="Paguroidea Ring"}
-    sets.ExtraRegen = {head="Ocelomeh Headpiece +1"}
+    sets.resting = {neck="Loricate Torque +1",
+        ring1="Defending Ring",ring2=gear.DarkRing.PDT}
+    sets.ExtraRegen = {}
     
 
     -- Idle sets
 
-    sets.idle = {ammo="Iron Gobbet",
-        head="Felistris Mask",neck="Wiglen Gorget",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Shadow Mantle",waist="Flume Belt",legs="Qaaxo Tights",feet="Skadi's Jambeaux +1"}
+    sets.idle = {ammo="Brigantia Pebble",
+        head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Flume Belt +1",legs="Samnuha Tights",feet="Skadi's Jambeaux +1"}
 
     sets.idle.Town = {main="Izhiikoh", sub="Sabebus",ammo="Charis Feather",
-        head="Whirlpool Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Skadi's Jambeaux +1"}
+        head="Dampening Tam",neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet="Skadi's Jambeaux +1"}
     
     sets.idle.Weak = {ammo="Iron Gobbet",
-        head="Felistris Mask",neck="Wiglen Gorget",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Buremte Gloves",ring1="Sheltered Ring",ring2="Paguroidea Ring",
-        back="Shadow Mantle",waist="Flume Belt",legs="Kaabnax Trousers",feet="Skadi's Jambeaux +1"}
+        head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Buremte Gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Flume Belt +1",legs="Samnuha Tights",feet="Skadi's Jambeaux +1"}
     
     -- Defense sets
 
     sets.defense.Evasion = {
-        head="Felistris Mask",neck="Ej Necklace",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2=gear.DarkRing.physical,
-        back="Toetapper Mantle",waist="Flume Belt",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,neck="Combatant's Torque",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2=gear.DarkRing.PDT,
+        back="Toetapper Mantle",waist="Flume Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
 
-    sets.defense.PDT = {ammo="Iron Gobbet",
-        head="Felistris Mask",neck="Twilight Torque",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.physical,
-        back="Shadow Mantle",waist="Flume Belt",legs="Nahtirah Trousers",feet="Iuitl Gaiters +1"}
+    sets.defense.PDT = {ammo="Brigantia Pebble",
+        head="Lithelimb cap",neck="Loricate Torque +1",ear1="Genmei Earring",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Solemnity Cape",waist="Flume Belt +1",legs="Samnuha Tights",feet="Ahosi Leggings"}
 
-    sets.defense.MDT = {ammo="Demonry Stone",
-        head="Wayfarer Circlet",neck="Twilight Torque",
-        body="Qaaxo Harness",hands="Wayfarer Cuffs",ring1="Defending Ring",ring2="Shadow Ring",
-        back="Engulfer Cape",waist="Flume Belt",legs="Wayfarer Slops",feet="Wayfarer Clogs"}
+    sets.defense.MDT = {ammo="Vanir Battery",
+        head="Dampening Tam",neck="Warder's charm",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body="Adhemar jacket",hands="Wayfarer Cuffs",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+        back="Engulfer Cape",waist="Flume Belt +1",legs="Samnuha Tights",feet="Ahosi Leggings"}
 
     sets.Kiting = {feet="Skadi's Jambeaux +1"}
 
@@ -245,119 +246,119 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs=gear.AugQuiahuiz,feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
 
     sets.engaged.Fodder = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Charis Casaque +2",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs=gear.AugQuiahuiz,feet="Horos Toe Shoes"}
+        head=gear.adhemarhead_melee,neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Maculele Casaque +1",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
     sets.engaged.Fodder.Evasion = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs=gear.AugQuiahuiz,feet="Horos Toe Shoes"}
+        head=gear.adhemarhead_melee,neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
 
-    sets.engaged.Acc = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Charis Casaque +2",hands="Iuitl Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+    sets.engaged.Acc = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Maculele Casaque +1",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
     sets.engaged.Evasion = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Ej Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
     sets.engaged.PDT = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Twilight Torque",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Shadow Mantle",waist="Patentia Sash",legs="Qaaxo Tights",feet="Iuitl Gaiters +1"}
-    sets.engaged.Acc.Evasion = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Ej Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
-    sets.engaged.Acc.PDT = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Twilight Torque",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+        head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.engaged.Acc.Evasion = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
+    sets.engaged.Acc.PDT = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
 
     -- Custom melee group: High Haste (2x March or Haste)
     sets.engaged.HighHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Manibozho Boots"}
+        head=gear.adhemarhead_melee,neck="Asperity Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 
     sets.engaged.Fodder.HighHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Charis Casaque +2",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs=gear.AugQuiahuiz,feet="Horos Toe Shoes"}
+        head=gear.adhemarhead_melee,neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Maculele Casaque +1",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
     sets.engaged.Fodder.Evasion.HighHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Charis Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
+        head=gear.adhemarhead_melee,neck="Charis Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
 
-    sets.engaged.Acc.HighHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+    sets.engaged.Acc.HighHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Asperity Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
     sets.engaged.Evasion.HighHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Ej Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
-    sets.engaged.Acc.Evasion.HighHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Ej Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+        head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.engaged.Acc.Evasion.HighHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
     sets.engaged.PDT.HighHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Twilight Torque",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Shadow Mantle",waist="Patentia Sash",legs="Qaaxo Tights",feet="Iuitl Gaiters +1"}
-    sets.engaged.Acc.PDT.HighHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Twilight Torque",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+        head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.engaged.Acc.PDT.HighHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
 
 
     -- Custom melee group: Max Haste (2x March + Haste)
     sets.engaged.MaxHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Windbuffet Belt",legs=gear.AugQuiahuiz,feet="Manibozho Boots"}
+        head=gear.adhemarhead_melee,neck="Asperity Necklace",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 
     -- Getting Marches+Haste from Trust NPCs, doesn't cap delay.
     sets.engaged.Fodder.MaxHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Thaumas Coat",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs=gear.AugQuiahuiz,feet="Horos Toe Shoes"}
+        head=gear.adhemarhead_melee,neck="Asperity Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Thaumas Coat",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee}
     sets.engaged.Fodder.Evasion.MaxHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
-        body="Qaaxo Harness",hands="Maxixi Bangles",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Atheling Mantle",waist="Patentia Sash",legs="Kaabnax Trousers",feet="Manibozho Boots"}
+        head=gear.adhemarhead_melee,neck="Asperity Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 
-    sets.engaged.Acc.MaxHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+    sets.engaged.Acc.MaxHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Asperity Necklace",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
     sets.engaged.Evasion.MaxHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Ej Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Windbuffet Belt",legs="Kaabnax Trousers",feet="Iuitl Gaiters +1"}
-    sets.engaged.Acc.Evasion.MaxHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Ej Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Kaabnax Trousers",feet="Qaaxo Leggings"}
+        head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.engaged.Acc.Evasion.MaxHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Combatant's Torque",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
     sets.engaged.PDT.MaxHaste = {ammo="Charis Feather",
-        head="Felistris Mask",neck="Twilight Torque",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Qaaxo Harness",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Shadow Mantle",waist="Windbuffet Belt",legs="Qaaxo Tights",feet="Iuitl Gaiters +1"}
-    sets.engaged.Acc.PDT.MaxHaste = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Twilight Torque",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Iuitl Vest",hands="Iuitl Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-        back="Toetapper Mantle",waist="Hurch'lan Sash",legs="Qaaxo Tights",feet="Qaaxo Leggings"}
+        head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Solemnity Cape",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+    sets.engaged.Acc.PDT.MaxHaste = {ammo="Falcon Eye",
+        head="Dampening Tam",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Suppanomimi",
+        body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
+        back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet="Qaaxo Leggings"}
 
 
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Saber Dance'] = {legs="Horos Tights"}
-    sets.buff['Climactic Flourish'] = {head="Charis Tiara +2"}
+    sets.buff['Climactic Flourish'] = {head="Maculele Tiara +1"}
 end
 
 
@@ -538,7 +539,7 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function determine_haste_group()
-    -- We have three groups of DW in gear: Charis body, Charis neck + DW earrings, and Patentia Sash.
+    -- We have three groups of DW in gear: Charis body, Charis neck + DW earrings, and Reiki Yotai.
 
     -- For high haste, we want to be able to drop one of the 10% groups (body, preferably).
     -- High haste buffs:
