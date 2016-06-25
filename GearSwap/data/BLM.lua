@@ -22,14 +22,15 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
 	state.OffenseMode:options('None', 'Normal')
-	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP', 'DeatMB')
+	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP')
 	state.IdleMode:options('Normal', 'PDT')
   
 	MagicBurstIndex = 0
 	state.MagicBurst = M(false, 'Magic Burst')
 	state.ConsMP = M(false, 'Conserve MP')
 	state.DeatCast = M(false, 'Death Mode')
-
+	element_table = L{'Earth','Wind','Ice','Fire','Water','Lightning'}
+	state.AOE = M(false, 'AOE')
 
 	lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
 		'Stone II', 'Water II', 'Aero II', 'Fire II', 'Blizzard II', 'Thunder II',
@@ -37,7 +38,22 @@ function job_setup()
 		'Stonega', 'Waterga', 'Aeroga', 'Firaga', 'Blizzaga', 'Thundaga',
 		'Stonega II', 'Waterga II', 'Aeroga II', 'Firaga II', 'Blizzaga II', 'Thundaga II'}
 
-	
+	degrade_array = {
+		['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
+		['Firega'] = {'Firaga','Firaga II','Firaga III','Firaja'},
+		['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
+		['Icega'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
+		['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
+		['Windga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
+		['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
+		['Earthga'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
+		['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
+		['Lightningga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
+		['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
+		['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
+		['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
+		['Sleepgas'] = {'Sleepga','Sleepga II'}
+	}
 	-- Additional local binds
 	send_command('bind ^` gs c toggle MagicBurst')
 	send_command('bind !` gs c toggle ConsMP')
@@ -82,11 +98,6 @@ function init_gear_sets()
 
 	-- Default FC set when Death Mode is on and no matching DeatMB subtable is found for specific spell
 	sets.precast.FC.DeatMB = {}
-	-- Other Magic Type Death Mode FC subtables 
-	sets.precast.FC['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.precast.FC['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.precast.FC['Elemental Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.precast.FC['Healing Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	--Death sets
 	sets.DeatCastIdle = {}	
@@ -121,8 +132,8 @@ function init_gear_sets()
 	sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
 	sets.midcast['Dark Magic'] = {}
-	sets.midcast['Dark Magic'].Drain = {}
-	sets.midcast['Dark Magic'].Aspir = sets.midcast['Dark Magic'].Drain
+	sets.midcast['Dark Magic'].Drains = {}
+	sets.midcast['Dark Magic'].Aspirs = sets.midcast['Dark Magic'].Drains
 	sets.midcast['Dark Magic'].Stun = {}
 
 	-- Elemental Magic sets
@@ -145,7 +156,6 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
 	sets.midcast['Dark Magic'].DeatMB =  sets.precast.FC.DeatMB
 	sets.midcast['Healing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
-	sets.midcast['Dark Magic'].Aspir.DeatMB = set_combine(sets.precast.FC.DeatMB, {})
 
 	--Set to be overlaid on top of the default midcast set for the spell you're casting when Magic Burst mode is toggled on
 	sets.magic_burst = {}
@@ -210,7 +220,6 @@ function job_precast(spell, action, spellMap, eventArgs)
 			if spell.english == "Death" then
 				equip(sets.precast.FC['Death'])
 			else 
-				state.CastingMode:set('DeatMB')
 				classes.CustomClass = 'DeatMB'
 			end
 		end
@@ -236,7 +245,6 @@ function job_midcast(spell, action, spellMap, eventArgs)
 			if spell.english == 'Death' then
 				equip(sets.midcast['Death'])
 			else
-				state.CastingMode:set('DeatMB')
 				classes.CustomClass = 'DeatMB'
 			end
 		end
@@ -296,23 +304,6 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
 	local sleeps = S{'Sleep','Sleep II'}
 	local sleepgas = S{'Sleepga','Sleepga II'}
 
-	local degrade_array = {
-		['Fire'] = {'Fire','Fire II','Fire III','Fire IV','Fire V','Fire VI'},
-		['Firega'] = {'Firaga','Firaga II','Firaga III','Firaja'},
-		['Ice'] = {'Blizzard','Blizzard II','Blizzard III','Blizzard IV','Blizzard V','Blizzard VI'},
-		['Icega'] = {'Blizzaga','Blizzaga II','Blizzaga III','Blizzaja'},
-		['Wind'] = {'Aero','Aero II','Aero III','Aero IV','Aero V','Aero VI'},
-		['Windga'] = {'Aeroga','Aeroga II','Aeroga III','Aeroja'},
-		['Earth'] = {'Stone','Stone II','Stone III','Stone IV','Stone V','Stone VI'},
-		['Earthga'] = {'Stonega','Stonega II','Stonega III','Stoneja'},
-		['Lightning'] = {'Thunder','Thunder II','Thunder III','Thunder IV','Thunder V','Thunder VI'},
-		['Lightningga'] = {'Thundaga','Thundaga II','Thundaga III','Thundaja'},
-		['Water'] = {'Water', 'Water II','Water III', 'Water IV','Water V','Water VI'},
-		['Waterga'] = {'Waterga','Waterga II','Waterga III','Waterja'},
-		['Aspirs'] = {'Aspir','Aspir II','Aspir III'},
-		['Sleepgas'] = {'Sleepga','Sleepga II'}
-	}
-
 	local newSpell = spell.english
 	local spell_recasts = windower.ffxi.get_spell_recasts()
 	local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
@@ -360,6 +351,35 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
 	end
 end
 
+function nuke(spell, action, spellMap, eventArgs)
+	if player.target.type == 'MONSTER' then
+		if state.AOE.value then
+			send_command('input /ma "'..degrade_array[element_table:append('ga')][#degrade_array[element_table:append('ga')]]..'" '..tostring(player.target.name))
+		else
+			send_command('input /ma "'..degrade_array[element_table][#degrade_array[element_table]]..'" '..tostring(player.target.name))
+		end
+	else 
+		add_to_chat(5,'A Monster is not targetted.')
+	end
+end
+
+function job_self_command(commandArgs, eventArgs)
+	if commandArgs[1] == 'element' then
+		if commandArgs[2] then
+			if element_table:contains(commandArgs[2]) then
+				element_table = commandArgs[2]
+				add_to_chat(5, 'Current Nuke element ['..element_table..']')
+			else
+				add_to_chat(5,'Incorrect Element value')
+				return
+			end
+		else
+			add_to_chat(5,'No element specified')
+		end
+	elseif commandArgs[1] == 'nuke' then
+		nuke()
+	end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
 -------------------------------------------------------------------------------------------------------------------

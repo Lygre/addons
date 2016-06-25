@@ -101,7 +101,7 @@ function init_gear_sets()
 		ammo="Psilomene",           -- 45
 		head="Amalric coif",        -- 121
 		neck="Voltsurge torque",    -- 20
-		ear1="Influx earring",      -- 55 
+		ear1="Etiolation earring",      -- 55 
 		ear2="Loquacious earring",  -- 30
 		body="Amalric doublet",     -- 133
 		hands="Helios gloves",      -- 44
@@ -150,7 +150,7 @@ function init_gear_sets()
 		ammo="Psilomene",           -- 45
 		head="Amalric coif",        -- 121
 		neck="Voltsurge torque",    -- 20
-		ear1="Influx earring",      -- 55 
+		ear1="Etiolation earring",      -- 55 
 		ear2="Loquacious earring",  -- 30
 		body="Amalric doublet",     -- 133
 		hands="Helios gloves",      -- 44
@@ -221,12 +221,10 @@ function init_gear_sets()
 		body="Shango Robe",hands="Helios gloves",ring1="Prolix Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 
-	sets.midcast.Cure = {
-		head="Telchine cap",neck="Incanter's Torque",ear1="Mendicant's earring",ear2="Beatific Earring",
+	sets.midcast['Healing Magic'] = {head="Telchine cap",neck="Incanter's Torque",ear1="Mendicant's earring",ear2="Beatific Earring",
 		body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Haoma's Ring",
 		back="Solemnity cape",waist="Bishop's sash",legs="Telchine braconi",feet="Vanya clogs"}
-	sets.midcast.Curaga = sets.midcast.Cure
-	sets.midcast['Healing Magic'] = sets.midcast.Cure
+
 
 	sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
 		head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
@@ -264,8 +262,8 @@ function init_gear_sets()
 		body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
 		back="Bane Cape",waist="Luminary sash",legs="Psycloth lappas",feet=gear.merlfeet_da }
 
-	sets.midcast['Dark Magic'].Drain = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
-	sets.midcast['Dark Magic'].Aspir = sets.midcast['Dark Magic'].Drain
+	sets.midcast['Dark Magic'].Drains = set_combine(sets.midcast['Dark Magic'],{waist="Fucho-no-obi",legs=gear.merllegs_da })
+	sets.midcast['Dark Magic'].Aspirs = sets.midcast['Dark Magic'].Drains
 	sets.midcast['Dark Magic'].Stun = {main="Grioavolr",sub="Arbuda Grip",ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
 		body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
@@ -315,16 +313,14 @@ function init_gear_sets()
 		back="Bane cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_refresh }
 
 	--Death Midcast subtables
-    sets.midcast.DeatMB = sets.midcast['Death']
-    sets.midcast.DeatMB['Enhancing Magic'] = set_combine(sets.precast.FC.DeatMB,sets.midcast['Enhancing Magic'])
-	sets.midcast.DeatMB['Enfeebling Magic'] = sets.precast.FC.DeatMB
-	sets.midcast.DeatMB['Dark Magic'] =  sets.DeatCastIdle
-	sets.midcast.DeatMB['Healing Magic'] = set_combine(sets.DeatCastIdle,
+	sets.midcast['Enhancing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB,sets.midcast['Enhancing Magic'])
+	sets.midcast['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
+	sets.midcast['Dark Magic'].DeatMB =  set_combine(sets.DeatCastIdle,{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
+	sets.midcast['Healing Magic'].DeatMB = set_combine(sets.DeatCastIdle,
 		{ear2="Mendicant's earring",
 		ring1="Lebeche Ring",
 		back="Tempered Cape +1",feet="Telchine Pigaches"})
-	sets.midcast.DeatMB['Dark Magic'].Aspir = set_combine(sets.DeatCastIdle,{back="Bane Cape",legs=gear.merllegs_da,feet=gear.merlfeet_da })
-	sets.midcast.DeatMB.FastRecast = sets.precast.FC.DeatMB
+	sets.midcast.FastRecast.DeatMB = sets.precast.FC.DeatMB
 
 
 	-- Minimal damage gear for procs.
@@ -420,7 +416,7 @@ end
 function job_precast(spell, action, spellMap, eventArgs)
 	enable('feet','back')
 	if state.DeatCast.value then
-		if spell.type == 'Magic' then
+		if spell.action_type == 'Magic' then
 			if spell.english == "Death" then
 				equip(sets.precast.FC['Death'])
 			else 
@@ -450,7 +446,6 @@ function job_midcast(spell, action, spellMap, eventArgs)
 			if spell.english == 'Death' then
 				equip(sets.midcast['Death'])
 			else
-				--state.CastingMode:set('DeatMB')
 				classes.CustomClass = 'DeatMB'
 			end
 		end
