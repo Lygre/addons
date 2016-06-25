@@ -216,7 +216,7 @@ end
 function job_precast(spell, action, spellMap, eventArgs)
 	enable('feet','back')
 	if state.DeatCast.value then
-		if spell.type == 'Magic' then
+		if spell.action_type == 'Magic' then
 			if spell.english == "Death" then
 				equip(sets.precast.FC['Death'])
 			else 
