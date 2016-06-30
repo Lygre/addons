@@ -20,6 +20,7 @@ function job_setup()
 	state.Buff['Unlimited Shot'] = buffactive['Unlimited Shot'] or false
 	
 	update_combat_form()
+	determine_haste_group()
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -97,7 +98,11 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	
-
+	sets.precast.WS['Trueflight'] = {
+		head=gear.herchead_pup,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
+		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
+		back="Toro Cape",waist="Ponente Sash",legs=""
+}
     sets.precast.WS['Last Stand'] = {
         head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
         body="Amini Caban +1",hands="Kobo Kote",ring1="Rajas Ring",ring2="Petrov Ring",
@@ -124,7 +129,7 @@ function init_gear_sets()
 	-- Fast recast for spells
 	
 	sets.midcast.FastRecast = {
-		head="Orion Beret +1",ear1="Loquacious Earring",
+		head="Orion Beret +1",neck="Voltsurge Torque",ear1="Loquacious Earring",ear2="Enchanter Earring +1",
 		body=gear.fc_tbody,ring1="Prolix Ring",ring2="weatherspoon ring",
 		waist="Ninurta's sash",legs="Orion Braccae +1",feet=gear.hercfeet_fc }
 
@@ -136,8 +141,18 @@ function init_gear_sets()
 		head="Pursuer's beret",neck="Ocachi Gorget",ear1="Telos earring",ear2="Enervating Earring",
 		body="Amini Caban +1",hands="Amini glovelettes +1",ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Thereoid greaves"}
-	
+
 	sets.midcast.RA.Acc = set_combine(sets.midcast.RA,
+		{head=gear.adhemarhead_rng,neck="Combatant's Torque",
+		body=gear.hercbody_rng_crit,ring2="Hajduk ring +1",
+		legs=gear.herclegs_rng_acc,feet=gear.hercfeet_rng_jishnu })
+
+	sets.midcast.RA.STP = set_combine(sets.midcast.RA,
+		{head=gear.adhemarhead_rng,neck="Combatant's Torque",
+		body=gear.hercbody_rng_crit,ring2="Hajduk ring +1",
+		legs=gear.herclegs_rng_acc,feet=gear.hercfeet_rng_jishnu })
+
+	sets.midcast.RA.Crit = set_combine(sets.midcast.RA,
 		{head=gear.adhemarhead_rng,neck="Combatant's Torque",
 		body=gear.hercbody_rng_crit,ring2="Hajduk ring +1",
 		legs=gear.herclegs_rng_acc,feet=gear.hercfeet_rng_jishnu })
@@ -199,12 +214,43 @@ function init_gear_sets()
 		body="Adhemar jacket", hands="Floral gauntlets",
 		back="Grounded Mantle +1",waist="Olseni belt"})
 
+	--DW No Haste
 	sets.engaged.DW = {
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
+		neck="Combatant's torque",
+		back="Grounded Mantle +1"})
+
+	--DW Low Haste ~15%
+	sets.engaged.DW.LowHaste = {
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+
+	sets.engaged.DW.Acc.LowHaste = set_combine(sets.engaged.DW, {
+		neck="Combatant's torque",
+		back="Grounded Mantle +1"})
+
+	--DW High Haste ~30%
+	sets.engaged.DW.HighHaste = {
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+
+	sets.engaged.DW.Acc.HighHaste = set_combine(sets.engaged.DW, {
+		neck="Combatant's torque",
+		back="Grounded Mantle +1"})
+
+	--DW Max Haste 43.75%
+	sets.engaged.DW.MaxHaste = {
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+
+	sets.engaged.DW.Acc.MaxHaste = set_combine(sets.engaged.DW, {
 		neck="Combatant's torque",
 		back="Grounded Mantle +1"})
 
@@ -256,6 +302,10 @@ end
 -- buff == buff gained or lost
 -- gain == true if the buff was gained, false if it was lost.
 function job_buff_change(buff, gain)
+	if S{'haste','march','embrava','mighty guard'}:contains(buff:lower()) then
+		determine_haste_group()
+		handle_equipping_gear(player.status)
+	end
 	if buff == "Camouflage" then
 		if gain then
 			equip(sets.buff.Camouflage)
@@ -268,6 +318,7 @@ end
 
 function job_update(cmdParams, eventArgs)
     update_combat_form()
+	determine_haste_group()
 end
 
 function update_combat_form()
@@ -291,6 +342,36 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- Utility functions specific to this job.
 -------------------------------------------------------------------------------------------------------------------
+
+function determine_haste_group()
+
+	classes.CustomMeleeGroups:clear()
+
+	-----different setup
+	if buffactive[604] then --[604] is the resource id for Mighty Guard
+		if (buffactive.haste or buffactive.march == 2) then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		elseif buffactive.march == 1 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		else 
+			classes.CustomMeleeGroups:append('LowHaste')
+		end
+	elseif buffactive.march then
+		if buffactive.haste then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		elseif buffactive.march == 2 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		else
+			classes.CustomMeleeGroups:append('LowHaste')
+		end
+	elseif buffactive.haste then
+		if (buffactive.haste == 2 or buffactive.march) then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		else
+			classes.CustomMeleeGroups:append('HighHaste')
+		end
+	end
+end
 
 -- Check for proper ammo when shooting or weaponskilling
 function check_ammo(spell, action, spellMap, eventArgs)
