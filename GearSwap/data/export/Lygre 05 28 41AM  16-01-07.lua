@@ -1,0 +1,16 @@
+sets.exported={
+    main={ name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}},
+    range="Dunna",
+    head="Azimuth Hood +1",
+    body="Azimuth Coat +1",
+    hands={ name="Bagua Mitaines +1", augments={'Enhances "Curative Recantation" effect',}},
+    legs="Assid. Pants +1",
+    feet="Herald's Gaiters",
+    neck="Loricate Torque +1",
+    waist="Slipor Sash",
+    left_ear="Sanare Earring",
+    right_ear="Infused Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Warp Ring",
+    back="Solemnity Cape",
+}

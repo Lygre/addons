@@ -22,7 +22,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
 	state.OffenseMode:options('None', 'Normal')
-	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP')
+	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP','DeatMB')
 	state.IdleMode:options('Normal', 'PDT')
   
 	MagicBurstIndex = 0
@@ -96,52 +96,53 @@ function init_gear_sets()
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkarole earring"})
 	sets.precast.FC['Healing Magic'] = set_combine(sets.precast.FC, {body="Heka's Kalasiris",legs="Doyen pants", back="Pahtli Cape"})
 
-	-- Default FC set when Death Mode is on and no matching DeatMB subtable is found for specific spell
-	sets.precast.FC.DeatMB = {}
 
 	--Death sets
+	-- Default Idle set while Death Mode is on
 	sets.DeatCastIdle = {}	
-	sets.precast.FC['Death'] = {}
+	-- Default FC set when Death Mode is on and no matching DeatMB subtable is found for specific spell
+	---More specific FC sets under Death Mode could be implemented, but I really saw no point.
+	sets.precast.FC.DeatMB = {}
+	-- Base midcast table for actually casting 'Death'
 	sets.midcast['Death'] = {}
+	-- Set to be imposed on top of above base Death set when Death Mode and Magic Burst Mode are both on
 	sets.MB_death = {}
 
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {}
-
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Myrkr'] = {}
 
 	---- Midcast Sets ----
-	--sets.midcast.DeatMB = sets.precast.FC['Death']
-
 	sets.midcast.FastRecast = {}
 
 	sets.midcast['Healing Magic'] = {}
 
 	sets.midcast['Enhancing Magic'] = {}
 
-	sets.midcast['Enhancing Magic'].Refresh = {}
-	sets.midcast['Enhancing Magic'].Haste = {}
-	sets.midcast['Enhancing Magic'].Phalanx = {}
-	sets.midcast['Enhancing Magic'].Aquaveil = {}
-	sets.midcast['Enhancing Magic'].Stoneskin = {}
+	sets.midcast.Refresh = {}
+	sets.midcast.Haste = {}
+	sets.midcast.Phalanx = {}
+	sets.midcast.Aquaveil = {}
+	sets.midcast.Stoneskin = {}
 
 	sets.midcast['Enfeebling Magic'] = {}	
-	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'], { })	
+	sets.midcast['Enfeebling Magic'].Mid = set_combine(sets.midcast['Enfeebling Magic'],{})
+	sets.midcast['Enfeebling Magic'].Resistant = set_combine(sets.midcast['Enfeebling Magic'].Mid, { })	
 	sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
 	sets.midcast['Dark Magic'] = {}
-	sets.midcast['Dark Magic'].Drains = {}
-	sets.midcast['Dark Magic'].Aspirs = sets.midcast['Dark Magic'].Drains
-	sets.midcast['Dark Magic'].Stun = {}
+	sets.midcast.Drains = set_combine(sets.midcast['Dark Magic'], {})
+	sets.midcast.Aspirs = sets.midcast['Dark Magic'].Drains
+	sets.midcast.Stun = {}
 
 	-- Elemental Magic sets
 	
 	sets.midcast['Elemental Magic'] = {}
 	sets.midcast['Elemental Magic'].Mid = set_combine(sets.midcast['Elemental Magic'], {})
 	sets.midcast['Elemental Magic'].Resistant = set_combine(sets.midcast['Elemental Magic'].Mid, {})
-	sets.midcast['Elemental Magic'].CMP = set_combine(sets.midcast['Elemental Magic'].Mid, {})
+	sets.midcast['Elemental Magic'].CMP = set_combine(sets.midcast['Elemental Magic'], {})
 
 	sets.midcast['Elemental Magic'].HighTierNuke = set_combine(sets.midcast['Elemental Magic'], {})
 	sets.midcast['Elemental Magic'].HighTierNuke.Mid = set_combine(sets.midcast['Elemental Magic'].HighTierNuke, {})
@@ -151,13 +152,35 @@ function init_gear_sets()
 	sets.midcast.Impact = {head=empty,body="Twilight Cloak"}
 
 	--Death Midcast subtables
+	---The foremost set for each magic skill exists to fall back on while Death Mode is on, and no more specifically defined set
+	---exists for the spell
+	----To add more specific sets, as seen below on line 163, define a specific set for either the spell's name or corresponding spellMap
+	----(This set can be the empty set '{}', if you don't care to use it outside of Death Mode or something)
+	----e.g. sets.midcast.Tornado = {}
+	----Then define another set, e.g. sets.midcast.Tornado.DeatMB = {what-have-you}
 	sets.midcast.FastRecast.DeatMB = sets.precast.FC.DeatMB
-	sets.midcast['Enhancing Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.midcast['Enfeebling Magic'].DeatMB = sets.precast.FC.DeatMB
-	sets.midcast['Dark Magic'].DeatMB =  sets.precast.FC.DeatMB
+	
+	---Death Enhancing Magic
+	sets.midcast['Enhancing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
+	----Death Refresh specific
+	sets.midcast.Refresh.DeatMB = set_combine(sets.midcast['Enhancing Magic'].DeatMB, {head="Amalric Coif"})
+
+	---Death Enfeebling Magic
+	sets.midcast['Enfeebling Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
+	
+	---Death Dark Magic
+	sets.midcast['Dark Magic'].DeatMB =  set_combine(sets.precast.FC.DeatMB, {})
+	----Death Aspirs spellMap specific
+	sets.midcast.Aspirs.DeatMB = set_combine(sets.precast.FC.DeatMB, {})
+
+	---Death Elemental Magic
+	sets.midcast['Elemental Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
+
+	---Death Healing Magic
 	sets.midcast['Healing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
 
-	--Set to be overlaid on top of the default midcast set for the spell you're casting when Magic Burst mode is toggled on
+	--Set to be overlaid on top of the default midcast set for the spell you're casting when Magic Burst mode is toggled on 
+	--(excluding when Death Mode is on.[see: sets.MB_death])
 	sets.magic_burst = {}
 
 	--Set to be equipped when Day/Weather match current spell element
@@ -202,8 +225,8 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 	
 	-- Normal melee group
-	-- May want to keep this an empty set if you engage to use Myrkr
-	sets.engaged = {}
+	--!!!!!Commented out until I make rule to handle engaged set during death mode (will use customize_melee_set)
+	--[[sets.engaged = {}]]
 
 end
 -------------------------------------------------------------------------------------------------------------------
@@ -217,11 +240,7 @@ function job_precast(spell, action, spellMap, eventArgs)
 	enable('feet','back')
 	if state.DeatCast.value then
 		if spell.action_type == 'Magic' then
-			if spell.english == "Death" then
-				equip(sets.precast.FC['Death'])
-			else 
-				classes.CustomClass = 'DeatMB'
-			end
+			classes.CustomClass = 'DeatMB'
 		end
 	elseif spell.type == 'BlackMagic' and spell.target.type == 'MONSTER' then
 		refine_various_spells(spell, action, spellMap, eventArgs)
@@ -246,6 +265,7 @@ function job_midcast(spell, action, spellMap, eventArgs)
 				equip(sets.midcast['Death'])
 			else
 				classes.CustomClass = 'DeatMB'
+				state.CastingMode:set('DeatMB')
 			end
 		end
 	end
@@ -296,6 +316,36 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		end
 	end
 
+end
+
+function nuke(spell, action, spellMap, eventArgs)
+	if player.target.type == 'MONSTER' then
+		if state.AOE.value then
+			send_command('input /ma "'..degrade_array[element_table:append('ga')][#degrade_array[element_table:append('ga')]]..'" '..tostring(player.target.name))
+		else
+			send_command('input /ma "'..degrade_array[element_table][#degrade_array[element_table]]..'" '..tostring(player.target.name))
+		end
+	else 
+		add_to_chat(5,'A Monster is not targetted.')
+	end
+end
+
+function job_self_command(commandArgs, eventArgs)
+	if commandArgs[1] == 'element' then
+		if commandArgs[2] then
+			if element_table:contains(commandArgs[2]) then
+				element_table = commandArgs[2]
+				add_to_chat(5, 'Current Nuke element ['..element_table..']')
+			else
+				add_to_chat(5,'Incorrect Element value')
+				return
+			end
+		else
+			add_to_chat(5,'No element specified')
+		end
+	elseif commandArgs[1] == 'nuke' then
+		nuke()
+	end
 end
 
 
@@ -351,35 +401,6 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
 	end
 end
 
-function nuke(spell, action, spellMap, eventArgs)
-	if player.target.type == 'MONSTER' then
-		if state.AOE.value then
-			send_command('input /ma "'..degrade_array[element_table:append('ga')][#degrade_array[element_table:append('ga')]]..'" '..tostring(player.target.name))
-		else
-			send_command('input /ma "'..degrade_array[element_table][#degrade_array[element_table]]..'" '..tostring(player.target.name))
-		end
-	else 
-		add_to_chat(5,'A Monster is not targetted.')
-	end
-end
-
-function job_self_command(commandArgs, eventArgs)
-	if commandArgs[1] == 'element' then
-		if commandArgs[2] then
-			if element_table:contains(commandArgs[2]) then
-				element_table = commandArgs[2]
-				add_to_chat(5, 'Current Nuke element ['..element_table..']')
-			else
-				add_to_chat(5,'Incorrect Element value')
-				return
-			end
-		else
-			add_to_chat(5,'No element specified')
-		end
-	elseif commandArgs[1] == 'nuke' then
-		nuke()
-	end
-end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
 -------------------------------------------------------------------------------------------------------------------
@@ -416,8 +437,11 @@ function job_state_change(stateField, newValue, oldValue)
 	if stateField == 'Death Mode' then
 		if newValue == true then
 			state.OffenseMode:set('Normal')
-			state.CastingMode:set('DeatMB')
+			predeathcastmode = state.CastingMode.value
+			--state.CastingMode:set('DeatMB')
 			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
+		elseif newValue == false then
+			state.CastingMode:set(predeathcastmode)
 		end
 	end            
 end
