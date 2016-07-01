@@ -326,6 +326,10 @@ function init_gear_sets()
 		body="Sayadio's kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	
+	sets.precast.WS['Expiacion'] = {ammo="Jukukik feather",
+		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's ring",
+		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
 
 
 	
