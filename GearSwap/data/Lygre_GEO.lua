@@ -80,7 +80,7 @@ function init_gear_sets()
     sets.precast.WS['Flash Nova'] = {range=empty,ammo="Dosis Tathlum",
         head=gear.merlhead_nuke,neck="Fotia gorget",ear1="Friomisi Earring",ear2="Moonshade Earring",
         body="Amalric doublet",hands="Helios gloves",ring1="Shiva Ring +1",ring2="Weatherspoon Ring",
-        back="Toro Cape",waist="Fotia Belt",legs=gear.merllegs_mb,feet=gear.nuke_feet}
+        back="Toro Cape",waist="Fotia Belt",legs=gear.merllegs_mb,feet=gear.merlfeet_mb}
 
     sets.precast.WS['Starlight'] = {ear2="Moonshade Earring"}
 
@@ -95,7 +95,7 @@ function init_gear_sets()
     sets.midcast.FastRecast = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge torque",ear1="loquacious earring",ear2="Enchanter earring +1",
         body="Shango robe",hands="Helios gloves",ring1="Prolix ring",ring2="Weatherspoon ring",
-        back="Swith cape +1",waist="Ninurta's sash",legs="Geomancy Pants +1",feet=gear.nuke_feet}
+        back="Swith cape +1",waist="Ninurta's sash",legs="Geomancy Pants +1",feet=gear.merlfeet_mb}
 
 	sets.midcast.Stun = {main="Solstice",sub="Genmei shield",range=empty,ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious earring",
@@ -119,7 +119,7 @@ function init_gear_sets()
     
     sets.midcast.Curaga = sets.midcast.Cure
 
-    sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
+    sets.midcast['Enhancing Magic'] = {main=gear.grio_enhancing,sub="Fulcio grip",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chas.",hands="Telchine gloves",
 	   back="Fi follet cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
@@ -147,9 +147,6 @@ function init_gear_sets()
 
     sets.midcast.Shellra = {ring1="Sheltered Ring"}
 
-	sets.midcast['Enhancing Magic'] = {head="Telchine cap",neck="Incanter's torque",ear1="Andoaa earring",ear2="Calamitous earring",
-		body="Telchine Chasuble", hands="Telchine gloves",
-		back="Solemnity cape",waist="Ninurta's sash",legs="Telchine Braconi",feet="Telchine pigaches"}
 
 	sets.midcast.Haste = sets.midcast['Enhancing Magic']
 
@@ -170,17 +167,17 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {main="Solstice",sub="Culminus",range=empty,ammo="Pemphredo tathlum",
         head=gear.merlhead_nuke,neck="Saevus pendant +1",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.merlbody_nuke,hands="Amalric gages",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-        back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
+        back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb }
 
     sets.midcast['Elemental Magic'].Resistant = {main="Solstice",sub="Culminus",range=empty,ammo="Pemphredo tathlum",
         head=gear.merlhead_nuke,neck="Sanctity Necklace",ear1="Barkarole Earring",ear2="Friomisi Earring",
         body=gear.merlbody_nuke,hands="Amalric gages",ring1="Weatherspoon Ring",ring2="Shiva Ring +1",
-        back="Toro Cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
+        back="Toro Cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb}
 
 	sets.midcast.Impact = {main="Solstice",sub="Genmei shield",range=empty,ammo="Pemphredo Tathlum",
         head=empty,neck="Sanctity necklace",ear1="Barkarole Earring",ear2="Gwati Earring",
         body="Twilight Cloak",hands="Amalric gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-        back="Toro cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.nuke_feet}
+        back="Toro cape",waist="Eschan Stone",legs=gear.merllegs_nuke,feet=gear.merlfeet_mb}
 
 	sets.magic_burst = {main="Solstice", sub="Genmei shield",
 		head=gear.merlhead_mb,neck="Mizukage-no-Kubikazari",
@@ -275,8 +272,8 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {main="Solstice",sub="Genmei shield",range="Dunna",ammo=empty,
         head="Befouled crown",neck="Lissome necklace",ear1="Zennaroi Earring",ear2="Brutal Earring",
-        body="Onca Suit",hands=empty,ring1="Defending Ring",ring2="Rajas Ring",
-        back="Solemnity Cape",waist="Eschan Stone",legs=empty,feet=empty}
+        body="Vrikodara jupon",hands="Geomancy mitaines +1",ring1="Defending Ring",ring2="Rajas Ring",
+        back="Solemnity Cape",waist="Eschan Stone",legs=gear.merllegs_dt,feet=gear.merlfeet_dt }
 
     --------------------------------------
     -- Custom buff sets

@@ -37,42 +37,50 @@ function define_global_sets()
 	
 	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
 
+	--Weapons
+	gear.grio_death = {name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}}
+	gear.grio_enhancing = {name="Grioavolr", augments={'Enh. Mag. eff. dur. +9','MP+66','Mag. Acc.+13','"Mag.Atk.Bns."+16','Magic Damage +5',}}
 	gear.Colada_highd = {name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}}
 	gear.Colada_datk = {name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}}
 
-	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Enmity-2','MND+5','Mag. Acc.+6','"Mag.Atk.Bns."+15',}}
-	gear.merlhead_nuke = {name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}
-	gear.merllegs_nuke = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}
-
-	
+	--Merlinic Augments
+	gear.merlhead_nuke = {name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}	
 	gear.merlhead_mb = {name="Merlinic Hood", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Magic burst mdg.+8%','INT+8','"Mag.Atk.Bns."+12',}}
 	gear.merlhead_fc = {name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}}
-	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
-	gear.chirhead_block = {name="Chironic Hat", augments={'Chance of successful block +4','CHR+6','Accuracy+13',}}
-	gear.chirhead_pdt = {name="Chironic Hat", augments={'Attack+12','Phys. dmg. taken -4%',}}
-	gear.chirbody = {name="Chironic Doublet", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+14',}}
+	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Phys. dmg. taken -2%','INT+10','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
+	gear.merlbody_mb = {name="Merlinic Jubbah", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst mdg.+9%','INT+1','Mag. Acc.+3','"Mag.Atk.Bns."+11',}}
+	gear.merlbody_da = {name="Merlinic Jubbah", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Drain" and "Aspir" potency +5','MND+4','Mag. Acc.+14','"Mag.Atk.Bns."+8',}}
 	gear.merlhands_pdt = {name="Merlinic Dastanas", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Phys. dmg. taken -2%','MND+7','Mag. Acc.+14','"Mag.Atk.Bns."+2',}}
-	gear.chirhands_macc = {name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}}
-	gear.chirhands_sc = {name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
-	gear.chirhands_da = {name="Chironic Gloves", augments={'"Drain" and "Aspir" potency +10','INT+6','"Mag.Atk.Bns."+14',}}
-	gear.chirhands_nuke = {name="Chironic Gloves", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Spell interruption rate down -6%','CHR+13','"Mag.Atk.Bns."+13',}}
-	gear.chirhands_block = {name="Chironic Gloves", augments={'Attack+10','Chance of successful block +4','CHR+9',}}
+	gear.merllegs_cmp = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}	
+	gear.merllegs_nuke = {name="Merlinic Shalwar", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Phys. dmg. taken -1%','INT+7','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
 	gear.merllegs_dt = {name="Merlinic Shalwar", augments={'Phys. dmg. taken -4%',}}
 	gear.merllegs_da = {name="Merlinic Shalwar", augments={'Mag. Acc.+25','"Drain" and "Aspir" potency +11','"Mag.Atk.Bns."+14',}}
 	gear.merllegs_mb = {name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Magic burst mdg.+11%','CHR+9','Mag. Acc.+14',}}
 	gear.merllegs_phalanx = {name="Merlinic Shalwar", augments={'Mag. Acc.+5','Magic dmg. taken -3%','Phalanx +2','Accuracy+1 Attack+1',}}
-	gear.chirlegs = {name="Chironic Hose", augments={'Mag. Acc.+30','Haste+2','MND+10','"Mag.Atk.Bns."+10',}}
-	gear.chirlegs_block = {name="Chironic Hose", augments={'Chance of successful block +4','Attack+12',}}
-	gear.chirlegs_dt = {name="Chironic Hose", augments={'Damage taken-3%','CHR+2','Accuracy+1',}}
 	gear.merlfeet_dt = {name="Merlinic Crackows", augments={'Mag. Acc.+14','Damage taken-3%','DEX+2',}}
 	gear.merlfeet_refresh = {name="Merlinic Crackows", augments={'"Store TP"+1','Pet: Attack+21 Pet: Rng.Atk.+21','"Refresh"+1','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
 	gear.merlfeet_fc = {name="Merlinic Crackows", augments={'Accuracy+13','"Fast Cast"+6','MND+1','Mag. Acc.+9','"Mag.Atk.Bns."+7',}}
 	gear.merlfeet_da = {name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+3','Mag. Acc.+11','"Mag.Atk.Bns."+15',}}	
 	gear.merlfeet_mb = {name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}}
+
+	--Chironic Augments
+	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
+	gear.chirhead_block = {name="Chironic Hat", augments={'Chance of successful block +4','CHR+6','Accuracy+13',}}
+	gear.chirhead_pdt = {name="Chironic Hat", augments={'Attack+12','Phys. dmg. taken -4%',}}
+	gear.chirbody = {name="Chironic Doublet", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+14',}}
+	gear.chirhands_macc = {name="Chironic Gloves", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Resist Silence"+4','CHR+1','Mag. Acc.+8',}}
+	gear.chirhands_sc = {name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}}
+	gear.chirhands_da = {name="Chironic Gloves", augments={'"Drain" and "Aspir" potency +10','INT+6','"Mag.Atk.Bns."+14',}}
+	gear.chirhands_nuke = {name="Chironic Gloves", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','Spell interruption rate down -6%','CHR+13','"Mag.Atk.Bns."+13',}}
+	gear.chirhands_block = {name="Chironic Gloves", augments={'Attack+10','Chance of successful block +4','CHR+9',}}
+	gear.chirlegs = {name="Chironic Hose", augments={'Mag. Acc.+30','Haste+2','MND+10','"Mag.Atk.Bns."+10',}}
+	gear.chirlegs_block = {name="Chironic Hose", augments={'Chance of successful block +4','Attack+12',}}
+	gear.chirlegs_dt = {name="Chironic Hose", augments={'Damage taken-3%','CHR+2','Accuracy+1',}}
 	gear.chirfeet = {name="Chironic Slippers", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Cure" potency +1%','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}
 	gear.chirfeet_block = {name="Chironic Slippers", augments={'Chance of successful block +4','Attack+2',}}
 	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
+	--Amalric aliases
 	gear.amalricfeet_consmp = {name="Amalric Nails", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Conserve MP"+6',}}
 	gear.amalricfeet_death = {name="Amalric Nails", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
 

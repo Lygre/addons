@@ -64,7 +64,7 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
     sets.precast.FC = {ammo="Sapience orb",
-		main="Grioavolr",sub="Vivid Strap",
+		main=gear.grio_enhancing,sub="Vivid Strap",
         head="Nahtirah Hat",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Alaunus's Cape",waist="Witful Belt",legs="Lengo Pants",feet="Regal Pumps"}
@@ -107,7 +107,7 @@ function init_gear_sets()
     
     -- Midcast Sets
     
-    sets.midcast.FastRecast = {main="Grioavolr",sub="Vivid strap",ammo="Sapience Orb",
+    sets.midcast.FastRecast = {main=gear.grio_enhancing,sub="Vivid strap",ammo="Sapience Orb",
         head="Nahtirah Hat",neck="Orison locket",ear1="Enchanter earring +1",ear2="Loquacious Earring",
         body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Alaunus's cape",waist="Witful belt",legs="Lengo Pants",feet="Regal pumps"}
@@ -152,7 +152,7 @@ function init_gear_sets()
 --------------ENHANCING AND SUCH---------------------
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
-    sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
+    sets.midcast['Enhancing Magic'] = {main=gear.grio_enhancing,sub="Fulcio grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa Earring",
         body="Telchine chasuble",hands="Telchine gloves",
         back="Mending Cape",waist="Olympus Sash",legs="Telchine braconi",feet="Telchine Pigaches"}
@@ -216,7 +216,7 @@ function init_gear_sets()
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
         back="Aurist's cape +1",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
 
-    sets.midcast.Impact = {main="Grioavolr",sub="Niobid strap",ammo="Pemphredo Tathlum",
+    sets.midcast.Impact = {main=gear.grio_enhancing,sub="Niobid strap",ammo="Pemphredo Tathlum",
         head=empty,neck="Incanter's torque",ear1="Enchanter Earring +1",ear2="Gwati Earring",
         body="Twilight Cloak",hands=gear.chirhands_macc,ring1="Archon Ring",ring2="Sangoma Ring",
         back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
