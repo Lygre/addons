@@ -72,7 +72,7 @@ function init_gear_sets()
 	sets.precast.FC = {
 		head="Carmine mask",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon ring",
-		feet=gear.hercfeet_fc }
+		legs="Rawhide Trousers",feet="Carmine Greaves" }
 
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {})
 
@@ -99,10 +99,16 @@ function init_gear_sets()
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	
 	sets.precast.WS['Trueflight'] = {
-		head=gear.herchead_pup,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
+		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
 		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
-		back="Toro Cape",waist="Ponente Sash",legs=""
+		back="Toro Cape",waist="Ponente Sash",legs=gear.herclegs_mab,feet=gear.hercfeet_mab
 }
+	sets.precast.WS['Wildfire' ] = {
+		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
+		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
+		back="Toro Cape",waist="Eschan Stone",legs=gear.herclegs_mab,feet=gear.hercfeet_mab
+}
+
     sets.precast.WS['Last Stand'] = {
         head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
         body="Amini Caban +1",hands="Kobo Kote",ring1="Rajas Ring",ring2="Petrov Ring",
@@ -131,7 +137,7 @@ function init_gear_sets()
 	sets.midcast.FastRecast = {
 		head="Orion Beret +1",neck="Voltsurge Torque",ear1="Loquacious Earring",ear2="Enchanter Earring +1",
 		body=gear.fc_tbody,ring1="Prolix Ring",ring2="weatherspoon ring",
-		waist="Ninurta's sash",legs="Orion Braccae +1",feet=gear.hercfeet_fc }
+		waist="Ninurta's sash",legs="Orion Braccae +1",feet="Carmine Greaves" }
 
 	sets.midcast.Utsusemi = {}
 
@@ -216,43 +222,45 @@ function init_gear_sets()
 
 	--DW No Haste
 	sets.engaged.DW = {
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 
 	sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
-		neck="Combatant's torque",
-		back="Grounded Mantle +1"})
+		head="Dampening Tam", neck="Combatant's torque",
+		back="Grounded Mantle +1",waist="Olseni belt"})
 
 	--DW Low Haste ~15%
 	sets.engaged.DW.LowHaste = {
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
-	sets.engaged.DW.Acc.LowHaste = set_combine(sets.engaged.DW, {
-		neck="Combatant's torque",
-		back="Grounded Mantle +1"})
+	sets.engaged.DW.Acc.LowHaste = set_combine(sets.engaged.DW.LowHaste, {
+		head="Dampening Tam",neck="Combatant's torque",
+		back="Grounded Mantle +1",waist="Olseni belt"})
 
 	--DW High Haste ~30%
 	sets.engaged.DW.HighHaste = {
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
 
-	sets.engaged.DW.Acc.HighHaste = set_combine(sets.engaged.DW, {
-		neck="Combatant's torque",
-		back="Grounded Mantle +1"})
+	sets.engaged.DW.Acc.HighHaste = set_combine(sets.engaged.DW.HighHaste, {
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos Earring",ear2="Zennaroi Earring",
+		hands="Adhemar Wristbands",
+		back="Grounded Mantle +1",waist="Olseni belt",legs="Carmine cuisses"})
 
 	--DW Max Haste 43.75%
 	sets.engaged.DW.MaxHaste = {
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Patentia Sash",legs="Samnuha tights",feet=gear.hercfeet_melee }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 
-	sets.engaged.DW.Acc.MaxHaste = set_combine(sets.engaged.DW, {
-		neck="Combatant's torque",
-		back="Grounded Mantle +1"})
+	sets.engaged.DW.Acc.MaxHaste = set_combine(sets.engaged.DW.MaxHaste, {
+		head="Dampening Tam",neck="Combatant's torque",ear1="Telos Earring",ear2="Zennaroi Earring",
+		hands="Adhemar Wristbands",
+		back="Grounded Mantle +1",waist="Olseni belt",legs="Carmine cuisses"})
 
 	--------------------------------------
 	-- Custom buff sets

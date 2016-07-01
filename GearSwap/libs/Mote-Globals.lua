@@ -83,13 +83,15 @@ function define_global_sets()
 	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
+ 	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+22','Weapon skill damage +4%',}}
 	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
 	gear.herchands_acc = {name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}}
 	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
+	gear.herclegs_mab = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','MND+2','Mag. Acc.+13',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
 	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
 	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
-	gear.hercfeet_mab = {name="Herculean Boots", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','MND+2','Mag. Acc.+2','"Mag.Atk.Bns."+12',}}
+	gear.hercfeet_mab = {name="Herculean Boots", augments={'Mag. Acc.+16','Weapon skill damage +2%','"Mag.Atk.Bns."+12',}}
 	gear.hercfeet_fc = {name="Herculean Boots", augments={'VIT+9','"Fast Cast"+5','Chance of successful block +8','Accuracy+20 Attack+20',}}
 	----RNG-------
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
@@ -104,7 +106,6 @@ function define_global_sets()
 
 
 	----PUP--------
- 	gear.herchead_pup = {name="Herculean Helm", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: Haste+4',}}
 	gear.herchands_pup = {name="Herculean Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Store TP"+11','Pet: Attack+11 Pet: Rng.Atk.+11','Pet: "Mag.Atk.Bns."+3',}}
 	gear.herclegs_pup_stp = {name="Herculean Trousers", augments={'Pet: Accuracy+27 Pet: Rng. Acc.+27','Pet: "Store TP"+11','Pet: DEX+3',}}
 	gear.hercfeet_pup_stp = {name="Herculean Boots", augments={'Pet: Accuracy+29 Pet: Rng. Acc.+29','Pet: "Store TP"+11','Pet: DEX+7','Pet: "Mag.Atk.Bns."+14',}}

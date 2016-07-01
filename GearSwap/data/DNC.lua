@@ -103,7 +103,7 @@ function init_gear_sets()
     
     -- Precast sets to enhance JAs
 
-    sets.precast.JA['No Foot Rise'] = {body="Horos Casaque"}
+    sets.precast.JA['No Foot Rise'] = {body="Horos Casaque +1"}
 
     sets.precast.JA['Trance'] = {head="Horos Tiara"}
     
@@ -126,11 +126,11 @@ function init_gear_sets()
 
     sets.precast.Flourish1 = {}
     sets.precast.Flourish1['Violent Flourish'] = {ear1="Dignitary's Earring",ear2="Gwati Earring",
-        body="Horos Casaque",hands="Buremte Gloves",ring1="Weatherspoon Ring", ring2="Sangoma Ring",
+        body="Horos Casaque +1",hands="Buremte Gloves",ring1="Weatherspoon Ring", ring2="Sangoma Ring",
         waist="Chaac Belt",legs="Rawhide Trousers",feet=gear.hercfeet_acc} -- magic accuracy
     sets.precast.Flourish1['Desperate Flourish'] = {ammo="Charis Feather",
         head="Dampening Tam",neck="Combatant's Torque",
-        body="Horos Casaque",hands="Buremte Gloves",ring1="Beeline Ring",
+        body="Horos Casaque +1",hands="Buremte Gloves",ring1="Beeline Ring",
         back="Toetapper Mantle",waist="Olseni Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc} -- acc gear
 
     sets.precast.Flourish2 = {}
