@@ -369,11 +369,6 @@ function is_trust_party()
         return false
     end
     
-    -- Can call a max of 3 Trust NPCs, so parties larger than that are out.
-    if party.count > 4 then
-        return false
-    end
-
     -- If we're in an alliance, can't be a Trust party.
     if alliance[2].count > 0 or alliance[3].count > 0 then
         return false

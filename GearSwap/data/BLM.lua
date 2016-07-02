@@ -21,7 +21,7 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
-	state.OffenseMode:options('None', 'Normal')
+	state.OffenseMode:options('None', 'Locked')
 	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP','DeatMB')
 	state.IdleMode:options('Normal', 'PDT')
   
@@ -157,7 +157,7 @@ function init_gear_sets()
 	----To add more specific sets, as seen below on line 163, define a specific set for either the spell's name or corresponding spellMap
 	----(This set can be the empty set '{}', if you don't care to use it outside of Death Mode or something)
 	----e.g. sets.midcast.Tornado = {}
-	----Then define another set, e.g. sets.midcast.Tornado.DeatMB = {what-have-you}
+	----Then define another set subtable, e.g. sets.midcast.Tornado.DeatMB = {what-have-you}
 	sets.midcast.FastRecast.DeatMB = sets.precast.FC.DeatMB
 	
 	---Death Enhancing Magic
@@ -299,8 +299,6 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		enable('feet','back')
 		equip(sets.buff['Mana Wall'])
 		disable('feet','back')
-	--[[elseif spell.skill == 'Enhancing Magic' then
-		adjust_timers(spell, spellMap)]]
 	end
 	if not spell.interrupted then
 		if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
@@ -428,7 +426,7 @@ end
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
 	if stateField == 'Offense Mode' then
-		if newValue == 'Normal' then
+		if newValue == 'Locked' then
 			disable('main','sub','range')
 		else
 			enable('main','sub','range')
@@ -436,9 +434,8 @@ function job_state_change(stateField, newValue, oldValue)
 	end
 	if stateField == 'Death Mode' then
 		if newValue == true then
-			state.OffenseMode:set('Normal')
+			state.OffenseMode:set('Locked')
 			predeathcastmode = state.CastingMode.value
-			--state.CastingMode:set('DeatMB')
 			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
 		elseif newValue == false then
 			state.CastingMode:set(predeathcastmode)
@@ -450,49 +447,45 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
---[[function job_update(cmdParams, eventArgs)
-   -- if cmdParams[1] == 'user' and not (buffactive['light arts']      or buffactive['dark arts'] or
-	 --                  buffactive['addendum: white'] or buffactive['addendum: black']) then
-	   -- if state.IdleMode.value == 'Stun' then
-		 --   send_command('@input /ja "Dark Arts" <me>')
-		--else
-		  --  send_command('@input /ja "Light Arts" <me>')
-		--end
-	--end
+function job_update(cmdParams, eventArgs)
+	job_display_current_state(eventArgs)
+	eventArgs.handled = true
+end
 
-	update_active_strategems()
-	update_sublimation()
-end]]
-function display_current_job_state(eventArgs)
+function job_display_current_state(eventArgs)
 	eventArgs.handled = true
 	local msg = ''
 	
 	if state.OffenseMode.value ~= 'None' then
-		msg = msg .. 'Melee: ['..state.OffenseMode.value..']'
+		msg = msg .. 'Combat ['..state.OffenseMode.value..']'
 
 		if state.CombatForm.has_value then
 			msg = msg .. ' (' .. state.CombatForm.value .. ')'
 		end
 		msg = msg .. ', '
 	end
-	if state.HybridMode.value ~= 'Normal' then
+	--[[if state.HybridMode.value ~= 'Normal' then
 		msg = msg .. '/' .. state.HybridMode.value
-	end
+	end]]
 
 	msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..']'
 
-	if state.MagicBurst.value == true then
-		msg = msg .. ', Magic Burst: On'
+	if state.MagicBurst.value then
+		msg = msg .. ', MB [ON]'
+	else
+		msg = msg .. ', MB [OFF]'
 	end
-	if state.ConsMP.value == true then
-		msg = msg .. ', Conserve MP: On'
+	if state.ConsMP.value then
+		msg = msg .. ', AF Body [ON]'
+	else
+		msg = msg .. ', AF Body [OFF]'
 	end
 	if state.DefenseMode.value ~= 'None' then
 		msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
 	end
 	
-	if state.Kiting.value == true then
-		msg = msg .. ', Kiting'
+	if state.Kiting.value then
+		msg = msg .. ', Kiting [ON]'
 	end
 
 	if state.PCTargetMode.value ~= 'default' then
@@ -518,6 +511,7 @@ function job_get_spell_map(spell, default_spell_map)
 end
 
 -- Modify the default idle set after it was constructed.
+--- This is where I handle Death Mode Idle set construction, rather than weave it into the Idle state var
 function customize_idle_set(idleSet)
 	if state.DeatCast.value then
 		idleSet = set_combine(idleSet, sets.DeatCastIdle)
@@ -525,17 +519,22 @@ function customize_idle_set(idleSet)
 	if player.mpp < 51 then
 		idleSet = set_combine(idleSet, sets.latent_refresh)
 	end
-	if not state.DeatCast and buffactive['Mana Wall'] then
+	if buffactive['Mana Wall'] then
 		idleSet = set_combine(idleSet, sets.buff['Mana Wall'])
 	end
 	return idleSet
 end
-
---[[function job_status_change(newStatus, oldStatus, eventArgs)
+--- This is where I handle Death Mode Melee set modifications
+function customize_melee_set(meleeSet)
+	if state.DeatCast.value then
+		meleeSet = set_combine(meleeSet, sets.DeatCastIdle)
+	end
+	if buffactive['Mana Wall'] then
+		meleeSet = set_combine(meleeSet, sets.buff['Mana Wall'])
+	end
+	return meleeSet
 end
--- Function to display the current relevant user state when doing an update.
-function display_current_job_state(eventArgs)
-end]]
+
 
 -------------------------------------------------------------------------------------------------------------------
 -- Utility functions specific to this job.

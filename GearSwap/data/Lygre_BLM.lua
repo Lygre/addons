@@ -21,7 +21,7 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function job_setup()
-	state.OffenseMode:options('None', 'Normal')
+	state.OffenseMode:options('None', 'Locked')
 	state.CastingMode:options('Normal', 'Mid', 'Resistant', 'CMP', 'DeatMB')
 	state.IdleMode:options('Normal', 'PDT')
   
@@ -67,6 +67,7 @@ end
 -- Called when this job file is unloaded (eg: job change)
 function user_unload()
 	send_command('unbind ^`')
+    send_command('unbind !`')
 	send_command('unbind @`')
 end
 
@@ -241,7 +242,7 @@ function init_gear_sets()
 	sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
 	sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
-		head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Digni. earring",
+		head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Digni. earring",
 		body="Shango Robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
 		back="Bane Cape",waist="Luminary sash",legs="Psycloth lappas",feet=gear.merlfeet_da }
 
@@ -249,7 +250,7 @@ function init_gear_sets()
 		{body=gear.merlbody_da,
 		waist="Fucho-no-obi",legs=gear.merllegs_da })
 	sets.midcast.Aspirs = sets.midcast.Drains
-	sets.midcast['Dark Magic'].Stun = {main=gear.grio_death,sub="Arbuda Grip",ammo="Sapience orb",
+	sets.midcast.Stun = {main=gear.grio_death,sub="Arbuda Grip",ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter Earring +1",ear2="Loquacious Earring",
 		body="Shango Robe",hands="Helios gloves",ring1="Rahab Ring",ring2="Weatherspoon Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
@@ -482,8 +483,6 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		enable('feet','back')
 		equip(sets.buff['Mana Wall'])
 		disable('feet','back')
-	--[[elseif spell.skill == 'Enhancing Magic' then
-		adjust_timers(spell, spellMap)]]
 	end
 	if not spell.interrupted then
 		if spell.english == "Sleep II" or spell.english == "Sleepga II" then -- Sleep II Countdown --
@@ -610,84 +609,77 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
-	if stateField == 'Offense Mode' then
-		if newValue == 'Normal' then
-			disable('main','sub','range')
-		else
-			enable('main','sub','range')
-		end
-	end
-	if stateField == 'Death Mode' then
-		if newValue == true then
-			state.OffenseMode:set('Normal')
-			predeathcastmode = state.CastingMode.value
-			--state.CastingMode:set('DeatMB')
-			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
-		elseif newValue == false then
-			state.CastingMode:set(predeathcastmode)
-		end
-	end            
+    if stateField == 'Offense Mode' then
+        if newValue == 'Locked' then
+            disable('main','sub','range')
+        else
+            enable('main','sub','range')
+        end
+    end
+    if stateField == 'Death Mode' then
+        if newValue == true then
+            state.OffenseMode:set('Locked')
+            predeathcastmode = state.CastingMode.value
+            --[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
+        elseif newValue == false then
+            state.CastingMode:set(predeathcastmode)
+        end
+    end            
 end
 
 
--------------------------------------------------------------------------------------------------------------------
--- User code that supplements standard library decisions.
--------------------------------------------------------------------------------------------------------------------
---[[function job_update(cmdParams, eventArgs)
-   -- if cmdParams[1] == 'user' and not (buffactive['light arts']      or buffactive['dark arts'] or
-	 --                  buffactive['addendum: white'] or buffactive['addendum: black']) then
-	   -- if state.IdleMode.value == 'Stun' then
-		 --   send_command('@input /ja "Dark Arts" <me>')
-		--else
-		  --  send_command('@input /ja "Light Arts" <me>')
-		--end
-	--end
-
-	update_active_strategems()
-	update_sublimation()
-end]]
-function display_current_job_state(eventArgs)
-	eventArgs.handled = true
-	local msg = ''
-	
-	if state.OffenseMode.value ~= 'None' then
-		msg = msg .. 'Melee: ['..state.OffenseMode.value..']'
-
-		if state.CombatForm.has_value then
-			msg = msg .. ' (' .. state.CombatForm.value .. ')'
-		end
-		msg = msg .. ', '
-	end
-	if state.HybridMode.value ~= 'Normal' then
-		msg = msg .. '/' .. state.HybridMode.value
-	end
-
-	msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..']'
-
-	if state.MagicBurst.value == true then
-		msg = msg .. ', Magic Burst: On'
-	end
-	if state.ConsMP.value == true then
-		msg = msg .. ', Conserve MP: On'
-	end
-	if state.DefenseMode.value ~= 'None' then
-		msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
-	end
-	
-	if state.Kiting.value == true then
-		msg = msg .. ', Kiting'
-	end
-
-	if state.PCTargetMode.value ~= 'default' then
-		msg = msg .. ', Target PC: '..state.PCTargetMode.value
-	end
-
-	if state.SelectNPCTargets.value == true then
-		msg = msg .. ', Target NPCs'
-	end
-
-	add_to_chat(122, msg)
+function job_update(cmdParams, eventArgs)
+    job_display_current_state(eventArgs)
+    eventArgs.handled = true
 end
+
+function job_display_current_state(eventArgs)
+    eventArgs.handled = true
+    local msg = ''
+    
+    if state.OffenseMode.value ~= 'None' then
+        msg = msg .. 'Combat ['..state.OffenseMode.value..']'
+
+        if state.CombatForm.has_value then
+            msg = msg .. ' (' .. state.CombatForm.value .. ')'
+        end
+        msg = msg .. ', '
+    end
+    --[[if state.HybridMode.value ~= 'Normal' then
+        msg = msg .. '/' .. state.HybridMode.value
+    end]]
+
+    msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..']'
+
+    if state.MagicBurst.value then
+        msg = msg .. ', MB [ON]'
+    else
+        msg = msg .. ', MB [OFF]'
+    end
+    if state.ConsMP.value then
+        msg = msg .. ', AF Body [ON]'
+    else
+        msg = msg .. ', AF Body [OFF]'
+    end
+    if state.DefenseMode.value ~= 'None' then
+        msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
+    end
+    
+    if state.Kiting.value then
+        msg = msg .. ', Kiting [ON]'
+    end
+
+    if state.PCTargetMode.value ~= 'default' then
+        msg = msg .. ', Target PC: '..state.PCTargetMode.value
+    end
+
+    if state.SelectNPCTargets.value == true then
+        msg = msg .. ', Target NPCs'
+    end
+
+    add_to_chat(122, msg)
+end
+
 
 -- Custom spell mapping.
 function job_get_spell_map(spell, default_spell_map)
@@ -701,24 +693,29 @@ function job_get_spell_map(spell, default_spell_map)
 end
 
 -- Modify the default idle set after it was constructed.
+--- This is where I handle Death Mode Idle set construction, rather than weave it into the Idle state var
 function customize_idle_set(idleSet)
-	if state.DeatCast.value then
-		idleSet = set_combine(idleSet, sets.DeatCastIdle)
-	end
-	if player.mpp < 51 then
-		idleSet = set_combine(idleSet, sets.latent_refresh)
-	end
-	if not state.DeatCast and buffactive['Mana Wall'] then
-		idleSet = set_combine(idleSet, sets.buff['Mana Wall'])
-	end
-	return idleSet
+    if state.DeatCast.value then
+        idleSet = set_combine(idleSet, sets.DeatCastIdle)
+    end
+    if player.mpp < 51 then
+        idleSet = set_combine(idleSet, sets.latent_refresh)
+    end
+    if buffactive['Mana Wall'] then
+        idleSet = set_combine(idleSet, sets.buff['Mana Wall'])
+    end
+    return idleSet
 end
-
---[[function job_status_change(newStatus, oldStatus, eventArgs)
+--- This is where I handle Death Mode Melee set modifications
+function customize_melee_set(meleeSet)
+    if state.DeatCast.value then
+        meleeSet = set_combine(meleeSet, sets.DeatCastIdle)
+    end
+    if buffactive['Mana Wall'] then
+        meleeSet = set_combine(meleeSet, sets.buff['Mana Wall'])
+    end
+    return meleeSet
 end
--- Function to display the current relevant user state when doing an update.
-function display_current_job_state(eventArgs)
-end]]
 
 -------------------------------------------------------------------------------------------------------------------
 -- Utility functions specific to this job.
