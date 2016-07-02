@@ -58,6 +58,15 @@ function job_setup()
 	send_command('bind ^` gs c toggle MagicBurst')
 	send_command('bind !` gs c toggle ConsMP')
 	send_command('bind @` gs c toggle DeatCast')
+	send_command('bind ^F1 gs c nuke')
+	send_command('bind !F1 gs c element Earth')
+	send_command('bind @F1 gs c element Wind')
+	send_command('bind ^F2 gs c element Ice')
+	send_command('bind !F2 gs c element Fire')
+	send_command('bind @F2 gs c element Water')
+	send_command('bind ^F3 gs c element Lightning')
+	send_command('bind !F3 gs c toggle AOE')
+	send_command('bind !F1 gs c element Earth')
 
 
 	organizer_items = {aeonic="Khatvanga"}
@@ -67,7 +76,7 @@ end
 -- Called when this job file is unloaded (eg: job change)
 function user_unload()
 	send_command('unbind ^`')
-    send_command('unbind !`')
+	send_command('unbind !`')
 	send_command('unbind @`')
 end
 
@@ -609,75 +618,80 @@ end
 
 -- Handle notifications of general user state change.
 function job_state_change(stateField, newValue, oldValue)
-    if stateField == 'Offense Mode' then
-        if newValue == 'Locked' then
-            disable('main','sub','range')
-        else
-            enable('main','sub','range')
-        end
-    end
-    if stateField == 'Death Mode' then
-        if newValue == true then
-            state.OffenseMode:set('Locked')
-            predeathcastmode = state.CastingMode.value
-            --[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
-        elseif newValue == false then
-            state.CastingMode:set(predeathcastmode)
-        end
-    end            
+	if stateField == 'Offense Mode' then
+		if newValue == 'Locked' then
+			disable('main','sub','range')
+		else
+			enable('main','sub','range')
+		end
+	end
+	if stateField == 'Death Mode' then
+		if newValue == true then
+			state.OffenseMode:set('Locked')
+			predeathcastmode = state.CastingMode.value
+			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
+		elseif newValue == false then
+			state.CastingMode:set(predeathcastmode)
+		end
+	end            
 end
 
 
-function job_update(cmdParams, eventArgs)
-    job_display_current_state(eventArgs)
-    eventArgs.handled = true
-end
+--[[function job_update(cmdParams, eventArgs)
+	job_display_current_state(eventArgs)
+	eventArgs.handled = true
+end]]
 
-function job_display_current_state(eventArgs)
-    eventArgs.handled = true
-    local msg = ''
-    
-    if state.OffenseMode.value ~= 'None' then
-        msg = msg .. 'Combat ['..state.OffenseMode.value..']'
+function display_current_job_state(eventArgs)
+	eventArgs.handled = true
+	local msg = ''
+	
+	if state.OffenseMode.value ~= 'None' then
+		msg = msg .. 'Combat ['..state.OffenseMode.value..']'
 
-        if state.CombatForm.has_value then
-            msg = msg .. ' (' .. state.CombatForm.value .. ')'
-        end
-        msg = msg .. ', '
-    end
-    --[[if state.HybridMode.value ~= 'Normal' then
-        msg = msg .. '/' .. state.HybridMode.value
-    end]]
+		if state.CombatForm.has_value then
+			msg = msg .. ' (' .. state.CombatForm.value .. ')'
+		end
+		msg = msg .. ' - '
+	end
+	--[[if state.HybridMode.value ~= 'Normal' then
+		msg = msg .. '/' .. state.HybridMode.value
+	end]]
 
-    msg = msg .. 'Casting ['..state.CastingMode.value..'], Idle ['..state.IdleMode.value..']'
+	msg = msg .. 'Casting ['..state.CastingMode.value..'] - Idle ['..state.IdleMode.value..'] \n' 
 
-    if state.MagicBurst.value then
-        msg = msg .. ', MB [ON]'
-    else
-        msg = msg .. ', MB [OFF]'
-    end
-    if state.ConsMP.value then
-        msg = msg .. ', AF Body [ON]'
-    else
-        msg = msg .. ', AF Body [OFF]'
-    end
-    if state.DefenseMode.value ~= 'None' then
-        msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
-    end
-    
-    if state.Kiting.value then
-        msg = msg .. ', Kiting [ON]'
-    end
+	if state.MagicBurst.value then
+		msg = msg .. 'MB [ON]'
+	else
+		msg = msg .. 'MB [OFF]'
+	end
+	if state.ConsMP.value then
+		msg = msg .. ', AF Body [ON]'
+	else
+		msg = msg .. ', AF Body [OFF]'
+	end
+	if state.DeatCast.value then
+		msg = msg .. ', Death Mode [ON]'
+	else 
+		msg = msg .. ', Death Mode [OFF]'
+	end
+	if state.DefenseMode.value ~= 'None' then
+		msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
+	end
+	
+	if state.Kiting.value then
+		msg = msg .. ', Kiting [ON]'
+	end
 
-    if state.PCTargetMode.value ~= 'default' then
-        msg = msg .. ', Target PC: '..state.PCTargetMode.value
-    end
+	if state.PCTargetMode.value ~= 'default' then
+		msg = msg .. ', Target PC: '..state.PCTargetMode.value
+	end
 
-    if state.SelectNPCTargets.value == true then
-        msg = msg .. ', Target NPCs'
-    end
+	if state.SelectNPCTargets.value == true then
+		msg = msg .. ', Target NPCs'
+	end
 
-    add_to_chat(122, msg)
+	add_to_chat(122, msg)
 end
 
 
@@ -695,26 +709,26 @@ end
 -- Modify the default idle set after it was constructed.
 --- This is where I handle Death Mode Idle set construction, rather than weave it into the Idle state var
 function customize_idle_set(idleSet)
-    if state.DeatCast.value then
-        idleSet = set_combine(idleSet, sets.DeatCastIdle)
-    end
-    if player.mpp < 51 then
-        idleSet = set_combine(idleSet, sets.latent_refresh)
-    end
-    if buffactive['Mana Wall'] then
-        idleSet = set_combine(idleSet, sets.buff['Mana Wall'])
-    end
-    return idleSet
+	if state.DeatCast.value then
+		idleSet = set_combine(idleSet, sets.DeatCastIdle)
+	end
+	if player.mpp < 51 then
+		idleSet = set_combine(idleSet, sets.latent_refresh)
+	end
+	if buffactive['Mana Wall'] then
+		idleSet = set_combine(idleSet, sets.buff['Mana Wall'])
+	end
+	return idleSet
 end
 --- This is where I handle Death Mode Melee set modifications
 function customize_melee_set(meleeSet)
-    if state.DeatCast.value then
-        meleeSet = set_combine(meleeSet, sets.DeatCastIdle)
-    end
-    if buffactive['Mana Wall'] then
-        meleeSet = set_combine(meleeSet, sets.buff['Mana Wall'])
-    end
-    return meleeSet
+	if state.DeatCast.value then
+		meleeSet = set_combine(meleeSet, sets.DeatCastIdle)
+	end
+	if buffactive['Mana Wall'] then
+		meleeSet = set_combine(meleeSet, sets.buff['Mana Wall'])
+	end
+	return meleeSet
 end
 
 -------------------------------------------------------------------------------------------------------------------

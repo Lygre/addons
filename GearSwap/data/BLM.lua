@@ -447,12 +447,12 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- User code that supplements standard library decisions.
 -------------------------------------------------------------------------------------------------------------------
-function job_update(cmdParams, eventArgs)
+--[[function job_update(cmdParams, eventArgs)
 	job_display_current_state(eventArgs)
 	eventArgs.handled = true
-end
+end]]
 
-function job_display_current_state(eventArgs)
+function display_current_job_state(eventArgs)
 	eventArgs.handled = true
 	local msg = ''
 	
@@ -479,6 +479,11 @@ function job_display_current_state(eventArgs)
 		msg = msg .. ', AF Body [ON]'
 	else
 		msg = msg .. ', AF Body [OFF]'
+	end
+	if state.DeatCast.value then
+		msg = msg .. ', Death Mode [ON]'
+	else 
+		msg = msg .. ', Death Mode [OFF]'
 	end
 	if state.DefenseMode.value ~= 'None' then
 		msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
