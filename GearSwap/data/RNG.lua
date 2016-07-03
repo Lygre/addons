@@ -99,12 +99,12 @@ function init_gear_sets()
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	
 	sets.precast.WS['Trueflight'] = {
-		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
+		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Ishvara earring",
 		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
 		back="Toro Cape",waist="Ponente Sash",legs=gear.herclegs_mab,feet=gear.hercfeet_mab
 }
 	sets.precast.WS['Wildfire' ] = {
-		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi earring",
+		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Ishvara earring",
 		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
 		back="Toro Cape",waist="Eschan Stone",legs=gear.herclegs_mab,feet=gear.hercfeet_mab
 }
@@ -238,6 +238,7 @@ function init_gear_sets()
 
 	sets.engaged.DW.Acc.LowHaste = set_combine(sets.engaged.DW.LowHaste, {
 		head="Dampening Tam",neck="Combatant's torque",
+		ring1="Cacoethic Ring",
 		back="Grounded Mantle +1",waist="Olseni belt"})
 
 	--DW High Haste ~30%
@@ -248,7 +249,7 @@ function init_gear_sets()
 
 	sets.engaged.DW.Acc.HighHaste = set_combine(sets.engaged.DW.HighHaste, {
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos Earring",ear2="Zennaroi Earring",
-		hands="Adhemar Wristbands",
+		hands="Adhemar Wristbands",ring1="Cacoethic Ring",
 		back="Grounded Mantle +1",waist="Olseni belt",legs="Carmine cuisses"})
 
 	--DW Max Haste 43.75%
@@ -259,7 +260,7 @@ function init_gear_sets()
 
 	sets.engaged.DW.Acc.MaxHaste = set_combine(sets.engaged.DW.MaxHaste, {
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos Earring",ear2="Zennaroi Earring",
-		hands="Adhemar Wristbands",
+		hands="Adhemar Wristbands",ring1="Cacoethic ring",
 		back="Grounded Mantle +1",waist="Olseni belt",legs="Carmine cuisses"})
 
 	--------------------------------------

@@ -113,7 +113,7 @@ function init_gear_sets()
     
 	sets.precast.WS['Myrkr'] = {ammo="Psilomene",
 		head="Kaykaus Mitra",neck="Nodens gorget",ear1="loquacious earring", ear2="Moonshade earring",
-		body="Amalric doublet", hands="Kaykaus cuffs", ring1="Sangoma ring", ring2="Mephitas's Ring",
+		body="Amalric doublet", hands="Kaykaus cuffs", ring1="Sangoma ring", ring2="Mephitas's Ring +1",
 		back="Aurist's cape +1", waist="Fucho-no-obi", legs="Amalric slops", feet="Arbatel loafers +1"}
 
 	sets.precast.WS['Shattersoul'] = {ammo="Pemphredo tathlum",

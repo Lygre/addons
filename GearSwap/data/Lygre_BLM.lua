@@ -128,7 +128,7 @@ function init_gear_sets()
 		ear2="Influx earring",      -- 55 
 		body="Amalric doublet",     -- 133
 		hands="Amalric gages",      -- 86
-		ring1="Mephitas's ring",    -- 100
+		ring1="Mephitas's Ring +1",    -- 100
 		ring2="Sangoma Ring",       -- 70
 		back="Bane Cape",           -- 90
 		waist="Shinjutsu-no-obi",   -- 80 
@@ -164,7 +164,7 @@ function init_gear_sets()
 		ear2="Friomisi Earring",
 		body="Amalric doublet", 	--133
 		hands="Amalric gages",      -- 86
-		ring1="Mephitas's ring",    -- 100
+		ring1="Mephitas's Ring +1",    -- 100
 		ring2="Archon Ring",
 		back="Taranus's Cape",      -- 60
 		waist="Shinjutsu-no-obi",   -- 80
@@ -311,7 +311,7 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB,sets.midcast['Enhancing Magic'],
 		{ammo="Psilomene",
 		neck="Dualism Collar",ear1="Etiolation earring",ear2="Influx Earring",
-		ring1="Mephitas's Ring",ring2="Rahab Ring",
+		ring1="Mephitas's Ring +1",ring2="Rahab Ring",
 		back="Bane Cape",waist="Shinjutsu-no-obi"})
 	
 	sets.midcast['Enfeebling Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB,
