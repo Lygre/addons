@@ -1,3 +1,25 @@
+---- Lygre's BLM.lua
+---- VERSION 1.1.2
+-- This is lua is built using Mote's modified includes, 
+-- which you can find in my GearSwap/libs folder.
+---- Macro/Keybind/Toggles/SelfCommands you may need
+-- Magic Burst: /console gs c toggle MagicBurst
+-- AF Body: /console gs c toggle ConsMP
+-- AOE for auto nuke: /console gs c toggle AOE
+--- This is makes the nuke() function use AOE nukes or not
+-- Element for auto nuke: /console gs c element (Earth, Wind, Ice, Fire, Water, Lightning) - case sensitive
+--- Selects an element for nuke() to use
+-- Auto Nuke: /console gs c nuke
+-- Death Mode: /console gs c toggle DeatCast
+--- Saved Death Mode toggle for last
+--- This one toggle will handle everything for Death
+--- This includes idle/engaged, casting other spells/self-buffs
+--- The only other thing you have to do is the Magic Burst toggle,
+--- as it decides whether the handler will put your Death-specific MB set on over your
+--- regular one.
+--- It also remembers what casting mode you were in when you turned Death Mode on
+--- and return to it upon exiting Death Mode
+
 -------------------------------------------------------------------------------------------------------------------
 -- Setup functions for this job.  Generally should not be modified.
 -------------------------------------------------------------------------------------------------------------------
@@ -27,7 +49,7 @@ function job_setup()
   
 	MagicBurstIndex = 0
 	state.MagicBurst = M(false, 'Magic Burst')
-	state.ConsMP = M(false, 'Conserve MP')
+	state.ConsMP = M(false, 'AF Body')
 	state.DeatCast = M(false, 'Death Mode')
 	element_table = L{'Earth','Wind','Ice','Fire','Water','Lightning'}
 	state.AOE = M(false, 'AOE')
@@ -288,7 +310,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			equip(sets.Obi)
 		end
 	end
-	if spell.skill == 'Elemental Magic' and state.ConsMP.value then
+	if spell.skill == 'Elemental Magic' and state.ConsMP.value and not state.DeatCast.value then
 		equip(sets.ConsMP)
 	end
 end

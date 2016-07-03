@@ -481,7 +481,7 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			equip(sets.Obi)
 		end
 	end
-	if spell.skill == 'Elemental Magic' and state.ConsMP.value then
+	if spell.skill == 'Elemental Magic' and state.ConsMP.value and not state.DeatCast.value then
 		equip(sets.ConsMP)
 	end
 end
