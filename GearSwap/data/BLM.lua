@@ -156,7 +156,7 @@ function init_gear_sets()
 
 	sets.midcast['Dark Magic'] = {}
 	sets.midcast.Drains = set_combine(sets.midcast['Dark Magic'], {})
-	sets.midcast.Aspirs = sets.midcast['Dark Magic'].Drains
+	sets.midcast.Aspirs = sets.midcast.Drains
 	sets.midcast.Stun = {}
 
 	-- Elemental Magic sets
