@@ -233,22 +233,22 @@ function user_unload()
 	send_command('unbind ^`')
 	send_command('unbind !`')
 	send_command('unbind @`')
-	send_command('bind ^F1')
-	send_command('bind !F1')
-	send_command('bind @F1')
-	send_command('bind ^F2')
-	send_command('bind !F2')
-	send_command('bind @F2')
-	send_command('bind ^F3')
-	send_command('bind !F3')
-	send_command('bind @F3')
-	send_command('bind ^F4')
-	send_command('bind !F4')
-	send_command('bind @F4')
-	send_command('bind ^F5')
-	send_command('bind !F5')
-	send_command('bind @F5')
-	send_command('bind ^F6')
+	send_command('unbind ^F1')
+	send_command('unbind !F1')
+	send_command('unbind @F1')
+	send_command('unbind ^F2')
+	send_command('unbind !F2')
+	send_command('unbind @F2')
+	send_command('unbind ^F3')
+	send_command('unbind !F3')
+	send_command('unbind @F3')
+	send_command('unbind ^F4')
+	send_command('unbind !F4')
+	send_command('unbind @F4')
+	send_command('unbind ^F5')
+	send_command('unbind !F5')
+	send_command('unbind @F5')
+	send_command('unbind ^F6')
 
 end
 
@@ -302,8 +302,12 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Requiescat'] = {ammo="Ginsen",
-		head="Carmine Mask",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Mekosu. Harness",hands="Leyline gloves",ring1="Sirona's Ring",ring2="Epona's Ring",
+		head="Dampening tam",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		body="Hashishin mintan +1",hands="Adhemar wristbands",ring1="Sirona's Ring",ring2="Epona's Ring",
+		back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Carmine Greaves"}
+	sets.precast.WS['Requiescat'].Acc = {ammo="Ginsen",
+		head="Carmine mask",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		body="Hashishin mintan +1",hands="Adhemar wristbands",ring1="Sirona's Ring",ring2="Epona's Ring",
 		back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Carmine Greaves"}
 	
 	sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
