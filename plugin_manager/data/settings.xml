@@ -11,6 +11,8 @@
 		<plugin>FFXIDB</plugin>
 		<plugin>Fishingcrashfix</plugin>
 		<plugin>config</plugin>
+		<plugin>guildwork</plugin>
+		<addon>Anchor</addon>
 		<addon>aecho</addon>
 		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
