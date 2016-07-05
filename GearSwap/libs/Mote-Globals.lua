@@ -34,6 +34,10 @@ function define_global_sets()
 	gear.default.obi_ring = "Strendu Ring"
 	gear.default.fastcast_staff = ""
 	gear.default.recast_staff = ""
+	-- Special items for utility gear values
+	gear.ElementalObi = "Hachirin-no-obi"
+	gear.ElementalGorget = "Fotia Gorget"
+	gear.ElementalBelt = "Fotia Belt"
 	
 	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
 
