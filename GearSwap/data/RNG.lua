@@ -286,11 +286,14 @@ function job_precast(spell, action, spellMap, eventArgs)
 	  (spell.type == 'WeaponSkill' and (spell.skill == 'Marksmanship' or spell.skill == 'Archery')) then
 		check_ammo(spell, action, spellMap, eventArgs)
 	end
-	
-	--[[if state.DefenseMode.value ~= 'None' and spell.type == 'WeaponSkill' then
-		-- Don't gearswap for weaponskills when Defense is active.
-		eventArgs.handled = true
-	end]]
+end
+
+function job_post_precast(spell, action, spellMap, eventArgs)
+	if spell.type == 'WeaponSkill' then
+		if spell.element == world.day_element or spell.element == world.weather_element then
+			equip({waist=gear.ElementalObi})
+		end
+	end
 end
 
 
