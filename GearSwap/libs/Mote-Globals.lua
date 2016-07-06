@@ -35,9 +35,9 @@ function define_global_sets()
 	gear.default.fastcast_staff = ""
 	gear.default.recast_staff = ""
 	-- Special items for utility gear values
-	gear.ElementalObi = "Hachirin-no-obi"
-	gear.ElementalGorget = "Fotia Gorget"
-	gear.ElementalBelt = "Fotia Belt"
+	gear.ElementalObi.name = "Hachirin-no-obi"
+	gear.ElementalGorget.name = "Fotia Gorget"
+	gear.ElementalBelt.name = "Fotia Belt"
 	
 	gear.DarkRing.PDT = {name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}}
 
@@ -88,11 +88,16 @@ function define_global_sets()
 	gear.amalricfeet_consmp = {name="Amalric Nails", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Conserve MP"+6',}}
 	gear.amalricfeet_death = {name="Amalric Nails", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
 
+	--Some Taeon
 	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
 	
+	--JSE Capes
 	gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
 	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
+	gear.dnccape_tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.dnccape_ws = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
  	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+22','Weapon skill damage +4%',}}

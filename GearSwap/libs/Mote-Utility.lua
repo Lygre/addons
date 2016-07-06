@@ -439,8 +439,8 @@ function set_elemental_gorget_belt(spell)
         union(skillchain_elements[spell.skillchain_b]):
         union(skillchain_elements[spell.skillchain_c])
     
-    gear.ElementalGorget.name = get_elemental_item_name("gorget", weaponskill_elements) or gear.default.weaponskill_neck  or ""
-    gear.ElementalBelt.name   = get_elemental_item_name("belt", weaponskill_elements)   or gear.default.weaponskill_waist or ""
+    gear.ElementalGorget.name = get_elemental_item_name("gorget", weaponskill_elements) or gear.default.weaponskill_neck  or "Fotia Gorget"
+    gear.ElementalBelt.name   = get_elemental_item_name("belt", weaponskill_elements)   or gear.default.weaponskill_waist or "Fotia Belt"
 end
 
 
@@ -456,7 +456,7 @@ function set_elemental_obi_cape_ring(spell)
     end
 
     local obi_name = get_elemental_item_name("obi", S{spell.element}, world_elements)
-    gear.ElementalObi.name = obi_name or gear.default.obi_waist  or ""
+    gear.ElementalObi.name = obi_name or gear.default.obi_waist  or "Hachirin-no-obi"
     
     if obi_name then
         if player.inventory['Twilight Cape'] or player.wardrobe['Twilight Cape'] or player.wardrobe2['Twilight Cape'] then

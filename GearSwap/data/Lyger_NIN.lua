@@ -42,6 +42,24 @@ function job_setup()
 	select_default_macro_book()
 
 	determine_haste_group()
+
+	send_command('bind ^` as on')
+	send_command('bind !` as off')
+	send_command('bind @` ah')
+	send_command('bind ^F1 obox')
+	send_command('bind !F1 dbox')
+	send_command('bind !F11 input /logout')
+
+end
+
+-- Called when this job file is unloaded (eg: job change)
+function user_unload()
+	send_command('unbind ^`')
+	send_command('unbind !`')
+	send_command('unbind @`')
+	send_command('unbind ^F1')
+	send_command('unbind !F1')
+	send_command('unbind !F11')
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -53,7 +71,7 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
-	--------------------------------------
+--[[	--------------------------------------
 	-- Precast sets
 	--------------------------------------
 
@@ -258,23 +276,6 @@ function init_gear_sets()
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
 		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
-	-- Custom melee group: Embrava Haste (7% DW)
-	--[[sets.engaged.EmbravaHaste = {ammo="Happo Shuriken",
-		head="Ryuo somen",neck="Lissome necklace",ear1="Suppanomimi",ear2="Telos earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
-	sets.engaged.Acc.EmbravaHaste = {ammo="Happo Shuriken",
-		head="ryuo somen",neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Yokaze Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_melee}
-	sets.engaged.PDT.EmbravaHaste = {ammo="Happo Shuriken",
-		head="ryuo somen",neck="agitator's collar",ear1="Suppanomimi",ear2="Genmei Earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
-	sets.engaged.Acc.PDT.EmbravaHaste = {ammo="Happo Shuriken",
-		head="Ryuo somen",neck="Combatant's torque",ear1="Suppanomimi",ear2="Telos Earring",
-		body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}]]
 
 	-- Custom melee group: Max Haste (0% DW)
 	sets.engaged.MaxHaste = {ammo="Happo Shuriken",
@@ -301,7 +302,7 @@ function init_gear_sets()
 	sets.buff.Migawari = {body="Hattori Ningi +1"}
 	sets.buff.Doom = {ring2="Saida Ring"}
 	sets.buff.Yonin = {legs="Hattori hakama +1"}
-	sets.buff.Innin = {}
+	sets.buff.Innin = {}]]
 end
 
 -------------------------------------------------------------------------------------------------------------------
