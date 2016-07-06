@@ -15,10 +15,10 @@ local cu = {}
 cu.cure = {
 	[1] = {id=1,	en='Cure',		res=res.spells[1],		hp=94},
 	[2] = {id=2,	en='Cure II',		res=res.spells[2],		hp=207},
-	[3] = {id=3,	en='Cure III',		res=res.spells[3],		hp=320},
-	[4] = {id=4,	en='Cure IV',		res=res.spells[4],		hp=670},
-	[5] = {id=5,	en='Cure V',		res=res.spells[5],		hp=1010},
-	[6] = {id=6,	en='Cure VI',		res=res.spells[6],		hp=1255}
+	[3] = {id=3,	en='Cure III',		res=res.spells[3],		hp=469},
+	[4] = {id=4,	en='Cure IV',		res=res.spells[4],		hp=880},
+	[5] = {id=5,	en='Cure V',		res=res.spells[5],		hp=1110},
+	[6] = {id=6,	en='Cure VI',		res=res.spells[6],		hp=1395}
 }
 cu.curaga = {
 	[1] = {id=7,	en='Curaga',		res=res.spells[7],		hp=150},
