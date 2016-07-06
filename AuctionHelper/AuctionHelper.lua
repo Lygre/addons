@@ -31,6 +31,7 @@ auction_list = texts.new(settings.display)
 zones = {}
 zones.ah = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin'}
 zones.mh = L{'Mhaura','Selbina','Norg','Rabao','Kazham','Tavnazian Safehold','Nashmau'}
+zones.dbox = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin', 'Mog Garden'}
 
 function timef(ts)
     --return string.format('%.2d:%.2d:%.2d',ts/(60*60), ts/60%60, ts%60);
@@ -136,7 +137,7 @@ windower.register_event('unhandled command', function(...)
     if commands[1] == 'bazaar' and #commands >= 3 then
         bazaar_item(table.concat(commands, ' ',2,#commands-1):lower(),commands[#commands])
     end
-    if actions or not zones.ah:contains(res_zones[windower.ffxi.get_info().zone].name) then return end
+    if actions or not zones.dbox:contains(res_zones[windower.ffxi.get_info().zone].name) then return end
     local now = os.clock()
     if not lclock or lclock < now then
         if (commands[1] == 'outbox' or commands[1] == 'obox') then	
