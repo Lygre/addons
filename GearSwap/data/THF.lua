@@ -138,9 +138,9 @@ function init_gear_sets()
 
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Ginsen",
-		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
-        body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Canny cape",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
+        body="Abnoba kaftan",hands="Meghanada gloves +1",ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Rancorous Mantle",waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {body="Adhemar jacket",back="Grounded Mantle +1"})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
