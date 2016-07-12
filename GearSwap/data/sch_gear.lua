@@ -78,13 +78,13 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
 
-    sets.precast.FC = {main=gear.grio_enhancing,sub="Arbuda grip",ammo="Sapience orb",
+    sets.precast.FC = {main="Oranyan",sub="Clerisy strap",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Anhur Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 	
 	--main="Apamajas II",sub="Arbuda grip", 
-    sets.precast.FC.Stun = {main=gear.grio_enhancing,sub="Clerisy strap",ammo="Sapience orb",
+    sets.precast.FC.Stun = {main="Oranyan",sub="Clerisy strap",ammo="Sapience orb",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
@@ -123,7 +123,7 @@ function init_gear_sets()
 
     -- Midcast Sets 
 
-    sets.midcast.FastRecast = {main=gear.grio_enhancing,sub="Thrace strap",ammo="Hasty pinion +1",
+    sets.midcast.FastRecast = {main="Oranyan",sub="Thrace strap",ammo="Hasty pinion +1",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchanter earring +1",
         body="Shango robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
         back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
@@ -147,7 +147,7 @@ function init_gear_sets()
         body="Pedagogy gown +1",hands="Hieros Mittens",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Tempered cape +1",waist="Ninurta's sash",legs="Academic's pants +1",feet="Vanya clogs"})
 
-    sets.midcast['Enhancing Magic'] = {main=gear.grio_enhancing,sub="Fulcio grip",ammo="Savant's Treatise",
+    sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio grip",ammo="Savant's Treatise",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chas.",hands="Telchine gloves",
 	   back="Fi follet cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}

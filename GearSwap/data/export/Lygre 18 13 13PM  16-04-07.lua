@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sequence",
+    sub={ name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}},
+    ammo="Sapience Orb",
+    head={ name="Rawhide Mask", augments={'Attack+13','Pet: Mag. Acc.+18','Pet: "Mag.Atk.Bns."+13',}},
+    body={ name="Herculean Vest", augments={'Accuracy+16','"Triple Atk."+4','DEX+3',}},
+    hands={ name="Herculean Gloves", augments={'Rng.Atk.+14','"Triple Atk."+4','AGI+10','Accuracy+13',}},
+    legs={ name="Herculean Trousers", augments={'Accuracy+22 Attack+22','Accuracy+4','Attack+7',}},
+    feet="Ahosi Leggings",
+    neck="Loricate Torque +1",
+    waist="Flume Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Infused Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    back="Solemnity Cape",
+}

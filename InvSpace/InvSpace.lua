@@ -41,6 +41,8 @@ defaults.ShowSack = true
 defaults.ShowCase = true
 defaults.ShowWardrobe = true
 defaults.ShowWardrobe2 = true
+defaults.ShowWardrobe3 = true
+defaults.ShowWardrobe4 = true
 defaults.ShowSafe = true
 defaults.ShowSafe2 = true
 defaults.ShowStorage = true
@@ -89,33 +91,40 @@ initialize = function(text, settings)
     if settings.ShowInventory then
         properties:append(' ${inv_current|0}${inv_max|0}${inv_diff|0}')
     end
-    if settings.ShowSatchel then
-        properties:append(' ${sat_current|0}${sat_max|0}${sat_diff|0}')
-    end
-    if settings.ShowSack then
-        properties:append(' ${sac_current|0}${sac_max|0}${sac_diff|0}')
-    end
-    if settings.ShowCase then
-        properties:append(' ${case_current|0}${case_max|0}${case_diff|0}')
-    end
     if settings.ShowWardrobe then
         properties:append(' ${war_current|0}${war_max|0}${war_diff|0}')
     end
-	if settings.ShowWardrobe2 then
-		properties:append(' ${war2_current|0}${war2_max|0}${war2_diff|0}')
-	end
-    if settings.ShowSafe then
+    if settings.ShowWardrobe2 then
+        properties:append(' ${war2_current|0}${war2_max|0}${war2_diff|0}')
+    end
+    if settings.ShowWardrobe3 then
+        properties:append(' ${war3_current|0}${war3_max|0}${war3_diff|0}')
+    end
+    if settings.ShowWardrobe4 then
+        properties:append(' ${war4_current|0}${war4_max|0}${war4_diff|0}')
+    end
+    if settings.ShowLocker then
+        properties:append(' ${loc_current|0}${loc_max|0}${loc_diff|0}')
+    end
+     if settings.ShowSafe then
         properties:append(' ${safe_current|0}${safe_max|0}${safe_diff|0}')
     end
     if settings.ShowSafe2 then
         properties:append(' ${safe2_current|0}${safe2_max|0}${safe2_diff|0}')
     end
+    if settings.ShowCase then
+        properties:append(' ${case_current|0}${case_max|0}${case_diff|0}')
+    end
+    if settings.ShowSack then
+        properties:append(' ${sac_current|0}${sac_max|0}${sac_diff|0}')
+    end
+   if settings.ShowSatchel then
+        properties:append(' ${sat_current|0}${sat_max|0}${sat_diff|0}')
+    end
     if settings.ShowStorage then
         properties:append(' ${sto_current|0}${sto_max|0}${sto_diff|0}')
     end
-    if settings.ShowLocker then
-        properties:append(' ${loc_current|0}${loc_max|0}${loc_diff|0}')
-    end
+
 	if settings.ShowTotal then
 		properties:append(' ${total_current|0}${total_max|0}${total_diff|0}')
 	end
@@ -260,28 +269,72 @@ windower.register_event('prerender', function()
                 '\\cs(0,255,0)' .. (' → ' .. (get.wardrobe.max - get.wardrobe.count):string():lpad(' ', 2))
             or 
                 '\\cs(255,128,0)' .. (' → '.. (get.wardrobe.max - get.wardrobe.count):string():lpad(' ', 2))) .. '\\cr'
-        local war_color = get.wardrobe.max - get.wardrobe.count
+        local war2_color = get.wardrobe2.max - get.wardrobe2.count
         info.war2_current = (
             war2_color == 0 and
                 '\\cs(255,0,0)' .. ('Wardrobe2: '..get.wardrobe2.count:string():lpad(' ', 2))
-            or war_color > 10 and
+            or war2_color > 10 and
                 '\\cs(0,255,0)' .. ('Wardrobe2: '..get.wardrobe2.count:string():lpad(' ', 2))
             or 
                 '\\cs(255,128,0)' .. ('Wardrobe2: '..get.wardrobe2.count:string():lpad(' ', 2))) .. '\\cr'
         info.war2_max = (
             war2_color == 0 and
                 '\\cs(255,0,0)' .. ('/'..get.wardrobe2.max:string():lpad(' ', 2))
-            or war_color > 10 and
+            or war2_color > 10 and
                 '\\cs(0,255,0)' .. ('/'..get.wardrobe2.max:string():lpad(' ', 2))
             or 
                 '\\cs(255,128,0)' .. ('/'..get.wardrobe2.max:string():lpad(' ', 2))) .. '\\cr'
         info.war2_diff = (
             war2_color == 0 and
                 '\\cs(255,0,0)' .. (' → ' .. (get.wardrobe2.max - get.wardrobe2.count):string():lpad(' ', 2))
-            or war_color > 10 and
+            or war2_color > 10 and
                 '\\cs(0,255,0)' .. (' → ' .. (get.wardrobe2.max - get.wardrobe2.count):string():lpad(' ', 2))
             or 
                 '\\cs(255,128,0)' .. (' → '.. (get.wardrobe2.max - get.wardrobe2.count):string():lpad(' ', 2))) .. '\\cr'
+        local war3_color = get.wardrobe3.max - get.wardrobe3.count
+        info.war3_current = (
+            war3_color == 0 and
+                '\\cs(255,0,0)' .. ('Wardrobe3: '..get.wardrobe3.count:string():lpad(' ', 2))
+            or war3_color > 10 and
+                '\\cs(0,255,0)' .. ('Wardrobe3: '..get.wardrobe3.count:string():lpad(' ', 2))
+            or 
+                '\\cs(255,128,0)' .. ('Wardrobe3: '..get.wardrobe3.count:string():lpad(' ', 2))) .. '\\cr'
+        info.war3_max = (
+            war3_color == 0 and
+                '\\cs(255,0,0)' .. ('/'..get.wardrobe3.max:string():lpad(' ', 2))
+            or war3_color > 10 and
+                '\\cs(0,255,0)' .. ('/'..get.wardrobe3.max:string():lpad(' ', 2))
+            or 
+                '\\cs(255,128,0)' .. ('/'..get.wardrobe3.max:string():lpad(' ', 2))) .. '\\cr'
+        info.war3_diff = (
+            war3_color == 0 and
+                '\\cs(255,0,0)' .. (' → ' .. (get.wardrobe3.max - get.wardrobe3.count):string():lpad(' ', 2))
+            or war3_color > 10 and
+                '\\cs(0,255,0)' .. (' → ' .. (get.wardrobe3.max - get.wardrobe3.count):string():lpad(' ', 2))
+            or 
+                '\\cs(255,128,0)' .. (' → '.. (get.wardrobe3.max - get.wardrobe3.count):string():lpad(' ', 2))) .. '\\cr'
+        local war4_color = get.wardrobe4.max - get.wardrobe4.count
+        info.war4_current = (
+            war4_color == 0 and
+                '\\cs(255,0,0)' .. ('Wardrobe4: '..get.wardrobe4.count:string():lpad(' ', 2))
+            or war4_color > 10 and
+                '\\cs(0,255,0)' .. ('Wardrobe4: '..get.wardrobe4.count:string():lpad(' ', 2))
+            or 
+                '\\cs(255,128,0)' .. ('Wardrobe4: '..get.wardrobe4.count:string():lpad(' ', 2))) .. '\\cr'
+        info.war4_max = (
+            war4_color == 0 and
+                '\\cs(255,0,0)' .. ('/'..get.wardrobe4.max:string():lpad(' ', 2))
+            or war4_color > 10 and
+                '\\cs(0,255,0)' .. ('/'..get.wardrobe4.max:string():lpad(' ', 2))
+            or 
+                '\\cs(255,128,0)' .. ('/'..get.wardrobe4.max:string():lpad(' ', 2))) .. '\\cr'
+        info.war4_diff = (
+            war4_color == 0 and
+                '\\cs(255,0,0)' .. (' → ' .. (get.wardrobe4.max - get.wardrobe4.count):string():lpad(' ', 2))
+            or war4_color > 10 and
+                '\\cs(0,255,0)' .. (' → ' .. (get.wardrobe4.max - get.wardrobe4.count):string():lpad(' ', 2))
+            or 
+                '\\cs(255,148,0)' .. (' → '.. (get.wardrobe4.max - get.wardrobe4.count):string():lpad(' ', 2))) .. '\\cr'
         local safe_color = get.safe.max - get.safe.count
         info.safe_current = (
             safe_color == 0 and

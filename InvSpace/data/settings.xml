@@ -12,6 +12,8 @@
         <ShowStorage>true</ShowStorage>
         <ShowWardrobe>true</ShowWardrobe>
         <ShowWardrobe2>true</ShowWardrobe2>
+        <ShowWardrobe3>true</ShowWardrobe3>
+        <ShowWardrobe4>true</ShowWardrobe4>
         <display>
             <bg>
                 <alpha>150</alpha>
@@ -158,12 +160,12 @@
     <lygre>
         <display>
             <pos>
-                <x>1064</x>
-                <y>436</y>
+                <x>1036</x>
+                <y>410</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-1.780826700661e+019</alpha>
+                    <alpha>2.9528555333672e+026</alpha>
                 </stroke>
             </text>
         </display>
