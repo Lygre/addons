@@ -104,7 +104,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {main="Chatoyant Staff",sub="Achaq Grip",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Roundel Earring",ear2="Beatific Earring",
-        body="Kaykaus Bliaut",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Sirona's Ring",
+        body="Kaykaus Bliaut",hands="Telchine Gloves",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Swith Cape +1",waist="Bishop's sash",legs=gear.chirlegs,feet="Medium's Sabots"}
         
     sets.midcast.Curaga = sets.midcast.Cure
@@ -126,7 +126,7 @@ function init_gear_sets()
 
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash",neck="Nodens Gorget",legs="Shedir seraweels"})
     
-    sets.midcast['Enfeebling Magic'] = {main=gear.grio_elemental,sub="Mephitis Grip",ammo="Pemphredo tathlum",
+    sets.midcast['Enfeebling Magic'] = {main=gear.grio_elemental,sub="Clerisy Strap",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's Torque",ear1="Digni. Earring",ear2="Enchanter Earring +1",
         body="Chironic doublet",hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
         back="Sucellos's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's Sabots"}

@@ -114,7 +114,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {main="Tamaxchi",sub="Genmei shield",
         head="Telchine cap",neck="Incanter's torque",ear1="Gifted earring",ear2="Beatific earring",
-		body="Heka's kalasiris",hands="Telchine gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+		body="Heka's kalasiris",hands="Telchine gloves",ring1="Ephedra Ring",ring2="Haoma's Ring",
         back="Swith Cape +1",waist="Pythia sash +1",legs="Geomancy Pants +1",feet="Vanya clogs"}
     
     sets.midcast.Curaga = sets.midcast.Cure
@@ -122,7 +122,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio grip",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chas.",hands="Telchine gloves",
-	   back="Fi follet cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
+		waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
 	
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {main="Bolelabunga",sub="Genmei shield",
 		})
@@ -143,9 +143,9 @@ function init_gear_sets()
 		{head="Amalric coif",
 		waist="Emphatikos Rope"})	
 
-    sets.midcast.Protectra = {ring1="Sheltered Ring"}
+    sets.midcast.Protectra = {ring1="Defending Ring"}
 
-    sets.midcast.Shellra = {ring1="Sheltered Ring"}
+    sets.midcast.Shellra = {ring1="Defending Ring"}
 
 	sets.midcast['Enhancing Magic'] = {head="Telchine cap",neck="Incanter's torque",ear1="Andoaa earring",ear2="Calamitous earring",
 		body="Telchine Chasuble", hands="Telchine gloves",

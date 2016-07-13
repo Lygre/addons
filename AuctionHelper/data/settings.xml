@@ -3,7 +3,7 @@
     <global>
         <auction_list>
             <date>true</date>
-            <display>true</display>
+            <display>false</display>
             <empty>true</empty>
             <price>false</price>
             <slot>true</slot>

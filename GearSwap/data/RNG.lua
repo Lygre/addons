@@ -115,7 +115,7 @@ function init_gear_sets()
         back="Belenus's Cape",waist="Fotia Belt",legs="Amini brague +1",feet="Amini Bottillons +1"}
 
 	sets.precast.WS['Jishnu\'s Radiance'] = {
-		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Dominance Earring",
+		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Neritic Earring",
 		body="Amini caban +1",hands=gear.herchands_rng_crit,ring1="Rajas Ring",ring2="Petrov ring",
 		back="Belenus's cape",waist="Fotia belt",legs=gear.herclegs_rng_crit,feet="Thereoid greaves" }
 	
@@ -178,7 +178,7 @@ function init_gear_sets()
 	-- Sets to return to when not performing an action.
 
 	-- Resting sets
-	sets.resting = {ring1="Sheltered Ring",ring2="Paguroidea Ring"}
+	sets.resting = {ring1="Defending Ring",ring2="Paguroidea Ring"}
 
 	-- Idle sets
 	sets.idle = {

@@ -150,13 +150,13 @@ function init_gear_sets()
         back="Harmony Cape",waist="Corvax Sash",legs="Inyanga Shalwar +1",feet="Brioso Slippers +1"}
 
     -- For song defbuffs (duration primary, accuracy secondary)
-    sets.midcast.SongDebuff = {main="Carnwenhan",sub="Mephitis Grip",range="Gjallarhorn",
+    sets.midcast.SongDebuff = {main="Carnwenhan",sub="Clerisy Strap",range="Gjallarhorn",
         head="Brioso Roundlet +1",neck="Aoidos' Matinee",ear1="Psystorm Earring",ear2="Lifestorm Earring",
         body="Fili Hongreline +1",hands="Fili Manchettes +1",ring1="Prolix Ring",ring2="Sangoma Ring",
         back="Kumbira Cape",waist="Goading Belt",legs="Inyanga Shalwar +1",feet="Brioso Slippers +1"}
 
     -- For song defbuffs (accuracy primary, duration secondary)
-    sets.midcast.ResistantSongDebuff = {main="Carnwenhan",sub="Mephitis Grip",range="Gjallarhorn",
+    sets.midcast.ResistantSongDebuff = {main="Carnwenhan",sub="Clerisy Strap",range="Gjallarhorn",
         head="Brioso Roundlet +1",neck="Wind Torque",ear1="Psystorm Earring",ear2="Lifestorm Earring",
         body="Brioso Justaucorps +1",hands="Fili Manchettes +1",ring1="Prolix Ring",ring2="Sangoma Ring",
         back="Kumbira Cape",waist="Demonry Sash",legs="Brioso Cannions +1",feet="Bokwus Boots"}
@@ -180,7 +180,7 @@ function init_gear_sets()
     -- Other general spells and classes.
     sets.midcast.Cure = {main="Arka IV",sub='Achaq Grip',
         head="Gendewitha Caubeen",
-        body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Sirona's Ring",
+        body="Gendewitha Bliaut",hands="Bokwus Gloves",ring1="Ephedra Ring",ring2="Haoma's Ring",
         legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
         
     sets.midcast.Curaga = sets.midcast.Cure
@@ -204,22 +204,22 @@ function init_gear_sets()
     
     
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
-    sets.idle = {main=gear.Staff.PDT, sub="Mephitis Grip",range="Oneiros Harp",
+    sets.idle = {main=gear.Staff.PDT, sub="Clerisy Strap",range="Oneiros Harp",
         head="Gendewitha Caubeen",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Paguroidea Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Flume Belt",legs="Nares Trews",feet="Fili Cothurnes +2"}
 
-    sets.idle.PDT = {main=gear.Staff.PDT, sub="Mephitis Grip",range="Oneiros Harp",
+    sets.idle.PDT = {main=gear.Staff.PDT, sub="Clerisy Strap",range="Oneiros Harp",
         head="Gendewitha Caubeen",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Flume Belt",legs="Gendewitha Spats",feet="Fili Cothurnes +2"}
 
-    sets.idle.Town = {main=gear.Staff.PDT, sub="Mephitis Grip",range="Oneiros Harp",
+    sets.idle.Town = {main=gear.Staff.PDT, sub="Clerisy Strap",range="Oneiros Harp",
         head="Gendewitha Caubeen",neck="Wiglen Gorget",ear1="Bloodgem Earring",ear2="Loquacious Earring",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Paguroidea Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Flume Belt",legs="Nares Trews",feet="Fili Cothurnes +2"}
     
-    sets.idle.Weak = {main=gear.Staff.PDT,sub="Mephitis Grip",range="Oneiros Harp",
+    sets.idle.Weak = {main=gear.Staff.PDT,sub="Clerisy Strap",range="Oneiros Harp",
         head="Gendewitha Caubeen",neck="Twilight Torque",ear1="Bloodgem Earring",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Flume Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
@@ -227,12 +227,12 @@ function init_gear_sets()
     
     -- Defense sets
 
-    sets.defense.PDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
+    sets.defense.PDT = {main=gear.Staff.PDT,sub="Clerisy Strap",
         head="Gendewitha Caubeen",neck="Twilight Torque",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2=gear.DarkRing.physical,
         back="Umbra Cape",waist="Flume Belt",legs="Gendewitha Spats",feet="Gendewitha Galoshes"}
 
-    sets.defense.MDT = {main=gear.Staff.PDT,sub="Mephitis Grip",
+    sets.defense.MDT = {main=gear.Staff.PDT,sub="Clerisy Strap",
         head="Nahtirah Hat",neck="Twilight Torque",
         body="Gendewitha Bliaut",hands="Gendewitha Gages",ring1="Defending Ring",ring2="Shadow Ring",
         back="Engulfer Cape",waist="Flume Belt",legs="Bihu Cannions +1",feet="Gendewitha Galoshes"}

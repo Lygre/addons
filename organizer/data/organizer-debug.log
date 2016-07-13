@@ -1,1908 +1,538 @@
-Organizer loaded at 07/11/16 17:20:16
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding inventory to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding locker to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding safe2 to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding safe to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding sack to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding case to the pull list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding safe to the push list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding case to the push list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding locker to the push list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding sack to the push list
-2016-07-11 17:20:16| Organizer [VERBOSE] Adding safe2 to the push list
-2016-07-11 17:20:16| Organizer [VERBOSE] Non-equipment items set to retain
-2016-07-11 17:20:16| Organizer [VERBOSE] Slips set to retain
-2016-07-11 17:44:44| Organizer [MSG] Starting...
-2016-07-11 17:44:44| Organizer [VERBOSE] Getting!
-2016-07-11 17:44:44| Organizer [WARN] Taeon Tabard not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Skd. Jambeaux +1) from Safe 76 to Inventory 58)
-2016-07-11 17:44:44| Organizer [WARN] Engulfer Cape not found.
-2016-07-11 17:44:44| Organizer [WARN] Buremte Gloves not found.
-2016-07-11 17:44:44| Organizer [WARN] Epona's Ring not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Rawhide Boots) from Safe 2 58 to Inventory 59)
-2016-07-11 17:44:44| Organizer [WARN] Fotia Belt not found.
-2016-07-11 17:44:44| Organizer [WARN] Ishvara Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Dampening Tam not found.
-2016-07-11 17:44:44| Organizer [WARN] Ahosi Leggings not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Caudata Belt) from Safe 2 57 to Inventory 60)
-2016-07-11 17:44:44| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-11 17:44:44| Organizer [WARN] Hetairoi Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Rawhide Trousers not found.
-2016-07-11 17:44:44| Organizer [WARN] Senuna's Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Senuna's Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Falcon Eye not found.
-2016-07-11 17:44:44| Organizer [WARN] Samnuha Tights not found.
-2016-07-11 17:44:44| Organizer [WARN] Rajas Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Bleating Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Ginsen not found.
-2016-07-11 17:44:44| Organizer [WARN] Combatant's Torque not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Jacket not found.
-2016-07-11 17:44:44| Organizer [WARN] Flume Belt +1 not found.
-2016-07-11 17:44:44| Organizer [WARN] Brutal Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 17:44:44| Organizer [WARN] Roundel Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Leyline Gloves not found.
-2016-07-11 17:44:44| Organizer [WARN] Petrov Ring not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Meghanada Visor +1) from Safe 75 to Inventory 61)
-2016-07-11 17:44:44| Organizer [WARN] Suppanomimi not found.
-2016-07-11 17:44:44| Organizer [WARN] Zennaroi Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Asperity Necklace not found.
-2016-07-11 17:44:44| Organizer [WARN] Samnuha Coat not found.
-2016-07-11 17:44:44| Organizer [WARN] Reiki Yotai not found.
-2016-07-11 17:44:44| Organizer [WARN] Lithelimb Cap not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Meg. Jam. +1) from Safe 2 56 to Inventory 62)
-2016-07-11 17:44:44| Organizer [WARN] Eabani Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Olseni Belt not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Meg. Gloves +1) from Safe 2 55 to Inventory 63)
-2016-07-11 17:44:44| Organizer [WARN] Telos Earring not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Skinflayer) from Safe 74 to Inventory 64)
-2016-07-11 17:44:44| Organizer [VERBOSE] Got 7 item(s), and failed getting 0 item(s)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 65 to Safe 73)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 64 to Safe 74)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 63 to Safe 75)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 62 to Safe 76)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 61 to Safe 77)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 60 to Safe 78)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 59 to Safe 79)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 58 to Safe 2 54)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 57 to Safe 2 55)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 56 to Safe 2 56)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 55 to Safe 2 57)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 54 to Safe 2 58)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 53 to Safe 2 59)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Inventory 52 to Safe 2 60)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 51 to Safe 2 61)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 50 to Safe 2 62)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 49 to Safe 2 63)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 48 to Safe 2 64)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 47 to Safe 2 65)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 46 to Safe 2 66)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Lugh's Cape) from Inventory 45 to Safe 2 67)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 44 to Safe 2 68)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 43 to Safe 2 69)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 42 to Safe 2 70)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 41 to Safe 2 71)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 40 to Safe 2 72)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 39 to Safe 2 73)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 38 to Safe 2 74)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 37 to Safe 2 75)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 36 to Safe 2 76)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 35 to Safe 2 77)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 34 to Safe 2 78)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Gende. Gages +1) from Inventory 33 to Safe 2 79)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Oranyan) from Inventory 32 to Locker 62)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 31 to Locker 63)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 30 to Locker 64)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 29 to Locker 65)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 28 to Locker 66)
-2016-07-11 17:44:44| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 27 to Locker 67)
-2016-07-11 17:44:44| Organizer [WARN] Cannot move the item (Skinflayer). It has already been moved.
-2016-07-11 17:44:44| Organizer [VERBOSE] Remainder: 37 Current: 26
-2016-07-11 17:44:44| Organizer [VERBOSE] Getting!
-2016-07-11 17:44:44| Organizer [WARN] Taeon Tabard not found.
-2016-07-11 17:44:44| Organizer [WARN] Engulfer Cape not found.
-2016-07-11 17:44:44| Organizer [WARN] Buremte Gloves not found.
-2016-07-11 17:44:44| Organizer [WARN] Epona's Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Fotia Belt not found.
-2016-07-11 17:44:44| Organizer [WARN] Ishvara Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Dampening Tam not found.
-2016-07-11 17:44:44| Organizer [WARN] Ahosi Leggings not found.
-2016-07-11 17:44:44| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-11 17:44:44| Organizer [WARN] Hetairoi Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Rawhide Trousers not found.
-2016-07-11 17:44:44| Organizer [WARN] Senuna's Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Senuna's Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Falcon Eye not found.
-2016-07-11 17:44:44| Organizer [WARN] Samnuha Tights not found.
-2016-07-11 17:44:44| Organizer [WARN] Rajas Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Bleating Mantle not found.
-2016-07-11 17:44:44| Organizer [WARN] Ginsen not found.
-2016-07-11 17:44:44| Organizer [WARN] Combatant's Torque not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Jacket not found.
-2016-07-11 17:44:44| Organizer [WARN] Flume Belt +1 not found.
-2016-07-11 17:44:44| Organizer [WARN] Brutal Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 17:44:44| Organizer [WARN] Roundel Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Leyline Gloves not found.
-2016-07-11 17:44:44| Organizer [WARN] Petrov Ring not found.
-2016-07-11 17:44:44| Organizer [WARN] Suppanomimi not found.
-2016-07-11 17:44:44| Organizer [WARN] Zennaroi Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Asperity Necklace not found.
-2016-07-11 17:44:44| Organizer [WARN] Samnuha Coat not found.
-2016-07-11 17:44:44| Organizer [WARN] Reiki Yotai not found.
-2016-07-11 17:44:44| Organizer [WARN] Lithelimb Cap not found.
-2016-07-11 17:44:44| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-11 17:44:44| Organizer [WARN] Eabani Earring not found.
-2016-07-11 17:44:44| Organizer [WARN] Olseni Belt not found.
-2016-07-11 17:44:44| Organizer [WARN] Telos Earring not found.
-2016-07-11 17:44:44| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [WARN] Cannot move the item (Skinflayer). It has already been moved.
-2016-07-11 17:44:44| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-11 17:44:44| Organizer [WARN] Cannot move the item (Skinflayer). It has already been moved.
-2016-07-11 17:44:44| Organizer [MSG] Done! - 13 items matched and 37 items missing!
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: taeon tabard {""Fast Cast"+5"}
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: engulfer cape 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: buremte gloves 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: epona's ring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: ishvara earring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: dampening tam 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: ahosi leggings 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: windbuffet belt +1 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: adhemar wristbands 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: hetairoi ring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: rawhide trousers 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: senuna's mantle {"DEX+20", "Accuracy+20 Attack+20", ""Dbl.Atk."+10"}
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: senuna's mantle {"DEX+20", "Accuracy+20 Attack+20", "Weapon skill damage +10%"}
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: falcon eye 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: samnuha tights 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: bleating mantle 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: ginsen 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: combatant's torque 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: adhemar jacket 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: flume belt +1 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: brutal earring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: roundel earring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: leyline gloves 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: petrov ring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: suppanomimi 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: zennaroi earring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: asperity necklace 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: samnuha coat 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: reiki yotai 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: lithelimb cap 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: adhemar bonnet {"DEX+10", "AGI+10", "Accuracy+15"}
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: eabani earring 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: olseni belt 
-2016-07-11 17:44:44| Organizer [VERBOSE] Item Missing: telos earring 
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 20:07:09| Organizer [MSG] Starting...
-2016-07-11 20:07:09| Organizer [VERBOSE] Getting!
-2016-07-11 20:07:09| Organizer [WARN] Taeon Tabard not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Nails not found.
-2016-07-11 20:07:09| Organizer [WARN] Epona's Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Fotia Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Abnoba Kaftan not found.
-2016-07-11 20:07:09| Organizer [WARN] Dampening Tam not found.
-2016-07-11 20:07:09| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Slops not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Pigaches not found.
-2016-07-11 20:07:09| Organizer [WARN] Rawhide Trousers not found.
-2016-07-11 20:07:09| Organizer [WARN] Thereoid Greaves not found.
-2016-07-11 20:07:09| Organizer [WARN] Samnuha Tights not found.
-2016-07-11 20:07:09| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-11 20:07:09| Organizer [WARN] Reiki Yotai not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashishin Tayt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Combatant's Torque not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Jacket not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashi. Bazu. +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Psycloth Lappas not found.
-2016-07-11 20:07:09| Organizer [WARN] Eabani Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Luhlaza Charuqs +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Asperity Necklace not found.
-2016-07-11 20:07:09| Organizer [WARN] Samnuha Coat not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-11 20:07:09| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-11 20:07:09| Organizer [WARN] Vengeful Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Braconi not found.
-2016-07-11 20:07:09| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-11 20:07:09| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-11 20:07:09| Organizer [WARN] Engulfer Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Doublet not found.
-2016-07-11 20:07:09| Organizer [WARN] Suppanomimi not found.
-2016-07-11 20:07:09| Organizer [WARN] Mekosu. Harness not found.
-2016-07-11 20:07:09| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Sequence not found.
-2016-07-11 20:07:09| Organizer [WARN] Ahosi Leggings not found.
-2016-07-11 20:07:09| Organizer [WARN] Herculean Trousers not found.
-2016-07-11 20:07:09| Organizer [WARN] Witful Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Carmine Mask not found.
-2016-07-11 20:07:09| Organizer [WARN] Olseni Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Luminary Sash not found.
-2016-07-11 20:07:09| Organizer [WARN] Falcon Eye not found.
-2016-07-11 20:07:09| Organizer [WARN] Twilight Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Rajas Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Bleating Mantle not found.
-2016-07-11 20:07:09| Organizer [WARN] Cornflower Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Ginsen not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Coif not found.
-2016-07-11 20:07:09| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Jukukik Feather not found.
-2016-07-11 20:07:09| Organizer [WARN] Flume Belt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Brutal Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 20:07:09| Organizer [WARN] Leyline Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Petrov Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Mes'yohi Slacks not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashishin Mintan +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Buremte Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Telos Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Lithelimb Cap not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Cap not found.
-2016-07-11 20:07:09| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Meg. Chausses +1) from Inventory 27 to Locker 68)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Skd. Jambeaux +1) from Inventory 26 to Locker 69)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 25 to Locker 70)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Rawhide Boots) from Inventory 24 to Locker 71)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Caudata Belt) from Inventory 23 to Locker 72)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Meghanada Visor +1) from Inventory 22 to Locker 73)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Meg. Jam. +1) from Inventory 21 to Locker 74)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Meg. Gloves +1) from Inventory 20 to Locker 75)
-2016-07-11 20:07:09| Organizer [VERBOSE] Moving item! (Skinflayer) from Inventory 19 to Locker 76)
-2016-07-11 20:07:09| Organizer [VERBOSE] Remainder: 66 Current: 18
-2016-07-11 20:07:09| Organizer [VERBOSE] Getting!
-2016-07-11 20:07:09| Organizer [WARN] Taeon Tabard not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Nails not found.
-2016-07-11 20:07:09| Organizer [WARN] Epona's Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Fotia Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Abnoba Kaftan not found.
-2016-07-11 20:07:09| Organizer [WARN] Dampening Tam not found.
-2016-07-11 20:07:09| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Slops not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Pigaches not found.
-2016-07-11 20:07:09| Organizer [WARN] Rawhide Trousers not found.
-2016-07-11 20:07:09| Organizer [WARN] Thereoid Greaves not found.
-2016-07-11 20:07:09| Organizer [WARN] Samnuha Tights not found.
-2016-07-11 20:07:09| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-11 20:07:09| Organizer [WARN] Reiki Yotai not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashishin Tayt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Combatant's Torque not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Jacket not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashi. Bazu. +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Psycloth Lappas not found.
-2016-07-11 20:07:09| Organizer [WARN] Eabani Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Luhlaza Charuqs +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Asperity Necklace not found.
-2016-07-11 20:07:09| Organizer [WARN] Samnuha Coat not found.
-2016-07-11 20:07:09| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-11 20:07:09| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-11 20:07:09| Organizer [WARN] Vengeful Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Braconi not found.
-2016-07-11 20:07:09| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-11 20:07:09| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-11 20:07:09| Organizer [WARN] Engulfer Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Doublet not found.
-2016-07-11 20:07:09| Organizer [WARN] Suppanomimi not found.
-2016-07-11 20:07:09| Organizer [WARN] Mekosu. Harness not found.
-2016-07-11 20:07:09| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Sequence not found.
-2016-07-11 20:07:09| Organizer [WARN] Ahosi Leggings not found.
-2016-07-11 20:07:09| Organizer [WARN] Herculean Trousers not found.
-2016-07-11 20:07:09| Organizer [WARN] Witful Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Carmine Mask not found.
-2016-07-11 20:07:09| Organizer [WARN] Olseni Belt not found.
-2016-07-11 20:07:09| Organizer [WARN] Luminary Sash not found.
-2016-07-11 20:07:09| Organizer [WARN] Falcon Eye not found.
-2016-07-11 20:07:09| Organizer [WARN] Twilight Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Rajas Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Bleating Mantle not found.
-2016-07-11 20:07:09| Organizer [WARN] Cornflower Cape not found.
-2016-07-11 20:07:09| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Ginsen not found.
-2016-07-11 20:07:09| Organizer [WARN] Amalric Coif not found.
-2016-07-11 20:07:09| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Jukukik Feather not found.
-2016-07-11 20:07:09| Organizer [WARN] Flume Belt +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Brutal Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 20:07:09| Organizer [WARN] Leyline Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Petrov Ring not found.
-2016-07-11 20:07:09| Organizer [WARN] Mes'yohi Slacks not found.
-2016-07-11 20:07:09| Organizer [WARN] Hashishin Mintan +1 not found.
-2016-07-11 20:07:09| Organizer [WARN] Buremte Gloves not found.
-2016-07-11 20:07:09| Organizer [WARN] Telos Earring not found.
-2016-07-11 20:07:09| Organizer [WARN] Lithelimb Cap not found.
-2016-07-11 20:07:09| Organizer [WARN] Telchine Cap not found.
-2016-07-11 20:07:09| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 20:07:09| Organizer [MSG] Done! - 5 items matched and 66 items missing!
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: taeon tabard {""Fast Cast"+5"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: epona's ring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: abnoba kaftan 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: dampening tam 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: windbuffet belt +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: adhemar wristbands 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: rawhide trousers 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: thereoid greaves 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: samnuha tights 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: reiki yotai 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: hashishin tayt +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: combatant's torque 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: adhemar jacket 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: hashi. bazu. +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: eabani earring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: luhlaza charuqs +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: asperity necklace 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: samnuha coat 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: adhemar bonnet {"DEX+10", "AGI+10", "Accuracy+15"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: vengeful ring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: nibiru cudgel 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: nibiru cudgel 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: engulfer cape 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: suppanomimi 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: mekosu. harness 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", "Crit.hit rate+10"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", ""Dual Wield"+10"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: sequence 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: ahosi leggings 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: herculean trousers {""Mag.Atk.Bns."+2", "Magic dmg. taken -1%", "Phalanx +3", "Accuracy+16 Attack+16"}
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: carmine mask 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: olseni belt 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: falcon eye 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: twilight cape 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: bleating mantle 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: cornflower cape 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: ginsen 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: ifrit ring +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: ifrit ring +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: jukukik feather 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: flume belt +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: brutal earring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: leyline gloves 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: petrov ring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: mes'yohi slacks 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: hashishin mintan +1 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: buremte gloves 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: telos earring 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: lithelimb cap 
-2016-07-11 20:07:09| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-11 21:20:24| Organizer [MSG] Starting...
-2016-07-11 21:20:24| Organizer [VERBOSE] Getting!
-2016-07-11 21:20:24| Organizer [WARN] Medium's Sabots not found.
-2016-07-11 21:20:24| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-11 21:20:24| Organizer [WARN] Peda. Loafers +1 not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Safe 2 80 to Inventory 18)
-2016-07-11 21:20:24| Organizer [WARN] Vanya Clogs not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Safe 2 79 to Inventory 19)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Hose) from Safe 2 78 to Inventory 20)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Safe 2 77 to Inventory 21)
-2016-07-11 21:20:24| Organizer [WARN] Fotia Belt not found.
-2016-07-11 21:20:24| Organizer [WARN] Mafic Cudgel not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Gloves not found.
-2016-07-11 21:20:24| Organizer [WARN] Akademos not found.
-2016-07-11 21:20:24| Organizer [WARN] Akademos not found.
-2016-07-11 21:20:24| Organizer [WARN] Amalric Slops not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Loafers +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Grioavolr not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Pigaches not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Cap not found.
-2016-07-11 21:20:24| Organizer [WARN] Chatoyant Staff not found.
-2016-07-11 21:20:24| Organizer [WARN] Clerisy Strap not found.
-2016-07-11 21:20:24| Organizer [WARN] Kaykaus Cuffs not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 80 to Inventory 22)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 79 to Inventory 23)
-2016-07-11 21:20:24| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 78 to Inventory 24)
-2016-07-11 21:20:24| Organizer [WARN] Emphatikos Rope not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 76 to Inventory 25)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 75 to Inventory 26)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 74 to Inventory 27)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Safe 2 73 to Inventory 28)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 72 to Inventory 29)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 71 to Inventory 30)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 70 to Inventory 31)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 69 to Inventory 32)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 68 to Inventory 33)
-2016-07-11 21:20:24| Organizer [WARN] Savant's Treatise not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Safe 2 67 to Inventory 34)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Safe 2 66 to Inventory 35)
-2016-07-11 21:20:24| Organizer [WARN] Refoccilation Stone not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Chas. not found.
-2016-07-11 21:20:24| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Braconi not found.
-2016-07-11 21:20:24| Organizer [WARN] Amalric Doublet not found.
-2016-07-11 21:20:24| Organizer [WARN] Homiliary not found.
-2016-07-11 21:20:24| Organizer [WARN] Doyen Pants not found.
-2016-07-11 21:20:24| Organizer [WARN] Anhur Robe not found.
-2016-07-11 21:20:24| Organizer [WARN] Niobid Strap not found.
-2016-07-11 21:20:24| Organizer [WARN] Hieros Mittens not found.
-2016-07-11 21:20:24| Organizer [WARN] Witful Belt not found.
-2016-07-11 21:20:24| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Rubicundity not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Gende. Gages +1) from Safe 2 65 to Inventory 36)
-2016-07-11 21:20:24| Organizer [WARN] Hasty Pinion +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Luminary Sash not found.
-2016-07-11 21:20:24| Organizer [WARN] Twilight Cape not found.
-2016-07-11 21:20:24| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Befouled Crown not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Oranyan) from Locker 77 to Inventory 37)
-2016-07-11 21:20:24| Organizer [WARN] Malison Medallion not found.
-2016-07-11 21:20:24| Organizer [WARN] Peda. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Twilight Cloak not found.
-2016-07-11 21:20:24| Organizer [WARN] Genmei Shield not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Mortar. +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Arbatel Bracers +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 21:20:24| Organizer [WARN] Savant's Earring not found.
-2016-07-11 21:20:24| Organizer [WARN] Nodens Gorget not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Got 20 item(s), and failed getting 0 item(s)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Meg. Cuirie +1) from Inventory 38 to Safe 77)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 37 to Safe 78)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 36 to Safe 79)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 35 to Safe 2 64)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 34 to Safe 2 65)
-2016-07-11 21:20:24| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 33 to Safe 2 66)
-2016-07-11 21:20:24| Organizer [VERBOSE] Remainder: 48 Current: 32
-2016-07-11 21:20:24| Organizer [VERBOSE] Getting!
-2016-07-11 21:20:24| Organizer [WARN] Medium's Sabots not found.
-2016-07-11 21:20:24| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-11 21:20:24| Organizer [WARN] Peda. Loafers +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Vanya Clogs not found.
-2016-07-11 21:20:24| Organizer [WARN] Fotia Belt not found.
-2016-07-11 21:20:24| Organizer [WARN] Mafic Cudgel not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Gloves not found.
-2016-07-11 21:20:24| Organizer [WARN] Akademos not found.
-2016-07-11 21:20:24| Organizer [WARN] Akademos not found.
-2016-07-11 21:20:24| Organizer [WARN] Amalric Slops not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Loafers +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Grioavolr not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Pigaches not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Cap not found.
-2016-07-11 21:20:24| Organizer [WARN] Chatoyant Staff not found.
-2016-07-11 21:20:24| Organizer [WARN] Clerisy Strap not found.
-2016-07-11 21:20:24| Organizer [WARN] Kaykaus Cuffs not found.
-2016-07-11 21:20:24| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-11 21:20:24| Organizer [WARN] Emphatikos Rope not found.
-2016-07-11 21:20:24| Organizer [WARN] Savant's Treatise not found.
-2016-07-11 21:20:24| Organizer [WARN] Refoccilation Stone not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Chas. not found.
-2016-07-11 21:20:24| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-11 21:20:24| Organizer [WARN] Telchine Braconi not found.
-2016-07-11 21:20:24| Organizer [WARN] Amalric Doublet not found.
-2016-07-11 21:20:24| Organizer [WARN] Homiliary not found.
-2016-07-11 21:20:24| Organizer [WARN] Doyen Pants not found.
-2016-07-11 21:20:24| Organizer [WARN] Anhur Robe not found.
-2016-07-11 21:20:24| Organizer [WARN] Niobid Strap not found.
-2016-07-11 21:20:24| Organizer [WARN] Hieros Mittens not found.
-2016-07-11 21:20:24| Organizer [WARN] Witful Belt not found.
-2016-07-11 21:20:24| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Rubicundity not found.
-2016-07-11 21:20:24| Organizer [WARN] Hasty Pinion +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Luminary Sash not found.
-2016-07-11 21:20:24| Organizer [WARN] Twilight Cape not found.
-2016-07-11 21:20:24| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Befouled Crown not found.
-2016-07-11 21:20:24| Organizer [WARN] Malison Medallion not found.
-2016-07-11 21:20:24| Organizer [WARN] Peda. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Pants +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Twilight Cloak not found.
-2016-07-11 21:20:24| Organizer [WARN] Genmei Shield not found.
-2016-07-11 21:20:24| Organizer [WARN] Acad. Mortar. +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Arbatel Bracers +1 not found.
-2016-07-11 21:20:24| Organizer [WARN] Fotia Gorget not found.
-2016-07-11 21:20:24| Organizer [WARN] Savant's Earring not found.
-2016-07-11 21:20:24| Organizer [WARN] Nodens Gorget not found.
-2016-07-11 21:20:24| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-11 21:20:24| Organizer [WARN] Cannot move the item (Gende. Gages +1). It has already been moved.
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-11 21:20:24| Organizer [MSG] Done! - 20 items matched and 48 items missing!
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: medium's sabots 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: heka's kalasiris 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: peda. loafers +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: vanya clogs 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: mafic cudgel 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: akademos {"INT+15", ""Mag.Atk.Bns."+15", "Mag. Acc.+15"}
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: akademos {"Mag. Acc.+20", "Enha.mag. skill +15", "Enfb.mag. skill +15"}
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: acad. loafers +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: grioavolr {"Enh. Mag. eff. dur. +9", "MP+66", "Mag. Acc.+13", ""Mag.Atk.Bns."+16", "Magic Damage +5"}
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: chatoyant staff 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: clerisy strap 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: kaykaus cuffs 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: merlinic shalwar {"Mag. Acc.+5", "Magic dmg. taken -3%", "Phalanx +2", "Accuracy+1 Attack+1"}
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: emphatikos rope 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: savant's treatise 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: refoccilation stone 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: telchine chas. 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: homiliary 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: doyen pants 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: anhur robe 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: niobid strap 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: hieros mittens 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: saevus pendant +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: rubicundity 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: hasty pinion +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: twilight cape 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: assid. pants +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: befouled crown 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: malison medallion 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: peda. pants +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: acad. pants +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: twilight cloak 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: genmei shield 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: acad. mortar. +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: arbatel bracers +1 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: savant's earring 
-2016-07-11 21:20:24| Organizer [VERBOSE] Item Missing: nodens gorget 
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [WARN] Attempting to add another item to a full bag
-2016-07-12 00:07:45| Organizer [MSG] Starting...
-2016-07-12 00:07:45| Organizer [VERBOSE] Getting!
-2016-07-12 00:07:45| Organizer [WARN] Taeon Tabard not found.
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Herculean Boots) from Safe 2 57 to Inventory 53)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Herculean Boots) from Safe 2 56 to Inventory 54)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Herculean Boots) from Safe 2 55 to Inventory 55)
-2016-07-12 00:07:45| Organizer [WARN] Amalric Nails not found.
-2016-07-12 00:07:45| Organizer [WARN] Epona's Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Fotia Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Abnoba Kaftan not found.
-2016-07-12 00:07:45| Organizer [WARN] Dampening Tam not found.
-2016-07-12 00:07:45| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Slops not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 00:07:45| Organizer [WARN] Rawhide Trousers not found.
-2016-07-12 00:07:45| Organizer [WARN] Thereoid Greaves not found.
-2016-07-12 00:07:45| Organizer [WARN] Samnuha Tights not found.
-2016-07-12 00:07:45| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 00:07:45| Organizer [WARN] Reiki Yotai not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashishin Tayt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Combatant's Torque not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Jacket not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashi. Bazu. +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 00:07:45| Organizer [WARN] Eabani Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Luhlaza Charuqs +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Asperity Necklace not found.
-2016-07-12 00:07:45| Organizer [WARN] Samnuha Coat not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Safe 76 to Inventory 56)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Safe 75 to Inventory 57)
-2016-07-12 00:07:45| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 00:07:45| Organizer [WARN] Vengeful Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 00:07:45| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-12 00:07:45| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-12 00:07:45| Organizer [WARN] Engulfer Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 00:07:45| Organizer [WARN] Suppanomimi not found.
-2016-07-12 00:07:45| Organizer [WARN] Mekosu. Harness not found.
-2016-07-12 00:07:45| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Sequence not found.
-2016-07-12 00:07:45| Organizer [WARN] Ahosi Leggings not found.
-2016-07-12 00:07:45| Organizer [WARN] Herculean Trousers not found.
-2016-07-12 00:07:45| Organizer [WARN] Witful Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Carmine Mask not found.
-2016-07-12 00:07:45| Organizer [WARN] Olseni Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Luminary Sash not found.
-2016-07-12 00:07:45| Organizer [WARN] Falcon Eye not found.
-2016-07-12 00:07:45| Organizer [WARN] Twilight Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Rajas Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Bleating Mantle not found.
-2016-07-12 00:07:45| Organizer [WARN] Cornflower Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Ginsen not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Coif not found.
-2016-07-12 00:07:45| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Jukukik Feather not found.
-2016-07-12 00:07:45| Organizer [WARN] Flume Belt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Brutal Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 00:07:45| Organizer [WARN] Leyline Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Petrov Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Mes'yohi Slacks not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashishin Mintan +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Buremte Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Telos Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Lithelimb Cap not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Cap not found.
-2016-07-12 00:07:45| Organizer [VERBOSE] Got 5 item(s), and failed getting 0 item(s)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 58 to Safe 74)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Inventory 57 to Safe 75)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 56 to Safe 76)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 55 to Safe 77)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 54 to Safe 78)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 53 to Safe 79)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 52 to Safe 2 54)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 51 to Safe 2 55)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 50 to Safe 2 56)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 49 to Safe 2 57)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 48 to Safe 2 58)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 47 to Safe 2 59)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 46 to Safe 2 60)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 45 to Safe 2 61)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 44 to Safe 2 62)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 43 to Safe 2 63)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 42 to Safe 2 64)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 41 to Safe 2 65)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 40 to Safe 2 66)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Bookworm's Cape) from Inventory 39 to Safe 2 67)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Gende. Gages +1) from Inventory 38 to Safe 2 68)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 37 to Safe 2 69)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 36 to Safe 2 70)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 35 to Safe 2 71)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 34 to Safe 2 72)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 33 to Safe 2 73)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 32 to Safe 2 74)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 31 to Safe 2 75)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 30 to Safe 2 76)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 29 to Safe 2 77)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 28 to Safe 2 78)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 27 to Safe 2 79)
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Lugh's Cape) from Inventory 26 to Locker 76)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Moving item! (Steinthor) from Inventory 25 to Locker 77)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Remainder: 66 Current: 24
-2016-07-12 00:07:45| Organizer [VERBOSE] Getting!
-2016-07-12 00:07:45| Organizer [WARN] Taeon Tabard not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Nails not found.
-2016-07-12 00:07:45| Organizer [WARN] Epona's Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Fotia Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Abnoba Kaftan not found.
-2016-07-12 00:07:45| Organizer [WARN] Dampening Tam not found.
-2016-07-12 00:07:45| Organizer [WARN] Windbuffet Belt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Wristbands not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Slops not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 00:07:45| Organizer [WARN] Rawhide Trousers not found.
-2016-07-12 00:07:45| Organizer [WARN] Thereoid Greaves not found.
-2016-07-12 00:07:45| Organizer [WARN] Samnuha Tights not found.
-2016-07-12 00:07:45| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 00:07:45| Organizer [WARN] Reiki Yotai not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashishin Tayt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Combatant's Torque not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Jacket not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashi. Bazu. +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 00:07:45| Organizer [WARN] Eabani Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Luhlaza Charuqs +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Asperity Necklace not found.
-2016-07-12 00:07:45| Organizer [WARN] Samnuha Coat not found.
-2016-07-12 00:07:45| Organizer [WARN] Adhemar Bonnet not found.
-2016-07-12 00:07:45| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 00:07:45| Organizer [WARN] Vengeful Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 00:07:45| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-12 00:07:45| Organizer [WARN] Nibiru Cudgel not found.
-2016-07-12 00:07:45| Organizer [WARN] Engulfer Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 00:07:45| Organizer [WARN] Suppanomimi not found.
-2016-07-12 00:07:45| Organizer [WARN] Mekosu. Harness not found.
-2016-07-12 00:07:45| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Rosmerta's Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Sequence not found.
-2016-07-12 00:07:45| Organizer [WARN] Ahosi Leggings not found.
-2016-07-12 00:07:45| Organizer [WARN] Herculean Trousers not found.
-2016-07-12 00:07:45| Organizer [WARN] Witful Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Carmine Mask not found.
-2016-07-12 00:07:45| Organizer [WARN] Olseni Belt not found.
-2016-07-12 00:07:45| Organizer [WARN] Luminary Sash not found.
-2016-07-12 00:07:45| Organizer [WARN] Falcon Eye not found.
-2016-07-12 00:07:45| Organizer [WARN] Twilight Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Rajas Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Bleating Mantle not found.
-2016-07-12 00:07:45| Organizer [WARN] Cornflower Cape not found.
-2016-07-12 00:07:45| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Ginsen not found.
-2016-07-12 00:07:45| Organizer [WARN] Amalric Coif not found.
-2016-07-12 00:07:45| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Ifrit Ring +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Jukukik Feather not found.
-2016-07-12 00:07:45| Organizer [WARN] Flume Belt +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Brutal Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 00:07:45| Organizer [WARN] Leyline Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Petrov Ring not found.
-2016-07-12 00:07:45| Organizer [WARN] Mes'yohi Slacks not found.
-2016-07-12 00:07:45| Organizer [WARN] Hashishin Mintan +1 not found.
-2016-07-12 00:07:45| Organizer [WARN] Buremte Gloves not found.
-2016-07-12 00:07:45| Organizer [WARN] Telos Earring not found.
-2016-07-12 00:07:45| Organizer [WARN] Lithelimb Cap not found.
-2016-07-12 00:07:45| Organizer [WARN] Telchine Cap not found.
-2016-07-12 00:07:45| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 00:07:45| Organizer [MSG] Done! - 5 items matched and 66 items missing!
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: taeon tabard {""Fast Cast"+5"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: epona's ring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: abnoba kaftan 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: dampening tam 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: windbuffet belt +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: adhemar wristbands 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: rawhide trousers 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: thereoid greaves 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: samnuha tights 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: reiki yotai 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: hashishin tayt +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: combatant's torque 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: adhemar jacket 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: hashi. bazu. +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: eabani earring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: luhlaza charuqs +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: asperity necklace 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: samnuha coat 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: adhemar bonnet {"DEX+10", "AGI+10", "Accuracy+15"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: vengeful ring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: nibiru cudgel 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: nibiru cudgel 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: engulfer cape 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: suppanomimi 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: mekosu. harness 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", "Crit.hit rate+10"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", ""Dual Wield"+10"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: sequence 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: ahosi leggings 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: herculean trousers {""Mag.Atk.Bns."+2", "Magic dmg. taken -1%", "Phalanx +3", "Accuracy+16 Attack+16"}
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: carmine mask 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: olseni belt 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: falcon eye 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: twilight cape 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: bleating mantle 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: cornflower cape 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: ginsen 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: ifrit ring +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: ifrit ring +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: jukukik feather 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: flume belt +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: brutal earring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: leyline gloves 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: petrov ring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: mes'yohi slacks 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: hashishin mintan +1 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: buremte gloves 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: telos earring 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: lithelimb cap 
-2016-07-12 00:07:45| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-12 18:44:41| Organizer [MSG] Starting...
-2016-07-12 18:44:41| Organizer [VERBOSE] Getting!
-2016-07-12 18:44:41| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 18:44:41| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 18:44:41| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Safe 80 to Inventory 35)
-2016-07-12 18:44:41| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 18:44:41| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 18:44:41| Organizer [WARN] Doyen Pants not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Helios Gloves) from Locker 72 to Inventory 36)
-2016-07-12 18:44:41| Organizer [WARN] Anhur Robe not found.
-2016-07-12 18:44:41| Organizer [WARN] Fotia Belt not found.
-2016-07-12 18:44:41| Organizer [WARN] Niobid Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Shango Robe not found.
-2016-07-12 18:44:41| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 18:44:41| Organizer [WARN] Witful Belt not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 18:44:41| Organizer [WARN] Rubicundity not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Slops not found.
-2016-07-12 18:44:41| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 18:44:41| Organizer [WARN] Grioavolr not found.
-2016-07-12 18:44:41| Organizer [WARN] Grioavolr not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Mephitis Grip) from Safe 79 to Inventory 37)
-2016-07-12 18:44:41| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Safe 2 80 to Inventory 38)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Safe 2 79 to Inventory 39)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Safe 2 78 to Inventory 40)
-2016-07-12 18:44:41| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 77 to Inventory 41)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 76 to Inventory 42)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 78 to Inventory 43)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 2 75 to Inventory 44)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Safe 77 to Inventory 45)
-2016-07-12 18:44:41| Organizer [WARN] Luminary Sash not found.
-2016-07-12 18:44:41| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 18:44:41| Organizer [WARN] Rajas Ring not found.
-2016-07-12 18:44:41| Organizer [WARN] Bolelabunga not found.
-2016-07-12 18:44:41| Organizer [WARN] Befouled Crown not found.
-2016-07-12 18:44:41| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 18:44:41| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Dastanas) from Safe 76 to Inventory 46)
-2016-07-12 18:44:41| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Coif not found.
-2016-07-12 18:44:41| Organizer [WARN] Bane Cape not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 74 to Inventory 47)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 73 to Inventory 48)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 72 to Inventory 49)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 71 to Inventory 50)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Safe 2 70 to Inventory 51)
-2016-07-12 18:44:41| Organizer [WARN] Genmei Shield not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Safe 75 to Inventory 52)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Vedic Coat) from Safe 74 to Inventory 53)
-2016-07-12 18:44:41| Organizer [WARN] Thrace Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 18:44:41| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 18:44:41| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 18:44:41| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 18:44:41| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Cap not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Nails not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Nails not found.
-2016-07-12 18:44:41| Organizer [WARN] Influx Earring not found.
-2016-07-12 18:44:41| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Lathi) from Safe 73 to Inventory 54)
-2016-07-12 18:44:41| Organizer [WARN] Amalric Gages not found.
-2016-07-12 18:44:41| Organizer [WARN] Slipor Sash not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 69 to Inventory 55)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 68 to Inventory 56)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Safe 2 67 to Inventory 57)
-2016-07-12 18:44:41| Organizer [VERBOSE] Got 23 item(s), and failed getting 0 item(s)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 58 to Safe 72)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 57 to Safe 73)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 56 to Safe 74)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 55 to Safe 75)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 54 to Safe 76)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 53 to Safe 77)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 52 to Safe 78)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 51 to Safe 79)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 50 to Safe 2 66)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 49 to Safe 2 67)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 48 to Safe 2 68)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 47 to Safe 2 69)
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 46 to Safe 2 70)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Moving item! (Ternion Dagger) from Inventory 45 to Safe 2 71)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 18:44:41| Organizer [VERBOSE] Remainder: 50 Current: 44
-2016-07-12 18:44:41| Organizer [VERBOSE] Getting!
-2016-07-12 18:44:41| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 18:44:41| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 18:44:41| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 18:44:41| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 18:44:41| Organizer [WARN] Doyen Pants not found.
-2016-07-12 18:44:41| Organizer [WARN] Anhur Robe not found.
-2016-07-12 18:44:41| Organizer [WARN] Fotia Belt not found.
-2016-07-12 18:44:41| Organizer [WARN] Niobid Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Shango Robe not found.
-2016-07-12 18:44:41| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 18:44:41| Organizer [WARN] Witful Belt not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 18:44:41| Organizer [WARN] Rubicundity not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Slops not found.
-2016-07-12 18:44:41| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 18:44:41| Organizer [WARN] Grioavolr not found.
-2016-07-12 18:44:41| Organizer [WARN] Grioavolr not found.
-2016-07-12 18:44:41| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 18:44:41| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 18:44:41| Organizer [WARN] Luminary Sash not found.
-2016-07-12 18:44:41| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 18:44:41| Organizer [WARN] Rajas Ring not found.
-2016-07-12 18:44:41| Organizer [WARN] Bolelabunga not found.
-2016-07-12 18:44:41| Organizer [WARN] Befouled Crown not found.
-2016-07-12 18:44:41| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 18:44:41| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 18:44:41| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Coif not found.
-2016-07-12 18:44:41| Organizer [WARN] Bane Cape not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 18:44:41| Organizer [WARN] Genmei Shield not found.
-2016-07-12 18:44:41| Organizer [WARN] Thrace Strap not found.
-2016-07-12 18:44:41| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 18:44:41| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 18:44:41| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 18:44:41| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 18:44:41| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 18:44:41| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Cap not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Nails not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Nails not found.
-2016-07-12 18:44:41| Organizer [WARN] Influx Earring not found.
-2016-07-12 18:44:41| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 18:44:41| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 18:44:41| Organizer [WARN] Amalric Gages not found.
-2016-07-12 18:44:41| Organizer [WARN] Slipor Sash not found.
-2016-07-12 18:44:41| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 18:44:41| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Sap) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Thread) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dust) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 18:44:41| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 18:44:41| Organizer [MSG] Done! - 23 items matched and 50 items missing!
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: medium's sabots 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: heka's kalasiris 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: vanya clogs 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: doyen pants 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: anhur robe 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: niobid strap 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: shango robe 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: mafic cudgel 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: rubicundity 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: zennaroi earring 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: grioavolr {"Magic burst mdg.+5%", "MP+82", "Mag. Acc.+13", ""Mag.Atk.Bns."+23", "Magic Damage +5"}
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: grioavolr {"Enh. Mag. eff. dur. +9", "MP+66", "Mag. Acc.+13", ""Mag.Atk.Bns."+16", "Magic Damage +5"}
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: mizu. kubikazari 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: merlinic shalwar {"Mag. Acc.+5", "Magic dmg. taken -3%", "Phalanx +2", "Accuracy+1 Attack+1"}
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: assid. pants +1 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: bolelabunga 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: befouled crown 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: twilight cloak 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: clerisy strap 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: bane cape 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: genmei shield 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: thrace strap 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: nodens gorget 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: emphatikos rope 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: saevus pendant +1 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: fulcio grip 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: shedir seraweels 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric nails {"MP+60", "Mag. Acc.+15", ""Mag.Atk.Bns."+15"}
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: influx earring 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: refoccilation stone 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: telchine chas. 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: amalric gages 
-2016-07-12 18:44:41| Organizer [VERBOSE] Item Missing: slipor sash 
-2016-07-12 21:18:28| Organizer [MSG] Starting...
-2016-07-12 21:18:28| Organizer [VERBOSE] Getting!
-2016-07-12 21:18:28| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:18:28| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:18:28| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:18:28| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:18:28| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:18:28| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:18:28| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:18:28| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:18:28| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:18:28| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:18:28| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:18:28| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:18:28| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:18:28| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:18:28| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:18:28| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:18:28| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:18:28| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:18:28| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:18:28| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:18:28| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:18:28| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:18:28| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:18:28| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:18:28| Organizer [WARN] Oranyan not found.
-2016-07-12 21:18:28| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:18:28| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:18:28| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:18:28| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:18:28| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:18:28| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:18:28| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:18:28| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:18:28| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:18:28| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Taranus's Cape) from Inventory 46 to Safe 78)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Liminus Earring) from Inventory 45 to Safe 79)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Ghostfyre Cape) from Inventory 44 to Safe 2 72)
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Grioavolr) from Inventory 43 to Safe 2 73)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Midnights) from Inventory 42 to Safe 2 74)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Riftcinder) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Moving item! (Thauma. Cape) from Inventory 41 to Safe 2 75)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:18:28| Organizer [VERBOSE] Remainder: 50 Current: 40
-2016-07-12 21:18:28| Organizer [VERBOSE] Getting!
-2016-07-12 21:18:28| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:18:28| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:18:28| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:18:28| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:18:28| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:18:28| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:18:28| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:18:28| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:18:28| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:18:28| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:18:28| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:18:28| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:18:28| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:18:28| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:18:28| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:18:28| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:18:28| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:18:28| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:18:28| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:18:28| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:18:28| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:18:28| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:18:28| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:18:28| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:18:28| Organizer [WARN] Oranyan not found.
-2016-07-12 21:18:28| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:18:28| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:18:28| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:18:28| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:18:28| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:18:28| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:18:28| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:18:28| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:18:28| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:18:28| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:18:28| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:18:28| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:18:28| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:18:28| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Riftcinder) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:18:28| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Riftcinder) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:18:28| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:18:28| Organizer [MSG] Done! - 27 items matched and 50 items missing!
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: medium's sabots 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: heka's kalasiris 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: vanya clogs 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: doyen pants 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: anhur robe 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: shango robe 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: mafic cudgel 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: zennaroi earring 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: rubicundity 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: grioavolr {"Magic burst mdg.+5%", "MP+82", "Mag. Acc.+13", ""Mag.Atk.Bns."+23", "Magic Damage +5"}
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: mizu. kubikazari 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: assid. pants +1 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: bolelabunga 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: befouled crown 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: twilight cloak 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: clerisy strap 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: bane cape 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: genmei shield 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: oranyan 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: niobid strap 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: nodens gorget 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: thrace strap 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: merlinic shalwar {"Mag. Acc.+5", "Magic dmg. taken -3%", "Phalanx +2", "Accuracy+1 Attack+1"}
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: emphatikos rope 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: saevus pendant +1 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: fulcio grip 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: shedir seraweels 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric nails {"MP+60", "Mag. Acc.+15", ""Mag.Atk.Bns."+15"}
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: influx earring 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: refoccilation stone 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: telchine chas. 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: amalric gages 
-2016-07-12 21:18:28| Organizer [VERBOSE] Item Missing: slipor sash 
-2016-07-12 21:23:17| Organizer [MSG] Starting...
-2016-07-12 21:23:17| Organizer [VERBOSE] Getting!
-2016-07-12 21:23:17| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:23:17| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:23:17| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:23:17| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:23:17| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:23:17| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:23:17| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:23:17| Organizer [VERBOSE] Moving item! (Taranus's Cape) from Safe 80 to Inventory 40)
-2016-07-12 21:23:17| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:23:17| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:23:17| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:23:17| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:23:17| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:23:17| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:23:17| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:23:17| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:23:17| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:23:17| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:23:17| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:23:17| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:23:17| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:23:17| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:23:17| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:23:17| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:23:17| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:23:17| Organizer [WARN] Oranyan not found.
-2016-07-12 21:23:17| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:23:17| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:23:17| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:23:17| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:23:17| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:23:17| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:23:17| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:23:17| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:23:17| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:23:17| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:23:17| Organizer [VERBOSE] Got 1 item(s), and failed getting 0 item(s)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:23:17| Organizer [VERBOSE] Remainder: 50 Current: 41
-2016-07-12 21:23:17| Organizer [VERBOSE] Getting!
-2016-07-12 21:23:17| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:23:17| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:23:17| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:23:17| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:23:17| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:23:17| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:23:17| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:23:17| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:23:17| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:23:17| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:23:17| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:23:17| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:23:17| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:23:17| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:23:17| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:23:17| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:23:17| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:23:17| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:23:17| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:23:17| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:23:17| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:23:17| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:23:17| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:23:17| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:23:17| Organizer [WARN] Oranyan not found.
-2016-07-12 21:23:17| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:23:17| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:23:17| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:23:17| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:23:17| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:23:17| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:23:17| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:23:17| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:23:17| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:23:17| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:23:17| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:23:17| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:23:17| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:23:17| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:23:17| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:23:17| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:23:17| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:23:17| Organizer [MSG] Done! - 28 items matched and 50 items missing!
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: medium's sabots 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: heka's kalasiris 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric nails {"MP+60", "Mag. Acc.+15", ""Mag.Atk.Bns."+15"}
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: vanya clogs 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: doyen pants 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: anhur robe 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: shango robe 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: mafic cudgel 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: zennaroi earring 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: rubicundity 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: niobid strap 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: grioavolr {"Magic burst mdg.+5%", "MP+82", "Mag. Acc.+13", ""Mag.Atk.Bns."+23", "Magic Damage +5"}
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: mizu. kubikazari 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: assid. pants +1 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: bolelabunga 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: befouled crown 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: twilight cloak 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: clerisy strap 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: bane cape 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: genmei shield 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: oranyan 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: influx earring 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: nodens gorget 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: thrace strap 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: merlinic shalwar {"Mag. Acc.+5", "Magic dmg. taken -3%", "Phalanx +2", "Accuracy+1 Attack+1"}
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: emphatikos rope 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: saevus pendant +1 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: fulcio grip 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: shedir seraweels 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: refoccilation stone 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: telchine chas. 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: amalric gages 
-2016-07-12 21:23:17| Organizer [VERBOSE] Item Missing: slipor sash 
-2016-07-12 21:24:18| Organizer [MSG] Starting...
-2016-07-12 21:24:18| Organizer [VERBOSE] Getting!
-2016-07-12 21:24:18| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:24:18| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:24:18| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:24:18| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:24:18| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:24:18| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:24:18| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:24:18| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:24:18| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:24:18| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:24:18| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:24:18| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:24:18| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:24:18| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:24:18| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:24:18| Organizer [VERBOSE] Moving item! (Grioavolr) from Safe 2 76 to Inventory 41)
-2016-07-12 21:24:18| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:24:18| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:24:18| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:24:18| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:24:18| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:24:18| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:24:18| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:24:18| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:24:18| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:24:18| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:24:18| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:24:18| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:24:18| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:24:18| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:24:18| Organizer [WARN] Oranyan not found.
-2016-07-12 21:24:18| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:24:18| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:24:18| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:24:18| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:24:18| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:24:18| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:24:18| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:24:18| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:24:18| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:24:18| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:24:18| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:24:18| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:24:18| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:24:18| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:24:18| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:24:18| Organizer [VERBOSE] Got 1 item(s), and failed getting 0 item(s)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:24:19| Organizer [VERBOSE] Remainder: 50 Current: 42
-2016-07-12 21:24:19| Organizer [VERBOSE] Getting!
-2016-07-12 21:24:19| Organizer [WARN] Vrikodara Jupon not found.
-2016-07-12 21:24:19| Organizer [WARN] Medium's Sabots not found.
-2016-07-12 21:24:19| Organizer [WARN] Heka's Kalasiris not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Nails not found.
-2016-07-12 21:24:19| Organizer [WARN] Vanya Clogs not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Doublet not found.
-2016-07-12 21:24:19| Organizer [WARN] Doyen Pants not found.
-2016-07-12 21:24:19| Organizer [WARN] Anhur Robe not found.
-2016-07-12 21:24:19| Organizer [WARN] Fotia Belt not found.
-2016-07-12 21:24:19| Organizer [WARN] Shango Robe not found.
-2016-07-12 21:24:19| Organizer [WARN] Mafic Cudgel not found.
-2016-07-12 21:24:19| Organizer [WARN] Witful Belt not found.
-2016-07-12 21:24:19| Organizer [WARN] Telchine Gloves not found.
-2016-07-12 21:24:19| Organizer [WARN] Zennaroi Earring not found.
-2016-07-12 21:24:19| Organizer [WARN] Rubicundity not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Slops not found.
-2016-07-12 21:24:19| Organizer [WARN] Niobid Strap not found.
-2016-07-12 21:24:19| Organizer [WARN] Grioavolr not found.
-2016-07-12 21:24:19| Organizer [WARN] Mizu. Kubikazari not found.
-2016-07-12 21:24:19| Organizer [WARN] Psycloth Lappas not found.
-2016-07-12 21:24:19| Organizer [WARN] Luminary Sash not found.
-2016-07-12 21:24:19| Organizer [WARN] Assid. Pants +1 not found.
-2016-07-12 21:24:19| Organizer [WARN] Telchine Cap not found.
-2016-07-12 21:24:19| Organizer [WARN] Rajas Ring not found.
-2016-07-12 21:24:19| Organizer [WARN] Bolelabunga not found.
-2016-07-12 21:24:19| Organizer [WARN] Befouled Crown not found.
-2016-07-12 21:24:19| Organizer [WARN] Telchine Pigaches not found.
-2016-07-12 21:24:19| Organizer [WARN] Pixie Hairpin +1 not found.
-2016-07-12 21:24:19| Organizer [WARN] Twilight Cloak not found.
-2016-07-12 21:24:19| Organizer [WARN] Clerisy Strap not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Coif not found.
-2016-07-12 21:24:19| Organizer [WARN] Bane Cape not found.
-2016-07-12 21:24:19| Organizer [WARN] Genmei Shield not found.
-2016-07-12 21:24:19| Organizer [WARN] Oranyan not found.
-2016-07-12 21:24:19| Organizer [WARN] Influx Earring not found.
-2016-07-12 21:24:19| Organizer [WARN] Telchine Braconi not found.
-2016-07-12 21:24:19| Organizer [WARN] Nodens Gorget not found.
-2016-07-12 21:24:19| Organizer [WARN] Fotia Gorget not found.
-2016-07-12 21:24:19| Organizer [WARN] Thrace Strap not found.
-2016-07-12 21:24:19| Organizer [WARN] Merlinic Shalwar not found.
-2016-07-12 21:24:19| Organizer [WARN] Emphatikos Rope not found.
-2016-07-12 21:24:19| Organizer [WARN] Saevus Pendant +1 not found.
-2016-07-12 21:24:19| Organizer [WARN] Fulcio Grip not found.
-2016-07-12 21:24:19| Organizer [WARN] Shedir Seraweels not found.
-2016-07-12 21:24:19| Organizer [WARN] Fucho-no-Obi not found.
-2016-07-12 21:24:19| Organizer [WARN] Refoccilation Stone not found.
-2016-07-12 21:24:19| Organizer [WARN] Telchine Chas. not found.
-2016-07-12 21:24:19| Organizer [WARN] Amalric Gages not found.
-2016-07-12 21:24:19| Organizer [WARN] Slipor Sash not found.
-2016-07-12 21:24:19| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:24:19| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Red Curry Bun) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Helios Gloves). It has already been moved.
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-07-12 21:24:19| Organizer [WARN] Cannot move the item (Lathi). It has already been moved.
-2016-07-12 21:24:19| Organizer [MSG] Done! - 29 items matched and 50 items missing!
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: vrikodara jupon 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: medium's sabots 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: heka's kalasiris 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric nails {"MP+60", "Mag. Acc.+15", ""Mag.Atk.Bns."+15"}
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: vanya clogs 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric doublet 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: doyen pants 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: anhur robe 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: fotia belt 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: shango robe 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: mafic cudgel 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: witful belt 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: telchine gloves 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: zennaroi earring 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: rubicundity 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric slops 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: niobid strap 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: grioavolr {"Magic burst mdg.+5%", "MP+82", "Mag. Acc.+13", ""Mag.Atk.Bns."+23", "Magic Damage +5"}
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: mizu. kubikazari 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: psycloth lappas 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: luminary sash 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: assid. pants +1 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: telchine cap 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: rajas ring 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: bolelabunga 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: befouled crown 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: telchine pigaches 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: twilight cloak 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: clerisy strap 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric coif 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: bane cape 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: genmei shield 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: oranyan 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: influx earring 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: telchine braconi 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: nodens gorget 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: fotia gorget 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: thrace strap 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: merlinic shalwar {"Mag. Acc.+5", "Magic dmg. taken -3%", "Phalanx +2", "Accuracy+1 Attack+1"}
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: emphatikos rope 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: saevus pendant +1 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: fulcio grip 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: shedir seraweels 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: fucho-no-obi 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: refoccilation stone 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: telchine chas. 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: amalric gages 
-2016-07-12 21:24:19| Organizer [VERBOSE] Item Missing: slipor sash 
+Organizer loaded at 07/13/16 10:02:12
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding inventory to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding locker to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding safe to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding sack to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding case to the pull list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding safe to the push list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding case to the push list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding locker to the push list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding sack to the push list
+2016-07-13 10:02:12| Organizer [VERBOSE] Adding safe2 to the push list
+2016-07-13 10:02:12| Organizer [VERBOSE] Non-equipment items set to retain
+2016-07-13 10:02:12| Organizer [VERBOSE] Slips set to retain
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:02:31| Organizer [MSG] Starting...
+2016-07-13 15:02:31| Organizer [VERBOSE] Getting!
+2016-07-13 15:02:32| Organizer [WARN] Vrikodara Jupon not found.
+2016-07-13 15:02:32| Organizer [WARN] Vengeful Ring not found.
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 45 to Inventory 35)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 44 to Inventory 36)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 43 to Inventory 37)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 42 to Inventory 38)
+2016-07-13 15:02:32| Organizer [WARN] Eabani Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Jukukik Feather not found.
+2016-07-13 15:02:32| Organizer [WARN] Zennaroi Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Braconi not found.
+2016-07-13 15:02:32| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:02:32| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:02:32| Organizer [WARN] Suppanomimi not found.
+2016-07-13 15:02:32| Organizer [WARN] Buremte Gloves not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Nails not found.
+2016-07-13 15:02:32| Organizer [WARN] Epona's Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Cuisses not found.
+2016-07-13 15:02:32| Organizer [WARN] Mekosu. Harness not found.
+2016-07-13 15:02:32| Organizer [WARN] Fotia Belt not found.
+2016-07-13 15:02:32| Organizer [WARN] Telos Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Abnoba Kaftan not found.
+2016-07-13 15:02:32| Organizer [WARN] Colada not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashi. Basmak +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ahosi Leggings not found.
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Caudata Belt) from Locker 71 to Inventory 39)
+2016-07-13 15:02:32| Organizer [WARN] Telchine Gloves not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Cap not found.
+2016-07-13 15:02:32| Organizer [WARN] Adhemar Wristbands not found.
+2016-07-13 15:02:32| Organizer [WARN] Hetairoi Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Slops not found.
+2016-07-13 15:02:32| Organizer [WARN] Buquwik Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Mask not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Pigaches not found.
+2016-07-13 15:02:32| Organizer [WARN] Sayadio's Kaftan not found.
+2016-07-13 15:02:32| Organizer [WARN] Rawhide Trousers not found.
+2016-07-13 15:02:32| Organizer [WARN] Lithelimb Cap not found.
+2016-07-13 15:02:32| Organizer [WARN] Olseni Belt not found.
+2016-07-13 15:02:32| Organizer [WARN] Twilight Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Thereoid Greaves not found.
+2016-07-13 15:02:32| Organizer [WARN] Luminary Sash not found.
+2016-07-13 15:02:32| Organizer [WARN] Falcon Eye not found.
+2016-07-13 15:02:32| Organizer [WARN] Fucho-no-Obi not found.
+2016-07-13 15:02:32| Organizer [WARN] Rajas Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashishin Mintan +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Reiki Yotai not found.
+2016-07-13 15:02:32| Organizer [WARN] Mes'yohi Slacks not found.
+2016-07-13 15:02:32| Organizer [WARN] Cornflower Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Pixie Hairpin +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ginsen not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Greaves +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Coif not found.
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Cheruski Needle) from Locker 70 to Inventory 40)
+2016-07-13 15:02:32| Organizer [WARN] Hashishin Tayt +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Combatant's Torque not found.
+2016-07-13 15:02:32| Organizer [WARN] Novio Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Doublet not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashi. Bazu. +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Brutal Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Fotia Gorget not found.
+2016-07-13 15:02:32| Organizer [WARN] Psycloth Lappas not found.
+2016-07-13 15:02:32| Organizer [WARN] Engulfer Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Flume Belt +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Petrov Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Luhlaza Charuqs +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ifrit Ring +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Bleating Mantle not found.
+2016-07-13 15:02:32| Organizer [WARN] Cacoethic Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Samnuha Coat not found.
+2016-07-13 15:02:32| Organizer [VERBOSE] Got 6 item(s), and failed getting 0 item(s)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Spae. Coat +1) from Inventory 41 to Safe 68)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Wicce Sabots +1) from Inventory 40 to Safe 69)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 39 to Safe 70)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 38 to Safe 71)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Arbuda Grip) from Inventory 37 to Safe 72)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Helios Gloves) from Inventory 36 to Safe 73)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 35 to Safe 74)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 34 to Safe 75)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 33 to Safe 76)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 32 to Safe 77)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 31 to Safe 78)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 30 to Safe 79)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 29 to Safe 2 70)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Dastanas) from Inventory 28 to Safe 2 71)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 27 to Safe 2 72)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 26 to Safe 2 73)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 25 to Safe 2 74)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 24 to Safe 2 75)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 23 to Safe 2 76)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Inventory 22 to Safe 2 77)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Vedic Coat) from Inventory 21 to Safe 2 78)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 20 to Safe 2 79)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 19 to Locker 69)
+2016-07-13 15:02:32| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 18 to Locker 70)
+2016-07-13 15:02:32| Organizer [VERBOSE] Remainder: 64 Current: 17
+2016-07-13 15:02:32| Organizer [VERBOSE] Getting!
+2016-07-13 15:02:32| Organizer [WARN] Vrikodara Jupon not found.
+2016-07-13 15:02:32| Organizer [WARN] Vengeful Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Eabani Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Jukukik Feather not found.
+2016-07-13 15:02:32| Organizer [WARN] Zennaroi Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Braconi not found.
+2016-07-13 15:02:32| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:02:32| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:02:32| Organizer [WARN] Suppanomimi not found.
+2016-07-13 15:02:32| Organizer [WARN] Buremte Gloves not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Nails not found.
+2016-07-13 15:02:32| Organizer [WARN] Epona's Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Cuisses not found.
+2016-07-13 15:02:32| Organizer [WARN] Mekosu. Harness not found.
+2016-07-13 15:02:32| Organizer [WARN] Fotia Belt not found.
+2016-07-13 15:02:32| Organizer [WARN] Telos Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Abnoba Kaftan not found.
+2016-07-13 15:02:32| Organizer [WARN] Colada not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashi. Basmak +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ahosi Leggings not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Gloves not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Cap not found.
+2016-07-13 15:02:32| Organizer [WARN] Adhemar Wristbands not found.
+2016-07-13 15:02:32| Organizer [WARN] Hetairoi Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Slops not found.
+2016-07-13 15:02:32| Organizer [WARN] Buquwik Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Mask not found.
+2016-07-13 15:02:32| Organizer [WARN] Telchine Pigaches not found.
+2016-07-13 15:02:32| Organizer [WARN] Sayadio's Kaftan not found.
+2016-07-13 15:02:32| Organizer [WARN] Rawhide Trousers not found.
+2016-07-13 15:02:32| Organizer [WARN] Lithelimb Cap not found.
+2016-07-13 15:02:32| Organizer [WARN] Olseni Belt not found.
+2016-07-13 15:02:32| Organizer [WARN] Twilight Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Thereoid Greaves not found.
+2016-07-13 15:02:32| Organizer [WARN] Luminary Sash not found.
+2016-07-13 15:02:32| Organizer [WARN] Falcon Eye not found.
+2016-07-13 15:02:32| Organizer [WARN] Fucho-no-Obi not found.
+2016-07-13 15:02:32| Organizer [WARN] Rajas Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashishin Mintan +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Reiki Yotai not found.
+2016-07-13 15:02:32| Organizer [WARN] Mes'yohi Slacks not found.
+2016-07-13 15:02:32| Organizer [WARN] Cornflower Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Pixie Hairpin +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ginsen not found.
+2016-07-13 15:02:32| Organizer [WARN] Carmine Greaves +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Coif not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashishin Tayt +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Combatant's Torque not found.
+2016-07-13 15:02:32| Organizer [WARN] Novio Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Amalric Doublet not found.
+2016-07-13 15:02:32| Organizer [WARN] Hashi. Bazu. +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Brutal Earring not found.
+2016-07-13 15:02:32| Organizer [WARN] Fotia Gorget not found.
+2016-07-13 15:02:32| Organizer [WARN] Psycloth Lappas not found.
+2016-07-13 15:02:32| Organizer [WARN] Engulfer Cape not found.
+2016-07-13 15:02:32| Organizer [WARN] Flume Belt +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Petrov Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Luhlaza Charuqs +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Ifrit Ring +1 not found.
+2016-07-13 15:02:32| Organizer [WARN] Bleating Mantle not found.
+2016-07-13 15:02:32| Organizer [WARN] Cacoethic Ring not found.
+2016-07-13 15:02:32| Organizer [WARN] Samnuha Coat not found.
+2016-07-13 15:02:32| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:02:32| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:02:32| Organizer [MSG] Done! - 6 items matched and 64 items missing!
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: vrikodara jupon 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: vengeful ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: eabani earring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: jukukik feather 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: zennaroi earring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: telchine braconi 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: nibiru cudgel 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: nibiru cudgel 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: suppanomimi 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: buremte gloves 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: epona's ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: carmine cuisses 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: mekosu. harness 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: fotia belt 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: telos earring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", "Crit.hit rate+10"}
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", ""Dual Wield"+10"}
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: abnoba kaftan 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: colada {""Dbl.Atk."+2", "DEX+4", "Accuracy+11", "Attack+16", "DMG:+17"}
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: hashi. basmak +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: ahosi leggings 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: telchine gloves 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: telchine cap 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: adhemar wristbands 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: hetairoi ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: amalric slops 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: buquwik cape 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: carmine mask 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: telchine pigaches 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: sayadio's kaftan 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: rawhide trousers 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: lithelimb cap 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: olseni belt 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: twilight cape 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: thereoid greaves 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: luminary sash 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: falcon eye 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: fucho-no-obi 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: rajas ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: hashishin mintan +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: reiki yotai 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: mes'yohi slacks 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: cornflower cape 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: ginsen 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: carmine greaves +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: amalric coif 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: hashishin tayt +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: combatant's torque 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: novio earring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: amalric doublet 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: hashi. bazu. +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: brutal earring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: fotia gorget 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: psycloth lappas 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: engulfer cape 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: flume belt +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: petrov ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: luhlaza charuqs +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: ifrit ring +1 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: bleating mantle 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: cacoethic ring 
+2016-07-13 15:02:32| Organizer [VERBOSE] Item Missing: samnuha coat 
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [WARN] Attempting to add another item to a full bag
+2016-07-13 15:04:14| Organizer [MSG] Starting...
+2016-07-13 15:04:14| Organizer [VERBOSE] Getting!
+2016-07-13 15:04:14| Organizer [WARN] Vrikodara Jupon not found.
+2016-07-13 15:04:14| Organizer [WARN] Vengeful Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Eabani Earring not found.
+2016-07-13 15:04:14| Organizer [WARN] Jukukik Feather not found.
+2016-07-13 15:04:14| Organizer [WARN] Zennaroi Earring not found.
+2016-07-13 15:04:14| Organizer [WARN] Telchine Braconi not found.
+2016-07-13 15:04:14| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:04:14| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:04:14| Organizer [WARN] Suppanomimi not found.
+2016-07-13 15:04:14| Organizer [WARN] Buremte Gloves not found.
+2016-07-13 15:04:14| Organizer [WARN] Amalric Nails not found.
+2016-07-13 15:04:14| Organizer [WARN] Epona's Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Carmine Cuisses not found.
+2016-07-13 15:04:14| Organizer [WARN] Mekosu. Harness not found.
+2016-07-13 15:04:14| Organizer [WARN] Fotia Belt not found.
+2016-07-13 15:04:14| Organizer [WARN] Telos Earring not found.
+2016-07-13 15:04:14| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Abnoba Kaftan not found.
+2016-07-13 15:04:14| Organizer [WARN] Colada not found.
+2016-07-13 15:04:14| Organizer [WARN] Hashi. Basmak +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Ahosi Leggings not found.
+2016-07-13 15:04:14| Organizer [WARN] Telchine Gloves not found.
+2016-07-13 15:04:14| Organizer [WARN] Telchine Cap not found.
+2016-07-13 15:04:14| Organizer [WARN] Adhemar Wristbands not found.
+2016-07-13 15:04:14| Organizer [WARN] Hetairoi Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Amalric Slops not found.
+2016-07-13 15:04:14| Organizer [WARN] Buquwik Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Carmine Mask not found.
+2016-07-13 15:04:14| Organizer [WARN] Telchine Pigaches not found.
+2016-07-13 15:04:14| Organizer [WARN] Sayadio's Kaftan not found.
+2016-07-13 15:04:14| Organizer [WARN] Rawhide Trousers not found.
+2016-07-13 15:04:14| Organizer [WARN] Lithelimb Cap not found.
+2016-07-13 15:04:14| Organizer [WARN] Olseni Belt not found.
+2016-07-13 15:04:14| Organizer [WARN] Twilight Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Thereoid Greaves not found.
+2016-07-13 15:04:14| Organizer [WARN] Luminary Sash not found.
+2016-07-13 15:04:14| Organizer [WARN] Falcon Eye not found.
+2016-07-13 15:04:14| Organizer [WARN] Fucho-no-Obi not found.
+2016-07-13 15:04:14| Organizer [WARN] Rajas Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Hashishin Mintan +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Reiki Yotai not found.
+2016-07-13 15:04:14| Organizer [WARN] Mes'yohi Slacks not found.
+2016-07-13 15:04:14| Organizer [WARN] Cornflower Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Pixie Hairpin +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Ginsen not found.
+2016-07-13 15:04:14| Organizer [WARN] Carmine Greaves +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Amalric Coif not found.
+2016-07-13 15:04:14| Organizer [WARN] Hashishin Tayt +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Combatant's Torque not found.
+2016-07-13 15:04:14| Organizer [WARN] Novio Earring not found.
+2016-07-13 15:04:14| Organizer [WARN] Amalric Doublet not found.
+2016-07-13 15:04:14| Organizer [WARN] Hashi. Bazu. +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Brutal Earring not found.
+2016-07-13 15:04:14| Organizer [WARN] Fotia Gorget not found.
+2016-07-13 15:04:14| Organizer [WARN] Psycloth Lappas not found.
+2016-07-13 15:04:14| Organizer [WARN] Engulfer Cape not found.
+2016-07-13 15:04:14| Organizer [WARN] Flume Belt +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Petrov Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Luhlaza Charuqs +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Ifrit Ring +1 not found.
+2016-07-13 15:04:14| Organizer [WARN] Bleating Mantle not found.
+2016-07-13 15:04:14| Organizer [WARN] Cacoethic Ring not found.
+2016-07-13 15:04:14| Organizer [WARN] Samnuha Coat not found.
+2016-07-13 15:04:14| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 23 to Locker 71)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 22 to Locker 72)
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 21 to Locker 73)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 20 to Locker 74)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 19 to Locker 75)
+2016-07-13 15:04:14| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 18 to Locker 76)
+2016-07-13 15:04:14| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Remainder: 64 Current: 17
+2016-07-13 15:04:15| Organizer [VERBOSE] Getting!
+2016-07-13 15:04:15| Organizer [WARN] Vrikodara Jupon not found.
+2016-07-13 15:04:15| Organizer [WARN] Vengeful Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Eabani Earring not found.
+2016-07-13 15:04:15| Organizer [WARN] Jukukik Feather not found.
+2016-07-13 15:04:15| Organizer [WARN] Zennaroi Earring not found.
+2016-07-13 15:04:15| Organizer [WARN] Telchine Braconi not found.
+2016-07-13 15:04:15| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:04:15| Organizer [WARN] Nibiru Cudgel not found.
+2016-07-13 15:04:15| Organizer [WARN] Suppanomimi not found.
+2016-07-13 15:04:15| Organizer [WARN] Buremte Gloves not found.
+2016-07-13 15:04:15| Organizer [WARN] Amalric Nails not found.
+2016-07-13 15:04:15| Organizer [WARN] Epona's Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Carmine Cuisses not found.
+2016-07-13 15:04:15| Organizer [WARN] Mekosu. Harness not found.
+2016-07-13 15:04:15| Organizer [WARN] Fotia Belt not found.
+2016-07-13 15:04:15| Organizer [WARN] Telos Earring not found.
+2016-07-13 15:04:15| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Rosmerta's Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Abnoba Kaftan not found.
+2016-07-13 15:04:15| Organizer [WARN] Colada not found.
+2016-07-13 15:04:15| Organizer [WARN] Hashi. Basmak +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Ahosi Leggings not found.
+2016-07-13 15:04:15| Organizer [WARN] Telchine Gloves not found.
+2016-07-13 15:04:15| Organizer [WARN] Telchine Cap not found.
+2016-07-13 15:04:15| Organizer [WARN] Adhemar Wristbands not found.
+2016-07-13 15:04:15| Organizer [WARN] Hetairoi Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Amalric Slops not found.
+2016-07-13 15:04:15| Organizer [WARN] Buquwik Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Carmine Mask not found.
+2016-07-13 15:04:15| Organizer [WARN] Telchine Pigaches not found.
+2016-07-13 15:04:15| Organizer [WARN] Sayadio's Kaftan not found.
+2016-07-13 15:04:15| Organizer [WARN] Rawhide Trousers not found.
+2016-07-13 15:04:15| Organizer [WARN] Lithelimb Cap not found.
+2016-07-13 15:04:15| Organizer [WARN] Olseni Belt not found.
+2016-07-13 15:04:15| Organizer [WARN] Twilight Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Thereoid Greaves not found.
+2016-07-13 15:04:15| Organizer [WARN] Luminary Sash not found.
+2016-07-13 15:04:15| Organizer [WARN] Falcon Eye not found.
+2016-07-13 15:04:15| Organizer [WARN] Fucho-no-Obi not found.
+2016-07-13 15:04:15| Organizer [WARN] Rajas Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Hashishin Mintan +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Reiki Yotai not found.
+2016-07-13 15:04:15| Organizer [WARN] Mes'yohi Slacks not found.
+2016-07-13 15:04:15| Organizer [WARN] Cornflower Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Pixie Hairpin +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Ginsen not found.
+2016-07-13 15:04:15| Organizer [WARN] Carmine Greaves +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Amalric Coif not found.
+2016-07-13 15:04:15| Organizer [WARN] Hashishin Tayt +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Combatant's Torque not found.
+2016-07-13 15:04:15| Organizer [WARN] Novio Earring not found.
+2016-07-13 15:04:15| Organizer [WARN] Amalric Doublet not found.
+2016-07-13 15:04:15| Organizer [WARN] Hashi. Bazu. +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Brutal Earring not found.
+2016-07-13 15:04:15| Organizer [WARN] Fotia Gorget not found.
+2016-07-13 15:04:15| Organizer [WARN] Psycloth Lappas not found.
+2016-07-13 15:04:15| Organizer [WARN] Engulfer Cape not found.
+2016-07-13 15:04:15| Organizer [WARN] Flume Belt +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Petrov Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Luhlaza Charuqs +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Ifrit Ring +1 not found.
+2016-07-13 15:04:15| Organizer [WARN] Bleating Mantle not found.
+2016-07-13 15:04:15| Organizer [WARN] Cacoethic Ring not found.
+2016-07-13 15:04:15| Organizer [WARN] Samnuha Coat not found.
+2016-07-13 15:04:15| Organizer [VERBOSE] Got 0 item(s), and failed getting 0 item(s)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Tolba's Shell) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Sole Sushi) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Abdhaljs Needle) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-07-13 15:04:15| Organizer [VERBOSE] Skipping item: (Pear Crepe) because non-equipment is set be retained
+2016-07-13 15:04:15| Organizer [MSG] Done! - 6 items matched and 64 items missing!
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: vrikodara jupon 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: vengeful ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: eabani earring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: jukukik feather 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: zennaroi earring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: telchine braconi 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: nibiru cudgel 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: nibiru cudgel 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: suppanomimi 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: buremte gloves 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: amalric nails {"Mag. Acc.+15", ""Mag.Atk.Bns."+15", ""Conserve MP"+6"}
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: epona's ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: carmine cuisses 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: mekosu. harness 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: fotia belt 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: telos earring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", "Crit.hit rate+10"}
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: rosmerta's cape {"DEX+20", "Accuracy+20 Attack+20", ""Dual Wield"+10"}
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: abnoba kaftan 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: colada {""Dbl.Atk."+2", "DEX+4", "Accuracy+11", "Attack+16", "DMG:+17"}
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: hashi. basmak +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: ahosi leggings 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: telchine gloves 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: telchine cap 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: adhemar wristbands 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: hetairoi ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: amalric slops 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: buquwik cape 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: carmine mask 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: telchine pigaches 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: sayadio's kaftan 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: rawhide trousers 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: lithelimb cap 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: olseni belt 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: twilight cape 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: thereoid greaves 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: luminary sash 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: falcon eye 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: fucho-no-obi 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: rajas ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: hashishin mintan +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: reiki yotai 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: mes'yohi slacks 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: cornflower cape 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: pixie hairpin +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: ginsen 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: carmine greaves +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: amalric coif 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: hashishin tayt +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: combatant's torque 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: novio earring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: amalric doublet 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: hashi. bazu. +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: brutal earring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: fotia gorget 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: psycloth lappas 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: engulfer cape 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: flume belt +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: petrov ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: luhlaza charuqs +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: ifrit ring +1 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: bleating mantle 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: cacoethic ring 
+2016-07-13 15:04:15| Organizer [VERBOSE] Item Missing: samnuha coat 

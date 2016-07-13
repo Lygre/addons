@@ -197,7 +197,7 @@ function init_gear_sets()
 	sets.midcast.Cure = set_combine(sets.midcast.FastRecast, 
 		{main="Chatoyant Staff",sub="Zuuxowu Grip",
 		neck="Incanter's torque",ear1="Beatific Earring",
-		ring1="Lebeche Ring",ring2="Sirona's Ring",
+		ring1="Lebeche Ring",ring2="Haoma's Ring",
 		back="Solemnity Cape",waist="Bishop's sash"})
 		
     -- Ranged gear
@@ -215,7 +215,7 @@ function init_gear_sets()
     -- Sets to return to when not performing an action.
     
     -- Resting sets
-    sets.resting = {ring1="Sheltered Ring",ring2="Defending Ring"}
+    sets.resting = {ring1="Defending Ring",ring2=gear.DarkRing.PDT }
     
 
     -- Idle sets

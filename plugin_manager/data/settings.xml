@@ -2,11 +2,9 @@
 	<global>
 		<!-- This will be used for all the characters that you don't make a specific set of plugins/addons for -->
 		<plugin>AutoExec</plugin>
-		<!-- <plugin>Bidder</plugin> -->
 		<plugin>Binder</plugin>
 		<plugin>jazero</plugin>
 		<plugin>Timers</plugin>
-		<!-- <plugin>guildwork</plugin> -->
 		<plugin>delaymenot</plugin>
 		<plugin>FFXIDB</plugin>
 		<plugin>Fishingcrashfix</plugin>
@@ -39,7 +37,6 @@
 		<addon>partybuffs</addon>
 		<addon>pet_fix</addon>
 		<addon>pettp</addon>
-		<!-- <addon>plugin_manager</addon> -->
 		<addon>pointwatch</addon>
 		<addon>pricer</addon>
 		<addon>rolltracker</addon>
@@ -50,7 +47,7 @@
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
 		<addon>skillchain</addon>
-		<!-- <addon>sprint</addon> -->
+		<addon>sprint</addon>
 		<addon>sparks</addon>
 		<addon>speedchecker</addon>
 		<addon>stopwatch</addon>

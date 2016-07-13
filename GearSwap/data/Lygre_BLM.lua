@@ -70,6 +70,12 @@ function job_setup()
 	send_command('bind !F1 gs c element Earth')
 	send_command('bind @F3 input /alacrity')
 	send_command('bind ^F4 input /death')
+	send_command('bind !F4 input /klimaform')
+	send_command('bind @F4 input /voidstorm')
+	send_command('bind ^F5 input /aspir3')
+	send_command('bind !F5 input /manawall')
+	send_command('bind @F5 input /enmitydouse')
+	send_command('bind ^F6 input /elementalseal')
 
 
 	organizer_items = {aeonic="Khatvanga"}
@@ -81,6 +87,22 @@ function user_unload()
 	send_command('unbind ^`')
 	send_command('unbind !`')
 	send_command('unbind @`')
+	send_command('unbind ^F1')
+	send_command('unbind !F1')
+	send_command('unbind @F1')
+	send_command('unbind ^F2')
+	send_command('unbind !F2')
+	send_command('unbind @F2')
+	send_command('unbind ^F3')
+	send_command('unbind !F3')
+	send_command('unbind @F3')
+	send_command('unbind ^F4')
+	send_command('unbind !F4')
+	send_command('unbind @F4')
+	send_command('unbind ^F5')
+	send_command('unbind !F5')
+	send_command('unbind @F5')
+	send_command('unbind ^F6')
 end
 
 
@@ -246,7 +268,7 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'].Stoneskin = set_combine(sets.midcast['Enhancing Magic'], 
 		{waist="Siegel Sash",neck="Nodens gorget",legs="Shedir seraweels"})
 
-	sets.midcast['Enfeebling Magic'] = {main="Lathi",sub="Mephitis Grip",ammo="Pemphredo tathlum",
+	sets.midcast['Enfeebling Magic'] = {main="Lathi",sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head="Amalric coif",neck="Incanter's torque",ear1="Gwati Earring",ear2="Digni. Earring",
 		body=gear.merlbody_nuke,hands="Amalric gages",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
 		back="Aurist's cape +1",waist="Luminary sash",legs="Psycloth lappas",feet="Medium's sabots"}	
@@ -347,7 +369,7 @@ function init_gear_sets()
 
 
 	-- Minimal damage gear for procs.
-	--[[sets.midcast['Elemental Magic'].Proc = {main="Mafic Cudgel", sub="Mephitis Grip",ammo="Impatiens",
+	--[[sets.midcast['Elemental Magic'].Proc = {main="Mafic Cudgel", sub="Clerisy Strap",ammo="Impatiens",
 		head="Nahtirah Hat",neck="Loricate torque +1",ear1="Gwati earring",ear2="Loquacious Earring",
 		body="Telchine Chasuble",hands="Telchine gloves",ring1="Lebeche Ring",ring2="Paguroidea Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Assiduity pants +1",feet="Vanya clogs"}]]
@@ -551,6 +573,43 @@ function job_self_command(commandArgs, eventArgs)
 	end
 end
 
+function check_mp(spell, action, spellMap, eventArgs)
+	local current_mp = player.mp 
+	local spellCost = spell.mp_cost
+	local finalCost 
+	local dArts = (buffactive[359] or buffactive[402]) or false
+	local lArts = (buffactive[358] or buffactive[401]) or false 
+	local mult = 1
+	local LmpStrat = buffactive[360] or false
+	local DmpStrat = buffactive[361] or false
+
+	if spell.type == 'BlackMagic' then
+		if dArts then 
+			mult = mult - 0.1
+		elseif lArts then
+			mult = mult + 0.1
+		end
+		finalCost = spellCost * mult
+		if DmpStrat then
+			finalCost = math.floor(finalCost/2, 2)
+		end			
+	elseif spell.type == 'WhiteMagic' then
+		if dArts then
+			mult = mult + 0.1
+		elseif lArts then
+			mult = mult - 0.1
+		end
+		finalCost = spellCost * mult
+		if LmpStrat then
+			finalCost = math.floor(finalCost/2, 2)
+		end
+	end
+
+	if current_mp > finalCost then
+		return true
+	else return false end
+end
+
 
 function refine_various_spells(spell, action, spellMap, eventArgs)
 	local aspirs = S{'Aspir','Aspir II','Aspir III'}
@@ -560,45 +619,46 @@ function refine_various_spells(spell, action, spellMap, eventArgs)
 	local newSpell = spell.english
 	local spell_recasts = windower.ffxi.get_spell_recasts()
 	local cancelling = 'All '..spell.english..' spells are on cooldown. Cancelling spell casting.'
-
 	local spell_index
 
 	if spell_recasts[spell.recast_id] > 0 then
-		if spell.skill == 'Elemental Magic' then
-			local ele = tostring(spell.element):append('ga')
-			--local ele2 = string.sub(ele,1,-2)
-			if table.find(degrade_array[ele],spell.name) then
-				spell_index = table.find(degrade_array[ele],spell.name)
+		if not check_mp(newSpell) then 
+			if spell.skill == 'Elemental Magic' then
+				local ele = tostring(spell.element):append('ga')
+				--local ele2 = string.sub(ele,1,-2)
+				if table.find(degrade_array[ele],spell.name) then
+					spell_index = table.find(degrade_array[ele],spell.name)
+					if spell_index > 1 then
+						newSpell = degrade_array[ele][spell_index - 1]
+						add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+						send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+						eventArgs.cancel = true
+					end
+				else 
+					spell_index = table.find(degrade_array[spell.element],spell.name)
+					if spell_index > 1 then
+						newSpell = degrade_array[spell.element][spell_index - 1]
+						add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
+						send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
+						eventArgs.cancel = true
+					end
+				end
+			elseif aspirs:contains(spell.name) then
+				spell_index = table.find(degrade_array['Aspirs'],spell.name)
 				if spell_index > 1 then
-					newSpell = degrade_array[ele][spell_index - 1]
+					newSpell = degrade_array['Aspirs'][spell_index - 1]
 					add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
 					send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 					eventArgs.cancel = true
 				end
-			else 
-				spell_index = table.find(degrade_array[spell.element],spell.name)
+			elseif sleepgas:contains(spell.name) then
+				spell_index = table.find(degrade_array['Sleepgas'],spell.name)
 				if spell_index > 1 then
-					newSpell = degrade_array[spell.element][spell_index - 1]
+					newSpell = degrade_array['Sleepgas'][spell_index - 1]
 					add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
 					send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
 					eventArgs.cancel = true
 				end
-			end
-		elseif aspirs:contains(spell.name) then
-			spell_index = table.find(degrade_array['Aspirs'],spell.name)
-			if spell_index > 1 then
-				newSpell = degrade_array['Aspirs'][spell_index - 1]
-				add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
-				send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
-				eventArgs.cancel = true
-			end
-		elseif sleepgas:contains(spell.name) then
-			spell_index = table.find(degrade_array['Sleepgas'],spell.name)
-			if spell_index > 1 then
-				newSpell = degrade_array['Sleepgas'][spell_index - 1]
-				add_to_chat(8,spell.name..' Canceled: ['..player.mp..'/'..player.max_mp..'MP::'..player.mpp..'%] Casting '..newSpell..' instead.')
-				send_command('@input /ma '..newSpell..' '..tostring(spell.target.raw))
-				eventArgs.cancel = true
 			end
 		end
 	end
@@ -687,13 +747,20 @@ function display_current_job_state(eventArgs)
 	else 
 		msg = msg .. ', Death Mode [OFF] \n'
 	end
-	--if ele
+	if element_table:contains(element) then
+		msg = msg .. 'AutoNuke Element ['..element..']'
+		if state.AOE.value then
+			msg = msg .. ' - AutoNuke Target Mode [AOE] \n'
+		else
+			msg = msg .. ' - AutoNuke Target Mode [Single] \n'
+		end
+	end
 	if state.DefenseMode.value ~= 'None' then
 		msg = msg .. ', ' .. 'Defense: ' .. state.DefenseMode.value .. ' (' .. state[state.DefenseMode.value .. 'DefenseMode'].value .. ')'
 	end
 	
 	if state.Kiting.value then
-		msg = msg .. ', Kiting [ON]'
+		msg = msg .. ', Kiting [ON] \n'
 	end
 
 	if state.PCTargetMode.value ~= 'default' then

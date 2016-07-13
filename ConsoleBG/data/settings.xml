@@ -2,23 +2,23 @@
 <settings>
     <global>
         <bg>
-            <alpha>255</alpha>
+            <alpha>128</alpha>
             <blue>0</blue>
             <green>0</green>
             <red>0</red>
         </bg>
         <extents>
-            <x>600</x>
+            <x>715</x>
             <y>314</y>
         </extents>
         <pos>
-            <x>1</x>
-            <y>25</y>
+            <x>215</x>
+            <y>50</y>
         </pos>
     </global>
     <lygre>
         <pos>
-            <x>15</x>
+            <x>215</x>
             <y>50</y>
         </pos>
     </lygre>

@@ -163,7 +163,7 @@ function init_gear_sets()
 	
 	-- Resting sets
 	sets.resting = {
-		ring1="Sheltered Ring",ring2="Paguroidea Ring"}
+		ring1="Defending Ring",ring2="Paguroidea Ring"}
 	
 	-- Idle sets
 	sets.idle = {ammo="Amar cluster",

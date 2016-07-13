@@ -194,7 +194,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {main="Tamaxchi",sub="Genbu's Shield",
         head="Nahtirah Hat",ear2="Loquacious Earring",
-        body="Heka's Kalasiris",hands="Bokwus Gloves",ring1="Prolix Ring",ring2="Sirona's Ring",
+        body="Heka's Kalasiris",hands="Bokwus Gloves",ring1="Prolix Ring",ring2="Haoma's Ring",
         back="Swith Cape +1",waist="Witful Belt",legs="Hagondes Pants",feet="Hagondes Sabots"}
 
     sets.midcast.Stoneskin = {waist="Siegel Sash"}
@@ -255,13 +255,13 @@ function init_gear_sets()
     -- Resting sets
     sets.resting = {main=gear.Staff.HMP,ammo="Seraphicaller",
         head="Convoker's Horn",neck="Wiglen Gorget",ear1="Gifted Earring",ear2="Loquacious Earring",
-        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Paguroidea Ring",
+        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Defending Ring",ring2="Paguroidea Ring",
         back="Pahtli Cape",waist="Austerity Belt",legs="Nares Trews",feet="Chelona Boots +1"}
     
     -- Idle sets
     sets.idle = {main="Bolelabunga",sub="Genbu's Shield",ammo="Seraphicaller",
         head="Convoker's Horn",neck="Wiglen Gorget",ear1="Gifted Earring",ear2="Loquacious Earring",
-        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Sangoma Ring",
+        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Defending Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Fucho-no-Obi",legs="Nares Trews",feet="Herald's Gaiters"}
 
     sets.idle.PDT = {main=gear.Staff.PDT,sub="Achaq Grip",ammo="Seraphicaller",
@@ -306,7 +306,7 @@ function init_gear_sets()
 
     sets.idle.Town = {main="Bolelabunga",sub="Genbu's Shield",ammo="Seraphicaller",
         head="Convoker's Horn",neck="Wiglen Gorget",ear1="Gifted Earring",ear2="Loquacious Earring",
-        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Sheltered Ring",ring2="Sangoma Ring",
+        body="Hagondes Coat",hands="Serpentes Cuffs",ring1="Defending Ring",ring2="Sangoma Ring",
         back="Umbra Cape",waist="Fucho-no-Obi",legs="Nares Trews",feet="Herald's Gaiters"}
 
     -- Favor uses Caller's Horn instead of Convoker's Horn for refresh

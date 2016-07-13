@@ -116,17 +116,17 @@ function init_gear_sets()
 
 	sets.midcast.CureWithLightWeather = {main="Chatoyant Staff",sub="Achaq Grip",ammo="Psilomene",
 		head="Ebers cap +1",neck="Incanter's torque",ear1="Nourishing earring +1",ear2="Glorious earring",
-		body="Ebers Bliaud +1",hands="Kaykaus cuffs",ring1="Sirona's Ring",ring2="Lebeche Ring",
+		body="Ebers Bliaud +1",hands="Kaykaus cuffs",ring1="Haoma's Ring",ring2="Lebeche Ring",
 		back="Alaunus's Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
 
     sets.midcast.CureSolace = {main="Queller Rod",sub="Genbu's Shield",ammo="Psilomene",
         head="Kaykaus Mitra",neck="Nodens gorget",ear1="Nourishing earring +1",ear2="Glorious Earring",
-        body="Ebers bliaud +1",hands="Theophany mitts +1",ring1="Lebeche Ring",ring2="Sirona's Ring",
+        body="Ebers bliaud +1",hands="Theophany mitts +1",ring1="Lebeche Ring",ring2="Haoma's Ring",
         back="Alaunus's Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Vanya Clogs"}
 
     sets.midcast.Cure = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
         head="Gendewitha Caubeen +1",neck="Incanter's torque",ear1="Mendicant's Earring",ear2="Glorious Earring",
-        body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Sirona's Ring",
+        body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Haoma's Ring",
         back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
 
     sets.midcast.Curaga = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
@@ -136,7 +136,7 @@ function init_gear_sets()
 
     sets.midcast.CureMelee = {ammo="Sapience Orb",
         head="Gendewitha Caubeen +1",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Mendicant's Earring",
-        body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Sirona's Ring",
+        body="Ebers bliaud +1",hands="Fanatic gloves",ring1="Prolix Ring",ring2="Haoma's Ring",
         back="Mending Cape",waist=gear.ElementalObi,legs="Ebers pantaloons +1",feet="Piety Duckbills +1"}
 
     sets.midcast.Cursna = {main="Ababinili +1",sub="Arbuda Grip",ammo="Sapience Orb",
@@ -189,9 +189,9 @@ function init_gear_sets()
     sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {main="Bolelabunga",sub="Genmei Shield",
         head="Inyanga tiara +1",body="Piety Briault +1",hands="Ebers mitts +1"})
 
-    sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring1="Sheltered Ring",feet="Piety Duckbills +1"})
+    sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring1="Defending Ring",feet="Piety Duckbills +1"})
 
-    sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring1="Sheltered Ring",legs="Piety Pantaloons +1"})
+    sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring1="Defending Ring",legs="Piety Pantaloons +1"})
 	
 	sets.midcast.Dia = set_combine(sets.midcast.MndEnfeebles, {waist="Chaac Belt"})
 
@@ -206,12 +206,12 @@ function init_gear_sets()
         back="Perimede cape",waist="Eschan Stone",legs="Telchine Braconi",feet="Medium's sabots"}
 
     -- Custom spell classes
-    sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Mephitis Grip",ammo="Pemphredo Tathlum",
+    sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Clerisy Strap",ammo="Pemphredo Tathlum",
         head="Inyanga tiara +1",neck="incanter's torque",ear1="Digni. Earring",ear2="Enchanter earring +1",
         body=gear.chirbody,hands="Inyanga Dastanas +1",ring1="Globidonta ring",ring2="Weatherspoon Ring",
         back="Alaunus's cape",waist="Eschan Stone",legs=gear.chirlegs,feet="Inyanga crackows +1"}
 
-    sets.midcast.IntEnfeebles = {main="Ababinili +1", sub="Mephitis grip",ammo="Pemphredo Tathlum",
+    sets.midcast.IntEnfeebles = {main="Ababinili +1", sub="Clerisy Strap",ammo="Pemphredo Tathlum",
         head=gear.chirhead,neck="incanter's torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
         body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
         back="Aurist's cape +1",waist="Eschan Stone",legs=gear.chirlegs,feet="Medium's sabots"}
