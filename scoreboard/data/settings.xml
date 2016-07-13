@@ -84,7 +84,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-2.1149944731236e+120</alpha>
+                    <alpha>-1.3752751561486e+125</alpha>
                 </stroke>
             </text>
         </display>
@@ -138,7 +138,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>2.2803953092283e+132</alpha>
+                    <alpha>1.4828270498257e+137</alpha>
                 </stroke>
             </text>
         </display>
@@ -151,10 +151,11 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.#INF</alpha>
+                    <alpha>16516605</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </lygre>
     <mexico>
         <display>

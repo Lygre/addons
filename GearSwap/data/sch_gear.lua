@@ -245,12 +245,12 @@ function init_gear_sets()
 
     sets.midcast.Aspir = sets.midcast.Drain
 
-    sets.midcast.Stun = {main=gear.grio_enhancing,sub="Clerisy Strap",ammo="Hasty Pinion +1",
+    sets.midcast.Stun = {main="Oranyan",sub="Clerisy Strap",ammo="Hasty Pinion +1",
         head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
         body=gear.merlbody_nuke,hands="Gendewitha Gages +1",ring1="Rahab Ring",ring2="Weatherspoon Ring",
         back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
 
-    sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main=gear.grio_enhancing,
+    sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Oranyan",
         ring1="Rahab Ring",back="Perimede cape"})
 	
 	sets.midcast.Helix = {main=gear.NukeStaff,sub="Thrace Strap",ammo="Dosis Tathlum",

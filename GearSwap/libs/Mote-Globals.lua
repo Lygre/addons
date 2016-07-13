@@ -43,7 +43,7 @@ function define_global_sets()
 
 	--Weapons
 	gear.grio_death = {name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}}
-	gear.grio_enhancing = {name="Grioavolr", augments={'Enh. Mag. eff. dur. +9','MP+66','Mag. Acc.+13','"Mag.Atk.Bns."+16','Magic Damage +5',}}
+	gear.grio_elemental = {name="Grioavolr", augments={'"Conserve MP"+7','INT+7','Mag. Acc.+29','"Mag.Atk.Bns."+26','Magic Damage +6',}}
 	gear.Colada_highd = {name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}}
 	gear.Colada_datk = {name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}}
 
@@ -53,7 +53,7 @@ function define_global_sets()
 	gear.merlhead_fc = {name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}}
 	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Phys. dmg. taken -2%','INT+10','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
 	gear.merlbody_mb = {name="Merlinic Jubbah", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst mdg.+9%','INT+1','Mag. Acc.+3','"Mag.Atk.Bns."+11',}}
-	gear.merlbody_da = {name="Merlinic Jubbah", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','"Drain" and "Aspir" potency +5','MND+4','Mag. Acc.+14','"Mag.Atk.Bns."+8',}}
+	gear.merlbody_da = {name="Merlinic Jubbah", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Drain" and "Aspir" potency +7','Mag. Acc.+15','"Mag.Atk.Bns."+7',}}
 	gear.merlhands_pdt = {name="Merlinic Dastanas", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Phys. dmg. taken -2%','MND+7','Mag. Acc.+14','"Mag.Atk.Bns."+2',}}
 	gear.merllegs_cmp = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}	
 	gear.merllegs_nuke = {name="Merlinic Shalwar", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Phys. dmg. taken -1%','INT+7','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
@@ -66,6 +66,7 @@ function define_global_sets()
 	gear.merlfeet_fc = {name="Merlinic Crackows", augments={'Accuracy+13','"Fast Cast"+6','MND+1','Mag. Acc.+9','"Mag.Atk.Bns."+7',}}
 	gear.merlfeet_da = {name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+3','Mag. Acc.+11','"Mag.Atk.Bns."+15',}}	
 	gear.merlfeet_mb = {name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}}
+	gear.merlfeet_nuke = {name="Merlinic Crackows", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Mag. crit. hit dmg. +8%','MND+7','Mag. Acc.+15',}}
 
 	--Chironic Augments
 	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
@@ -97,7 +98,10 @@ function define_global_sets()
 	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
 	gear.dnccape_tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
 	gear.dnccape_ws = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+	gear.blmcape_death = {name="Taranus's Cape", augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','MP+18','"Mag.Atk.Bns."+10',}}
+	gear.blmcape_nuke = {name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
 
+	---Adhemar aliases
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	
  	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+22','Weapon skill damage +4%',}}

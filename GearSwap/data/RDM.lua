@@ -110,7 +110,7 @@ function init_gear_sets()
     sets.midcast.Curaga = sets.midcast.Cure
     sets.midcast.CureSelf = {ring1="Kunaji Ring",ring2="Asklepian Ring"}
 
-    sets.midcast['Enhancing Magic'] = {main="Grioavolr",sub="Fulcio Grip",
+    sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio Grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chasuble",hands="Atrophy Gloves +1",
         back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}
@@ -126,7 +126,7 @@ function init_gear_sets()
 
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash",neck="Nodens Gorget",legs="Shedir seraweels"})
     
-    sets.midcast['Enfeebling Magic'] = {main="Grioavolr",sub="Mephitis Grip",ammo="Pemphredo tathlum",
+    sets.midcast['Enfeebling Magic'] = {main=gear.grio_elemental,sub="Mephitis Grip",ammo="Pemphredo tathlum",
         head=gear.chirhead,neck="Incanter's Torque",ear1="Digni. Earring",ear2="Enchanter Earring +1",
         body="Chironic doublet",hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
         back="Sucellos's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's Sabots"}
@@ -137,7 +137,7 @@ function init_gear_sets()
 
     sets.midcast['Paralyze II'] = set_combine(sets.midcast['Enfeebling Magic'], {feet="Vitivation Boots +1"})
     
-    sets.midcast['Elemental Magic'] = {main="Grioavolr",sub="Niobid strap",ammo="Pemphredo Tathlum",
+    sets.midcast['Elemental Magic'] = {main=gear.grio_elemental,sub="Niobid strap",ammo="Pemphredo Tathlum",
         head=gear.merlhead_nuke,neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
         body=gear.merlbody_nuke,hands=gear.chirhands_nuke,ring1="Shiva ring +1",ring2="Shiva ring +1",
         back="Toro Cape",waist="Refoccilation Stone",legs=gear.merllegs_nuke,feet=gear.chirfeet }
@@ -171,7 +171,7 @@ function init_gear_sets()
         body="Telchine Braconi",hands="Atrophy Gloves +1",
         back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}]]
         
-    sets.buff.ComposureOther = {main="Grioavolr",
+    sets.buff.ComposureOther = {main="Oranyan",
         head="Lethargy Chappel +1",
         body="Lethargy Sayon +1",hands="Atrophy gloves +1",
         back="Sucellos's Cape",legs="Lethargy Fuseau +1",feet="Lethargy Houseaux +1"}

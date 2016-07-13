@@ -119,7 +119,7 @@ function init_gear_sets()
     
     sets.midcast.Curaga = sets.midcast.Cure
 
-    sets.midcast['Enhancing Magic'] = {main=gear.grio_enhancing,sub="Fulcio grip",
+    sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio grip",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chas.",hands="Telchine gloves",
 	   back="Fi follet cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
