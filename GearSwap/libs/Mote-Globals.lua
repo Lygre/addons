@@ -29,7 +29,7 @@ function define_global_sets()
 	-- Default items for utility gear values.
 	gear.default.weaponskill_neck = "Fotia Gorget"
 	gear.default.weaponskill_waist = "Fotia Belt"
-	gear.default.obi_waist = "Hachirin-no-obi"
+	gear.default.obi_waist = ""
 	gear.default.obi_back = "Toro Cape"
 	gear.default.obi_ring = "Strendu Ring"
 	gear.default.fastcast_staff = ""

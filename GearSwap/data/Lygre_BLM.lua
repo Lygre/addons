@@ -33,6 +33,8 @@ function job_setup()
 	element = ''
 	state.AOE = M(false, 'AOE')
 
+	gear.default.obi_waist = "Shinjutsu-no-obi"
+
 	lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
 		'Stone II', 'Water II', 'Aero II', 'Fire II', 'Blizzard II', 'Thunder II',
 		'Stone III', 'Water III', 'Aero III', 'Fire III', 'Blizzard III', 'Thunder III',
@@ -144,9 +146,11 @@ function init_gear_sets()
 	--sets.precast.FC['Healing Magic'].DeatMB = sets.precast.FC.DeatMB
 
 	--Death sets
-	sets.DeatCastIdle = {
-		main=gear.grio_death,         --82
-		sub="Niobid strap",   		-- 20
+					
+	sets.DeatCastIdle = {		
+		main=gear.grio_death,  --MP+ 117 (from weapons)
+		sub="Elder's grip +1",
+		range=empty,
 		ammo="Psilomene",           -- 45
 		head="Amalric coif",        -- 121
 		neck="Dualism Collar",    -- 45
@@ -154,67 +158,56 @@ function init_gear_sets()
 		ear2="Influx earring",      -- 55 
 		body="Amalric doublet",     -- 133
 		hands="Amalric gages",      -- 86
-		ring1="Mephitas's Ring +1",    -- 100
+		ring1="Mephitas's Ring +1",    -- 110
 		ring2="Sangoma Ring",       -- 70
 		back="Bane Cape",           -- 90
 		waist="Shinjutsu-no-obi",   -- 80 
 		legs="Amalric slops",       -- 160
 		feet=gear.merlfeet_refresh  -- 20
-}               ---Total +MP: 1157
-	
-	sets.precast.FC.DeatMB = {		--MP 		--FC
-		main=gear.grio_death,           --82		--4
-		sub="Niobid Strap",        	-- 20		
+}         ---Totals will include the +117 mp from weapons
+	---Total +MP: +1182
+					--MP+ 117 (from weapons)	
+	sets.precast.FC.DeatMB = {		 		--FC
 		ammo="Psilomene",           -- 45
 		head="Amalric coif",        -- 121		--10
 		neck="Voltsurge torque",    -- 20		--4
 		ear1="Etiolation earring",      -- 50 		--1
-		ear2="Loquacious earring",  -- 30		--2
+		ear2="Influx earring",  	-- 55		
 		body="Amalric doublet",     -- 133		--3
 		hands="Helios gloves",      -- 44		--4
-		ring1="Rahab Ring",         -- 30		--2
+		ring1="Mephitas's Ring +1",  --110		
 		ring2="Weatherspoon ring",			--5
 		back="Bane Cape",           -- 90		--4
 		waist="Witful Belt", 				--3
 		legs="Psycloth lappas",     -- 109		--7
-		feet=gear.amalricfeet_death        -- 86	--5
-}		--[[Total: +860 = ~2214]]
+		feet=gear.amalricfeet_death   -- 86		--5
+}		--[[Total: MP+980  |  FC+ 50%]]
 
+					--MP+ 117 (from weapons)	
 	sets.midcast['Death'] = { 
-		main=gear.grio_death,	--82
-		sub="Niobid strap",         -- 20
 		ammo="Psilomene",           -- 45
 		head="Pixie hairpin +1",    -- 120
-		neck="Sanctity necklace",    --35
-		ear1="Barkarole earring",   -- 25
-		ear2="Friomisi Earring",
+		neck="Dualism Collar",    --45
+		ear1="Etiolation Earring",   -- 50
+		ear2="Barkarole earring",	-- 25
 		body="Amalric doublet", 	--133
 		hands="Amalric gages",      -- 86
-		ring1="Mephitas's Ring +1",    -- 100
+		ring1="Mephitas's Ring +1",    -- 110
 		ring2="Archon Ring",
-		back=gear.blmcape_death,      -- 60
+		back=gear.blmcape_death,      -- 80
 		waist="Shinjutsu-no-obi",   -- 80
 		legs="Amalric slops",       -- 160
 		feet=gear.merlfeet_mb       -- 20
 	}
-									--[[Total: +723 (783 with gages aug change)]]
+		--[[Total: +1071]]
 		--death specific MB set
+
+						--Losses from above set
 	sets.MB_death = { 
-		--main=gear.grio_death,	--82
-		--sub="Niobid strap",		--20
-		ammo="Psilomene",		--45
-		head="Pixie hairpin +1", 	--120
-		--neck="Mizu. Kubikazari", 
-		ear1="Barkarole earring", 	--25
-		--ear2="Static Earring",
-		body=gear.merlbody_mb, 	--67
-		hands="Amalric gages",	--86
-		ring1="Mujin Band",
-		--ring2="Archon Ring",
-		back=gear.blmcape_death, 	--60
-		--waist="Hachirin-no-obi", 
-		legs=gear.merllegs_mb, 	--44
-		feet=gear.merlfeet_mb 	--20
+		body=gear.merlbody_mb, 	--67 (-66)
+		ring1="Mujin Band",		-- (-110)
+		legs=gear.merllegs_mb, 	--44 (-116)
+		feet=gear.merlfeet_mb 	--20 
 	} --[[Combined midcast+mb total: +684 = ~2038]]
 			
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -701,7 +694,7 @@ function job_state_change(stateField, newValue, oldValue)
 		if newValue == true then
 			state.OffenseMode:set('Locked')
 			predeathcastmode = state.CastingMode.value
-			--[[Insert 'equip(<set consisting of Death weapon and sub, to have them automatically lock when changing into Death mode>)']]
+			equip(sets.DeatCastIdle)
 		elseif newValue == false then
 			state.CastingMode:set(predeathcastmode)
 		end
