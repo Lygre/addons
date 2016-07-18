@@ -289,9 +289,9 @@ function init_gear_sets()
 		{})
 
 	sets.magic_burst = {main=gear.NukeStaff,
-		head=gear.merlhead_mb,
-		hands="Amalric gages", ring1="Mujin Band", 
-		legs=gear.merllegs_mb,feet=gear.merlfeet_mb}
+		head=gear.merlhead_nuke,neck="Mizukage-no-kubikazari",
+		body=gear.merlbody_mb,hands="Amalric gages", ring1="Mujin Band", 
+		legs=gear.merllegs_mb }
 
 
 

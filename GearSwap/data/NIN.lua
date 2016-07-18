@@ -81,7 +81,7 @@ function init_gear_sets()
 	sets.precast.FC = {ammo="Sapience orb",
 		head=gear.fc_thead,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's sash",legs=gear.fc_tlegs,feet=gear.hercfeet_fc}
+		waist="Ninurta's sash",legs="Arjuna breeches",feet=gear.hercfeet_fc}
 		
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 

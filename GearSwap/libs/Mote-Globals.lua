@@ -43,7 +43,7 @@ function define_global_sets()
 
 	--Weapons
 	gear.grio_death = {name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}}
-	gear.grio_elemental = {name="Grioavolr", augments={'"Conserve MP"+7','INT+7','Mag. Acc.+29','"Mag.Atk.Bns."+26','Magic Damage +6',}}
+	gear.grio_elemental = {name="Grioavolr", augments={'"Occult Acumen"+3','INT+11','Mag. Acc.+25','"Mag.Atk.Bns."+24','Magic Damage +3',}}
 	gear.Colada_highd = {name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}}
 	gear.Colada_datk = {name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}}
 
@@ -116,8 +116,9 @@ function define_global_sets()
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
 	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
 	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
-	gear.hercfeet_mab = {name="Herculean Boots", augments={'Mag. Acc.+16','Weapon skill damage +2%','"Mag.Atk.Bns."+12',}}
+	gear.hercfeet_mab = {name="Herculean Boots", augments={'"Occult Acumen"+4','INT+5','Magic burst mdg.+11%','Mag. Acc.+15 "Mag.Atk.Bns."+15',}}
 	gear.hercfeet_refresh = {name="Herculean Boots", augments={'DEX+6','Pet: INT+6','"Refresh"+1','Accuracy+9 Attack+9',}}
+	gear.hercfeet_wsd = {name="Herculean Boots", augments={'Weapon Skill Acc.+15','"Conserve MP"+2','Weapon skill damage +6%','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 	----RNG-------
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
 	gear.hercbody_rng_crit = {name="Herculean Vest", augments={'Rng.Acc.+23 Rng.Atk.+23','Crit. hit damage +4%','Rng.Atk.+8',}}
