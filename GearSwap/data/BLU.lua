@@ -317,8 +317,8 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = {ammo="Floestone",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Adhemar jacket",hands=gear.herchands_mb,ring1="Ifrit ring +1",ring2="ifrit ring +1",
-		back="Buquwik Cape",waist="Caudata Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		body="Adhemar jacket",hands=gear.herchands_dt,ring1="Ifrit ring +1",ring2="ifrit ring +1",
+		back="Buquwik Cape",waist="Caudata Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd }
 	
 	sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
@@ -330,10 +330,10 @@ function init_gear_sets()
 		body="Sayadio's kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	
-	sets.precast.WS['Expiacion'] = {ammo="Jukukik feather",
+	sets.precast.WS['Expiacion'] = {ammo="Floestone",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
-		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_wsd,feet="Thereoid greaves"}
+		body="Abnoba kaftan",hands=gear.herchands_dt,ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
+		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd }
 	----CLUB WS------
 	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, 
 		{head="Carmine mask",
@@ -352,8 +352,6 @@ function init_gear_sets()
 		body="Telchine Chasuble",hands="Telchine gloves",
 		waist="Olympus sash",legs="Telchine Braconi",feet="Telchine pigaches"}
 
-	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'],
-		{feet=gear.herclegs_dt})
 
 	sets.midcast['Blue Magic'] = set_combine(sets.midcast.FastRecast, {hands="Hashishin bazubands +1"})
 	
