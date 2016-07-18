@@ -28,10 +28,9 @@ local Items = {}
 local items = {}
 local bags = {}
 local item_tab = {}
-local zones.mh = L{'Mhaura','Selbina','Norg','Rabao','Kazham','Tavnazian Safehold','Nashmau'}
 
 local function validate_bag(bag_table)
-    if (bag_table.access == 'Everywhere' or (bag_table.access == 'Mog House' and zones.mh:contains(res_zones[windower.ffxi.get_info().zone].name)) and
+    if (bag_table.access == 'Everywhere' or (bag_table.access == 'Mog House' and windower.ffxi.get_info().mog_house)) and
         windower.ffxi.get_bag_info(bag_table.id) then
         return true
     end
@@ -43,7 +42,7 @@ local function validate_id(id)
 end
 
 local function wardrobecheck(bag_id,id)
-    return (bag_id~=8 and bag_id~=10 and bag_id~=11 and bag_id~=12) or ((bag_id == 8 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5)) or (bag_id == 10 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5)) or (bag_id == 11 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5)) or (bag_id == 12 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5))) 
+    return (bag_id~=8 and bag_id~=10) or ((bag_id == 8 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5)) or (bag_id == 10 and res.items[id] and (res.items[id].type == 4 or res.items[id].type == 5))) 
 end
 
 function Items.new(loc_items,bool)
@@ -352,7 +351,7 @@ end
 function item_tab:put_away(usable_bags)
     org_debug("move", "Putting away "..res.items[self.id].english)
     local current_items = self._parent._parent
-    usable_bags = usable_bags or {1,9,4,2,5,6,7,8,10,11,12}
+    usable_bags = usable_bags or {1,9,4,2,5,6,7,8,10}
     local bag_free
     for _,v in ipairs(usable_bags) do
         local bag_max = windower.ffxi.get_bag_info(v).max
