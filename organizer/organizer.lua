@@ -214,6 +214,12 @@ function options_load( )
     _valid_pull[0] = 1
     _valid_dump[8] = 1
     _valid_pull[8] = 1
+    _valid_dump[10] = 1
+    _valid_pull[10] = 1
+    _valid_dump[11] = 1
+    _valid_pull[11] = 1
+    _valid_dump[12] = 1
+    _valid_pull[12] = 1
 
 end
 
