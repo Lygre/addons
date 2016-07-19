@@ -218,7 +218,7 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {ammo="Ginsen",
-        head="Carmine Mask",neck="Lissome Necklace",ear1="Telos Earring",ear2="Eabani earring",
+        head="Carmine Mask +1",neck="Lissome Necklace",ear1="Telos Earring",ear2="Eabani earring",
         hands="Gazu bracelet +1",ring1="Rajas Ring",ring2="Petrov Ring",
         back="Bleating Mantle",waist="Reiki Yotai",legs="Carmine cuisses"}
 	

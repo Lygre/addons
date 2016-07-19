@@ -284,7 +284,7 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {ammo="Sapience orb",
-		head="Carmine Mask",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Carmine Greaves +1"}
 		
@@ -302,23 +302,23 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Requiescat'] = {ammo="Ginsen",
-		head="Dampening tam",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		head="Carmine Mask +1",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
 		body="Hashishin mintan +1",hands="Adhemar wristbands",ring1="Haoma's Ring",ring2="Epona's Ring",
 		back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Carmine Greaves +1"}
 	sets.precast.WS['Requiescat'].Acc = {ammo="Ginsen",
-		head="Carmine mask",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		head="Carmine Mask +1",neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
 		body="Hashishin mintan +1",hands="Adhemar wristbands",ring1="Haoma's Ring",ring2="Epona's Ring",
 		back="Cornflower Cape",waist="Fotia Belt",legs="Telchine Braconi",feet="Carmine Greaves +1"}
 	
 	sets.precast.WS['Sanguine Blade'] = {ammo="Dosis Tathlum",
-		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Gwati Earring",
+		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Novio Earring",
 		body="Amalric doublet",hands="Amalric Gages",ring1="Shiva Ring +1",ring2="Archon Ring",
-		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet=gear.amalricfeet_consmp }
+		back="Cornflower Cape",waist="Eschan Stone",legs="Amalric slops",feet=gear.hercfeet_wsd }
 
 	sets.precast.WS['Savage Blade'] = {ammo="Floestone",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Adhemar jacket",hands=gear.herchands_dt,ring1="Ifrit ring +1",ring2="ifrit ring +1",
-		back="Buquwik Cape",waist="Caudata Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd }
+		body="Adhemar jacket",hands=gear.herchands_mb,ring1="Ifrit ring +1",ring2="ifrit ring +1",
+		back="Buquwik Cape",waist="Caudata Belt",legs="Samnuha tights",feet=gear.hercfeet_wsd }
 	
 	sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
@@ -332,11 +332,11 @@ function init_gear_sets()
 	
 	sets.precast.WS['Expiacion'] = {ammo="Floestone",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Abnoba kaftan",hands=gear.herchands_dt,ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
+		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
 		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd }
 	----CLUB WS------
 	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, 
-		{head="Carmine mask",
+		{head="Carmine Mask +1",
 		body="Hashishin mintan +1",hands="Adhemar wristbands",ring1="Globidonta ring",
 		back="Aurist's cape +1",legs="Telchine braconi",feet="Carmine greaves +1"})
 
@@ -352,60 +352,62 @@ function init_gear_sets()
 		body="Telchine Chasuble",hands="Telchine gloves",
 		waist="Olympus sash",legs="Telchine Braconi",feet="Telchine pigaches"}
 
+	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'],
+		{feet=gear.herclegs_dt})
 
 	sets.midcast['Blue Magic'] = set_combine(sets.midcast.FastRecast, {hands="Hashishin bazubands +1"})
 	
 	-- Physical Spells --
 	
 	sets.midcast['Blue Magic'].Physical = {ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
 	sets.midcast['Blue Magic'].PhysicalAcc = {ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
 	sets.midcast['Blue Magic'].PhysicalStr = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Floestone",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalDex = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalVit = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalAgi = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalInt = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalMnd = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
 	sets.midcast['Blue Magic'].PhysicalChr = set_combine(sets.midcast['Blue Magic'].Physical,
 		{ammo="Cheruski Needle",
-		head="Carmine Mask",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
+		head="Carmine Mask +1",neck="Sanctity necklace",ear1="Suppanomimi",ear2="Zennaroi earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Petrov Ring",
 		back="Cornflower Cape",waist="Eschan stone",legs="Samnuha tights",feet=gear.hercfeet_melee})
 
@@ -449,7 +451,7 @@ function init_gear_sets()
 	-- Other Types --
 	
 	sets.midcast['Blue Magic'].Stun = set_combine(sets.midcast['Blue Magic'].MagicAccuracy,
-		{head="Carmine mask",
+		{head="Carmine Mask +1",
 		body="Samnuha coat",hands="Leyline gloves",
 		waist="Eschan stone",legs="Mes'yohi slacks",feet="Carmine Greaves +1" })
 		
@@ -461,7 +463,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic']['Battery Charge'] = set_combine(sets.midcast['Enhancing Magic'], 
 		{head="Amalric coif"})
 	
-	sets.midcast['Blue Magic']['Barrier Tusk'] = set_combine(sets.midcast['Blue Magic'].SkillBasedBuff,{legs=gear.herclegs_dt})
+	sets.midcast['Blue Magic']['Barrier Tusk'] = set_combine(sets.midcast['Blue Magic'].SkillBasedBuff,{})
 	
 	sets.midcast['Blue Magic'].Healing = {
 		head="Telchine Cap",neck="Incanter's Torque",ear1="Calamitous earring",ear2="Mendicant's earring",
@@ -531,7 +533,7 @@ function init_gear_sets()
 		back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
 	sets.defense.MDT = {ammo="Vanir battery",
-		head="Amalric coif",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi earring",
+		head="Dampening Tam",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi earring",
 		body="Amalric doublet",hands="Leyline gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity cape",waist="Flume Belt +1",legs="Mes'yohi slacks",feet="Ahosi leggings" }
 	sets.defense.Meva = {ammo="Vanir battery",
@@ -568,8 +570,8 @@ function init_gear_sets()
 		body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.Acc = {ammo="Ginsen",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Eabani earring",ear2="Suppanomimi",
-		body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
+		head="Carmine Mask +1",neck="Lissome Necklace",ear1="Eabani earring",ear2="Suppanomimi",
+		body="Adhemar Jacket",hands=gear.herchands_melee,ring1="Cacoethic Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.HighAcc = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
@@ -610,11 +612,11 @@ function init_gear_sets()
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.Acc.LowHaste = {ammo="Ginsen",
-		head="Dampening Tam",neck="Lissome necklace",ear1="Telos earring",ear2="Eabani earring",
+		head="Dampening Tam",neck="Lissome necklace",ear1="Eabani earring",ear2="Telos earring",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.HighAcc.LowHaste = {ammo="Falcon Eye",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Eabani earring",
+		head="Carmine Mask +1",neck="Combatant's torque",ear1="Eabani earring",ear2="Telos earring",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT.LowHaste = {ammo="Brigantia pebble",
@@ -651,14 +653,14 @@ function init_gear_sets()
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee }
-	sets.engaged.DW.Acc.HighHaste = {ammo="Ginsen",
-		head="Dampening Tam",neck="Lissome necklace",ear1="Telos earring",ear2="Suppanomimi",
+	sets.engaged.DW.Acc.HighHaste = {ammo="Falcon Eye",
+		head="Carmine Mask +1",neck="Asperity necklace",ear1="Telos earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
 		back=gear.blucape_dw,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee }
 	sets.engaged.DW.HighAcc.HighHaste = {ammo="Falcon Eye",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
-		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
-		back=gear.blucape_dw,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+		head="Carmine Mask +1",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Cacoethic Ring",ring2="Epona's Ring",
+		back=gear.blucape_tp,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT.HighHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Brutal earring", ear2="Genmei earring",
 		body="Adhemar jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
@@ -691,16 +693,16 @@ function init_gear_sets()
 		--Max Haste engaged sets, approx 43.75% haste
 	sets.engaged.DW.MaxHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Telos earring",ear2="Brutal earring",
-		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-		back=gear.blucape_tp,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta }
+		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's Ring",
+		back=gear.blucape_tp,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_tp }
 	sets.engaged.DW.Acc.MaxHaste = {ammo="Ginsen",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Digni. earring",
-		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back=gear.blucape_ws,waist="Olseni belt",legs="Samnuha Tights",feet=gear.hercfeet_ta }
+		head="Carmine Mask +1",neck="Combatant's torque",ear1="Telos earring",ear2="Brutal earring",
+		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Hetairoi Ring",ring2="Epona's Ring",
+		back=gear.blucape_tp,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta }
 	sets.engaged.DW.HighAcc.MaxHaste = {ammo="Falcon Eye",
-		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
-		body="Adhemar jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
-		back=gear.bluecape_ws,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_acc }
+		head="Carmine Mask +1",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
+		body=gear.hercbody_acc,hands="Adhemar wristbands",ring1="Hetairoi Ring",ring2="Epona's Ring",
+		back=gear.blucape_tp,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_acc }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Brutal Earring", ear2="Genmei earring",
 		body="Adhemar Jacket", hands=gear.herchands_dt, ring1="Defending ring", ring2="Epona's Ring",

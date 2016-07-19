@@ -70,7 +70,7 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = {
-		head="Carmine mask",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		head="Carmine Mask +1",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon ring",
 		legs="Rawhide Trousers",feet="Carmine Greaves" }
 
@@ -93,7 +93,7 @@ function init_gear_sets()
 		back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid Greaves" }
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {
-		head="Carmine mask",
+		head="Carmine Mask +1",
 		back="Grounded Mantle +1",feet=gear.melee_feet})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.

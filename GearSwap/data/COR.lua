@@ -135,9 +135,9 @@ function init_gear_sets()
     -- Fast cast sets for spells
     
     sets.precast.FC = {
-		head="Carmine mask",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's Sash",feet="Carmine greaves"
+		waist="Ninurta's Sash",legs="Rawhide Trousers",feet="Carmine Greaves +1"
 	}
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
@@ -189,7 +189,7 @@ function init_gear_sets()
     sets.midcast.FastRecast = {
 		head="Haruspex Hat",neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's Sash",legs=gear.herclegs_dt,feet="Carmine greaves"}
+		waist="Ninurta's Sash",legs=gear.herclegs_dt,feet="Carmine Greaves +1"}
         
     -- Specific spells
     sets.midcast.Utsusemi = sets.midcast.FastRecast
@@ -215,24 +215,24 @@ function init_gear_sets()
     -- Sets to return to when not performing an action.
     
     -- Resting sets
-    sets.resting = {ring1="Defending Ring",ring2=gear.DarkRing.PDT }
+    sets.resting = {ring1="Defending Ring",ring2="Defending Ring"}
     
 
     -- Idle sets
     sets.idle = {range="Compensator",ammo=gear.RAbullet,
         head="Blood Mask",neck="Sanctity Necklace",ear1="Sanare Earring",ear2="Infused Earring",
         body="Mekosuchinae harness",hands=gear.herchands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs_dt,feet="Skadi's jambeaux +1"}
+        back="Solemnity Cape",waist="Gishdubar sash",legs="Rawhide Trousers",feet=gear.hercfeet_refresh }
 
     sets.idle.Town = {range="Compensator",ammo=gear.RAbullet,
         head="Blood Mask",neck="Sanctity Necklace",ear1="Sanare Earring",ear2="Infused Earring",
         body="Mekosuchinae harness",hands=gear.herchands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs_dt,feet="Skadi's jambeaux +1"}
+        back="Solemnity Cape",waist="Gishdubar sash",legs="Rawhide Trousers",feet=gear.hercfeet_refresh }
     
     sets.idle.PDT = {sub="Legion Scutum",range="Compensator",ammo=gear.RAbullet,
         head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Genmei Earring",
         body="Lanun Frac +1",hands=gear.herchands,ring1=gear.DarkRing.PDT,ring2="Defending Ring",
-        back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs_dt,feet="Lanun Bottes +1"}
+        back="Solemnity Cape",waist="Gishdubar sash",legs=gear.herclegs_dt,feet="Ahosi Leggings"}
 
     -- Defense sets
     sets.defense.PDT = {
@@ -241,9 +241,9 @@ function init_gear_sets()
         back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi Leggings"}
 
     sets.defense.MDT = {
-        head=gear.adhemarhead_melee,neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
-        body="Lanun Frac +1",hands=gear.herchands_rng_crit,ring1="Archon Ring",ring2="Defending Ring",
-        back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi Leggings"}
+        head="Dampening Tam",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi Earring",
+        body="Lanun Frac +1",hands="Floral gauntlets",ring1="Archon Ring",ring2="Defending Ring",
+        back="Solemnity Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet="Ahosi Leggings"}
     
 
     sets.Kiting = {feet="Skadi's Jambeaux +1",ring2=gear.DarkRing.PDT}
