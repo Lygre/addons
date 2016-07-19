@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-4.3027559194107e+086</alpha>
+                    <alpha>7.1345609433216e+093</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-4.3027559194107e+086</alpha>
+                    <alpha>7.1345609433216e+093</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-4.3027559194107e+086</alpha>
+                    <alpha>7.1345609433216e+093</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -214,7 +214,7 @@
             </33>
             <34>
                 <id>34</id>
-                <level>0</level>
+                <level>0.6</level>
                 <name>Enhancing Magic</name>
                 <short_name>enhancing_magic</short_name>
             </34>
@@ -328,7 +328,7 @@
             </52>
             <53>
                 <id>53</id>
-                <level>56.2</level>
+                <level>61.2</level>
                 <name>Leathercraft</name>
                 <short_name>leathercraft</short_name>
             </53>
