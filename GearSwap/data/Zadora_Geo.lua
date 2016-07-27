@@ -60,7 +60,7 @@ function init_gear_sets()
  
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {main="Serenity",
         body="Heka's Kalasiris",
-        back="Pahtli Cape",legs="Doyen pants",feet="Vanya clogs"})
+        legs="Doyen pants",feet="Vanya clogs"})
  
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkarole earring",
         hands="Bagua Mitaines"})
@@ -137,7 +137,7 @@ function init_gear_sets()
     range="Dunna",
     head={ name="Vanya Hood", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
     body="Heka's Kalasiris",
-    hands="Bokwus Gloves",
+    hands="Telchine gloves",
     legs="Geo. Pants +1",
     feet={ name="Medium's Sabots", augments={'MP+35','MND+4','"Conserve MP"+3',}},
     neck="Incanter's Torque",
@@ -376,10 +376,10 @@ function init_gear_sets()
     sub="Genmei Shield",
     range="Dunna",
     head="Befouled Crown",
-    body="Councilor's Garb",
+    body="Vrikodara jupon",
     hands="Geo. Mitaines +1",
     legs="Assid. Pants +1",
-    feet="Crier's Gaiters",
+    feet="Azimuth gaiters +1",
     neck="Loricate Torque +1",
     waist="Fucho-no-Obi",
     left_ear="Genmei Earring",

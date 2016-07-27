@@ -124,6 +124,17 @@
             </stroke>
         </text>
     </nacholibre>
+    <razriel>
+        <pos>
+            <x>313</x>
+            <y>3</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </razriel>
     <redcurrybun>
         <pos>
             <x>330</x>
@@ -134,6 +145,17 @@
             </stroke>
         </text>
     </redcurrybun>
+    <rheita>
+        <pos>
+            <x>109</x>
+            <y>2</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </rheita>
     <salmahayek>
         <pos>
             <x>402</x>
@@ -144,4 +166,36 @@
             </stroke>
         </text>
     </salmahayek>
+    <tavaris>
+        <pos>
+            <x>173</x>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </tavaris>
+    <zadora>
+        <pos>
+            <x>88</x>
+            <y>1</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </zadora>
+    <zadorus>
+        <pos>
+            <x>410</x>
+            <y>-1</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </zadorus>
 </settings>

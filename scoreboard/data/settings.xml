@@ -106,6 +106,15 @@
         </display>
         <visible>true</visible>
     </chronoviper>
+    <clipsel>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </display>
+    </clipsel>
     <dooor>
         <display>
             <pos>
@@ -142,7 +151,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>2.3296780771207e+209</alpha>
+                    <alpha>-5.9406790966578e+211</alpha>
                 </stroke>
             </text>
         </display>
@@ -155,7 +164,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.920094310572e+031</alpha>
+                    <alpha>-4.8962404919586e+033</alpha>
                 </stroke>
             </text>
         </display>
@@ -188,6 +197,15 @@
         </display>
         <visible>true</visible>
     </nacholibre>
+    <razriel>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </display>
+    </razriel>
     <redcurrybun>
         <display>
             <pos>
@@ -201,6 +219,15 @@
             </text>
         </display>
     </redcurrybun>
+    <rheita>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </display>
+    </rheita>
     <salmahayek>
         <display>
             <pos>
@@ -215,13 +242,31 @@
         </display>
         <visible>true</visible>
     </salmahayek>
+    <tavaris>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>1073992175355</alpha>
+                </stroke>
+            </text>
+        </display>
+    </tavaris>
     <zadora>
         <display>
             <text>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>6.9836341202394e+016</alpha>
                 </stroke>
             </text>
         </display>
     </zadora>
+    <zadorus>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </display>
+    </zadorus>
 </settings>

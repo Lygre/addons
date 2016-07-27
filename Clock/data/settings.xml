@@ -91,6 +91,19 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </chronoviper>
+    <clipsel>
+        <Clock>
+            <pos>
+                <x>958</x>
+                <y>30</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </clipsel>
     <dooor>
         <Clock>
             <pos>
@@ -172,6 +185,19 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </nacholibre>
+    <razriel>
+        <Clock>
+            <pos>
+                <x>912</x>
+                <y>24</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </razriel>
     <redcurrybun>
         <Clock>
             <pos>
@@ -186,6 +212,19 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </redcurrybun>
+    <rheita>
+        <Clock>
+            <pos>
+                <x>944</x>
+                <y>35</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </rheita>
     <salmahayek>
         <Clock>
             <pos>
@@ -200,4 +239,43 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </salmahayek>
+    <tavaris>
+        <Clock>
+            <pos>
+                <x>911</x>
+                <y>26</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </tavaris>
+    <zadora>
+        <Clock>
+            <pos>
+                <x>979</x>
+                <y>23</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </zadora>
+    <zadorus>
+        <Clock>
+            <pos>
+                <x>890</x>
+                <y>33</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </zadorus>
 </settings>

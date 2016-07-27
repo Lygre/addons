@@ -39,4 +39,22 @@
             </stroke>
         </text>
     </global>
+    <razriel>
+        <pos>
+            <x>-1</x>
+            <y>1</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>-2.7386800471527e+014</alpha>
+            </stroke>
+        </text>
+    </razriel>
+    <zadora>
+        <text>
+            <stroke>
+                <alpha>-2.7386800471527e+014</alpha>
+            </stroke>
+        </text>
+    </zadora>
 </settings>

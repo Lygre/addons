@@ -1,7 +1,7 @@
 <settings>
 	<global>
 		<!-- This will be used for all the characters that you don't make a specific set of plugins/addons for -->
-		<plugin>AutoExec</plugin>
+		<!-- <plugin>AutoExec</plugin> -->
 		<plugin>Binder</plugin>
 		<plugin>jazero</plugin>
 		<plugin>Timers</plugin>
@@ -10,9 +10,9 @@
 		<plugin>Fishingcrashfix</plugin>
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
-		<addon>Anchor</addon>
-		<addon>aecho</addon>
-		<addon>auctionhelper</addon>
+		<!-- <addon>Anchor</addon> -->
+<!-- 		<addon>aecho</addon>
+ -->		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>
@@ -38,7 +38,7 @@
 		<addon>pet_fix</addon>
 		<addon>pettp</addon>
 		<addon>pointwatch</addon>
-		<addon>pricer</addon>
+		<!-- <addon>pricer</addon> -->
 		<addon>rolltracker</addon>
 		<addon>scoreboard</addon>
 		<addon>send</addon>

@@ -71,6 +71,17 @@
             </stroke>
         </text>
     </chronoviper>
+    <clipsel>
+        <pos>
+            <x>97</x>
+            <y>3</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </clipsel>
     <dooor>
         <pos>
             <x>547</x>
@@ -156,4 +167,26 @@
             </stroke>
         </text>
     </salmahayek>
+    <tavaris>
+        <pos>
+            <x>90</x>
+            <y>1</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </tavaris>
+    <zadorus>
+        <pos>
+            <x>92</x>
+            <y>1</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </zadorus>
 </settings>
