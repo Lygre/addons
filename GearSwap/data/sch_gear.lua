@@ -19,7 +19,6 @@ function job_setup()
 	state.MagicBurst = M(false, 'Magic Burst')
 
 	gear.RegenCape = {name="Bookworm's Cape", augments={'INT+2','Helix eff. dur. +13','"Regen" potency+9',}}
-	gear.HelixCape = {name="Bookworm's Cape", augments={'INT+4','MND+4','Helix eff. dur. +20',}}
 	gear.NukeStaff = {name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}}
 	gear.EnfeebStaff = {name="Akademos", augments={'Mag. Acc.+20','Enha.mag. skill +15','Enfb.mag. skill +15',}}
 
@@ -50,6 +49,9 @@ function job_setup()
 	send_command('bind @F5 gs c scholar power')
 	send_command('bind ^F6 input /sublimation')
 	send_command('bind !F6 input /enlightenment')
+	send_command('bind @F6 input /item "echo drops" <me>')
+	send_command('bind ^F7 input /item "remedy" <me>')
+	send_command('bind !F7 input /item "panacea" <me>')
 
 
 
@@ -93,7 +95,7 @@ function init_gear_sets()
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
-	sets.precast.FC['Enhancing Magic'].Stoneskin = set_combine(sets.precast.FC, {hands="Carapacho cuffs",waist="Siegel Sash",legs="Doyen pants"})
+	sets.precast.FC['Enhancing Magic'].Stoneskin = set_combine(sets.precast.FC, {waist="Siegel Sash",legs="Doyen pants"})
 
 	sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkarole earring"})
 
@@ -107,9 +109,9 @@ function init_gear_sets()
 	sets.precast.FC.Impact = set_combine(sets.precast.FC['Elemental Magic'], {head=empty,body="Twilight Cloak"})
 
 	sets.precast.WS = {
-		head="Befouled crown",neck="Fotia gorget",
-		body="Onca suit",hands=empty,
-		back="Aurist's cape +1",waist="Fotia Belt",legs=empty,feet=empty}
+		head="Blistering Sallet",neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
+		body="Kaykaus bliaut",hands=gear.chirhands_sc,ring1="Petrov Ring",ring2="Cacoethic Ring",
+		back="Aurist's cape +1",waist="Fotia Belt",legs="Telchine Braconi",feet=gear.chirfeet}
 	
 	sets.precast.WS['Myrkr'] = {ammo="Psilomene",
 		head="Kaykaus Mitra",neck="Nodens gorget",ear1="loquacious earring", ear2="Moonshade earring",
@@ -170,7 +172,7 @@ function init_gear_sets()
 		{head="Amalric coif",waist="Gishdubar sash"})
 
 	sets.midcast.Phalanx = set_combine(sets.midcast['Enhancing Magic'],
-		{legs=gear.merllegs_phalanx})
+		{})
 
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],
 		{head=gear.chirhead,
@@ -229,7 +231,7 @@ function init_gear_sets()
 	sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
 		head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Gwati Earring",
 		body="Shango robe",hands="Amalric gages",ring1="Evanescence Ring",ring2="Archon Ring",
-		back=gear.HelixCape,waist="Eschan Stone",legs="Pedagogy pants +1",feet=gear.merlfeet_da}
+		back=gear.RegenCape,waist="Eschan Stone",legs="Pedagogy pants +1",feet=gear.merlfeet_da}
 
 	sets.midcast.Kaustra = {main="Rubicundity",sub="Genmei shield",range=empty,ammo="Pemphredo tathlum",
 		head="Pixie Hairpin +1",neck="Incanter's torque",ear1="Barkarole Earring",ear2="Friomisi Earring",
@@ -241,7 +243,7 @@ function init_gear_sets()
 	sets.midcast.Drain = {main="Rubicundity",sub="Genmei shield",ammo="Pemphredo tathlum",
 		head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Barkarole Earring",ear2="Gwati Earring",
 		body=gear.merlbody_da,hands=gear.chirhands_da,ring1="Evanescence Ring",ring2="Archon Ring",
-		back=gear.HelixCape,waist="Fucho-no-obi",legs=gear.merllegs_da,feet=gear.merlfeet_da}
+		back=gear.RegenCape,waist="Fucho-no-obi",legs=gear.merllegs_da,feet=gear.merlfeet_da}
 
 	sets.midcast.Aspir = sets.midcast.Drain
 

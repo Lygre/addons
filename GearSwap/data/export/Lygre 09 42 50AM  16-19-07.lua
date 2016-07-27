@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sequence",
+    sub={ name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}},
+    ammo="Falcon Eye",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body={ name="Herculean Vest", augments={'Accuracy+25 Attack+25','"Counter"+2','DEX+6','Accuracy+15',}},
+    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    legs={ name="Carmine Cuisses", augments={'Accuracy+15','Attack+10','"Dual Wield"+5',}},
+    feet={ name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}},
+    neck="Combatant's Torque",
+    waist="Olseni Belt",
+    left_ear="Telos Earring",
+    right_ear="Zennaroi Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Epona's Ring",
+    back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
+}

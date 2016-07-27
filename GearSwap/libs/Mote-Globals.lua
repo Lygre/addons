@@ -85,6 +85,22 @@ function define_global_sets()
 	gear.chirfeet_block = {name="Chironic Slippers", augments={'Chance of successful block +4','Attack+2',}}
 	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
+	--Herculean Augments
+ 	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+22','Weapon skill damage +4%',}}
+ 	gear.hercbody_acc = {name="Herculean Vest", augments={'Accuracy+25 Attack+25','"Counter"+2','DEX+6','Accuracy+15',}}
+	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
+	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+14 Attack+14','Phys. dmg. taken -3%','STR+8','Accuracy+12','Attack+11',}}
+	gear.herchands_acc = {name="Herculean Gloves", augments={'"Triple Atk."+4','Accuracy+14','Attack+3',}}
+	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
+	gear.herclegs_mab = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','MND+2','Mag. Acc.+13',}}
+	gear.herclegs_wsd = {name="Herculean Trousers", augments={'Attack+9','Weapon skill damage +3%','DEX+13','Accuracy+10',}}
+	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
+	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
+	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
+	gear.hercfeet_tp = {name="Herculean Boots", augments={'Enmity-1','"Dbl.Atk."+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
+	gear.hercfeet_refresh = { name="Herculean Boots", augments={'Enmity+3','"Refresh"+2','Accuracy+2 Attack+2',}}
+	gear.hercfeet_wsd = {name="Herculean Boots", augments={'Weapon Skill Acc.+15','"Conserve MP"+2','Weapon skill damage +6%','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
+
 	--Amalric aliases
 	gear.amalricfeet_consmp = {name="Amalric Nails", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Conserve MP"+6',}}
 	gear.amalricfeet_death = {name="Amalric Nails", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
@@ -104,25 +120,9 @@ function define_global_sets()
 
 	---Adhemar aliases
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
-	
-	--Herculean Augments
- 	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+22','Weapon skill damage +4%',}}
- 	gear.hercbody_acc = {name="Herculean Vest", augments={'Accuracy+25 Attack+25','"Counter"+2','DEX+6','Accuracy+15',}}
-	gear.herchands_melee = {name="Herculean Gloves", augments={'"Dual Wield"+5','DEX+7','Accuracy+13','Attack+4',}}
-	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+14 Attack+14','Phys. dmg. taken -3%','STR+8','Accuracy+12','Attack+11',}}
-	gear.herchands_acc = {name="Herculean Gloves", augments={'"Triple Atk."+4','Accuracy+14','Attack+3',}}
-	gear.herclegs_dt = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+2','Magic dmg. taken -1%','Phalanx +3','Accuracy+16 Attack+16',}}
-	gear.herclegs_mab = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','MND+2','Mag. Acc.+13',}}
-	gear.herclegs_wsd = {name="Herculean Trousers", augments={'Attack+9','Weapon skill damage +3%','DEX+13','Accuracy+10',}}
-	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
-	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
-	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
-	gear.hercfeet_tp = {name="Herculean Boots", augments={'Enmity-1','"Dbl.Atk."+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
-	gear.hercfeet_refresh = {name="Herculean Boots", augments={'DEX+6','Pet: INT+6','"Refresh"+1','Accuracy+9 Attack+9',}}
-	gear.hercfeet_wsd = {name="Herculean Boots", augments={'Weapon Skill Acc.+15','"Conserve MP"+2','Weapon skill damage +6%','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
-	----RNG-------
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
 	--gear.hercbody_rng_crit = {name="Herculean Vest", augments={'Rng.Acc.+23 Rng.Atk.+23','Crit. hit damage +4%','Rng.Atk.+8',}}
+
 	gear.taeonhands_rng_crit = {name="Taeon Gloves", augments={'Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+3','Crit. hit damage +2%',}}
 	gear.herchands_rng_crit = {name="Herculean Gloves", augments={'Rng.Acc.+24 Rng.Atk.+24','Crit. hit damage +3%',}}
 	gear.herclegs_rng_racc = {name="Herculean Trousers", augments={'Rng.Acc.+26','Crit. hit damage +4%','DEX+6',}}

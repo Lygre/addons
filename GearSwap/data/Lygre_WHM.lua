@@ -79,7 +79,7 @@ function init_gear_sets()
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC['Healing Magic'], 
 		{main="Queller Rod",sub="Genmei Shield",
-		body="Inyanga jubbah +1",feet="Hygieia Clogs"})
+		body="Inyanga jubbah +1",feet="Hygieia clogs +1"})
 		
     sets.precast.FC.Impact = {head=empty,body="Twilight Cloak"}
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -127,12 +127,12 @@ function init_gear_sets()
     sets.midcast.Cure = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
         head="Gendewitha Caubeen +1",neck="Incanter's torque",ear1="Mendicant's Earring",ear2="Glorious Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Haoma's Ring",ring2="Haoma's Ring",
-        back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
+        back="Mending Cape",waist="Bishop's sash",legs="Ebers pantaloons +1",feet="Hygieia clogs +1"}
 
     sets.midcast.Curaga = {main="Queller Rod",sub="Genmei shield",ammo="Psilomene",
         head="Gendewitha Caubeen +1",neck="Incanter's torque",ear1="Glorious Earring",ear2="Mendicant's Earring",
         body="Kaykaus bliaut",hands="Theophany Mitts +1",ring1="Lebeche Ring",ring2="Globidonta Ring",
-        back="Mending Cape",waist="Pythia sash +1",legs="Ebers pantaloons +1",feet="Hygieia Clogs"}
+        back="Mending Cape",waist="Pythia sash +1",legs="Ebers pantaloons +1",feet="Hygieia clogs +1"}
 
     sets.midcast.CureMelee = {ammo="Sapience Orb",
         head="Gendewitha Caubeen +1",neck="Orison Locket",ear1="Enchanter earring +1",ear2="Mendicant's Earring",

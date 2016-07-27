@@ -13,6 +13,7 @@
     <global>
         <UpdateFrequency>0.5</UpdateFrequency>
         <bgtransparency>200</bgtransparency>
+        <combinepets>true</combinepets>
         <display>
             <bg>
                 <alpha>200</alpha>
@@ -75,6 +76,7 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </antrax>
     <brrrr>
         <display>
@@ -84,10 +86,11 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-1.598789922049e+149</alpha>
+                    <alpha>-5.1101575382795e+187</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </brrrr>
     <chronoviper>
         <display>
@@ -129,6 +132,7 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </doroti>
     <lyger>
         <display>
@@ -138,7 +142,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.1209149591307e+166</alpha>
+                    <alpha>2.3296780771207e+209</alpha>
                 </stroke>
             </text>
         </display>
@@ -151,7 +155,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-2.7386800471527e+014</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                 </stroke>
             </text>
         </display>
@@ -211,4 +215,13 @@
         </display>
         <visible>true</visible>
     </salmahayek>
+    <zadora>
+        <display>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </display>
+    </zadora>
 </settings>

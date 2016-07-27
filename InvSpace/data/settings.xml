@@ -238,4 +238,17 @@
             </text>
         </display>
     </salmahayek>
+    <zadora>
+        <display>
+            <pos>
+                <x>1029</x>
+                <y>324</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </zadora>
 </settings>
