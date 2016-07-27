@@ -1,0 +1,36 @@
+Addon command is //autows or //aws
+
+specific commands:
+	reload - //aws reload
+	unload - //aws unload
+	TURN IT ON!!!:
+		- //aws on
+		- //aws enable
+		- //aws start
+	TURN IT OFF!!:
+		- //aws off
+		- //aws disable
+		- //aws stop
+	TOGGLE:
+		- //aws toggle
+		---- This just switches between ON and OFF with a single command
+	SET WEAPONSKILL:
+		- //aws set <weaponskill name>
+		- //aws use <weaponskill name>
+		- //aws ws <weaponskill name>
+		----EXAMPLE: 
+			- //aws set Chant du cygne
+
+
+
+
+	atc('autoWeponskill commands:')
+	atc('autows <on|off|toggle>')
+	atc('autows mob <sign> <hp%> <name>')
+	atc('autows hp <hp%>')
+	atc('autows <')
+	atc('autows >')
+	atc('autows set <weaponskill name>')
+	atc('autows autora [<on|off>]')
+
+
