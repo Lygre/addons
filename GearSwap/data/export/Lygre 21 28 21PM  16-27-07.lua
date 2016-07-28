@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sequence",
+    sub={ name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}},
+    ammo="Sapience Orb",
+    head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body={ name="Herculean Vest", augments={'Accuracy+16','"Triple Atk."+4','DEX+3',}},
+    hands={ name="Herculean Gloves", augments={'"Triple Atk."+4','Accuracy+14','Attack+3',}},
+    legs={ name="Carmine Cuisses", augments={'Accuracy+15','Attack+10','"Dual Wield"+5',}},
+    feet="Ahosi Leggings",
+    neck="Loricate Torque +1",
+    waist="Flume Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Infused Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    back="Solemnity Cape",
+}

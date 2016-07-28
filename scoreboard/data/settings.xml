@@ -108,12 +108,17 @@
     </chronoviper>
     <clipsel>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
                     <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </clipsel>
     <dooor>
         <display>
@@ -151,10 +156,11 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-5.9406790966578e+211</alpha>
+                    <alpha>1.5148731696477e+214</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </lyger>
     <lygre>
         <display>
@@ -164,7 +170,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4.8962404919586e+033</alpha>
+                    <alpha>8.1186399687348e+040</alpha>
                 </stroke>
             </text>
         </display>
@@ -199,12 +205,17 @@
     </nacholibre>
     <razriel>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
                     <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </razriel>
     <redcurrybun>
         <display>
@@ -214,19 +225,25 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4.8962404919586e+033</alpha>
+                    <alpha>1.2485413254494e+036</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </redcurrybun>
     <rheita>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
                     <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </rheita>
     <salmahayek>
         <display>
@@ -244,29 +261,44 @@
     </salmahayek>
     <tavaris>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
-                    <alpha>1073992175355</alpha>
+                    <alpha>4.5411080866855e+021</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </tavaris>
     <zadora>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
-                    <alpha>6.9836341202394e+016</alpha>
+                    <alpha>2.9528555333672e+026</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </zadora>
     <zadorus>
         <display>
+            <pos>
+                <x>500</x>
+                <y>100</y>
+            </pos>
             <text>
                 <stroke>
                     <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </zadorus>
 </settings>

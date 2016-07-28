@@ -140,7 +140,8 @@ function parse_action_packet(act)
 					end
 
 					if m.has_add_effect then
-						if T{196,223,288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,385,386,387,388,389,390,391,392,393,394,395,396,397,398,732,767,768}:contains(m.add_effect_message) then
+						--196,223,
+						if T{288,289,290,291,292,293,294,295,296,297,298,299,300,301,302,385,386,387,388,389,390,391,392,393,394,395,396,397,398,732,767,768}:contains(m.add_effect_message) then
 							if not database[NPC_name]["SC-"..PC_name:sub(1, 3)..""] then
 								init_mob_player_table(NPC_name,"SC-"..PC_name:sub(1, 3).."")
 							end	
@@ -254,6 +255,14 @@ function register_data(mob_player_table,stat,val,spell_type,spell_id)
 			else
 				mob_player_table[get_stat_type(stat)][stat][spell_name].damage = mob_player_table[get_stat_type(stat)][stat][spell_name].damage + val
 			end
+			
+			if damage_types:contains(stat) then
+				if not mob_player_table.total_damage then
+					mob_player_table.total_damage = val
+				else
+					mob_player_table.total_damage = mob_player_table.total_damage + val
+				end
+			end
 		end
 	else --handle everything else
 		if not mob_player_table[get_stat_type(stat)][stat] then
@@ -272,7 +281,16 @@ function register_data(mob_player_table,stat,val,spell_type,spell_id)
 			else
 				mob_player_table[get_stat_type(stat)][stat].damage = mob_player_table[get_stat_type(stat)][stat].damage + val
 			end
+			
+			if damage_types:contains(stat) then
+				if not mob_player_table.total_damage then
+					mob_player_table.total_damage = val
+				else
+					mob_player_table.total_damage = mob_player_table.total_damage + val
+				end
+			end
 		end
+		
 	end
 
 end

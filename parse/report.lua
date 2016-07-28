@@ -2,6 +2,7 @@
 
 	-- Specific handling of acc/racc to be more user-friendly
 	-- Specific handling of da/ta/qa/ua/sa/ea/oa?
+	-- Handle WS acc and JA acc
 
 ]]
 
@@ -84,7 +85,7 @@ function report_data(stat,chatmode,chattarget)
 		end
 	else
 		message('That stat was not found. Reportable stats include:')
-		message('damage, melee, multi, crit, miss, ranged, r_crit, r_miss, spike, sc, add, hit, block, evade, parry, intimidate, absorb, ws, ws_miss, ja, ja_miss, spell')
+		message('damage, melee, multi, crit, miss, ranged, r_crit, r_miss, spike, sc, add, hit, block, evade, parry, intimidate, absorb, ws, ja, spell')
 		return
 	end
 	

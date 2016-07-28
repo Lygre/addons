@@ -1,6 +1,6 @@
 --[[ TO DO
 
-	-- Implement player filtering
+	-- Implement player filtering for reporting function
 	-- Implement temporary mob_filters variable for reporting function
 
 ]]
@@ -212,17 +212,13 @@ function get_player_stat_tally(stat,plyr,mob_filters)
 	local tally = 0
 	for mob,mob_table in pairs(database) do
 		if check_filters('mob',mob) then
-			for player,mob_player_table in pairs(mob_table) do
-				if player==plyr then
-					if mob_player_table[get_stat_type(stat)] and mob_player_table[get_stat_type(stat)][stat] then
-						if get_stat_type(stat)=="category" then --handle ws/ja/spell tally								
-							for spell,spell_table in pairs (mob_player_table[get_stat_type(stat)][stat]) do
-								if spell_table.tally then
-									tally = tally + spell_table.tally
-								end
-							end
-						elseif mob_player_table[get_stat_type(stat)][stat].tally then
-							tally = tally + mob_player_table[get_stat_type(stat)][stat].tally
+			if database[mob][plyr] and database[mob][plyr][get_stat_type(stat)] and database[mob][plyr][get_stat_type(stat)][stat] then
+				if database[mob][plyr][get_stat_type(stat)][stat].tally then
+					tally = tally + database[mob][plyr][get_stat_type(stat)][stat].tally
+				elseif get_stat_type(stat)=="category" then
+					for spell,spell_table in pairs (database[mob][plyr][get_stat_type(stat)][stat]) do
+						if spell_table.tally then
+							tally = tally + spell_table.tally
 						end
 					end
 				end
@@ -236,18 +232,14 @@ function get_player_stat_damage(stat,plyr,mob_filters)
 	if type(stat)=='number' then stat=tostring(stat) end
 	local damage = 0
 	for mob,mob_table in pairs(database) do
-		if check_filters('mob',mob) then
-			for player,mob_player_table in pairs(mob_table) do
-				if player==plyr then
-					if mob_player_table[get_stat_type(stat)] and mob_player_table[get_stat_type(stat)][stat] then
-						if mob_player_table[get_stat_type(stat)][stat].damage then
-							damage = damage + mob_player_table[get_stat_type(stat)][stat].damage
-						elseif get_stat_type(stat)=="category" then -- handle ws/ja/spell damage							
-							for spell,spell_table in pairs (mob_player_table[get_stat_type(stat)][stat]) do
-								if spell_table.damage then
-									damage = damage + spell_table.damage
-								end
-							end
+		if (mob_filters and mob==mob_filters) or (not mob_filters and check_filters('mob',mob)) then
+			if database[mob][plyr] and database[mob][plyr][get_stat_type(stat)] and database[mob][plyr][get_stat_type(stat)][stat] then
+				if database[mob][plyr][get_stat_type(stat)][stat].damage then
+					damage = damage + database[mob][plyr][get_stat_type(stat)][stat].damage
+				elseif get_stat_type(stat)=="category" then
+					for spell,spell_table in pairs (database[mob][plyr][get_stat_type(stat)][stat]) do
+						if spell_table.damage then
+							damage = damage + spell_table.damage
 						end
 					end
 				end
@@ -320,15 +312,28 @@ end
 
 function get_player_damage(plyr,mob_filters)
 	local damage = 0
-	for __,player in pairs(get_players()) do		
-		if not plyr or (plyr and player==plyr) then
-			for stat_type,stats in pairs(stat_types) do
-				if stat_type~='defense' then
-					for stat,__ in pairs(stats) do
-						damage = damage + get_player_stat_damage(stat,player)
+	
+	for mob,players in pairs(database) do
+		if (mob_filters and mob==mob_filters) or (not mob_filters and check_filters('mob',mob)) then
+			for player,mob_player_table in pairs(players) do
+				if not plyr or (plyr and player==plyr) then
+					if mob_player_table.total_damage then
+						damage = damage + mob_player_table.total_damage
 					end
 				end
 			end
+		end
+	end
+	
+	return damage
+end
+
+-- For old versions of exports
+function find_total_damage(plyr,mnst)
+	local damage = 0
+	if database[mnst] and database[mnst][plyr] then
+		for stat in damage_types:it() do
+			damage = damage + get_player_stat_damage(stat,plyr,mnst)
 		end
 	end
 	return damage

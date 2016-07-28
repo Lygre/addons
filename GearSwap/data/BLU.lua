@@ -27,7 +27,7 @@ function job_setup()
 	state.OffenseMode:options('Normal', 'Acc', 'HighAcc', 'Refresh')
 	state.IdleMode:options('Normal', 'PDT', 'MDT')
 	state.HybridMode:options('Normal','PDT', 'MDT','Meva')
-	state.WeaponskillMode:options('Normal', 'Acc', 'Mod')
+	state.WeaponskillMode:options('Normal', 'Mod', 'Acc')
 	state.CastingMode:options('Normal', 'Resistant')
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT','Meva')
@@ -323,7 +323,12 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
 		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's ring",
-		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
+		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_crit,feet="Thereoid greaves"}
+	
+	sets.precast.WS['Chant du Cygne'].Mod = {ammo="Jukukik feather",
+		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
+		body=gear.hercbody_ta,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Epona's ring",
+		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_critdmg,feet=gear.hercfeet_crit}
 	
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
@@ -529,12 +534,12 @@ function init_gear_sets()
 	-- Defense sets
 	sets.defense.PDT = {ammo="Brigantia pebble",
 		head="Lithelimb cap",neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
-		body="Vrikodara jupon",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
 
 	sets.defense.MDT = {ammo="Vanir battery",
 		head="Dampening Tam",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi earring",
-		body="Amalric doublet",hands="Leyline gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+		body=gear.hercbody_dt,hands="Leyline gloves",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity cape",waist="Flume Belt +1",legs="Mes'yohi slacks",feet="Ahosi leggings" }
 	sets.defense.Meva = {ammo="Vanir battery",
 		head="Amalric coif",neck="Warder's charm",ear1="Sanare Earring",ear2="Eabani earring",
@@ -579,7 +584,7 @@ function init_gear_sets()
 		back=gear.blucape_dw,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
 	sets.engaged.DW.PDT = {ammo="Brigantia pebble",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
-		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
+		body=gear.hercbody_dt, hands=gear.herchands_acc, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs="Samnuha tights", feet="Ahosi leggings" }
 	sets.engaged.DW.Acc.PDT = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Combatant's torque", ear1="Telos earring", ear2="Genmei earring",

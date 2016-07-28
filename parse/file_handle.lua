@@ -22,10 +22,19 @@ function import_parse(file_name)
 	merge_tables(database,imported_database)
 	
 	-- Add nonblocks in for old version
-	for mobs,players in pairs(database) do
+	for mob,players in pairs(database) do
 		for player,player_table in pairs(players) do
 			if player_table['defense'] and player_table['defense']['block'] and not player_table['defense']['nonblock'] then
 				player_table['defense']['nonblock'] = player_table['defense']['hit']
+			end
+		end
+	end
+	
+	-- Add total_damage in for old version
+	for mob,players in pairs(database) do
+		for player,player_table in pairs(players) do
+			if not player_table.total_damage then
+				player_table.total_damage = find_total_damage(player,mob)
 			end
 		end
 	end

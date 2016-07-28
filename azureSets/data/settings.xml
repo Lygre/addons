@@ -137,6 +137,25 @@
                 <slot19>occultation</slot19>
                 <slot20>paralyzing triad</slot20>
             </intenseambvdmay>
+            <leviathan>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>thrashing assault</slot03>
+                <slot04>erratic flutter</slot04>
+                <slot05>paralyzing triad</slot05>
+                <slot06>sudden lunge</slot06>
+                <slot07>white wind</slot07>
+                <slot08>sinker drill</slot08>
+                <slot09>fantod</slot09>
+                <slot10>diffusion ray</slot10>
+                <slot11>heavy strike</slot11>
+                <slot12>molting plumage</slot12>
+                <slot13>empty thrash</slot13>
+                <slot14>cocoon</slot14>
+                <slot15>nat. meditation</slot15>
+                <slot16>scouring spate</slot16>
+                <slot17>blinding fulgor</slot17>
+            </leviathan>
             <skirmishsolo>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

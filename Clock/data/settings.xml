@@ -147,12 +147,12 @@
     <lygre>
         <Clock>
             <pos>
-                <x>915</x>
-                <y>144</y>
+                <x>903</x>
+                <y>140</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>6.9836341202394e+016</alpha>
+                    <alpha>-1.780826700661e+019</alpha>
                 </stroke>
             </text>
         </Clock>

@@ -1,4 +1,4 @@
-_addon.version = '1.23'
+_addon.version = '1.32'
 _addon.name = 'Parse'
 _addon.author = 'F'
 _addon.commands = {'parse','p'}
@@ -131,6 +131,8 @@ stat_types.category = S{"ws","ja","spell","ws_miss","ja_miss"}
 stat_types.other = S{"spike","sc","add"}
 stat_types.multi = S{'1','2','3','4','5','6','7','8'}
 
+damage_types = S{"melee","crit","ranged","r_crit","ws","ja","spell","spike","sc","add"}
+
 require 'utility'
 require 'retrieval'
 require 'display'
@@ -189,6 +191,7 @@ windower.register_event('addon command', function(...)
 		message('show/s [melee/ranged/magic/defense] : Shows/hides display box. "melee" is the default.')
 		message('pause/p : Pauses/unpauses parse. When paused, data is not recorded.')
 		message('reset :  Resets parse.')
+		message('interval [number] :  Defines how many actions it takes before displays are updated.')
 		message('rename [player name] [new name] : Renames a player or monster for NEW incoming data.')
 		-- message('save [file name] : Saves parse to tab-delimited txt file. Filters are applied and data is collapsed.')
 		message('import/export [file name] : Imports/exports an XML file to/from database. Filters are applied permanently.')
@@ -314,17 +317,35 @@ function print_list(list_type)
 	end
 end
 
--- Returns true if monster, or part of monster name, is found in filter list
+-- Returns true if no filters, or if monster, or part of monster name, is found in filter list
 function check_filters(filter_type,mob_name)
 	if not filters[filter_type] or filters[filter_type]:tostring()=="{}" then
 		return true
 	end
+	
+	local response = false
+	local only_excludes = true
 	for v,__ in pairs(filters[filter_type]) do
-		if string.find(string.lower(mob_name),string.lower(v)) then
-			return true
+		if v:lower():startswith('!') then --exclusion filter
+			if string.find(mob_name:lower(),v:lower():gsub('%!','')) or v:lower():gsub('%!',''):gsub('%^','')==mob_name:lower() then --immediately return false
+				return false
+			end
+		elseif v:lower():startswith('^') then --exact match filter
+			if v:lower():gsub('%^','')==mob_name:lower() then
+				response = true				
+			end
+			only_excludes = false
+		elseif string.find(mob_name:lower(),v:lower()) then --wildcard filter (default behavior)
+			response = true
+			only_excludes = false
+		else
+			only_excludes = false
 		end
 	end
-	return false
+	if not response and only_excludes then
+		response = true
+	end
+	return response
 end
 
 --Copyright (c) 2013~2016, F.R
