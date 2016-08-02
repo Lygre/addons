@@ -107,9 +107,7 @@ windower.register_event('addon command', function(...)
 				local mog_house = packets.new('incoming', 0x02E)
 				packets.inject(mog_house)
 			end
-		elseif commands[1] == 'garden' then
-			local mog_garden = packets.new('incoming', 0x0DE)
-			packets.inject(mog_garden)
+			return
 		end
 	end
 	if commands[1] == 'hide' then

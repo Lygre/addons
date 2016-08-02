@@ -7,6 +7,60 @@
 --          Input Handling Functions
 --==============================================================================
 
+utils = {normalize={}}
+
+
+function utils.normalize_str(str)
+    return str:lower():gsub(' ', '_'):gsub('%.', '')
+end
+
+
+function utils.normalize_action(action, action_type)
+    --atcf('utils.normalize_action(%s, %s)', tostring(action), tostring(action_type))
+    if istable(action) then return action end
+    if action_type == nil then return nil end
+    if isstr(action) then
+        if tonumber(action) == nil then
+            return res[action_type]:with('enn', utils.normalize_str(action))
+        end
+        action = tonumber(action) 
+    end
+    if isnum(action) then
+        return res[action_type][action]
+    end
+    return nil
+end
+
+
+function utils.strip_roman_numerals(str)
+    --return str:sub(1, str:find('I*V?X?I*V?I*$')):trim()
+    return str:match('^%s*(.-)%s*I*V?X?I*V?I*$')
+end
+
+
+--[[
+    Add an 'enn' (english, normalized) entry to each relevant resource
+--]]
+local function normalize_action_names()
+    local categories = {'spells', 'job_abilities', 'weapon_skills', 'buffs'}
+    for _,cat in pairs(categories) do
+        for id,entry in pairs(res[cat]) do
+            res[cat][id].enn = utils.normalize_str(entry.en)
+            res[cat][id].ja = nil
+            res[cat][id].jal = nil
+        end
+    end
+end
+normalize_action_names()
+
+
+local txtbox_cmd_map = {
+    moveinfo = 'moveInfo',          actioninfo = 'actionInfo',
+    showq = 'actionQueue',          showqueue = 'actionQueue',
+    queue = 'actionQueue',          monitored = 'montoredBox',
+    showmonitored = 'montoredBox',
+}
+
 function processCommand(command,...)
     command = command and command:lower() or 'help'
     local args = {...}
@@ -18,7 +72,7 @@ function processCommand(command,...)
     elseif command == 'refresh' then
         load_configs()
     elseif S{'start','on'}:contains(command) then
-        activate()
+        hb.activate()
     elseif S{'stop','end','off'}:contains(command) then
         active = false
         printStatus()
@@ -29,53 +83,35 @@ function processCommand(command,...)
         if not validate(args, 1, 'Error: No argument specified for Enable') then return end 
         disableCommand(args[1]:lower(), false)
     elseif S{'assist','as'}:contains(command) then
-        local cmd = args[1] and args[1]:lower() or (settings.assist.active and 'off' or 'resume')
+        local cmd = args[1] and args[1]:lower() or (offense.assist.active and 'off' or 'resume')
         if S{'off','end','false','pause'}:contains(cmd) then
-            settings.assist.active = false
+            offense.assist.active = false
             atc('Assist is now off.')
         elseif S{'resume'}:contains(cmd) then
-            if (settings.assist.name ~= nil) then
-                settings.assist.active = true
-                atc('Now assisting '..settings.assist.name..'.')
+            if (offense.assist.name ~= nil) then
+                offense.assist.active = true
+                atc('Now assisting '..offense.assist.name..'.')
             else
                 atc(123,'Error: Unable to resume assist - no target set')
             end
         elseif S{'attack','engage'}:contains(cmd) then
-            local cmd2 = args[2] and args[2]:lower() or (settings.assist.engage and 'off' or 'resume')
+            local cmd2 = args[2] and args[2]:lower() or (offense.assist.engage and 'off' or 'resume')
             if S{'off','end','false','pause'}:contains(cmd2) then
-                settings.assist.engage = false
+                offense.assist.engage = false
                 atc('Will no longer enagage when assisting.')
             else
-                settings.assist.engage = true
+                offense.assist.engage = true
                 atc('Will now enagage when assisting.')
             end
         else    --args[1] is guaranteed to have a value if this is reached
-            local pname = getPlayerName(args[1])
-            if (pname ~= nil) then
-                settings.assist.name = pname
-                settings.assist.active = true
-                atc('Now assisting '..settings.assist.name..'.')
-            else
-                atc(123,'Error: Invalid name provided as an assist target: '..tostring(args[1]))
-            end
+            offense.register_assistee(args[1])
         end
     elseif S{'ws','weaponskill'}:contains(command) then
         local lte,gte = string.char(0x81, 0x85),string.char(0x81, 0x86)
         local cmd = args[1] and args[1] or ''
         settings.ws = settings.ws or {}
-        if S{'use','set'}:contains(cmd) then    -- ws name
-            table.remove(args, 1)
-            local argstr = table.concat(args,' ')
-            local wsname = formatSpellName(argstr)
-            local ws = getActionFor(wsname)
-            if (ws ~= nil) then
-                settings.ws.name = wsname
-                atc('Will now use '..wsname)
-            else
-                atc(123,'Error: Invalid weaponskill name: '..wsname)
-            end
-        elseif (cmd == 'waitfor') then      --another player's TP
-            local partner = getPlayerName(args[2])
+        if (cmd == 'waitfor') then      --another player's TP
+            local partner = utils.getPlayerName(args[2])
             if (partner ~= nil) then
                 local partnertp = tonumber(args[3]) or 1000
                 settings.ws.partner = {name=partner,tp=partnertp}
@@ -96,6 +132,11 @@ function processCommand(command,...)
             else
                 atc(123,'Error: Invalid arguments for ws hp: '..tostring(args[2])..', '..tostring(args[3]))
             end
+        else
+            if S{'use','set'}:contains(cmd) then    -- ws name
+                table.remove(args, 1)
+            end
+            utils.register_ws(args)
         end
     elseif S{'spam','nuke'}:contains(command) then
         local cmd = args[1] and args[1]:lower() or (settings.nuke.active and 'off' or 'on')
@@ -109,28 +150,45 @@ function processCommand(command,...)
         elseif S{'off','false'}:contains(cmd) then
             settings.nuke.active = false
             atc('Spell spamming is now off.')
-        elseif S{'use','set'}:contains(cmd) then
-            table.remove(args, 1)
-            local argstr = table.concat(args,' ')
-            local spell_name = formatSpellName(argstr)
-            local spell = getActionFor(spell_name)
-            if (spell ~= nil) then
-                if Assert.can_use(spell) then
-                    settings.nuke.name = spell.en
-                    atc('Will now spam '..settings.nuke.name)
-                else
-                    atc(123,'Error: Unable to cast '..spell.en)
-                end
-            else
-                atc(123,'Error: Invalid spell name: '..spell_name)
+        else
+            if S{'use','set'}:contains(cmd) then
+                table.remove(args, 1)
             end
+            utils.register_spam_spell(args)
+        end
+    elseif S{'debuff', 'db'}:contains(command) then
+        local cmd = args[1] and args[1]:lower() or (offense.debuffing_active and 'off' or 'on')
+        if S{'on','true'}:contains(cmd) then
+            offense.debuffing_active = true
+            atc('Debuffing is now on.')
+        elseif S{'off','false'}:contains(cmd) then
+            offense.debuffing_active = false
+            atc('Debuffing is now off.')
+        elseif S{'rm','remove'}:contains(cmd) then
+            utils.register_offensive_debuff(table.slice(args, 2), true)
+        elseif S{'ls','list'}:contains(cmd) then
+            pprint_tiered(offense.debuffs)
+        else
+            if S{'use','set'}:contains(cmd) then
+                table.remove(args, 1)
+            end
+            utils.register_offensive_debuff(args, false)
         end
     elseif command == 'mincure' then
         if not validate(args, 1, 'Error: No argument specified for minCure') then return end
         local val = tonumber(args[1])
         if (val ~= nil) and (1 <= val) and (val <= 6) then
-            minCureTier = val
-            atc('Minimum cure tier set to '..minCureTier)
+            settings.healing.min.cure = val
+            atc('Minimum cure tier set to '..val)
+        else
+            atc('Error: Invalid argument specified for minCure')
+        end
+    elseif command == 'mincuraga' then
+        if not validate(args, 1, 'Error: No argument specified for minCure') then return end
+        local val = tonumber(args[1])
+        if (val ~= nil) and (1 <= val) and (val <= 6) then
+            settings.healing.min.curaga = val
+            atc('Minimum curaga tier set to '..val)
         else
             atc('Error: Invalid argument specified for minCure')
         end
@@ -151,7 +209,7 @@ function processCommand(command,...)
         
         local resetTarget
         if (args[2] ~= nil) and (args[3] ~= nil) and (args[2]:lower() == 'on') then
-            local pname = getPlayerName(args[3])
+            local pname = utils.getPlayerName(args[3])
             if (pname ~= nil) then
                 resetTarget = pname
             else
@@ -159,47 +217,29 @@ function processCommand(command,...)
                 return
             end
         end
-        
+        resetTarget = resetTarget or 'ALL' 
+        local rtmsg = resetTarget or 'all monitored players'
         if b then
-            if (resetTarget ~= nil) then
-                resetBuffTimers(resetTarget)
-                atc('Buffs registered for '..resetTarget..' were reset.')
-            else
-                for player,_ in pairs(buffList) do
-                    resetBuffTimers(player)
-                end
-                atc('Buffs registered for all monitored players were reset.')
-            end
+            buffs.resetBuffTimers(resetTarget)
+            atc('Buff timers for %s were reset.':format(rtmsg))
         end
         if d then
-            if (resetTarget ~= nil) then
-                debuffList[resetTarget]= {}
-                atc('Debuffs registered for '..resetTarget..' were reset.')
-            else
-                debuffList = {}
-                atc('Debuffs registered for all monitored players were reset.')
-            end
+            buffs.resetDebuffTimers(resetTarget)
+            atc('Debuffs detected for %s were reset.':format(rtmsg))
         end
     elseif command == 'buff' then
-        registerNewBuff(args, true)
+        buffs.registerNewBuff(args, true)
     elseif command == 'cancelbuff' then
-        registerNewBuff(args, false)
+        buffs.registerNewBuff(args, false)
     elseif command == 'bufflist' then
         if not validate(args, 1, 'Error: No argument specified for BuffList') then return end
-        local blist = defaultBuffs[args[1]]
-        if blist ~= nil then
-            for _,buff in pairs(blist) do
-                registerNewBuff({args[2], buff}, true)
-            end
-        else
-            atc('Error: Invalid argument specified for BuffList: '..args[1])
-        end
+        utils.apply_bufflist(args)
     elseif command == 'bufflists' then
-        pprint(defaultBuffs)
+        pprint(hb_config.buff_lists)
     elseif command == 'ignore_debuff' then
-        registerIgnoreDebuff(args, true)
+        buffs.registerIgnoreDebuff(args, true)
     elseif command == 'unignore_debuff' then
-        registerIgnoreDebuff(args, false)
+        buffs.registerIgnoreDebuff(args, false)
     elseif S{'follow','f'}:contains(command) then
         local cmd = args[1] and args[1]:lower() or (settings.follow.active and 'off' or 'resume')
         if S{'off','end','false','pause'}:contains(cmd) then
@@ -220,7 +260,7 @@ function processCommand(command,...)
                 atc(123,'Error: Unable to resume follow - no target set')
             end
         else    --args[1] is guaranteed to have a value if this is reached
-            local pname = getPlayerName(args[1])
+            local pname = utils.getPlayerName(args[1])
             if (pname ~= nil) then
                 settings.follow.target = pname
                 settings.follow.active = true
@@ -232,32 +272,15 @@ function processCommand(command,...)
     elseif S{'ignore', 'unignore', 'watch', 'unwatch'}:contains(command) then
         monitorCommand(command, args[1])
     elseif command == 'ignoretrusts' then
-        toggleMode('ignoreTrusts', args[1], 'Ignoring of Trust NPCs', 'IgnoreTrusts')
+        utils.toggleX(settings, 'ignoreTrusts', args[1], 'Ignoring of Trust NPCs', 'IgnoreTrusts')
     elseif command == 'packetinfo' then
         toggleMode('showPacketInfo', args[1], 'Packet info display', 'PacketInfo')
-    elseif command == 'moveinfo' then
-        if posCommand('moveInfo', args) then
-            refresh_textBoxes()
+    elseif txtbox_cmd_map[command] ~= nil then
+        local boxName = txtbox_cmd_map[command]
+        if utils.posCommand(boxName, args) then
+            utils.refresh_textBoxes()
         else
-            toggleVisible('moveInfo', args[1])
-        end
-    elseif command == 'actioninfo' then
-        if posCommand('actionInfo', args) then
-            refresh_textBoxes()
-        else
-            toggleVisible('actionInfo', args[1])
-        end
-    elseif S{'showq','showqueue','queue'}:contains(command) then
-        if posCommand('actionQueue', args) then
-            refresh_textBoxes()
-        else
-            toggleVisible('actionQueue', args[1])
-        end
-    elseif S{'monitored','showmonitored'}:contains(command) then
-        if posCommand('montoredBox', args) then
-            refresh_textBoxes()
-        else
-            toggleVisible('montoredBox', args[1])
+            utils.toggleVisible(boxName, args[1])
         end
     elseif S{'help','--help'}:contains(command) then
         help_text()
@@ -283,7 +306,73 @@ function processCommand(command,...)
     end
 end
 
-function posCommand(boxName, args)
+
+function utils.register_offensive_debuff(args, cancel)
+    local argstr = table.concat(args,' ')
+    local spell_name = formatSpellName(argstr)
+    local spell = getActionFor(spell_name)
+    if (spell ~= nil) then
+        if Assert.can_use(spell) then
+            offense.maintain_debuff(spell, cancel)
+        else
+            atc(123,'Error: Unable to cast '..spell.en)
+        end
+    else
+        atc(123,'Error: Invalid spell name: '..spell_name)
+    end
+end
+
+
+function utils.register_spam_spell(args)
+    local argstr = table.concat(args,' ')
+    local spell_name = formatSpellName(argstr)
+    local spell = getActionFor(spell_name)
+    if (spell ~= nil) then
+        if Assert.can_use(spell) then
+            settings.nuke.name = spell.en
+            atc('Will now spam '..settings.nuke.name)
+        else
+            atc(123,'Error: Unable to cast '..spell.en)
+        end
+    else
+        atc(123,'Error: Invalid spell name: '..spell_name)
+    end
+end
+
+
+function utils.register_ws(args)
+    local argstr = table.concat(args,' ')
+    local wsname = formatSpellName(argstr)
+    local ws = getActionFor(wsname)
+    if (ws ~= nil) then
+        settings.ws.name = wsname
+        atc('Will now use '..wsname)
+    else
+        atc(123,'Error: Invalid weaponskill name: '..wsname)
+    end
+end
+
+
+function utils.apply_bufflist(args)
+    local job = windower.ffxi.get_player().main_job
+    local bl_name = args[1]
+    local bl_target = args[2]
+    if bl_target == nil and bl_name == 'self' then
+        bl_target = 'me'
+    end
+    local buff_list = table.get_nested_value(hb_config.buff_lists, {job, job:lower()}, bl_name)
+    buff_list = buff_list or hb_config.buff_lists[bl_name]
+    if buff_list ~= nil then
+        for _,buff in pairs(buff_list) do
+            buffs.registerNewBuff({bl_target, buff}, true)
+        end
+    else
+        atc('Error: Invalid argument specified for BuffList: '..bl_name)
+    end
+end
+
+
+function utils.posCommand(boxName, args)
     if (args[1] == nil) or (args[2] == nil) then return false end
     local cmd = args[1]:lower()
     if not S{'pos','posx','posy'}:contains(cmd) then
@@ -304,7 +393,7 @@ function posCommand(boxName, args)
     return true
 end
 
-function toggleVisible(boxName, cmd)
+function utils.toggleVisible(boxName, cmd)
     cmd = cmd and cmd:lower() or (settings.textBoxes[boxName].visible and 'off' or 'on')
     if (cmd == 'on') then
         settings.textBoxes[boxName].visible = true
@@ -315,21 +404,26 @@ function toggleVisible(boxName, cmd)
     end
 end
 
-function toggleMode(mode, cmd, msg, msgErr)
-    if (modes[mode] == nil) then
-        atc(123,'Error: Invalid mode to toggle: '..tostring(mode))
+function utils.toggleX(tbl, field, cmd, msg, msgErr)
+    if (tbl[field] == nil) then
+        atcf(123, 'Error: Invalid mode to toggle: %s', field)
         return
     end
-    cmd = cmd and cmd:lower() or (modes[mode] and 'off' or 'on')
+    cmd = cmd and cmd:lower() or (tbl[field] and 'off' or 'on')
     if (cmd == 'on') then
-        modes[mode] = true
+        tbl[field] = true
         atc(msg..' is now on.')
     elseif (cmd == 'off') then
-        modes[mode] = false
+        tbl[field] = false
         atc(msg..' is now off.')
     else
         atc(123,'Invalid argument for '..msgErr..': '..cmd)
     end
+end
+
+function toggleMode(mode, cmd, msg, msgErr)
+    utils.toggleX(modes, mode, cmd, msg, msgErr)
+    _libs.lor.debug = modes.debug
 end
 
 function disableCommand(cmd, disable)
@@ -372,7 +466,7 @@ function monitorCommand(cmd, pname)
         atc('Error: No argument specified for '..cmd)
         return
     end
-    local name = getPlayerName(pname)
+    local name = utils.getPlayerName(pname)
     if cmd == 'ignore' then
         if (not ignoreList:contains(name)) then
             ignoreList:add(name)
@@ -420,31 +514,30 @@ function validate(args, numArgs, message)
     return true
 end
 
-function getPlayerName(name)
-    local trg = getTarget(name)
+function utils.getPlayerName(name)
+    local trg = utils.getTarget(name)
     if (trg ~= nil) then
         return trg.name
     end
     return nil
 end
 
-function getTarget(targ)
-    local target = nil
-    if targ and tonumber(targ) and (tonumber(targ) > 255) then
-        target = windower.ffxi.get_mob_by_id(tonumber(targ))
-    elseif targ and S{'<me>','me'}:contains(targ) then
-        target = windower.ffxi.get_mob_by_target('me')
-    elseif targ and (targ == '<t>') then
-        target = windower.ffxi.get_mob_by_target()
-    elseif targ and (type(targ) == 'string') then
-        target = windower.ffxi.get_mob_by_name(targ)
-        if not target then
-            target = windower.ffxi.get_mob_by_name(targ:ucfirst())
-        end
-    elseif targ and (type(targ) == 'table') then
-        target = targ
+function utils.getTarget(targ)
+    if targ == nil then
+        return nil
+    elseif istable(targ) then
+        return targ
+    elseif tonumber(targ) and (tonumber(targ) > 255) then
+        return windower.ffxi.get_mob_by_id(tonumber(targ))
+    elseif S{'<me>','me'}:contains(targ) then
+        return windower.ffxi.get_mob_by_target('me')
+    elseif (targ == '<t>') then
+        return windower.ffxi.get_mob_by_target()
+    elseif isstr(targ) then
+        local target = windower.ffxi.get_mob_by_name(targ)
+        return target or windower.ffxi.get_mob_by_name(targ:ucfirst())
     end
-    return target
+    return nil
 end
 
 function getPartyMember(name)
@@ -457,7 +550,7 @@ function getPartyMember(name)
     return nil
 end
 
-function getMainPartyList()
+function utils.getMainPartyList()
     local pt = windower.ffxi.get_party()
     local pty = {pt.p0,pt.p1,pt.p2,pt.p3,pt.p4,pt.p5}
     local party = S{}
@@ -487,7 +580,7 @@ end
 function formatSpellName(text)
     if (type(text) ~= 'string') or (#text < 1) then return nil end
     
-    local fromAlias = aliases[text]
+    local fromAlias = hb_config.aliases[text]
     if (fromAlias ~= nil) then
         return fromAlias
     end
@@ -539,73 +632,13 @@ end
 --          Output Handling Functions
 --==============================================================================
 
-function atc(c, msg)
-    if (type(c) == 'string') and (msg == nil) then
-        msg = c
-        c = 0
-    end
-    windower.add_to_chat(c, '[HealBot]'..msg)
-end
-
-function atcc(c,msg)
-    if (type(c) == 'string') and (msg == nil) then
-        msg = c
-        c = 0
-    end
-    local hbmsg = '[HealBot]'..msg
-    windower.add_to_chat(0, hbmsg:colorize(c))
-end
-
-function atcd(c, msg)
-    if modes.debug then atc(c, msg) end
-end
-
---[[
-    Convenience wrapper for echoing a message in the Windower console.
---]]
-function echo(msg)
-    if (msg ~= nil) then
-        windower.send_command('echo [HealBot]'..msg)
-    end
-end
-
-function print_table_keys(t, prefix)
-    prefix = prefix or ''
-    local msg = ''
-    for k,v in pairs(t) do
-        if #msg > 0 then msg = msg..', ' end
-        msg = msg..k
-    end
-    if #msg == 0 then msg = '(none)' end
-    atc(prefix..msg)
-end
-
-function printPairs(tbl, prefix)
-    if prefix == nil then prefix = '' end
-    for k,v in pairs(tbl) do
-        atc(prefix..tostring(k)..' : '..tostring(v))
-        if type(v) == 'table' then
-            printPairs(v, prefix..'    ')
-        end
-    end
-end
-
 function printStatus()
     windower.add_to_chat(1, 'HealBot is now '..(active and 'active' or 'off')..'.')
 end
 
-
 --==============================================================================
 --          Initialization Functions
 --==============================================================================
-
-function import(path)
-    local fcontents = files.read(path)
-    if (fcontents ~= nil) then
-        return loadstring(fcontents)()
-    end
-    return nil
-end
 
 function load_configs()
     local defaults = {
@@ -615,24 +648,38 @@ function load_configs()
             actionInfo={x=0,y=0,visible=true},
             montoredBox={x=-150,y=600,font='Arial',size=10,visible=true}
         },
-        nuke = {name='Stone'}
+        nuke = {name='Stone'},
+        healing = {min={cure=3,curaga=1,waltz=2,waltzga=1},curaga_min_targets=2},
+        disable = {curaga=false},
+        ignoreTrusts=true
     }
     local loaded = config.load('data/settings.xml', defaults)
     update_settings(loaded)
-    refresh_textBoxes()
+    utils.refresh_textBoxes()
     
-    aliases = config.load('../shortcuts/data/aliases.xml')
-    mabil_debuffs = config.load('data/mabil_debuffs.xml')
-    defaultBuffs = config.load('data/buffLists.xml')
+    local cure_potency_defaults = {
+        cure = {94,207,469,880,1110,1395},  curaga = {150,313,636,1125,1510},
+        waltz = {157,325,581,887,1156},     waltzga = {160,521}
+    }
+    local buff_lists_defaults = {       self = {'Haste II','Refresh II'},
+        whm = {self={'Haste','Refresh'}}, rdm = {self={'Haste II','Refresh II'}}
+    }
+    hb_config = {
+        aliases = config.load('../shortcuts/data/aliases.xml'),
+        mabil_debuffs = config.load('data/mabil_debuffs.xml'),
+        buff_lists = config.load('data/buffLists.xml', buff_lists_defaults),
+        priorities = config.load('data/priorities.xml'),
+        cure_potency = config.load('data/cure_potency.xml', cure_potency_defaults)
+    }
+    hb_config.priorities.players =        hb_config.priorities.players or {}
+    hb_config.priorities.jobs =           hb_config.priorities.jobs or {}
+    hb_config.priorities.status_removal = hb_config.priorities.status_removal or {}
+    hb_config.priorities.buffs =          hb_config.priorities.buffs or {}
+    hb_config.priorities.debuffs =        hb_config.priorities.debuffs or {}
+    hb_config.priorities.dispel =         hb_config.priorities.dispel or {}     --not implemented yet
+    hb_config.priorities.default =        hb_config.priorities.default or 5
     
-    priorities = config.load('data/priorities.xml')
-    priorities.players = priorities.players or {}
-    priorities.jobs = priorities.jobs or {}
-    priorities.status_removal = priorities.status_removal or {}
-    priorities.buffs = priorities.buffs or {}
-    priorities.default = priorities.default or 5
-    
-    mobAbils = process_mabil_debuffs()
+    hb_config.mobAbils = process_mabil_debuffs()
     local msg = configs_loaded and 'Rel' or 'L'
     configs_loaded = true
     atcc(262, msg..'oaded config files.')
@@ -640,29 +687,26 @@ end
 
 function update_settings(loaded)
     settings = settings or {}
-    for key,vals in pairs(loaded) do
-        settings[key] = settings[key] or {}
-        for vkey,val in pairs(vals) do
-            settings[key][vkey] = val
+    for key,val in pairs(loaded) do
+        if istable(val) then
+            settings[key] = settings[key] or {}
+            for skey,sval in pairs(val) do
+                settings[key][skey] = sval
+            end
+        else
+            settings[key] = settings[key] or val
         end
     end
-    settings.actionDelay = settings.actionDelay or 0.08
-    settings.assist = settings.assist or {}
-    settings.assist.active = settings.assist.active or false
-    settings.assist.engage = settings.assist.engage or false
-    settings.disable = settings.disable or {}
-    settings.follow = settings.follow or {}
-    settings.follow.delay = settings.follow.delay or 0.08
-    settings.follow.distance = settings.follow.distance or 3
-    settings.healing = settings.healing or {}
-    settings.healing.minCure = settings.healing.minCure or 3
-    settings.healing.minCuraga = settings.healing.minCuraga or 1
-    settings.healing.minWaltz = settings.healing.minWaltz or 2
-    settings.healing.minWaltzga = settings.healing.minWaltzga or 1
-    settings.nuke = settings.nuke or {}
+    table.update_if_not_set(settings, {
+        actionDelay = 0.08,
+        disable = {},
+        follow = {delay = 0.08, distance = 3},
+        healing = {minCure = 3, minCuraga = 1, minWaltz = 2, minWaltzga = 1},
+        nuke = {}
+    })
 end
 
-function refresh_textBoxes()
+function utils.refresh_textBoxes()
     local boxes = {'actionQueue','moveInfo','actionInfo','montoredBox'}
     txts = txts or {}
     for _,box in pairs(boxes) do
@@ -696,7 +740,7 @@ end
 
 function process_mabil_debuffs()
     local mabils = S{}
-    for abil_raw,debuffs in pairs(mabil_debuffs) do
+    for abil_raw,debuffs in pairs(hb_config.mabil_debuffs) do
         local aname = abil_raw:gsub('_',' '):capitalize()
         mabils[aname] = S{}
         for _,debuff in pairs(debuffs) do
@@ -795,7 +839,7 @@ end
 
 --======================================================================================================================
 --[[
-Copyright © 2015, Lorand
+Copyright © 2016, Lorand
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 following conditions are met:

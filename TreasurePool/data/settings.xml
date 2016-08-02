@@ -41,6 +41,19 @@
             </text>
         </display>
     </global>
+    <lygre>
+        <display>
+            <pos>
+                <x>224</x>
+                <y>329</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </lygre>
     <zadora>
         <display>
             <pos>
@@ -48,9 +61,6 @@
                 <y>103</y>
             </pos>
             <text>
-                <fonts>
-
-                </fonts>
                 <stroke>
                     <alpha>-64770</alpha>
                 </stroke>

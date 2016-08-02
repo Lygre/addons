@@ -197,6 +197,26 @@
                 <slot16>battery charge</slot16>
                 <slot17>barrier tusk</slot17>
             </solocleave>
+            <tenzen>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>erratic flutter</slot03>
+                <slot04>molting plumage</slot04>
+                <slot05>thrashing assault</slot05>
+                <slot06>heavy strike</slot06>
+                <slot07>fantod</slot07>
+                <slot08>sudden lunge</slot08>
+                <slot09>nat. meditation</slot09>
+                <slot10>paralyzing triad</slot10>
+                <slot11>white wind</slot11>
+                <slot12>empty thrash</slot12>
+                <slot13>sinker drill</slot13>
+                <slot14>silent storm</slot14>
+                <slot15>tenebral crush</slot15>
+                <slot16>cocoon</slot16>
+                <slot17>dream flower</slot17>
+                <slot18>occultation</slot18>
+            </tenzen>
             <tonberrysolo>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>

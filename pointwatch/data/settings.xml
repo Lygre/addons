@@ -61,6 +61,19 @@
             </text>
         </text_box_settings>
     </antrax>
+    <ashela>
+        <text_box_settings>
+            <pos>
+                <x>525</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </text_box_settings>
+    </ashela>
     <brrrr>
         <text_box_settings>
             <pos>

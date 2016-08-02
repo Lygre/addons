@@ -118,7 +118,6 @@
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </clipsel>
     <dooor>
         <display>
@@ -170,7 +169,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>8.1186399687348e+040</alpha>
+                    <alpha>-2.0702531920274e+043</alpha>
                 </stroke>
             </text>
         </display>
@@ -215,7 +214,6 @@
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </razriel>
     <redcurrybun>
         <display>
@@ -239,11 +237,10 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4211734020</alpha>
+                    <alpha>1073992175355</alpha>
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </rheita>
     <salmahayek>
         <display>
@@ -267,11 +264,10 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>4.5411080866855e+021</alpha>
+                    <alpha>-1.1579825621048e+024</alpha>
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </tavaris>
     <zadora>
         <display>
@@ -285,7 +281,6 @@
                 </stroke>
             </text>
         </display>
-        <visible>true</visible>
     </zadora>
     <zadorus>
         <display>

@@ -3,7 +3,7 @@
     <global>
         <autodecline>false</autodecline>
         <blacklist />
-        <mode>whitelist</mode>
+        <mode>blacklist</mode>
         <whitelist />
     </global>
     <antrax>

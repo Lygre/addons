@@ -72,6 +72,19 @@
             </text>
         </display>
     </antrax>
+    <ashela>
+        <display>
+            <pos>
+                <x>1066</x>
+                <y>402</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </ashela>
     <brrrr>
         <display>
             <bg>
@@ -173,12 +186,12 @@
     <lygre>
         <display>
             <pos>
-                <x>1036</x>
-                <y>410</y>
+                <x>1061</x>
+                <y>401</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>2.9528555333672e+026</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                 </stroke>
             </text>
         </display>

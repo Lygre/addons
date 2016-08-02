@@ -47,7 +47,7 @@
         <Separator>\n</Separator>
         <ShowTimeZones>true</ShowTimeZones>
         <Sort>None</Sort>
-        <TimeZones>PST,CST,EST,JST</TimeZones>
+        <TimeZones>PST,EST,JST</TimeZones>
     </global>
     <antrax>
         <Clock>
@@ -63,6 +63,19 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </antrax>
+    <ashela>
+        <Clock>
+            <pos>
+                <x>937</x>
+                <y>30</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>16516605</alpha>
+                </stroke>
+            </text>
+        </Clock>
+    </ashela>
     <brrrr>
         <Clock>
             <pos>
@@ -103,6 +116,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </clipsel>
     <dooor>
         <Clock>
@@ -147,12 +161,12 @@
     <lygre>
         <Clock>
             <pos>
-                <x>903</x>
-                <y>140</y>
+                <x>323</x>
+                <y>473</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-1.780826700661e+019</alpha>
+                    <alpha>4.5411080866855e+021</alpha>
                 </stroke>
             </text>
         </Clock>
@@ -197,6 +211,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </razriel>
     <redcurrybun>
         <Clock>
@@ -224,6 +239,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </rheita>
     <salmahayek>
         <Clock>
@@ -251,6 +267,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </tavaris>
     <zadora>
         <Clock>
@@ -264,6 +281,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </zadora>
     <zadorus>
         <Clock>
@@ -277,5 +295,6 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </zadorus>
 </settings>

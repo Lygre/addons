@@ -100,6 +100,7 @@ windower.register_event('incoming text',function (original)
 	if string.contains(original, 'Synthesis canceled.') then
 		synthesisPossible = false
 		printStatus()
+		windower.send_command('input /p you stopped;wait 1.5;input /t Lygre you done')
 	elseif original == 'You must wait longer before repeating that action.' then
 		baseDelay = baseDelay + 1
 		delayedAttempt()
@@ -109,6 +110,7 @@ windower.register_event('incoming text',function (original)
 	elseif original == 'Unable to execute that command. Your inventory is full.' then
 		synthesisPossible = false
 		printStatus()
+		windower.send_command('input /p you stopped;wait 1.5;input /t Lygre you done')
 	end
 end)
 

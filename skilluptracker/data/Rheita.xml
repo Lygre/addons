@@ -31,9 +31,9 @@
                 </fonts>
                 <green>255</green>
                 <red>255</red>
-                <size>10</size>
+                <size>14</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -58,8 +58,8 @@
             </flags>
             <padding>5</padding>
             <pos>
-                <x>500</x>
-                <y>50</y>
+                <x>829</x>
+                <y>335</y>
             </pos>
             <show>true</show>
             <text>
@@ -71,9 +71,9 @@
                 </fonts>
                 <green>255</green>
                 <red>255</red>
-                <size>10</size>
+                <size>12</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>1.920094310572e+031</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -316,7 +316,7 @@
             </50>
             <51>
                 <id>51</id>
-                <level>0</level>
+                <level>40.6</level>
                 <name>Goldsmithing</name>
                 <short_name>goldsmithing</short_name>
             </51>

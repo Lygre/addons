@@ -29,8 +29,10 @@ local items = {}
 local bags = {}
 local item_tab = {}
 
+local zones_mh = L{'Mhaura','Selbina','Norg','Rabao','Kazham','Tavnazian Safehold','Nashmau','Mog Garden'}
+
 local function validate_bag(bag_table)
-    if (bag_table.access == 'Everywhere' or (bag_table.access == 'Mog House' and windower.ffxi.get_info().mog_house)) and
+    if (bag_table.access == 'Everywhere' or (bag_table.access == 'Mog House' and windower.ffxi.get_info().mog_house) or zones_mh:contains(res.zones[windower.ffxi.get_info().zone].name)) and
         windower.ffxi.get_bag_info(bag_table.id) then
         return true
     end

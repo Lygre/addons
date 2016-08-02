@@ -3,11 +3,12 @@
 	<global>
 		<auto_heal>false</auto_heal>
 		<bag_priority>
-			<Case>1</Case>
-			<Sack>2</Sack>
-			<Locker>3</Locker>
-			<Safe2>4</Safe2>
-			<Safe>5</Safe>
+			<Case>2</Case>
+			<Sack>3</Sack>
+			<Locker>4</Locker>
+			<Safe2>5</Safe2>
+			<Safe>6</Safe>
+			<Inventory>1</Inventory>
 			<!-- <Satchel>5</Satchel> -->
 			<!-- <Storage>4</Storage> -->
 			<!-- <Wardrobe>9</Wardrobe> -->

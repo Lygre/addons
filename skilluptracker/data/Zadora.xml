@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>16516605</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -61,7 +61,7 @@
                 <x>500</x>
                 <y>50</y>
             </pos>
-            <show>true</show>
+            <show>false</show>
             <text>
                 <alpha>255</alpha>
                 <blue>255</blue>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>16516605</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>16516605</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>

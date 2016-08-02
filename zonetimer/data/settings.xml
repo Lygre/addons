@@ -49,6 +49,16 @@
             </stroke>
         </text>
     </antrax>
+    <ashela>
+        <pos>
+            <x>358</x>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </ashela>
     <brrrr>
         <pos>
             <x>238</x>
@@ -116,12 +126,12 @@
     </lyger>
     <lygre>
         <pos>
-            <x>262</x>
-            <y>-1</y>
+            <x>752</x>
+            <y>21</y>
         </pos>
         <text>
             <stroke>
-                <alpha>1073992175355</alpha>
+                <alpha>-2.7386800471527e+014</alpha>
             </stroke>
         </text>
     </lygre>
