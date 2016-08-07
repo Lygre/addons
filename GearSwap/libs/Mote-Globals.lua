@@ -110,14 +110,19 @@ function define_global_sets()
 	gear.amalricfeet_consmp = {name="Amalric Nails", augments={'Mag. Acc.+15','"Mag.Atk.Bns."+15','"Conserve MP"+6',}}
 	gear.amalricfeet_death = {name="Amalric Nails", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
 
-	--Some Taeon
-	gear.ws_tbody = { name="Taeon Tabard", augments={'Accuracy+25','"Triple Atk."+2','Weapon skill damage +3%',}}
+	----Skirmish Gear
+	--Taeon
 	gear.fc_tbody = { name="Taeon Tabard", augments={'"Fast Cast"+5',}}
 	
+	--Telchine
+	gear.tellegs_da = {name="Telchine Braconi", augments={'Accuracy+17','"Dbl.Atk."+2','STR+7 MND+7',}}
+	gear.tellegs_enh = {name="Telchine Braconi", augments={'Accuracy+12 Attack+12','"Cure" potency +6%','Enh. Mag. eff. dur. +10',}}
+
 	--JSE Capes
 	gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
-	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Crit.hit rate+10',}}
+	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}}
 	gear.blucape_tp = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	gear.blucape_wsd = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
 	gear.dnccape_tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
 	gear.dnccape_ws = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
 	gear.blmcape_death = {name="Taranus's Cape", augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','MP+20','"Mag.Atk.Bns."+10',}}

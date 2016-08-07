@@ -111,7 +111,7 @@ function init_gear_sets()
 	sets.precast.WS = {
 		head="Blistering Sallet",neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
 		body="Kaykaus bliaut",hands=gear.chirhands_sc,ring1="Petrov Ring",ring2="Cacoethic Ring",
-		back="Aurist's cape +1",waist="Fotia Belt",legs="Telchine Braconi",feet=gear.chirfeet}
+		back="Aurist's cape +1",waist="Fotia Belt",legs=gear.tellegs_enh,feet=gear.chirfeet}
 	
 	sets.precast.WS['Myrkr'] = {ammo="Psilomene",
 		head="Kaykaus Mitra",neck="Nodens gorget",ear1="loquacious earring", ear2="Moonshade earring",
@@ -152,7 +152,7 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio grip",ammo="Savant's Treatise",
 		head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
 		body="Telchine Chas.",hands="Telchine gloves",
-		waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
+		waist="Olympus Sash",legs=gear.tellegs_enh,feet="Telchine Pigaches"}
 
 	sets.midcast.Storm = sets.midcast['Enhancing Magic']
 	   

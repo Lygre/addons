@@ -113,7 +113,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio Grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chasuble",hands="Atrophy Gloves +1",
-        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}
+        back="Sucellos's cape",waist="Olympus Sash",legs=gear.tellegs_enh,feet="Lethargy Houseaux +1"}
 
     sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'],{head="Amalric coif",waist="Gishdubar Sash",legs="Lethargy Fuseau +1"})
 
@@ -168,8 +168,8 @@ function init_gear_sets()
     --[[sets.midcast.EnhancingDuration = {
 		main="Grioavolr",sub="Fulcio Grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa earring",
-        body="Telchine Braconi",hands="Atrophy Gloves +1",
-        back="Sucellos's cape",waist="Olympus Sash",legs="Telchine braconi",feet="Lethargy Houseaux +1"}]]
+        body=gear.tellegs_enh,hands="Atrophy Gloves +1",
+        back="Sucellos's cape",waist="Olympus Sash",legs=gear.tellegs_enh,feet="Lethargy Houseaux +1"}]]
         
     sets.buff.ComposureOther = {main="Oranyan",
         head="Lethargy Chappel +1",

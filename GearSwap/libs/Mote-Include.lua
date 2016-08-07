@@ -28,6 +28,8 @@
 current_mote_include_version = 2
 
 function init_include()
+
+    
     -- Used to define various types of data mappings.  These may be used in the initialization, so load it up front.
     include('Mote-Mappings')
     
@@ -40,6 +42,9 @@ function init_include()
     -- General melee offense/defense modes, allowing for hybrid set builds, as well as idle/resting/weaponskill.
     -- This just defines the vars and sets the descriptions.  List modes with no values automatically
     -- get assigned a 'Normal' default value.
+
+    state.useMidcastGear    = M(false, 'Equip midcast gear on precast')
+
     state.OffenseMode         = M{['description'] = 'Offense Mode'}
     state.HybridMode          = M{['description'] = 'Hybrid Mode'}
     state.RangedMode          = M{['description'] = 'Ranged Mode'}
@@ -47,12 +52,14 @@ function init_include()
     state.CastingMode         = M{['description'] = 'Casting Mode'}
     state.IdleMode            = M{['description'] = 'Idle Mode'}
     state.RestingMode         = M{['description'] = 'Resting Mode'}
+    state.MagicBurst         = M{['description'] = 'Magic Burst Mode'}
+    state.DualWield         = M{['description'] = 'Dual Weild Mode'}
 
     state.DefenseMode         = M{['description'] = 'Defense Mode', 'None', 'Physical', 'Magical'}
     state.PhysicalDefenseMode = M{['description'] = 'Physical Defense Mode', 'PDT'}
     state.MagicalDefenseMode  = M{['description'] = 'Magical Defense Mode', 'MDT'}
 
-	state.MagicBurst		  = M(false, 'Magic Burst')
+    
     state.Kiting              = M(false, 'Kiting')
     state.SelectNPCTargets    = M(false, 'Select NPC Targets')
     state.PCTargetMode        = M{['description'] = 'PC Target Mode', 'default', 'stpt', 'stal', 'stpc'}
@@ -61,6 +68,7 @@ function init_include()
 
     state.CombatWeapon        = M{['description']='Combat Weapon', ['string']=''}
     state.CombatForm          = M{['description']='Combat Form', ['string']=''}
+   
 
     -- Non-mode vars that are used for state tracking.
     state.MaxWeaponskillDistance = 0
@@ -127,12 +135,12 @@ function init_include()
     gear = {}
     gear.default = {}
 
-    gear.ElementalGorget = {name="Fotia Gorget"}
-    gear.ElementalBelt = {name="Fotia Belt"}
-    gear.ElementalObi = {name="Hachirin-no-Obi"}
-    gear.ElementalCape = {name="Twilight Cape"}
+    gear.ElementalGorget = {name=""}
+    gear.ElementalBelt = {name=""}
+    gear.ElementalObi = {name=""}
+    gear.ElementalCape = {name=""}
     gear.ElementalRing = {name=""}
-    gear.FastcastStaff = {name="Grioavolr"}
+    gear.FastcastStaff = {name=""}
     gear.RecastStaff = {name=""}
 
 
@@ -188,6 +196,7 @@ end
 -- Auto-initialize the include
 init_include()
 
+
 -- Called when this job file is unloaded (eg: job change)
 -- Conditional definition so that it doesn't overwrite explicit user
 -- versions of this function.
@@ -201,6 +210,8 @@ if not file_unload then
         _G[(binds_on_unload and 'binds_on_unload') or 'global_on_unload']()
     end
 end
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------
@@ -326,8 +337,29 @@ function default_pretarget(spell, spellMap)
     auto_change_target(spell, spellMap)
 end
 
+
 function default_precast(spell, spellMap)
+
+    if spell.action_type == 'Magic' then
+
+        if not state.useMidcastGear.value then
+
+            equip(get_precast_set(spell, spellMap))
+
+            return
+
+        else
+ 
+            equip(get_midcast_set(spell, spellMap))
+        
+            return
+
+        end
+
+    end
+
     equip(get_precast_set(spell, spellMap))
+
 end
 
 function default_midcast(spell, spellMap)
@@ -339,6 +371,8 @@ function default_aftercast(spell, spellMap)
         handle_equipping_gear(player.status)
     end
 end
+--- This is Error Line ??!!! ------
+
 
 function default_pet_midcast(spell, spellMap)
     equip(get_pet_midcast_set(spell, spellMap))
@@ -1122,5 +1156,3 @@ function display_breadcrumbs(spell, spellMap, action)
         add_to_chat(123, msg)
     end
 end
-
-

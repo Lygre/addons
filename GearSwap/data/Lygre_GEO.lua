@@ -122,7 +122,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio grip",
         head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa earring",
         body="Telchine Chas.",hands="Telchine gloves",
-		waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
+		waist="Olympus Sash",legs=gear.tellegs_enh,feet="Telchine Pigaches"}
 	
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {main="Bolelabunga",sub="Genmei shield",
 		})

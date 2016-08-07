@@ -157,7 +157,7 @@ function init_gear_sets()
     head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
     body={ name="Telchine Chas.", augments={'"Cure" potency +5%','Enh. Mag. eff. dur. +4',}},
     hands={ name="Telchine Gloves", augments={'"Cure" spellcasting time -4%','Enh. Mag. eff. dur. +7',}},
-    legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +8',}},
+    legs={ name=gear.tellegs_enh, augments={'Enh. Mag. eff. dur. +8',}},
     feet={ name="Telchine Pigaches", augments={'Enh. Mag. eff. dur. +7',}},
     neck="Incanter's Torque",
     waist="Fucho-no-Obi",

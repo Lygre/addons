@@ -155,7 +155,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'] = {main="Oranyan",sub="Fulcio grip",
         head="Telchine cap",neck="Incanter's Torque",ear1="Andoaa Earring",
         body="Telchine chasuble",hands="Telchine gloves",
-        back="Mending Cape",waist="Olympus Sash",legs="Telchine braconi",feet="Telchine Pigaches"}
+        back="Mending Cape",waist="Olympus Sash",legs=gear.tellegs_enh,feet="Telchine Pigaches"}
 
 	sets.midcast.Haste = set_combine(sets.midcast['Enhancing Magic'], 
 		{ammo="Sapience orb",
@@ -198,12 +198,12 @@ function init_gear_sets()
     sets.midcast['Divine Magic'] = {main="Ababinili +1",sub="Niobid Strap",ammo="Pemphredo Tathlum",
         head="Kaykaus mitra",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
         body="Inyanga jubbah +1",hands="Fanatic gloves",ring1="Globidonta ring",ring2="Weatherspoon Ring",
-        back="Alaunus's cape",waist="Luminary Sash",legs="Telchine Braconi",feet="Medium's sabots"}
+        back="Alaunus's cape",waist="Luminary Sash",legs=gear.tellegs_enh,feet="Medium's sabots"}
 
     sets.midcast['Dark Magic'] = {main="Rubicundity", sub="Genbu's Shield",ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Enchanter earring +1",
         body="Shango robe",hands=gear.chirhands_macc,ring1="Archon Ring",ring2="Weatherspoon ring",
-        back="Perimede cape",waist="Eschan Stone",legs="Telchine Braconi",feet="Medium's sabots"}
+        back="Perimede cape",waist="Eschan Stone",legs=gear.tellegs_enh,feet="Medium's sabots"}
 
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {main="Ababinili +1",sub="Clerisy Strap",ammo="Pemphredo Tathlum",

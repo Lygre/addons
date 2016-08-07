@@ -42,7 +42,7 @@
 
         </lyger>
         <lygre>
-            <race>7</race>
+
         </lygre>
         <nacholibre>
 
@@ -88,5 +88,8 @@
 
             </sub>
         </replacements>
+        <zadora>
+
+        </zadora>
     </global>
 </settings>
