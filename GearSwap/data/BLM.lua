@@ -1,7 +1,8 @@
 ---- Lygre's BLM.lua
 ---- VERSION 1.1.2
 -- This is lua is built using Mote's modified includes, 
--- which you can find in my GearSwap/libs folder.
+-- which you can find in my GearSwap/libs folder here: https://github.com/Lygre/addons/tree/mac-blm/GearSwap/libs
+
 ---- Macro/Keybind/Toggles/SelfCommands you may need
 -- Magic Burst: /console gs c toggle MagicBurst
 -- AF Body: /console gs c toggle ConsMP
@@ -298,10 +299,22 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		if state.DeatCast.value then
 			if spell.english == 'Death' then
 				equip(sets.MB_death)
-			elseif spell.skill == 'Elemental Magic' then
-				equip(sets.magic_burst)
-			end
-		end
+			elseif spell.skill == 'Elemental Magic' then            
+            			if state.MagicBurst.value and sets.magic_burst then
+                			local equipSet = sets.magic_burst
+                			if equipSet[spell.english] then
+                    				equipSet = equipSet[spell.english]
+                			end
+                			if equipSet[spellMap] then
+                    				equipSet = equipSet[spellMap]
+                			end
+	                		if equipSet[state.CastingMode.value] then
+                    				equipSet = equipSet[state.CastingMode.value]
+                			end
+                			equip(equipSet)
+                		end
+                	end
+            	end
 	end
 	if spell.element == world.day_element or spell.element == world.weather_element then
 		if string.find(spell.english,'helix') then
