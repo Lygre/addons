@@ -496,13 +496,37 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		if state.DeatCast.value then
 			if spell.english == 'Death' then
 				equip(sets.MB_death)
-			elseif spell.skill == 'Elemental Magic' then
-				equip(sets.magic_burst)
-			end
-		elseif spell.skill == 'Elemental Magic' then
-			equip(sets.magic_burst)
-		end
-	end
+			elseif spell.skill == 'Elemental Magic' then            
+            				if state.MagicBurst.value and sets.magic_burst then
+                				local equipSet = sets.magic_burst
+                				if equipSet[spell.english] then
+                    					equipSet = equipSet[spell.english]
+	                			end
+	                			if equipSet[spellMap] then
+	                    				equipSet = equipSet[spellMap]
+	                			end
+		                		if equipSet[state.CastingMode.value] then
+	                    				equipSet = equipSet[state.CastingMode.value]
+	                			end
+	                			equip(equipSet)
+	                		end
+	                	end
+		elseif spell.skill == 'Elemental Magic' then            
+			if state.MagicBurst.value and sets.magic_burst then
+    				local equipSet = sets.magic_burst
+    				if equipSet[spell.english] then
+        					equipSet = equipSet[spell.english]
+	        			end
+	        			if equipSet[spellMap] then
+	            				equipSet = equipSet[spellMap]
+	        			end
+		            		if equipSet[state.CastingMode.value] then
+	            				equipSet = equipSet[state.CastingMode.value]
+	        			end
+	        			equip(equipSet)
+	        		end
+                	end
+            	end
 	if spell.element == world.day_element or spell.element == world.weather_element then
 		if string.find(spell.english,'helix') then
 			equip(sets.midcast.Helix)
@@ -514,7 +538,6 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 		equip(sets.ConsMP)
 	end
 end
-
 function job_aftercast(spell, action, spellMap, eventArgs)
 	-- Lock feet after using Mana Wall.
 	if buffactive['Mana Wall'] and not state.DeatCast.value then
