@@ -66,5 +66,8 @@
         <yawn>
             <1>sleep</1>
         </yawn>
+        <bubble_shower>
+            <1>str down</1>
+        </bubble_shower>
     </global>
 </settings>

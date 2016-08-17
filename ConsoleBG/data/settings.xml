@@ -2,7 +2,7 @@
 <settings>
     <global>
         <bg>
-            <alpha>128</alpha>
+            <alpha>178</alpha>
             <blue>0</blue>
             <green>0</green>
             <red>0</red>
@@ -18,7 +18,7 @@
     </global>
     <lygre>
         <pos>
-            <x>215</x>
+            <x>0</x>
             <y>50</y>
         </pos>
     </lygre>

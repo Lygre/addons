@@ -8,7 +8,7 @@
         <whitelist />
     </global>
     <lygre>
-        <keywords>Inv</keywords>
+        <keywords>inv</keywords>
         <mode>blacklist</mode>
     </lygre>
 </settings>

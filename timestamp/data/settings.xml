@@ -4,10 +4,19 @@
         <color>508</color>
         <format>[${time}]</format>
     </global>
+    <ashela>
+        <color>201</color>
+    </ashela>
     <brrrr>
         <color>201</color>
     </brrrr>
     <lygre>
         <color>201</color>
     </lygre>
+    <rheita>
+        <color>201</color>
+    </rheita>
+    <zadora>
+        <color>201</color>
+    </zadora>
 </settings>

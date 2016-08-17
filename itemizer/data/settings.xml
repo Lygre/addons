@@ -28,10 +28,19 @@
         </UseUniversalTools>
         <version>3.0.1.1</version>
     </global>
+    <ashela>
+        <version>3.0.1.2</version>
+    </ashela>
     <brrrr>
         <version>3.0.1.2</version>
     </brrrr>
     <lygre>
         <version>3.0.1.2</version>
     </lygre>
+    <rheita>
+        <version>3.0.1.2</version>
+    </rheita>
+    <zadora>
+        <version>3.0.1.2</version>
+    </zadora>
 </settings>

@@ -3,7 +3,9 @@ _addon.command = 'trade'
 packets = require('packets')
 
 whitelist = L{
-    'Zadora','Tavaris','Vaantalus','Brrrr','Lyger','Lygre',
+    'Zadora','Tavaris','Rheita',
+    'Ashela',
+    'Vaantalus','Brrrr','Lyger','Lygre',
     'Llewelyn','Neimii','Stani','Tinkil','Tinkitot','Zombies','Blizzy','Speedyjim',
 }
 windower.register_event('addon command', function(name,bool)

@@ -1,0 +1,17 @@
+sets.exported={
+    main="Bolelabunga",
+    sub="Genmei Shield",
+    ammo="Homiliary",
+    head="Befouled Crown",
+    body="Inyanga Jubbah +1",
+    hands={ name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
+    legs="Assid. Pants +1",
+    feet={ name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
+    neck="Loricate Torque +1",
+    waist="Slipor Sash",
+    left_ear="Sanare Earring",
+    right_ear="Zennaroi Earring",
+    left_ring="Defending Ring",
+    right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    back="Solemnity Cape",
+}

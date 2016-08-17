@@ -31,7 +31,7 @@
             <red>255</red>
             <size>12</size>
             <stroke>
-                <alpha>1073992175355</alpha>
+                <alpha>6.9836341202394e+016</alpha>
                 <blue>0</blue>
                 <green>0</green>
                 <red>0</red>
@@ -44,17 +44,5 @@
             <x>-1</x>
             <y>1</y>
         </pos>
-        <text>
-            <stroke>
-                <alpha>-2.7386800471527e+014</alpha>
-            </stroke>
-        </text>
     </razriel>
-    <zadora>
-        <text>
-            <stroke>
-                <alpha>-2.7386800471527e+014</alpha>
-            </stroke>
-        </text>
-    </zadora>
 </settings>

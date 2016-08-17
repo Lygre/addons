@@ -129,11 +129,11 @@ function init_gear_sets()
 	sets.precast.Flourish1 = {}
 	sets.precast.Flourish1['Violent Flourish'] = {ear1="Dignitary's Earring",ear2="Gwati Earring",
 		body="Horos Casaque +1",hands="Buremte Gloves",ring1="Weatherspoon Ring", ring2="Sangoma Ring",
-		waist="Chaac Belt",legs="Rawhide Trousers",feet=gear.hercfeet_acc} -- magic accuracy
+		waist="Chaac Belt",legs="Rawhide Trousers",feet=gear.hercfeet_ta} -- magic accuracy
 	sets.precast.Flourish1['Desperate Flourish'] = {ammo="Charis Feather",
 		head="Dampening Tam",neck="Combatant's Torque",
 		body="Horos Casaque +1",hands="Buremte Gloves",ring1="Beeline Ring",
-		back=gear.dnccape_tp,waist="Olseni Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc} -- acc gear
+		back=gear.dnccape_tp,waist="Olseni Belt",legs="Samnuha Tights",feet=gear.hercfeet_ta} -- acc gear
 
 	sets.precast.Flourish2 = {}
 	sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +1"}
@@ -157,7 +157,7 @@ function init_gear_sets()
 	sets.precast.WS = {ammo="Charis feather",
 		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
 		body="Adhemar jacket",hands="Meghanada gloves +1",ring1="Rajas Ring",ring2="Petrov Ring",
-		back=gear.dnccape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Falcon Eye", back=gear.dnccape_tp})
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
@@ -176,7 +176,7 @@ function init_gear_sets()
 	sets.precast.WS['Rudra\'s Storm'] = {ammo="Charis feather",
 		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
 		body="Adhemar jacket",hands="Meghanada gloves +1",ring1="Rajas Ring",ring2="Petrov Ring",
-		back=gear.dnccape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.precast.WS['Rudra\'s Storm'].Acc = set_combine(sets.precast.WS["Rudra's Storm"], 
 		{ammo="Falcon Eye"})
 
@@ -190,13 +190,13 @@ function init_gear_sets()
 	sets.midcast.FastRecast = {
 		head=gear.adhemarhead_melee,ear2="Loquacious Earring",
 		body="Samnuha Coat",hands="Adhemar Wristbands",
-		legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		legs="Samnuha Tights",feet=gear.hercfeet_ta}
 		
 	-- Specific spells
 	sets.midcast.Utsusemi = {
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",ear2="Loquacious Earring",
 		body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Beeline Ring",
-		back=gear.dnccape_tp,legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,legs="Samnuha Tights",feet=gear.hercfeet_ta}
 
 	
 	-- Sets to return to when not performing an action.
@@ -229,7 +229,7 @@ function init_gear_sets()
 	sets.defense.Evasion = {
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2=gear.DarkRing.PDT,
-		back=gear.dnccape_tp,waist="Flume Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,waist="Flume Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 
 	sets.defense.PDT = {ammo="Brigantia Pebble",
 		head="Lithelimb cap",neck="Loricate Torque +1",ear1="Genmei Earring",
@@ -262,11 +262,11 @@ function init_gear_sets()
 	sets.engaged.Evasion = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.PDT = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.Evasion = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
@@ -288,7 +288,7 @@ function init_gear_sets()
 	sets.engaged.Evasion.LowHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.Evasion.LowHaste = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Combatant's Torque",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
@@ -296,7 +296,7 @@ function init_gear_sets()
 	sets.engaged.PDT.LowHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.PDT.LowHaste = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Loricate Torque +1",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
@@ -314,7 +314,7 @@ function init_gear_sets()
 	sets.engaged.Evasion.HighHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.Evasion.HighHaste = {ammo="Ginsen",
 		head="Dampening Tam",neck="Combatant's Torque",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
@@ -322,7 +322,7 @@ function init_gear_sets()
 	sets.engaged.PDT.HighHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back="Solemnity Cape",waist="Reiki Yotai",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.PDT.HighHaste = {ammo="Ginsen",
 		head="Dampening Tam",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
@@ -340,7 +340,7 @@ function init_gear_sets()
 	sets.engaged.Evasion.MaxHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Combatant's Torque",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
-		back=gear.dnccape_tp,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back=gear.dnccape_tp,waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.Evasion.MaxHaste = {ammo="Ginsen",
 		head="Dampening Tam",neck="Combatant's Torque",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Beeline Ring",ring2="Epona's Ring",
@@ -348,7 +348,7 @@ function init_gear_sets()
 	sets.engaged.PDT.MaxHaste = {ammo="Charis Feather",
 		head=gear.adhemarhead_melee,neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",
-		back="Solemnity Cape",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_acc}
+		back="Solemnity Cape",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.PDT.MaxHaste = {ammo="Ginsen",
 		head="Dampening Tam",neck="Loricate Torque +1",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Samnuha Coat",hands="Adhemar Wristbands",ring1="Patricius Ring",ring2="Epona's Ring",

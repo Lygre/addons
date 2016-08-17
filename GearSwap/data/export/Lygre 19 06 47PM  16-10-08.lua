@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sequence",
+    sub={ name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}},
+    ammo="Jukukik Feather",
+    head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body={ name="Herculean Vest", augments={'Accuracy+22 Attack+22','Crit.hit rate+2','DEX+10','Accuracy+8','Attack+9',}},
+    hands={ name="Herculean Gloves", augments={'Attack+29','Crit.hit rate+2','DEX+9','Accuracy+8',}},
+    legs={ name="Herculean Trousers", augments={'Crit. hit damage +1%','DEX+15','Accuracy+12','Attack+13',}},
+    feet={ name="Herculean Boots", augments={'Accuracy+25','Crit. hit damage +3%','DEX+15','Attack+5',}},
+    neck="Fotia Gorget",
+    waist="Fotia Belt",
+    left_ear="Brutal Earring",
+    right_ear={ name="Moonshade Earring", augments={'Rng.Acc.+4','TP Bonus +25',}},
+    left_ring="Hetairoi Ring",
+    right_ring="Epona's Ring",
+    back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
+}

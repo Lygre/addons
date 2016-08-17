@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Akademos", augments={'INT+15','"Mag.Atk.Bns."+15','Mag. Acc.+15',}},
+    sub="Niobid Strap",
+    ammo="Homiliary",
+    head="Arbatel Bonnet +1",
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Phys. dmg. taken -2%','INT+10','Mag. Acc.+11','"Mag.Atk.Bns."+11',}},
+    hands={ name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
+    legs="Assid. Pants +1",
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+14','Damage taken-3%','DEX+2',}},
+    neck="Loricate Torque +1",
+    waist="Slipor Sash",
+    left_ear="Sanare Earring",
+    right_ear="Infused Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Defending Ring",
+    back="Solemnity Cape",
+}

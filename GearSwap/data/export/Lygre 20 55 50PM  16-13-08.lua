@@ -1,0 +1,17 @@
+sets.exported={
+    main={ name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}},
+    sub="Elder's Grip +1",
+    ammo="Psilomene",
+    head={ name="Amalric Coif", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst mdg.+9%','INT+1','Mag. Acc.+3','"Mag.Atk.Bns."+11',}},
+    hands={ name="Amalric Gages", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Magic burst mdg.+11%','CHR+9','Mag. Acc.+14',}},
+    feet={ name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}},
+    neck="Dualism Collar",
+    waist="Shinjutsu-no-Obi",
+    left_ear="Etiolation Earring",
+    right_ear="Influx Earring",
+    left_ring="Mujin Band",
+    right_ring="Sangoma Ring",
+    back={ name="Bane Cape", augments={'Elem. magic skill +6','Dark magic skill +8','"Mag.Atk.Bns."+2','"Fast Cast"+4',}},
+}

@@ -26,21 +26,6 @@
                 <slot19>diffusion ray</slot19>
                 <slot20>embalming earth</slot20>
             </ambuscade_gigas>
-            <avatars>
-                <slot01>barbed crescent</slot01>
-                <slot02>delta thrust</slot02>
-                <slot03>quad. continuum</slot03>
-                <slot04>blazing bound</slot04>
-                <slot05>molting plumage</slot05>
-                <slot06>erratic flutter</slot06>
-                <slot07>empty thrash</slot07>
-                <slot08>heavy strike</slot08>
-                <slot09>thrashing assault</slot09>
-                <slot10>sinker drill</slot10>
-                <slot11>rending deluge</slot11>
-                <slot12>battery charge</slot12>
-                <slot13>nat. meditation</slot13>
-            </avatars>
             <blusub>
                 <slot01>foot kick</slot01>
                 <slot02>claw cyclone</slot02>
@@ -52,25 +37,6 @@
                 <slot08>jettatura</slot08>
                 <slot09>geist wall</slot09>
             </blusub>
-            <cleave>
-                <slot01>barbed crescent</slot01>
-                <slot02>delta thrust</slot02>
-                <slot03>occultation</slot03>
-                <slot04>erratic flutter</slot04>
-                <slot05>cocoon</slot05>
-                <slot06>magic fruit</slot06>
-                <slot07>barrier tusk</slot07>
-                <slot08>retinal glare</slot08>
-                <slot09>whirl of rage</slot09>
-                <slot13>silent storm</slot13>
-                <slot14>magic hammer</slot14>
-                <slot15>dream flower</slot15>
-                <slot16>tenebral crush</slot16>
-                <slot17>anvil lightning</slot17>
-                <slot18>entomb</slot18>
-                <slot19>subduction</slot19>
-                <slot20>spectral floe</slot20>
-            </cleave>
             <default>
 
             </default>
@@ -114,27 +80,7 @@
                 <slot17>fantod</slot17>
                 <slot18>sudden lunge</slot18>
             </dragons>
-            <failtest>
-                <slot01>magic fruit</slot01>
-                <slot02>battery charge</slot02>
-                <slot03>occultation</slot03>
-                <slot04>amorphic spikes</slot04>
-                <slot05>head butt</slot05>
-                <slot06>actinic burst</slot06>
-                <slot07>winds of promy.</slot07>
-                <slot08>empty thrash</slot08>
-                <slot09>heavy strike</slot09>
-                <slot10>acrid stream</slot10>
-                <slot11>demoralizing roar</slot11>
-                <slot12>quad. continuum</slot12>
-                <slot13>delta thrust</slot13>
-                <slot14>barbed crescent</slot14>
-                <slot15>thermal pulse</slot15>
-                <slot16>auroral drape</slot16>
-                <slot17>dark orb</slot17>
-                <slot18>magic barrier</slot18>
-            </failtest>
-            <hightiermeleesolo>
+           <hightiermeleesolo>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
                 <slot03>sinker drill</slot03>
@@ -156,28 +102,6 @@
                 <slot19>blank gaze</slot19>
                 <slot20>fantod</slot20>
             </hightiermeleesolo>
-            <intenseambvdmay>
-                <slot01>barbed crescent</slot01>
-                <slot02>delta thrust</slot02>
-                <slot03>sinker drill</slot03>
-                <slot04>water bomb</slot04>
-                <slot05>erratic flutter</slot05>
-                <slot06>empty thrash</slot06>
-                <slot07>blazing bound</slot07>
-                <slot08>sudden lunge</slot08>
-                <slot09>nat. meditation</slot09>
-                <slot10>quad. continuum</slot10>
-                <slot11>fantod</slot11>
-                <slot12>heavy strike</slot12>
-                <slot13>thrashing assault</slot13>
-                <slot14>blank gaze</slot14>
-                <slot15>molting plumage</slot15>
-                <slot16>tenebral crush</slot16>
-                <slot17>chaotic eye</slot17>
-                <slot18>white wind</slot18>
-                <slot19>occultation</slot19>
-                <slot20>paralyzing triad</slot20>
-            </intenseambvdmay>
             <leviathan>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
@@ -390,27 +314,6 @@
                 <slot16>sudden lunge</slot16>
                 <slot17>diffusion ray</slot17>
             </warsub>
-            <warsubsolo>
-                <slot01>barbed crescent</slot01>
-                <slot02>delta thrust</slot02>
-                <slot03>fantod</slot03>
-                <slot04>erratic flutter</slot04>
-                <slot05>heavy strike</slot05>
-                <slot06>tenebral crush</slot06>
-                <slot07>sinker drill</slot07>
-                <slot08>white wind</slot08>
-                <slot09>paralyzing triad</slot09>
-                <slot10>barrier tusk</slot10>
-                <slot11>occultation</slot11>
-                <slot12>cocoon</slot12>
-                <slot13>nat. meditation</slot13>
-                <slot15>diffusion ray</slot15>
-                <slot16>blank gaze</slot16>
-                <slot17>thrashing assault</slot17>
-                <slot18>empty thrash</slot18>
-                <slot19>sudden lunge</slot19>
-                <slot20>molting plumage</slot20>
-            </warsubsolo>
         </spellsets>
     </global>
 </settings>

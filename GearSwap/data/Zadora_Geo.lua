@@ -40,7 +40,7 @@ function init_gear_sets()
  
 --------------------------[Fast Cast sets]------------------------------
  
-    sets.precast.FC = {main={ name="Solstice", augments={'Mag. Acc.+20','Pet: Damage taken -4%','"Fast Cast"+5',}},
+    sets.precast.FC = {main="Idris",
     sub="Chanter's Shield",
     ammo="Sapience Orb",
     head={ name="Merlinic Hood", augments={'Pet: Phys. dmg. taken -1%','Pet: INT+5','"Fast Cast"+6','Accuracy+16 Attack+16',}},

@@ -499,6 +499,8 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			elseif spell.skill == 'Elemental Magic' then
 				equip(sets.magic_burst)
 			end
+		elseif spell.skill == 'Elemental Magic' then
+			equip(sets.magic_burst)
 		end
 	end
 	if spell.element == world.day_element or spell.element == world.weather_element then
@@ -566,7 +568,7 @@ function job_self_command(commandArgs, eventArgs)
 	end
 end
 
-function check_mp(spell, action, spellMap, eventArgs)
+function check_mp(spell)
 	local current_mp = player.mp 
 	local spellCost = spell.mp_cost
 	local finalCost 

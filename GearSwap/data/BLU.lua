@@ -704,7 +704,7 @@ function init_gear_sets()
 	sets.engaged.DW.HighAcc.MaxHaste = {ammo="Falcon Eye",
 		head="Carmine Mask +1",neck="Combatant's torque",ear1="Telos earring",ear2="Zennaroi earring",
 		body=gear.hercbody_acc,hands="Adhemar wristbands",ring1="Hetairoi Ring",ring2="Epona's Ring",
-		back=gear.blucape_tp,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_acc }
+		back=gear.blucape_tp,waist="Olseni belt",legs="Carmine cuisses",feet=gear.hercfeet_ta }
 	sets.engaged.DW.PDT.MaxHaste = {ammo="Ginsen",
 		head=gear.adhemarhead_melee, neck="Loricate torque +1", ear1="Telos Earring", ear2="Brutal earring",
 		body=gear.hercbody_dt, hands=gear.herchands_dt, ring1="Defending ring", ring2="Epona's Ring",

@@ -281,11 +281,11 @@ function init_gear_sets()
 	sets.engaged.MaxHaste = {ammo="Happo Shuriken",
 		head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Suppanomimi",ear2="Telos earring",
 		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.Acc.MaxHaste = {ammo="Happo Shuriken",
 		head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
 		body="Reiki osode",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Yokaze Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		back="Yokaze Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.PDT.MaxHaste = {ammo="Happo Shuriken",
 		head="ryuo somen",neck="agitator's collar",ear1="Suppanomimi",ear2="Genmei Earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",

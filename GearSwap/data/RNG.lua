@@ -213,7 +213,7 @@ function init_gear_sets()
 	sets.engaged = {
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 
 	sets.engaged.Acc = set_combine(sets.engaged, {
 		head=gear.adhemarhead_melee,neck="Combatant's torque",

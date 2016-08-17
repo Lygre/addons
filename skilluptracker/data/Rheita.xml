@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>14</size>
                 <stroke>
-                    <alpha>1.920094310572e+031</alpha>
+                    <alpha>-4.8962404919586e+033</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>12</size>
                 <stroke>
-                    <alpha>1.920094310572e+031</alpha>
+                    <alpha>-4.8962404919586e+033</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>1.920094310572e+031</alpha>
+                    <alpha>-4.8962404919586e+033</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -316,7 +316,7 @@
             </50>
             <51>
                 <id>51</id>
-                <level>40.6</level>
+                <level>55</level>
                 <name>Goldsmithing</name>
                 <short_name>goldsmithing</short_name>
             </51>

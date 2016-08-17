@@ -41,15 +41,31 @@
             </text>
         </display>
     </global>
-    <lygre>
+    <ashela>
         <display>
             <pos>
-                <x>224</x>
-                <y>329</y>
+                <x>275</x>
+                <y>113</y>
             </pos>
             <text>
                 <stroke>
                     <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </ashela>
+    <lygre>
+        <display>
+            <pos>
+                <x>213</x>
+                <y>215</y>
+            </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+                <stroke>
+                    <alpha>1073992175355</alpha>
                 </stroke>
             </text>
         </display>

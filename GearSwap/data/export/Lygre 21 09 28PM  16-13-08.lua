@@ -1,0 +1,17 @@
+sets.exported={
+    main="Oranyan",
+    sub="Clerisy Strap",
+    ammo="Sapience Orb",
+    head={ name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}},
+    body="Anhur Robe",
+    hands={ name="Gende. Gages +1", augments={'Phys. dmg. taken -4%',}},
+    legs={ name="Psycloth Lappas", augments={'MP+80','Mag. Acc.+15','"Fast Cast"+7',}},
+    feet={ name="Merlinic Crackows", augments={'Accuracy+13','"Fast Cast"+6','MND+1','Mag. Acc.+9','"Mag.Atk.Bns."+7',}},
+    neck="Voltsurge Torque",
+    waist="Witful Belt",
+    left_ear="Enchntr. Earring +1",
+    right_ear="Loquac. Earring",
+    left_ring="Prolix Ring",
+    right_ring="Weather. Ring",
+    back="Perimede Cape",
+}

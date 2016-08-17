@@ -3,7 +3,7 @@
     <global>
         <self>
             <1>Haste II</1>
-            <2>Refresh II</2>
+            <2>Refresh III</2>
         </self>
         <rdm>
             <self>
@@ -13,14 +13,16 @@
                 <4>Protect V</4>
                 <5>Shell V</5>
                 <6>Phalanx</6>
-                <7>Reraise</7>
-                <8>Composure</8>
+                <7>Composure</7>
             </self>
+            <selfmelee>
+                <1>Temper II</1>
+                <2>Gain-DEX</2>
+            </selfmelee>
             <aby>
                 <1>Haste II</1>
                 <2>Protect V</2>
                 <3>Shell V</3>
-                <4>Phalanx II</4>
             </aby>
             <abyself>
                 <1>Haste II</1>
@@ -32,28 +34,25 @@
             </abyself>
             <mage>
                 <1>Haste II</1>
-                <2>Refresh II</2>
+                <2>Refresh III</2>
                 <3>Protect V</3>
                 <4>Shell V</4>
-                <5>Phalanx II</5>
             </mage>
             <mage2>
                 <1>Haste II</1>
                 <2>Refresh II</2>
-                <3>Phalanx II</3>
+                <3>Thunderstorm</3>
             </mage2>
             <mage3>
                 <1>Refresh II</1>
             </mage3>
             <melee>
                 <1>Haste II</1>
-                <2>Phalanx II</2>
                 <3>Protect V</3>
                 <4>Shell V</4>
             </melee>
             <melee2>
                 <1>Haste II</1>
-                <2>Phalanx II</2>
             </melee2>
             <melee3>
                 <1>Haste II</1>
@@ -65,9 +64,10 @@
                 <2>Protectra V</2>
                 <3>Shellra V</3>
                 <4>Aurorastorm</4>
-                <5>Reraise IV</5>
+                <5>Reraise III</5>
                 <6>Afflatus Solace</6>
                 <7>Light Arts</7>
+                <8>Barwatera</8>
             </self>
             <mage>
                 <1>Haste</1>
@@ -75,7 +75,11 @@
             </mage>
             <melee>
                 <1>Haste</1>
+                <2>Regen IV</2>
             </melee>
+            <melee2>
+                <1>Regen IV</1>
+            </melee2>
         </whm>
     </global>
 </settings>

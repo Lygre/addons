@@ -34,4 +34,40 @@
 		</retain>
 		<verbose>true</verbose>
 	</global>
+	<Zadora>
+		<auto_heal>false</auto_heal>
+		<bag_priority>
+			<Case>2</Case>
+			<Sack>3</Sack>
+			<Locker>4</Locker>
+			<Safe2>5</Safe2>
+			<Safe>6</Safe>
+			<Inventory>1</Inventory>
+			<Storage>7</Storage>
+			<!-- <Satchel>5</Satchel> -->
+			<!-- <Storage>4</Storage> -->
+			<!-- <Wardrobe>9</Wardrobe> -->
+		</bag_priority>
+		<default_file>default.lua</default_file>
+		<dump_bags>
+	  		<!-- <Sack>2</Sack> -->
+	   		<Case>1</Case>
+			<Locker>2</Locker>
+			<Safe>3</Safe>
+			<Safe2>4</Safe2>
+			<!-- <Storage>4</Storage> -->
+		</dump_bags>
+		<ignore>
+
+		</ignore>
+		<item_delay>0</item_delay>
+		<retain>
+			<items>true</items>
+			<moogle_slip_gear>false</moogle_slip_gear>
+			<seals>false</seals>
+			<slips>true</slips>
+		</retain>
+		<verbose>true</verbose>
+	</Zadora>
+
 </settings>

@@ -75,6 +75,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </ashela>
     <brrrr>
         <Clock>
@@ -170,6 +171,7 @@
                 </stroke>
             </text>
         </Clock>
+        <TimeZones>UTC,JST</TimeZones>
     </lygre>
     <mexico>
         <Clock>

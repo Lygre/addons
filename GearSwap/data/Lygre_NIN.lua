@@ -28,6 +28,7 @@ function job_setup()
 	state.MagicBurst = M(false, 'Magic Burst')
 	state.TrustMode = M(false, 'Trust Mode')
 
+	info.LugraWSs = L{'Blade: Hi','Blade: Shun','Blade: Kamu'}
 	organizer_items = {
 		heishi="Heishi Shorinken",
 		mainkt={name="Kanaria", augments={'STR+3','Accuracy+15','Attack+15','DMG:+18',}},
@@ -97,11 +98,11 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {ammo="Sapience orb",
-		head=gear.fc_thead,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
+		head=gear.herchead_dt,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		waist="Ninurta's sash",legs=gear.fc_tlegs,feet=gear.hercfeet_fc}
+		waist="Ninurta's sash",legs="Arjuna Breeches",feet=gear.hercfeet_fc}
 		
-	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
+	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",feet="Hattori Kyahan"})
 
 	-- Snapshot for ranged
 	sets.precast.RA = {}
@@ -111,13 +112,12 @@ function init_gear_sets()
 	sets.precast.WS = {ammo="Yetshila",
 		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Telos earring",ear2="Moonshade Earring",
 		body="Abnoba Kaftan",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
-		back="Bleating Mantle",waist="Fotia Belt",legs="Samnuha tights",feet=gear.tp_tfeet}
+		back=gear.nincape_wsd,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_crit}
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, 
 		{ammo="Amar Cluster",
 		head=gear.adhemarhead_melee,
 		body="adhemar jacket",
-			back="Grounded Mantle +1",legs="Hattori hakama +1"}) 
-
+		back=gear.nincape_wsd,legs="Hattori hakama +1"}) 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Blade: Jin'] = set_combine(sets.precast.WS,
 		{ear1="Brutal Earring",ear2="Moonshade Earring",ring1="Ifrit's ring +1",ring2="Ifrit's ring +1",
@@ -127,18 +127,24 @@ function init_gear_sets()
 		{ear1="Brutal Earring",ear2="Moonshade Earring",
 		hands="Kobo Kote",ring1="Ifrit's ring +1",ring2="Ifrit's ring +1",
 		back="Rancorous Mantle"})
-
 	sets.precast.WS['Blade: Hi'] = set_combine(sets.precast.WS,
 		{head=gear.adhemarhead_melee,ear1="Ishvara earring",
-		body="Adhemar jacket",hands="Kobo Kote",
-		back="Rancorous Mantle",legs="Samnuha tights"})
+		body=gear.hercbody_acc,hands=gear.herchands_crit,ring1="Epona's Ring",
+		back=gear.nincape_wsd,waist="Windbuffet Belt +1",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd})
 	sets.precast.WS['Blade: Hi'].Acc = set_combine(sets.precast.WS['Blade: Hi'],
 		{head="Ryuo somen",
-		body="Reiki Osode",hands="Floral gauntlets"})
-
+		body="Reiki Osode"})
 	sets.precast.WS['Blade: Ten'] = set_combine(sets.precast.WS,
-		{})
-	sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, {})
+		{body=gear.hercbody_acc,hands=gear.herchands_crit,ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
+		legs="Hiza. Hizayoroi +1",feet=gear.hercfeet_wsd})
+	sets.precast.WS['Blade: Kamu'] = set_combine(sets.precast.WS,
+		{ammo="Amar Cluster",
+		body=gear.hercbody_ta,hands=gear.herchands_acc,ring1="Epona's Ring",ring2="Ifrit Ring +1",
+		legs="Hiza. Hizayoroi +1",feet=gear.hercfeet_wsd })
+	sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, 
+		{ammo="Amar Cluster",
+		body=gear.hercbody_acc,hands=gear.herchands_crit,
+		feet=gear.hercfeet_crit})
 
 
 	sets.precast.WS['Aeolian Edge'] = {}
@@ -226,11 +232,11 @@ function init_gear_sets()
 	sets.engaged = {ammo="Happo Shuriken",
 		head="Ryuo somen",neck="Asperity Necklace",ear1="Suppanomimi",ear2="Brutal Earring",
 		body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha tights",feet=gear.tp_tfeet}
+		back="Bleating Mantle",waist="Reiki Yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
 	sets.engaged.Acc = {ammo="Happo Shuriken",
 		head="Ryuo somen",neck="Lissome Necklace",ear1="Suppanomimi",ear2="Telos Earring",
 		body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.tp_tfeet}
+		back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
 	sets.engaged.PDT = {ammo="Happo Shuriken",
 		head="Ryuo somen",neck="Agitator's collar",ear1="Impregnable earring",ear2="Genmei Earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
@@ -242,15 +248,15 @@ function init_gear_sets()
 
     --Low haste
     sets.engaged.LowHaste = {ammo="Happo Shuriken",
-        head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos Earring",
-        body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Thereoid greaves"}
+        head="Ryuo Somen",neck="Lissome necklace",ear1="Brutal earring",ear2="Suppanomimi",
+        body="Adhemar jacket",hands="Floral gauntlets",ring1="Petrov Ring",ring2="Epona's Ring",
+        back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
     sets.engaged.Acc.LowHaste = {ammo="Happo Shuriken",
         head="Ryuo Somen",neck="Combatant's torque",ear1="Brutal earring",ear2="Telos Earring",
         body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
         back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
     sets.engaged.PDT.LowHaste = {ammo="Happo Shuriken",
-        head="ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
+        head="Ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
         body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending ring",
         back="agema Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
     sets.engaged.Acc.PDT.LowHaste = {ammo="Happo Shuriken",
@@ -260,15 +266,15 @@ function init_gear_sets()
 
 	-- Custom melee group: High Haste (~20% DW)
 	sets.engaged.HighHaste = {ammo="Happo Shuriken",
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos Earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Thereoid greaves"}
+		head="Ryuo Somen",neck="Asperity necklace",ear1="Brutal earring",ear2="Telos Earring",
+		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Petrov Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
 	sets.engaged.Acc.HighHaste = {ammo="Happo Shuriken",
-		head="Ryuo Somen",neck="Combatant's torque",ear1="Brutal earring",ear2="Telos Earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
+		head="Ryuo Somen",neck="Combatant's torque",ear1="Zennaroi earring",ear2="Telos Earring",
+		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Yokaze Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
 	sets.engaged.PDT.HighHaste = {ammo="Happo Shuriken",
-		head="ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
+		head="Ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending ring",
 		back="agema Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
 	sets.engaged.Acc.PDT.HighHaste = {ammo="Happo Shuriken",
@@ -280,25 +286,25 @@ function init_gear_sets()
 	-- Custom melee group: Max Haste (0% DW)
 	sets.engaged.MaxHaste = {ammo="Happo Shuriken",
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
-		body=gear.hercbody_ta,hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
+		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.Acc.MaxHaste = {ammo="Happo Shuriken",
 		head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
-		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_acc }
+		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.PDT.MaxHaste = {ammo="Happo Shuriken",
-		head="ryuo somen",neck="agitator's collar",ear1="Suppanomimi",ear2="Genmei Earring",
-		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
+		head="Ynglinga Sallet",neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
+		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2="Epona's Ring",
+		back="Agema Cape",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Ahosi Leggings"}
 	sets.engaged.Acc.PDT.MaxHaste = {ammo="Happo Shuriken",
-		head="Ryuo somen",neck="Combatant's torque",ear1="Suppanomimi",ear2="Telos Earring",
-		body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
+		head="Ynglinga Sallet",neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
+		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2="Epona's Ring",
+		back="Agema Cape",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Ahosi Leggings" }
 
 	--------------------------------------
 	-- Custom buff sets
 	--------------------------------------
-
+	sets.WS_earrings = {ear1="Lugra Earring +1",ear2="Lugra Earring"}
 	sets.buff.Migawari = {body="Hattori Ningi +1"}
 	sets.buff.Doom = {ring2="Saida Ring"}
 	sets.buff.Yonin = {legs="Hattori hakama +1"}
@@ -308,6 +314,15 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
+function job_post_precast(spell, action, spellMap, eventArgs)
+	if spell.type == 'WeaponSkill' then
+		if info.LugraWSs:contains(spell.english) then
+			equip(sets.WS_earrings)
+		elseif spell.english == 'Blade: Ten' then
+			equip({ear1="Lugra Earring +1"})
+		end
+	end
+end
 
 -- Run after the general midcast() is done.
 -- eventArgs is the same one used in job_midcast, in case information needs to be persisted.

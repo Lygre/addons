@@ -74,6 +74,10 @@
     </antrax>
     <ashela>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1066</x>
                 <y>402</y>
@@ -121,6 +125,10 @@
     </chronoviper>
     <clipsel>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1011</x>
                 <y>291</y>
@@ -185,13 +193,17 @@
     </lyger>
     <lygre>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
-                <x>1064</x>
+                <x>1034</x>
                 <y>305</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4.8962404919586e+033</alpha>
+                    <alpha>1.2485413254494e+036</alpha>
                 </stroke>
             </text>
         </display>
@@ -232,6 +244,10 @@
     </nacholibre>
     <razriel>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1023</x>
                 <y>299</y>
@@ -262,6 +278,10 @@
     </redcurrybun>
     <rheita>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1060</x>
                 <y>347</y>
@@ -292,6 +312,10 @@
     </salmahayek>
     <tavaris>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1032</x>
                 <y>286</y>
@@ -305,6 +329,10 @@
     </tavaris>
     <zadora>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>1029</x>
                 <y>324</y>
@@ -318,6 +346,10 @@
     </zadora>
     <zadorus>
         <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
             <pos>
                 <x>981</x>
                 <y>233</y>

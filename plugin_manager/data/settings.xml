@@ -16,7 +16,7 @@
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>
-		<addon>autoWeaponskill</addon>
+		<!-- <addon>autoWeaponskill</addon> -->
 		<addon>azuresets</addon>
 		<addon>battlemod</addon>
 		<addon>cancel</addon>
@@ -34,9 +34,70 @@
 		<addon>invspace</addon>
 		<addon>itemizer</addon>
 		<addon>logger</addon>
-		<addon>Ohnoyoudont</addon>
 		<addon>organizer</addon>
-		<addon>parse</addon>
+		<addon>partybuffs</addon>
+		<addon>pet_fix</addon>
+		<addon>pettp</addon>
+		<addon>pointwatch</addon>
+		<!-- <addon>pouches</addon> -->
+		<!-- <addon>pricer</addon> -->
+		<addon>rolltracker</addon>
+		<!-- <addon>scoreboard</addon> -->
+		<addon>send</addon>
+		<!-- <addon>sellnpc</addon> -->
+		<addon>shortcuts</addon>
+		<!-- <addon>skillchains</addon> -->
+		<addon>sprint</addon>
+		<addon>sparks</addon>
+		<addon>speedchecker</addon>
+		<addon>stna</addon>
+		<addon>stopwatch</addon>
+		<addon>subtarget</addon>
+		<addon>synthall</addon>
+		<addon>text</addon>
+		<addon>timestamp</addon>
+		<addon>tparty</addon>
+		<addon>trade</addon>
+		<!-- <addon>translate</addon> -->
+		<!-- <addon>TreasurePool</addon> -->
+		<addon>treasury</addon>
+		<addon>update</addon>
+		<addon>zonetimer</addon>
+	</global>
+	<Lygre>
+		<plugin>Binder</plugin>
+		<plugin>jazero</plugin>
+		<plugin>Timers</plugin>
+		<plugin>delaymenot</plugin>
+		<plugin>FFXIDB</plugin>
+		<plugin>Fishingcrashfix</plugin>
+		<plugin>config</plugin>
+		<plugin>guildwork</plugin>
+		<!-- <addon>Anchor</addon> -->
+<!-- 		<addon>aecho</addon>
+ -->		<addon>auctionhelper</addon>
+		<addon>autoinvite</addon>
+		<addon>autojoin</addon>
+		<addon>autoSynth</addon>
+		<!-- <addon>autoWeaponskill</addon> -->
+		<addon>azuresets</addon>
+		<addon>battlemod</addon>
+		<addon>cancel</addon>
+		<addon>clock</addon>
+		<addon>consoleBG</addon>
+		<!-- <addon>debuffed</addon> -->
+		<addon>distance</addon>
+		<addon>DoStuff</addon>
+		<addon>dressup</addon>
+		<addon>enternity</addon>
+		<addon>fastcs</addon>
+		<addon>findall</addon>
+		<addon>gearswap</addon>
+		<addon>instals</addon>
+		<addon>invspace</addon>
+		<addon>itemizer</addon>
+		<addon>logger</addon>
+		<addon>organizer</addon>
 		<addon>partybuffs</addon>
 		<addon>pet_fix</addon>
 		<addon>pettp</addon>
@@ -47,10 +108,8 @@
 		<!-- <addon>scoreboard</addon> -->
 		<addon>send</addon>
 		<addon>sellnpc</addon>
-		<addon>stna</addon>
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>skillchain</addon>
 		<addon>sprint</addon>
 		<addon>sparks</addon>
 		<addon>speedchecker</addon>
@@ -67,5 +126,10 @@
 		<addon>treasury</addon>
 		<addon>update</addon>
 		<addon>zonetimer</addon>
-	</global>
+
+		<addon>Ohnoyoudont</addon>
+		<addon>parse</addon>
+		<addon>skillchain</addon>
+
+	</Lygre>
 </settings>

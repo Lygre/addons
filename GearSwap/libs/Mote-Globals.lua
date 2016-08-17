@@ -29,7 +29,7 @@ function define_global_sets()
 	-- Default items for utility gear values.
 	gear.default.weaponskill_neck = "Fotia Gorget"
 	gear.default.weaponskill_waist = "Fotia Belt"
-	gear.default.obi_waist = ""
+	gear.default.obi_waist = "Eschan Stone"
 	gear.default.obi_back = "Toro Cape"
 	gear.default.obi_ring = "Strendu Ring"
 	gear.default.fastcast_staff = ""
@@ -43,7 +43,7 @@ function define_global_sets()
 
 	--Weapons
 	gear.grio_death = {name="Grioavolr", augments={'Magic burst mdg.+5%','MP+82','Mag. Acc.+13','"Mag.Atk.Bns."+23','Magic Damage +5',}}
-	gear.grio_elemental = {name="Grioavolr", augments={'"Occult Acumen"+3','INT+11','Mag. Acc.+25','"Mag.Atk.Bns."+24','Magic Damage +3',}}
+	gear.grio_elemental = {name="Grioavolr", augments={'INT+13','Mag. Acc.+22','"Mag.Atk.Bns."+30',}}
 	gear.Colada_highd = {name="Colada", augments={'"Dbl.Atk."+2','DEX+4','Accuracy+11','Attack+16','DMG:+17',}}
 	gear.Colada_datk = {name="Colada", augments={'"Dbl.Atk."+4','STR+2','Accuracy+5','Attack+5','DMG:+8',}}
 
@@ -86,23 +86,24 @@ function define_global_sets()
 	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
 	--Herculean Augments
- 	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','INT+7',}}
+ 	gear.herchead_dt = {name="Herculean Helm", augments={'Accuracy+13','Damage taken-4%','STR+2','Attack+5',}}
  	gear.hercbody_acc = {name="Herculean Vest", augments={'Accuracy+22 Attack+22','Crit.hit rate+2','DEX+10','Accuracy+8','Attack+9',}}
  	gear.hercbody_dt = {name="Herculean Vest", augments={'Damage taken-4%','DEX+4','Attack+12',}}
  	gear.hercbody_ta = {name="Herculean Vest", augments={'Accuracy+30','"Triple Atk."+4',}}
 	gear.herchands_melee = {name="Herculean Gloves", augments={'Attack+5','"Dual Wield"+6','Accuracy+15',}}
 	gear.herchands_dt = {name="Herculean Gloves", augments={'Accuracy+29','Damage taken-3%','Attack+4',}}
-	gear.herchands_acc = {name="Herculean Gloves", augments={'"Triple Atk."+4','Accuracy+14','Attack+3',}}
+	gear.herchands_acc = {name="Herculean Gloves", augments={'Accuracy+17','"Triple Atk."+4','Attack+10',}}
 	gear.herchands_crit = {name="Herculean Gloves", augments={'Attack+29','Crit.hit rate+2','DEX+9','Accuracy+8',}}
-	gear.herclegs_dt = {name="Herculean Trousers", augments={'Accuracy+1','Damage taken-2%','DEX+3','Attack+5',}}
+	gear.herclegs_dt = {name="Herculean Trousers", augments={'Damage taken-3%','AGI+9','Accuracy+14',}}
 	gear.herclegs_mab = {name="Herculean Trousers", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','MND+2','Mag. Acc.+13',}}
 	gear.herclegs_crit = {name="Herculean Trousers", augments={'Crit.hit rate+5','DEX+8','Accuracy+13',}}
 	gear.herclegs_critdmg = {name="Herculean Trousers", augments={'Crit. hit damage +1%','DEX+15','Accuracy+12','Attack+13',}}
+	gear.herclegs_wsd = {name="Herculean Trousers", augments={'Attack+1','Weapon skill damage +3%','STR+9','Accuracy+15',}}
 	gear.hercfeet_melee = {name="Herculean Boots", augments={'Accuracy+21 Attack+21','"Dual Wield"+5','AGI+4','Accuracy+13',}}
-	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+22 Attack+22','"Triple Atk."+3','DEX+3',}}
-	gear.hercfeet_ta = {name="Herculean Boots", augments={'"Triple Atk."+4','DEX+10','Accuracy+9','Attack+3',}}
-	gear.hercfeet_crit = {name="Herculean Boots", augments={'Accuracy+16','Crit.hit rate+5','DEX+5',}}
-	gear.hercfeet_tp = {name="Herculean Boots", augments={'Enmity-1','"Dbl.Atk."+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
+	gear.hercfeet_acc = {name="Herculean Boots", augments={'Accuracy+19 Attack+19','"Triple Atk."+4',}}
+	gear.hercfeet_ta = {name="Herculean Boots", augments={'Accuracy+23 Attack+23','"Triple Atk."+4','DEX+10','Accuracy+5',}}
+	gear.hercfeet_crit = {name="Herculean Boots", augments={'Accuracy+25','Crit. hit damage +3%','DEX+15','Attack+5',}}
+	--gear.hercfeet_tp = {name="Herculean Boots", augments={'Enmity-1','"Dbl.Atk."+4','Accuracy+14 Attack+14','Mag. Acc.+3 "Mag.Atk.Bns."+3',}}
 	gear.hercfeet_refresh = { name="Herculean Boots", augments={'Enmity+3','"Refresh"+2','Accuracy+2 Attack+2',}}
 	gear.hercfeet_wsd = {name="Herculean Boots", augments={'Weapon Skill Acc.+15','"Conserve MP"+2','Weapon skill damage +6%','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 
@@ -118,20 +119,37 @@ function define_global_sets()
 	gear.tellegs_da = {name="Telchine Braconi", augments={'Accuracy+17','"Dbl.Atk."+2','STR+7 MND+7',}}
 	gear.tellegs_enh = {name="Telchine Braconi", augments={'Accuracy+12 Attack+12','"Cure" potency +6%','Enh. Mag. eff. dur. +10',}}
 
-	--JSE Capes
-	gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
+	------	JSE Capes
+	----	BLU
+	--	Crit WS: DEX/Acc&Atk/Crit/DEX+
 	gear.blucape_ws = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}}
-	gear.blucape_tp = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	--	Melee TP: DEX/Acc&Atk/Store TP/Acc+
+	gear.blucape_tp = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
+	--	Single-hit WS: STR/Acc&Atk/WSD
 	gear.blucape_wsd = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+	--	Requiescat (lol): MND/Acc&Atk/DA
+	gear.blucape_req = {name="Rosmerta's Cape", augments={'MND+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+
+	----	DNC
+	--	Melee TP: DEX/Acc&Atk/DA
 	gear.dnccape_tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
+	--	Single-hit WS: DEX/Acc&Atk/WSD
 	gear.dnccape_ws = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+
+	----	BLM
+	--	Death: MP/Macc&Mdmg/MAB/MP+
 	gear.blmcape_death = {name="Taranus's Cape", augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','MP+20','"Mag.Atk.Bns."+10',}}
+	--	Nuke: INT/Macc&Mdmg/MAB
 	gear.blmcape_nuke = {name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
 
-	---Adhemar aliases
+	----	NIN
+	--	Single-hit WS: STR/Acc&Atk/WSD
+	gear.nincape_wsd = {name="Andartia's Mantle", augments={'STR+18','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+
+	------	Abjuration aliases
+	----	Adhemar 
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
 	gear.adhemarhead_rng = {name="Adhemar Bonnet", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}}
-	--gear.hercbody_rng_crit = {name="Herculean Vest", augments={'Rng.Acc.+23 Rng.Atk.+23','Crit. hit damage +4%','Rng.Atk.+8',}}
 
 	gear.taeonhands_rng_crit = {name="Taeon Gloves", augments={'Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+3','Crit. hit damage +2%',}}
 	gear.herchands_rng_crit = {name="Herculean Gloves", augments={'Rng.Acc.+24 Rng.Atk.+24','Crit. hit damage +3%',}}
@@ -148,33 +166,37 @@ function define_global_sets()
 	gear.hercfeet_pup_stp = {name="Herculean Boots", augments={'Pet: Accuracy+29 Pet: Rng. Acc.+29','Pet: "Store TP"+11','Pet: DEX+7','Pet: "Mag.Atk.Bns."+14',}}
 	
 	gear.repair_hands = { name="Taeon Gloves", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','Pet: Haste+1',}}
-    gear.repair_head = { name="Taeon Chapeau", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','CHR+10',}}
-    gear.repair_body = { name="Taeon tabard", augments={'Pet: "Mag.Atk.Bns."+23','"Repair" potency +5%',}}
-    gear.repair_legs = { name="Taeon tights", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +4%','Pet: Damage taken -2%',}}
+    	gear.repair_head = { name="Taeon Chapeau", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +5%','CHR+10',}}
+    	gear.repair_body = { name="Taeon tabard", augments={'Pet: "Mag.Atk.Bns."+23','"Repair" potency +5%',}}
+   	gear.repair_legs = { name="Taeon tights", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','"Repair" potency +4%','Pet: Damage taken -2%',}}
 
 	gear.pet_mbfeet = { name="Taeon Boots", augments={'Pet: Mag. Acc.+25','"Dual Wield"+5','DEX+2',}}
-    gear.pet_tpfeet = { name="Taeon Boots", augments={'Pet: Attack+22 Pet: Rng.Atk.+22','Pet: "Dbl. Atk."+4','Pet: Damage taken -2%',}}
-    gear.pet_tpbody = { name="Taeon Tabard", augments={'Pet: Attack+25 Pet: Rng.Atk.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
-    gear.pet_tphead = { name="Taeon chapeau", augments={'Pet: Attack+24 Pet: Rng.Atk.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -2%',}}
+    	gear.pet_tpfeet = { name="Taeon Boots", augments={'Pet: Attack+22 Pet: Rng.Atk.+22','Pet: "Dbl. Atk."+4','Pet: Damage taken -2%',}}
+    	gear.pet_tpbody = { name="Taeon Tabard", augments={'Pet: Attack+25 Pet: Rng.Atk.+25','Pet: "Dbl. Atk."+5','Pet: Damage taken -4%',}}
+    	gear.pet_tphead = { name="Taeon chapeau", augments={'Pet: Attack+24 Pet: Rng.Atk.+24','Pet: "Dbl. Atk."+5','Pet: Damage taken -2%',}}
+	
+
 	---------------
-    gear.valhead = {name="Valorous Mask", augments={'Accuracy+22 Attack+22','Weapon skill damage +1%','STR+13','Accuracy+7',}}
-    gear.valhead_temp = {name="Valorous Mask", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','AGI+6','Accuracy+4','Attack+14',}}
+    	gear.valhead = {name="Valorous Mask", augments={'Accuracy+22 Attack+22','Weapon skill damage +1%','STR+13','Accuracy+7',}}
+    	gear.valhead_temp = {name="Valorous Mask", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','AGI+6','Accuracy+4','Attack+14',}}
 	gear.valhead_tp = {name="Valorous Mask", augments={'Accuracy+28','"Store TP"+2',}}
-    gear.valbody_ws = {name="Valorous Mail", augments={'Accuracy+30','Crit.hit rate+1','STR+15',}}
-    gear.valhands = {name="Valorous Mitts", augments={'Accuracy+25 Attack+25','Weapon skill damage +2%','STR+1','Accuracy+9',}}
-    gear.vallegs_ws = {name="Valor. Hose", augments={'Accuracy+21 Attack+21','STR+6','Attack+2',}}
-    gear.vallegs_tp = {name="Valor. Hose", augments={'Accuracy+17','"Store TP"+6','DEX+14',}}
+    	gear.valbody_ws = {name="Valorous Mail", augments={'Accuracy+30','Crit.hit rate+1','STR+15',}}
+    	gear.valhands = {name="Valorous Mitts", augments={'Accuracy+25 Attack+25','Weapon skill damage +2%','STR+1','Accuracy+9',}}
+    	gear.vallegs_ws = {name="Valor. Hose", augments={'Accuracy+21 Attack+21','STR+6','Attack+2',}}
+    	gear.vallegs_tp = {name="Valor. Hose", augments={'Accuracy+17','"Store TP"+6','DEX+14',}}
 	gear.valfeet_stp = {name="Valorous Greaves", augments={'Accuracy+18 Attack+18','"Store TP"+7','Accuracy+9','Attack+7',}}
 	gear.valfeet_ws = {name="Valorous Greaves", augments={'Accuracy+25 Attack+25','Weapon Skill Acc.+5','STR+7','Accuracy+10','Attack+13',}}
 
-    gear.odyssbody_tc = {name="Odyss. Chestplate", augments={'Accuracy+11 Attack+11','VIT+8','Accuracy+11',}}
+   	gear.odyssbody_tc = {name="Odyss. Chestplate", augments={'Accuracy+11 Attack+11','VIT+8','Accuracy+11',}}
 	gear.odysshands_ws = {name="Odyssean Gauntlets", augments={'Accuracy+22','Weapon skill damage +1%','VIT+9',}}
-    gear.odysshands_hybrid = {name="Odyssean Gauntlets", augments={'Accuracy+28','Phys. dmg. taken -4%',}}
-    gear.odysslegs_stp = {name="Odyssean Cuisses", augments={'Accuracy+6 Attack+6','"Store TP"+5','Accuracy+3',}}
+    	gear.odysshands_hybrid = {name="Odyssean Gauntlets", augments={'Accuracy+28','Phys. dmg. taken -4%',}}
+    	gear.odysslegs_stp = {name="Odyssean Cuisses", augments={'Accuracy+6 Attack+6','"Store TP"+5','Accuracy+3',}}
 	gear.odysslegs_ws = {name="Odyssean Cuisses", augments={'Accuracy+10 Attack+10','Weapon skill damage +5%','Accuracy+14','Attack+8',}}
 	gear.odysslegs_acc = {name="Odyssean Cuisses", augments={'Accuracy+8 Attack+8','"Store TP"+3','VIT+5','Accuracy+11','Attack+6',}}
-    gear.odyssfeet_acc = {name="Odyssean Greaves", augments={'Accuracy+25','Potency of "Cure" effect received+3%','Attack+9',}}
+    	gear.odyssfeet_acc = {name="Odyssean Greaves", augments={'Accuracy+25','Potency of "Cure" effect received+3%','Attack+9',}}
 	
+	--[[gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
+	gear.blucape_tp = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}]]
 
 	
 end
