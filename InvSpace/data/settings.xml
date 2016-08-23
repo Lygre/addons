@@ -96,12 +96,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>1056</x>
-                <y>329</y>
+                <x>875</x>
+                <y>213</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4211734020</alpha>
+                    <alpha>-2.7386800471527e+014</alpha>
                 </stroke>
             </text>
         </display>
@@ -181,12 +181,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>1000</x>
-                <y>182</y>
+                <x>865</x>
+                <y>195</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </display>
@@ -198,12 +198,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>1034</x>
-                <y>305</y>
+                <x>851</x>
+                <y>258</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.2485413254494e+036</alpha>
+                    <alpha>-3.183780379896e+038</alpha>
                 </stroke>
             </text>
         </display>

@@ -470,11 +470,11 @@ end
 ---Auto Boost spell
 function job_buff_change(buff, gain)
 	if state.Skillup.value then
-		if not buffactive['DEX Boost'] then
-			if buff == 'DEX Boost' and gain == false then
-				send_command('input /ma "Boost-DEX" <me>')
+		if not buffactive['STR Boost'] then
+			if buff == 'STR Boost' and gain == false then
+				send_command('input /ma "Boost-STR" <me>')
 			end
-		send_command('input /ma "Boost-DEX" <me>')
+		send_command('input /ma "Boost-STR" <me>')
 		end
 	end
 end

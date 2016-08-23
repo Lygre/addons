@@ -1,14 +1,15 @@
 _addon.name = 'HealBot'
 _addon.author = 'Lorand'
 _addon.command = 'hb'
-_addon.version = '2.10.0'
-_addon.lastUpdate = '2016.07.30'
+_addon.version = '2.10.8'
+_addon.lastUpdate = '2016.08.14.3'
 
 require('luau')
 require('lor/lor_utils')
 _libs.lor.include_addon_name = true
 _libs.lor.req('all', {n='tables',v='2016.07.24.1'}, {n='chat',v='2016.07.30'})
 _libs.req('queues')
+lor_settings = _libs.lor.settings
 
 healer = {}
 
@@ -34,22 +35,18 @@ require('HealBot_queues')
 hb = {}
 
 windower.register_event('load', function()
-    atcc(262,'Welcome to HealBot! To see a list of commands, type //hb help')
-    atcc(261,'Curaga use is in beta testing! If it causes issues, you can disable it via //hb disable curaga, or in your settings xml')
     if not _libs.lor then
-        atcc(39,'ERROR: .../Windower/addons/libs/lor/ not found! Please download: https://github.com/lorand-ffxi/lor_libs')
+        windower.add_to_chat(39,'ERROR: .../Windower/addons/libs/lor/ not found! Please download: https://github.com/lorand-ffxi/lor_libs')
     end
-    configs_loaded = false
-    load_configs()
-    CureUtils.init_cure_potencies()
-    
+    atcc(262,'Welcome to HealBot! To see a list of commands, type //hb help')
+    atcc(39,'=':rep(80))
+    atcc(261,'WARNING: I switched the config files from XMLs to lua files.')
+    atcc(261,'You will need to update the lua files with any custom settings you had in your XMLs!')
+    atcc(261,'I apologize for the inconvenience; this makes many things easier behind the scenes.')
+    atcc(39,'=':rep(80))
+
     healer.zone_enter = os.clock()-25
     healer.zone_wait = false
-    
-    trusts = populateTrustList()
-    ignoreList = S{}
-    extraWatchList = S{}
-    
     healer.lastAction = os.clock()
     healer.lastMoveCheck = os.clock()
     healer.actionStart = os.clock()
@@ -63,6 +60,14 @@ windower.register_event('load', function()
     active = false
     lastActingState = false
     partyMemberInfo = {}
+    
+    trusts = populateTrustList()
+    ignoreList = S{}
+    extraWatchList = S{}
+    
+    configs_loaded = false
+    load_configs()
+    CureUtils.init_cure_potencies()
 end)
 
 windower.register_event('logout', function()
@@ -71,6 +76,16 @@ end)
 
 windower.register_event('zone change', function(new_id, old_id)
     healer.zone_enter = os.clock()
+    local zone_info = windower.ffxi.get_info()
+    if zone_info ~= nil then
+        if zone_info.zone == 131 then
+            windower.send_command('lua unload healBot')
+        elseif zone_info.mog_house == true then
+            active = false
+        elseif indoor_zones:contains(zone_info.zone) then
+            active = false
+        end
+    end
 end)
 
 windower.register_event('job change', function()
@@ -198,15 +213,18 @@ end
 function hb.isMoving(now)
     if (getPosition() == nil) then
         txts.moveInfo:hide()
-        return true
+        -- return true
+        return false
     end
     healer.lastPos = healer.lastPos or getPosition()
     healer.posArrival = healer.posArrival or os.clock()
     local currentPos = getPosition()
-    local moving = true
+    -- local moving = true
+    local moving = false
     local timeAtPos = math.floor((now - healer.posArrival)*10)/10
     if (healer.lastPos:equals(currentPos)) then
-        moving = (timeAtPos < 0.5)
+        -- moving = (timeAtPos < 0.5)
+        moving = false
     else
         healer.lastPos = currentPos
         healer.posArrival = now

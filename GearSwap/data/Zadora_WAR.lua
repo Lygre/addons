@@ -128,8 +128,6 @@ function init_gear_sets()
 --------------Weapon Skill Sets--------------------
 
     sets.precast.WS['Upheaval'] = {
-    main="Chango",
-    sub="Immolation Grip",
     ammo="Ginsen",
     head={ name="Valorous Mask", augments={'Accuracy+21 Attack+21','Sklchn.dmg.+3%','VIT+1','Accuracy+14','Attack+14',}},
     body={ name="Odyss. Chestplate", augments={'Accuracy+20','Weapon Skill Acc.+8','VIT+15',}},
@@ -220,18 +218,18 @@ function init_gear_sets()
 		
         -- Normal melee group
     sets.engaged = {ammo="Ginsen",
-    head="Boii Mask +1",
-    body={ name="Valorous Mail", augments={'Accuracy+26','"Store TP"+7','DEX+4',}},
-    hands={ name="Valorous Mitts", augments={'Attack+17','"Dbl.Atk."+4','DEX+7','Accuracy+10',}},
-    legs={ name="Argosy Breeches", augments={'STR+10','DEX+10','Attack+15',}},
+    head={ name="Yorium Barbuta", augments={'Accuracy+25','"Store TP"+5',}},
+    body={ name="Emicho Haubert", augments={'HP+50','DEX+10','Accuracy+15',}},
+    hands={ name="Emicho Gauntlets", augments={'HP+50','DEX+10','Accuracy+15',}},
+    legs={ name="Odyssean Cuisses", augments={'Accuracy+26','"Store TP"+4','VIT+5','Attack+7',}},
     feet={ name="Valorous Greaves", augments={'Accuracy+25','"Store TP"+6',}},
-    neck="Asperity Necklace",
-    waist="Dynamic Belt +1",
-    left_ear="Brutal Earring",
+    neck="Combatant's Torque",
+    waist="Kentarch Belt",
+    left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
-    back={ name="Mauler's Mantle", augments={'DEX+4','STR+1','Accuracy+2','Crit. hit damage +2%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 }
     sets.engaged.Mid = {}
     sets.engaged.Acc = {}
@@ -276,30 +274,30 @@ end
  
 -- Called by the 'update' self-command, for common needs.
 -- Set eventArgs.handled to true if we don't want automatic equipping of gear.
--- function job_update(cmdParams, eventArgs)
+function job_update(cmdParams, eventArgs)
 
--- --    get_combat_weapon()
---     display_current_job_state(eventArgs)
--- end
+--    get_combat_weapon()
+    display_current_job_state(eventArgs)
+end
  
 -- Set eventArgs.handled to true if we don't want the automatic display to be run.
--- function display_current_job_state(eventArgs)
---         local defenseString = ''
---         if state.Defense.Active then
---                 local defMode = state.Defense.PhysicalMode
---                 if state.Defense.Type == 'Magical' then
---                         defMode = state.Defense.MagicalMode
---                 end
+function display_current_job_state(eventArgs)
+        local defenseString = ''
+        if state.Defense.Active then
+                local defMode = state.Defense.PhysicalMode
+                if state.Defense.Type == 'Magical' then
+                        defMode = state.Defense.MagicalMode
+                end
  
---                 defenseString = 'Defense: '..state.Defense.Type..' '..defMode..', '
---         end
+                defenseString = 'Defense: '..state.Defense.Type..' '..defMode..', '
+        end
  
---         add_to_chat(122,'Melee: '..state.OffenseMode..'/'..state.DefenseMode..', WS: '..state.WeaponskillMode..', '..defenseString..
---                 'Kiting: '..on_off_names[state.Kiting])
+        add_to_chat(122,'Melee: '..state.OffenseMode..'/'..state.DefenseMode..', WS: '..state.WeaponskillMode..', '..defenseString..
+                'Kiting: '..on_off_names[state.Kiting])
  
  
---         eventArgs.handled = true
--- end
+        eventArgs.handled = true
+end
 
 --function get_combat_weapon()
 --    if gsList:contains(player.equipment.main) then

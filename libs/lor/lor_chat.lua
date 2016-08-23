@@ -5,7 +5,7 @@
 
 local lor_chat = {}
 lor_chat._author = 'Ragnarok.Lorand'
-lor_chat._version = '2016.07.31.0'
+lor_chat._version = '2016.08.07.0'
 
 require('lor/lor_utils')
 _libs.req('maths', 'strings', 'tables')
@@ -151,6 +151,12 @@ function col_width(strs)
 end
 
 
+function col_pad(s, px_width)
+    local sp = ' ':rep(math.floor(((px_width - tostring(s):px_len()) / 7.0) + 0.5))
+    return s..sp
+end
+
+
 --[[
     Pretty Print the given object, optionally with a header line
 --]]
@@ -165,7 +171,11 @@ function _pprint(obj, header)
                 return
             end
             local c = 0
-            local fmt = '%%-%ss :  %%s':format(max(unpack(map(string.wlen, table.keys(obj)))))
+            
+            local max_px_len = max(unpack(map(string.px_len, table.keys(obj))))
+            
+            --local fmt = '%%-%ss :  %%s':format(max(unpack(map(string.wlen, table.keys(obj)))))
+            local fmt = '%s :  %s'
             for k,v in opairs(obj) do
                 if v ~= obj then
                     if (c ~= 0) and ((c % 30) == 0) then
@@ -173,12 +183,12 @@ function _pprint(obj, header)
                     end
                     if istable(v) then
                         if table.is_array(v) then
-                            atcfs(fmt, k, table.str(v))
+                            atcfs(fmt, col_pad(k, max_px_len), table.str(v))
                         else
-                            atcfs(fmt, k, table.str(table.kv_strings(v)))
+                            atcfs(fmt, col_pad(k, max_px_len), table.str(table.kv_strings(v)))
                         end
                     else
-                        atcfs(fmt, k, v)
+                        atcfs(fmt, col_pad(k, max_px_len), v)
                     end
                     c = c + 1
                 end

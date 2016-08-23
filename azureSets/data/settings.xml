@@ -80,7 +80,7 @@
                 <slot17>fantod</slot17>
                 <slot18>sudden lunge</slot18>
             </dragons>
-           <hightiermeleesolo>
+            <hightiermeleesolo>
                 <slot01>barbed crescent</slot01>
                 <slot02>delta thrust</slot02>
                 <slot03>sinker drill</slot03>
@@ -259,6 +259,25 @@
                 <slot16>empty thrash</slot16>
                 <slot18>silent storm</slot18>
             </vagaryhead>
+            <voidwatch>
+                <slot01>barbed crescent</slot01>
+                <slot02>delta thrust</slot02>
+                <slot03>erratic flutter</slot03>
+                <slot04>paralyzing triad</slot04>
+                <slot05>barrier tusk</slot05>
+                <slot06>embalming earth</slot06>
+                <slot07>anvil lightning</slot07>
+                <slot08>empty thrash</slot08>
+                <slot09>nat. meditation</slot09>
+                <slot10>heavy strike</slot10>
+                <slot11>thrashing assault</slot11>
+                <slot12>molting plumage</slot12>
+                <slot13>sudden lunge</slot13>
+                <slot14>sinker drill</slot14>
+                <slot15>fantod</slot15>
+                <slot16>diffusion ray</slot16>
+                <slot17>sweeping gouge</slot17>
+            </voidwatch>
             <vw1>
                 <slot01>Firespit</slot01>
                 <slot02>Heat Breath</slot02>

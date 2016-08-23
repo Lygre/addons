@@ -246,29 +246,29 @@ function init_gear_sets()
 		body="Reiki osode",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
 		back="Agema cape",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
-    --Low haste
-    sets.engaged.LowHaste = {ammo="Happo Shuriken",
-        head="Ryuo Somen",neck="Lissome necklace",ear1="Brutal earring",ear2="Suppanomimi",
-        body="Adhemar jacket",hands="Floral gauntlets",ring1="Petrov Ring",ring2="Epona's Ring",
-        back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
-    sets.engaged.Acc.LowHaste = {ammo="Happo Shuriken",
-        head="Ryuo Somen",neck="Combatant's torque",ear1="Brutal earring",ear2="Telos Earring",
-        body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
-        back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
-    sets.engaged.PDT.LowHaste = {ammo="Happo Shuriken",
-        head="Ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
-        body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending ring",
-        back="agema Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
-    sets.engaged.Acc.PDT.LowHaste = {ammo="Happo Shuriken",
-        head="Ryuo somen",neck="Combatant's torque",ear1="Genmei earring",ear2="Telos Earring",
-        body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
-        back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
+	--Low haste
+	sets.engaged.LowHaste = {ammo="Happo Shuriken",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
+		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta}
+	sets.engaged.Acc.LowHaste = {ammo="Happo Shuriken",
+		head="Ryuo Somen",neck="Combatant's torque",ear1="Brutal earring",ear2="Telos Earring",
+		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Yokaze Mantle",waist="Reiki yotai",legs="Samnuha tights",feet=gear.hercfeet_melee}
+	sets.engaged.PDT.LowHaste = {ammo="Happo Shuriken",
+		head="Ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
+		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending ring",
+		back="agema Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm Greaves"}
+	sets.engaged.Acc.PDT.LowHaste = {ammo="Happo Shuriken",
+		head="Ryuo somen",neck="Combatant's torque",ear1="Genmei earring",ear2="Telos Earring",
+		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending Ring",
+		back="Agema cape",waist="Flume belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee}
 
 	-- Custom melee group: High Haste (~20% DW)
 	sets.engaged.HighHaste = {ammo="Happo Shuriken",
-		head="Ryuo Somen",neck="Asperity necklace",ear1="Brutal earring",ear2="Telos Earring",
-		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Petrov Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
+		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta}
 	sets.engaged.Acc.HighHaste = {ammo="Happo Shuriken",
 		head="Ryuo Somen",neck="Combatant's torque",ear1="Zennaroi earring",ear2="Telos Earring",
 		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
@@ -475,28 +475,28 @@ function determine_haste_group()
 			end]]
 
 	-----different setup
-    if buffactive[604] then --[604] is the resource id for Mighty Guard
-        classes.CustomMeleeGroups:append('LowHaste')
-        if buffactive.march == 1 then
-            classes.CustomMeleeGroups:append('HighHaste')
-        end
-        if buffactive.haste or buffactive.march == 2 then
-            classes.CustomMeleeGroups:append('MaxHaste')
-        end
-    elseif buffactive.march == 1 then
-        classes.CustomMeleeGroups:append('LowHaste')
-        if buffactive.march == 2 then
-            classes.CustomMeleeGroups:append('HighHaste')
-        end
-        if buffactive.haste then
-            classes.CustomMeleeGroups:append('MaxHaste')
-        end
-    elseif buffactive.haste then
-        classes.CustomMeleeGroups:append('HighHaste')
-        if buffactive.haste == 2 or buffactive.march then
-            classes.CustomMeleeGroups:append('MaxHaste')
-        end
-    end
+	if buffactive[604] then --[604] is the resource id for Mighty Guard
+		classes.CustomMeleeGroups:append('LowHaste')
+		if buffactive.march == 1 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		end
+		if buffactive.haste or buffactive.march == 2 then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	elseif buffactive.march == 1 then
+		classes.CustomMeleeGroups:append('LowHaste')
+		if buffactive.march == 2 then
+			classes.CustomMeleeGroups:append('HighHaste')
+		end
+		if buffactive.haste then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	elseif buffactive.haste then
+		classes.CustomMeleeGroups:append('HighHaste')
+		if buffactive.haste == 2 or buffactive.march then
+			classes.CustomMeleeGroups:append('MaxHaste')
+		end
+	end
 end
 
 

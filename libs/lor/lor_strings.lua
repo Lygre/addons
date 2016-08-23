@@ -5,7 +5,7 @@
 
 local lor_str = {}
 lor_str._author = 'Ragnarok.Lorand'
-lor_str._version = '2016.07.31'
+lor_str._version = '2016.08.07'
 
 require('lor/lor_utils')
 _libs.req('strings')
@@ -48,6 +48,22 @@ function string.findall(s, p)
 end
 
 
+function string.all_matches(s, p)
+    local matches = {}
+    local i = 1
+    while i <= #s do
+        local m = s:match(p, i)
+        if m then
+            i = i + #m
+            matches[#matches+1] = m:trim()
+        else
+            break
+        end
+    end
+    return matches
+end
+
+
 local function char_counts(s)
     local tbl = {}
     for c in tostring(s):gmatch('.') do
@@ -83,22 +99,21 @@ function string.px_len(s)
     return wl
 end
 
+
 --[[
     Returns a weighted length for the given string given that FFXI's chat
     log font is not fixed-width.
     Max weighted line width after timestamp is about 192 at 1600x900 game window
 --]]
 function string.wlen(s)
-    return roundup(string.px_len(s) / 7)
+    return math.floor((string.px_len(s) / 7)+0.5)
 end
 
 
---local function _fmts(fmt, ...)
 function string.fmts(fmt, ...)
-    --local args = {...}
     return string.format(fmt, unpack(map(tostring, {...})))
 end
---string.fmts = traceable(_fmts)
+
 
 function string.join(jstr, ...)
     --Somewhat equivalent to Python's str.join(iterable)
@@ -124,6 +139,30 @@ end
 
 function string.xmlify(s)
     return s:lower():gsub('[ -]', '_'):gsub('%.', '')
+end
+
+
+function string.unquote(s)
+    local unquoted = s:match('^"([^"]+)"$')
+    if unquoted then return unquoted end
+    unquoted = s:match("^'([^']+)'$")
+    if unquoted then return unquoted end
+    return s
+end
+
+
+--[[
+    Enclose the given string in quotation marks.  Prefers single quotes; if the
+    string contains single quotes, double quotes are used; if the string
+    contains both, then single quotes are escaped and used.
+--]]
+function string.enquote(s)
+    if s:match("'") == nil then
+        return "'%s'":format(s)
+    elseif s:match('"') == nil then
+        return '"%s"':format(s)
+    end
+    return "'%s'":format(s:gsub("'","\\'"))
 end
 
 

@@ -520,7 +520,7 @@ function init_gear_sets()
 		body="Jhakri Robe +1",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity Cape",waist="Flume Belt +1",legs="Rawhide trousers",feet=gear.hercfeet_refresh }
 
-	sets.idle.PDT = {ammo="Brigantia pebble",
+	sets.idle.PDT = {ammo="Staunch Tathlum",
 		head=gear.herchead_dt,neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
 		body="Vrikodara jupon",hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings"}
@@ -534,7 +534,7 @@ function init_gear_sets()
 
 	
 	-- Defense sets
-	sets.defense.PDT = {ammo="Brigantia pebble",
+	sets.defense.PDT = {ammo="Staunch Tathlum",
 		head=gear.herchead_dt,neck="Loricate torque +1",ear1="Impregnable Earring",ear2="Genmei Earring",
 		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity Cape",waist="Flume Belt +1",legs=gear.herclegs_dt,feet="Ahosi leggings" }
@@ -543,7 +543,7 @@ function init_gear_sets()
 		head="Dampening Tam",neck="Loricate torque +1",ear1="Sanare Earring",ear2="Zennaroi earring",
 		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity cape",waist="Flume Belt +1",legs="Mes'yohi slacks",feet="Ahosi leggings" }
-	sets.defense.Meva = {ammo="Vanir battery",
+	sets.defense.Meva = {ammo="Staunch tathlum",
 		head="Amalric coif",neck="Warder's charm",ear1="Sanare Earring",ear2="Eabani earring",
 		body="Amalric doublet",hands="Leyline gloves",ring1="Defending Ring",ring2="Shukuyu Ring",
 		back="Engulfer cape",waist="Porous Rope",legs="Amalric slops",feet="Ahosi leggings" }
@@ -580,7 +580,7 @@ function init_gear_sets()
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos earring",ear2="Suppanomimi",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
 		back=gear.blucape_tp,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
-	sets.engaged.DW.PDT = {ammo="Brigantia pebble",
+	sets.engaged.DW.PDT = {ammo="Staunch Tathlum",
 		head=gear.herchead_dt, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body=gear.hercbody_dt, hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs=gear.herclegs_dt, feet="Ahosi leggings" }
@@ -622,7 +622,7 @@ function init_gear_sets()
 		head="Carmine Mask +1",neck="Combatant's torque",ear1="Eabani earring",ear2="Telos earring",
 		body="Adhemar Jacket",hands="Adhemar wristbands",ring1="Rajas Ring",ring2="Cacoethic Ring",
 		back=gear.blucape_tp,waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_melee }
-	sets.engaged.DW.PDT.LowHaste = {ammo="Brigantia pebble",
+	sets.engaged.DW.PDT.LowHaste = {ammo="Staunch Tathlum",
 		head=gear.herchead_dt, neck="Combatant's torque", ear1="Impregnable earring", ear2="Genmei earring",
 		body=gear.hercbody_dt, hands=gear.herchands_dt, ring1="Defending ring", ring2="Rajas Ring",
 		back="Solemnity cape", waist="Flume Belt +1", legs=gear.herclegs_dt, feet="Ahosi leggings"}

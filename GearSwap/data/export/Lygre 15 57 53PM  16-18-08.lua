@@ -1,0 +1,17 @@
+sets.exported={
+    main="Heishi Shorinken",
+    sub="Taka",
+    ammo="Happo Shuriken",
+    head={ name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    body={ name="Herculean Vest", augments={'Accuracy+30','"Triple Atk."+4',}},
+    hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
+    legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+    feet={ name="Herculean Boots", augments={'Accuracy+23 Attack+23','"Triple Atk."+4','DEX+10','Accuracy+5',}},
+    neck="Asperity Necklace",
+    waist="Windbuffet Belt +1",
+    left_ear="Brutal Earring",
+    right_ear="Telos Earring",
+    left_ring="Petrov Ring",
+    right_ring="Epona's Ring",
+    back="Bleating Mantle",
+}

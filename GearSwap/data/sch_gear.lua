@@ -191,37 +191,37 @@ function init_gear_sets()
 	sets.midcast.MndEnfeebles = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-		back="Aurist's cape +1",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Aurist's cape +1",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast.MndEnfeebles.Resistant = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Globidonta Ring",ring2="Weatherspoon Ring",
-		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast.Dispel = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
-		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast.Dispel.Resistant = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Archon ring",
-		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast.IntEnfeebles = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Barkarole Earring",ear2="Digni. Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast.IntEnfeebles.Resistant = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head=gear.chirhead,neck="Incanter's torque",ear1="Digni. Earring",ear2="Barkarole Earring",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Shiva Ring +1",ring2="Weatherspoon Ring",
-		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 	
 	sets.midcast.SpecialEnfeebles = {main=gear.EnfeebStaff,sub="Clerisy Strap",ammo="Pemphredo tathlum",
 		head="Kaykaus mitra",neck="Incanter's torque",ear1="Barkarole earring", ear2="Digni. earring",
 		body=gear.merlbody_nuke,hands="Kaykaus cuffs",ring1="Globidonta ring",ring2="Weatherspoon ring",
-		back="Lugh's cape",waist="Luminary sash",legs=gear.chirlegs,feet="Medium's sabots"}
+		back="Lugh's cape",waist="Luminary sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 		
 	sets.midcast.SpecialEnfeebles.Resistant = set_combine(sets.midcast.SpecialEnfeebles,
 		{head="Amalric coif"})

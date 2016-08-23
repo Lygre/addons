@@ -60,7 +60,7 @@
                     <visible>true</visible>
                 </bg>
                 <data_types>
-                    <damage>total-percent,total</damage>
+                    <damage>total,total-percent</damage>
                     <spell>avg</spell>
                 </data_types>
                 <flags>
@@ -104,7 +104,7 @@
                 </bg>
                 <data_types>
                     <crit>percent</crit>
-                    <damage>total-percent,total</damage>
+                    <damage>total,total-percent</damage>
                     <ja>avg</ja>
                     <melee>percent</melee>
                     <miss>tally</miss>
@@ -151,7 +151,7 @@
                     <visible>true</visible>
                 </bg>
                 <data_types>
-                    <damage>total-percent,total</damage>
+                    <damage>total,total-percent</damage>
                     <r_crit>percent</r_crit>
                     <ranged>percent</ranged>
                     <ws>avg</ws>

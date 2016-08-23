@@ -5,7 +5,7 @@
 --]]
 
 local lor_utils = {}
-lor_utils._version = '2016.07.31'
+lor_utils._version = '2016.08.02'
 lor_utils._author = 'Ragnarok.Lorand'
 lor_utils.load_order = {'functional','math','strings','tables','chat','exec','settings'}
 
@@ -61,6 +61,17 @@ if not _libs.lor.utils then
         end
     end
     
+    function _silentHandler(err) end
+    
+    function try(fn)
+        return function(...)
+            local args = {...}
+            local res = nil
+            local status = xpcall(function() res = fn(unpack(args)) end, _silentHandler)
+            return status, res
+        end
+    end
+    
     local function t_contains(t, val)
         --Used for enforcing the load order without loading the tables library
         for _,v in pairs(t) do
@@ -88,12 +99,23 @@ if not _libs.lor.utils then
         return m and m.__class or type(obj)
     end
     
+    local try_req = try(require)
+    
     local function load_lor_lib(lname, version)
-        _libs.lor[lname] = _libs.lor[lname] or require('lor/lor_'..lname)
-        local lib_version = _libs.lor[lname]._version
-        local req_version = version and isstr(version) and yyyymmdd_to_num(version) or 0
-        if req_version > yyyymmdd_to_num(lib_version) then
-            error('lor_%s version %s < %s (required) - Please update from https://github.com/lorand-ffxi/lor_libs':format(lname, lib_version, version))
+        if _libs.lor[lname] == nil then
+            local success, result = try_req('lor/lor_'..lname)
+            if success then
+                _libs.lor[lname] = result
+            else
+                error('lor_%s not found!  Please update from https://github.com/lorand-ffxi/lor_libs':format(lname, lib_version, version))
+            end
+        end
+        if _libs.lor[lname] ~= nil then
+            local lib_version = _libs.lor[lname]._version
+            local req_version = version and isstr(version) and yyyymmdd_to_num(version) or 0
+            if req_version > yyyymmdd_to_num(lib_version) then
+                error('lor_%s version %s < %s (required) - Please update from https://github.com/lorand-ffxi/lor_libs':format(lname, lib_version, version))
+            end
         end
     end
     

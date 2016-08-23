@@ -21,6 +21,12 @@ function utils.normalize_action(action, action_type)
     if action_type == nil then return nil end
     if isstr(action) then
         if tonumber(action) == nil then
+            local naction = res[action_type]:with('en', action)
+            if naction ~= nil then
+                --atcf("res.%s[%s] found for %s", action_type, naction.id, action)
+                return naction
+            end
+            --atcf("Searching resources for normalized name for %s [%s]", action, action_type)
             return res[action_type]:with('enn', utils.normalize_str(action))
         end
         action = tonumber(action) 
@@ -28,6 +34,7 @@ function utils.normalize_action(action, action_type)
     if isnum(action) then
         return res[action_type][action]
     end
+    --atcf("Unable to normalize: '%s'[%s] (%s)", tostring(action), type(action), tostring(action_type))
     return nil
 end
 
@@ -63,7 +70,7 @@ local txtbox_cmd_map = {
 
 function processCommand(command,...)
     command = command and command:lower() or 'help'
-    local args = {...}
+    local args = map(windower.convert_auto_trans, {...})
     
     if command == 'reload' then
         windower.send_command('lua reload healBot')
@@ -231,7 +238,7 @@ function processCommand(command,...)
         buffs.registerNewBuff(args, true)
     elseif command == 'cancelbuff' then
         buffs.registerNewBuff(args, false)
-    elseif command == 'bufflist' then
+    elseif S{'bufflist','bl'}:contains(command) then
         if not validate(args, 1, 'Error: No argument specified for BuffList') then return end
         utils.apply_bufflist(args)
     elseif command == 'bufflists' then
@@ -275,6 +282,8 @@ function processCommand(command,...)
         utils.toggleX(settings, 'ignoreTrusts', args[1], 'Ignoring of Trust NPCs', 'IgnoreTrusts')
     elseif command == 'packetinfo' then
         toggleMode('showPacketInfo', args[1], 'Packet info display', 'PacketInfo')
+    elseif command == 'debug' then
+        toggleMode('debug', args[1], 'Debug mode', 'debug mode')
     elseif txtbox_cmd_map[command] ~= nil then
         local boxName = txtbox_cmd_map[command]
         if utils.posCommand(boxName, args) then
@@ -309,7 +318,7 @@ end
 
 function utils.register_offensive_debuff(args, cancel)
     local argstr = table.concat(args,' ')
-    local spell_name = formatSpellName(argstr)
+    local spell_name = utils.formatSpellName(argstr)
     local spell = getActionFor(spell_name)
     if (spell ~= nil) then
         if Assert.can_use(spell) then
@@ -325,7 +334,7 @@ end
 
 function utils.register_spam_spell(args)
     local argstr = table.concat(args,' ')
-    local spell_name = formatSpellName(argstr)
+    local spell_name = utils.formatSpellName(argstr)
     local spell = getActionFor(spell_name)
     if (spell ~= nil) then
         if Assert.can_use(spell) then
@@ -342,7 +351,7 @@ end
 
 function utils.register_ws(args)
     local argstr = table.concat(args,' ')
-    local wsname = formatSpellName(argstr)
+    local wsname = utils.formatSpellName(argstr)
     local ws = getActionFor(wsname)
     if (ws ~= nil) then
         settings.ws.name = wsname
@@ -577,7 +586,7 @@ end
 --          String Formatting Functions
 --==============================================================================
 
-function formatSpellName(text)
+function utils.formatSpellName(text)
     if (type(text) ~= 'string') or (#text < 1) then return nil end
     
     local fromAlias = hb_config.aliases[text]
@@ -609,6 +618,7 @@ function formatSpellName(text)
         end
     end
 end
+
 
 function formatName(text)
     if (text ~= nil) and (type(text) == 'string') then
@@ -653,7 +663,7 @@ function load_configs()
         disable = {curaga=false},
         ignoreTrusts=true
     }
-    local loaded = config.load('data/settings.xml', defaults)
+    local loaded = lor_settings.load('data/settings.lua', defaults)
     update_settings(loaded)
     utils.refresh_textBoxes()
     
@@ -664,12 +674,13 @@ function load_configs()
     local buff_lists_defaults = {       self = {'Haste II','Refresh II'},
         whm = {self={'Haste','Refresh'}}, rdm = {self={'Haste II','Refresh II'}}
     }
+    
     hb_config = {
         aliases = config.load('../shortcuts/data/aliases.xml'),
-        mabil_debuffs = config.load('data/mabil_debuffs.xml'),
-        buff_lists = config.load('data/buffLists.xml', buff_lists_defaults),
-        priorities = config.load('data/priorities.xml'),
-        cure_potency = config.load('data/cure_potency.xml', cure_potency_defaults)
+        mabil_debuffs = lor_settings.load('data/mabil_debuffs.lua'),
+        buff_lists = lor_settings.load('data/buffLists.lua', buff_lists_defaults),
+        priorities = lor_settings.load('data/priorities.lua'),
+        cure_potency = lor_settings.load('data/cure_potency.lua', cure_potency_defaults)
     }
     hb_config.priorities.players =        hb_config.priorities.players or {}
     hb_config.priorities.jobs =           hb_config.priorities.jobs or {}
@@ -679,11 +690,27 @@ function load_configs()
     hb_config.priorities.dispel =         hb_config.priorities.dispel or {}     --not implemented yet
     hb_config.priorities.default =        hb_config.priorities.default or 5
     
-    hb_config.mobAbils = process_mabil_debuffs()
+    --process_mabil_debuffs()
     local msg = configs_loaded and 'Rel' or 'L'
     configs_loaded = true
     atcc(262, msg..'oaded config files.')
 end
+
+
+function process_mabil_debuffs()
+    local debuff_names = table.keys(hb_config.mabil_debuffs)
+    for _,abil_raw in pairs(debuff_names) do
+        local abil_fixed = abil_raw:gsub('_',' '):capitalize()
+        hb_config.mabil_debuffs[abil_fixed] = S{}
+        local debuffs = hb_config.mabil_debuffs[abil_raw]
+        for _,debuff in pairs(debuffs) do
+            hb_config.mabil_debuffs[abil_fixed]:add(debuff)
+        end
+        hb_config.mabil_debuffs[abil_raw] = nil
+    end
+    hb_config.mabil_debuffs:save()
+end
+
 
 function update_settings(loaded)
     settings = settings or {}
@@ -738,17 +765,7 @@ function populateTrustList()
     return trusts
 end
 
-function process_mabil_debuffs()
-    local mabils = S{}
-    for abil_raw,debuffs in pairs(hb_config.mabil_debuffs) do
-        local aname = abil_raw:gsub('_',' '):capitalize()
-        mabils[aname] = S{}
-        for _,debuff in pairs(debuffs) do
-            mabils[aname]:add(debuff)
-        end
-    end
-    return mabils
-end
+
 
 --==============================================================================
 --          Table Functions
@@ -788,9 +805,10 @@ function help_text()
         {'fcmd','Sets a player to follow, the distance to maintain, or toggles being active with no argument'},
         {'buff <player> <spell>[, <spell>[, ...]]','Sets spell(s) to be maintained on the given player'},
         {'cancelbuff <player> <spell>[, <spell>[, ...]]','Un-sets spell(s) to be maintained on the given player'},
-        {'bufflist <list name> <player>','Sets the given list of spells to be maintained on the given player'},
+        {'blcmd','Sets the given list of spells to be maintained on the given player'},
         {'bufflists','Lists the currently configured spells/abilities in each bufflist'},
-        {'spam [use <spell> | <bool>]','Sets the spell to be spammed, or toggles being active (default: Stone, off) [Requires an assist target to activate]'},
+        {'spam [use <spell> | <bool>]','Sets the spell to be spammed on assist target\s enemy, or toggles being active (default: Stone, off)'},
+        {'dbcmd','Add/remove debuff spell to maintain on assist target\'s enemy, toggle on/off, or list current debuffs to maintain'},
         {'mincure <number>','Sets the minimum cure spell tier to cast (default: 3)'},
         {'disable <action type>','Disables actions of a given type (cure, buff, na)'},
         {'enable <action type>','Re-enables actions of a given type (cure, buff, na) if they were disabled'},
@@ -811,7 +829,6 @@ function help_text()
         {'actioninfo [pos <x> <y> | on | off]','Moves character status info, or toggles display with no argument (default: on)'},
         {'moveinfo [pos <x> <y> | on | off]','Moves movement status info, or toggles display with no argument (default: off)'},
         {'monitored [pos <x> <y> | on | off]','Moves monitored player list, or toggles display with no argument (default: on)'},
-        {'disable curaga','In addons/HealBot/data/settings.xml:\n<settings>\n  <global>\n    ...\n    <disable>\n      <curaga>true</curaga>\n    </disable>\n    ...\n  </global>\n</settings>'},
         {'help','Displays this help text'}
     }
     local acmds = {
@@ -821,6 +838,8 @@ function help_text()
         ['wscmd2']='w':colorize(ac,cc)..'eapon'..'s':colorize(ac,cc)..'kill hp <sign> <mob hp%>',
         ['wscmd3']='w':colorize(ac,cc)..'eapon'..'s':colorize(ac,cc)..'kill waitfor <player> <tp>',
         ['wscmd4']='w':colorize(ac,cc)..'eapon'..'s':colorize(ac,cc)..'kill nopartner',
+        ['dbcmd']='d':colorize(ac,cc)..'e'..'b':colorize(ac,cc)..'uff [(use | rm) <spell> | on | off | ls]',
+        ['blcmd']='b':colorize(ac,cc)..'uff'..'l':colorize(ac,cc)..'ist <list name> (<player>)',
     }
     
     for _,tbl in pairs(cmds) do

@@ -95,31 +95,30 @@ local augment_cat = {
 	[68] = S{"Mag. Acc."},
 	[69] = S{"Mag. Acc. \"Mag.Atk.Bns.\""},
 	[70] = S{"Mag. Acc. \"Mag. Atk. B.\""},
-	[71] = S{"Mag. Acc."},
-	[72] = S{"M.B. dmg."},
-	[73] = S{"INT"},
-	[74] = S{"Indi. eff. dur. "},
-	[75] = S{"Helix eff. dur. "},
-	[76] = S{"Enh. Mag. eff. dur. "},
-	[77] = S{"Blood Pact Dmg."},
-	[78] = S{"Blood Pact ab. del. II "},
-	[79] = S{"Avatar:"},
-	[80] = S{"\"Regen\" potency "},
-	[81] = S{"\"Refresh\""},
-	[82] = S{"\"Occult Acumen\""},
-	[83] = S{"\"Mag. Def. Bns.\""},
-	[84] = S{"\"Mag. Atk. Bns.\""},
-	[85] = S{"\"Fast Cast\""},
-	[86] = S{"\"Elemental Siphon\""},
-	[87] = S{"\"Drain\" and \"Aspir\" potency"},
-	[88] = S{"\"Cure\" spellcasting time"},
-	[89] = S{"\"Cure\" potency"},
-	[90] = S{"\"Conserve MP\""},
-	[91] = S{"\"Rapid Shot\""},
-	[92] = S{"\"Recycle\""},
-	[93] = S{"Rng. Atk."},
-	[94] = S{"Rng. Acc."},
-	[95] = S{"Mag. Dmg."},
+	[71] = S{"M.B. dmg."},
+	[72] = S{"INT"},
+	[73] = S{"Indi. eff. dur. "},
+	[74] = S{"Helix eff. dur. "},
+	[75] = S{"Enh. Mag. eff. dur. "},
+	[76] = S{"Blood Pact Dmg."},
+	[77] = S{"Blood Pact ab. del. II "},
+	[78] = S{"Avatar:"},
+	[79] = S{"\"Regen\" potency "},
+	[80] = S{"\"Refresh\""},
+	[81] = S{"\"Occult Acumen\""},
+	[82] = S{"\"Mag. Def. Bns.\""},
+	[83] = S{"\"Mag. Atk. Bns.\""},
+	[84] = S{"\"Fast Cast\""},
+	[85] = S{"\"Elemental Siphon\""},
+	[86] = S{"\"Drain\" and \"Aspir\" potency"},
+	[87] = S{"\"Cure\" spellcasting time"},
+	[88] = S{"\"Cure\" potency"},
+	[89] = S{"\"Conserve MP\""},
+	[90] = S{"\"Rapid Shot\""},
+	[91] = S{"\"Recycle\""},
+	[92] = S{"Rng. Atk."},
+	[93] = S{"Rng. Acc."},
+	[94] = S{"Mag. Dmg."},
 }
 local augment_fields = {
 	[1] = S{"Accuracy(.%d+)"},
@@ -192,31 +191,30 @@ local augment_fields = {
 	[68] = S{"Mag. Acc.(.%d+)"},
 	[69] = S{"Mag. Acc.(.%d+) \"Mag.Atk.Bns.\"(.%d+)"},
 	[70] = S{"Mag. Acc.(.%d+) \"Mag. Atk. B.\"(.%d+)"},
-	[71] = S{"Mag. Acc.(.%d+)"},
-	[72] = S{"M.B. dmg.(.%d+)%%"},
-	[73] = S{"INT(.%d+)"},
-	[74] = S{"Indi. eff. dur. (.%d+)"},
-	[75] = S{"Helix eff. dur. (.%d+)"},
-	[76] = S{"Enh. Mag. eff. dur. (.%d+)"},
-	[77] = S{"Blood Pact Dmg.(.%d+)"},
-	[78] = S{"Blood Pact ab. del. II -%d"},
-	[79] = S{"Avatar:"},
-	[80] = S{"\"Regen\" potency (.%d+)"},
-	[81] = S{"\"Refresh\"(.%d+)"},
-	[82] = S{"\"Occult Acumen\"(.%d+)"},
-	[83] = S{"\"Mag. Def. Bns.\"(.%d+)"},
-	[84] = S{"\"Mag.Atk.Bns.\"(.%d+)"},
-	[85] = S{"\"Fast Cast\"(.%d+)"},
-	[86] = S{"\"Elemental Siphon\"(.%d+)"},
-	[87] = S{"\"Drain\" and \"Aspir\" potency +%d"},
-	[88] = S{"\"Cure\" spellcasting time -%d%%"},
-	[89] = S{"\"Cure\" potency (.%d+)%%"},
-	[90] = S{"\"Conserve MP\"(.%d+)"},
-	[91] = S{"\"Rapid Shot\"(.%d+)"},
-	[92] = S{"\"Recycle\"(.%d+)"},
-	[93] = S{"Rng. Atk.(.%d+)"},
-	[94] = S{"Rng. Acc.(.%d+)"},
-	[95] = S{"Mag. Dmg.(.%d+)"},
+	[71] = S{"M.B. dmg.(.%d+)%%"},
+	[72] = S{"INT(.%d+)"},
+	[73] = S{"Indi. eff. dur. (.%d+)"},
+	[74] = S{"Helix eff. dur. (.%d+)"},
+	[75] = S{"Enh. Mag. eff. dur. (.%d+)"},
+	[76] = S{"Blood Pact Dmg.(.%d+)"},
+	[77] = S{"Blood Pact ab. del. II -%d"},
+	[78] = S{"Avatar:"},
+	[79] = S{"\"Regen\" potency (.%d+)"},
+	[80] = S{"\"Refresh\"(.%d+)"},
+	[81] = S{"\"Occult Acumen\"(.%d+)"},
+	[82] = S{"\"Mag. Def. Bns.\"(.%d+)"},
+	[83] = S{"\"Mag.Atk.Bns.\"(.%d+)"},
+	[84] = S{"\"Fast Cast\"(.%d+)"},
+	[85] = S{"\"Elemental Siphon\"(.%d+)"},
+	[86] = S{"\"Drain\" and \"Aspir\" potency +%d"},
+	[87] = S{"\"Cure\" spellcasting time -%d%%"},
+	[88] = S{"\"Cure\" potency (.%d+)%%"},
+	[89] = S{"\"Conserve MP\"(.%d+)"},
+	[90] = S{"\"Rapid Shot\"(.%d+)"},
+	[91] = S{"\"Recycle\"(.%d+)"},
+	[92] = S{"Rng. Atk.(.%d+)"},
+	[93] = S{"Rng. Acc.(.%d+)"},
+	[94] = S{"Mag. Dmg.(.%d+)"},
 	-- [96] = S{"Attack(.%d+) Ranged Atk.(.%d+)"},
 	-- [97] = S{"Accuracy(.%d+) Ranged Acc.(.%d+)"},
 	-- [98] = S{"Acc(.%d+)/R.Acc(.%d+)/Atk.(.%d+)/R.Atk(.%d+)"},
@@ -259,9 +257,9 @@ local base_fields = {
 	[23] = S{"\"Kick Attacks\"(.%d+)"},
 	[24] = S{"\"Subtle Blow\"(.%d+)"},
 	[25] = S{"\"Zanshin\"(.%d+)"},
-	[26] = S{"Weapon Skill Acc.(.%d+)"},
+	[26] = S{"Weapon Skill Accuracy(.%d+)"},
 	[27] = S{"Weapon skill damage (.%d+)%%"},
-	[28] = S{"Crit. hit damage (.%d+)%%"},
+	[28] = S{"Critical hit damage (.%d+)%%"},
 	[29] = S{"\"Waltz\" potency (.%d+)%%"},
 	[30] = S{"\"Waltz\" ability delay -%d"},
 	[31] = S{"Sklchn. dmg. (.%d+)%%"},
@@ -304,31 +302,30 @@ local base_fields = {
 	[68] = S{"Magic Accuracy(.%d+)"},
 	[69] = S{"Mag. Acc.(.%d+) \"Mag.Atk.Bns.\"(.%d+)"},
 	[70] = S{"Mag. Acc.(.%d+) \"Mag. Atk. B.\"(.%d+)"},
-	[71] = S{"Mag. Acc.(.%d+)"},
-	[72] = S{"M.B. dmg.(.%d+)%%"},
-	[73] = S{"INT(.%d+)"},
-	[74] = S{"Indi. eff. dur. (.%d+)"},
-	[75] = S{"Helix eff. dur. (.%d+)"},
-	[76] = S{"Enh. Mag. eff. dur. (.%d+)"},
-	[77] = S{"Blood Pact Dmg.(.%d+)"},
-	[78] = S{"Blood Pact ab. del. II -%d"},
-	[79] = S{"Avatar:"},
-	[80] = S{"\"Regen\" potency (.%d+)"},
-	[81] = S{"\"Refresh\"(.%d+)"},
-	[82] = S{"\"Occult Acumen\"(.%d+)"},
-	[83] = S{"\"Magic Def. Bonus\"(.%d+)"},
-	[84] = S{"\"Magic Atk. Bonus\"(.%d+)"},
-	[85] = S{"\"Fast Cast\"(.%d+)"},
-	[86] = S{"\"Elemental Siphon\"(.%d+)"},
-	[87] = S{"\"Drain\" and \"Aspir\" potency +%d"},
-	[88] = S{"\"Cure\" spellcasting time -%d%%"},
-	[89] = S{"\"Cure\" potency (.%d+)%%"},
-	[90] = S{"\"Conserve MP\"(.%d+)"},
-	[91] = S{"\"Rapid Shot\"(.%d+)"},
-	[92] = S{"\"Recycle\"(.%d+)"},
-	[93] = S{"Rng. Atk.(.%d+)"},
-	[94] = S{"Rng. Acc.(.%d+)"},
-	[95] = S{"Mag. Dmg.(.%d+)"},
+	[71] = S{"M.B. dmg.(.%d+)%%"},
+	[72] = S{"INT(.%d+)"},
+	[73] = S{"Indi. eff. dur. (.%d+)"},
+	[74] = S{"Helix eff. dur. (.%d+)"},
+	[75] = S{"Enh. Mag. eff. dur. (.%d+)"},
+	[76] = S{"Blood Pact Dmg.(.%d+)"},
+	[77] = S{"Blood Pact ab. del. II -%d"},
+	[78] = S{"Avatar:"},
+	[79] = S{"\"Regen\" potency (.%d+)"},
+	[80] = S{"\"Refresh\"(.%d+)"},
+	[81] = S{"\"Occult Acumen\"(.%d+)"},
+	[82] = S{"\"Magic Def. Bonus\"(.%d+)"},
+	[83] = S{"\"Magic Atk. Bonus\"(.%d+)"},
+	[84] = S{"\"Fast Cast\"(.%d+)"},
+	[85] = S{"\"Elemental Siphon\"(.%d+)"},
+	[86] = S{"\"Drain\" and \"Aspir\" potency +%d"},
+	[87] = S{"\"Cure\" spellcasting time -%d%%"},
+	[88] = S{"\"Cure\" potency (.%d+)%%"},
+	[89] = S{"\"Conserve MP\"(.%d+)"},
+	[90] = S{"\"Rapid Shot\"(.%d+)"},
+	[91] = S{"\"Recycle\"(.%d+)"},
+	[92] = S{"Rng. Atk.(.%d+)"},
+	[93] = S{"Rng. Acc.(.%d+)"},
+	[94] = S{"Mag. Dmg.(.%d+)"},
 	-- [96] = S{"Attack(.%d+) Ranged Atk.(.%d+)"},
 	-- [97] = S{"Accuracy(.%d+) Ranged Acc.(.%d+)"},
 	-- [98] = S{"Acc(.%d+)/R.Acc(.%d+)/Atk.(.%d+)/R.Atk(.%d+)"},
@@ -345,6 +342,98 @@ local base_fields = {
 	-- [109] = S{'Automaton: "Cure" potency '},
 	-- [110] = S{'Automaton: "Fast Cast"'},
 }
+function get_stats()
+	local item_list = T{}
+	local augment_values = {}
+	for i = 1,16 do -- ipairs will be used on item_list
+		if not item_list[i] then
+			item_list[i] = {}
+			item_list[i].name = empty
+			item_list[i].slot = toslotname(i-1)
+		end
+	end
+	
+	for slot_name,gs_item_tab in pairs(table.reassign({},items.equipment)) do -- Not sure why I have to reassign it here
+		if gs_item_tab.slot ~= empty then
+			local item_tab
+			local bag_name = to_windower_bag_api(res.bags[gs_item_tab.bag_id].en)
+			if res.items[items[bag_name][gs_item_tab.slot].id] then
+				item_tab = items[bag_name][gs_item_tab.slot]
+				item_list[slot_map[slot_name]+1] = {
+					name = res.items[item_tab.id][language],
+					slot = slot_name
+					}
+				local augments = extdata.decode(item_tab).augments or {}
+				local aug_str = ''
+				for aug_ind,augment in pairs(augments) do
+					if augment ~= 'none' then aug_str = aug_str.."'"..augment:gsub("'","\\'").."'," end
+				end
+				if string.len(aug_str) > 0 then
+					item_list[slot_map[slot_name]+1].augments = aug_str
+					--augment_slots:append(item_list[slot_map[slot_name]+1].slot)
+					--~local things = {}
+					--~things:unpack(augments)
+					----print(table.unpack(augments))
+					----print(aug_str)
+					for i,v in ipairs(augment_cat) do
+						local aug_field = augment_cat[i]
+						local string
+						local aug_value = 0
+						string = tostring(augment_fields[i])
+						string = string:gsub("%{","'")
+						string = string:gsub("%}","'")
+						--print(string)
+						for w in string.gmatch(aug_str, string) do
+						-- for w in string.gmatch(aug_str, "Mag. Acc.(.%d+)") do
+							aug_value = aug_value + tonumber(w)
+						end
+						if aug_value > 0 then
+							if not augment_values[aug_field] then
+								augment_values[aug_field] = aug_value
+
+							else
+								augment_values[aug_field] = augment_values[aug_field] + aug_value
+
+							end
+						end
+					end
+				end
+				local base_stats
+				base_stats = res.item_descriptions[items[bag_name][gs_item_tab.slot].id].en:gsub("\n"," ")
+				--print(base_stats)
+				for i,v in ipairs(augment_cat) do
+					local aug_field = augment_cat[i]
+					local string
+					local aug_value = 0
+					string = tostring(base_fields[i])
+					string = string:gsub("%{"," ")
+					string = string:gsub("%}","")
+
+					for w in string.gmatch(base_stats, string) do
+						aug_value = aug_value + (tonumber(w) or 0)
+					end
+					if aug_value > 0 then
+						if not augment_values[aug_field] then
+							augment_values[aug_field] = aug_value
+
+						else
+							augment_values[aug_field] = augment_values[aug_field] + aug_value
+
+						end
+					end
+
+				end
+			else
+				msg.addon_msg(123,'You are wearing an item that is not in the resources yet.')
+			end
+		end
+	end
+	table.sort(augment_values)
+	for k,v in pairs(augment_values)	 do
+		--print(k,v)
+		msg.addon_msg(123, tostring(k)..'+'..tostring(v))
+	end
+end
 
 function export_set(options)
 	local item_list = T{}
