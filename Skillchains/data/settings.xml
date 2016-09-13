@@ -59,12 +59,15 @@
     <lygre>
         <display>
             <pos>
-                <x>844</x>
-                <y>219</y>
+                <x>610</x>
+                <y>118</y>
             </pos>
             <text>
+                <fonts>
+
+                </fonts>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>-2.7386800471527e+014</alpha>
                 </stroke>
             </text>
         </display>

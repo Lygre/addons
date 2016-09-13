@@ -293,7 +293,7 @@ function init_gear_sets()
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {
-		body="Adhemar jacket",hands="Buremte Gloves",ring1="Haoma's Ring",ring2="Kunaji ring",
+		body="Adhemar jacket",hands="Buremte Gloves",ring1="Ephedra Ring",ring2="Kunaji ring",
 		feet=gear.hercfeet_melee}
 		
 	-- Don't need any special gear for Healing Waltz.
@@ -332,15 +332,15 @@ function init_gear_sets()
 		
 	sets.precast.WS['Chant du Cygne'] = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's ring",
+		body="Abnoba kaftan",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Begrudging ring",
 		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha Tights",feet="Thereoid greaves"}
 	sets.precast.WS['Chant du Cygne'].Mod = {ammo="Jukukik feather",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body=gear.hercbody_acc,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Epona's ring",
+		body=gear.hercbody_acc,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Begrudging ring",
 		back=gear.blucape_ws,waist="Fotia Belt",legs=gear.herclegs_critdmg,feet=gear.hercfeet_crit}	
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Falcon Eye",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
-		body=gear.hercbody_ta,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Epona's Ring",
+		body=gear.hercbody_ta,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Begrudging Ring",
 		back=gear.blucape_ws,waist="Fotia Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	
 	--	Single~hit WS
@@ -479,7 +479,7 @@ function init_gear_sets()
 	
 	sets.midcast['Blue Magic'].Healing = {
 		head="Telchine Cap",neck="Incanter's Torque",ear1="Calamitous earring",ear2="Mendicant's earring",
-		body="Vrikodara jupon",hands="Telchine Gloves",ring1="Haoma's ring",ring2="Haoma's Ring",
+		body="Vrikodara jupon",hands="Telchine Gloves",ring1="Ephedra Ring",ring2="Ephedra Ring",
 		back="Solemnity cape",waist="Bishop's Sash",legs="Carmine cuisses",feet="Telchine pigaches"}
 
 	sets.midcast['Blue Magic'].SkillBasedBuff = {ammo="Mavi Tathlum",
@@ -695,7 +695,7 @@ function init_gear_sets()
 	
 		--Max Haste engaged sets, approx 43.75% haste
 	sets.engaged.DW.MaxHaste = {ammo="Ginsen",
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Telos earring",ear2="Brutal earring",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Telos Earring",ear2="Brutal earring",
 		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Hetairoi Ring",ring2="Epona's Ring",
 		back=gear.blucape_tp,waist="Windbuffet belt +1",legs="Samnuha Tights",feet=gear.hercfeet_ta }
 	sets.engaged.DW.Acc.MaxHaste = {ammo="Ginsen",
@@ -764,7 +764,7 @@ function job_precast(spell, action, spellMap, eventArgs)
 		eventArgs.cancel = true
 		return
 	else 
-		handle_equipping_gear(player.status)
+		-- handle_equipping_gear(player.status)
 		if spell.name ~= 'Ranged' and spell.type ~= 'WeaponSkill' and spell.type ~= 'Scholar' then
 			if spell.action_type == 'Ability' then
 				if buffactive.Amnesia then
@@ -782,15 +782,8 @@ function job_precast(spell, action, spellMap, eventArgs)
 			elseif spell.action_type == 'Magic' then
 				if buffactive.Silence then
 					eventArgs.cancel = true
-					echodrops = "Echo Drops"
-					numberofecho = player.inventory[echodrops].count
-					if numberofecho < 4 then 
-						add_to_chat(2,'Silenced - Consider using Echo Drops. QTY:'..player.inventory[echodrops].count..'')
-						send_command('input /item "Echo Drops" <me>')
-					else 
-						add_to_chat(3,'Silenced - Using Echo Drops.  QTY:'..numberofecho..'')
-						send_command('input /item "Echo Drops" <me>')
-					end
+					add_to_chat(3,'Silenced - Using Echo Drops.  QTY:'..numberofecho..'')
+					send_command('input /item "Echo Drops" <me>')
 					return
 				else 
 					if midaction() then
@@ -877,6 +870,9 @@ function job_buff_change(buff, gain)
 	if S{'haste','march','embrava','mighty guard'}:contains(buff:lower()) then
 		determine_haste_group()
 		handle_equipping_gear(player.status)
+		if gain then
+			add_to_chat(3,'--Buff: '..buff..' gained')
+		end
 	elseif state.Buff[buff] ~= nil then
 		state.Buff[buff] = gain
 		handle_equipping_gear(player.status)
@@ -930,34 +926,44 @@ function update_combat_form()
 end
 
 function determine_haste_group()
-
 	classes.CustomMeleeGroups:clear()
-	--Low Haste; approx 15% haste; needs ~36% DW
-	--High Haste; approx 30% haste; needs ~25% DW
-	--Max Haste; 43.75% haste; needs ~5% DW
+	-- if buffactive[680] then 
+	-- 	if buffactive.haste == 2 or buffactive[604] or buffactive[228] or buffactive.march then
+	-- 		classes.CustomMeleeGroups:append('MaxHaste')
+	-- 		add_to_chat(3,'Max Haste Mode')
 
-	-----different setup
-	if buffactive[604] then --[604] is the resource id for Mighty Guard
-		if (buffactive.haste or buffactive.march == 2) then
+	-- 	else 
+	-- 		classes.CustomMeleeGroups:append('HighHaste')
+	-- 		add_to_chat(3,'High Haste Mode')
+	-- 	end
+	if buffactive.haste then
+		if buffactive.haste == 2 or buffactive[604] or buffactive[228] or buffactive.march then
 			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
+		else 
+			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
+		end
+	elseif buffactive[604] then
+		if buffactive.march == 1 and buffactive[228] then
+			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
+		elseif buffactive.march == 2 or buffactive[228] then
+			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
 		elseif buffactive.march == 1 then
 			classes.CustomMeleeGroups:append('HighHaste')
-		else 
-			classes.CustomMeleeGroups:append('LowHaste')
-		end
-	elseif buffactive.march then
-		if buffactive.haste then
-			classes.CustomMeleeGroups:append('MaxHaste')
-		elseif buffactive.march == 2 then
-			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
 		else
 			classes.CustomMeleeGroups:append('LowHaste')
 		end
-	elseif buffactive.haste then
-		if (buffactive.haste == 2 or buffactive.march) then
+	elseif buffactive[228] then
+		if buffactive.march then
 			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
 		else
 			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
 		end
 	end
 end

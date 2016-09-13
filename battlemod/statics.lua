@@ -35,6 +35,16 @@ color_redundant = T{26,33,41,71,72,89,94,109,114,164,173,181,184,186,70,84,104,1
 block_messages = T{12}
 black_colors = T{}--352,354,356,388,390,400,402,430,432,442,444,472,474,484,486}
 
+domain_buffs = S{
+    250, -- EF Badge
+    257, -- Besieged
+    267, -- Allied Tags
+    --292, -- Pennant?
+    --475, -- Voidwatcher
+    511, -- Reive Mark
+    603, -- Elvorseal
+    } -- EF BadElvorseal, Allied Tags, EF Badge?
+
 --    resists = {85,284}
 --    immunobreaks = {653,654}
 --    complete_resists = {655,656}
@@ -237,13 +247,15 @@ default_filters = [[
             <all>false</all>
         </other_pets>
 
-        <monsters> <!-- Monster is doing something with one of the below targets -->
+        <enemies> <!-- Monster that your party has claimed doing something with one of the below targets -->
             <me> <!-- He's targeting you! -->
                 <melee>false</melee>
                 <ranged>false</ranged>
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -254,6 +266,8 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -264,6 +278,8 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -274,6 +290,8 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -284,6 +302,8 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -294,6 +314,8 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
@@ -304,16 +326,143 @@ default_filters = [[
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>
             </other_pets>
+            <enemies> <!-- He's targeting himself or another monster your party has claimed -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </enemies>
+            <monsters> <!-- He's targeting another monster -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </monsters>
+        </enemies>
+
+        <monsters> <!-- NPC not claimed to your party is doing something with one of the below targets -->
+            <me> <!-- He's targeting you! -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </me>
+            <party> <!-- He's targeting a party member -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </party>
+            <alliance> <!-- He's targeting an alliance member -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </alliance>
+            <others> <!-- He's targeting some guy nearby -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </others>
+            <my_pet> <!-- He's targeting your pet -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </my_pet>
+            <my_fellow> <!-- He's targeting your adventuring fellow -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </my_fellow>
+            <other_pets> <!-- He's targeting someone else's pet -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </other_pets>
+            <enemies> <!-- He's targeting a monster your party has claimed -->
+                <melee>false</melee>
+                <ranged>false</ranged>
+                <damage>false</damage>
+                <healing>false</healing>
+                <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
+                <readies>false</readies>
+                <casting>false</casting>
+                <all>false</all>
+            </enemies>
             <monsters> <!-- He's targeting himself or another monster -->
                 <melee>false</melee>
                 <ranged>false</ranged>
                 <damage>false</damage>
                 <healing>false</healing>
                 <misses>false</misses>
+                <items>false</items>
+                <uses>false</uses>
                 <readies>false</readies>
                 <casting>false</casting>
                 <all>false</all>

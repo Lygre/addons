@@ -274,30 +274,30 @@ end
  
 -- Called by the 'update' self-command, for common needs.
 -- Set eventArgs.handled to true if we don't want automatic equipping of gear.
-function job_update(cmdParams, eventArgs)
+-- function job_update(cmdParams, eventArgs)
 
---    get_combat_weapon()
-    display_current_job_state(eventArgs)
-end
+-- --    get_combat_weapon()
+--     display_current_job_state(eventArgs)
+-- end
  
 -- Set eventArgs.handled to true if we don't want the automatic display to be run.
-function display_current_job_state(eventArgs)
-        local defenseString = ''
-        if state.Defense.Active then
-                local defMode = state.Defense.PhysicalMode
-                if state.Defense.Type == 'Magical' then
-                        defMode = state.Defense.MagicalMode
-                end
+-- function display_current_job_state(eventArgs)
+--         local defenseString = ''
+--         if state.DefenseMode.value then
+--                 local defMode = state.Defense.PhysicalMode
+--                 if state.Defense.Type == 'Magical' then
+--                         defMode = state.Defense.MagicalMode
+--                 end
  
-                defenseString = 'Defense: '..state.Defense.Type..' '..defMode..', '
-        end
+--                 defenseString = 'Defense: '..state.Defense.Type..' '..defMode..', '
+--         end
  
-        add_to_chat(122,'Melee: '..state.OffenseMode..'/'..state.DefenseMode..', WS: '..state.WeaponskillMode..', '..defenseString..
-                'Kiting: '..on_off_names[state.Kiting])
+--         add_to_chat(122,'Melee: '..state.OffenseMode..'/'..state.DefenseMode..', WS: '..state.WeaponskillMode..', '..defenseString..
+--                 'Kiting: '..on_off_names[state.Kiting])
  
  
-        eventArgs.handled = true
-end
+--         eventArgs.handled = true
+-- end
 
 --function get_combat_weapon()
 --    if gsList:contains(player.equipment.main) then

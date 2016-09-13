@@ -108,7 +108,7 @@ function init_gear_sets()
 	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS,
 		{ammo="Yetshila",
 		head="Carmine Mask +1",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
-		body="",hands="",ring1="Hetairoi Ring",ring2="Petrov Ring",
+		body="",hands="",ring1="Hetairoi Ring",ring2="Petrov Ring",})
 	sets.precast.WS['Chant du Cygne'].Acc = {ammo="Falcon Eye",
 		head=gear.adhemarhead_melee,neck="Fotia gorget",ear1="Telos Earring",ear2="Moonshade Earring",
 		body=gear.hercbody_ta,hands=gear.herchands_crit,ring1="Hetairoi Ring",ring2="Epona's Ring",
@@ -162,10 +162,10 @@ function init_gear_sets()
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash",neck="Nodens Gorget",legs="Shedir seraweels"})
 	
-	sets.midcast['Enfeebling Magic'] = {main=gear.grio_elemental,sub="Clerisy Strap",ammo="Pemphredo tathlum",
+	sets.midcast['Enfeebling Magic'] = {main=gear.grio_elemental,sub="Clerisy Strap",ammo="Quartz tathlum +1",
 		head=gear.chirhead,neck="Incanter's Torque",ear1="Digni. Earring",ear2="Enchanter Earring +1",
 		body=gear.chirbody,hands="Kaykaus cuffs",ring1="Weatherspoon Ring",ring2="Globidonta Ring",
-		back="Sucellos's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Medium's Sabots"}
+		back="Sucellos's cape",waist="Luminary Sash",legs=gear.chirlegs,feet="Skaoi Boots"}
 
 	sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Vitivation Chapeau +1"})
 
@@ -293,7 +293,7 @@ function init_gear_sets()
 	sets.engaged.DW.Acc.MaxHaste = {ammo="Ginsen",
 		head="Carmine Mask +1",neck="Lissome Necklace",ear1="Brutal Earring",ear2="Suppanomimi",
 		body="Kaykaus Bliaut",hands="Gazu bracelet +1",ring1="Hetairoi Ring",ring2="Petrov Ring",
-		back="Bleating Mantle",waist="Reiki Yotai",legs="Carmine cuisses",feet="Carmine Greaves +1"
+		back="Bleating Mantle",waist="Reiki Yotai",legs="Carmine cuisses",feet="Carmine Greaves +1"}
 
 	sets.engaged.Defense = {}
 

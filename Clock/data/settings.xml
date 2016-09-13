@@ -119,6 +119,20 @@
         </Clock>
         <TimeZones>UTC,JST</TimeZones>
     </clipsel>
+    <deepthought>
+        <Clock>
+            <pos>
+                <x>344.47222900391</x>
+                <y>28.488822937012</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </Clock>
+        <TimeZones>UTC,JST</TimeZones>
+    </deepthought>
     <dooor>
         <Clock>
             <pos>
@@ -162,12 +176,12 @@
     <lygre>
         <Clock>
             <pos>
-                <x>186</x>
-                <y>-2</y>
+                <x>193</x>
+                <y>-1</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>2.9528555333672e+026</alpha>
+                    <alpha>-7.5297816100864e+028</alpha>
                 </stroke>
             </text>
         </Clock>

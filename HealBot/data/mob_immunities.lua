@@ -1,5 +1,4 @@
 return {
-    ['_comment'] = 'This file is automatically updated with buff IDs as immunities are discovered',
     ['Bedrock Crag'] = S{
         4,
         194
@@ -14,7 +13,11 @@ return {
         194
     },
     ['Knotted Root'] = S{
+        3,
         194
+    },
+    ['Rosulatia'] = S{
+        2
     },
     ['Sere Stump'] = S{
         194
@@ -22,5 +25,6 @@ return {
     ['Wintry Cave'] = S{
         5,
         13
-    }
+    },
+    ['_comment'] = 'This file is automatically updated with buff IDs as immunities are discovered'
 }

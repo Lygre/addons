@@ -90,6 +90,7 @@
         </tracker>
     </global>
     <lygre>
+        <LogFields>false</LogFields>
         <display>
             <text>
                 <stroke>

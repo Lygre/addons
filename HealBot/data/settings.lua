@@ -3,9 +3,9 @@ return {
         ['curaga'] = false
     },
     ['healing'] = {
-        ['curaga_min_targets'] = 3,
+        ['curaga_min_targets'] = 2,
         ['min'] = {
-            ['curaga'] = 2,
+            ['curaga'] = 3,
             ['cure'] = 3,
             ['waltz'] = 2,
             ['waltzga'] = 1
@@ -15,6 +15,9 @@ return {
     ['nuke'] = {
         ['name'] = 'Stone'
     },
+    ['ws'] = {
+        ['name'] = 'Chant du Cygne'
+},
     ['textBoxes'] = {
         ['actionInfo'] = {
             ['visible'] = true,

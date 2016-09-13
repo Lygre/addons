@@ -195,9 +195,10 @@ function define_global_sets()
 	gear.odysslegs_acc = {name="Odyssean Cuisses", augments={'Accuracy+8 Attack+8','"Store TP"+3','VIT+5','Accuracy+11','Attack+6',}}
     	gear.odyssfeet_acc = {name="Odyssean Greaves", augments={'Accuracy+25','Potency of "Cure" effect received+3%','Attack+9',}}
 	
-	--[[gear.blucape_dw = { name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10',}}
-	gear.blucape_tp = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}]]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	gear.zadora = {}
 
+	gear.zadora.merlhead_fc = { name="Merlinic Hood", augments={'Pet: Phys. dmg. taken -1%','Pet: INT+5','"Fast Cast"+6','Accuracy+16 Attack+16',}}
 	
 end
 

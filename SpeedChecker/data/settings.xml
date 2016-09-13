@@ -17,8 +17,8 @@
         </flags>
         <padding>0</padding>
         <pos>
-            <x>0</x>
-            <y>0</y>
+            <x>137.48374938965</x>
+            <y>26.775001525879</y>
         </pos>
         <text>
             <alpha>255</alpha>
@@ -31,7 +31,7 @@
             <red>255</red>
             <size>12</size>
             <stroke>
-                <alpha>6.9836341202394e+016</alpha>
+                <alpha>-1.780826700661e+019</alpha>
                 <blue>0</blue>
                 <green>0</green>
                 <red>0</red>
@@ -44,5 +44,10 @@
             <x>-1</x>
             <y>1</y>
         </pos>
+        <text>
+            <stroke>
+                <alpha>-1.780826700661e+019</alpha>
+            </stroke>
+        </text>
     </razriel>
 </settings>

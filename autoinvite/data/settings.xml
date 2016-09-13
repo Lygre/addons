@@ -11,4 +11,8 @@
         <keywords>inv</keywords>
         <mode>blacklist</mode>
     </lygre>
+    <Zadora>
+                <keywords>inv</keywords>
+        <mode>blacklist</mode>
+ </Zadora>
 </settings>

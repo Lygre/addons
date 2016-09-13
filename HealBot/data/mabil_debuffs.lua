@@ -64,5 +64,20 @@ return {
     },
     ['Yawn'] = S{
         'sleep'
-    }
+    },
+    ['Last Laugh'] = S{
+        'doom'
+    },
+    ['Tachi: Gekko'] = S{'silence'},
+    ['Miasma'] = S{
+        'slow',
+        'plague',
+        'poison'
+    },
+    ['Wrath of Zeus'] = S{'silence'},
+    ['Deafening Tantara'] = S{'silence'},
+    ['Stifling Tantara'] = S{'silence'},
+    ['Silence Seal'] = S{'silence'},
+    ['Eternal Damnation'] = S{'doom'},
+    ['Exponential Burst'] = S{'magic def. down'}
 }

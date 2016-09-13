@@ -111,7 +111,7 @@ function init_gear_sets()
 	
 
 	-- Waltz set (chr and vit)
-	sets.precast.Waltz = {ammo="Sonia's Plectrum",
+	sets.precast.Waltz = {--ammo="Sonia's Plectrum",
 		head="Horos Tiara",ear1="Roundel Earring",
 		body="Maxixi Casaque",hands="Buremte Gloves",ring1="Asklepian Ring",
 		back=gear.dnccape_tp,waist="Caudata Belt",legs="Samnuha Tights",feet="Rawhide Boots"}
@@ -161,9 +161,9 @@ function init_gear_sets()
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Falcon Eye", back=gear.dnccape_tp})
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {neck="Houyi's Gorget",
-		hands="Adhemar Wristbands",ring1="Stormsoul Ring",
-		waist="Caudata Belt",legs="Samnuha Tights"})
+	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {
+		hands="Adhemar Wristbands",
+		})
 	sets.precast.WS['Exenterator'].Acc = set_combine(sets.precast.WS['Exenterator'], {ammo="Falcon Eye", back=gear.dnccape_tp})
 	sets.precast.WS['Exenterator'].Fodder = set_combine(sets.precast.WS['Exenterator'], {waist=gear.ElementalBelt})
 

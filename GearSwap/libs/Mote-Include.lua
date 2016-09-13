@@ -53,6 +53,7 @@ function init_include()
 	state.MagicalDefenseMode  = M{['description'] = 'Magical Defense Mode', 'MDT'}
 
 	state.MagicBurst		  = M(false, 'Magic Burst')
+	state.ProcWeapon = M{['description'] = 'Proc Weapon Mode'}
 	state.Kiting              = M(false, 'Kiting')
 	state.SelectNPCTargets    = M(false, 'Select NPC Targets')
 	state.PCTargetMode        = M{['description'] = 'PC Target Mode', 'default', 'stpt', 'stal', 'stpc'}

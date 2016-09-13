@@ -27,16 +27,39 @@ function job_setup()
 	state.PhysicalDefenseMode:options('PDT', 'Evasion')
 	state.MagicBurst = M(false, 'Magic Burst')
 	state.TrustMode = M(false, 'Trust Mode')
+	state.HasteMode = M{['description'] = 'Haste Mode', '1', '2'}
 
+
+	state.ProcWeapon:options('None','Katana','Great Katana','Sword','Dagger','Staff','Club','Polearm','Scythe')
+
+	ele_weaponskills = {
+		['Katana'] = {'Blade: Ei'},
+		['Great Katana'] = {'Tachi: Jinpu', 'Tachi: Koki'},
+		['Sword'] = {'Red Lotus Blade', 'Seraph Blade'},
+		['Dagger'] = {'Cyclone', 'Energy Drain'},
+		['Staff'] = {'Earth Crusher','Sunburst'},
+		['Club'] = {'Seraph Strike'},
+		['Polearm'] = {'Raiden Thrust'},
+		['Scythe'] = {'Shadow of Death'}
+}
+	proc_weapons = {
+		['Katana'] = {'Heishi Shorinken'},
+		['Great Katana'] = {'Ark Tachi'},
+		['Sword'] = {'Ark Saber'},
+		['Dagger'] = {'Atoyac'},
+		['Staff'] = {'Treat Staff II'},
+		['Club'] = {'Mafic Cudgel'},
+		['Polearm'] = {'Pitchfork'},
+		['Scythe'] = {'Ark Scythe'}
+}
 	info.LugraWSs = L{'Blade: Hi','Blade: Shun','Blade: Kamu'}
 	organizer_items = {
 		heishi="Heishi Shorinken",
-		mainkt={name="Kanaria", augments={'STR+3','Accuracy+15','Attack+15','DMG:+18',}},
-		subkt="Achiuchikapu",
+		mainkt="Taka",
 		selftools="Shikanofuda",
 		debufftools="Chonofuda",
 		nuketools="Inoshishinofuda",
-		cpring="Capacity Ring"
+		-- cpring="Capacity Ring"
 		
 		}
 		
@@ -120,12 +143,12 @@ function init_gear_sets()
 		back=gear.nincape_wsd,legs="Hattori hakama +1"}) 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Blade: Jin'] = set_combine(sets.precast.WS,
-		{ear1="Brutal Earring",ear2="Moonshade Earring",ring1="Ifrit's ring +1",ring2="Ifrit's ring +1",
+		{ear1="Brutal Earring",ear2="Moonshade Earring",ring1="Ifrit ring +1",ring2="Ifrit ring +1",
 		hands="Kobo Kote",
 		back="Rancorous Mantle"})
 	sets.precast.WS['Blade: Jin'].Acc = set_combine(sets.precast.WS,
 		{ear1="Brutal Earring",ear2="Moonshade Earring",
-		hands="Kobo Kote",ring1="Ifrit's ring +1",ring2="Ifrit's ring +1",
+		hands="Kobo Kote",ring1="Ifrit ring +1",ring2="Ifrit ring +1",
 		back="Rancorous Mantle"})
 	sets.precast.WS['Blade: Hi'] = set_combine(sets.precast.WS,
 		{head=gear.adhemarhead_melee,ear1="Ishvara earring",
@@ -205,15 +228,15 @@ function init_gear_sets()
 	-- Defense sets
 	sets.defense.Evasion = {}
 	
-	sets.defense.PDT = {ammo="Amar Cluster",
+	sets.defense.PDT = {ammo="Staunch tathlum",
 		head="Genmei kabuto",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Impregnable Earring",
 		body="Reiki osode",hands="Macabre gauntlets",ring1="Defending Ring",ring2=gear.DarkRing.PDT,
 		back="Solemnity Cape",waist="Flume belt +1",legs="Samnuha tights",feet="Amm greaves"}
 
-	sets.defense.MDT = {ammo="Amar Cluster",
+	sets.defense.MDT = {ammo="Staunch tathlum",
 		head="Skormoth mask",neck="Loricate torque +1",ear1="Genmei Earring",ear2="Sanare Earring",
-		body="Onca suit",hands=empty,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
-		back="Solemnity Cape",waist="Flume belt +1",legs=empty,feet=empty}
+		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2=gear.DarkRing.PDT,
+		back="Solemnity Cape",waist="Flume belt +1",legs=gear.herclegs_dt,feet="Ahosi Leggings"}
 
 
 	sets.Kiting = {ring2="Hachiya Kyahan"}
@@ -272,7 +295,7 @@ function init_gear_sets()
 	sets.engaged.Acc.HighHaste = {ammo="Happo Shuriken",
 		head="Ryuo Somen",neck="Combatant's torque",ear1="Zennaroi earring",ear2="Telos Earring",
 		body="Adhemar jacket",hands=gear.herchands_acc,ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Yokaze Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
+		back="Grounded Mantle +1",waist="Windbuffet belt +1",legs="Samnuha tights",feet="Hiza. Sune-ate +1"}
 	sets.engaged.PDT.HighHaste = {ammo="Happo Shuriken",
 		head="Ryuo somen",neck="agitator's collar",ear1="genmei earring",ear2="impregnable Earring",
 		body="Adhemar jacket",hands=gear.herchands_melee,ring1="Rajas Ring",ring2="Defending ring",
@@ -290,8 +313,8 @@ function init_gear_sets()
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.Acc.MaxHaste = {ammo="Happo Shuriken",
 		head=gear.adhemarhead_melee,neck="Lissome Necklace",ear1="Zennaroi earring",ear2="Telos Earring",
-		body=gear.hercbody_ta,hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
+		body="Sayadio's Kaftan",hands="Adhemar wristbands",ring1="Petrov Ring",ring2="Epona's Ring",
+		back="Grounded Mantle +1",waist="Olseni Belt",legs="Samnuha tights",feet=gear.hercfeet_ta }
 	sets.engaged.PDT.MaxHaste = {ammo="Happo Shuriken",
 		head="Ynglinga Sallet",neck="Asperity necklace",ear1="Brutal earring",ear2="Telos earring",
 		body=gear.hercbody_dt,hands=gear.herchands_dt,ring1="Defending Ring",ring2="Epona's Ring",
@@ -305,7 +328,7 @@ function init_gear_sets()
 	-- Custom buff sets
 	--------------------------------------
 	sets.WS_earrings = {ear1="Lugra Earring +1",ear2="Lugra Earring"}
-	sets.buff.Migawari = {body="Hattori Ningi +1"}
+	sets.buff.Migawari = {body="Hattori Ningi +1",back=gear.nincape_wsd}
 	sets.buff.Doom = {ring2="Saida Ring"}
 	sets.buff.Yonin = {legs="Hattori hakama +1"}
 	sets.buff.Innin = {}
@@ -349,11 +372,11 @@ end
 -- buff == buff gained or lost
 -- gain == true if the buff was gained, false if it was lost.
 function job_buff_change(buff, gain)
-	-- If we gain or lose any haste buffs, adjust which gear set we target.
-	if S{'haste','march','embrava','mighty guard'}:contains(buff:lower()) then
+	if S{'haste','march','embrava','mighty guard','Indi-Haste',''}:contains(buff:lower()) then
 		determine_haste_group()
 		handle_equipping_gear(player.status)
 	elseif state.Buff[buff] ~= nil then
+		state.Buff[buff] = gain
 		handle_equipping_gear(player.status)
 	end
 end
@@ -412,6 +435,44 @@ function job_update(cmdParams, eventArgs)
 	determine_haste_group()
 end
 
+function job_state_change(stateField, newValue, oldValue)
+	if stateField == 'Proc Weapon Mode' then
+		if newValue == 'Katana' then
+			equip({main=proc_weapons[state.ProcWeapon.value][1],sub="Taka"})
+		elseif newValue == 'None' then
+			return
+		else
+			equip({main=proc_weapons[state.ProcWeapon.value][1]})
+			-- print(proc_weapons[state.ProcWeapon.value][1])
+		end
+	end
+	if stateField == 'Haste Mode' then
+		determine_haste_group()
+	end
+end
+
+function job_self_command(cmdParams, eventArgs)
+	if cmdParams[1] == 'elews1' then
+		elews1()
+	elseif cmdParams[1] == 'elews2' then
+		elews2()
+	end
+end
+function elews1()
+	if state.ProcWeapon.value ~= 'None' then
+		send_command('input /'..ele_weaponskills[state.ProcWeapon.value][1]..'')
+	end
+end
+function elews2()
+	if state.ProcWeapon.value ~= 'None' then
+		if #ele_weaponskills[state.ProcWeapon.value] > 1 then
+			send_command('input /'..ele_weaponskills[state.ProcWeapon.value][2]..'')
+		else 
+			return
+		end
+	end
+end
+
 -------------------------------------------------------------------------------------------------------------------
 -- Utility functions specific to this job.
 -------------------------------------------------------------------------------------------------------------------
@@ -444,57 +505,89 @@ end
 	-- 7% DW (earrings) - Embrava Haste (specialized situation with embrava and haste, but no marches)
 	-- 0 DW - Max Haste
 function determine_haste_group()
-	--local total_haste 
-
 	classes.CustomMeleeGroups:clear()
-	--[[if player.main_job == 'NIN' then 
-		if state.TrustMode.value then
-			--Different set of rules
-		else]] 
-			--[[if buffactive.haste == 2 then
+	if state.HasteMode.value == '2' then
+		if buffactive[680] then 
+			if buffactive[33] or buffactive[604] or buffactive[228] or buffactive.march then
 				classes.CustomMeleeGroups:append('MaxHaste')
-			elseif buffactive.haste >= 1 and buffactive.march > 1 then
-				classes.CustomMeleeGroups:append('MaxHaste')
-			elseif buffactive.haste >= 1 and buffactive.march >= 1 and buffactive[604] then
-				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
 
-			end]]
-			--Original setup/Haste check
-			--[[if buffactive.embrava and (buffactive.march == 2 or (buffactive.march and buffactive.haste)) then
-				classes.CustomMeleeGroups:append('MaxHaste')
-			elseif buffactive.march == 2 and buffactive.haste then
-				classes.CustomMeleeGroups:append('MaxHaste')
-			elseif buffactive.embrava and (buffactive.haste or buffactive.march) then
-				classes.CustomMeleeGroups:append('EmbravaHaste')
-			elseif buffactive.march == 1 and buffactive.haste == 1 and buffactive['haste samba'] then
+			else 
 				classes.CustomMeleeGroups:append('HighHaste')
-			elseif buffactive.march == 2 then
+				add_to_chat(3,'High Haste Mode')
+			end
+		elseif buffactive[33] then
+			if buffactive[604] or buffactive[228] or buffactive.march then
 				classes.CustomMeleeGroups:append('MaxHaste')
-			elseif buffactive.haste == 2 then
+				add_to_chat(3,'Max Haste Mode')
+			else 
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			end
+		elseif buffactive[604] then
+			if buffactive.march == 1 and buffactive[228] then
 				classes.CustomMeleeGroups:append('MaxHaste')
-			end]]
-
-	-----different setup
-	if buffactive[604] then --[604] is the resource id for Mighty Guard
-		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march == 1 then
-			classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'Max Haste Mode')
+			elseif buffactive.march == 2 or buffactive[228] then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			elseif buffactive.march == 1 then
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			else
+				classes.CustomMeleeGroups:append('LowHaste')
+			end
+		elseif buffactive[228] then
+			if buffactive.march then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			else
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			end
 		end
-		if buffactive.haste or buffactive.march == 2 then
-			classes.CustomMeleeGroups:append('MaxHaste')
-		end
-	elseif buffactive.march == 1 then
-		classes.CustomMeleeGroups:append('LowHaste')
-		if buffactive.march == 2 then
-			classes.CustomMeleeGroups:append('HighHaste')
-		end
-		if buffactive.haste then
-			classes.CustomMeleeGroups:append('MaxHaste')
-		end
-	elseif buffactive.haste then
-		classes.CustomMeleeGroups:append('HighHaste')
-		if buffactive.haste == 2 or buffactive.march then
-			classes.CustomMeleeGroups:append('MaxHaste')
+	elseif state.HasteMode.value == '1' then
+		if buffactive[680] then 
+			if buffactive[33] or buffactive[604] or buffactive[228] or buffactive.march then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			else 
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			end
+		elseif buffactive[33] then
+			if buffactive[228] or buffactive.march == 2 then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			elseif buffactive[604] or buffactive.march == 1 then
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			else 
+				classes.CustomMeleeGroups:append('LowHaste')
+				add_to_chat(3,'Low Haste Mode')
+			end
+		elseif buffactive[604] then
+			if buffactive.march == 1 and buffactive[228] then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			elseif buffactive.march == 2 or buffactive[228] then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			elseif buffactive.march == 1 then
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			else
+				classes.CustomMeleeGroups:append('LowHaste')
+				add_to_chat(3,'Low Haste Mode')
+			end
+		elseif buffactive[228] then
+			if buffactive.march then
+				classes.CustomMeleeGroups:append('MaxHaste')
+				add_to_chat(3,'Max Haste Mode')
+			else
+				classes.CustomMeleeGroups:append('HighHaste')
+				add_to_chat(3,'High Haste Mode')
+			end
 		end
 	end
 end

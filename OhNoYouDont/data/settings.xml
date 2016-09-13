@@ -192,6 +192,19 @@
 					<9>Yama's Judgment</9>
 				</stun>
 			</vinipata>
+			<vinipata2>
+				<stun>
+					<1>Yaksha Stance</1>
+					<2>Raksha: Judgment</2>
+					<3>Raksha: Illusion</3>
+					<4>Raksha: Vengeance</4>
+					<5>Yaksha: Damnation</5>
+					<6>Yaksha: Bliss</6>
+					<7>Yaksha: Oblivion</7>
+					<8>Sakra Storm</8>
+					<9>Yama's Judgment</9>
+				</stun>
+			</vinipata2>
 			<albumen>
 				<stun>
 					<1>Petalback Spin</1>
@@ -225,7 +238,17 @@
 					<4>Unceasing Dread</4>
 				</stun>
 			 </arciela>
-					   
+			<dullahan>
+				<stun>
+					<1>Noahionto</1>
+					<2>Atramentous Libations</2>
+				</stun>
+			</dullahan>	   
+			<gomberry>
+				<stun>
+					<1>Everyone's Rancor</1>
+				</stun>
+			</gomberry>
 		</profile>
 	</global>
 </settings>

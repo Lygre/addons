@@ -1,0 +1,17 @@
+sets.exported={
+    main="Idris",
+    sub="Genmei Shield",
+    range="Dunna",
+    head={ name="Merlinic Hood", augments={'Pet: Phys. dmg. taken -1%','Pet: INT+5','"Fast Cast"+6','Accuracy+16 Attack+16',}},
+    body="Councilor's Garb",
+    hands="Geo. Mitaines +1",
+    legs="Assid. Pants +1",
+    feet="Crier's Gaiters",
+    neck="Loricate Torque +1",
+    waist="Fucho-no-Obi",
+    left_ear="Genmei Earring",
+    right_ear="Etiolation Earring",
+    left_ring="Defending Ring",
+    right_ring="Rahab Ring",
+    back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +18','Pet: Damage taken -2%',}},
+}

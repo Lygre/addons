@@ -140,6 +140,23 @@
             </text>
         </display>
     </clipsel>
+    <deepthought>
+        <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
+            <pos>
+                <x>344.59252929688</x>
+                <y>25.042054176331</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </deepthought>
     <dooor>
         <display>
             <bg>
@@ -203,7 +220,7 @@
             </pos>
             <text>
                 <stroke>
-                    <alpha>-3.183780379896e+038</alpha>
+                    <alpha>-1.3461821381158e+048</alpha>
                 </stroke>
             </text>
         </display>
@@ -266,12 +283,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>996</x>
-                <y>217</y>
+                <x>821</x>
+                <y>275</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>16516605</alpha>
                 </stroke>
             </text>
         </display>

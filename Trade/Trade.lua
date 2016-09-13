@@ -5,7 +5,9 @@ packets = require('packets')
 whitelist = L{
     'Zadora','Tavaris','Rheita',
     'Ashela',
-    'Vaantalus','Brrrr','Lyger','Lygre',
+    'Brrrr','Lyger','Lygre',
+    'Deepthought',
+    'Vaantalus',
     'Llewelyn','Neimii','Stani','Tinkil','Tinkitot','Zombies','Blizzy','Speedyjim',
 }
 windower.register_event('addon command', function(name,bool)

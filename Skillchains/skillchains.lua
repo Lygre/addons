@@ -205,6 +205,9 @@ npc_move = L{
     --[3356] = {id=3356,trust='Abenzio',en='Uppercut',skillchain_a='',skillchain_b='',skillchain_c=''},
     --[3357] = {id=3357,trust='Abenzio',en='Antiphase',skillchain_a='',skillchain_b='',skillchain_c=''},
     --[3358] = {id=3358,trust='Abenzio',en='Blank Gaze',skillchain_a='',skillchain_b='',skillchain_c=''},
+    -- [3411] = {id=3411,trust='Amchuchu',en='Power Slash',skillchain_a='Transfixion',skillchain_b='',skillchain_c=''},
+    -- [3412] = {id=3412,trust='Amchuchu',en='Freezebite',skillchain_a='Induration',skillchain_b='Detonation',skillchain_c=''},
+
     [3418] = {id=3418,trust='Tenzen',en='Amatsu: Torimai',skillchain_a='Transfixion',skillchain_b='Scission',skillchain_c=''},
     [3419] = {id=3419,trust='Tenzen',en='Amatsu: Kazakiri',skillchain_a='Scission',skillchain_b='Detonation',skillchain_c=''},
     [3420] = {id=3420,trust='Tenzen',en='Amatsu: Yukiarashi',skillchain_a='Induration',skillchain_b='Detonation',skillchain_c=''},
@@ -220,6 +223,24 @@ npc_move = L{
     [3493] = {id=3493,trust='Lion',en='Powder Keg',skillchain_a='Fusion',skillchain_b='Compression',skillchain_c=''},
     [3494] = {id=3494,trust='Lion',en='Walk the Plank',skillchain_a='Light',skillchain_b='Distortion',skillchain_c=''},
     [3495] = {id=3495,trust='Zeid',en='Ground Strike',skillchain_a='Fragmentation',skillchain_b='Distortion',skillchain_c=''},
+
+    [3537] = {id=3537,trust='Robel-Akbel',en='Quietus Sphere',skillchain_a='Darkness',skillchain_b='Gravitation',skillchain_c=''},
+    [3538] = {id=3538,trust='Robel-Akbel',en='Null Blast',skillchain_a='Fragmentation',skillchain_b='',skillchain_c=''},
+
+    -- [3580] = {id=3580,trust='Arciela',en='Harmonic Displacement',skillchain_a='Reverberation',skillchain_b='',skillchain_c=''},
+    -- [3582] = {id=3582,trust='Arciela',en='Darkest Hour',skillchain_a='Gravitation',skillchain_b='',skillchain_c=''},
+    -- [3585] = {id=3585,trust='Arciela',en="Naakual's Vengeance",skillchain_a='Induration',skillchain_b='',skillchain_c=''},
+    -- [3700] = {id=3700,trust='Arciela',en='Harmonic Displacement',skillchain_a='Reverberation',skillchain_b='',skillchain_c=''},
+    -- [3702] = {id=3702,trust='Arciela',en='Darkest Hour',skillchain_a='Gravitation',skillchain_b='',skillchain_c=''},
+    -- [3705] = {id=3705,trust='Arciela',en="Naakual's Vengeance",skillchain_a='Induration',skillchain_b='',skillchain_c=''},
+
+    [3732] = {id=3732,trust='Iroha',en="Amatsu: Fuga",skillchain_a='Impaction',skillchain_b='',skillchain_c=''},
+    [3733] = {id=3733,trust='Iroha',en="Amatsu: Kyori",skillchain_a='Induration',skillchain_b='',skillchain_c=''},
+    [3734] = {id=3734,trust='Iroha',en="Amatsu: Hanadoki",skillchain_a='Reverberation',skillchain_b='Scission',skillchain_c=''},
+    [3735] = {id=3735,trust='Iroha',en="Amatsu: Choun",skillchain_a='Liquefaction',skillchain_b='',skillchain_c=''},
+    [3736] = {id=3736,trust='Iroha',en="Amatsu: Gachirin",skillchain_a='Light',skillchain_b='Fragmentation',skillchain_c=''},
+    [3737] = {id=3737,trust='Iroha',en="Amatsu: Suien",skillchain_a='Fusion',skillchain_b='Liquefaction',skillchain_c=''},
+
     -- Jug Pet
     [3840] = {id=3840,en='Foot Kick',skillchain_a='Reverberation',skillchain_b=''},
     [3842] = {id=3842,en='Whirl Claws',skillchain_a='Impaction',skillchain_b=''},
@@ -287,9 +308,9 @@ function apply_props(packet,abil,ability)
         resonating[mob_id] = {active={abil.skillchain_a,abil.skillchain_b,abil.skillchain_c},timer=now,ws=abil,chain=false,step=1}
     elseif L{317}:contains(packet['Target 1 Action 1 Message']) then
         resonating[mob_id] = {active={abil.skillchain_a},timer=now,ws=abil,chain=false,step=1}
-    elseif ability == 'spells' and chain_ability.sch[packet.Actor] then
-        resonating[mob_id] = {active={active},timer=now,ws=abil,chain=false,step=1}
-        chain_ability.sch[packet.Actor] = nil
+    -- elseif ability == 'spells' and chain_ability.sch[packet.Actor] then
+    --     resonating[mob_id] = {active={active},timer=now,ws=abil,chain=false,step=1}
+    --     chain_ability.sch[packet.Actor] = nil
     elseif ability == 'blue_magic' and packet['Target 1 Action 1 Message'] == 2 and 
     (chain_ability.azure[packet.Actor] or chain_ability.blu[packet.Actor]) then
         resonating[mob_id] = {active={abil.skillchain_a,abil.skillchain_b},timer=now,ws=abil,chain=false,step=1}
@@ -435,9 +456,9 @@ windower.register_event('incoming chunk', function(id,original,modified,injected
             if abil and abil.skill == 43 then
                 abil = blue_magic[packet.Param]
                 apply_props(packet,abil,'blue_magic')
-            elseif abil and abil.skill == 36 then
-                abil.skillchain_a = elements[abil.element].sc
-                apply_props(packet,abil,'spells')
+            -- elseif abil and abil.skill == 36 then
+            --     abil.skillchain_a = elements[abil.element].sc
+            --     apply_props(packet,abil,'spells')
             end
         -- Job Ability
         elseif packet['Category'] == 6 then

@@ -18,8 +18,8 @@ end
 
 -- Setup vars that are user-independent.
 function job_setup()
-state.Buff['Afflatus Solace'] = buffactive['Afflatus Solace'] or false
-state.Buff['Afflatus Misery'] = buffactive['Afflatus Misery'] or false
+	state.Buff['Afflatus Solace'] = buffactive['Afflatus Solace'] or false
+	state.Buff['Afflatus Misery'] = buffactive['Afflatus Misery'] or false
 end
 
 
@@ -113,7 +113,7 @@ gear.default.obi_back = "Mending Cape"
 
 sets.midcast.CureWithLightWeather = {main="Chatoyant Staff",sub="Achaq Grip",ammo="Psilomene",
 	head="Ebers cap +1",neck="Incanter's torque",ear1="Nourishing earring",ear2="Mendi. earring",
-	body="Ebers Bliaud +1",hands="Weather. cuffs",ring1="Sirona's Ring",ring2="Weatherspoon Ring",
+	body="Ebers Bliaud +1",hands="Kaykaus cuffs",ring1="Sirona's Ring",ring2="Weatherspoon Ring",
 	back="Solemnity Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
 
 sets.midcast.CureSolace = {ammo="Hydrocera",
@@ -121,7 +121,7 @@ sets.midcast.CureSolace = {ammo="Hydrocera",
 	sub="Sors shield",
 	head="Vanya Hood",
 	body="Ebers Bliaud +1",
-	hands="Weather. Cuffs",
+	hands="Kaykaus Cuffs",
 	legs="Ebers Pantaloons +1",
 	feet="Vanya Clogs",
 	neck="Phalaina Locket",
@@ -137,7 +137,7 @@ sets.midcast.Cure = {
 	sub="Achaq Grip",
 	head="Vanya Hood",
 	body="Ebers Bliaud +1",
-	hands="Weather. Cuffs",
+	hands="Kaykaus Cuffs",
 	legs="Ebers Pantaloons +1",
 	feet="Vanya Clogs",
 	neck="Phalaina Locket",
@@ -153,10 +153,10 @@ sets.midcast.Curaga = {
 	sub="Achaq Grip",
 	head="Vanya Hood",
 	body="Ebers Bliaud +1",
-	hands="Weather. Cuffs",
+	hands="Kaykaus Cuffs",
 	legs="Ebers Pantaloons +1",
-	feet="Vanya Clogs",
-	neck="Phalaina Locket",
+	feet="Kaykaus Boots",
+	neck="Incanter's Torque",
 	waist="Luminary Sash",
 	left_ear="Nourish. Earring",
 	right_ear="Mendi. Earring",
@@ -174,15 +174,21 @@ sets.midcast.StatusRemoval = set_combine(sets.midcast.CureSolace,{main="Ababinil
 -- 110 total Enhancing Magic Skill; caps even without Light Arts
 sets.midcast['Enhancing Magic'] = {main="Beneficus",sub="Vivid Strap +1",
 	head="Umuthi Hat",neck="Incanter's Torque",
-	body="Manasa Chasuble",hands="Chironic Gloves",
-	back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Orison Duckbills +2"}
+	body="Telchine Chasuble",hands="Chironic Gloves",
+	back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Kaykaus Boots"}
 
-sets.midcast.Stoneskin = {}
+sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],{neck="Nodens Gorget",waist="Siegel Sash"})
 
-sets.midcast.Auspice = {hands="Chironic Gloves",feet="Orison Duckbills +2"}
+sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'],{hands="Chironic Gloves",feet="Orison Duckbills +2"})
 
-sets.midcast.BarElement = {}
+sets.midcast.BarElement = set_combine(sets.midcast['Enhancing Magic'],{
+	head="Ebers Cap +1",body="Ebers Bliaud +1",legs="Ebers Pantaloons +1"
+	})
 
+sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],{head="Chironic Hat"})
+
+
+----Make soon
 sets.midcast.Regen = {
 	main="Bolelabunga",
 	head="Vanya Hood",
@@ -222,7 +228,7 @@ sets.resting = {}
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 sets.idle = {
 	main="Bolelabunga",
-	sub="Sors shield",
+	sub="Genmei shield",
 	head="Befouled Crown",
 	body="Ebers Bliaud +1",
 	hands="Chironic Gloves",
@@ -257,7 +263,6 @@ sets.idle.Town = {
 	right_ring="Weather. Ring",
 	back="Solemnity Cape",}
 
-sets.idle.Weak = {}
 
 -- Defense sets
 

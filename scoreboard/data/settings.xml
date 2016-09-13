@@ -16,7 +16,7 @@
         <combinepets>true</combinepets>
         <display>
             <bg>
-                <alpha>200</alpha>
+                <alpha>90</alpha>
                 <blue>0</blue>
                 <green>0</green>
                 <red>0</red>
@@ -66,6 +66,9 @@
     </global>
     <antrax>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -80,6 +83,9 @@
     </antrax>
     <brrrr>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -94,6 +100,9 @@
     </brrrr>
     <chronoviper>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -108,6 +117,9 @@
     </chronoviper>
     <clipsel>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -118,9 +130,13 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </clipsel>
     <dooor>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -135,6 +151,9 @@
     </dooor>
     <doroti>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -149,6 +168,9 @@
     </doroti>
     <lyger>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -164,18 +186,22 @@
     <lygre>
         <display>
             <pos>
-                <x>888</x>
-                <y>198</y>
+                <x>179</x>
+                <y>116</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-2.0702531920274e+043</alpha>
+                    <alpha>-3.7012200523206e+062</alpha>
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </lygre>
     <mexico>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -190,6 +216,9 @@
     </mexico>
     <nacholibre>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -204,6 +233,9 @@
     </nacholibre>
     <razriel>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -214,16 +246,20 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </razriel>
     <redcurrybun>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>1.2485413254494e+036</alpha>
+                    <alpha>8.1186399687348e+040</alpha>
                 </stroke>
             </text>
         </display>
@@ -231,6 +267,9 @@
     </redcurrybun>
     <rheita>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -241,9 +280,13 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </rheita>
     <salmahayek>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -258,6 +301,9 @@
     </salmahayek>
     <tavaris>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -268,9 +314,13 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </tavaris>
     <zadora>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>
@@ -281,9 +331,13 @@
                 </stroke>
             </text>
         </display>
+        <visible>true</visible>
     </zadora>
     <zadorus>
         <display>
+            <bg>
+                <alpha>200</alpha>
+            </bg>
             <pos>
                 <x>500</x>
                 <y>100</y>

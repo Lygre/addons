@@ -51,11 +51,12 @@
     </antrax>
     <ashela>
         <pos>
-            <x>358</x>
+            <x>349</x>
+            <y>18</y>
         </pos>
         <text>
             <stroke>
-                <alpha>16516605</alpha>
+                <alpha>-4211734020</alpha>
             </stroke>
         </text>
     </ashela>
@@ -92,6 +93,17 @@
             </stroke>
         </text>
     </clipsel>
+    <deepthought>
+        <pos>
+            <x>272.90132141113</x>
+            <y>27.208139419556</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>-4211734020</alpha>
+            </stroke>
+        </text>
+    </deepthought>
     <dooor>
         <pos>
             <x>547</x>

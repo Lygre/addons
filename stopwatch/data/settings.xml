@@ -50,6 +50,17 @@
             </stroke>
         </text>
     </antrax>
+    <ashela>
+        <pos>
+            <x>442</x>
+            <y>17</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </ashela>
     <chronoviper>
         <pos>
             <x>380</x>
@@ -61,6 +72,17 @@
             </stroke>
         </text>
     </chronoviper>
+    <deepthought>
+        <pos>
+            <x>202.11267089844</x>
+            <y>25.477939605713</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>-4211734020</alpha>
+            </stroke>
+        </text>
+    </deepthought>
     <dooor>
         <pos>
             <x>467</x>
@@ -179,12 +201,12 @@
     </tavaris>
     <zadora>
         <pos>
-            <x>88</x>
-            <y>1</y>
+            <x>319.63000106812</x>
+            <y>0.66666668653488</y>
         </pos>
         <text>
             <stroke>
-                <alpha>16516605</alpha>
+                <alpha>-4211734020</alpha>
             </stroke>
         </text>
     </zadora>
