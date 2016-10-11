@@ -1,7 +1,7 @@
 ---- Lygre's BLM.lua
 ---- VERSION 1.1.2
 -- This is lua is built using Mote's modified includes, 
--- which you can find in my GearSwap/libs folder here: https://github.com/Lygre/addons/tree/mac-blm/GearSwap/libs
+-- which you can find in my GearSwap/libs folder here: https://github.com/Lygre/addons/tree/live/GearSwap/libs
 
 ---- Macro/Keybind/Toggles/SelfCommands you may need
 -- Magic Burst: /console gs c toggle MagicBurst
