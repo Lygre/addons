@@ -51,7 +51,6 @@
     </global>
     <antrax>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -68,7 +67,6 @@
     </antrax>
     <ashela>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -85,7 +83,6 @@
     </ashela>
     <brrrr>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -102,7 +99,6 @@
     </brrrr>
     <chronoviper>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -119,7 +115,6 @@
     </chronoviper>
     <clipsel>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -140,19 +135,18 @@
         </strings>
         <text_box_settings>
             <pos>
-                <x>198.96696472168</x>
-                <y>1.2946376800537</y>
+                <x>58.207180023193</x>
+                <y>-3.0770411491394</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>1073992175355</alpha>
+                    <alpha>-2.7386800471527e+014</alpha>
                 </stroke>
             </text>
         </text_box_settings>
     </deepthought>
     <dooor>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -169,7 +163,6 @@
     </dooor>
     <doroti>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -186,7 +179,6 @@
     </doroti>
     <lyger>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -203,8 +195,7 @@
     </lyger>
     <lygre>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
-            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   &apos;..dynamis.KIs..&apos;  &apos;..dynamis.time_remaining</dynamis>
+            <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
             <pos>
@@ -220,7 +211,6 @@
     </lygre>
     <mexico>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -237,7 +227,6 @@
     </mexico>
     <nacholibre>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -254,7 +243,6 @@
     </nacholibre>
     <razriel>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -271,7 +259,6 @@
     </razriel>
     <redcurrybun>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -288,7 +275,6 @@
     </redcurrybun>
     <rheita>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -305,7 +291,6 @@
     </rheita>
     <salmahayek>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -322,7 +307,6 @@
     </salmahayek>
     <tavaris>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -339,7 +323,6 @@
     </tavaris>
     <zadora>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>
@@ -356,7 +339,6 @@
     </zadora>
     <zadorus>
         <strings>
-            <default>xp.current..&apos;/&apos;..xp.tnl..&apos;XP   &apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;]   XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k   &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;]   CP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(cp.rate/100)/10)..&apos;k&apos;</default>
             <dynamis>xp.current..&apos;/&apos;..xp.tnl..&apos;XP &apos;&apos;..lp.current..&apos;/&apos;..lp.tnm..&apos;LP [&apos;..lp.number_of_merits..&apos;/&apos;..lp.maximum_merits..&apos;] XP/hr:&apos;..string.format(&apos;%.1f&apos;,math.floor(xp.rate/100)/10)..&apos;k &apos;..cp.current..&apos;/&apos;..cp.tnjp..&apos;CP [&apos;..cp.number_of_job_points..&apos;] &apos;..dynamis.KIs..&apos; &apos;..dynamis.time_remaining</dynamis>
         </strings>
         <text_box_settings>

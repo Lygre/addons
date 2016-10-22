@@ -253,7 +253,7 @@ function init_gear_sets()
 		back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet=gear.merlfeet_fc}
 
 	sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Oranyan",
-		ring1="Rahab Ring",back="Perimede cape"})
+		back="Perimede cape"})
 	
 	sets.midcast.Helix = {main=gear.NukeStaff,sub="Thrace Strap",ammo="Dosis Tathlum",
 		head=gear.merlhead_nuke, neck="Saevus pendant +1", ear1="Friomisi Earring", ear2="Barkarole earring",

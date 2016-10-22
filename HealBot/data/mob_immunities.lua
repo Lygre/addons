@@ -12,6 +12,9 @@ return {
     ['Broadleaf Palm'] = S{
         194
     },
+    ['Cronos'] = S{
+        2
+    },
     ['Despot'] = S{
         194
     },
@@ -33,6 +36,9 @@ return {
     },
     ['Lycaon'] = S{
         28
+    },
+    ['Monolithic Boulder'] = S{
+        2
     },
     ['Murkcrawler'] = S{
         28

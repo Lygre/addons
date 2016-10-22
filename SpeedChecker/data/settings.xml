@@ -17,8 +17,8 @@
         </flags>
         <padding>0</padding>
         <pos>
-            <x>137.48374938965</x>
-            <y>26.775001525879</y>
+            <x>276.41647338867</x>
+            <y>-1.8920969963074</y>
         </pos>
         <text>
             <alpha>255</alpha>
@@ -31,7 +31,7 @@
             <red>255</red>
             <size>12</size>
             <stroke>
-                <alpha>-1.780826700661e+019</alpha>
+                <alpha>4.5411080866855e+021</alpha>
                 <blue>0</blue>
                 <green>0</green>
                 <red>0</red>
@@ -39,14 +39,32 @@
             </stroke>
         </text>
     </global>
-    <deepthought>
+    <ashela>
+        <text>
+            <stroke>
+                <alpha>-1.1579825621048e+024</alpha>
+            </stroke>
+        </text>
+    </ashela>
+    <brrrr>
         <pos>
-            <x>276.41647338867</x>
-            <y>-1.8920969963074</y>
+            <x>327.41647338867</x>
+            <y>1.1079030036926</y>
         </pos>
         <text>
             <stroke>
-                <alpha>4.5411080866855e+021</alpha>
+                <alpha>-1.1579825621048e+024</alpha>
+            </stroke>
+        </text>
+    </brrrr>
+    <deepthought>
+        <pos>
+            <x>3.3313407897949</x>
+            <y>19.096015930176</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>-1.1579825621048e+024</alpha>
             </stroke>
         </text>
     </deepthought>
@@ -55,5 +73,10 @@
             <x>-1</x>
             <y>1</y>
         </pos>
+        <text>
+            <stroke>
+                <alpha>-1.1579825621048e+024</alpha>
+            </stroke>
+        </text>
     </razriel>
 </settings>

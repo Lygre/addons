@@ -54,7 +54,7 @@ return {
             'Aquaveil',
             'Protectra V',
             'Shellra V',
-            'Reraise III',
+            'Reraise IV',
             'Afflatus Solace'},
         ['schsub'] = {
             'Aurorastorm',

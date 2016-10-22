@@ -31,7 +31,7 @@
 		<addon>findall</addon>
 		<addon>gearswap</addon>
 		<addon>instals</addon>
-		<addon>invspace</addon>
+		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
 		<addon>organizer</addon>
@@ -81,9 +81,9 @@
 		<addon>autoSynth</addon>
 		<!-- <addon>autoWeaponskill</addon> -->
 		<!-- <addon>azuresets</addon> -->
-		<addon>battlemod</addon>
+		<!-- <addon>battlemod</addon> -->
 		<addon>cancel</addon>
-		<addon>clock</addon>
+		<!-- <addon>clock</addon> -->
 		<addon>consoleBG</addon>
 		<!-- <addon>debuffed</addon> -->
 		<addon>distance</addon>
@@ -95,7 +95,7 @@
 		<addon>gearswap</addon>
 		<addon>healbot</addon>
 		<addon>instals</addon>
-		<addon>invspace</addon>
+		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
 		<addon>organizer</addon>
@@ -145,9 +145,9 @@
 		<addon>autoSynth</addon>
 		<!-- <addon>autoWeaponskill</addon> -->
 		<!-- <addon>azuresets</addon> -->
-		<addon>battlemod</addon>
+		<!-- <addon>battlemod</addon> -->
 		<addon>cancel</addon>
-		<addon>clock</addon>
+		<!-- <addon>clock</addon> -->
 		<addon>consoleBG</addon>
 		<!-- <addon>debuffed</addon> -->
 		<addon>distance</addon>
@@ -157,9 +157,9 @@
 		<addon>fastcs</addon>
 		<addon>findall</addon>
 		<addon>gearswap</addon>
-		<addon>healbot</addon>
+		<!-- <addon>healbot</addon> -->
 		<addon>instals</addon>
-		<addon>invspace</addon>
+		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
 		<addon>organizer</addon>
@@ -201,8 +201,8 @@
 		<plugin>Fishingcrashfix</plugin>
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
-		<addon>Anchor</addon> 
-<!-- 		<addon>aecho</addon>
+<!-- 		<addon>Anchor</addon> 
+ --><!-- 		<addon>aecho</addon>
  -->		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
@@ -215,7 +215,7 @@
 		<addon>consoleBG</addon>
 		<!-- <addon>debuffed</addon> -->
 		<addon>distance</addon>
-		<addon>DoStuff</addon>
+		<!-- <addon>DoStuff</addon> -->
 		<addon>dressup</addon>
 		<addon>enternity</addon>
 		<addon>fastcs</addon>
@@ -226,7 +226,7 @@
 		<addon>itemizer</addon>
 		<addon>logger</addon>
 		<addon>organizer</addon>
-		<addon>partybuffs</addon>
+		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
 		<addon>pettp</addon>
 		<!-- <addon>pointwatch</addon> -->
@@ -254,10 +254,10 @@
 		<addon>update</addon>
 		<addon>zonetimer</addon>
 
-		<addon>Ohnoyoudont</addon>
+		<!-- <addon>Ohnoyoudont</addon> -->
 		<!-- <addon>parse</addon> -->
 		<addon>skillchain</addon>
-		<addon>skillchains</addon>
+		<!-- <addon>skillchains</addon> -->
 
 	</Lygre>
 	<Deepthought>
@@ -277,7 +277,7 @@
 		<!-- <addon>autoSynth</addon> -->
 		<!-- <addon>autoWeaponskill</addon> -->
 		<!-- <addon>azuresets</addon> -->
-		<addon>battlemod</addon>
+		<!-- <addon>battlemod</addon> -->
 		<addon>cancel</addon>
 		<addon>clock</addon>
 		<addon>consoleBG</addon>
@@ -289,7 +289,7 @@
 		<addon>fastcs</addon>
 		<addon>findall</addon>
 		<addon>gearswap</addon>
-		<addon>healbot</addon>
+		<!-- <addon>healbot</addon> -->
 		<addon>instals</addon>
 		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
@@ -301,6 +301,7 @@
 		<!-- <addon>pointwatch</addon> -->
 		<!-- <addon>pouches</addon> -->
 		<!-- <addon>pricer</addon> -->
+		<!-- <addon>rollbot</addon> -->
 		<addon>rolltracker</addon>
 		<!-- <addon>scoreboard</addon> -->
 		<addon>send</addon>
