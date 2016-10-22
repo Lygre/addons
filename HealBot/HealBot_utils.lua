@@ -352,7 +352,7 @@ end
 function utils.register_ws(args)
 	local argstr = table.concat(args,' ')
 	--local wsname = utils.formatSpellName(argstr)
-	local wsname = 'Chant du Cygne' or utils.formatSpellName(argstr)
+	local wsname = utils.formatSpellName(argstr)
 	local ws = getActionFor(wsname)
 	if (ws ~= nil) then
 		settings.ws.name = wsname

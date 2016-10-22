@@ -15,7 +15,7 @@ end
 -- Setup vars that are user-independent.
 function job_setup()
 	indi_timer = ''
-	indi_duration = 310
+	indi_duration = 270
 	state.OffenseMode:options('None', 'Normal')
 	state.CastingMode:options('Normal', 'Resistant', 'Magic Burst')
 	state.IdleMode:options('Normal', 'PDT')
@@ -30,35 +30,6 @@ function job_setup()
 end
 
 -- Setup vars that are user-dependent. Can override this function in a sidecar file.
-function user_setup()
--- Options: Override default values
--- options.CastingModes = {'Normal', 'Resistant'}
--- options.OffenseModes = {'Normal','Staff','Club','StaffACC','ClubACC'}
--- options.DefenseModes = {'Normal'}
--- options.WeaponskillModes = {'Normal'}
--- options.IdleModes = {'Normal','Hybrid','PDT','petPDT'}
--- options.RestingModes = {'Normal'}
--- options.PhysicalDefenseModes = {'PDT'}
--- options.MagicalDefenseModes = {'MDT'}
-
--- state.Defense.PhysicalMode = 'PDT'
-
-lowTierNukes = S{'Stone', 'Water', 'Aero', 'Fire', 'Blizzard', 'Thunder',
-'Stone II', 'Water II', 'Aero II', 'Fire II', 'Blizzard II', 'Thunder II',
-'Stone III', 'Water III', 'Aero III', 'Fire III', 'Blizzard III', 'Thunder III',
-'Stonega', 'Waterga', 'Aeroga', 'Firaga', 'Blizzaga', 'Thundaga',
-'Stonega II', 'Waterga II', 'Aeroga II', 'Firaga II', 'Blizzaga II', 'Thundaga II', 'Stonera', 'Thundara', 'Fira', 'Blizzara', 'Aerora', 'Watera'}
-
--- Default macro set/book
-set_macro_page(1, 6)
-end
-
--- Called when this job file is unloaded (eg: job change)
-function file_unload()
-	if binds_on_unload then
-		binds_on_unload()
-	end
-end
 
 
 -- Define sets and vars used by this job file.
@@ -70,11 +41,11 @@ function init_gear_sets()
 -- Precast Sets
 
 -- Precast sets to enhance JAs
-sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic"}
+sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic",back="Nantosuelta's Cape"}
 sets.precast.JA['Bolster'] = {body="Bagua Tunic"}
-sets.precast.JA['Curative Recantation'] = {hands="Bagua Mitaines"}
 sets.precast.JA['Mending Halation'] = {legs="Bagua Pants"}
 sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals"}	
+sets.precast.JA['Full Circle'] = {head="Azimuth hood",hands="Bagua Mitaines"}
 
 -- Fast cast sets for spells
 
@@ -85,7 +56,7 @@ sets.precast.FC = {main="Solstice",
 	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
 	legs="Geomancy Pants",
 	feet="Regal Pumps",
-	neck="Incanter's Torque",
+	neck="Voltsurge Torque",
 	waist="Channeler's Stone",
 	left_ear="Digni. Earring",
 	right_ear="Mendi. Earring",
@@ -100,7 +71,7 @@ sets.precast.FC.Cure = {main="Solstice",
 	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
 	legs="Geomancy Pants",
 	feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-	neck="Incanter's Torque",
+	neck="Voltsurge Torque",
 	waist="Channeler's Stone",
 	left_ear="Digni. Earring",
 	right_ear="Mendi. Earring",
@@ -108,11 +79,11 @@ sets.precast.FC.Cure = {main="Solstice",
 	right_ring="Sirona's Ring",
 	back="Lifestream Cape"}
 
-sets.precast.FC.Stoneskin = {}
+sets.precast.FC.Stoneskin = set_combine(sets.precast.FC,{})
 
-sets.precast.StatusRemoval = {
-	head="Nahtirah Hat",legs="Lengo Pants",ear2="Loquacious Earring",ring1="Prolix Ring",waist="Witful Belt",
-}
+sets.precast.StatusRemoval = set_combine(sets.precast.FC,{
+	head="Vanya Hood",ear2="Loquacious Earring",ring1="Prolix Ring",waist="Witful Belt",
+})
 	   
 -- Weaponskill sets
 -- Default set for any weaponskill that isn't any more specifically defined
@@ -125,6 +96,7 @@ sets.midcast.FastRecast = {}
 
 sets.midcast.Geomancy = {main="Solstice",
 	range="Dunna",
+	ammo=empty,
 	head="Azimuth Hood",
 	body={ name="Bagua Tunic", augments={'Enhances "Bolster" effect',}},
 	hands="Geomancy Mitaines",
@@ -138,9 +110,24 @@ sets.midcast.Geomancy = {main="Solstice",
 	right_ring="Sirona's Ring",
 	back="Lifestream Cape"
 }
+	sets.midcast.Geomancy.Indi = {main="Solstice",
+	sub="Genmei Shield",
+	range="Dunna",
+	ammo=empty,
+	head="Azimuth Hood",
+	body="Bagua Tunic",
+	hands="Geomancy Mitaines",
+	legs={ name="Bagua Pants", augments={'Enhances "Mending Halation" effect',}},
+	feet="Bagua Sandals",
+	neck="Incanter's Torque",
+	waist="Fucho-no-Obi",
+	left_ear="Gwati Earring",
+	right_ear="Etiolation Earring",
+	left_ring="Defending Ring",
+	right_ring="Prolix Ring",
+	back="Lifestream Cape"}
 
-sets.midcast.StatusRemoval = {
-head="",legs=""}
+sets.midcast.StatusRemoval = {}
 
 -- Cure potency =
 sets.midcast.Cure = {main="Tamaxchi",
@@ -165,23 +152,18 @@ sets.midcast.Protectra = {ring1="Sheltered Ring"}
 sets.midcast.Shellra = {ring1="Sheltered Ring"}
 
 -- Custom Spell Classes
-sets.midcast['Enfeebling Magic'] = {}
+sets.midcast['Enfeebling Magic'] = {
+	main="Solstice",sub="Genmei Shield",range="Dunna",ammo=empty,
+	head="Befouled Crown",neck="Incanter's Torque",ear1="Digni. Earring",ear2="Gwati Earring",
+	body="Shango Robe",hands="Amalric Gages",ring1="Weatherspoon Ring",ring2="Shiva Ring",
+	back="Lifestream Cape",waist="Luminary Sash",legs="Psycloth Lappas",feet="Bagua Sandals"
+}
 
-sets.midcast.IntEnfeebles = {}
+sets.midcast.IntEnfeebles = sets.midcast['Enfeebling Magic']
 
 sets.midcast.ElementalEnfeeble = sets.midcast['Enfeebling Magic']
 
-sets.midcast['Dark Magic'] = {}
-
--- Elemental Magic sets are default for handling low-tier nukes.
-sets.midcast.LowTierNuke = {}
-
-sets.midcast.LowTierNuke.Resistant = {}
-
--- Custom classes for high-tier nukes.
-sets.midcast.HighTierNuke = {}
-
-sets.midcast.HighTierNuke.Resistant = {}
+sets.midcast['Dark Magic'] = sets.midcast['Enfeebling Magic']
 
 -- Sets to return to when not performing an action.
 
@@ -192,44 +174,52 @@ legs="Nares Trews",feet="Chelona Boots"}
 
 
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
+	sets.idle = {main="Bolelabunga",
+		sub="Genmei Shield",
+		range="Dunna",
+		ammo=empty,
+		head="Befouled Crown",
+		body="Amalric Doublet",
+		hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
+		legs="Assiduity Pants",
+		feet="Geo. Sandals",
+		neck="Loricate Torque +1",
+		waist="Fucho-no-Obi",
+		left_ear="Etiolation Earring",
+		right_ear="Sanare Earring",
+		left_ring="Defending Ring",
+		right_ring="Warden's Ring",
+		back="Solemnity Cape"}
 
-sets.idle.Town = {
-	main="Bolelabunga",
-	sub="Genbu's Shield",
-	range="Dunna",
-	head="Befouled Crown",
-	body={ name="Witching Robe", augments={'MP+50','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Refresh"+1',}},
-	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-	legs="Assiduity Pants",
-	feet="Geomancy Sandals",
-	neck="Twilight Torque",
-	waist="Fucho-no-Obi",
-	left_ear="Etiolation Earring",
-	right_ear="Sanare Earring",
-	left_ring="Defending Ring",
-	right_ring="Vocane Ring",
-	back="Lifestream Cape"
-}
 
-sets.idle.Field = {main="Bolelabunga",
-	range="Dunna",
-	head="Befouled Crown",
-	body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-	legs="Assiduity Pants",
-	feet="Geomancy Sandals",
-	neck="Incanter's Torque",
-	waist="Isa Belt",
-	left_ear="Digni. Earring",
-	right_ear="Mendi. Earring",
-	left_ring="Weather. Ring",
-	right_ring="Sirona's Ring",
-	back="Solemnity Cape",
-}
 
-sets.idle.Field.PDT = {}
+	sets.idle.PDT = {}
 
-sets.idle.Weak = {}
+	sets.idle.Pet = {main="Solstice",
+		sub="Genmei Shield",
+		range="Dunna",
+		ammo=empty,
+		head="Azimuth Hood",
+		body="Amalric Doublet",
+		hands="Geo. Mitaines",
+		legs="Psycloth Lappas",
+		feet="Bagua Sandals",
+		neck="Loricate Torque +1",
+		waist="Isa Belt",
+		left_ear="Handler's Earring",
+		right_ear="Handler's Earring +1",
+		left_ring="Defending Ring",
+		right_ring="Warden's Ring",
+		back="Nantosuelta's Cape"}
+
+	sets.idle.PDT.Pet = set_combine(sets.idle.Pet, 
+		{legs="Psycloth lappas"})
+
+	sets.idle.Indi = set_combine(sets.idle, {neck="Loricate torque +1"})
+	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {})
+	sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {})
+	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {feet="Azimuth gaiters +1"})
+
 
 -- Defense sets
 
@@ -256,41 +246,42 @@ end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
 -- Set eventArgs.useMidcastGear to true if we want midcast gear equipped on precast.
+--------------------------[Job functions]------------------------------    
+ 
+--------------------------[Standard events]------------------------------    
+ 
 function job_precast(spell, action, spellMap, eventArgs)
-
-end
-
--- Run after the general precast() is done.
-function job_post_precast(spell, action, spellMap, eventArgs)
-
-end
-
-
--- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
-
--- Custom spell mapping.
-function job_get_spell_map(spell, default_spell_map)
 	if spell.action_type == 'Magic' then
-		if spell.skill == 'Enfeebling Magic' then
-			if spell.type == 'WhiteMagic' then
-				return 'MndEnfeebles'
-			else
-				return 'IntEnfeebles'
-			end
-		elseif spell.skill == 'Geomancy' then
-			if spell.english:startswith('Indi') then
-				return 'Indi'
-			end
+		if midaction() then
+			eventArgs.cancel = true
+			windower.add_to_chat(3,'Midaction--cancelling: '..spell.english..'')				
+			return
+		end
+		if spell.english == "Impact" then
+			equip(set_combine(sets.precast.FC,{head=empty,body="Twilight Cloak"}))
+		end
+	elseif spell.action_type == 'Ability' then
+		if midaction() then
+			eventArgs.cancel = true
+			windower.add_to_chat(3,'Midaction--cancelling: '..spell.english..'')				
+			return
 		end
 	end
 end
 
--- Run after the general midcast() is done.
-function job_post_midcast(spell, action, spellMap, eventArgs)
-
+function job_midcast(spell, action, spellMap, eventArgs)
+	if spell.english == 'Impact' then
+		equip(sets.midcast.Impact)
+		eventArgs.handled = true
+	end
 end
 
--- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
+function job_post_midcast(spell, action, spellMap, eventArts)
+	if spell.skill == 'Elemental Magic' and state.MagicBurst.value and spell.english ~= 'Impact' then
+		equip(sets.magic_burst)
+	end
+end
+
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if not spell.interrupted then
 		if spell.english:startswith('Indi') then
@@ -313,31 +304,7 @@ function job_aftercast(spell, action, spellMap, eventArgs)
 		classes.CustomIdleGroups:clear()
 	end
 end
-
--------------------------------------------------------------------------------------------------------------------
--- Customization hooks for idle and melee sets, after they've been automatically constructed.
--------------------------------------------------------------------------------------------------------------------
-
-function customize_idle_set(idleSet)
-	return idleSet
-end
-
-function customize_melee_set(meleeSet)
-	return meleeSet
-end
-
--------------------------------------------------------------------------------------------------------------------
--- General hooks for other events.
--------------------------------------------------------------------------------------------------------------------
-
--- Called when the player's status changes.
-function job_status_change(newStatus,oldStatus)
-
-end
-
--- Called when a player gains or loses a buff.
--- buff == buff gained or lost
--- gain == true if the buff was gained, false if it was lost.
+ 
 function job_buff_change(buff, gain)
 	if player.indi and not classes.CustomIdleGroups:contains('Indi')then
 		classes.CustomIdleGroups:append('Indi')
@@ -347,21 +314,44 @@ function job_buff_change(buff, gain)
 		handle_equipping_gear(player.status)
 	end
 end
-
-
--------------------------------------------------------------------------------------------------------------------
--- User code that supplements self-commands.
--------------------------------------------------------------------------------------------------------------------
-
--- Called for custom player commands.
-function job_self_command(cmdParams, eventArgs)
-
+ 
+function job_state_change(stateField, newValue, oldValue)
+	if stateField == 'Offense Mode' then
+		if newValue == 'Normal' then
+			disable('main','sub','range','ammo')
+		else
+			enable('main','sub','range','ammo')
+		end
+	end
 end
-
--- Called by the 'update' self-command.
-
--- Function to display the current relevant user state when doing an update.
--- Return true if display was handled, and you don't want the default info shown.
+ 
+--------------------------[Maps Indi- spells and enfeebles]------------------------------    
+ 
+function job_get_spell_map(spell, default_spell_map)
+	if spell.action_type == 'Magic' then
+		if spell.skill == 'Enfeebling Magic' then
+			if spell.type == 'WhiteMagic' then
+				return 'MndEnfeebles'
+			else
+				return 'IntEnfeebles'
+			end
+		elseif spell.skill == 'Geomancy' then
+			if spell.english:startswith('Indi') then
+				return 'Indi'
+			end
+		end
+	end
+end
+ 
+-----------------------------------------------------------------------------------   
+ 
+function customize_idle_set(idleSet)
+	if player.mpp < 51 then
+		idleSet = set_combine(idleSet, sets.latent_refresh)
+	end
+	return idleSet
+end
+ 
 function job_update(cmdParams, eventArgs)
 	classes.CustomIdleGroups:clear()
 	if player.indi then
@@ -373,9 +363,11 @@ function display_current_job_state(eventArgs)
 	display_current_caster_state()
 	eventArgs.handled = true
 end
--------------------------------------------------------------------------------------------------------------------
--- Utility functions specific to this job.
--------------------------------------------------------------------------------------------------------------------
+ 
+-------------------------------------------------------------------------------    
+ 
 function select_default_macro_book()
 	set_macro_page(3, 4)
 end
+ 
+----------------------

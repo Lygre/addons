@@ -9,6 +9,10 @@ whitelist = L{
     'Deepthought',
     'Vaantalus',
     'Llewelyn','Neimii','Stani','Tinkil','Tinkitot','Zombies','Blizzy','Speedyjim',
+    'Blaklotus','Sorer','Oddis',
+    'Kudesai','Bigdrake',
+    'Metallicvayne','Cantbebroke','Antrax',
+    'Doroti',
 }
 windower.register_event('addon command', function(name,bool)
     local targ = name and windower.ffxi.get_mob_by_name(name) or windower.ffxi.get_mob_by_target('t') and windower.ffxi.get_mob_by_target('t')

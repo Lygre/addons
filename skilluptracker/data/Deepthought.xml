@@ -18,10 +18,10 @@
             </flags>
             <padding>5</padding>
             <pos>
-                <x>0</x>
-                <y>50</y>
+                <x>173.88979721069</x>
+                <y>297.1231842041</y>
             </pos>
-            <show>false</show>
+            <show>true</show>
             <text>
                 <alpha>255</alpha>
                 <blue>255</blue>
@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1579825621048e+024</alpha>
+                    <alpha>8.1186399687352e+040</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1579825621048e+024</alpha>
+                    <alpha>8.1186399687352e+040</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -101,7 +101,7 @@
                 <x>144.1875</x>
                 <y>73.416667938232</y>
             </pos>
-            <show>false</show>
+            <show>true</show>
             <text>
                 <alpha>255</alpha>
                 <blue>255</blue>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1579825621048e+024</alpha>
+                    <alpha>8.1186399687352e+040</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -148,7 +148,7 @@
             </12>
             <2>
                 <id>2</id>
-                <level>0</level>
+                <level>3.4</level>
                 <name>Dagger</name>
                 <short_name>dagger</short_name>
             </2>
@@ -160,7 +160,7 @@
             </25>
             <26>
                 <id>26</id>
-                <level>0</level>
+                <level>122.6</level>
                 <name>Marksmanship</name>
                 <short_name>marksmanship</short_name>
             </26>
@@ -184,7 +184,7 @@
             </29>
             <3>
                 <id>3</id>
-                <level>0</level>
+                <level>194.4</level>
                 <name>Sword</name>
                 <short_name>sword</short_name>
             </3>
@@ -196,19 +196,19 @@
             </30>
             <31>
                 <id>31</id>
-                <level>0</level>
+                <level>242</level>
                 <name>Parrying</name>
                 <short_name>parrying</short_name>
             </31>
             <32>
                 <id>32</id>
-                <level>0</level>
+                <level>2.8</level>
                 <name>Divine Magic</name>
                 <short_name>divine_magic</short_name>
             </32>
             <33>
                 <id>33</id>
-                <level>0</level>
+                <level>392.8</level>
                 <name>Healing Magic</name>
                 <short_name>healing_magic</short_name>
             </33>
@@ -232,7 +232,7 @@
             </36>
             <37>
                 <id>37</id>
-                <level>0</level>
+                <level>4.4</level>
                 <name>Dark Magic</name>
                 <short_name>dark_magic</short_name>
             </37>

@@ -11,7 +11,7 @@
             <melee>true</melee>
             <misses>true</misses>
             <ranged>true</ranged>
-            <readies>false</readies>
+            <readies>true</readies>
             <target>false</target>
             <uses>false</uses>
         </alliance>
@@ -112,11 +112,11 @@
                 <all>false</all>
                 <casting>false</casting>
                 <damage>false</damage>
-                <healing>false</healing>
-                <melee>false</melee>
+                <healing>true</healing>
+                <melee>true</melee>
                 <misses>true</misses>
                 <ranged>true</ranged>
-                <readies>false</readies>
+                <readies>true</readies>
             </party>
         </monsters>
         <my_fellow>

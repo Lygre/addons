@@ -15,9 +15,6 @@ return {
     ['nuke'] = {
         ['name'] = 'Stone'
     },
-    ['ws'] = {
-        ['name'] = 'Chant du Cygne'
-},
     ['textBoxes'] = {
         ['actionInfo'] = {
             ['visible'] = true,

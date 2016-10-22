@@ -122,12 +122,12 @@
     <deepthought>
         <Clock>
             <pos>
-                <x>344.47222900391</x>
-                <y>28.488822937012</y>
+                <x>437.08801269531</x>
+                <y>23.924766540527</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-4211734020</alpha>
+                    <alpha>-1.780826700661e+019</alpha>
                 </stroke>
             </text>
         </Clock>
@@ -137,6 +137,7 @@
         <Clock>
             <pos>
                 <x>365</x>
+                <y>122.42374810576</y>
             </pos>
             <text>
                 <stroke>
@@ -163,11 +164,12 @@
     <lyger>
         <Clock>
             <pos>
-                <x>197</x>
+                <x>702</x>
+                <y>20.423751831055</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>16516605</alpha>
+                    <alpha>-4211734020</alpha>
                 </stroke>
             </text>
         </Clock>

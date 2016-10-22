@@ -56,6 +56,16 @@ function init_gear_sets()
 	right_ring="Prolix Ring",
 	back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +18','Pet: Damage taken -2%',}},}
  
+ 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {
+ 		neck="Incanter's Torque",
+ 		hands="Geomancy Mitaines +1",
+ 		})
+
+ 	sets.precast.FC.Geomancy.Indi = set_combine(sets.precast.FC,{
+ 		neck="Incanter's torque",
+ 		hands="Geomancy Mitaines +1",
+ 		legs="Bagua Pants",feet="Azimuth Gaiters +1"
+ 		})
 	sets.precast.FC.Stun = set_combine(sets.precast.FC,
 		{main="Grioavolr",sub="Clerisy Strap",range=empty,ammo="Sapience Orb",
 		head=gear.zadora.merlhead_fc,neck="Voltsurge Torque",ear1="Loquacious Earring",ear2="Etiolation Earring",
@@ -270,7 +280,7 @@ function init_gear_sets()
 	right_ring="Shiva Ring +1",
 	back="Toro Cape",}
  
-	sets.midcast.Impact = {}
+	sets.midcast.Impact = set_combine(sets.midcast['Elemental Magic'],{head=empty,body="Twilight Cloak"})
  
 	sets.magic_burst = {main={ name="Grioavolr", augments={'Magic burst mdg.+3%','INT+17','Mag. Acc.+19','"Mag.Atk.Bns."+20','Magic Damage +6',}},
 	sub="Niobid Strap",
@@ -288,7 +298,7 @@ function init_gear_sets()
 	right_ring="Shiva Ring +1",
 	back="Toro Cape",}
 
-	sets.midcast['Elemental Magic'].MagicBurst =sets.magic_burst		
+	sets.midcast['Elemental Magic'].MagicBurst = sets.magic_burst		
 --------------------------[Idle sets]------------------------------
  
 	sets.resting = {}
@@ -424,15 +434,37 @@ end
 --------------------------[Standard events]------------------------------    
  
 function job_precast(spell, action, spellMap, eventArgs)
-if spell.english == "Impact" then
-								equip(set_combine(sets.precast.FC,{head=empty,body="Twilight Cloak"}))
-					end
+	if spell.action_type == 'Magic' then
+		if midaction() then
+			eventArgs.cancel = true
+			windower.add_to_chat(3,'Midaction--cancelling: '..spell.english..'')				
+			return
+		end
+		if spell.english == "Impact" then
+			equip(set_combine(sets.precast.FC,{head=empty,body="Twilight Cloak"}))
+		end
+	elseif spell.action_type == 'Ability' then
+		if midaction() then
+			eventArgs.cancel = true
+			windower.add_to_chat(3,'Midaction--cancelling: '..spell.english..'')				
+			return
+		end
+	end
 end
+
+function job_midcast(spell, action, spellMap, eventArgs)
+	if spell.english == 'Impact' then
+		equip(sets.midcast.Impact)
+		eventArgs.handled = true
+	end
+end
+
 function job_post_midcast(spell, action, spellMap, eventArts)
-	if spell.skill == 'Elemental Magic' and state.MagicBurst.value then
+	if spell.skill == 'Elemental Magic' and state.MagicBurst.value and spell.english ~= 'Impact' then
 		equip(sets.magic_burst)
 	end
 end
+
 function job_aftercast(spell, action, spellMap, eventArgs)
 	if not spell.interrupted then
 		if spell.english:startswith('Indi') then

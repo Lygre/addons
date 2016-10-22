@@ -39,15 +39,21 @@
             </stroke>
         </text>
     </global>
+    <deepthought>
+        <pos>
+            <x>276.41647338867</x>
+            <y>-1.8920969963074</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>4.5411080866855e+021</alpha>
+            </stroke>
+        </text>
+    </deepthought>
     <razriel>
         <pos>
             <x>-1</x>
             <y>1</y>
         </pos>
-        <text>
-            <stroke>
-                <alpha>-1.780826700661e+019</alpha>
-            </stroke>
-        </text>
     </razriel>
 </settings>

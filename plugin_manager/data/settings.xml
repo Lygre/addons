@@ -274,7 +274,7 @@
  -->		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
-		<addon>autoSynth</addon>
+		<!-- <addon>autoSynth</addon> -->
 		<!-- <addon>autoWeaponskill</addon> -->
 		<!-- <addon>azuresets</addon> -->
 		<addon>battlemod</addon>
@@ -291,13 +291,13 @@
 		<addon>gearswap</addon>
 		<addon>healbot</addon>
 		<addon>instals</addon>
-		<addon>invspace</addon>
+		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
-		<addon>organizer</addon>
+		<!-- <addon>organizer</addon> -->
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
-		<addon>pettp</addon>
+		<!-- <addon>pettp</addon> -->
 		<!-- <addon>pointwatch</addon> -->
 		<!-- <addon>pouches</addon> -->
 		<!-- <addon>pricer</addon> -->
@@ -313,7 +313,7 @@
 		<addon>stna</addon>
 		<addon>stopwatch</addon>
 		<addon>subtarget</addon>
-		<addon>synthall</addon>
+		<!-- <addon>synthall</addon> -->
 		<addon>text</addon>
 		<addon>timestamp</addon>
 		<addon>tparty</addon>

@@ -50,10 +50,11 @@ function define_global_sets()
 	--Merlinic Augments
 	gear.merlhead_nuke = {name="Merlinic Hood", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Mag. Acc.+3','"Mag.Atk.Bns."+15',}}	
 	gear.merlhead_mb = {name="Merlinic Hood", augments={'Mag. Acc.+19 "Mag.Atk.Bns."+19','Magic burst mdg.+8%','INT+8','"Mag.Atk.Bns."+12',}}
-	gear.merlhead_fc = {name="Merlinic Hood", augments={'"Fast Cast"+7','CHR+5',}}
+	gear.merlhead_fc = {name="Merlinic Hood", augments={'Mag. Acc.+27','"Fast Cast"+5','MND+3',}}
 	gear.merlbody_nuke = {name="Merlinic Jubbah", augments={'Mag. Acc.+21 "Mag.Atk.Bns."+21','Phys. dmg. taken -2%','INT+10','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
 	gear.merlbody_mb = {name="Merlinic Jubbah", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst mdg.+9%','INT+1','Mag. Acc.+3','"Mag.Atk.Bns."+11',}}
-	gear.merlbody_da = {name="Merlinic Jubbah", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Drain" and "Aspir" potency +7','Mag. Acc.+15','"Mag.Atk.Bns."+7',}}
+	gear.merlbody_fc = {name="Merlinic Jubbah", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Fast Cast"+6','INT+5','Mag. Acc.+15','"Mag.Atk.Bns."+15',}}
+	-- gear.merlbody_da = {name="Merlinic Jubbah", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Drain" and "Aspir" potency +7','Mag. Acc.+15','"Mag.Atk.Bns."+7',}}
 	gear.merlhands_pdt = {name="Merlinic Dastanas", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','Phys. dmg. taken -2%','MND+7','Mag. Acc.+14','"Mag.Atk.Bns."+2',}}
 	gear.merllegs_cmp = {name="Merlinic Shalwar", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','"Conserve MP"+5','Mag. Acc.+11','"Mag.Atk.Bns."+9',}}	
 	gear.merllegs_nuke = {name="Merlinic Shalwar", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','Phys. dmg. taken -1%','INT+7','Mag. Acc.+11','"Mag.Atk.Bns."+11',}}
@@ -64,9 +65,9 @@ function define_global_sets()
 	gear.merlfeet_dt = {name="Merlinic Crackows", augments={'Mag. Acc.+14','Damage taken-3%','DEX+2',}}
 	gear.merlfeet_refresh = {name="Merlinic Crackows", augments={'"Store TP"+1','Pet: Attack+21 Pet: Rng.Atk.+21','"Refresh"+1','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
 	gear.merlfeet_fc = {name="Merlinic Crackows", augments={'Accuracy+13','"Fast Cast"+6','MND+1','Mag. Acc.+9','"Mag.Atk.Bns."+7',}}
-	gear.merlfeet_da = {name="Merlinic Crackows", augments={'"Drain" and "Aspir" potency +11','CHR+3','Mag. Acc.+11','"Mag.Atk.Bns."+15',}}	
+	gear.merlfeet_da = {name="Merlinic Crackows", augments={'Mag. Acc.+21','"Drain" and "Aspir" potency +10','INT+10','"Mag.Atk.Bns."+11',}}	
 	gear.merlfeet_mb = {name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+30','Magic burst mdg.+10%','Mag. Acc.+5',}}
-	gear.merlfeet_nuke = {name="Merlinic Crackows", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Mag. crit. hit dmg. +8%','MND+7','Mag. Acc.+15',}}
+	gear.merlfeet_nuke = {name="Merlinic Crackows", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst mdg.+9%','INT+9','"Mag.Atk.Bns."+2',}}
 
 	--Chironic Augments
 	gear.chirhead = {name="Chironic Hat", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Fast Cast"+4','CHR+9','Mag. Acc.+15','"Mag.Atk.Bns."+10',}}
@@ -87,6 +88,7 @@ function define_global_sets()
 	
 	--Herculean Augments
  	gear.herchead_dt = {name="Herculean Helm", augments={'Accuracy+13','Damage taken-4%','STR+2','Attack+5',}}
+ 	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Crit.hit rate+1','INT+7','"Mag.Atk.Bns."+12',}}
  	gear.hercbody_acc = {name="Herculean Vest", augments={'Accuracy+22 Attack+22','Crit.hit rate+2','DEX+10','Accuracy+8','Attack+9',}}
  	gear.hercbody_dt = {name="Herculean Vest", augments={'Damage taken-4%','DEX+4','Attack+12',}}
  	gear.hercbody_ta = {name="Herculean Vest", augments={'Accuracy+30','"Triple Atk."+4',}}
@@ -199,7 +201,18 @@ function define_global_sets()
 	gear.zadora = {}
 
 	gear.zadora.merlhead_fc = { name="Merlinic Hood", augments={'Pet: Phys. dmg. taken -1%','Pet: INT+5','"Fast Cast"+6','Accuracy+16 Attack+16',}}
-	
+	gear.zadora.odhead_fc = { name="Odyssean Helm", augments={'Attack+3','"Fast Cast"+5','Accuracy+15',}}
+	gear.zadora.odbody_fc = {name="Odyss. Chestplate", augments={'Attack+24','"Fast Cast"+6','AGI+6','Mag. Acc.+12',}}
+	gear.zadora.odhands_fc = { name="Odyssean Gauntlets", augments={'"Fast Cast"+4','AGI+10','Mag. Acc.+9','"Mag.Atk.Bns."+3',}}
+	gear.zadora.odlegs_fc = {name="Odyssean Cuisses", augments={'Mag. Acc.+19','"Fast Cast"+4','INT+6',}}
+	gear.zadora.odfeet_fc = { name="Odyssean Greaves", augments={'Mag. Acc.+8','"Fast Cast"+5','CHR+10','"Mag.Atk.Bns."+12',}}
+	gear.zadora.odfeet_cure = {name="Odyssean Greaves", augments={'"Mag.Atk.Bns."+3','"Cure" potency +6%',}}
+
+	gear.zadora.valhead_phalanx = {name="Valorous Mask", augments={'Rng.Acc.+27','Accuracy+17','Phalanx +4','Accuracy+5 Attack+5',}}
+
+	gear.zadora.pldcape_fc = {name="Rudianos's Mantle", augments={'"Fast Cast"+10',}}
+	gear.zadora.pldcape_cure = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Cure" potency +10%',}}
+
 end
 
 -------------------------------------------------------------------------------------------------------------------

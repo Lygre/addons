@@ -10,6 +10,6 @@
         <whitelist>Lyger,Lygre</whitelist>
     </antrax>
     <lygre>
-        <mode>blacklist</mode>
+        <whitelist>Lygre</whitelist>
     </lygre>
 </settings>

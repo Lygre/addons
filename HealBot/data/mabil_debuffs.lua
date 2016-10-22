@@ -79,5 +79,6 @@ return {
     ['Stifling Tantara'] = S{'silence'},
     ['Silence Seal'] = S{'silence'},
     ['Eternal Damnation'] = S{'doom'},
-    ['Exponential Burst'] = S{'magic def. down'}
+    ['Exponential Burst'] = S{'magic def. down'},
+    ['Death Trap'] = S{'poison'}
 }

@@ -16,7 +16,7 @@ end
 function job_setup()
 
     state.OffenseMode:options('Normal', 'Acc','Hybrid')
-    state.HybridMode:options('Normal', 'Acc', 'DT')
+    state.HybridMode:options('Normal', 'DT')
     state.WeaponskillMode:options('Normal', 'Acc')
     state.PhysicalDefenseMode:options('PDT', 'Pet')
 
@@ -189,6 +189,8 @@ function init_gear_sets()
     -- Set for idle while pet is out (eg: pet regen gear)
     sets.idle.Pet = sets.idle
 
+    sets.idle.PDT = sets.idle
+
     -- Idle sets to wear while pet is engaged
     sets.idle.Pet.Engaged = { 
         head="Anwig Salade",neck="Shepherd's chain",ear1="Handler's Earring",ear2="Handler's earring +1",
@@ -197,7 +199,7 @@ function init_gear_sets()
 
     sets.idle.Pet.Engaged.Melee = {main="Ohtas",
         head=gear.pet_tphead,neck="Empath necklace",ear1="Burana Earring",ear2="Charivari Earring",
-        body="Pitre Tobe +1",hands=gear.herchands_pup,ring1="Defending Ring",ring2="Overbearing Ring",
+        body="Pitre Tobe +1",hands=gear.herchands_pup,ring1="Varar Ring",ring2="Varar Ring",
         back="Visucius's Mantle",waist="Ukko sash",legs=gear.herclegs_pup_stp,feet=gear.hercfeet_pup_stp }
         
     sets.PetAcc = {head=gear.herchead_pup,neck="Empath necklace",ear1="Rimeice Earring",ear2="Burana Earring",

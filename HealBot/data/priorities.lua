@@ -4,9 +4,9 @@ return {
         ['Afflatus Solace'] = 0,
         ['Composure'] = 0,
         ['Light Arts'] = 0,
-        ['Haste'] = 1,
-        ['Refresh'] = 1,
-        ['Reraise'] = 2
+        ['Haste'] = 2,
+        ['Refresh'] = 2,
+        ['Reraise'] = 1
     },
     ['debuffs'] = {
         ['addle'] = 5,
@@ -36,7 +36,6 @@ return {
         ['repose'] = 0,
         ['shock'] = 7,
         ['silence'] = 2,
-        ['sleep'] = 0,
         ['slow'] = 4,
         ['stun'] = -1
     },
@@ -126,6 +125,7 @@ return {
         ['poison'] = 4,
         ['silence'] = 1,
         ['slow'] = 1,
+        ['sleep'] = 1,
         ['weight'] = 4
     }
 }

@@ -149,7 +149,13 @@ function processAction(m_id, a_id)
 			atc(123,'Alert: Turning for '..abilname..'!')
 			return true
 		elseif profile.stun:contains(a_id) then
-			attemptStun(abilname)
+			--------
+			if a_id == 3791 then
+				attemptStun(abilname)
+			else
+				attemptStun(abilname)
+			end
+			-------
 			return true
 		else
 			atcd('No action to perform for '..abilname..' [id: '..a_id..']')

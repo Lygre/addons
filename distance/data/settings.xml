@@ -39,6 +39,17 @@
             </stroke>
         </text>
     </global>
+    <deepthought>
+        <pos>
+            <x>-299.92630004883</x>
+            <y>24.335514068604</y>
+        </pos>
+        <text>
+            <stroke>
+                <alpha>16516605</alpha>
+            </stroke>
+        </text>
+    </deepthought>
     <lygre>
         <pos>
             <x>-76</x>

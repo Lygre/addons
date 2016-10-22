@@ -147,12 +147,12 @@
                 <visible>false</visible>
             </bg>
             <pos>
-                <x>344.59252929688</x>
-                <y>25.042054176331</y>
+                <x>426.39117431641</x>
+                <y>185.47810173035</y>
             </pos>
             <text>
                 <stroke>
-                    <alpha>-64770</alpha>
+                    <alpha>1073992175355</alpha>
                 </stroke>
             </text>
         </display>
@@ -242,6 +242,23 @@
             </text>
         </display>
     </mexico>
+    <mischief>
+        <display>
+            <bg>
+                <alpha>102</alpha>
+                <visible>false</visible>
+            </bg>
+            <pos>
+                <x>332</x>
+                <y>181</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+    </mischief>
     <nacholibre>
         <display>
             <bg>

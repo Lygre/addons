@@ -1,214 +1,668 @@
-Organizer loaded at 09/12/16 21:36:29
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding inventory to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding locker to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding safe to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding safe2 to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding sack to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding case to the pull list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding locker to the push list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding safe2 to the push list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding safe to the push list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding sack to the push list
-2016-09-12 21:36:29| Organizer [VERBOSE] Adding case to the push list
-2016-09-12 21:36:29| Organizer [VERBOSE] Non-equipment items set to retain
-2016-09-12 21:36:29| Organizer [VERBOSE] Slips set to retain
-2016-09-12 22:01:37| Organizer [MSG] Starting...
-2016-09-12 22:01:38| Organizer [VERBOSE] Getting!
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 77 to Inventory 67)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 76 to Inventory 68)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 75 to Inventory 69)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 74 to Inventory 70)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Sack 80 to Inventory 71)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 79 to Inventory 72)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 78 to Inventory 73)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 77 to Inventory 74)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Helm) from Sack 76 to Inventory 75)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Sack 75 to Inventory 76)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Sack 74 to Inventory 77)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 73 to Inventory 78)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 72 to Inventory 79)
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into inventory
-2016-09-12 22:01:38| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
-2016-09-12 22:01:38| Organizer [WARN] Unable to move item.
-2016-09-12 22:01:38| Organizer [VERBOSE] Got 12 item(s), and failed getting 8 item(s)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dragon Blood) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschite Ore) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Holy Water) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Riftborn Boulder) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 80 to Case 73)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Inventory 79 to Case 74)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 78 to Case 75)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Beitetsu) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Inventory 77 to Case 76)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Ebony Lumber) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 76 to Case 77)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 75 to Case 78)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 74 to Case 79)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 73 to Sack 71)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Behem. Leather) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 72 to Sack 72)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 71 to Sack 73)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Byd. Coffer Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Forbidden Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 70 to Sack 74)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 69 to Sack 75)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 68 to Sack 76)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 67 to Sack 77)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 66 to Sack 78)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 65 to Sack 79)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 64 to Locker 78)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 63 to Locker 79)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 62 to Safe 65)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 61 to Safe 66)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 60 to Safe 67)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 59 to Safe 68)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 58 to Safe 69)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 57 to Safe 70)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 56 to Safe 71)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 55 to Safe 72)
-2016-09-12 22:01:38| Organizer [VERBOSE] Remainder: 7 Current: 54
-2016-09-12 22:01:38| Organizer [VERBOSE] Getting!
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Locker 80 to Inventory 54)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Locker 79 to Inventory 55)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Case 80 to Inventory 56)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Case 79 to Inventory 57)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Case 78 to Inventory 58)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 80 to Inventory 59)
-2016-09-12 22:01:38| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Locker 78 to Inventory 60)
-2016-09-12 22:01:38| Organizer [VERBOSE] Got 7 item(s), and failed getting 0 item(s)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dragon Blood) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschite Ore) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Holy Water) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Riftborn Boulder) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Beitetsu) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Ebony Lumber) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Behem. Leather) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Byd. Coffer Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Forbidden Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
-2016-09-12 22:01:38| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Antacid) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dragon Blood) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschite Ore) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Holy Water) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Riftborn Boulder) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Beitetsu) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Ebony Lumber) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Behem. Leather) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Tau)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Byd. Coffer Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Forbidden Key) because non-equipment is set be retained
-2016-09-12 22:01:38| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
-2016-09-12 22:01:38| Organizer [MSG] Done! - 20 items matched and 0 items missing!
+Organizer loaded at 09/27/16 07:13:37
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding inventory to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding locker to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding safe to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding sack to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding case to the pull list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding locker to the push list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding safe2 to the push list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding safe to the push list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding sack to the push list
+2016-09-27 07:13:37| Organizer [VERBOSE] Adding case to the push list
+2016-09-27 07:13:37| Organizer [VERBOSE] Non-equipment items set to retain
+2016-09-27 07:13:37| Organizer [VERBOSE] Slips set to retain
+2016-09-27 09:57:40| Organizer [MSG] Starting...
+2016-09-27 09:57:40| Organizer [VERBOSE] Getting!
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Boots) from Sack 66 to Inventory 68)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Boots) from Locker 78 to Inventory 69)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Boots) from Locker 77 to Inventory 70)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Boots) from Locker 76 to Inventory 71)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Boots) from Locker 75 to Inventory 72)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Vest) from Locker 74 to Inventory 73)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Vest) from Locker 73 to Inventory 74)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Vest) from Locker 72 to Inventory 75)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Helm) from Safe 65 to Inventory 76)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Helm) from Case 72 to Inventory 77)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Safe 64 to Inventory 78)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Safe 63 to Inventory 79)
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into inventory
+2016-09-27 09:57:40| Organizer [WARN] Cannot move more than 80 items into that inventory (0)
+2016-09-27 09:57:40| Organizer [WARN] Unable to move item.
+2016-09-27 09:57:40| Organizer [VERBOSE] Got 11 item(s), and failed getting 10 item(s)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 80 to Case 71)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 79 to Case 72)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 78 to Case 73)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 77 to Case 74)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.7) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Inventory 76 to Case 75)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 75 to Case 76)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pluton) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Inventory 74 to Case 77)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 73 to Case 78)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 72 to Case 79)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 71 to Sack 65)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 70 to Sack 66)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 69 to Sack 67)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 68 to Sack 68)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Behemoth Horn) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Largantua's Shard) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 67 to Sack 69)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 66 to Sack 70)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 65 to Sack 71)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Catobl. Leather) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Codex of Etchings) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 64 to Sack 72)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 63 to Sack 73)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 62 to Sack 74)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 61 to Sack 75)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 60 to Sack 76)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 59 to Sack 77)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 58 to Sack 78)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 57 to Sack 79)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 56 to Locker 71)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 55 to Locker 72)
+2016-09-27 09:57:40| Organizer [VERBOSE] Remainder: 9 Current: 54
+2016-09-27 09:57:40| Organizer [VERBOSE] Getting!
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Safe 62 to Inventory 54)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 80 to Inventory 55)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 79 to Inventory 56)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 78 to Inventory 57)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Sack 80 to Inventory 58)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 79 to Inventory 59)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 78 to Inventory 60)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 77 to Inventory 61)
+2016-09-27 09:57:40| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Sack 76 to Inventory 62)
+2016-09-27 09:57:40| Organizer [VERBOSE] Got 9 item(s), and failed getting 0 item(s)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.7) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pluton) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Behemoth Horn) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Largantua's Shard) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Catobl. Leather) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Codex of Etchings) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.7) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pluton) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Camahueto's Fur) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Mhuufya's Beak) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Behemoth Horn) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Largantua's Shard) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Imp. Gold Piece) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Catobl. Leather) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Codex of Etchings) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Centurio's Armor) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Bakunawa's Ink) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 09:57:40| Organizer [MSG] Done! - 21 items matched and 0 items missing!
+2016-09-27 22:59:03| Organizer [MSG] Starting...
+2016-09-27 22:59:03| Organizer [VERBOSE] Getting!
+2016-09-27 22:59:03| Organizer [VERBOSE] Moving item! (Chironic Hose) from Sack 75 to Inventory 49)
+2016-09-27 22:59:03| Organizer [VERBOSE] Moving item! (Chironic Hose) from Sack 74 to Inventory 50)
+2016-09-27 22:59:03| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Sack 73 to Inventory 51)
+2016-09-27 22:59:03| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Sack 72 to Inventory 52)
+2016-09-27 22:59:03| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Sack 71 to Inventory 53)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Sack 70 to Inventory 54)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Sack 69 to Inventory 55)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Sack 68 to Inventory 56)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Sack 67 to Inventory 57)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Sack 66 to Inventory 58)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Sack 65 to Inventory 59)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Locker 73 to Inventory 60)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Locker 72 to Inventory 61)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Case 77 to Inventory 62)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Case 76 to Inventory 63)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Case 75 to Inventory 64)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Case 74 to Inventory 65)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Case 73 to Inventory 66)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Chironic Hat) from Case 72 to Inventory 67)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Case 71 to Inventory 68)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Case 70 to Inventory 69)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Sack 64 to Inventory 70)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Case 69 to Inventory 71)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 63 to Inventory 72)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 62 to Inventory 73)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 61 to Inventory 74)
+2016-09-27 22:59:04| Organizer [VERBOSE] Got 26 item(s), and failed getting 0 item(s)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 75 to Case 68)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 74 to Case 69)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 73 to Case 70)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 72 to Case 71)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 71 to Case 72)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 70 to Case 73)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Inventory 69 to Case 74)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 68 to Case 75)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 67 to Case 76)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 66 to Case 77)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Inventory 65 to Case 78)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 64 to Case 79)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Caro Necklace) from Inventory 63 to Sack 60)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 62 to Sack 61)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 61 to Sack 62)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 60 to Sack 63)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 59 to Sack 64)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 58 to Sack 65)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Helm) from Inventory 57 to Sack 66)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Herculean Helm) from Inventory 56 to Sack 67)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Inventory 55 to Sack 68)
+2016-09-27 22:59:04| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Inventory 54 to Sack 69)
+2016-09-27 22:59:04| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-27 22:59:04| Organizer [MSG] Done! - 26 items matched and 0 items missing!
+2016-09-28 00:29:38| Organizer [MSG] Starting...
+2016-09-28 00:29:38| Organizer [VERBOSE] Getting!
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 80 to Inventory 56)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 79 to Inventory 57)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 78 to Inventory 58)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Sack 70 to Inventory 59)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Boots) from Sack 69 to Inventory 60)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 68 to Inventory 61)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 67 to Inventory 62)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Vest) from Sack 66 to Inventory 63)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Helm) from Sack 65 to Inventory 64)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Helm) from Sack 64 to Inventory 65)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Sack 63 to Inventory 66)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Sack 62 to Inventory 67)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 77 to Inventory 68)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 76 to Inventory 69)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 75 to Inventory 70)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Case 74 to Inventory 71)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Case 73 to Inventory 72)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Case 72 to Inventory 73)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Case 71 to Inventory 74)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Case 70 to Inventory 75)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Case 69 to Inventory 76)
+2016-09-28 00:29:38| Organizer [VERBOSE] Got 21 item(s), and failed getting 0 item(s)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 77 to Case 68)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 76 to Case 69)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 75 to Case 70)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 74 to Case 71)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 73 to Case 72)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 72 to Case 73)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 71 to Case 74)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 70 to Case 75)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 69 to Case 76)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 68 to Case 77)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 67 to Case 78)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 66 to Case 79)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 65 to Sack 61)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 64 to Sack 62)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 63 to Sack 63)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 62 to Sack 64)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 61 to Sack 65)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 60 to Sack 66)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Inventory 59 to Sack 67)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 58 to Sack 68)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Inventory 57 to Sack 69)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 56 to Sack 70)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 55 to Sack 71)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 54 to Sack 72)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 53 to Sack 73)
+2016-09-28 00:29:38| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 52 to Sack 74)
+2016-09-28 00:29:38| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 00:29:38| Organizer [MSG] Done! - 21 items matched and 0 items missing!
+2016-09-28 01:01:39| Organizer [MSG] Starting...
+2016-09-28 01:01:39| Organizer [VERBOSE] Getting!
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Hose) from Case 80 to Inventory 51)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Hose) from Case 79 to Inventory 52)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Case 78 to Inventory 53)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Case 77 to Inventory 54)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Case 76 to Inventory 55)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Case 75 to Inventory 56)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Case 74 to Inventory 57)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Case 73 to Inventory 58)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Case 72 to Inventory 59)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Case 71 to Inventory 60)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Case 70 to Inventory 61)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Sack 75 to Inventory 62)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Sack 74 to Inventory 63)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Sack 73 to Inventory 64)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Sack 72 to Inventory 65)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Sack 71 to Inventory 66)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Sack 70 to Inventory 67)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Sack 69 to Inventory 68)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Chironic Hat) from Sack 68 to Inventory 69)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Sack 67 to Inventory 70)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Sack 66 to Inventory 71)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Case 69 to Inventory 72)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Sack 65 to Inventory 73)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 64 to Inventory 74)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 63 to Inventory 75)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Sack 62 to Inventory 76)
+2016-09-28 01:01:39| Organizer [VERBOSE] Got 26 item(s), and failed getting 0 item(s)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 77 to Case 68)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 76 to Case 69)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 75 to Case 70)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 74 to Case 71)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Boots) from Inventory 73 to Case 72)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 72 to Case 73)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 71 to Case 74)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Vest) from Inventory 70 to Case 75)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Helm) from Inventory 69 to Case 76)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Helm) from Inventory 68 to Case 77)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Inventory 67 to Case 78)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Inventory 66 to Case 79)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 65 to Sack 61)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 64 to Sack 62)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 63 to Sack 63)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Inventory 62 to Sack 64)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Inventory 61 to Sack 65)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 60 to Sack 66)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 59 to Sack 67)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Inventory 58 to Sack 68)
+2016-09-28 01:01:39| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Inventory 57 to Sack 69)
+2016-09-28 01:01:39| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:01:39| Organizer [MSG] Done! - 26 items matched and 0 items missing!
+2016-09-28 01:09:42| Organizer [MSG] Starting...
+2016-09-28 01:09:42| Organizer [VERBOSE] Getting!
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 80 to Inventory 56)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 79 to Inventory 57)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 78 to Inventory 58)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 77 to Inventory 59)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Boots) from Case 76 to Inventory 60)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Vest) from Case 75 to Inventory 61)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Vest) from Case 74 to Inventory 62)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Vest) from Case 73 to Inventory 63)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Helm) from Case 72 to Inventory 64)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Herculean Helm) from Case 71 to Inventory 65)
+2016-09-28 01:09:42| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Case 70 to Inventory 66)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Case 69 to Inventory 67)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 70 to Inventory 68)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 69 to Inventory 69)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 68 to Inventory 70)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Gloves) from Sack 67 to Inventory 71)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Telchine Braconi) from Sack 66 to Inventory 72)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 65 to Inventory 73)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 64 to Inventory 74)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Herculean Trousers) from Sack 63 to Inventory 75)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Vengeful Ring) from Sack 62 to Inventory 76)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Caro Necklace) from Sack 61 to Inventory 77)
+2016-09-28 01:09:43| Organizer [VERBOSE] Got 22 item(s), and failed getting 0 item(s)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 78 to Case 68)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Hose) from Inventory 77 to Case 69)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Doublet) from Inventory 76 to Case 70)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 75 to Case 71)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 74 to Case 72)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 73 to Case 73)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 72 to Case 74)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Shalwar) from Inventory 71 to Case 75)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 70 to Case 76)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 69 to Case 77)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 68 to Case 78)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Gloves) from Inventory 67 to Case 79)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 66 to Sack 60)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 65 to Sack 61)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 64 to Sack 62)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 63 to Sack 63)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Crackows) from Inventory 62 to Sack 64)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Slippers) from Inventory 61 to Sack 65)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Skaoi Boots) from Inventory 60 to Sack 66)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 59 to Sack 67)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Blistering Sallet) from Inventory 58 to Sack 68)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 57 to Sack 69)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Jubbah) from Inventory 56 to Sack 70)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 55 to Sack 71)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 54 to Sack 72)
+2016-09-28 01:09:43| Organizer [VERBOSE] Moving item! (Merlinic Hood) from Inventory 53 to Sack 73)
+2016-09-28 01:09:43| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Immani. Hide) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Befouled Water) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Taupe Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 16) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Plovid Effluvium) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pulse Cell: He) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Coin of Ruin) because it is in your bazaar.
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Sovereign's Hide) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Abdhaljs Dye) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Storage Slip 11) because it is set to be retained (slips)
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Frayed Sack (Pel)) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Fern Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Jo.Abjuration: Hd.) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [VERBOSE] Skipping item: (Pellucid Stone) because non-equipment is set be retained
+2016-09-28 01:09:43| Organizer [MSG] Done! - 22 items matched and 0 items missing!

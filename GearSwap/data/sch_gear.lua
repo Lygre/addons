@@ -82,14 +82,14 @@ function init_gear_sets()
 
 	sets.precast.FC = {main="Oranyan",sub="Clerisy strap",ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
-		body="Anhur Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+		body=gear.melbody_fc,hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
 		back="Perimede cape",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc }
 	
 	--main="Apamajas II",sub="Arbuda grip", 
 	sets.precast.FC.Stun = {main="Oranyan",sub="Clerisy strap",ammo="Sapience orb",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
-		body="Shango Robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Swith cape +1",waist="Witful Belt",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
+		body=gear.merlbody_fc,hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+		back="Swith cape +1",waist="Witful Belt",legs="Psycloth lappas",feet=gear.merlfeet_fc}
 
 	sets.precast.FC.Arts = {feet="Academic's loafers +1"}
 
@@ -127,8 +127,8 @@ function init_gear_sets()
 
 	sets.midcast.FastRecast = {main="Oranyan",sub="Thrace strap",ammo="Hasty pinion +1",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchanter earring +1",
-		body="Shango robe",hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
-		back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
+		body=gear.merlbody_fc,hands="Gendewitha Gages +1",ring1="Prolix Ring",ring2="Weatherspoon Ring",
+		back="Swith Cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet=gear.merlfeet_fc}
 
 	sets.midcast.Cure = {ammo="Psilomene",
 		head="Kaykaus mitra",neck="Incanter's Torque",ear1="Calamitous Earring",ear2="Mendicant's earring",
@@ -249,8 +249,8 @@ function init_gear_sets()
 
 	sets.midcast.Stun = {main="Oranyan",sub="Clerisy Strap",ammo="Hasty Pinion +1",
 		head=gear.merlhead_fc,neck="Voltsurge Torque",ear1="Enchanter earring +1",ear2="loquacious Earring",
-		body=gear.merlbody_nuke,hands="Gendewitha Gages +1",ring1="Rahab Ring",ring2="Weatherspoon Ring",
-		back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet="Pedagogy loafers +1"}
+		body=gear.merlbody_fc,hands="Gendewitha Gages +1",ring1="Rahab Ring",ring2="Weatherspoon Ring",
+		back="Swith cape +1",waist="Ninurta's sash",legs="Psycloth lappas",feet=gear.merlfeet_fc}
 
 	sets.midcast.Stun.Resistant = set_combine(sets.midcast.Stun, {main="Oranyan",
 		ring1="Rahab Ring",back="Perimede cape"})
