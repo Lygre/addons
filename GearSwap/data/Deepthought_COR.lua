@@ -254,19 +254,19 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {range="Compensator",ammo=gear.RAbullet,
-        head="Meghanada Visor",neck="Sanctity Necklace",ear1="Dominance Earring",ear2="Infused Earring",
+        head="Meghanada Visor",neck="Clotharius torque",ear1="Dominance Earring",ear2="Infused Earring",
         body="Emet Harness",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Solemnity Cape",waist="Yemaya Belt",legs="Meghanada Chausses",feet="Meghanada Jambeaux" }
+        back="Solemnity Cape",waist="Yemaya Belt",legs="Meghanada Chausses",feet="Herculean Boots" }
     
-    sets.engaged.Acc = {ammo=gear.RAbullet,
-        head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Telos earring",ear2="Suppanomimi",
-        body="Adhemar jacket",hands="Floral gauntlets",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Grounded Mantle +1",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.hercfeet_melee}
+    sets.engaged.Acc = set_combine(sets.engaged,{ammo=gear.RAbullet,
+        head=gear.adhemarhead_melee,neck="Clotharius Torque",ear1="Telos earring",ear2="Suppanomimi",
+        body="Emet Harness",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Grounded Mantle +1",waist="Yemaya Belt",legs="Meghanada Chausses",feet="Herculean Boots"})
 
     sets.engaged.DW = {ammo=gear.RAbullet,
-        head="Taeon Chapeau",neck="Lissome Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
-        body="Adhemar jacket",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Bleating Mantle",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet="Taeon Boots"}
+        head="Carmine Mask",neck="Lissome Necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+        body="Emet Harness",hands="Adhemar Wristbands",ring1="Rajas Ring",ring2="Petrov Ring",
+        back="Camulus's Mantle",waist="Yemaya Belt",legs="Meghanada Chausses",feet="Taeon Boots"}
     
     sets.engaged.DW.Acc = {ammo=gear.RAbullet,
         head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Telos earring",ear2="Suppanomimi",
@@ -347,6 +347,13 @@ end
 function job_update(cmdParams, eventArgs)
     if newStatus == 'Engaged' and player.equipment.main == 'Chatoyant Staff' then
         state.OffenseMode:set('Ranged')
+    end
+    if player.sub_job == 'NIN' or player.sub_job == 'DNC' then
+        if player.equipment.sub then
+              state.CombatForm:set('DW')
+        else
+            state.CombatForm:reset()
+        end
     end
 end
 

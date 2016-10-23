@@ -1,0 +1,16 @@
+sets.exported={
+    sub="Aegis",
+    ammo="Sapience Orb",
+    head={ name="Valorous Mask", augments={'Rng.Acc.+27','Accuracy+17','Phalanx +4','Accuracy+5 Attack+5',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands={ name="Souv. Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    legs={ name="Souveran Diechlings", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    feet={ name="Souveran Schuhs", augments={'HP+28','Attack+12','Magic dmg. taken -1',}},
+    neck="Sanctity Necklace",
+    waist="Creed Baudrier",
+    left_ear="Etiolation Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Defending Ring",
+    right_ring="Warp Ring",
+    back="Rudianos's Mantle",
+}
