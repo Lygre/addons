@@ -144,11 +144,11 @@ function init_gear_sets()
 
 	sets.midcast['Enhancing Magic'] = {}
 
-	sets.midcast.Refresh = {}
-	sets.midcast.Haste = {}
-	sets.midcast.Phalanx = {}
-	sets.midcast.Aquaveil = {}
-	sets.midcast.Stoneskin = {}
+	sets.midcast['Enhancing Magic'].Refresh = {}
+	sets.midcast['Enhancing Magic'].Haste = {}
+	sets.midcast['Enhancing Magic'].Phalanx = {}
+	sets.midcast['Enhancing Magic'].Aquaveil = {}
+	sets.midcast['Enhancing Magic'].Stoneskin = {}
 
 	sets.midcast['Enfeebling Magic'] = {}	
 	sets.midcast['Enfeebling Magic'].Mid = set_combine(sets.midcast['Enfeebling Magic'],{})
@@ -186,7 +186,7 @@ function init_gear_sets()
 	---Death Enhancing Magic
 	sets.midcast['Enhancing Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
 	----Death Refresh specific
-	sets.midcast.Refresh.DeatMB = set_combine(sets.midcast['Enhancing Magic'].DeatMB, {head="Amalric Coif"})
+	sets.midcast['Enhancing Magic'].Refresh.DeatMB = set_combine(sets.midcast['Enhancing Magic'].DeatMB, {head="Amalric Coif"})
 
 	---Death Enfeebling Magic
 	sets.midcast['Enfeebling Magic'].DeatMB = set_combine(sets.precast.FC.DeatMB, {})
@@ -300,36 +300,36 @@ function job_post_midcast(spell, action, spellMap, eventArgs)
 			if spell.english == 'Death' then
 				equip(sets.MB_death)
 			elseif spell.skill == 'Elemental Magic' then            
-            				if state.MagicBurst.value and sets.magic_burst then
-                				local equipSet = sets.magic_burst
-                				if equipSet[spell.english] then
-                    					equipSet = equipSet[spell.english]
-	                			end
-	                			if equipSet[spellMap] then
-	                    				equipSet = equipSet[spellMap]
-	                			end
-		                		if equipSet[state.CastingMode.value] then
-	                    				equipSet = equipSet[state.CastingMode.value]
-	                			end
-	                			equip(equipSet)
-	                		end
-	                	end
+				if state.MagicBurst.value and sets.magic_burst then
+					local equipSet = sets.magic_burst
+					if equipSet[spell.english] then
+							equipSet = equipSet[spell.english]
+					end
+					if equipSet[spellMap] then
+							equipSet = equipSet[spellMap]
+					end
+					if equipSet[state.CastingMode.value] then
+							equipSet = equipSet[state.CastingMode.value]
+					end
+					equip(equipSet)
+				end
+			end
 		elseif spell.skill == 'Elemental Magic' then            
 			if state.MagicBurst.value and sets.magic_burst then
-    				local equipSet = sets.magic_burst
-    				if equipSet[spell.english] then
-        					equipSet = equipSet[spell.english]
-	        			end
-	        			if equipSet[spellMap] then
-	            				equipSet = equipSet[spellMap]
-	        			end
-		            		if equipSet[state.CastingMode.value] then
-	            				equipSet = equipSet[state.CastingMode.value]
-	        			end
-	        			equip(equipSet)
-	        		end
-                	end
-            	end
+					local equipSet = sets.magic_burst
+					if equipSet[spell.english] then
+							equipSet = equipSet[spell.english]
+						end
+						if equipSet[spellMap] then
+								equipSet = equipSet[spellMap]
+						end
+							if equipSet[state.CastingMode.value] then
+								equipSet = equipSet[state.CastingMode.value]
+						end
+						equip(equipSet)
+					end
+					end
+				end
 	if spell.element == world.day_element or spell.element == world.weather_element then
 		if string.find(spell.english,'helix') then
 			equip(sets.midcast.Helix)

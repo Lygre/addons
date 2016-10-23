@@ -18,9 +18,16 @@ local buffs = {
 
 function buffs.checkOwnBuffs()
 	local player = windower.ffxi.get_player()
-	if (player ~= nil) and (player.buffs ~= nil) then
-		--Register everything that's actually active
-		for _,bid in pairs(player.buffs) do
+	if (player ~= nil) then
+        buffs.review_active_buffs(player, player.buffs)
+	end
+end
+
+
+function buffs.review_active_buffs(player, buff_list)
+    if buff_list ~= nil then
+        --Register everything that's actually active
+        for _,bid in pairs(buff_list) do
 			local buff = res.buffs[bid]
 			if (enfeebling:contains(bid)) then
 				buffs.register_debuff(player, buff, true)
@@ -30,13 +37,13 @@ function buffs.checkOwnBuffs()
 		end
 		--Double check the list of what should be active
 		local checklist = buffs.buffList[player.name] or {}
-		local active = S(player.buffs)
+		local active = S(buff_list)
 		for bname,binfo in pairs(checklist) do
 			if not active:contains(binfo.buff.id) then
 				buffs.register_buff(player, res.buffs[binfo.buff.id], false)
 			end
 		end
-	end
+    end
 end
 
 
@@ -294,6 +301,24 @@ function buffs.register_debuff(target, debuff, gain, action)
         atcd('Detected %sdebuff: %s wore off %s [%s]':format(msg, debuff.en, tname, tid))
     end
 end
+
+
+-- local last_action = {}
+-- function register_action(atype, aid)
+    -- last_action.type = atype
+    -- last_action.id = aid
+-- end
+
+-- windower.register_event('gain buff', function(buff_id)
+    -- atcfs('Gained: %s %s [Type: %s]', buff_id, res.buffs[buff_id].en, last_action.type)
+    -- if last_action.type == 'Geomancy' then
+        -- buffs.action_buff_map[last_action.type] = buffs.action_buff_map[last_action.type] or {}
+        -- if buffs.action_buff_map[last_action.type][last_action.id] == nil then
+            -- buffs.action_buff_map[last_action.type][last_action.id] = buff_id
+            -- buffs.action_buff_map:save(true)
+        -- end
+    -- end
+-- end)
 
 
 function buffs.register_buff(target, buff, gain, action)

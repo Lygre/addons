@@ -1,15 +1,16 @@
 _addon.name = 'HealBot'
 _addon.author = 'Lorand'
 _addon.command = 'hb'
-_addon.version = '2.10.8'
-_addon.lastUpdate = '2016.08.14.3'
+_addon.version = '2.12.0'
+_addon.lastUpdate = '2016.10.02.0'
 
 require('luau')
 require('lor/lor_utils')
 _libs.lor.include_addon_name = true
-_libs.lor.req('all', {n='tables',v='2016.07.24.1'}, {n='chat',v='2016.07.30'})
+_libs.lor.req('all', {n='packets',v='2016.10.02.0'})
 _libs.req('queues')
 lor_settings = _libs.lor.settings
+serialua = _libs.lor.serialization
 
 healer = {}
 
@@ -34,7 +35,19 @@ require('HealBot_queues')
 
 hb = {}
 
-windower.register_event('load', function()
+local _events = {}
+local ipc_req = serialua.encode({method='GET', pk='buff_ids'})
+local can_act_statuses = S{0,1,5,85}    --0/1/5/85 = idle/engaged/chocobo/other_mount
+local dead_statuses = S{2,3}
+local pt_keys = {'party1_count','party2_count','party3_count'}
+local pm_keys = {
+    {'p0','p1','p2','p3','p4','p5'},
+    {'a10','a11','a12','a13','a14','a15'},
+    {'a20','a21','a22','a23','a24','a25'}
+}
+
+
+_events['load'] = windower.register_event('load', function()
     if not _libs.lor then
         windower.add_to_chat(39,'ERROR: .../Windower/addons/libs/lor/ not found! Please download: https://github.com/lorand-ffxi/lor_libs')
     end
@@ -45,23 +58,24 @@ windower.register_event('load', function()
     atcc(261,'I apologize for the inconvenience; this makes many things easier behind the scenes.')
     atcc(39,'=':rep(80))
 
-    healer.zone_enter = os.clock()-25
+    local now = os.clock()
+    healer.zone_enter = now - 25
     healer.zone_wait = false
-    healer.lastAction = os.clock()
-    healer.lastMoveCheck = os.clock()
-    healer.actionStart = os.clock()
-    healer.actionEnd = healer.actionStart + 0.1
+    healer.lastMoveCheck = now
+    healer.last_ipc_sent = now
+    healer.ipc_delay = 2
     
     local player = windower.ffxi.get_player()
     healer.name = player and player.name or 'Player'
+    healer.job = player.main_job
+    healer.id = player.id
+    healer.actor = _libs.lor.actor.Actor.new(healer.id)
     
     modes = {['showPacketInfo']=false,['debug']=false,['mob_debug']=false}
     _libs.lor.debug = modes.debug
     active = false
-    lastActingState = false
     partyMemberInfo = {}
     
-    trusts = populateTrustList()
     ignoreList = S{}
     extraWatchList = S{}
     
@@ -70,11 +84,20 @@ windower.register_event('load', function()
     CureUtils.init_cure_potencies()
 end)
 
-windower.register_event('logout', function()
+
+_events['unload'] = windower.register_event('unload', function()
+    for _,event in pairs(_events) do
+        windower.unregister_event(event)
+    end
+end)
+
+
+_events['logout'] = windower.register_event('logout', function()
     windower.send_command('lua unload healBot')
 end)
 
-windower.register_event('zone change', function(new_id, old_id)
+
+_events['zone'] = windower.register_event('zone change', function(new_id, old_id)
     healer.zone_enter = os.clock()
     local zone_info = windower.ffxi.get_info()
     if zone_info ~= nil then
@@ -88,26 +111,29 @@ windower.register_event('zone change', function(new_id, old_id)
     end
 end)
 
-windower.register_event('job change', function()
+
+_events['job'] = windower.register_event('job change', function()
     active = false
+    local player = windower.ffxi.get_player()
+    healer.job = player.main_job
     printStatus()
 end)
 
-windower.register_event('incoming chunk', handle_incoming_chunk)
-windower.register_event('addon command', processCommand)
+_events['inc'] = windower.register_event('incoming chunk', handle_incoming_chunk)
+_events['cmd'] = windower.register_event('addon command', processCommand)
 
 
 --[[
     Executes before each frame is rendered for display.
     Acts as the run() method of a threaded application.
 --]]
-windower.register_event('prerender', function()
+_events['render'] = windower.register_event('prerender', function()
     local now = os.clock()
-    local moving = hb.isMoving(now)
+    local moving = hb.isMoving()
     local acting = hb.isPerformingAction(moving)
     local player = windower.ffxi.get_player()
     healer.name = player and player.name or 'Player'
-    if (player ~= nil) and S{0,1,5}:contains(player.status) then    --0/1/5 = idle/engaged/chocobo
+    if (player ~= nil) and can_act_statuses:contains(player.status) then
         local partner,targ = offense.assistee_and_target()
         Assert.follow_target_exists()   --Attempts to prevent autorun problems
         if (settings.follow.active or offense.assist.active) and ((now - healer.lastMoveCheck) > settings.follow.delay) then
@@ -136,18 +162,24 @@ windower.register_event('prerender', function()
         
         if active and not (moving or acting) then
             --active = false    --Quick stop when debugging
-            if (now - healer.lastAction) > settings.actionDelay then
+            if healer.actor:action_delay_passed() then
+                healer.actor.last_action = now              --Refresh stored action check time
                 actions.take_action(player, partner, targ)
-                healer.lastAction = now     --Refresh stored action check time
             end
+        end
+        
+        if active and ((now - healer.last_ipc_sent) > healer.ipc_delay) then
+            windower.send_ipc_message(ipc_req)
+            healer.last_ipc_sent = now
         end
     end
 end)
 
+
 function wcmd(prefix, action, target)
-    windower.send_command('input %s "%s" "%s"':format(prefix, action, target))
-    settings.actionDelay = 0.6
+    healer.actor:send_cmd('input %s "%s" "%s"':format(prefix, action, target))
 end
+
 
 function hb.activate()
     local player = windower.ffxi.get_player()
@@ -164,98 +196,75 @@ function hb.activate()
     printStatus()
 end
 
+
 function hb.addPlayer(list, player)
-    if (player ~= nil) and (not (ignoreList:contains(player.name))) then
-        local is_trust = player.mob and player.mob.spawn_type == 14 or false    --13 = players; 14 = Trust NPC
-        if (settings.ignoreTrusts and is_trust and (not extraWatchList:contains(player.name))) then return end
-        local status = player.mob and player.mob.status or player.status
-        if (S{2,3}:contains(status)) or (player.hpp <= 0) then
-            --Player is dead.  Reset their buff/debuff lists and don't include them in monitored list
-            buffs.resetDebuffTimers(player.name)
-            buffs.resetBuffTimers(player.name)
-        else
-            player.trust = is_trust
-            list[player.name] = player
-        end
+    if (player == nil) or list:contains(player.name) or ignoreList:contains(player.name) then return end
+    local is_trust = player.mob and player.mob.spawn_type == 14 or false    --13 = players; 14 = Trust NPC
+    if (settings.ignoreTrusts and is_trust and (not extraWatchList:contains(player.name))) then return end
+    local status = player.mob and player.mob.status or player.status
+    if dead_statuses:contains(status) or (player.hpp <= 0) then
+        --Player is dead.  Reset their buff/debuff lists and don't include them in monitored list
+        buffs.resetDebuffTimers(player.name)
+        buffs.resetBuffTimers(player.name)
+    else
+        player.trust = is_trust
+        list[player.name] = player
     end
 end
 
-function hb.getMonitoredPlayers()
+
+local function _getMonitoredPlayers()
     local pt = windower.ffxi.get_party()
-    local me = pt.p0
+    local my_zone = pt.p0.zone
     local targets = S{}
-    
-    local pty = {pt.p0,pt.p1,pt.p2,pt.p3,pt.p4,pt.p5}
-    for _,player in pairs(pty) do
-        if (me.zone == player.zone) then
-            hb.addPlayer(targets, player)
+    for p = 1, #pt_keys do
+        for m = 1, pt[pt_keys[p]] do
+            local pt_member = pt[pm_keys[p][m]]
+            if my_zone == pt_member.zone then
+                if p == 1 or extraWatchList:contains(pt_member.name) then
+                    hb.addPlayer(targets, pt_member)
+                end
+            end
         end
     end
-    
-    local alliance = {pt.a10,pt.a11,pt.a12,pt.a13,pt.a14,pt.a15,pt.a20,pt.a21,pt.a22,pt.a23,pt.a24,pt.a25}
-    for _,ally in pairs(alliance) do
-        if (ally ~= nil) and (extraWatchList:contains(ally.name)) and (me.zone == ally.zone) then
-            hb.addPlayer(targets, ally)
-        end
-    end
-    
     for extraName,_ in pairs(extraWatchList) do
-        local extraPlayer = windower.ffxi.get_mob_by_name(extraName)
-        if (extraPlayer ~= nil) and (not targets:contains(extraPlayer.name)) then
-            hb.addPlayer(targets, extraPlayer)
-        end
+        hb.addPlayer(targets, windower.ffxi.get_mob_by_name(extraName))
     end
     txts.montoredBox:text(getPrintable(targets, true))
     txts.montoredBox:visible(settings.textBoxes.montoredBox.visible)
     return targets
 end
+hb.getMonitoredPlayers = _libs.lor.advutils.tcached(1, _getMonitoredPlayers)
 
-function hb.isMoving(now)
-    if (getPosition() == nil) then
+
+local function _getMonitoredIds()
+    local ids = S{}
+    for name, player in pairs(hb.getMonitoredPlayers()) do
+        local id = player.mob and player.mob.id or player.id or utils.get_player_id[name]
+        if id ~= nil then
+            ids[id] = true
+        end
+    end
+    return ids
+end
+hb.getMonitoredIds = _libs.lor.advutils.tcached(1, _getMonitoredIds)
+
+
+function hb.isMoving()
+    local timeAtPos = healer.actor:time_at_pos()
+    if timeAtPos == nil then
         txts.moveInfo:hide()
-        -- return true
-        return false
     end
-    healer.lastPos = healer.lastPos or getPosition()
-    healer.posArrival = healer.posArrival or os.clock()
-    local currentPos = getPosition()
-    -- local moving = true
-    local moving = false
-    local timeAtPos = math.floor((now - healer.posArrival)*10)/10
-    if (healer.lastPos:equals(currentPos)) then
-        -- moving = (timeAtPos < 0.5)
-        moving = false
-    else
-        healer.lastPos = currentPos
-        healer.posArrival = now
-    end
-    if math.floor(timeAtPos) == timeAtPos then
-        timeAtPos = timeAtPos..'.0'
-    end
-    txts.moveInfo:text('Time @ '..currentPos:toString()..': '..timeAtPos..'s')
+    local moving = healer.actor:is_moving()
+    txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
     txts.moveInfo:visible(settings.textBoxes.moveInfo.visible)
     return moving
 end
 
+
 function hb.isPerformingAction(moving)
-    if (os.clock() - healer.actionStart) > 8 then
-        --Precaution in case an action completion isn't registered for a long time
-        healer.actionEnd = os.clock()
-    end
-    
-    local acting = (healer.actionEnd < healer.actionStart)
-    local status = acting and 'performing an action' or (moving and 'moving' or 'idle')
-    status = 'is '..status
-    
-    if (lastActingState ~= acting) then --If the current acting state is different from the last one
-        if lastActingState then         --If an action was being performed
-            settings.actionDelay = 2.75         --Set a longer delay
-            healer.lastAction = os.clock()      --The delay will be from this time
-        else                    --If no action was being performed
-            settings.actionDelay = 0.1          --Set a short delay
-        end
-        lastActingState = acting        --Refresh the last acting state
-    end
+    local acting = healer.actor:is_acting()
+    local status = 'is %s':format(acting and 'performing an action' or (moving and 'moving' or 'idle'))
     
     if (os.clock() - healer.zone_enter) < 25 then
         acting = true
@@ -277,11 +286,58 @@ function hb.isPerformingAction(moving)
         end
     end
     
-    local hb = active and '\\cs(0,0,255)[ON]\\cr' or '\\cs(255,0,0)[OFF]\\cr'
-    txts.actionInfo:text(' %s %s %s':format(hb, healer.name, status))
+    local hb_status = active and '\\cs(0,0,255)[ON]\\cr' or '\\cs(255,0,0)[OFF]\\cr'
+    txts.actionInfo:text(' %s %s %s':format(hb_status, healer.name, status))
     txts.actionInfo:visible(settings.textBoxes.actionInfo.visible)
     return acting
 end
+
+
+function hb.process_ipc(msg)
+    local loaded = serialua.decode(msg)
+    if loaded == nil then
+        atc(53, 'Received nil IPC message')
+    elseif type(loaded) ~= 'table' then
+        atcfs(264, 'IPC message: %s', loaded)
+    elseif loaded.method == 'GET' then
+        if loaded.pk ~= nil then        
+            if loaded.pk == 'buff_ids' then
+                local player = windower.ffxi.get_player()
+                local response = {
+                    method='POST', pk='buff_ids', val=player.buffs,
+                    pid=player.id, name=player.name, stype=player.spawn_type
+                }
+                local encoded = serialua.encode(response)
+                windower.send_ipc_message(encoded)
+            else
+                atcfs(123, 'Invalid pk for GET request: %s', loaded.pk)
+            end
+        else
+            atcfs(123, 'Invalid GET request: %s', msg)
+        end
+    elseif loaded.method == 'POST' then
+        if loaded.pk ~= nil then        
+            if loaded.pk == 'buff_ids' then
+                if loaded.name ~= nil then                
+                    local player = windower.ffxi.get_mob_by_name(loaded.name)
+                    player = player or {id=loaded.pid,name=loaded.name,spawn_type=loaded.stype}
+                    buffs.review_active_buffs(player, loaded.val)
+                else
+                    atcfs(123, 'Missing name in POST message: %s', msg)
+                end
+            else
+                atcfs(123, 'Invalid pk for POST message: %s', loaded.pk)
+            end
+        else
+            atcfs(123, 'Invalid POST message: %s', msg)
+        end
+    else
+        atcfs(123, 'Invalid IPC message: %s', msg)
+    end
+end
+
+_events['ipc'] = windower.register_event('ipc message', hb.process_ipc)
+
 
 --======================================================================================================================
 --[[
