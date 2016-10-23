@@ -28,8 +28,9 @@
 --Default settings file:
 default_settings = {
     strings = {
-        default = "xp.current..'/'..xp.tnl..'XP '..lp.current..'/'..lp.tnm..'LP ['..lp.number_of_merits..'/'..lp.maximum_merits..'] XP/hr:'..string.format('%.1f',math.floor(xp.rate/100)/10)..'k '..cp.current..'/'..cp.tnjp..'CP ['..cp.number_of_job_points..'] CP/hr:'..string.format('%.1f',math.floor(cp.rate/100)/10)..'k''",
-        dynamis = "xp.current..'/'..xp.tnl..'XP   ''..lp.current..'/'..lp.tnm..'LP ['..lp.number_of_merits..'/'..lp.maximum_merits..']   XP/hr:'..string.format('%.1f',math.floor(xp.rate/100)/10)..'k   '..cp.current..'/'..cp.tnjp..'CP ['..cp.number_of_job_points..']   '..dynamis.KIs..'  '..dynamis.time_remaining"
+        default = "xp.current..'/'..xp.tnl..'XP   '..lp.current..'/'..lp.tnm..'LP ['..lp.number_of_merits..'/'..lp.maximum_merits..']   XP/hr:'..string.format('%.1f',math.floor(xp.rate/100)/10)..'k   '..cp.current..'/'..cp.tnjp..'CP ['..cp.number_of_job_points..']   CP/hr:'..string.format('%.1f',math.floor(cp.rate/100)/10)..'k'",
+        dynamis = "xp.current..'/'..xp.tnl..'XP   '..lp.current..'/'..lp.tnm..'LP ['..lp.number_of_merits..'/'..lp.maximum_merits..']   XP/hr:'..string.format('%.1f',math.floor(xp.rate/100)/10)..'k   '..cp.current..'/'..cp.tnjp..'CP ['..cp.number_of_job_points..']   '..dynamis.KIs..'  '..dynamis.time_remaining",
+        abyssea = "xp.current..'/'..xp.tnl..'XP   '..lp.current..'/'..lp.tnm..'LP ['..lp.number_of_merits..'/'..lp.maximum_merits..']   XP/hr:'..string.format('%.1f',math.floor(xp.rate/100)/10)..'k   Amber:'..(abyssea.amber or 0)..'/Azure:'..(abyssea.azure or 0)..'/Ruby:'..(abyssea.ruby or 0)..'/Pearlescent:'..(abyssea.pearlescent or 0)..'/Ebon:'..(abyssea.ebon or 0)..'/Silvery:'..(abyssea.silvery or 0)..'/Golden:'..(abyssea.golden or 0)..'/Time Remaining:'..(abyssea.time_remaining or 0)"
         },
     text_box_settings = {
         pos = {
@@ -128,6 +129,7 @@ function initialize()
         ebon = 0,
         silvery = 0,
         golden = 0,
+        update_time = 0,
         time_remaining = 0,
     }
     

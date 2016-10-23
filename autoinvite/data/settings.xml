@@ -2,17 +2,15 @@
 <settings>
     <global>
         <blacklist />
-        <keywords />
+        <keywords>inv</keywords>
         <mode>whitelist</mode>
         <tellback>on</tellback>
         <whitelist />
     </global>
     <lygre>
-        <keywords>inv</keywords>
         <mode>blacklist</mode>
     </lygre>
-    <Zadora>
-                <keywords>inv</keywords>
+    <zadora>
         <mode>blacklist</mode>
- </Zadora>
+    </zadora>
 </settings>

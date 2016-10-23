@@ -254,8 +254,8 @@ function init_gear_sets()
 
 	--DW Max Haste 43.75%
 	sets.engaged.DW.MaxHaste = {
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
-		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Petrov Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 
 	sets.engaged.DW.Acc.MaxHaste = set_combine(sets.engaged.DW.MaxHaste, {

@@ -51,12 +51,14 @@ return {
         ['melee'] = {
             'Haste' },
         ['self'] = {
-            'Haste',
             'Aquaveil',
             'Protectra V',
             'Shellra V',
-            'Reraise III',
+            'Reraise IV',
             'Afflatus Solace'},
+        ['schsub'] = {
+            'Aurorastorm',
+            'Light Arts'},
         ['amnesia'] = {
             'Barfira',
             'Baramnesra'},
@@ -67,5 +69,23 @@ return {
             'Barblizzara',
             'Barparalyzra'},
 
+    },
+    ['blu'] = {
+        ['cleave'] = {
+            'Erratic Flutter',
+            'Barrier Tusk',
+            'Cocoon',
+            'Defender',
+            'Carcharian Verve'
     }
+},
+    ['pld'] = {
+        ['self'] = {
+            'Phalanx',
+            'Reprisal',
+            'Crusade',
+            'Enlight II'
+    }
+}
+
 }
