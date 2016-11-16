@@ -33,7 +33,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1830083046157e+101</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -73,7 +73,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1830083046157e+101</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -113,7 +113,7 @@
                 <red>255</red>
                 <size>10</size>
                 <stroke>
-                    <alpha>-1.1830083046157e+101</alpha>
+                    <alpha>3.01667117677e+103</alpha>
                     <blue>0</blue>
                     <green>0</green>
                     <red>0</red>
@@ -316,7 +316,7 @@
             </50>
             <51>
                 <id>51</id>
-                <level>0</level>
+                <level>31</level>
                 <name>Goldsmithing</name>
                 <short_name>goldsmithing</short_name>
             </51>
@@ -334,7 +334,7 @@
             </53>
             <54>
                 <id>54</id>
-                <level>108.5</level>
+                <level>109.1</level>
                 <name>Bonecraft</name>
                 <short_name>bonecraft</short_name>
             </54>

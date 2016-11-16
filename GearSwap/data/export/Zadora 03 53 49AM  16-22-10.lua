@@ -1,0 +1,17 @@
+sets.exported={
+    main="Sequence",
+    sub="Aegis",
+    ammo="Sapience Orb",
+    head={ name="Odyssean Helm", augments={'Attack+3','"Fast Cast"+5','Accuracy+15',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands="Macabre Gaunt. +1",
+    legs={ name="Souveran Diechlings", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    feet={ name="Odyssean Greaves", augments={'"Mag.Atk.Bns."+3','"Cure" potency +6%',}},
+    neck="Phalaina Locket",
+    waist="Creed Baudrier",
+    left_ear="Odnowa Earring",
+    right_ear="Loquac. Earring",
+    left_ring="Apeile Ring",
+    right_ring="Apeile Ring +1",
+    back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Cure" potency +10%',}},
+}

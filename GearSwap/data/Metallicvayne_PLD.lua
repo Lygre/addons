@@ -52,18 +52,18 @@ function init_gear_sets()
 	--------------------------------------
 		sets.midcast.Enmity = {
 	ammo="sapience orb",
-	head="Loess Barbuta",
-	body="Souveran Cuirass",
-	hands="Souveran Handschuhs",
-	legs="Souveran Diechlings",
-	feet="Souveran Schuhs",
+	head="Loess Barbuta +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Yorium Gauntlets", augments={'Enmity+10',}},
+	legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	feet={ name="Yorium Sabatons", augments={'Enmity+10',}},
 	neck="Unmoving Collar +1",
 	waist="Creed Baudrier",
-	left_ear="Friomisi Earring",
+	left_ear="Trux Earring",
 	right_ear="Cryptic Earring",
 	left_ring="Apeile Ring",
 	right_ring="Apeile Ring +1",
-	back="Reiki Cloak",
+	back={ name="Rudianos's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Enmity+10',}},
 }
 
 	sets.precast.JA.Provoke = sets.midcast.Enmity
@@ -77,21 +77,27 @@ function init_gear_sets()
 	sets.precast.JA.Chivalry = sets.midcast.Enmity
    
    -- Precast sets to enhance JAs
-	sets.precast.JA['Invincible'] = {legs="Caballarius Breeches"}
-	sets.precast.JA['Holy Circle'] = {}
-	sets.precast.JA['Shield Bash'] = {hands="Caballarius Gauntlets"}
-	sets.precast.JA['Sentinel'] = {feet="Caballarius Leggings"}
-	sets.precast.JA['Rampart'] = {head="Caballarius Coronet"}
+	sets.precast.JA['Invincible'] = {legs="Caballarius Breeches +1"}
+	sets.precast.JA['Holy Circle'] = {feet="Reverence Leggings +1"}
+	sets.precast.JA['Shield Bash'] = {hands="Caballarius Gauntlets +1"}
+	sets.precast.JA['Sentinel'] = {feet="Caballarius Leggings +1"}
+	sets.precast.JA['Rampart'] = {head="Caballarius Coronet +1"}
 	sets.precast.JA['Fealty'] = {body="Caballarius Surcoat +1"}
 	sets.precast.JA['Divine Emblem'] = {feet="Chevalier's Sabatons +1"}
-	sets.precast.JA['Cover'] = {}
+	sets.precast.JA['Cover'] = {head="Reverence Coronet +1"}
 
 	-- add mnd for Chivalry
-	sets.precast.JA['Chivalry'] = {}
+	sets.precast.JA['Chivalry'] = {
+		head="Reverence Coronet +1",
+		body="Caballarius Surcoat +1",hands="Caballarius gauntlets +1",ring1="Leviathan Ring",ring2="Leviathan Ring",
+		back="Weard Mantle",legs="Caballarius breeches +1",feet="Whirlpool Greaves"}
 	
 
 	-- Waltz set (chr and vit)
-	sets.precast.Waltz = {}
+	sets.precast.Waltz = {ammo="Sonia's Plectrum",
+		head="Reverence Coronet +1",
+		body="Gorney Haubert +1",hands="Reverence Gauntlets +1",ring2="Asklepian Ring",
+		back="Iximulew Cape",waist="Caudata Belt",legs="Reverence Breeches +1",feet="Whirlpool Greaves"}
 		
 	-- Don't need any special gear for Healing Waltz.
 	sets.precast.Waltz['Healing Waltz'] = {}
@@ -102,19 +108,19 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {
-	ammo="sapience orb",
-	head=gear.zadora.odhead_fc,
-	body=gear.zadora.odbody_fc,
-	hands="Leyline Gloves",
-	legs=gear.zadora.odlegs_fc,
-	feet=gear.zadora.odfeet_fc,
-	neck="Voltsurge Torque",
+	ammo="Impatiens",
+	head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Odyssean Gauntlets", augments={'"Fast Cast"+6','Attack+1',}},
+	legs={ name="Odyssean Cuisses", augments={'"Fast Cast"+6','Attack+4',}},
+	feet={ name="Odyssean Greaves", augments={'Accuracy+30','"Fast Cast"+6','Attack+1',}},
+	neck="Creed Collar",
 	waist="Tempus Fugit",
-	left_ear="Etiolation Earring",
+	left_ear="Enchanter earring +1",
 	right_ear="Loquac. Earring",
 	left_ring="Defending Ring",
-	right_ring="Rahab Ring",
-	back=gear.zadora.pldcape_fc,
+	right_ring="Veneficium Ring",
+	back={ name="Rudianos's Mantle", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 	}
 
 	
@@ -127,36 +133,37 @@ function init_gear_sets()
 	sets.precast.WS = {
 	ammo="Ginsen",
 	head="Ynglinga Sallet",
-	body="Souveran Cuirass",
-	hands="Flamma Manopolas +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands="Sulev. Gauntlets +1",
 	legs="Sulevi. Cuisses +1",
 	feet="Sulev. Leggings +1",
 	neck="Fotia Gorget",
 	waist="Fotia Belt",
-	left_ear="Telos Earring",
+	left_ear="Trux Earring",
 	right_ear="Brutal Earring",
 	left_ring="Rufescent Ring",
 	right_ring="Hetairoi Ring",
-	back=gear.zadora.pldcape_cure,
+	back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 }
 
 	sets.precast.WS.Acc = set_combine(sets.precast.WS,{})
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {})
+	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {ring1="Leviathan Ring",ring2="Aquasoul Ring"})
+	sets.precast.WS['Requiescat'].Acc = set_combine(sets.precast.WS.Acc, {ring1="Leviathan Ring"})
 
 	sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {feet="thereoid greaves"})
 	sets.precast.WS['Chant du Cygne'].Acc = set_combine(sets.precast.WS.Acc, {})
 
-	sets.precast.WS['Sanguine Blade'] = {ammo="Pemphredo Tathlum",
-		head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Friomisi Earring",ear2="Digni. Earring",
-		body="Jumalik Mail",hands="Leyline Gloves",ring1="Shiva Ring +1",ring2="Archon Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Souveran Diechlings",feet="Sulevia's Leggings +1"}
+	sets.precast.WS['Sanguine Blade'] = {ammo="Ginsen",
+		head="Reverence Coronet +1",neck="Eddy Necklace",ear1="Friomisi Earring",ear2="Hecate's Earring",
+		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Shiva Ring",ring2="K'ayres Ring",
+		back="Toro Cape",waist="Caudata Belt",legs="Reverence Breeches +1",feet="Reverence Leggings +1"}
 	
-	sets.precast.WS['Atonement'] = set_combine(sets.precast.WS,{ammo="sapience orb",
-		neck=gear.ElementalGorget,
-		back="Fierabras's Mantle",waist=gear.ElementalBelt,})
+	sets.precast.WS['Atonement'] = {ammo="Iron Gobbet",
+		head="Reverence Coronet +1",neck=gear.ElementalGorget,ear1="Creed Earring",ear2="Steelflash Earring",
+		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Rajas Ring",ring2="Vexer Ring",
+		back="Fierabras's Mantle",waist=gear.ElementalBelt,legs="Reverence Breeches +1",feet="Caballarius Leggings"}
 	 
 	
 	
@@ -165,27 +172,29 @@ function init_gear_sets()
 	--------------------------------------
 
 	sets.midcast.FastRecast = {
-	ammo="sapience orb",
-	head="Souveran Schaller",
-	body="Souveran Cuirass",
-	hands="Leyline Gloves",
-	legs=gear.zadora.odlegs_fc,
-	feet="Souveran Schuhs",
-	neck="Voltsurge Torque",
+	ammo="Impatiens",
+	head={ name="Souveran Schaller", augments={'HP+80','VIT+10','Phys. dmg. taken -3',}},
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+	legs={ name="Founder's Hose", augments={'MND+5','Mag. Acc.+5','Attack+3','Breath dmg. taken -2%',}},
+	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	neck="Unmoving Collar +1",
 	waist="Tempus Fugit",
 	left_ear="Trux Earring",
 	right_ear="Brutal Earring",
 	left_ring="Defending Ring",
-	right_ring="Rahab Ring",
-	back=gear.zadora.pldcape_fc,}
+	right_ring="Patricius Ring",
+	back={ name="Rudianos's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Enmity+10',}},}
 
 		
 
 	sets.midcast.Phalanx = set_combine(sets.midcast.Enmity, {
-	    head=gear.zadora.valhead_phalanx,
-		hands="Souveran Handschuhs",
-		feet="Souveran Schuhs",
-		back="Weard Mantle",})
+	    head={ name="Yorium Barbuta", augments={'Weapon Skill Acc.+15','Phalanx +3',}},
+		body={ name="Yorium Cuirass",augments={'Phalanx +3',}},
+		hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+		feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+		legs={ name="Yorium Cuisses", augments={'"Store TP"+6','Phalanx +3',}},
+		back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},})
 	
 	
 	sets.midcast.Flash = set_combine(sets.midcast.Enmity, {})
@@ -193,12 +202,12 @@ function init_gear_sets()
 	sets.midcast.Stun = sets.midcast.Flash
 	
 	sets.midcast.Cure = set_combine(sets.midcast.Enmity, {
-	    head=gear.zadora.odhead_fc, neck="Phalaina Locket", ear2="Odnowa Earring",
-		body="Souveran Cuirass",
+	    head="Carmine Mask +1", 
+		body="Souv. Cuirass",
 		hands="Macabre gauntlets +1", 
-		feet=gear.zadora.odfeet_cure,
-		legs="Souveran Diechlings",
-		back=gear.zadora.pldcape_cure})
+		feet="Souveran Schuhs +1",
+		legs="Yorium Cuisses",
+		back="Fierabras's mantle"})
 	     
 		
 		
@@ -206,7 +215,7 @@ function init_gear_sets()
 
 	sets.midcast['Blue Magic'] = set_combine(sets.midcast.Enmity, {})
 
-	sets.midcast['Enhancing Magic'] = {neck="Incanter's Torque",waist="Olympus Sash"}
+	sets.midcast['Enhancing Magic'] = {neck="Colossus's Torque",waist="Olympus Sash"}
 	
 	sets.midcast.Protect = {ring1="Sheltered Ring"}
 	sets.midcast.Shell = {ring1="Sheltered Ring"}
@@ -225,50 +234,49 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 	ammo="Homiliary",
-	head="Loess Barbuta",
-	body="Souveran Cuirass",
-	hands="Souveran Handschuhs",
-	legs="Souveran Diechlings",
-	feet="Souveran Schuhs",
+	head="Loess Barbuta +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+	legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	neck="Sanctity Necklace",
 	waist="Creed Baudrier",
 	left_ear="Infused Earring",
 	right_ear="Cryptic Earring",
 	left_ring="Defending Ring",
 	right_ring="Patricius Ring",
-	back=gear.zadora.pldcape_cure,
 	
 }
 	sets.idle.Town = {
 	ammo="Homiliary",
-	head="Loess Barbuta",
-	body="Souveran Cuirass",
-	hands="Souveran Handschuhs",
-	legs="Souveran Diechlings",
-	feet="Souveran Schuhs",
+	head="Loess Barbuta +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+	legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	neck="Sanctity Necklace",
 	waist="Creed Baudrier",
 	left_ear="Infused Earring",
 	right_ear="Cryptic Earring",
 	left_ring="Defending Ring",
 	right_ring="Patricius Ring",
-	back=gear.zadora.pldcape_cure,
+	back={ name="Rudianos's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Enmity+10',}},
 }
 	
 	sets.idle.Weak = {
 	ammo="Homiliary",
-	head="Loess Barbuta",
-	body="Souveran Cuirass",
-	hands="Souveran Handschuhs",
-	legs="Souveran Diechlings",
-	feet="Souveran Schuhs",
+	head="Loess Barbuta +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+	legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	neck="Sanctity Necklace",
 	waist="Creed Baudrier",
 	left_ear="Infused Earring",
 	right_ear="Cryptic Earring",
 	left_ring="Defending Ring",
 	right_ring="Patricius Ring",
-	back=gear.zadora.pldcape_cure,
+	back={ name="Rudianos's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Enmity+10',}},
 	}
 	sets.idle.Weak.Reraise = set_combine(sets.idle.Weak, sets.Reraise)
 	sets.idle.Reraise = set_combine(sets.idle,sets.Reraise)
@@ -293,16 +301,16 @@ function init_gear_sets()
 
 	-- Basic defense sets.
 		
-	sets.defense.PDT = {ammo="Staunch Tathlum",
-		head="Loess Barbuta",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Souveran Cuirass",hands="Sulevia's Gauntlets +1",ring1="Defending Ring",ring2="Fortified Ring",
-		back=gear.zadora.pldcape_cure,legs="Sulevia's Cuisses +1",feet="Souveran Schuhs"}
+	sets.defense.PDT = {ammo="Iron Gobbet",
+		head="Reverence Coronet +1",neck="Twilight Torque",ear1="Creed Earring",ear2="Buckler Earring",
+		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+		back="Weard Mantle",legs="Reverence Breeches +1",feet="Reverence Leggings +1"}
 	-- To cap MDT with Shell IV (52/256), need 76/256 in gear.
 	-- Shellra V can provide 75/256, which would need another 53/256 in gear.
-	sets.defense.MDT = {ammo="Staunch Tathlum",
-		head="Loess Barbuta",neck="Loricate Torque +1",ear1="Sanare Earring",ear2="Etiolation Earring",
-		body="Souveran Cuirass",hands="Souveran Handschuhs",ring1="Defending Ring",ring2="Shadow Ring",
-		back=gear.zadora.pldcape_cure,waist="Creed Baudrier",legs="Sulevia's Cuisses +1",feet="Sulevia's Leggings +1"}
+	sets.defense.MDT = {ammo="Demonry Stone",
+		head="Reverence Coronet +1",neck="Twilight Torque",ear1="Creed Earring",ear2="Bloodgem Earring",
+		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Defending Ring",ring2="Shadow Ring",
+		back="Engulfer Cape",waist="Creed Baudrier",legs="Osmium Cuisses",feet="Caballarius Leggings +1"}
 
 	--------------------------------------
 	-- Engaged sets
@@ -310,33 +318,42 @@ function init_gear_sets()
 	
 	sets.engaged = {
 	ammo="Hasty Pinion +1",
-	head="Flamma Zucchetto +1",
-	body="Valorous Mail",
-	hands="Flamma Manopolas +1",
+	head="Sulevia's Mask +1",
+	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
 	legs="Sulevi. Cuisses +1",
-	feet="Flamma Gambieras +1",
+	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	neck="Creed Collar",
-	waist="Kentarch Belt",
-	left_ear="Telos Earring",
-	right_ear="Cessance Earring",
+	waist="Tempus Fugit",
+	left_ear="Trux Earring",
+	right_ear="Cryptic Earring",
 	left_ring="Defending Ring",
-	right_ring="Fortified Ring",
-	back="Weard Mantle",
+	right_ring="Patricius Ring",
+	back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 }
 
-	sets.engaged.Acc = set_combine(sets.engaged,{ammo="Ginsen",})
+	sets.engaged.Acc = {ammo="Ginsen",
+		head="Yaoyotl Helm",neck="Asperity Necklace",ear1="Bladeborn Earring",ear2="Steelflash Earring",
+		body="Gorney Haubert +1",hands="Buremte Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
+		back="Weard Mantle",waist="Zoran's Belt",legs="Cizin Breeches",feet="Whirlpool Greaves"}
 
-	sets.engaged.DW = set_combine(sets.engaged,{ammo="Ginsen"})
+	sets.engaged.DW = {ammo="Ginsen",
+		head="Otomi Helm",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
+		body="Gorney Haubert +1",hands="Cizin Mufflers",ring1="Rajas Ring",ring2="K'ayres Ring",
+		back="Atheling Mantle",waist="Cetl Belt",legs="Cizin Breeches",feet="Whirlpool Greaves"}
 
-	sets.engaged.DW.Acc = set_combine(sets.engaged.DW,{ammo="Ginsen"})
+	sets.engaged.DW.Acc = {ammo="Ginsen",
+		head="Yaoyotl Helm",neck="Asperity Necklace",ear1="Dudgeon Earring",ear2="Heartseeker Earring",
+		body="Gorney Haubert +1",hands="Buremte Gloves",ring1="Rajas Ring",ring2="K'ayres Ring",
+		back="Weard Mantle",waist="Zoran's Belt",legs="Cizin Breeches",feet="Whirlpool Greaves"}
 
-	sets.engaged.PDT = set_combine(sets.engaged, {neck="Loricate Torque +1",ring1="Defending Ring"})
-	sets.engaged.Acc.PDT = set_combine(sets.engaged.Acc, {neck="Loricate Torque +1",ring1="Defending Ring"})
+	sets.engaged.PDT = set_combine(sets.engaged, {body="Reverence Surcoat +1",neck="Twilight Torque",ring1="Defending Ring"})
+	sets.engaged.Acc.PDT = set_combine(sets.engaged.Acc, {body="Reverence Surcoat +1",neck="Twilight Torque",ring1="Defending Ring"})
 	sets.engaged.Reraise = set_combine(sets.engaged, sets.Reraise)
 	sets.engaged.Acc.Reraise = set_combine(sets.engaged.Acc, sets.Reraise)
 
-	sets.engaged.DW.PDT = set_combine(sets.engaged.DW, {neck="Loricate Torque +1",ring1="Defending Ring"})
-	sets.engaged.DW.Acc.PDT = set_combine(sets.engaged.DW.Acc, {neck="Loricate Torque +1",ring1="Defending Ring"})
+	sets.engaged.DW.PDT = set_combine(sets.engaged.DW, {body="Reverence Surcoat +1",neck="Twilight Torque",ring1="Defending Ring"})
+	sets.engaged.DW.Acc.PDT = set_combine(sets.engaged.DW.Acc, {body="Reverence Surcoat +1",neck="Twilight Torque",ring1="Defending Ring"})
 	sets.engaged.DW.Reraise = set_combine(sets.engaged.DW, sets.Reraise)
 	sets.engaged.DW.Acc.Reraise = set_combine(sets.engaged.DW.Acc, sets.Reraise)
 
@@ -346,7 +363,7 @@ function init_gear_sets()
 	--------------------------------------
 
 	sets.buff.Doom = {ring2="Saida Ring"}
-	sets.buff.Cover = {--[[head="Reverence Coronet +1", ]]body="Caballarius Surcoat +1"}
+	sets.buff.Cover = {head="Reverence Coronet +1", body="Caballarius Surcoat +1"}
 end
 
 
@@ -354,19 +371,19 @@ end
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
--- function job_midcast(spell, action, spellMap, eventArgs)
--- 	-- If DefenseMode is active, apply that gear over midcast
--- 	-- choices.  Precast is allowed through for fast cast on
--- 	-- spells, but we want to return to def gear before there's
--- 	-- time for anything to hit us.
--- 	-- Exclude Job Abilities from this restriction, as we probably want
--- 	-- the enhanced effect of whatever item of gear applies to them,
--- 	-- and only one item should be swapped out.
--- 	if state.DefenseMode.value ~= 'None' and spell.type ~= 'JobAbility' then
--- 		handle_equipping_gear(player.status)
--- 		eventArgs.handled = true
--- 	end
--- end
+function job_midcast(spell, action, spellMap, eventArgs)
+	-- If DefenseMode is active, apply that gear over midcast
+	-- choices.  Precast is allowed through for fast cast on
+	-- spells, but we want to return to def gear before there's
+	-- time for anything to hit us.
+	-- Exclude Job Abilities from this restriction, as we probably want
+	-- the enhanced effect of whatever item of gear applies to them,
+	-- and only one item should be swapped out.
+	if state.DefenseMode.value ~= 'None' and spell.type ~= 'JobAbility' then
+		handle_equipping_gear(player.status)
+		eventArgs.handled = true
+	end
+end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
@@ -505,6 +522,14 @@ end
 -- Select default macro book on initial load or subjob change.
 function select_default_macro_book()
 	-- Default macro set/book
-		set_macro_page(6, 7)
+	if player.sub_job == 'DNC' then
+		set_macro_page(5, 2)
+	elseif player.sub_job == 'NIN' then
+		set_macro_page(4, 2)
+	elseif player.sub_job == 'RDM' then
+		set_macro_page(3, 2)
+	else
+		set_macro_page(5, 1)
+	end
 end
 

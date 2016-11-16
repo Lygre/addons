@@ -1,0 +1,17 @@
+sets.exported={
+    main="Oranyan",
+    sub="Clerisy Strap",
+    ammo="Homiliary",
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+27','"Fast Cast"+5','MND+3',}},
+    body={ name="Amalric Doublet", augments={'MP+60','"Mag.Atk.Bns."+20','"Fast Cast"+3',}},
+    hands={ name="Chironic Gloves", augments={'Potency of "Cure" effect received+6%','Crit.hit rate+3','"Refresh"+1','Mag. Acc.+4 "Mag.Atk.Bns."+4',}},
+    legs="Assid. Pants +1",
+    feet={ name="Merlinic Crackows", augments={'"Store TP"+1','Pet: Attack+21 Pet: Rng.Atk.+21','"Refresh"+1','Accuracy+6 Attack+6','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+    neck="Loricate Torque +1",
+    waist="Slipor Sash",
+    left_ear="Sanare Earring",
+    right_ear="Zennaroi Earring",
+    left_ring={ name="Dark Ring", augments={'Phys. dmg. taken -5%','Magic dmg. taken -4%',}},
+    right_ring="Warp Ring",
+    back="Solemnity Cape",
+}
