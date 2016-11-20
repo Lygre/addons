@@ -6,7 +6,7 @@
 
 local lor_tables = {}
 lor_tables._author = 'Ragnarok.Lorand'
-lor_tables._version = '2016.07.30.0'
+lor_tables._version = '2016.10.31.0'
 
 require('lor/lor_utils')
 _libs.req('tables')
@@ -256,7 +256,7 @@ function table.str(t) return '{%s}':format(', ':join(map(tostring, t))) end
 --[[
     Returns the value for the given keys of arbitrary depth.
     If a table is provided for any given level, the first available value is
-    chosen as tehkey for that level.  Fails fast if a given level does not have
+    chosen as the key for that level.  Fails fast if a given level does not have
     a value for that level's key.
     Returns t[k1][k2]...[kN] or nil if any sub-table does not contain the key
     provided for that level.
@@ -338,27 +338,19 @@ local function cmp(obj1, obj2)
     end
 end
 
+
 local function ordered_indices(t) local r = table.keys(t); table.sort(r, cmp); return r end
-local function onext(t, state)
-    local m = getmetatable(t)
-    if m == nil then
-        m = {}
-        setmetatable(t, m)
+
+
+function opairs(tbl)
+    local i = 0
+    local ordered = ordered_indices(tbl)
+    return function()
+        i = i + 1
+        local key = ordered[i]
+        return key, tbl[key]
     end
-    if state == nil then
-        m.__ordIt = ordered_indices(t)
-        m.__ordIc = 1
-    else
-        m.__ordIc = m.__ordIc + 1
-    end
-    if m.__ordIc <= #m.__ordIt then
-        local k = m.__ordIt[m.__ordIc]
-        return k, t[k]
-    end
-    m.__ordIt = nil
-    m.__ordIc = nil
 end
-opairs = function(t) return onext, t, nil end
 
 
 return lor_tables

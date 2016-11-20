@@ -5,7 +5,7 @@
 
 local lor_str = {}
 lor_str._author = 'Ragnarok.Lorand'
-lor_str._version = '2016.08.07'
+lor_str._version = '2016.10.16'
 
 require('lor/lor_utils')
 _libs.req('strings')
@@ -123,7 +123,15 @@ function string.join(jstr, ...)
     while i <= #tbl do
         local ele = tbl[i]
         if type(ele) == 'table' then
-            ele = string.join(jstr, unpack(ele))
+            if class(ele) == 'Set' then
+                local stbl = {}
+                for k,_ in pairs(ele) do
+                    stbl[#stbl+1] = k
+                end
+                ele = string.join(jstr, unpack(stbl))
+            else
+                ele = string.join(jstr, unpack(ele))
+            end
         end
         building = building..((i == 1) and '' or jstr)..tostring(ele)
         i = i + 1

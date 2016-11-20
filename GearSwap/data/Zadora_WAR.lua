@@ -128,37 +128,39 @@ function init_gear_sets()
 --------------Weapon Skill Sets--------------------
 
     sets.precast.WS['Upheaval'] = {
-    ammo="Ginsen",
-    head={ name="Valorous Mask", augments={'Accuracy+21 Attack+21','Sklchn.dmg.+3%','VIT+1','Accuracy+14','Attack+14',}},
+    ammo="Seething Bomblet",
+    head="Flamma Zucchetto +1",
     body={ name="Odyss. Chestplate", augments={'Accuracy+20','Weapon Skill Acc.+8','VIT+15',}},
     hands={ name="Odyssean Gauntlets", augments={'Weapon Skill Acc.+4','VIT+8','Attack+12',}},
-    legs={ name="Odyssean Cuisses", augments={'Accuracy+19 Attack+19','"Dbl.Atk."+2','VIT+5','Accuracy+4','Attack+6',}},
-    feet={ name="Amm Greaves", augments={'HP+45','VIT+10','Accuracy+14','Damage taken-1%',}},
+    legs="Sulevia's Cuisses +1",
+    feet="Sulevia's Leggings +1",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Brutal Earring",
     right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +25',}},
-    left_ring="Pernicious Ring",
+    left_ring="Rajas Ring",
     right_ring="Petrov Ring",
-    back={ name="Mauler's Mantle", augments={'DEX+4','STR+1','Accuracy+2','Crit. hit damage +2%',}},
+ back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 }	
+
     sets.precast.WS['Upheaval'].Mid = {}
     sets.precast.WS['Upheaval'].Acc = {}
 
-    sets.precast.WS["Ukko's Fury"] = {ammo="Seething Bomblet",
-    head="Boii Mask +1",
-    body={ name="Argosy Hauberk", augments={'STR+10','DEX+10','Attack+15',}},
-    hands={ name="Argosy Mufflers", augments={'STR+10','DEX+10','Attack+15',}},
-    legs={ name="Argosy Breeches", augments={'STR+10','DEX+10','Attack+15',}},
-    feet={ name="Loyalist Sabatons", augments={'STR+10','Attack+15','Phys. dmg. taken -3%','Haste+3',}},
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Brutal Earring",
-    right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +25',}},
-    left_ring="Rufescent Ring",
-    right_ring="Shukuyu Ring",
-    back={ name="Mauler's Mantle", augments={'DEX+4','STR+1','Accuracy+2','Crit. hit damage +2%',}},
-}
+    sets.precast.WS['Ukko\'s Fury'] = {
+        ammo="Seething Bomblet",
+        head="Flamma Zucchetto +1",
+        body="Argosy Hauberk",
+        hands="Flamma Manopolas +1",
+        legs="Sulevia's Cuisses +1",
+        feet="Thereoid Greaves",
+        neck="Fotia Gorget",
+        waist="Fotia Belt",
+        left_ear="Brutal Earring",
+        right_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +25',}},
+        left_ring="Begrudging Ring",
+        right_ring="Petrov Ring",
+     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Crit.hit rate+10',}},
+}   
     sets.precast.WS["Ukko's Fury"].Mid = {}
     sets.precast.WS["Ukko's Fury"].Acc = {}
 
@@ -218,13 +220,13 @@ function init_gear_sets()
 		
         -- Normal melee group
     sets.engaged = {ammo="Ginsen",
-    head={ name="Yorium Barbuta", augments={'Accuracy+25','"Store TP"+5',}},
+    head="Flamma Zucchetto +1",
     body={ name="Emicho Haubert", augments={'HP+50','DEX+10','Accuracy+15',}},
-    hands={ name="Emicho Gauntlets", augments={'HP+50','DEX+10','Accuracy+15',}},
+    hands="Flamma Manopolas +1",
     legs={ name="Odyssean Cuisses", augments={'Accuracy+26','"Store TP"+4','VIT+5','Attack+7',}},
     feet={ name="Valorous Greaves", augments={'Accuracy+25','"Store TP"+6',}},
-    neck="Combatant's Torque",
-    waist="Kentarch Belt",
+    neck="Asperity Necklace",
+    waist="Ioskeha Belt",
     left_ear="Telos Earring",
     right_ear="Cessance Earring",
     left_ring="Petrov Ring",

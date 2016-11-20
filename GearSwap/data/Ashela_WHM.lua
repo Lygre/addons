@@ -57,17 +57,17 @@ function init_gear_sets()
 -- Fast cast sets for spells
 sets.precast.FC = {    main="Grioavolr",sub="Clerisy Strap",ammo="Incantor Stone",
 	head="Vanya Hood",
-	body="Inyanga Jubbah",
+	body="Inyanga Jubbah +1",
 	hands="Chironic Gloves",
-	legs="Assiduity Pants",
+	legs="Assiduity Pants +1",
 	feet="Regal Pumps",
 	neck="Orison Locket",
-	waist="Channeler's Stone",
+	waist="Witful Belt",
 	left_ear="Nourish. Earring",
 	right_ear="Mendi. Earring",
 	left_ring="Serket Ring",
 	right_ring="Weather. Ring",
-	back="Swith Cape",}
+	back=gear.ashela.whm.cape_fc}
 
 sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
@@ -110,17 +110,17 @@ sets.midcast.FastRecast = sets.precast.FC
 
 -- Cure sets
 gear.default.obi_waist = "Goading Belt"
-gear.default.obi_back = "Alaunus's Cape"
+gear.default.obi_back = gear.ashela.whm.cape_fc
 
 sets.midcast.CureWithLightWeather = {main="Chatoyant Staff",sub="Achaq Grip",ammo="Psilomene",
 	head="Ebers cap +1",neck="Incanter's torque",ear1="Nourishing earring",ear2="Mendi. earring",
 	body="Ebers Bliaud +1",hands="Inyanga Dastanas +1",ring1="Sirona's Ring",ring2="Weatherspoon Ring",
-	back="Alaunus's Cape",waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
+	back=gear.ashela.whm.cape_cure,waist="Hachirin-no-obi",legs="Ebers Pantaloons +1",feet="Vanya clogs"}
 
 sets.midcast.CureSolace = {ammo="Hydrocera",
 	main="Queller Rod",
 	sub="Sors shield",
-	head="Vanya Hood",
+	head="Kaykaus Mitra",
 	body="Ebers Bliaud +1",
 	hands="Inyanga Dastanas +1",
 	legs="Ebers Pantaloons +1",
@@ -131,12 +131,12 @@ sets.midcast.CureSolace = {ammo="Hydrocera",
 	right_ear="Mendi. Earring",
 	left_ring="Sirona's Ring",
 	right_ring="Weather. Ring",
-	back="Alaunus's Cape",}
+	back=gear.ashela.whm.cape_cure}
 
 sets.midcast.Cure = {
 	main="Ababinili",
 	sub="Achaq Grip",
-	head="Vanya Hood",
+	head="Kaykaus Mitra",
 	body="Ebers Bliaud +1",
 	hands="Inyanga Dastanas +1",
 	legs="Ebers Pantaloons +1",
@@ -152,7 +152,7 @@ sets.midcast.Cure = {
 sets.midcast.Curaga = {ammo="Psilomene",
 	main="Ababinili",
 	sub="Achaq Grip",
-	head="Vanya Hood",
+	head="Kaykaus Mitra",
 	body="Ebers Bliaud +1",
 	hands="Kaykaus Cuffs",
 	legs="Ebers Pantaloons +1",
@@ -167,13 +167,15 @@ sets.midcast.Curaga = {ammo="Psilomene",
 
 sets.midcast.CureMelee = {}
 
-sets.midcast.Cursna = {back="Alaunus's Cape"}
-
 sets.midcast.StatusRemoval = set_combine(sets.midcast.CureSolace,{main="Ababinili",sub="Clemency Grip",ammo="Incantor Stone",
 	head="Ebers cap +1",legs="Ebers Pantaloons +1"})
 
+sets.midcast.Cursna = set_combine(sets.midcast.StatusRemoval,{neck="Malison Medallion",
+	ring1="Haoma's Ring",ring2="Haoma's Ring",
+	back=gear.ashela.whm.cape_fc, waist="Witful Belt",legs="Theophany Pantaloons +1",feet="Gendewitha Galoshes +1"})
+
 -- 110 total Enhancing Magic Skill; caps even without Light Arts
-sets.midcast['Enhancing Magic'] = {main="Beneficus",sub="Vivid Strap +1",
+sets.midcast['Enhancing Magic'] = {main="Ababinili",sub="Clerisy Strap",
 	head="Umuthi Hat",neck="Incanter's Torque",
 	body="Telchine Chasuble",hands="Inyanga Dastanas +1",
 	back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Kaykaus Boots"}
@@ -183,22 +185,22 @@ sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'],{neck="Node
 sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'],{hands="Chironic Gloves",feet="Orison Duckbills +2"})
 
 sets.midcast.BarElement = set_combine(sets.midcast['Enhancing Magic'],{
-	head="Ebers Cap +1",body="Ebers Bliaud +1",legs="Ebers Pantaloons +1",
-	back="Alaunus's Cape"})
+	head="Ebers Cap +1",body="Ebers Bliaud +1",legs="Piety Pantaloons +1",
+	back=gear.ashela.whm.cape_cure})
 
 sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'],{head="Chironic Hat"})
 
 
 ----Make soon
 sets.midcast.Regen = {
-	main="Bolelabunga",
+	main="Bolelabunga",sub="Genmei Shield",
 	head="Inyanga Tiara +1",
 	body={ name="Piety Briault", augments={'Enhances "Benediction" effect',}},
-	hands="Weather. Cuffs",
-	legs="Ebers Pantaloons +1",
-	feet="Vanya Clogs",
-	neck="Orison Locket",
-	waist="Channeler's Stone",
+	hands="Inyanga Dastanas +1",
+	legs="Theophany Pantaloons +1",
+	feet="Kaykaus Boots",
+	neck="Incanter's Torque",
+	waist="Witful Belt",
 	left_ear="Nourish. Earring",
 	right_ear="Mendi. Earring",
 	left_ring="Sirona's Ring",
@@ -212,24 +214,24 @@ sets.midcast.Shellra = {ring1="Sheltered Ring",legs="Piety Pantaloons"}
 
 sets.midcast['Divine Magic'] = {main="Grioavolr",sub="Clerisy Strap",range=empty,ammo="Hydrocera",
 	head="Inyanga Tiara +1",neck="Voltsurge Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
-	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
+	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 sets.midcast['Dark Magic'] = {main="Grioavolr",sub="Clerisy Strap",range=empty,ammo="Hydrocera",
 	head="Inyanga Tiara +1",neck="Voltsurge Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
-	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
+	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 -- Custom spell classes
 sets.midcast.MndEnfeebles = {main="Grioavolr",sub="Clerisy Strap",range=empty,ammo="Hydrocera",
-	head="Inyanga Tiara +1",neck="Voltsurge Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
-	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	head="Inyanga Tiara +1",neck="Incanter's Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
+	back=gear.ashela.whm.cape_fc,waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 sets.midcast.IntEnfeebles = {main="Grioavolr",sub="Clerisy Strap",range=empty,ammo="Hydrocera",
 	head="Inyanga Tiara +1",neck="Voltsurge Torque",ear1="Lifestorm Earring",ear2="Psystorm Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
-	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="Perception Ring",ring2="Weatherspoon Ring",
+	back="Kumbira Cape",waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 
 -- Sets to return to when not performing an action.
@@ -245,7 +247,7 @@ sets.idle = {
 	head="Befouled Crown",
 	body="Ebers Bliaud +1",
 	hands="Inyanga Dastanas +1",
-	legs="Assiduity Pants",
+	legs="Assiduity Pants +1",
 	feet="Inyanga Crackows +1",
 	neck="Orison Locket",
 	waist="Luminary Sash",
@@ -259,19 +261,20 @@ sets.idle = {
 sets.idle.PDT = {main="Bolelabunga", sub="Genbu Shield",ammo="Incantor Stone",
 	head="Nahtirah Hat",neck="Twilight Torque",ear1="Glorious Earring",ear2="Loquacious Earring",
 	body="Piety Briault",hands="Chironic gloves",ring1="Defending Ring",ring2=gear.DarkRing.physical,
-	back="Umbra Cape",waist="Witful Belt",legs="Assiduity pants",feet="Herald's Gaiters"}
+	back="Umbra Cape",waist="Witful Belt",legs="Assiduity Pants +1",feet="Herald's Gaiters"}
 
 sets.idle.MDT = {main="Bolelabunga",sub="Genmei Shield",ammo="Hydrocera",
 	head="Inyanga Tiara +1", neck="Twilight Torque",ear1="Flashward Earring",ear2="Spellbreaker Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="",ring2="",
-	back="Solemnity Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="",ring2="",
+	back="Solemnity Cape",waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 sets.idle.Town = {
 	main="Bolelabunga",
+	sub="Genmei Shield",
 	head="Befouled Crown",
 	body="Ebers Bliaud +1",
 	hands="Chironic Gloves",
-	legs="Assiduity Pants",
+	legs="Assiduity Pants +1",
 	feet="Herald's Gaiters",
 	neck="Orison Locket",
 	waist="Luminary Sash",
@@ -291,8 +294,8 @@ sets.defense.PDT = {main=gear.Staff.PDT,sub="Achaq Grip",
 
 sets.defense.MDT = {main="Bolelabunga",sub="Genmei Shield",ammo="Hydrocera",
 	head="Inyanga Tiara +1", neck="Twilight Torque",ear1="Flashward Earring",ear2="Spellbreaker Earring",
-	body="Inyanga Jubbah",hands="Inyanga Dastanas +1",ring1="",ring2="",
-	back="Solemnity Cape",waist="Luminary Sash",legs="Inyanga Shalwar",feet="Inyanga Crackows +1"}
+	body="Inyanga Jubbah +1",hands="Inyanga Dastanas +1",ring1="",ring2="",
+	back="Solemnity Cape",waist="Luminary Sash",legs="Inyanga Shalwar +1",feet="Inyanga Crackows +1"}
 
 sets.Kiting = {feet="Herald's Gaiters"}
 

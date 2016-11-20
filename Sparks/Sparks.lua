@@ -12,7 +12,7 @@ config = require('config')
 db = require('map')
 res = require('resources')
 
-pkt = {}
+local pkt = {}
 
 
 valid_zones = T{"Western Adoulin","Southern San d'Oria","Windurst Woods","Bastok Markets"}
@@ -104,37 +104,38 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
         if busy == true and pkt then
         local packet = packets.new('outgoing', 0x05B)
         packet["Target"]=pkt['Target']
-        --print(pkt['Target'])
         packet["Option Index"]=pkt['Option Index']
-        --print(pkt['Option Index'])
         packet["_unknown1"]=pkt['_unknown1']
-        --print(pkt['_unknown1'])
         packet["Target Index"]=pkt['Target Index']
-        --print(pkt['Target Index'])
         packet["Automated Message"]=true
         packet["_unknown2"]=0
         packet["Zone"]=pkt['Zone']
-        --print(pkt['Zone'])
         packet["Menu ID"]=pkt['Menu ID']
-        --print(pkt['Menu ID'])
         packets.inject(packet)
+        --print(pkt['Target'])
+        --print(pkt['Option Index'])
+        --print(pkt['_unknown1'])
+        --print(pkt['Target Index'])
+        --print(pkt['Zone'])
+        --print(pkt['Menu ID'])
         --print("sent")
+
         local packet = packets.new('outgoing', 0x05B)
         packet["Target"]=pkt['Target']
-        --print(pkt['Target'])
         packet["Option Index"]=0
-        --print(pkt['Option Index'])
         packet["_unknown1"]=16384
-        --print(pkt['_unknown1'])
         packet["Target Index"]=pkt['Target Index']
-        --print(pkt['Target Index'])
         packet["Automated Message"]=false
         packet["_unknown2"]=0
         packet["Zone"]=pkt['Zone']
-        --print(pkt['Zone'])
         packet["Menu ID"]=pkt['Menu ID']
-        --print(pkt['Menu ID'])
         packets.inject(packet)
+        --print(pkt['Target'])
+        --print(pkt['Option Index'])
+        --print(pkt['_unknown1'])
+        --print(pkt['Target Index'])
+        --print(pkt['Zone'])
+        --print(pkt['Menu ID'])
         --print("sent")
         local packet = packets.new('outgoing', 0x016, {
         ["Target Index"]=pkt['me'],

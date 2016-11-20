@@ -34,7 +34,7 @@
 		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
-		<!-- <addon>lottery</addon> -->
+		<addon>lottery</addon>
 		<addon>organizer</addon>
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
@@ -48,7 +48,7 @@
 		<!-- <addon>sellnpc</addon> -->
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<!-- <addon>sparks</addon> -->
 		<addon>speedchecker</addon>
 		<addon>stna</addon>
@@ -75,8 +75,8 @@
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
 		<addon>Anchor</addon> 
-<!-- 		<addon>aecho</addon>
- -->		<addon>auctionhelper</addon>
+		<addon>aecho</addon>
+		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>
@@ -99,6 +99,7 @@
 		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
+		<addon>lottery</addon>
 		<addon>organizer</addon>
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
@@ -112,7 +113,7 @@
 		<!-- <addon>sellnpc</addon> -->
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<!-- <addon>sparks</addon> -->
 		<addon>speedchecker</addon>
 		<addon>stna</addon>
@@ -139,8 +140,8 @@
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
 		<addon>Anchor</addon> 
-<!-- 		<addon>aecho</addon>
- -->		<addon>auctionhelper</addon>
+		<addon>aecho</addon>
+		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>
@@ -158,11 +159,12 @@
 		<addon>fastcs</addon>
 		<addon>findall</addon>
 		<addon>gearswap</addon>
-		<!-- <addon>healbot</addon> -->
+		<addon>healbot</addon>
 		<addon>instals</addon>
 		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
+		<addon>lottery</addon>
 		<addon>organizer</addon>
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
@@ -176,7 +178,7 @@
 		<!-- <addon>sellnpc</addon> -->
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<!-- <addon>sparks</addon> -->
 		<addon>speedchecker</addon>
 		<addon>stna</addon>
@@ -202,9 +204,9 @@
 		<plugin>Fishingcrashfix</plugin>
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
-<!-- 		<addon>Anchor</addon> 
- --><!-- 		<addon>aecho</addon>
- -->		<addon>auctionhelper</addon>
+		<addon>Anchor</addon> 
+		<addon>aecho</addon>
+		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<addon>autoSynth</addon>
@@ -223,9 +225,10 @@
 		<addon>findall</addon>
 		<addon>gearswap</addon>
 		<addon>instals</addon>
-		<addon>invspace</addon>
+		<!-- <addon>invspace</addon> -->
 		<addon>itemizer</addon>
 		<addon>logger</addon>
+		<addon>lottery</addon>
 		<addon>organizer</addon>
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
@@ -239,7 +242,7 @@
 		<!-- <addon>sellnpc</addon> -->
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<!-- <addon>sparks</addon> -->
 		<addon>speedchecker</addon>
 		<addon>stna</addon>
@@ -271,8 +274,8 @@
 		<plugin>config</plugin>
 		<plugin>guildwork</plugin>
 		<addon>Anchor</addon> 
-<!-- 		<addon>aecho</addon>
- -->		<addon>auctionhelper</addon>
+		<addon>aecho</addon>
+		<addon>auctionhelper</addon>
 		<addon>autoinvite</addon>
 		<addon>autojoin</addon>
 		<!-- <addon>autoSynth</addon> -->
@@ -290,26 +293,28 @@
 		<addon>fastcs</addon>
 		<addon>findall</addon>
 		<addon>gearswap</addon>
-		<!-- <addon>healbot</addon> -->
+		<addon>healbot</addon>
 		<addon>instals</addon>
 		<!-- <addon>invspace</addon> -->
+		<addon>impalert</addon>
 		<addon>itemizer</addon>
 		<addon>logger</addon>
-		<!-- <addon>organizer</addon> -->
+		<addon>lottery</addon>
+		<addon>organizer</addon>
 		<!-- <addon>partybuffs</addon> -->
 		<addon>pet_fix</addon>
 		<!-- <addon>pettp</addon> -->
 		<!-- <addon>pointwatch</addon> -->
 		<!-- <addon>pouches</addon> -->
 		<!-- <addon>pricer</addon> -->
-		<!-- <addon>rollbot</addon> -->
+		<addon>rollbot</addon>
 		<addon>rolltracker</addon>
 		<!-- <addon>scoreboard</addon> -->
 		<addon>send</addon>
 		<!-- <addon>sellnpc</addon> -->
 		<addon>shortcuts</addon>
 		<!-- <addon>skillchains</addon> -->
-		<addon>sprint</addon>
+		<!-- <addon>sprint</addon> -->
 		<!-- <addon>sparks</addon> -->
 		<addon>speedchecker</addon>
 		<addon>stna</addon>

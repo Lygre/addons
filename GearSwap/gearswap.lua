@@ -178,6 +178,8 @@ windower.register_event('addon command',function (...)
         end
     elseif cmd == 'export' then
         export_set(splitup)
+    elseif cmd == 'stats' then
+        get_stats(splitup)
     elseif cmd == 'validate' then
         if user_env and user_env.sets then
             refresh_globals()

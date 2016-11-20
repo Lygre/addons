@@ -5,9 +5,9 @@
 --]]
 
 local lor_utils = {}
-lor_utils._version = '2016.08.02'
+lor_utils._version = '2016.10.02'
 lor_utils._author = 'Ragnarok.Lorand'
-lor_utils.load_order = {'functional','math','strings','tables','chat','exec','settings'}
+lor_utils.load_order = {'functional','math','strings','tables','chat','exec','serialization','settings','argparse','packets','position','actor','advutils'}
 
 _libs = _libs or {}
 _libs.lor = _libs.lor or {}
@@ -20,6 +20,58 @@ if not _libs.lor.utils then
     lor.G = gearswap and gearswap._G or _G
     xpcall = lor.G.xpcall
     lor.watc = lor.G.windower.add_to_chat
+    
+    --Implementation/imitation of Python's os.path =====================================================================
+    
+    os.path = os.path or {}
+    
+    os.path.exists = function(path)
+        return lor.G.windower.file_exists(path) or lor.G.windower.dir_exists(path)
+    end
+    
+    os.path.mkdir = lor.G.windower.create_dir
+    
+    os.path.join = function(root, ...)
+        local result = root or '/'
+        local subs = {...}
+        for _,p in ipairs(subs) do
+            local trailing = result:endswith('/')
+            local leading = p:startswith('/')
+            local s = (trailing or leading) and '' or '/'
+            result = '%s%s%s':format(result, s, p)
+        end
+        return result
+    end
+    
+    os.path.split = function(path)
+        local parts = path:psplit('[\\\\/]')
+        local result = T{}
+        for _,p in ipairs(parts) do
+            if #p > 0 then
+                result:append(p)
+            end
+        end
+        return result
+    end
+    
+    os.path.mkdirs = function(root, path)
+        local parts = os.path.split(path)
+        local cwd = root
+        for _,p in ipairs(parts) do
+            cwd = os.path.join(cwd, p)
+            if not lor.G.windower.dir_exists(cwd) then
+                os.path.mkdir(cwd)
+            end
+        end
+    end
+    
+    os.path.parent = function(path)
+        local parts = os.path.split(path)
+        parts[#parts] = nil
+        return os.path.join(unpack(parts))
+    end
+    
+    --Function wrappers, including error handling ======================================================================
     
     function _handler(err)
         --[[
@@ -72,18 +124,28 @@ if not _libs.lor.utils then
         end
     end
     
-    local function t_contains(t, val)
-        --Used for enforcing the load order without loading the tables library
-        for _,v in pairs(t) do
-            if v == val then return true end
+    --Type checking and manipulation functions =========================================================================
+    
+    function bool(obj)
+        if type(obj) == 'boolean' then
+            return obj
+        elseif type(obj) == 'string' then
+            return obj:lower() == 'true'
         end
-        return false
+        return obj
     end
-        
-    function yyyymmdd_to_num(date_str)
-        local y,m,d,o = date_str:match('^(%d%d%d%d)[^0-9]*(%d%d)[^0-9]*(%d%d)[^0-9]*(.*)')
-        local x = (#o > 0) and (tonumber(o) or 1) or 0
-        return os.time({year=y,month=m,day=d}) + x
+    
+    function cast(obj, type_name)
+        if type(obj) == type_name then
+            return obj
+        elseif type_name == 'string' then
+            return tostring(obj)
+        elseif (type_name == 'number') or (type_name == 'int') or (type_name == 'float') then
+            return tonumber(obj)
+        elseif (type_name == 'bool') or (type_name == 'boolean') then
+            return bool(obj)
+        end
+        error('Unable to cast %s to type %s':format(tostring(obj), type_name))
     end
     
     function isfunc(obj) return type(obj) == 'function' end
@@ -99,7 +161,15 @@ if not _libs.lor.utils then
         return m and m.__class or type(obj)
     end
     
+    --Module loading functions =========================================================================================
+    
     local try_req = try(require)
+    
+    function yyyymmdd_to_num(date_str)
+        local y,m,d,o = date_str:match('^(%d%d%d%d)[^0-9]*(%d%d)[^0-9]*(%d%d)[^0-9]*(.*)')
+        local x = (#o > 0) and (tonumber(o) or 1) or 0
+        return os.time({year=y,month=m,day=d}) + x
+    end
     
     local function load_lor_lib(lname, version)
         if _libs.lor[lname] == nil then

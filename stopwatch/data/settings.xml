@@ -106,23 +106,23 @@
     </doroti>
     <lyger>
         <pos>
-            <x>314</x>
-            <y>2</y>
+            <x>333</x>
+            <y>-3</y>
         </pos>
         <text>
             <stroke>
-                <alpha>-4211734020</alpha>
+                <alpha>1073992175355</alpha>
             </stroke>
         </text>
     </lyger>
     <lygre>
         <pos>
-            <x>803</x>
-            <y>22</y>
+            <x>675</x>
+            <y>19</y>
         </pos>
         <text>
             <stroke>
-                <alpha>-1.780826700661e+019</alpha>
+                <alpha>4.5411080866855e+021</alpha>
             </stroke>
         </text>
     </lygre>

@@ -181,7 +181,7 @@ legs="Nares Trews",feet="Chelona Boots"}
 		head="Befouled Crown",
 		body="Amalric Doublet",
 		hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-		legs="Assiduity Pants",
+		legs="Assiduity Pants +1",
 		feet="Geo. Sandals",
 		neck="Loricate Torque +1",
 		waist="Fucho-no-Obi",

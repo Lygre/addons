@@ -129,7 +129,8 @@ _events['cmd'] = windower.register_event('addon command', processCommand)
 --]]
 _events['render'] = windower.register_event('prerender', function()
     local now = os.clock()
-    local moving = hb.isMoving()
+   -- local moving = hb.isMoving()
+    local moving = false
     local acting = hb.isPerformingAction(moving)
     local player = windower.ffxi.get_player()
     healer.name = player and player.name or 'Player'
@@ -155,7 +156,7 @@ _events['render'] = windower.register_event('prerender', function()
                     windower.ffxi.run(false)
                 end
             else
-                moving = true
+                moving = false
             end
             healer.lastMoveCheck = now      --Refresh stored movement check time
         end
@@ -256,7 +257,7 @@ function hb.isMoving()
         txts.moveInfo:hide()
     end
     local moving = healer.actor:is_moving()
-    txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
+    -- txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
     txts.moveInfo:visible(settings.textBoxes.moveInfo.visible)
     return moving
 end

@@ -81,14 +81,18 @@ function init_gear_sets()
 	sets.precast.JA['Holy Circle'] = {feet="Reverence Leggings +1"}
 	sets.precast.JA['Shield Bash'] = {hands="Caballarius Gauntlets +1"}
 	sets.precast.JA['Sentinel'] = {feet="Caballarius Leggings +1"}
-	sets.precast.JA['Rampart'] = {head="Caballarius Coronet +1"}
 	sets.precast.JA['Fealty'] = {body="Caballarius Surcoat +1"}
 	sets.precast.JA['Divine Emblem'] = {feet="Chevalier's Sabatons +1"}
 	sets.precast.JA['Cover'] = {head="Reverence Coronet +1"}
-
+    
+	-- add vit for Rampart
+	sets.precast.JA['Rampart'] = {
+	    head="Caballarius Coronet +1",
+		body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},hands="Odyssean gauntlets",ring1="Titan Ring +1",ring2="Titan Ring +1",
+		ammo={"Brigantia pebble",ear1="Terra's Pearl",ear2="Terra's Pearl",neck="Unmoving Collar +1",feet="Odyssean Greaves", augments={'"Fast Cast"+5',}},}
 	-- add mnd for Chivalry
 	sets.precast.JA['Chivalry'] = {
-		head="Reverence Coronet +1",
+	    head="Reverence Coronet +1",
 		body="Caballarius Surcoat +1",hands="Caballarius gauntlets +1",ring1="Leviathan Ring",ring2="Leviathan Ring",
 		back="Weard Mantle",legs="Caballarius breeches +1",feet="Whirlpool Greaves"}
 	
@@ -108,6 +112,7 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {
+	
 	ammo="Impatiens",
 	head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
 	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
@@ -123,7 +128,20 @@ function init_gear_sets()
 	back={ name="Rudianos's Mantle", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
 	}
 
-	
+	sets.precast.FC['Healing Magic'] = {ammo="Impatiens",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body={ name="Xaddi Mail", augments={'Attack+15','Accuracy+10','"Store TP"+3',}},
+    hands="Macabre Gaunt. +1",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
+    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+5',}},
+    neck="Voltsurge Torque",
+    waist="Tempus Fugit",
+    left_ear="Enchntr. Earring +1",
+    right_ear="Loquac. Earring",
+    left_ring="Defending Ring",
+    right_ring="Prolix Ring",
+    back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},
+}
 
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash"})
 
@@ -163,7 +181,7 @@ function init_gear_sets()
 	sets.precast.WS['Atonement'] = {ammo="Iron Gobbet",
 		head="Reverence Coronet +1",neck=gear.ElementalGorget,ear1="Creed Earring",ear2="Steelflash Earring",
 		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Rajas Ring",ring2="Vexer Ring",
-		back="Fierabras's Mantle",waist=gear.ElementalBelt,legs="Reverence Breeches +1",feet="Caballarius Leggings"}
+		back="Fierabras's Mantle",waist=gear.ElementalBelt,legs="Reverence Breeches +1",feet="Caballarius Leggings +1"}
 	 
 	
 	
@@ -197,17 +215,37 @@ function init_gear_sets()
 		back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},})
 	
 	
-	sets.midcast.Flash = set_combine(sets.midcast.Enmity, {})
+	sets.midcast.Flash = set_combine(sets.midcast.Enmity, {ammo="Paeapua",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body="Rev. Surcoat +1",
+    hands={ name="Yorium Gauntlets", augments={'Enmity+10',}},
+    legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    feet={ name="Yorium Sabatons", augments={'Enmity+10',}},
+    neck="Unmoving Collar +1",
+    waist="Goading Belt",
+    left_ear="Trux Earring",
+    right_ear="Cryptic earring",
+    left_ring="Apeile Ring +1",
+    right_ring="Apeile Ring",
+    back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},
+})
 	
 	sets.midcast.Stun = sets.midcast.Flash
 	
 	sets.midcast.Cure = set_combine(sets.midcast.Enmity, {
-	    head="Carmine Mask +1", 
-		body="Souv. Cuirass",
-		hands="Macabre gauntlets +1", 
-		feet="Souveran Schuhs +1",
-		legs="Yorium Cuisses",
-		back="Fierabras's mantle"})
+	    ammo="Impatiens",
+    head={ name="Souv. Schaller +1", augments={'HP+105','VIT+12','Phys. dmg. taken -4',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands="Macabre Gaunt. +1",
+    legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+5',}},
+    neck="Homeric Gorget",
+    waist="Creed Baudrier",
+    left_ear="Nourish. Earring",
+    right_ear="Nourish. Earring +1",
+    left_ring="Apeile Ring",
+    right_ring="Apeile Ring +1",
+    back="Fierabras's Mantle",})
 	     
 		
 		
@@ -215,7 +253,15 @@ function init_gear_sets()
 
 	sets.midcast['Blue Magic'] = set_combine(sets.midcast.Enmity, {})
 
-	sets.midcast['Enhancing Magic'] = {neck="Colossus's Torque",waist="Olympus Sash"}
+	sets.midcast['Enhancing Magic'] = {head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
+    neck="Enhancing Torque",
+	body="Shab. Cuirass +1",
+    waist="Bishop's Sash",
+	back="Merciful Cape",
+	left_ear="Augment. Earring",
+    right_ear="Andoaa Earring",
+}
 	
 	sets.midcast.Protect = {ring1="Sheltered Ring"}
 	sets.midcast.Shell = {ring1="Sheltered Ring"}
@@ -248,19 +294,19 @@ function init_gear_sets()
 	
 }
 	sets.idle.Town = {
-	ammo="Homiliary",
-	head="Loess Barbuta +1",
-	body={ name="Souv. Cuirass +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-	hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
-	legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-	feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
-	neck="Sanctity Necklace",
-	waist="Creed Baudrier",
-	left_ear="Infused Earring",
-	right_ear="Cryptic Earring",
-	left_ring="Defending Ring",
-	right_ring="Patricius Ring",
-	back={ name="Rudianos's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Enmity+10',}},
+	 ammo="Homiliary",
+    head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Coatl Gorget +1",
+    waist="Fucho-no-obi",
+    left_ear={ name="Moonshade Earring", augments={'Mag. Acc.+4','Latent effect: "Refresh"+1',}}, 
+    right_ear="Dawn Earring",
+    left_ring="Apeile Ring +1",
+    right_ring="Apeile Ring",
+    back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},
 }
 	
 	sets.idle.Weak = {
@@ -280,7 +326,7 @@ function init_gear_sets()
 	}
 	sets.idle.Weak.Reraise = set_combine(sets.idle.Weak, sets.Reraise)
 	sets.idle.Reraise = set_combine(sets.idle,sets.Reraise)
-	sets.Kiting = {legs="Carmine Cuisses +1"}
+	sets.Kiting = {legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},}
 
 	sets.latent_refresh = {waist="Fucho-no-obi"}
 
@@ -302,16 +348,36 @@ function init_gear_sets()
 	-- Basic defense sets.
 		
 	sets.defense.PDT = {ammo="Iron Gobbet",
-		head="Reverence Coronet +1",neck="Twilight Torque",ear1="Creed Earring",ear2="Buckler Earring",
-		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Defending Ring",ring2=gear.DarkRing.physical,
-		back="Weard Mantle",legs="Reverence Breeches +1",feet="Reverence Leggings +1"}
+    ammo="Brigantia Pebble",
+    head={ name="Souv. Schaller +1", augments={'HP+105','VIT+12','Phys. dmg. taken -4',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+    legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Homeric Gorget",
+    waist="Dynamic Belt",
+    left_ear="Trux Earring",
+    right_ear="Ethereal Earring",
+    left_ring="Defending Ring",
+    right_ring="Patricius Ring",
+    back={ name="Weard Mantle", augments={'VIT+1','DEX+1','Enmity+6','Phalanx +5',}},
+}
 	-- To cap MDT with Shell IV (52/256), need 76/256 in gear.
 	-- Shellra V can provide 75/256, which would need another 53/256 in gear.
-	sets.defense.MDT = {ammo="Demonry Stone",
-		head="Reverence Coronet +1",neck="Twilight Torque",ear1="Creed Earring",ear2="Bloodgem Earring",
-		body="Reverence Surcoat +1",hands="Reverence Gauntlets +1",ring1="Defending Ring",ring2="Shadow Ring",
-		back="Engulfer Cape",waist="Creed Baudrier",legs="Osmium Cuisses",feet="Caballarius Leggings +1"}
-
+	sets.defense.MDT = {ammo="Vanir Battery",
+    head={ name="Souv. Schaller +1", augments={'HP+105','VIT+12','Phys. dmg. taken -4',}},
+    body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
+    hands={ name="Souv. Handsch. +1", augments={'HP+65','Shield skill +15','Phys. dmg. taken -4',}},
+    legs={ name="Souv. Diechlings +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+    neck="Twilight Torque",
+    waist="Creed Baudrier",
+    left_ear="Sanare Earring",
+    right_ear="Trux Earring",
+    left_ring="Defending Ring",
+    right_ring="Shadow Ring",
+    back={ name="Rudianos's Mantle", augments={'Accuracy+2 Attack+2',}},
+}
 	--------------------------------------
 	-- Engaged sets
 	--------------------------------------
@@ -371,19 +437,19 @@ end
 -- Job-specific hooks for standard casting events.
 -------------------------------------------------------------------------------------------------------------------
 
-function job_midcast(spell, action, spellMap, eventArgs)
-	-- If DefenseMode is active, apply that gear over midcast
-	-- choices.  Precast is allowed through for fast cast on
-	-- spells, but we want to return to def gear before there's
-	-- time for anything to hit us.
-	-- Exclude Job Abilities from this restriction, as we probably want
-	-- the enhanced effect of whatever item of gear applies to them,
-	-- and only one item should be swapped out.
-	if state.DefenseMode.value ~= 'None' and spell.type ~= 'JobAbility' then
-		handle_equipping_gear(player.status)
-		eventArgs.handled = true
-	end
-end
+-- function job_midcast(spell, action, spellMap, eventArgs)
+-- 	-- If DefenseMode is active, apply that gear over midcast
+-- 	-- choices.  Precast is allowed through for fast cast on
+-- 	-- spells, but we want to return to def gear before there's
+-- 	-- time for anything to hit us.
+-- 	-- Exclude Job Abilities from this restriction, as we probably want
+-- 	-- the enhanced effect of whatever item of gear applies to them,
+-- 	-- and only one item should be swapped out.
+-- 	if state.DefenseMode.value ~= 'None' and spell.type ~= 'JobAbility' then
+-- 		handle_equipping_gear(player.status)
+-- 		eventArgs.handled = true
+-- 	end
+-- end
 
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.

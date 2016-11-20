@@ -74,7 +74,7 @@
                 <blue>255</blue>
                 <font>Consolas</font>
                 <fonts>
-
+                    <size>6</size>
                 </fonts>
                 <green>255</green>
                 <red>255</red>
@@ -89,25 +89,4 @@
             </text>
         </tracker>
     </global>
-    <lygre>
-        <LogFields>false</LogFields>
-        <display>
-            <text>
-                <stroke>
-                    <alpha>-64770</alpha>
-                </stroke>
-            </text>
-        </display>
-        <tracker>
-            <pos>
-                <x>389</x>
-                <y>92</y>
-            </pos>
-            <text>
-                <stroke>
-                    <alpha>-64770</alpha>
-                </stroke>
-            </text>
-        </tracker>
-    </lygre>
 </settings>

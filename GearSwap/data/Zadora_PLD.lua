@@ -190,7 +190,11 @@ function init_gear_sets()
 	
 	sets.midcast.Flash = set_combine(sets.midcast.Enmity, {})
 	
-	sets.midcast.Stun = sets.midcast.Flash
+	sets.midcast.Stun = set_combine(sets.midcast.Flash,{
+	                                head="Flamma Zucchetto +1",neck="Voltsurge Torque",ear1="Gwati Earring",ear2="Digni. Earring",
+	                                body="",hands="Flamma Manopolas +1",ring1="Evanescence Ring",
+	                                legs=gear.zadora.odlegs_fc,feet=gear.zadora.odfeet_fc
+	                                })
 	
 	sets.midcast.Cure = set_combine(sets.midcast.Enmity, {
 	    head=gear.zadora.odhead_fc, neck="Phalaina Locket", ear2="Odnowa Earring",
@@ -224,7 +228,7 @@ function init_gear_sets()
   
 	-- Idle sets
 	sets.idle = {
-	ammo="Homiliary",
+	ammo="Staunch Tathlum",
 	head="Loess Barbuta",
 	body="Souveran Cuirass",
 	hands="Souveran Handschuhs",
@@ -240,7 +244,7 @@ function init_gear_sets()
 	
 }
 	sets.idle.Town = {
-	ammo="Homiliary",
+	ammo="Staunch Tathlum",
 	head="Loess Barbuta",
 	body="Souveran Cuirass",
 	hands="Souveran Handschuhs",
