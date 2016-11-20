@@ -105,6 +105,22 @@ windower.register_event('addon command', function(...)
 		if args[1] and args[1]:lower() == 'all' then
 			windower.send_ipc_message('goall '..lcmd)
 		end
+	elseif lcmd == 'poke' then
+		if args[1] then 
+			if args[1]:lower() == 'tenzen' then
+				pkt = validate()
+				npc = 16908419
+				target_index = 131
+				poke_warp()
+			elseif S{'yorcia','marjami','kamihr','ceizak','morimar','foret'}:contains(args[1]:lower()) then
+				pkt = validate()
+				npc = zones[args[1]:lower()].npc
+				target_index = zones[args[1]:lower()].target_index
+				poke_warp()
+			end	
+		else 
+			windower.add_to_chat(10,"Invalid or missing npc selection")
+		end
 	elseif S{'tenzen'}:contains(lcmd) then
 		pkt = validate()
 		npc = 17760398

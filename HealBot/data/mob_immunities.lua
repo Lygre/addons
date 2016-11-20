@@ -10,6 +10,7 @@ return {
         28
     },
     ['Broadleaf Palm'] = S{
+        2,
         194
     },
     ['Cronos'] = S{
@@ -17,6 +18,9 @@ return {
     },
     ['Despot'] = S{
         194
+    },
+    ['Dhorme Khimaira'] = S{
+        13
     },
     ['Dimensional Tether'] = S{
         194
