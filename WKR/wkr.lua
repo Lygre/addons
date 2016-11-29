@@ -41,7 +41,7 @@ res = require('resources')
 
 local pkt = {}
 
-local npc,target_index,zone,menu,opt_ind,gc_option,unk_1
+local npc,target_index,zone,menu,opt_ind,gc_option,unk_1,unk_2,unk_3,x,y,z
 
 -- local cape_name = ""
 -- local aug_name = ""
@@ -49,7 +49,7 @@ local npc,target_index,zone,menu,opt_ind,gc_option,unk_1
 -- local unk_1 = 0
 -- local path_item = ''
 -- local menu_params
-local default = {npc=17829975,target_index=87,zone=257,menu=8700,opt_ind=2,unk_1=0}
+local default = {npc=17829975,target_index=87,zone=257,menu=8700,opt_ind=2,unk_1=0,unk_2=0,unk_3=0,x=0,y=0,z=0}
 function to_defaults()
 	npc=default.npc
 	target_index=default.target_index
@@ -76,7 +76,7 @@ local warps = {
 }
 local zones = {
 	['ceizak'] = {npc=17846769,target_index=497,zone=261,menu=2008,opt_ind=1,unk_1=0},
-	['foret'] = {npc=17850899,target_index=531,zone=262,menu=2008,opt_ind=1,unk_1=0},
+	['foret'] = {npc=17850899,target_index=531,zone=262,menu=2008,opt_ind=1,unk_1=1,unk_2=131596550,unk_3=16129,x= -100.00000762939,y= -350.00003051758,z= -0.22600001096725},
 	['morimar'] = {npc=17863390,target_index=734,zone=265,menu=2008,opt_ind=1,unk_1=0},
 	['yorcia'] = {npc=17855021,target_index=557,zone=263,menu=2008,opt_ind=1,unk_1=0},
 	['marjami'] = {npc=17867160,target_index=408,zone=266,menu=2008,opt_ind=1,unk_1=0},
@@ -88,6 +88,8 @@ local zones = {
 local busy = false
 local special_busy = false
 local gate_busy = false
+local cryst_busy = false
+local warp_busy = false
 
 windower.register_event('addon command', function(...)
 	-- to_defaults()
@@ -97,6 +99,7 @@ windower.register_event('addon command', function(...)
 	-- for i,v in pairs(args) do args[i]=windower.convert_auto_trans(args[i]) end
 	-- local item = table.concat(args," "):lower()
 	local lcmd = cmd:lower()
+	-- to_defaults()
 	if S{'yorcia','marjami','kamihr','ceizak','morimar','foret'}:contains(lcmd) then
 		pkt = validate()
 		unk_1 = warps[lcmd]
@@ -129,11 +132,37 @@ windower.register_event('addon command', function(...)
 		menu = 8702
 		opt_ind = 2
 		unk_1 = 120
-		busy = true
+		warp_busy = true
 		poke_warp()
 		if args[1] and args[1]:lower() == 'all' then
 			windower.send_ipc_message('goall '..lcmd)
 		end
+	elseif S{'levi'}:contains(lcmd) then
+		pkt = validate()
+		npc = 17760398
+		target_index = 142
+		zone = 240
+		menu = 8702
+		
+		opt_ind = 2
+		unk_1 = 93
+		warp_busy = true
+		poke_warp()
+		if args[1] and args[1]:lower() == 'all' then
+			windower.send_ipc_message('goall '..lcmd)
+		end
+	elseif S{'ramuh'}:contains(lcmd) then
+		pkt = validate()
+		npc = 17760398
+		target_index = 142
+		zone = 240
+		menu = 8702
+		
+		opt_ind = 2
+		unk_1 = 92
+		warp_busy = true
+		poke_warp()
+
 	elseif S{'qufim'}:contains(lcmd) then
 		pkt = validate()
 		npc = 17760398
@@ -142,7 +171,7 @@ windower.register_event('addon command', function(...)
 		menu = 8702
 		opt_ind = 2
 		unk_1 = 114
-		busy = true
+		warp_busy = true
 		special_busy = false
 		gate_busy = false
 		poke_warp()
@@ -154,7 +183,7 @@ windower.register_event('addon command', function(...)
 		target_index = 112
 		menu = 30
 
-		busy = true
+		warp_busy = true
 		special_busy = false
 		gate_busy = false
 		poke_warp()
@@ -181,10 +210,93 @@ windower.register_event('addon command', function(...)
 		special_busy = false
 		gate_busy = true
 		poke_warp()
+	elseif lcmd == 'levicryst' then
+		pkt = validate()
+		npc = 17641518
+		target_index = 46
+		zone = 211
+		menu = 32000
+		opt_ind = 255
+		unk_1 = 0
+
+		gc_option = 104
+
+		busy = false
+		special_busy = false
+		gate_busy = false
+		cryst_busy = true
+		poke_warp()
+		
+	elseif lcmd == 'ramuhcryst' then
+		pkt = validate()
+		npc = 17604660
+		target_index = 52
+		zone = 202
+		menu = 32000
+		opt_ind = 255
+		unk_1 = 0
+
+		gc_option = 105
+
+		busy = false
+		special_busy = false
+		gate_busy = false
+		cryst_busy = true
+		poke_warp()
+	elseif lcmd == 'pos' then
+		pkt = validate()
+		print(windower.ffxi.get_mob_by_index(pkt['me'])['x'])
+	-- elseif S{'poke'}:contains(lcmd) then
+		-- pkt = validate()
+		-- npc = 17604660
+		-- target_index = 52
+		-- zone = 202
+		-- menu = 32000
+		-- opt_ind = 255
+		-- unk_1 = 0
+
+		-- gc_option = 105
+		
+		-- busy = false
+		-- special_busy = false
+		-- gate_busy = false
+		-- cryst_busy = false
+		-- poke_warp()
+		
+	-- elseif lcmd == 'goin' then
+		-- local packet = packets.new('outgoing', 0x05B)
+		-- packet["Target"]=17604660
+		-- packet["Option Index"]=255
+		-- packet["_unknown1"]=0
+		-- packet["Target Index"]=52
+		-- packet["Automated Message"]=true
+		-- packet["_unknown2"]=0
+		-- packet["Zone"]=202
+		-- packet["Menu ID"]=32000
+		-- packets.inject(packet)
+		
+		-- busy = false
+		-- special_busy = false
+		-- gate_busy = false
+		-- cryst_busy = false
+		-- new_busy = true
 	elseif lcmd == 'ki' then
 		if args[1] and args[1]:lower() == 'tenzen' then
 			pkt = validate()
 			opt_ind = 2562
+			npc = 17760501
+			unk_1 = 0
+			target_index = 245
+			menu = 895
+			zone = 240
+
+			busy = false 
+			gate_busy = false
+			special_busy = true
+			poke_warp()
+		elseif args[1] and args[1]:lower() == 'levi' then
+			pkt = validate()
+			opt_ind = 3586
 			npc = 17760501
 			unk_1 = 0
 			target_index = 245
@@ -208,7 +320,15 @@ windower.register_event('addon command', function(...)
 			target_index = zones[zpick].target_index
 			menu = zones[zpick].menu
 			unk_1=zones[zpick].unk_1
+			unk_2=zones[zpick].unk_2
+			unk_3=zones[zpick].unk_3
+			z=zones[zpick].z
+			x=zones[zpick].x
+			y=zones[zpick].y
 			busy = true
+			special_busy = false
+			gate_busy = false
+			cryst_busy = false
 			poke_warp()
 			print(opt_ind)
 			if args[1] and args[1]:lower() == 'all' then
@@ -303,6 +423,37 @@ end
 windower.register_event('incoming chunk',function(id,data,modified,injected,blocked)
 	if id == 0x034 or id == 0x032 then
 		if busy == true and pkt then
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=pkt['me'],
+			})
+			packets.inject(packet)
+			local packet = packets.new('outgoing', 0x05B)
+			packet["Target"]=npc
+			packet["Option Index"]=opt_ind
+			packet["_unknown1"]=0
+			packet["Target Index"]=target_index
+			packet["Automated Message"]=true
+			packet["_unknown2"]=0
+			packet["Zone"]=zone
+			packet["Menu ID"]=menu
+			packets.inject(packet)
+			local packet = packets.new('outgoing', 0x05C)
+			packet["X"]=x
+			packet["Z"]=z
+			packet["Y"]=y
+			packet["Target ID"]=npc
+			packet["Target Index"]=target_index
+			packet["_unknown1"]=unk_1
+			packet["_unknown2"]=unk_2
+			packet["_unknown3"]=unk_3
+			packets.inject(packet)
+
+			return true
+		elseif warp_busy == true and pkt then
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=pkt['me'],
+			})
+			packets.inject(packet)
 			local packet = packets.new('outgoing', 0x05B)
 			packet["Target"]=npc
 			packet["Option Index"]=opt_ind
@@ -313,7 +464,6 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
 			packet["Zone"]=zone
 			packet["Menu ID"]=menu
 			packets.inject(packet)
-
 			local packet = packets.new('outgoing', 0x05B)
 			packet["Target"]=npc
 			packet["Option Index"]=opt_ind
@@ -324,14 +474,9 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
 			packet["Zone"]=zone
 			packet["Menu ID"]=menu
 			packets.inject(packet)
-			local packet = packets.new('outgoing', 0x016, {
-			["Target Index"]=pkt['me'],
-			})
-			packets.inject(packet)
-			busy = false
+			warp_busy = false
 			pkt = {}
 			return true
-
 		elseif special_busy == true and pkt then
 			local packet = packets.new('outgoing', 0x016, {
 			["Target Index"]=pkt['me'],
@@ -355,18 +500,79 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
 			})
 			packets.inject(packet)
 			local packet = packets.new('outgoing', 0x016, {
-			["Target Index"]='-',
+			["Target Index"]=157,["_junk1"]=0,
 			})
 			packets.inject(packet)
 			local packet = packets.new('outgoing', 0x016, {
-			["Target Index"]='-',
+			["Target Index"]=174,["_junk1"]=0,
 			})
 			packets.inject(packet)
 			local packet = packets.new('outgoing', 0x016, {
-			["Target Index"]='-',
+			["Target Index"]=185,["_junk1"]=0,
 			})
 			packets.inject(packet)
 
+			local packet = packets.new('outgoing', 0x05B)
+			packet["Target"]=npc
+			packet["Option Index"]=opt_ind
+			packet["_unknown1"]=0
+			packet["Target Index"]=target_index
+			packet["Automated Message"]=true
+			packet["_unknown2"]=0
+			packet["Zone"]=zone
+			packet["Menu ID"]=menu
+			packets.inject(packet)
+
+			local packet = packets.new('outgoing', 0x05C)
+			packet["X"]= -640.02905273438
+			packet["Z"]= -231.34701538086
+			packet["Y"]= 512.68005371094
+			packet["Target ID"]=npc
+			packet["Target Index"]=target_index
+			packet["_unknown1"]=545
+			packet["_unknown2"]=2097152032
+			packet["_unknown3"]=48897
+			packets.inject(packet)
+
+			return true	
+
+		elseif cryst_busy == true and pkt then
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=pkt['me'],
+			})
+			packets.inject(packet)
+			print('packet 1')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=60,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			print('packet 2')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=61,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			print('packet 3')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=67,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			print('packet 4')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=68,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			print('packet 5')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=69,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			print('packet 6')
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=70,["_junk1"]=0,
+			})
+			packets.inject(packet)
+			
+			print('Entering')
 			local packet = packets.new('outgoing', 0x05B)
 			packet["Target"]=npc
 			packet["Option Index"]=opt_ind
@@ -377,10 +583,51 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
 			packet["Zone"]=zone
 			packet["Menu ID"]=menu
 			packets.inject(packet)
-			return true			
+			
+			-- {ctype='float',             label='X'},                                     -- 04
+			-- {ctype='float',             label='Z'},                                     -- 08
+			-- {ctype='float',             label='Y'},                                     -- 0C
+			-- {ctype='unsigned int',      label='Target ID',          fn=id},             -- 10   NPC that you are requesting a warp from
+			-- {ctype='unsigned int',      label='_unknown1'},                             -- 14   01 00 00 00 observed
+			-- {ctype='unsigned int',      label='_unknown2'},                             -- 18   Likely contains information about the particular warp being requested, like menu ID
+			-- {ctype='unsigned short',    label='Target Index',       fn=index},          -- 1C
+			-- {ctype='unsigned short',    label='_unknown3'},                             -- 1E   Not zone ID
+			
+			local packet = packets.new('outgoing', 0x05C)
+			packet["X"]=497.22702026367
+			packet["Z"]=55.556003570557
+			packet["Y"]= -432.93200683594
+			packet["Target ID"]=17604660
+			packet["Target Index"]=52
+			packet["_unknown1"]=593
+			packet["_unknown2"]=2097152202
+			packet["_unknown3"]=38657
+			packets.inject(packet)
+			
+			-- local packet = packets.new('outgoing', 0x05c)
+			-- packet["X"]=17.27500152879
+			-- packet["Z"]= -4.4440002441406
+			-- packet["Y"]= -32.927001953125
+			-- packet["Target ID"]=17604660
+			-- packet["Target Index"]=52
+			-- packet["_unknown1"]=594
+			-- packet["_unknown2"]=2097152202
+			-- packet["_unknown3"]=38657
+			-- packets.inject(packet)
+			return true		
+				
 		end
 	elseif id == 0x055 then
-		if special_busy == true and pkt then
+		if busy == true and pkt then
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=pkt['me'],
+			})
+			packets.inject(packet)
+			busy = false 
+			pkt = {}
+			return true
+
+		elseif special_busy == true and pkt then
 			local packet = packets.new('outgoing', 0x016, {
 			["Target Index"]=pkt['me'],
 			})
@@ -408,7 +655,42 @@ windower.register_event('incoming chunk',function(id,data,modified,injected,bloc
 			pkt = {}
 			return true
 
-		end			
+		elseif cryst_busy == true and pkt then
+			local packet = packets.new('outgoing', 0x05B)
+			packet["Target"]=npc
+			packet["Option Index"]=gc_option
+			packet["_unknown1"]=unk_1
+			packet["Target Index"]=target_index
+			packet["Automated Message"]=false
+			packet["_unknown2"]=0
+			packet["Zone"]=zone
+			packet["Menu ID"]=menu
+			packets.inject(packet)
+			local packet = packets.new('outgoing', 0x016, {
+			["Target Index"]=pkt['me'],
+			})
+			packets.inject(packet)
+			cryst_busy = false
+			pkt = {}
+			return true
+
+		end		
+	elseif id == 0x065 then
+		if busy == true and pkt then
+			local packet = packets.new('outgoing', 0x05B)
+			packet["Target"]=npc
+			packet["Option Index"]=opt_ind
+			packet["_unknown1"]=0
+			packet["Target Index"]=target_index
+			packet["Automated Message"]=false
+			packet["_unknown2"]=0
+			packet["Zone"]=zone
+			packet["Menu ID"]=menu
+			packets.inject(packet)
+			busy = false
+			pkt = {}
+			return true
+		end
 	end
 end)
 
@@ -441,6 +723,13 @@ windower.register_event('ipc message',function (msg)
 			end
 		end
 	end
+end)
+
+windower.register_event('zone change',function(new_id, old_id)
+	local busy = false
+	local special_busy = false
+	local gate_busy = false
+	local cryst_busy = false
 end)
 
 function split(msg, match)

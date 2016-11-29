@@ -89,4 +89,29 @@
             </text>
         </tracker>
     </global>
+    <lygre>
+        <LogFields>false</LogFields>
+        <display>
+            <pos>
+                <x>1</x>
+                <y>1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </display>
+        <tracker>
+            <pos>
+                <x>25</x>
+                <y>-1</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-64770</alpha>
+                </stroke>
+            </text>
+        </tracker>
+    </lygre>
 </settings>

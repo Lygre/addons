@@ -49,7 +49,7 @@ function user_setup()
     state.WeaponskillMode:options('Normal', 'Acc', 'Mod')
     state.PhysicalDefenseMode:options('Evasion', 'PDT')
     state.IdleMode:options('Normal','STP')
-
+    state.CapacityMode = M(false, 'CP Mode')
 
     gear.default.weaponskill_neck = "Asperity Necklace"
     gear.default.weaponskill_waist = "Caudata Belt"
@@ -415,7 +415,9 @@ function customize_idle_set(idleSet)
     if player.hpp < 80 then
         idleSet = set_combine(idleSet, sets.ExtraRegen)
     end
-
+    if state.CapacityMode.value then
+        idleSet = set_combine(idleSet, {back="Mecistopins Mantle"})
+    end
     return idleSet
 end
 
@@ -424,7 +426,9 @@ function customize_melee_set(meleeSet)
     if state.TreasureMode.value == 'Fulltime' then
         meleeSet = set_combine(meleeSet, sets.TreasureHunter)
     end
-
+    if state.CapacityMode.value then
+        idleSet = set_combine(idleSet, {back="Mecistopins Mantle"})
+    end
     return meleeSet
 end
 
