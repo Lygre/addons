@@ -172,7 +172,7 @@ _events['render'] = windower.register_event('prerender', function()
                         windower.ffxi.run(false)
                     end
                 else
-                    moving = true
+                    moving = false 
                 end
                 healer.lastMoveCheck = now      --Refresh stored movement check time
             end
