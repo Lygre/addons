@@ -31,7 +31,7 @@ auction_list = texts.new(settings.display)
 zones = {}
 zones.ah = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin'}
 zones.mh = L{'Mhaura','Selbina','Norg','Rabao','Kazham','Tavnazian Safehold','Nashmau','Mog Garden'}
-zones.dbox = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin', 'Mog Garden'}
+zones.dbox = L{'Bastok Mines', 'Bastok Markets', 'Norg', 'Southern San d\'Oria', 'Port San d\'Oria', 'Raboa', 'Windurst Woods', 'Windurst Walls', 'Kazham', 'Lower Jeuno', 'Ru\'Lude Gardens', 'Port Jeuno', 'Upper Jeuno', 'Aht Urhgan Whitegate','Mhaura','Selbina', 'Al Zahbi', 'Nashmau', 'Tavnazian Safehold', 'Western Adoulin', 'Eastern Adoulin', 'Mog Garden','Ceizak Battlegrounds','Foret de Hennetial','Marjami Ravine','Kamihr Drifts','Morimar Basalt Fields','Yorcia Weald'}
 
 function timef(ts)
 	--return string.format('%.2d:%.2d:%.2d',ts/(60*60), ts/60%60, ts%60);
@@ -128,6 +128,13 @@ windower.register_event('addon command', function(...)
 		config.save(settings, 'all')
 	elseif commands[1] == 'eval' then
 		assert(loadstring(table.concat(commands, ' ',2)))()
+	elseif commands[1] == 'help' then
+		windower.add_to_chat(104, 'Commands:')
+		windower.add_to_chat(104, '//ah buy <item name> <0/1>(0 = single, 1 = stack) <bid amount>')
+		windower.add_to_chat(104, '//ah sell <item name> <0/1>(0 = single, 1 = stack) <list price>')
+		windower.add_to_chat(104, '//obox (opens outgoing delivery box from any location, provided the zone contains a delivery npc or Nomad Moogle)')
+		windower.add_to_chat(104, '//dbox (opens incoming delivery box from any location, provided the zone contains a delivery npc or Nomad Moogle)')
+		windower.add_to_chat(104, '//ah mog (opens the mog house menu from anywhere. is only functional inside mog house, mog garden, or in a zone with a Nomad Moogle)')
 	end
 end)
 

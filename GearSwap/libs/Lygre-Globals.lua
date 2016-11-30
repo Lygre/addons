@@ -1,17 +1,11 @@
 function global_on_load()
 	--Generic Mule follow
-	send_command('bind ^!F1 send @others hb f Lygre; send @others hb f dist 1')
-	--Battle-ready Mule follow
-	send_command('bind ^!F2 send zadora hb f dist 4; send ashela hb f dist 15')
-	--Zad settings
-	send_command('bind ^!F3 send zadora hb disable cure')
-	--Zad/Ash Assist settings
-	send_command('bind ^!F4 send @others hb as Lygre; send @others hb as attack off')
-	--Zad tag on
-	send_command('bind ^!F5 send zadora hb db Dia II')
-	send_command('bind ^!F6 send zadora /item "Remedy" zadora')
-	send_command('bind ^!F7 send ashela /item "Remedy" ashela')
-
+	send_command('bind ^!F1 exec tenzenki.txt')
+	send_command('bind ^!F2 exec tenzen.txt')
+	send_command('bind ^!F3 exec tenzengate.txt')
+	send_command('bind ^!F4 exec warp.txt')
+	send_command('bind ^!F5 exec qufim.txt')
+	
 	send_command('bind f9 gs c cycle OffenseMode')
 	send_command('bind ^f9 gs c cycle HybridMode')
 	send_command('bind !f9 gs c cycle RangedMode')

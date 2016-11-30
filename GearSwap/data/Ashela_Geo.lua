@@ -41,11 +41,11 @@ function init_gear_sets()
 -- Precast Sets
 
 -- Precast sets to enhance JAs
-sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic",back="Nantosuelta's Cape"}
+sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic +1",back="Nantosuelta's Cape"}
 sets.precast.JA['Bolster'] = {body="Bagua Tunic"}
 sets.precast.JA['Mending Halation'] = {legs="Bagua Pants"}
-sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals"}	
-sets.precast.JA['Full Circle'] = {head="Azimuth hood",hands="Bagua Mitaines"}
+sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +1"}	
+sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1",hands="Bagua Mitaines"}
 
 -- Fast cast sets for spells
 
@@ -54,7 +54,7 @@ sets.precast.FC = {main="Solstice",
 	head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
 	body="Shango Robe",
 	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-	legs="Geomancy Pants",
+	legs="Geomancy Pants +1",
 	feet="Regal Pumps",
 	neck="Voltsurge Torque",
 	waist="Channeler's Stone",
@@ -69,7 +69,7 @@ sets.precast.FC.Cure = {main="Solstice",
 	head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
 	body="Shango Robe",
 	hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-	legs="Geomancy Pants",
+	legs="Geomancy Pants +1",
 	feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 	neck="Voltsurge Torque",
 	waist="Channeler's Stone",
@@ -97,9 +97,9 @@ sets.midcast.FastRecast = {}
 sets.midcast.Geomancy = {main="Solstice",
 	range="Dunna",
 	ammo=empty,
-	head="Azimuth Hood",
+	head="Azimuth Hood +1",
 	body={ name="Bagua Tunic", augments={'Enhances "Bolster" effect',}},
-	hands="Geomancy Mitaines",
+	hands="Geomancy Mitaines +1",
 	legs={ name="Bagua Pants", augments={'Enhances "Mending Halation" effect',}},
 	feet="Geomancy Sandals",
 	neck="Incanter's Torque",
@@ -114,11 +114,11 @@ sets.midcast.Geomancy = {main="Solstice",
 	sub="Genmei Shield",
 	range="Dunna",
 	ammo=empty,
-	head="Azimuth Hood",
+	head="Azimuth Hood +1",
 	body="Bagua Tunic",
-	hands="Geomancy Mitaines",
+	hands="Geomancy Mitaines +1",
 	legs={ name="Bagua Pants", augments={'Enhances "Mending Halation" effect',}},
-	feet="Bagua Sandals",
+	feet="Azimuth gaiters +1",
 	neck="Incanter's Torque",
 	waist="Fucho-no-Obi",
 	left_ear="Gwati Earring",
@@ -135,7 +135,7 @@ sets.midcast.Cure = {main="Tamaxchi",
 	head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
 	body="Shango Robe",
 	hands="Weather. Cuffs",
-	legs="Geomancy Pants",
+	legs="Geomancy Pants +1",
 	feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
 	neck="Incanter's Torque",
 	waist="Channeler's Stone",
@@ -156,7 +156,7 @@ sets.midcast['Enfeebling Magic'] = {
 	main="Solstice",sub="Genmei Shield",range="Dunna",ammo=empty,
 	head="Befouled Crown",neck="Incanter's Torque",ear1="Digni. Earring",ear2="Gwati Earring",
 	body="Shango Robe",hands="Amalric Gages",ring1="Weatherspoon Ring",ring2="Shiva Ring",
-	back="Lifestream Cape",waist="Luminary Sash",legs="Psycloth Lappas",feet="Bagua Sandals"
+	back="Lifestream Cape",waist="Luminary Sash",legs="Psycloth Lappas",feet="Bagua Sandals +1"
 }
 
 sets.midcast.IntEnfeebles = sets.midcast['Enfeebling Magic']
@@ -181,7 +181,7 @@ legs="Nares Trews",feet="Chelona Boots"}
 		head="Befouled Crown",
 		body="Amalric Doublet",
 		hands={ name="Bagua Mitaines", augments={'Enhances "Curative Recantation" effect',}},
-		legs="Assiduity Pants",
+		legs="Assiduity Pants +1",
 		feet="Geo. Sandals",
 		neck="Loricate Torque +1",
 		waist="Fucho-no-Obi",
@@ -199,11 +199,11 @@ legs="Nares Trews",feet="Chelona Boots"}
 		sub="Genmei Shield",
 		range="Dunna",
 		ammo=empty,
-		head="Azimuth Hood",
+		head="Azimuth Hood +1",
 		body="Amalric Doublet",
-		hands="Geo. Mitaines",
-		legs="Psycloth Lappas",
-		feet="Bagua Sandals",
+		hands="Bagua Mitaines",
+		legs="Assiduity Pants +1",
+		feet="Bagua Sandals +1",
 		neck="Loricate Torque +1",
 		waist="Isa Belt",
 		left_ear="Handler's Earring",

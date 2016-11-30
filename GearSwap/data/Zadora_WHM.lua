@@ -137,7 +137,7 @@ back="Swith Cape +1",waist="Siegel Sash",legs="Gendewitha Spats",feet="Gendewith
 
 sets.midcast.Auspice = {hands="Dynasty Mitts",feet="Orison Duckbills +2"}
 
-sets.midcast.BarElement = {main="Beneficus",sub="",
+sets.midcast.BarElement = {main="Beneficus",sub="Genmei Shield",
 head="Ebers Cap",neck="Incanter's Torque",
 body="Ebers Bliaud",hands="Ebers Mitts",
 back="Mending Cape",waist="Olympus Sash",legs="Piety Pantaloons",feet="Orison Duckbills +2"}

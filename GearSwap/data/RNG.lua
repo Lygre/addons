@@ -36,8 +36,8 @@ function user_setup()
 	gear.default.weaponskill_neck = "Fotia Gorget"
 	gear.default.weaponskill_waist = "Fotia Belt"	
 
-	DefaultAmmo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet", ['Fail-Not'] = "Chrono arrow"}
-	U_Shot_Ammo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Achiyalabopa bullet", ['Fail-Not'] = "Chrono arrow"}
+	DefaultAmmo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Eradicating bullet", ['Fail-Not'] = "Chrono arrow", ['Fomalhaut'] = "Chrono bullet"}
+	U_Shot_Ammo = {['Yoichinoyumi'] = "Achiyalabopa arrow", ['Annihilator'] = "Eradicating bullet", ['Fail-Not'] = "Chrono arrow", ['Fomalhaut'] = "Chrono bullet"}
 
 	select_default_macro_book()
 
@@ -72,17 +72,17 @@ function init_gear_sets()
 	sets.precast.FC = {
 		head="Carmine Mask +1",neck="Voltsurge torque",ear1="Enchanter earring +1",ear2="Loquacious Earring",
 		body=gear.fc_tbody,hands="Leyline gloves",ring1="Prolix Ring",ring2="Weatherspoon ring",
-		legs="Rawhide Trousers",feet="Carmine Greaves" }
+		legs="Rawhide Trousers",feet="Carmine Greaves +1" }
 
-	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {})
+	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads"})
 
 
 	-- Ranged sets (snapshot)
 	
 	sets.precast.RA = {
 		head="Amini gapette +1",
-		body="Amini Caban +1",hands="Iuitl Wristbands",back="Lutian Cape",
-		back="Belenus's cape",waist="Impulse Belt",legs="Nahtirah Trousers",feet=SnapBoots}
+		body="Amini Caban +1",hands="Iuitl Wristbands",
+		back=gear.rngcape_snap,waist="Impulse Belt",legs="Nahtirah Trousers",feet="Meghanada Jambeaux +1"}
 
 
 	-- Weaponskill sets
@@ -98,6 +98,10 @@ function init_gear_sets()
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	
+	sets.precast.WS['Evisceration'] = {
+		head=gear.adhemarhead_melee,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Brutal Earring",
+		body="Meghanada Cuirie +1",hands=gear.herchands_crit,ring1="Epona's Ring",ring2="Begrudging Ring",
+		back=gear.rngcape_crit,waist="Fotia Belt",legs="Jokushu Haidate",feet=gear.hercfeet_crit}
 	sets.precast.WS['Trueflight'] = {
 		head=gear.herchead_mab,neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Ishvara earring",
 		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Weatherspoon Ring",ring2="Arvina Ringlet +1",
@@ -110,9 +114,15 @@ function init_gear_sets()
 }
 
     sets.precast.WS['Last Stand'] = {
-        head=gear.adhemarhead_rng,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Neritic Earring",
-        body="Amini Caban +1",hands="Kobo Kote",ring1="Rajas Ring",ring2="Petrov Ring",
-        back="Belenus's Cape",waist="Fotia Belt",legs="Amini brague +1",feet="Amini Bottillons +1"}
+        head=gear.herchead_wsd,neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Ishvara Earring",
+        body="Amini Caban +1",hands="Meghanada Gloves +1",ring1="Garuda Ring +1",ring2="Garuda Ring +1",
+        back=gear.rngcape_snap,waist="Fotia Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd }
+
+    sets.precast.WS['Coronach'] = {
+    	head=gear.herchead_wsd,neck="Fotia Gorget",ear1="Telos Earring",ear2="Ishvara Earring",
+    	body="Amini Caban +1",hands="Meghanada Gloves +1",ring1="Ifrit Ring +1",ring2="Ifrit Ring +1",
+    	back=gear.rngcape_crit,waist="Fotia Belt",legs=gear.herclegs_wsd,feet=gear.hercfeet_wsd 
+}
 
 	sets.precast.WS['Jishnu\'s Radiance'] = {
 		head=gear.adhemarhead_rng,neck="Fotia gorget", ear1="Moonshade earring",ear2="Neritic Earring",
@@ -187,7 +197,6 @@ function init_gear_sets()
 		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
 
 	sets.idle.Town = {
-		range="Fail-Not",ammo="Chrono arrow",
 		head="Genmei Kabuto",neck="Loricate torque +1",ear1="Infused Earring",ear2="Genmei Earring",
 		body="Reiki Osode",hands="Kobo Kote",ring1=gear.DarkRing.PDT,ring2="Defending Ring",
 		back="Belenus's cape",waist="Yemaya Belt",legs="Amini Brague +1",feet="Orion socks +1"}
@@ -214,6 +223,10 @@ function init_gear_sets()
 		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Telos Earring",
 		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
+	sets.engaged.Odium = {
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Telos Earring",
+		body="Abnoba kaftan", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_ta }
 
 	sets.engaged.Acc = set_combine(sets.engaged, {
 		head=gear.adhemarhead_melee,neck="Combatant's torque",
@@ -222,6 +235,10 @@ function init_gear_sets()
 
 	--DW No Haste
 	sets.engaged.DW = {
+		head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands=gear.herchands_acc, ring1="Rajas Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Carmine cuisses",feet=gear.hercfeet_melee }
+	sets.engaged.DW.Odium = {
 		head=gear.adhemarhead_melee,neck="Lissome necklace",ear1="Eabani Earring",ear2="Suppanomimi",
 		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
 		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Carmine cuisses",feet=gear.hercfeet_melee }
@@ -243,14 +260,14 @@ function init_gear_sets()
 
 	--DW High Haste ~30%
 	sets.engaged.DW.HighHaste = {
-		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Brutal Earring",ear2="Suppanomimi",
-		body="Adhemar jacket", hands="Floral gauntlets", ring1="Rajas Ring",ring2="Epona's Ring",
-		back="Bleating Mantle",waist="Windbuffet belt +1",legs="Samnuha tights",feet=gear.hercfeet_melee }
+		head=gear.adhemarhead_melee,neck="Asperity necklace",ear1="Eabani Earring",ear2="Suppanomimi",
+		body="Adhemar jacket", hands="Floral gauntlets", ring1="Hetairoi Ring",ring2="Epona's Ring",
+		back="Bleating Mantle",waist="Reiki Yotai",legs="Carmine cuisses",feet=gear.hercfeet_ta }
 
 	sets.engaged.DW.Acc.HighHaste = set_combine(sets.engaged.DW.HighHaste, {
 		head="Dampening Tam",neck="Combatant's torque",ear1="Telos Earring",ear2="Zennaroi Earring",
 		hands="Adhemar Wristbands",ring1="Cacoethic Ring",
-		back="Grounded Mantle +1",waist="Olseni belt",legs="Carmine cuisses"})
+		back="Grounded Mantle +1",waist="Reiki Yotai",legs="Carmine cuisses"})
 
 	--DW Max Haste 43.75%
 	sets.engaged.DW.MaxHaste = {
@@ -306,6 +323,11 @@ function job_midcast(spell, action, spellMap, eventArgs)
 	end
 end
 
+function job_status_change(oldStatus,newStatus)
+	if newStatus == 'Engaged' then
+		job_update()
+	end
+end
 -------------------------------------------------------------------------------------------------------------------
 -- Job-specific hooks for non-casting events.
 -------------------------------------------------------------------------------------------------------------------
@@ -340,6 +362,7 @@ function update_combat_form()
     else
         state.CombatForm:set('DW')
     end
+    	state.CombatWeapon:set(player.equipment.main)
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -356,31 +379,35 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function determine_haste_group()
-
 	classes.CustomMeleeGroups:clear()
-
-	-----different setup
-	if buffactive[604] then --[604] is the resource id for Mighty Guard
-		if (buffactive.haste or buffactive.march == 2) then
+	if buffactive.haste then
+		if buffactive.haste == 2 or buffactive[604] or buffactive[228] or buffactive.march then
 			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
+		else 
+			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
+		end
+	elseif buffactive[604] then
+		if buffactive.march == 1 and buffactive[228] then
+			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
+		elseif buffactive.march == 2 or buffactive[228] then
+			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
 		elseif buffactive.march == 1 then
 			classes.CustomMeleeGroups:append('HighHaste')
-		else 
-			classes.CustomMeleeGroups:append('LowHaste')
-		end
-	elseif buffactive.march then
-		if buffactive.haste then
-			classes.CustomMeleeGroups:append('MaxHaste')
-		elseif buffactive.march == 2 then
-			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
 		else
 			classes.CustomMeleeGroups:append('LowHaste')
 		end
-	elseif buffactive.haste then
-		if (buffactive.haste == 2 or buffactive.march) then
+	elseif buffactive[228] then
+		if buffactive.march then
 			classes.CustomMeleeGroups:append('MaxHaste')
+			add_to_chat(3,'Max Haste Mode')
 		else
 			classes.CustomMeleeGroups:append('HighHaste')
+			add_to_chat(3,'High Haste Mode')
 		end
 	end
 end

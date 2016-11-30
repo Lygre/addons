@@ -26,17 +26,17 @@
 
 local lor_settings = {}
 lor_settings._author = 'Ragnarok.Lorand'
-lor_settings._version = '2016.08.14.0'
+lor_settings._version = '2016.10.23.1'
 
 require('lor/lor_utils')
 _libs.lor.settings = lor_settings
 _libs.lor.req('chat', 'tables', {n='strings',v='2016.08.07'})
 _libs.req('tables', 'sets')
-files = require('files')
+local files = require('files')
 
 local no_quote_types = S{'number','boolean','nil'}
 local valid_classes = S{'List','Set','Table'}
-
+local converting = false
 
 --[[
     Convenience method to convert the config file (presumably an XML created by
@@ -52,6 +52,7 @@ local valid_classes = S{'List','Set','Table'}
     to fix them in the resulting lua file.
 --]]
 function lor_settings.convert_config(original_path, new_path)
+    converting = true
     local config = require('config')
     if config == nil then
         atc(123, 'Unable to load the config library! Unable to convert!')
@@ -62,6 +63,25 @@ function lor_settings.convert_config(original_path, new_path)
         atcf(123, 'Original config not found: %s', original_path)
         return
     end
+    
+    local filepath = os.path.join(windower.addon_path, new_path)
+    local suffix = ''
+    local backup_path = filepath
+    while windower.file_exists(backup_path) do
+        backup_path = '%s.backup%s':format(filepath, suffix)
+        suffix = (suffix == '') and 0 or (suffix + 1)
+    end
+    
+    if backup_path ~= filepath then
+        local result, msg = os.rename(filepath, backup_path)
+        if not result then
+            atcfs('Settings not converted - error backing up original file: %s', msg)
+            return
+        else
+            atcfs('Backed up existing file: %s', backup_path)
+        end
+    end
+    
     setmetatable(original, nil)     --remove the config library's metatable
     local converted = lor_settings.load(new_path, original)
     converted:save()
@@ -139,6 +159,7 @@ end
     lor_strings method.
 --]]
 local function prepare(t, indent)
+    local pair_fn = converting and pairs or opairs
     local res = {}
     local tlen = 0
     local is_ordered_list = true
@@ -149,7 +170,7 @@ local function prepare(t, indent)
     local is_set = (class(t) == 'Set')
     
     local i = 1
-    for _k,_v in opairs(t) do
+    for _k,_v in pair_fn(t) do
         local k,v = '',_v
         if is_set then  --Values are stored as {key1=true,key2=true}, but the
             v = _k      --constructor is S{key1,key2}, so treat keys as values
@@ -169,7 +190,7 @@ local function prepare(t, indent)
             else
                 --Encorporate the subtable into the result, adding a level of indentation
                 res[#res+1] = '%s%s{':format(k, class_prefix)
-                for _,line in opairs(sub_table) do
+                for _,line in pair_fn(sub_table) do
                     res[#res+1] = '%s%s':format(indent, line)
                 end
                 res[#res+1] = '}'
@@ -213,7 +234,9 @@ function lor_settings.save(settings_tbl, quiet, indent, line_end)
         return
     end
     
-    local filepath = windower.addon_path .. m.__settings_path
+    local filepath = os.path.join(windower.addon_path, m.__settings_path)
+    os.path.mkdirs(windower.addon_path, os.path.parent(m.__settings_path))
+    
     local f = io.open(filepath, 'wb')   --'w' -> \r\n; 'wb' -> \n
     f:write('return {', line_end)
     for _,line in pairs(prepared) do

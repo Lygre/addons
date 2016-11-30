@@ -87,6 +87,7 @@ function define_global_sets()
 	gear.chirfeet_pdt = {name="Chironic Slippers", augments={'Phys. dmg. taken -3%',}}
 	
 	--Herculean Augments
+	gear.herchead_wsd = {name="Herculean Helm", augments={'Accuracy+15 Attack+15','Weapon skill damage +4%','Accuracy+9',}}
  	gear.herchead_dt = {name="Herculean Helm", augments={'Accuracy+13','Damage taken-4%','STR+2','Attack+5',}}
  	gear.herchead_mab = {name="Herculean Helm", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Crit.hit rate+1','INT+7','"Mag.Atk.Bns."+12',}}
  	gear.hercbody_acc = {name="Herculean Vest", augments={'Accuracy+22 Attack+22','Crit.hit rate+2','DEX+10','Accuracy+8','Attack+9',}}
@@ -131,7 +132,7 @@ function define_global_sets()
 	gear.blucape_wsd = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
 	--	Requiescat (lol): MND/Acc&Atk/DA
 	gear.blucape_req = {name="Rosmerta's Cape", augments={'MND+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-
+	gear.blucape_nuke = {name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}}
 	----	DNC
 	--	Melee TP: DEX/Acc&Atk/DA
 	gear.dnccape_tp = {name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
@@ -146,8 +147,10 @@ function define_global_sets()
 
 	----	NIN
 	--	Single-hit WS: STR/Acc&Atk/WSD
-	gear.nincape_wsd = {name="Andartia's Mantle", augments={'STR+18','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+	gear.nincape_wsd = {name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
 
+	gear.rngcape_crit = {name="Belenus's Cape", augments={'DEX+20','Rng.Acc.+20 Rng.Atk.+20','Crit.hit rate+10',}}
+	gear.rngcape_snap = {name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Snapshot"+10',}}
 	------	Abjuration aliases
 	----	Adhemar 
 	gear.adhemarhead_melee = {name="Adhemar Bonnet", augments={'DEX+10','AGI+10','Accuracy+15',}}
@@ -212,6 +215,19 @@ function define_global_sets()
 
 	gear.zadora.pldcape_fc = {name="Rudianos's Mantle", augments={'"Fast Cast"+10',}}
 	gear.zadora.pldcape_cure = { name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Cure" potency +10%',}}
+
+	------------------------------
+	gear.ashela = {}
+	gear.ashela.whm = {}
+
+	gear.ashela.whm.cape_fc = {name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
+	gear.ashela.whm.cape_cure = {name="Alaunus's Cape", augments={'MND+20','MND+10','"Cure" potency +10%',}}
+
+	------------------------------
+	gear.deep = {}
+	gear.deep.cor = {}
+
+	gear.deep.cor.herclegs_mab = {name="Herculean Trousers", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Store TP"+7','INT+6','Mag. Acc.+4','"Mag.Atk.Bns."+10',}}
 
 end
 

@@ -51,7 +51,7 @@ return {
         ['melee'] = {
             'Haste' },
         ['self'] = {
-            'Aquaveil',
+          --  'Aquaveil',
             'Protectra V',
             'Shellra V',
             'Reraise IV',

@@ -5,7 +5,7 @@
 
 local lor_chat = {}
 lor_chat._author = 'Ragnarok.Lorand'
-lor_chat._version = '2016.08.07.0'
+lor_chat._version = '2016.09.10.0'
 
 require('lor/lor_utils')
 _libs.req('maths', 'strings', 'tables')
@@ -298,7 +298,11 @@ function pprint_tiered(obj, header, lead_width, depth)
                             end
                         end
                     else
-                        atcfs(0, fmt, fk, v)
+                        if S{'_data', '_raw'}:contains(fk) then
+                            atcfs(0, fmt, fk, v:hex())
+                        else
+                            atcfs(0, fmt, fk, v)
+                        end
                     end
                 end
             end

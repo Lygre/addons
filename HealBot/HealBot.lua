@@ -1,18 +1,34 @@
 _addon.name = 'HealBot'
 _addon.author = 'Lorand'
 _addon.command = 'hb'
-_addon.version = '2.12.0'
-_addon.lastUpdate = '2016.10.02.0'
+_addon.version = '2.13.2'
+_addon.lastUpdate = '2016.11.12.0'
+
+--[[
+TODO:
+- !!Fix: Make follow cancellable when in other zones
+- Global action queue instead of rebuilding every cycle
+- Action sets that must be performed together (e.g., Snake Eye, then Double Up)
+- GEO
+    - debuff support
+    - clean up logic/code
+- COR
+    - Rolled # detection
+- If not in same pt as other instance, send pt list via IPC
+- If in alliance, automatically watch other healers?
+--]]
+
 
 require('luau')
 require('lor/lor_utils')
 _libs.lor.include_addon_name = true
-_libs.lor.req('all', {n='packets',v='2016.10.02.0'})
+_libs.lor.req('all', {n='packets',v='2016.10.27.0'})
 _libs.req('queues')
 lor_settings = _libs.lor.settings
 serialua = _libs.lor.serialization
 
-healer = {}
+hb = {}
+healer = {indi={},geo={}}
 
 res = require('resources')
 config = require('config')
@@ -33,7 +49,6 @@ require('HealBot_followHandling')
 require('HealBot_packetHandling')
 require('HealBot_queues')
 
-hb = {}
 
 local _events = {}
 local ipc_req = serialua.encode({method='GET', pk='buff_ids'})
@@ -129,7 +144,8 @@ _events['cmd'] = windower.register_event('addon command', processCommand)
 --]]
 _events['render'] = windower.register_event('prerender', function()
     local now = os.clock()
-    local moving = hb.isMoving()
+   -- local moving = hb.isMoving()
+    local moving = false
     local acting = hb.isPerformingAction(moving)
     local player = windower.ffxi.get_player()
     healer.name = player and player.name or 'Player'
@@ -155,7 +171,7 @@ _events['render'] = windower.register_event('prerender', function()
                     windower.ffxi.run(false)
                 end
             else
-                moving = true
+                moving = false
             end
             healer.lastMoveCheck = now      --Refresh stored movement check time
         end
@@ -256,7 +272,7 @@ function hb.isMoving()
         txts.moveInfo:hide()
     end
     local moving = healer.actor:is_moving()
-    txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
+    -- txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
     txts.moveInfo:visible(settings.textBoxes.moveInfo.visible)
     return moving
 end

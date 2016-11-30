@@ -570,7 +570,9 @@ windower.register_event('addon command', function(command, ...)
         elseif args[1] == 'hide' or args[1] == 'h' then
             tracker:hide()
             return
-
+        elseif args[1] == 'show' or args[1] == 'v' then
+            tracker:show()
+            return
         elseif args[1] == 'once' then
             tracking.once = true
             args:remove(1)

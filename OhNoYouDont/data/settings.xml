@@ -197,6 +197,7 @@
 			<albumen>
 				<stun>
 					<1>Petalback Spin</1>
+					<2>Phaeosynthesis</2>
 				</stun>
 			</albumen>
 			<khimaira>
@@ -301,6 +302,16 @@
 					<12>Jungle Hoodoo</12>
 				</stun>
 			</incursion>
+			<ruaunt3s>
+				<stun>
+					<1>Angry Seas</1>
+					<2>Atropine Spore</2>
+					<3>Deracinator</3>
+					<4>Full Bloom</4>
+					<5>Frond Fatale</5>
+					<6>Beautiful Death</6>
+				</stun>
+			</ruaunt3s>
 		</profile>
 	</global>
 </settings>

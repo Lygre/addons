@@ -139,7 +139,7 @@ RollLuckyUnlucky = {
 }
 
 windower.register_event('load', function()
-	-- zone_enter = os.clock()-25
+	zone_enter_rb = os.clock()-25
 	enabled = false
 	rollcmd1 = ""
 	rollcmd2 = ""
@@ -153,7 +153,7 @@ windower.register_event('load', function()
 
 end)
 windower.register_event('zone change', function(new_id, old_id)
-	zone_enter = os.clock()
+	zone_enter_rb = os.clock()
 	local zone_info = windower.ffxi.get_info()
 	if zone_info ~= nil then
 		if zone_info.zone == 131 then
@@ -242,6 +242,7 @@ function roll()
 		if enabled then
 			if (rollcmd1 ~= "") and (rollcmd2 ~= "") then
 				if check_timer('Phantom Roll') then
+					---This chunk needs fixing ----------TO DOOO!!!!!
 					if not buffactive(rollcmd1) then
 						currentRoll = rollcmd1
 					elseif not buffactive(rollcmd2) then

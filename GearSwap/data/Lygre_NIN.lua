@@ -43,10 +43,10 @@ function job_setup()
 		['Scythe'] = {'Shadow of Death'}
 }
 	proc_weapons = {
-		['Katana'] = {'Heishi Shorinken'},
+		['Katana'] = {'Hocho'},
 		['Great Katana'] = {'Ark Tachi'},
 		['Sword'] = {'Ark Saber'},
-		['Dagger'] = {'Atoyac'},
+		['Dagger'] = {'Ternion Dagger'},
 		['Staff'] = {'Treat Staff II'},
 		['Club'] = {'Mafic Cudgel'},
 		['Polearm'] = {'Pitchfork'},
