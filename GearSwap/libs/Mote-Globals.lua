@@ -223,6 +223,12 @@ function define_global_sets()
 	gear.ashela.whm.cape_fc = {name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
 	gear.ashela.whm.cape_cure = {name="Alaunus's Cape", augments={'MND+20','MND+10','"Cure" potency +10%',}}
 
+	------------------------------
+	gear.deep = {}
+	gear.deep.cor = {}
+
+	gear.deep.cor.herclegs_mab = {name="Herculean Trousers", augments={'Mag. Acc.+15 "Mag.Atk.Bns."+15','"Store TP"+7','INT+6','Mag. Acc.+4','"Mag.Atk.Bns."+10',}}
+
 end
 
 -------------------------------------------------------------------------------------------------------------------

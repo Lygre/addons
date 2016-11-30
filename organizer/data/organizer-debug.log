@@ -1,15 +1,204 @@
-Organizer loaded at 11/20/16 18:03:34
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding inventory to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding locker to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding satchel to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding safe to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding safe2 to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding sack to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding case to the pull list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding locker to the push list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding safe2 to the push list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding safe to the push list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding sack to the push list
-2016-11-20 18:03:34| Organizer [VERBOSE] Adding case to the push list
-2016-11-20 18:03:35| Organizer [VERBOSE] Non-equipment items set to retain
-2016-11-20 18:03:35| Organizer [VERBOSE] Slips set to retain
+Organizer loaded at 11/28/16 21:05:59
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding inventory to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding locker to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding satchel to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding safe to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding safe2 to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding sack to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding case to the pull list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding locker to the push list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding safe2 to the push list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding safe to the push list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding sack to the push list
+2016-11-28 21:05:59| Organizer [VERBOSE] Adding case to the push list
+2016-11-28 21:05:59| Organizer [VERBOSE] Non-equipment items set to retain
+2016-11-28 21:05:59| Organizer [VERBOSE] Slips set to retain
+2016-11-28 22:23:31| Organizer [MSG] Starting...
+2016-11-28 22:23:31| Organizer [VERBOSE] Getting!
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Souveran Cuirass) from Case 80 to Inventory 28)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Odyssean Cuisses) from Case 79 to Inventory 29)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Ioskeha Belt) from Case 78 to Inventory 30)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Rufescent Ring) from Case 77 to Inventory 31)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Yorium Barbuta) from Case 76 to Inventory 32)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Ginsen) from Case 75 to Inventory 33)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Kentarch Belt) from Case 74 to Inventory 34)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Sulev. Leggings +1) from Case 73 to Inventory 35)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Sulevi. Cuisses +1) from Case 72 to Inventory 36)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Argosy Breeches) from Case 71 to Inventory 37)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Argosy Mufflers) from Case 70 to Inventory 38)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Loyalist Sabatons) from Locker 52 to Inventory 39)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Boii Mask +1) from Locker 51 to Inventory 40)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Souv. Handschuhs) from Locker 50 to Inventory 41)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Cichol's Mantle) from Locker 49 to Inventory 42)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Cichol's Mantle) from Locker 48 to Inventory 43)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Argosy Celata) from Locker 47 to Inventory 44)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Flam. Zucchetto +1) from Locker 46 to Inventory 45)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Odyssean Gauntlets) from Locker 45 to Inventory 46)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Shukuyu Ring) from Locker 44 to Inventory 47)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Seething Bomblet) from Locker 43 to Inventory 48)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Argosy Hauberk) from Locker 42 to Inventory 49)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Begrudging Ring) from Locker 41 to Inventory 50)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Flam. Manopolas +1) from Locker 40 to Inventory 51)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Emicho Haubert) from Locker 39 to Inventory 52)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Agema Cape) from Locker 38 to Inventory 53)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Argosy Sollerets) from Locker 37 to Inventory 54)
+2016-11-28 22:23:31| Organizer [VERBOSE] Moving item! (Odyss. Chestplate) from Locker 36 to Inventory 55)
+2016-11-28 22:23:31| Organizer [VERBOSE] Got 28 item(s), and failed getting 0 item(s)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Mog Pell (Silver)) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Silt Pouch) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Holy Water) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Kindred's Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (SP Gobbie Key) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Belladonna Sap) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Vedrfolnir's Wing) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Void Crystal) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 17) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (H. Kindred Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (MMM Member's Cd.) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Malboro Fiber) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Mog Pell (Silver)) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Refractive Crystal) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Silt Pouch) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Holy Water) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 20) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Kindred's Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (SP Gobbie Key) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Frayed Sack (Fer)) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Belladonna Sap) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Vedrfolnir's Wing) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 08) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Void Crystal) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 18) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Sublime Sushi) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 17) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (H. Kindred Crest) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (MMM Member's Cd.) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Malboro Fiber) because non-equipment is set be retained
+2016-11-28 22:23:31| Organizer [VERBOSE] Skipping item: (Storage Slip 21) because it is set to be retained (slips)
+2016-11-28 22:23:31| Organizer [MSG] Done! - 28 items matched and 0 items missing!
+2016-11-29 01:17:09| Organizer [MSG] Starting...
+2016-11-29 01:17:09| Organizer [VERBOSE] Getting!
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Azimuth Gaiters +1) from Case 74 to Inventory 44)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Bagua Pants) from Case 73 to Inventory 45)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Bagua Tunic) from Case 72 to Inventory 46)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Geo. Pants +1) from Case 71 to Inventory 47)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Nantosuelta's Cape) from Case 70 to Inventory 48)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Geo. Mitaines +1) from Case 69 to Inventory 49)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Gwati Earring) from Case 68 to Inventory 50)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Geo. Tunic +1) from Case 67 to Inventory 51)
+2016-11-29 01:17:09| Organizer [VERBOSE] Got 8 item(s), and failed getting 0 item(s)
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Bead Pouch) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Ram Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (SP Gobbie Key) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Mog Pell (Silver)) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Yggdreant Bole) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Silt Pouch) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +2) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Tiger Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (H. Kindred Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 04) because it is set to be retained (slips)
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 17) because it is set to be retained (slips)
+2016-11-29 01:17:09| Organizer [VERBOSE] Moving item! (Chironic Hat) from Inventory 52 to Case 66)
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dark Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Kindred's Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Aqua Geode) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Sheep Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [WARN] Cannot move the item (Nantosuelta's Cape). It has already been moved.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dark Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Kitron Macaron) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Distilled Water) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Maze Tabula M01) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Ice Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Raxa) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Wind Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Earth Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Lightning Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Lightng. Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Earth Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Gr. Velkk Coffer) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] No remainder, so we found everything we were looking for!
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Bead Pouch) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (S. Kindred Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Ram Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (SP Gobbie Key) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Mog Pell (Silver)) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Yggdreant Bole) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Silt Pouch) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Copper Voucher) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +2) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Tiger Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (H. Kindred Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 04) because it is set to be retained (slips)
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 17) because it is set to be retained (slips)
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dark Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Kindred's Crest) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Eschalixir +1) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Aqua Geode) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Sheep Leather) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Echo Drops) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Storage Slip 23) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Remedy) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Etched Memory) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Rem's Tale Ch.9) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [WARN] Cannot move the item (Nantosuelta's Cape). It has already been moved.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dark Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Kitron Macaron) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Distilled Water) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Linkpearl) because it is an equipped linkshell.
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Maze Tabula M01) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Ice Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Raxa) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Dial Key #Ab) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Wind Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Earth Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Lightning Cluster) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Lightng. Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Earth Crystal) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [VERBOSE] Skipping item: (Gr. Velkk Coffer) because non-equipment is set be retained
+2016-11-29 01:17:09| Organizer [MSG] Done! - 9 items matched and 0 items missing!

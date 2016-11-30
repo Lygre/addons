@@ -89,6 +89,29 @@
             </text>
         </tracker>
     </global>
+    <deepthought>
+        <display>
+            <text>
+                <fonts>
+
+                </fonts>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </display>
+        <tracker>
+            <pos>
+                <x>260</x>
+                <y>75</y>
+            </pos>
+            <text>
+                <stroke>
+                    <alpha>-4211734020</alpha>
+                </stroke>
+            </text>
+        </tracker>
+    </deepthought>
     <lygre>
         <LogFields>false</LogFields>
         <display>
