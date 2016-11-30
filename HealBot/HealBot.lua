@@ -1,8 +1,8 @@
 _addon.name = 'HealBot'
 _addon.author = 'Lorand'
 _addon.command = 'hb'
-_addon.version = '2.13.2'
-_addon.lastUpdate = '2016.11.12.0'
+_addon.version = '2.13.5'
+_addon.lastUpdate = '2016.11.27.1'
 
 --[[
 TODO:
@@ -39,7 +39,7 @@ files = require('files')
 require 'HealBot_statics'
 require 'HealBot_utils'
 
-Assert =    require('HB_Assertion')
+Assert = require('HB_Assertion')
 CureUtils = require('HB_CureUtils')
 offense = require('HB_Offense')
 actions = require('HB_Actions')
@@ -54,6 +54,7 @@ local _events = {}
 local ipc_req = serialua.encode({method='GET', pk='buff_ids'})
 local can_act_statuses = S{0,1,5,85}    --0/1/5/85 = idle/engaged/chocobo/other_mount
 local dead_statuses = S{2,3}
+local instant_prefixes = S{'/jobability','/weaponskill'}
 local pt_keys = {'party1_count','party2_count','party3_count'}
 local pm_keys = {
     {'p0','p1','p2','p3','p4','p5'},
@@ -67,11 +68,11 @@ _events['load'] = windower.register_event('load', function()
         windower.add_to_chat(39,'ERROR: .../Windower/addons/libs/lor/ not found! Please download: https://github.com/lorand-ffxi/lor_libs')
     end
     atcc(262,'Welcome to HealBot! To see a list of commands, type //hb help')
-    atcc(39,'=':rep(80))
-    atcc(261,'WARNING: I switched the config files from XMLs to lua files.')
-    atcc(261,'You will need to update the lua files with any custom settings you had in your XMLs!')
-    atcc(261,'I apologize for the inconvenience; this makes many things easier behind the scenes.')
-    atcc(39,'=':rep(80))
+    --atcc(39,'=':rep(80))
+    --atcc(261,'WARNING: I switched the config files from XMLs to lua files.')
+    --atcc(261,'You will need to update the lua files with any custom settings you had in your XMLs!')
+    --atcc(261,'I apologize for the inconvenience; this makes many things easier behind the scenes.')
+    --atcc(39,'=':rep(80))
 
     local now = os.clock()
     healer.zone_enter = now - 25
@@ -86,7 +87,7 @@ _events['load'] = windower.register_event('load', function()
     healer.id = player.id
     healer.actor = _libs.lor.actor.Actor.new(healer.id)
     
-    modes = {['showPacketInfo']=false,['debug']=false,['mob_debug']=false}
+    modes = {['showPacketInfo']=false,['debug']=false,['mob_debug']=false,['independent']=false}
     _libs.lor.debug = modes.debug
     active = false
     partyMemberInfo = {}
@@ -144,7 +145,6 @@ _events['cmd'] = windower.register_event('addon command', processCommand)
 --]]
 _events['render'] = windower.register_event('prerender', function()
     local now = os.clock()
-   -- local moving = hb.isMoving()
     local moving = false
     local acting = hb.isPerformingAction(moving)
     local player = windower.ffxi.get_player()
@@ -152,28 +152,30 @@ _events['render'] = windower.register_event('prerender', function()
     if (player ~= nil) and can_act_statuses:contains(player.status) then
         local partner,targ = offense.assistee_and_target()
         Assert.follow_target_exists()   --Attempts to prevent autorun problems
-        if (settings.follow.active or offense.assist.active) and ((now - healer.lastMoveCheck) > settings.follow.delay) then
-            local should_move = false
-            if (targ ~= nil) and (player.target_index == partner.target_index) then
-                if offense.assist.engage and (partner.status == 1) then
-                    if needToMove(targ.id, 3) then
-                        should_move = true
-                        moveTowards(targ.id)
+        if Assert.auto_movement_active() then
+            if ((now - healer.lastMoveCheck) > settings.follow.delay) then
+                local should_move = false
+                if (targ ~= nil) and (player.target_index == partner.target_index) then
+                    if offense.assist.engage and (partner.status == 1) then
+                        if needToMove(targ.id, 3) then
+                            should_move = true
+                            moveTowards(targ.id)
+                        end
                     end
                 end
-            end
-            if (not should_move) and settings.follow.active and needToMove(settings.follow.target, settings.follow.distance) then
-                should_move = true
-                moveTowards(settings.follow.target)
-            end
-            if (not should_move) then
-                if settings.follow.active then
-                    windower.ffxi.run(false)
+                if (not should_move) and settings.follow.active and needToMove(settings.follow.target, settings.follow.distance) then
+                    should_move = true
+                    moveTowards(settings.follow.target)
                 end
-            else
-                moving = false
+                if (not should_move) then
+                    if settings.follow.active then
+                        windower.ffxi.run(false)
+                    end
+                else
+                    moving = true
+                end
+                healer.lastMoveCheck = now      --Refresh stored movement check time
             end
-            healer.lastMoveCheck = now      --Refresh stored movement check time
         end
         
         if active and not (moving or acting) then
@@ -194,6 +196,17 @@ end)
 
 function wcmd(prefix, action, target)
     healer.actor:send_cmd('input %s "%s" "%s"':format(prefix, action, target))
+    
+    local action_res = utils.getActionFor(action)
+    if action_res ~= nil then
+        if instant_prefixes:contains(action_res.prefix) then
+            healer.actor.action_delay = 2.75
+        end
+    end
+    
+    --if action:lower():contains('waltz') then
+        --healer.actor.action_delay = 2.75
+    --end
 end
 
 
@@ -201,11 +214,19 @@ function hb.activate()
     local player = windower.ffxi.get_player()
     if player ~= nil then
         settings.healing.max = {}
-        for _,cure_type in pairs({'cure','waltz','curaga','waltzga'}) do
+        for _,cure_type in pairs(CureUtils.cure_types) do
             settings.healing.max[cure_type] = CureUtils.highest_tier(cure_type)
         end
         if (settings.healing.max.cure == 0) then
-            disableCommand('cure', true)
+            if settings.healing.max.waltz > 0 then
+                settings.healing.mode = 'waltz'
+                settings.healing.modega = 'waltzga'
+            else
+                disableCommand('cure', true)
+            end
+        else
+            settings.healing.mode = 'cure'
+            settings.healing.modega = 'curaga'
         end
         active = true
     end
@@ -272,7 +293,6 @@ function hb.isMoving()
         txts.moveInfo:hide()
     end
     local moving = healer.actor:is_moving()
-    -- txts.moveInfo:text('Time @ %s: %.1fs':format(healer.actor:pos():toString(), timeAtPos))
     txts.moveInfo:visible(settings.textBoxes.moveInfo.visible)
     return moving
 end

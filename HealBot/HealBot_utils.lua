@@ -1,13 +1,14 @@
 --==============================================================================
 --[[
-	Author: Ragnarok.Lorand
-	HealBot utility functions that don't belong anywhere else
+    Author: Ragnarok.Lorand
+    HealBot utility functions that don't belong anywhere else
 --]]
 --==============================================================================
 --          Input Handling Functions
 --==============================================================================
 
 utils = {normalize={}}
+local action_resource_types = {'spells','job_abilities','weapon_skills'}
 
 
 function utils.normalize_str(str)
@@ -144,22 +145,22 @@ function processCommand(command,...)
             utils.register_ws(args)
         end
     elseif S{'spam','nuke'}:contains(command) then
-        local cmd = args[1] and args[1]:lower() or (settings.nuke.active and 'off' or 'on')
+        local cmd = args[1] and args[1]:lower() or (settings.spam.active and 'off' or 'on')
         if S{'on','true'}:contains(cmd) then
-            settings.nuke.active = true
-            if (settings.nuke.name ~= nil) then
-                atc('Spell spamming is now on. Spell: '..settings.nuke.name)
+            settings.spam.active = true
+            if (settings.spam.name ~= nil) then
+                atc('Action spamming is now on. Action: '..settings.spam.name)
             else
-                atc('Spell spamming is now on. To set a spell to use: //hb spam use <spell>')
+                atc('Action spamming is now on. To set a spell to use: //hb spam use <action>')
             end
         elseif S{'off','false'}:contains(cmd) then
-            settings.nuke.active = false
-            atc('Spell spamming is now off.')
+            settings.spam.active = false
+            atc('Action spamming is now off.')
         else
             if S{'use','set'}:contains(cmd) then
                 table.remove(args, 1)
             end
-            utils.register_spam_spell(args)
+            utils.register_spam_action(args)
         end
     elseif S{'debuff', 'db'}:contains(command) then
         local cmd = args[1] and args[1]:lower() or (offense.debuffing_active and 'off' or 'on')
@@ -282,6 +283,8 @@ function processCommand(command,...)
         toggleMode('showPacketInfo', args[1], 'Packet info display', 'PacketInfo')
     elseif command == 'debug' then
         toggleMode('debug', args[1], 'Debug mode', 'debug mode')
+    elseif command == 'independent' then
+        toggleMode('independent', args[1], 'Independent mode', 'independent mode')    
     elseif txtbox_cmd_map[command] ~= nil then
         local boxName = txtbox_cmd_map[command]
         if utils.posCommand(boxName, args) then
@@ -326,46 +329,46 @@ utils.get_player_id = _libs.lor.advutils.scached(_get_player_id)
 
 function utils.register_offensive_debuff(args, cancel)
     local argstr = table.concat(args,' ')
-    local spell_name = utils.formatSpellName(argstr)
-    local spell = getActionFor(spell_name)
+    local spell_name = utils.formatActionName(argstr)
+    local spell = utils.getActionFor(spell_name)
     if (spell ~= nil) then
         if Assert.can_use(spell) then
             offense.maintain_debuff(spell, cancel)
         else
-            atc(123,'Error: Unable to cast '..spell.en)
+            atcfs(123,'Error: Unable to cast %s', spell.en)
         end
     else
-        atc(123,'Error: Invalid spell name: '..spell_name)
+        atcfs(123,'Error: Invalid spell name: %s', spell_name)
     end
 end
 
 
-function utils.register_spam_spell(args)
+function utils.register_spam_action(args)
     local argstr = table.concat(args,' ')
-    local spell_name = utils.formatSpellName(argstr)
-    local spell = getActionFor(spell_name)
-    if (spell ~= nil) then
-        if Assert.can_use(spell) then
-            settings.nuke.name = spell.en
-            atc('Will now spam '..settings.nuke.name)
+    local action_name = utils.formatActionName(argstr)
+    local action = utils.getActionFor(action_name)
+    if (action ~= nil) then
+        if Assert.can_use(action) then
+            settings.spam.name = action.en
+            atcfs('Will now spam %s', settings.spam.name)
         else
-            atc(123,'Error: Unable to cast '..spell.en)
+            atcfs(123,'Error: Unable to cast %s', action.en)
         end
     else
-        atc(123,'Error: Invalid spell name: '..spell_name)
+        atcfs(123,'Error: Invalid action name: %s', action_name)
     end
 end
 
 
 function utils.register_ws(args)
     local argstr = table.concat(args,' ')
-    local wsname = utils.formatSpellName(argstr)
-    local ws = getActionFor(wsname)
+    local wsname = utils.formatActionName(argstr)
+    local ws = utils.getActionFor(wsname)
     if (ws ~= nil) then
-        settings.ws.name = wsname
-        atc('Will now use '..wsname)
+        settings.ws.name = ws.en
+        atcfs('Will now use %s', ws.en)
     else
-        atc(123,'Error: Invalid weaponskill name: '..wsname)
+        atcfs(123,'Error: Invalid weaponskill name: %s', wsname)
     end
 end
 
@@ -447,38 +450,38 @@ function toggleMode(mode, cmd, msg, msgErr)
 end
 
 function disableCommand(cmd, disable)
-	local msg = ' is now '..(disable and 'disabled.' or 're-enabled.')
-	if S{'cure','cures','curing'}:contains(cmd) then
-		if (not disable) then
-			if (settings.maxCureTier == 0) then
-				settings.disable.cure = true
-				atc(123,'Error: Unable to enable curing because you have no Cure spells available.')
-				return
-			end
-		end
-		settings.disable.cure = disable
-		atc('Curing'..msg)
-	elseif S{'curaga'}:contains(cmd) then
-		settings.disable.curaga = disable
-		atc('Curaga use'..msg)
-	elseif S{'na','heal_debuff','cure_debuff'}:contains(cmd) then
-		settings.disable.na = disable
-		atc('Removal of status effects'..msg)
-	elseif S{'buff','buffs','buffing'}:contains(cmd) then
-		settings.disable.buff = disable
-		atc('Buffing'..msg)
-	elseif S{'debuff','debuffs','debuffing'}:contains(cmd) then
-		settings.disable.debuff = disable
-		atc('Debuffing'..msg)
-	elseif S{'nuke','nukes','nuking'}:contains(cmd) then
-		settings.disable.nuke = disable
-		atc('Nuking'..msg)
-	elseif S{'ws','weaponskill','weaponskills','weaponskilling'}:contains(cmd) then
-		settings.disable.ws = disable
-		atc('Weaponskilling'..msg)
-	else
-		atc(123,'Error: Invalid argument for disable/enable: '..cmd)
-	end
+    local msg = ' is now '..(disable and 'disabled.' or 're-enabled.')
+    if S{'cure','cures','curing'}:contains(cmd) then
+        if (not disable) then
+            if (settings.maxCureTier == 0) then
+                settings.disable.cure = true
+                atc(123,'Error: Unable to enable curing because you have no Cure spells available.')
+                return
+            end
+        end
+        settings.disable.cure = disable
+        atc('Curing'..msg)
+    elseif S{'curaga'}:contains(cmd) then
+        settings.disable.curaga = disable
+        atc('Curaga use'..msg)
+    elseif S{'na','heal_debuff','cure_debuff'}:contains(cmd) then
+        settings.disable.na = disable
+        atc('Removal of status effects'..msg)
+    elseif S{'buff','buffs','buffing'}:contains(cmd) then
+        settings.disable.buff = disable
+        atc('Buffing'..msg)
+    elseif S{'debuff','debuffs','debuffing'}:contains(cmd) then
+        settings.disable.debuff = disable
+        atc('Debuffing'..msg)
+    elseif S{'spam','nuke','nukes','nuking'}:contains(cmd) then
+        settings.disable.spam = disable
+        atc('Spamming'..msg)
+    elseif S{'ws','weaponskill','weaponskills','weaponskilling'}:contains(cmd) then
+        settings.disable.ws = disable
+        atc('Weaponskilling'..msg)
+    else
+        atc(123,'Error: Invalid argument for disable/enable: '..cmd)
+    end
 end
 
 function monitorCommand(cmd, pname)
@@ -525,13 +528,13 @@ function monitorCommand(cmd, pname)
 end
 
 function validate(args, numArgs, message)
-	for i = 1, numArgs do
-		if (args[i] == nil) then
-			atc(message..' ('..i..')')
-			return false
-		end
-	end
-	return true
+    for i = 1, numArgs do
+        if (args[i] == nil) then
+            atc(message..' ('..i..')')
+            return false
+        end
+    end
+    return true
 end
 
 function utils.getPlayerName(name)
@@ -561,13 +564,13 @@ function utils.getTarget(targ)
 end
 
 function getPartyMember(name)
-	local party = windower.ffxi.get_party()
-	for _,pmember in pairs(party) do
-		if (type(pmember) == 'table') and (pmember.name == name) then
-			return pmember
-		end
-	end
-	return nil
+    local party = windower.ffxi.get_party()
+    for _,pmember in pairs(party) do
+        if (type(pmember) == 'table') and (pmember.name == name) then
+            return pmember
+        end
+    end
+    return nil
 end
 
 function utils.getMainPartyList()
@@ -583,22 +586,15 @@ function utils.getMainPartyList()
 end
 
 --[[
-	Returns the resource information for the given spell or ability name
+    Returns the resource information for the given spell or ability name
 --]]
-function getActionFor(actionName)
-    local spell = res.spells:with('en', actionName)
-    local abil = res.job_abilities:with('en', actionName)
-    local ws = res.weapon_skills:with('en', actionName)
-    
-    local found = spell or abil or ws or nil
-    if found ~= nil then
-        return found
-    end
-    
+function utils.getActionFor(actionName)
     local lower_name = actionName:lower()
-    for _,ws in pairs(res.weapon_skills) do
-        if ws.en:lower() == lower_name then
-            return ws
+    for _,artype in pairs(action_resource_types) do
+        local action = lc_res[artype][lower_name]
+        if action ~= nil then
+            atcd('%s %s %s[%s]: %s':format(actionName,rarr,artype,action.id,action.en))
+            return action
         end
     end
     return nil
@@ -608,7 +604,7 @@ end
 --          String Formatting Functions
 --==============================================================================
 
-function utils.formatSpellName(text)
+function utils.formatActionName(text)
     if (type(text) ~= 'string') or (#text < 1) then return nil end
     
     local fromAlias = hb_config.aliases[text]
@@ -616,7 +612,7 @@ function utils.formatSpellName(text)
         return fromAlias
     end
     
-    local spell_from_lc = lc_spells[text:lower()]
+    local spell_from_lc = lc_res.spells[text:lower()]
     if spell_from_lc ~= nil then
         return spell_from_lc.en
     end
@@ -648,21 +644,21 @@ end
 
 
 function formatName(text)
-	if (text ~= nil) and (type(text) == 'string') then
-		return text:lower():ucfirst()
-	end
-	return text
+    if (text ~= nil) and (type(text) == 'string') then
+        return text:lower():ucfirst()
+    end
+    return text
 end
 
 function toRomanNumeral(val)
-	if type(val) ~= 'number' then
-		if type(val) == 'string' then
-			val = tonumber(val)
-		else
-			return nil
-		end
-	end
-	return dec2roman[val]
+    if type(val) ~= 'number' then
+        if type(val) == 'string' then
+            val = tonumber(val)
+        else
+            return nil
+        end
+    end
+    return dec2roman[val]
 end
 
 --==============================================================================
@@ -670,7 +666,7 @@ end
 --==============================================================================
 
 function printStatus()
-	windower.add_to_chat(1, 'HealBot is now '..(active and 'active' or 'off')..'.')
+    windower.add_to_chat(1, 'HealBot is now '..(active and 'active' or 'off')..'.')
 end
 
 --==============================================================================
@@ -685,7 +681,7 @@ function load_configs()
             actionInfo={x=0,y=0,visible=true},
             montoredBox={x=-150,y=600,font='Arial',size=10,visible=true}
         },
-        nuke = {name='Stone'},
+        spam = {name='Stone'},
         healing = {min={cure=3,curaga=1,waltz=2,waltzga=1},curaga_min_targets=2},
         disable = {curaga=false},
         ignoreTrusts=true
@@ -755,7 +751,7 @@ function update_settings(loaded)
         disable = {},
         follow = {delay = 0.08, distance = 3},
         healing = {minCure = 3, minCuraga = 1, minWaltz = 2, minWaltzga = 1},
-        nuke = {}
+        spam = {}
     })
 end
 
@@ -787,22 +783,22 @@ end
 --==============================================================================
 
 function getPrintable(list, inverse)
-	local qstring = ''
-	for index,line in pairs(list) do
-		local check = index
-		local add = line
-		if (inverse) then
-			check = line
-			add = index
-		end
-		if (tostring(check) ~= 'n') then
-			if (#qstring > 1) then
-				qstring = qstring..'\n'
-			end
-			qstring = qstring..add
-		end
-	end
-	return qstring
+    local qstring = ''
+    for index,line in pairs(list) do
+        local check = index
+        local add = line
+        if (inverse) then
+            check = line
+            add = index
+        end
+        if (tostring(check) ~= 'n') then
+            if (#qstring > 1) then
+                qstring = qstring..'\n'
+            end
+            qstring = qstring..add
+        end
+    end
+    return qstring
 end
 
 --======================================================================================================================
@@ -877,12 +873,12 @@ Copyright © 2016, Lorand
 All rights reserved.
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the
 following conditions are met:
-	* Redistributions of source code must retain the above copyright notice, this list of conditions and the
-	  following disclaimer.
-	* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
-	  following disclaimer in the documentation and/or other materials provided with the distribution.
-	* Neither the name of ffxiHealer nor the names of its contributors may be used to endorse or promote products
-	  derived from this software without specific prior written permission.
+    * Redistributions of source code must retain the above copyright notice, this list of conditions and the
+      following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the
+      following disclaimer in the documentation and/or other materials provided with the distribution.
+    * Neither the name of ffxiHealer nor the names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
 INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL Lorand BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR

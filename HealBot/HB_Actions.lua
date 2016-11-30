@@ -82,47 +82,48 @@ function actions.get_defensive_action()
 end
 
 
+local function perform_action(action, target_str)
+    if action == nil then return end
+    local act = action.action
+    local target_name = action.name
+    local msg = action.msg or ''
+    target_str = target_str or target_name
+    atcd(act.en..sparr..target_name..msg)   --Debug message
+    wcmd(act.prefix, act.en, target_str)    --Send cmd to windower
+end
+
+
 function actions.take_action(player, partner, targ)
     buffs.checkOwnBuffs()
     local_queue_reset()
     local action = actions.get_defensive_action()
     if (action ~= nil) then         --If there's a defensive action to perform
-        local act = action.action
-        local target_name = action.name
-        local msg = action.msg or ''
-        
         --Record attempt time for buffs/debuffs
-        buffs.buffList[target_name] = buffs.buffList[target_name] or {}
-        if (action.type == 'buff') and (buffs.buffList[target_name][action.buff]) then
-            buffs.buffList[target_name][action.buff].attempted = os.clock()
+        buffs.buffList[action.name] = buffs.buffList[action.name] or {}
+        if (action.type == 'buff') and (buffs.buffList[action.name][action.buff]) then
+            buffs.buffList[action.name][action.buff].attempted = os.clock()
         elseif (action.type == 'debuff') then
-            buffs.debuffList[target_name][action.debuff.id].attempted = os.clock()
+            buffs.debuffList[action.name][action.debuff.id].attempted = os.clock()
         end
-        
-        atcd(act.en..sparr..target_name..msg)         --Debug message
-        wcmd(act.prefix, act.en, target_name)         --Send command to windower
+        perform_action(action)
     else                        --Otherwise, there may be an offensive action
-        if (targ ~= nil) then
-            local partner_engaged = (partner.status == 1)
+        if (targ ~= nil) or modes.independent then
             local self_engaged = (player.status == 1)
-            if (player.target_index == partner.target_index) then
-                if offense.assist.engage and partner_engaged and (not self_engaged) then
-                    healer.actor:send_cmd('input /attack on')
-                else
-                    local action = actions.get_offensive_action()
-                    if (action ~= nil) then
-                        local act = action.action
-                        local target_name = action.name
-                        local msg = action.msg or ''
-                        
-                        atcd(act.en..sparr..target_name..msg) --Debug message
-                        wcmd(act.prefix, act.en, '<t>') --Send cmd to windower
+            if (targ ~= nil) then
+                local partner_engaged = (partner.status == 1)
+                if (player.target_index == partner.target_index) then
+                    if offense.assist.engage and partner_engaged and (not self_engaged) then
+                        healer.actor:send_cmd('input /attack on')
+                    else
+                        perform_action(actions.get_offensive_action(player), '<t>')
+                    end
+                else                            --Different targets
+                    if partner_engaged and (not self_engaged) then
+                        healer.actor:send_cmd('input /as '..offense.assist.name)
                     end
                 end
-            else                            --Different targets
-                if partner_engaged and (not self_engaged) then
-                    healer.actor:send_cmd('input /as '..offense.assist.name)
-                end
+            elseif self_engaged and modes.independent then
+                perform_action(actions.get_offensive_action(player), '<t>')
             end
             offense.cleanup()
         end
@@ -134,13 +135,13 @@ end
 	Builds an action queue for offensive actions.
     Returns the action deemed most important at the time.
 --]]
-function actions.get_offensive_action()
-	local player = windower.ffxi.get_player()
+function actions.get_offensive_action(player)
+	player = player or windower.ffxi.get_player()
 	local target = windower.ffxi.get_mob_by_target()
     if target == nil then return nil end
     local action = {}
     
-    --Prioritize debuffs over nukes/ws for now
+    --Prioritize debuffs over nukes/ws
     local dbuffq = offense.getDebuffQueue(player, target)
     while not dbuffq:empty() do
         local dbact = dbuffq:pop()
@@ -155,7 +156,7 @@ function actions.get_offensive_action()
         return action.db
     end
     
-    if (not settings.disable.ws) and (settings.ws ~= nil) and Assert.ready_to_use(getActionFor(settings.ws.name)) then
+    if (not settings.disable.ws) and (settings.ws ~= nil) and Assert.ready_to_use(utils.getActionFor(settings.ws.name)) then
         local sign = settings.ws.sign or '>'
         local hp = settings.ws.hp or 0
         local hp_ok = ((sign == '<') and (target.hpp <= hp)) or ((sign == '>') and (target.hpp >= hp))
@@ -166,6 +167,7 @@ function actions.get_offensive_action()
             local partner = getPartyMember(pname)
             if (partner ~= nil) then
                 partner_ok = partner.tp >= settings.ws.partner.tp
+                --partner_ok = partner.tp <= 500
             else
                 partner_ok = false
                 atc(123,'Unable to locate weaponskill partner '..pname)
@@ -173,14 +175,24 @@ function actions.get_offensive_action()
         end
         
         if (hp_ok and partner_ok) then
-            return {action=getActionFor(settings.ws.name),name='<t>'}
+            return {action=utils.getActionFor(settings.ws.name),name='<t>'}
         end
-    elseif (not settings.disable.nuke) and settings.nuke.active and (settings.nuke.name ~= nil) then
-        local spell = getActionFor(settings.nuke.name)
-        if (player.vitals.mp >= spell.mp_cost) and (target.hpp > 0) and Assert.ready_to_use(spell) and Assert.in_casting_range('<t>') then
-            return {action=spell,name='<t>'}
+    elseif (not settings.disable.spam) and settings.spam.active and (settings.spam.name ~= nil) then
+        local spam_action = utils.getActionFor(settings.spam.name)
+        if (target.hpp > 0) and Assert.ready_to_use(spam_action) and Assert.in_casting_range('<t>') then
+            local _p_ok = (player.vitals.mp >= spam_action.mp_cost)
+            if spam_action.tp_cost ~= nil then
+                _p_ok = (_p_ok and (player.vitals.tp >= spam_action.tp_cost))
+            end
+            if _p_ok then
+                return {action=spam_action,name='<t>'}
+            else
+                atcd('MP/TP not ok for '..settings.spam.name)
+            end
         end
     end
+    
+    atcd('get_offensive_action: no offensive actions to perform')
 	return nil
 end
 
