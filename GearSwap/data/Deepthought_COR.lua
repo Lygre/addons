@@ -112,15 +112,15 @@ function init_gear_sets()
 	sets.precast.CorsairShot = {ammo=gear.MAbullet,
 		head="Carmine Mask",neck="Sanctity necklace",ear1="Friomisi Earring",ear2="Infused earring",
 		body="Rawhide Vest",hands="Pursuer's Cuffs",ring1="Etana Ring",ring2="Perception Ring",
-		back="Toro Cape",waist="Eschan Stone",legs="Rawhide Trousers",feet="Lanun Bottes +1" }
+		back="Toro Cape",waist="Eschan Stone",legs=gear.deep.cor.herclegs_mab,feet="Lanun Bottes +1" }
 	sets.precast.CorsairShot.Resistant = {ammo=gear.QDbullet,
 		head="Blood Mask",neck="Sanctity necklace",ear1="Friomisi Earring",ear2="Infused earring",
 		body="Samnuha Coat",hands="Pursuer's Cuffs",ring1="Acumen Ring",ring2="Arvina Ringlet +1",
-		back="Gunslinger's Cape",waist="Eschan Stone",legs=gear.herclegs_qd,feet="Chasseur's bottes +1"}
+		back="Gunslinger's Cape",waist="Eschan Stone",legs=gear.deep.cor.herclegs_mab,feet="Chasseur's bottes +1"}
 	sets.precast.CorsairShot['Light Shot'] = {ammo=gear.QDbullet,
-		head="Blood Mask",neck="Sanctity Necklace",ear1="Enchanter Earring +1",ear2="Gwati Earring",
-		body="Chasseur's frac +1",hands="Leyline gloves",ring1="Arvina Ringlet +1",ring2="Weatherspoon Ring",
-		back="Gunslinger's Cape",waist="Eschan Stone",legs=gear.herclegs_qd,feet="Chasseur's bottes +1"}
+		head="Carmine Mask",neck="Sanctity Necklace",ear1="Neritic Earring",ear2="Infused Earring",
+		body="Meghanada Cuirie",hands="Pursuer's Cuffs",ring1="Vertigo Ring",ring2="Perception Ring",
+		back="Gunslinger's Cape",waist="Yemaya Belt",legs=gear.deep.cor.herclegs_mab,feet="Meghanada Jambeaux +1"}
 	
 	sets.precast.CorsairShot['Dark Shot'] = set_combine(sets.precast.CorsairShot['Light Shot'], 
 		{ring2="Archon Ring"})
@@ -167,7 +167,7 @@ function init_gear_sets()
 	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {legs="Nahtirah Trousers"})
 
 	sets.precast.WS['Last Stand'] = {ammo=gear.WSbullet,
-		head="Meghanada Visor +1",neck="Sanctity Necklace",ear1="Ishvara Earring",ear2="Infused Earring",
+		head="Meghanada Visor +1",neck="Ocachi Gorget",ear1="Ishvara Earring",ear2="Neritic Earring",
 		body="Meghanada Cuirie",hands="Meghanada Gloves +1",ring1="Petrov Ring",ring2="Rajas Ring",
 		back="Camulus's Mantle",waist="Yemaya Belt",legs="Meghanada Chausses +1",feet="Meghanada Jambeaux +1"}
 
