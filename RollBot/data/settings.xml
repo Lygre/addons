@@ -1,0 +1,16 @@
+<?xml version="1.1" ?>
+<settings>
+	<global>
+		<profile>
+			<standard_melee>
+				<rolls>
+					<1>Samurai Roll</1>
+					<2>Chaos Roll</2>
+				</rolls>
+				<crooked>
+					<1>Samurai Roll</1>
+				</crooked>
+			</standard_melee>
+		</profile>
+	</global>
+</settings>

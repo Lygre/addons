@@ -2,7 +2,7 @@ _addon.name = 'RollBot'
 _addon.author = 'Lygre'
 _addon.commands = {'rollbot','rb','rbot'}
 _addon.version = '1.0.1'
-_addon.lastUpdate = '2016.12.10'
+_addon.lastUpdate = '2016.12.03'
 
 require('luau')
 packets = require('packets')
@@ -37,8 +37,8 @@ local profiles = {}
 -- local focusMembers = {}
 
 function math.round(num, prec)
-	local mult = 10^(prec or 0)
-	return (math.floor(num * mult + 0.5) / mult)
+    local mult = 10^(prec or 0)
+    return (math.floor(num * mult + 0.5) / mult)
 end
 
 profiles = {
@@ -47,13 +47,7 @@ profiles = {
 			[1] = "Samurai Roll",
 			[2] = "Chaos Roll"},
 		crooked = {[1]="Samurai Roll"}
-	},
-	['mab_mp'] = {
-		rolls = {
-			[1] = "Wizard's Roll",
-			[2] = "Evoker's Roll"},
-		crooked = {[1]="Wizard's Roll"}
-	},
+	}
 }
 windower.register_event('load', function()
 	zone_enter_rb = os.clock()-25
@@ -66,8 +60,6 @@ windower.register_event('load', function()
 	indoor_zones = S{0,26,53,223,224,225,226,230,231,232,233,234,235,236,237,238,239,240,241,242,243,244,245,246,247,248,249,250,252,256,257,280,284}
 	crookedRoll = 0
 	get_active_rolls()
-	oldState = false
-	active = false
 end)
 
 windower.register_event('zone change', function(new_id, old_id)
@@ -95,15 +87,9 @@ function loadProfile(pname)
 	set_rolls[1] = profile.rolls[1]
 	set_rolls[2] = profile.rolls[2]
 	crookedRoll = profile.crooked[1]
-	-- print(set_rolls[1],set_rolls[2],crookedRoll)
+	print(set_rolls[1],set_rolls[2],crookedRoll)
 end
-windower.register_event('lose buff', function(buff_id)
-	for k,v in pairs(active_rolls) do
-		if res.buffs[buff_id].en == k then
-			active_rolls[k] = nil
-		end
-	end
-end)
+-- windower.register_event('lose buff',)
 --[[
 Recreates rollInfoTemp into table rollInfo
 ]]--
@@ -120,10 +106,8 @@ windower.register_event('addon command', function (command,...)
 		windower.send_command('lua %s %s':format(command, _addon.name))
 	elseif S{'on','enable'}:contains(command) then
 		enabled = true
-		active = true
 		windower.add_to_chat(204, 'RollBot On')
-		-- roll()
-		-- update()
+		roll()
 	elseif S{'off','disable','stop'}:contains(command) then
 		enabled = false
 		windower.add_to_chat(204, 'Rollbot Off')
@@ -188,21 +172,14 @@ windower.register_event('addon command', function (command,...)
 			local index = get_focus_info(arg_str2)
 			local focusname = windower.ffxi.get_mob_by_index(index).name
 
-			if not focusMembers then
-				focusMembers = {} 
-				focusMembers[1] = {name=focusname,distance=0} 
-				windower.add_to_chat(204, focusname .. ' added to Focus list.')
-			else 
-				for i,v in ipairs(focusMembers) do
-					if focusMembers[i].name == focusname then 
-						windower.add_to_chat(204, 'Focus target alrdy exists')
-						break
-					else 
-						table.append(focusMembers,{name=focusname,distance=0}) 
-						windower.add_to_chat(204, focusname .. ' added to Focus list.')
-					end
+			if not focusMembers then focusMembers = {} end
+
+			-- for i,v in pairs(focusMembers) do
+				if not table.contains(focusMembers, focusname) then 
+					table.append(focusMembers,{name=focusname,distance=0}) 
 				end
-			end
+			-- end
+			windower.add_to_chat(204, focusMembers[#focusMembers].name .. ' added to Focus list.')
 		end
 	else
 		windower.add_to_chat(204, 'Unknown command')
@@ -216,17 +193,13 @@ windower.register_event('prerender', function(spell)
 	else
 		fps = 1
 	end	
-	if fps == 1 and enabled then
-		update()
-		if active then
-			roll()
-		end
+	if fps == 1 then
+		roll()
 	end
 end)
 
 function roll()
-	-- update()
-	-- if enabled then
+	if enabled then
 		if set_rolls then
 			if check_timer('Phantom Roll') then
 				for i,v in ipairs(set_rolls) do
@@ -249,64 +222,29 @@ function roll()
 						if get_recast('Snake Eye') < get_recast('Phantom Roll') then
 							if check_timer('Snake Eye') and not buffactive('Snake Eye') then
 								windower.send_command('input /ja "Snake Eye" <me>;wait 1;input /ja "Double-Up" <me>')
-								check_probabilities('Double-Up')
 							end
 						else 
 							windower.send_command('input /ja "Double-Up" <me>')
-							check_probabilities('Double-Up')
 						end
 						-- if get_recast('Snake Eye') < get_recast('Phantom Roll') and (get_recast('Phantom Roll') - get_recast('Snake Eye')) > 2 then
 						-- end
 					elseif rollnum == RollLuckyUnlucky[currentRoll][2] then
 						if check_timer('Snake Eye') and not buffactive('Snake Eye') then
 							windower.send_command('input /ja "Snake Eye" <me>;wait 1;input /ja "Double-Up" <me>')
-							check_probabilities('Double-Up')
 						end 
 					elseif rollnum == 10 then
 						if check_timer('Snake Eye') and not buffactive('Snake Eye') then
 							windower.send_command('input /ja "Snake Eye" <me>;wait 1;input /ja "Double-Up" <me>')
-							check_probabilities('Double-Up')
 						end
 					elseif rollnum < 6 and rollnum ~= RollLuckyUnlucky[currentRoll][1] then
 						windower.send_command('input /ja "Double-Up" <me>')
-						check_probabilities('Double-Up')
 					end
-				end
-			end
-		end
-	-- end
-end
-
---[[	Calculates probabilities based on present conditions	]]--
-function check_probabilities(action)
-	if action == 'Double-Up' then
-		for k,v in pairs(active_rolls) do
-			if currentRoll == active_rolls[k].name and buffactive("Double-Up Chance") then
-				local luckdist = RollLuckyUnlucky[currentRoll][1] - active_rolls[k].value
-				local baddist = RollLuckyUnlucky[currentRoll][2] -  active_rolls[k].value
-				local luckprob = 0
-				if math.sgn(luckdist) == 1 then
-					for hypotheticalRoll=1,luckdist do
-						for i=luckdist-(hypotheticalRoll-1),1,-1 do
-							for u=0,i do
-								if i+u == RollLuckyUnlucky[currentRoll][1] then
-									luckprob = luckprob + (hypotheticalRoll*0.167)
-								end
-							end
-						end
-					end
-					atc('Prob of lucky: '..luckprob..'')
-				end
-				if active_rolls[k].value < 6 then
-					atc('Chance of Busting: 0%')
-				else
-					local bchance = (active_rolls[k].value + 6 - 11)/6
-					atc('Chance of Busting: '..bchance'')
 				end
 			end
 		end
 	end
 end
+
 --[[
 	Returns recast for specified ability in seconds
 ]]--
@@ -342,9 +280,7 @@ function get_active_rolls()
 		for _,bid in pairs(player.buffs) do
 			local buff = res.buffs[bid].en
 			if buff:contains('Roll') then
-				if not active_rolls[buff] then
-					active_rolls[buff] = {name=buff,value=0}
-				end
+				active_rolls[buff] = {name=buff,value=0}
 			end
 		end
 	end
@@ -352,31 +288,30 @@ end
 
 function update()
 	get_active_rolls()
-	oldState = active
+	local oldState = enabled
 	local bool,fname,fdist = check_focus_distance()
 	if focusMembers then
 		for i,v in ipairs(focusMembers) do
 			focusMembers[i] = {name=fname,distance=fdist}
-			-- print(focusMembers[i].name,focusMembers[i].distance)
+			print(focusMembers[i].name,focusMembers[i].distance)
 		end
 	end
-	if (oldState ~= bool) then
+	if oldState then
 		if bool then
-			active = true
+			enabled = true
 			windower.add_to_chat(204, 'All focus targets in range, starting/resuming rolls')
 		else
-			active = false
+			enabled = false
 			windower.add_to_chat(204, 'Not all focus targets in range of rolls. Pausing until closer')
 		end
-	-- else
-	-- 	if bool then
-	-- 		enabled = true
-	-- 		-- windower.add_to_chat(204, 'All focus targets in range')
-	-- 	else
-	-- 		enabled = false
-	-- 		-- windower.add_to_chat(204, 'Not all focus targets in range of rolls.')
-	-- 	end
+	else
+		if bool then
+			windower.add_to_chat(204, 'All focus targets in range')
+		else
+			windower.add_to_chat(204, 'Not all focus targets in range of rolls.')
+		end
 	end
+	return enabled
 end
 
 function check_focus_distance()
@@ -393,8 +328,10 @@ function check_focus_distance()
 			end
 		end
 	end
-	return true
 end
+-- windower.register_event('lose buff', function()
+
+-- end)
 --[[
 	Returns true if ability recast is ready, false otherwise
 ]]--
@@ -433,9 +370,6 @@ function buffactive(...)
 	return false
 end
 
-function atc(text)
-	windower.add_to_chat(204, text)
-end
 ---Need to add recognition of rolls from others being applied to us, and a function to remove said rolls from active_rolls table when they wear
 windower.register_event('action', function(act)
 	if act.category == 6 and table.containskey(rollInfo, act.param) then
@@ -448,13 +382,11 @@ windower.register_event('action', function(act)
 			windower.add_to_chat(204, '*-*-*-*-*-*-*-*-* [ '..boo..' ] *-*-*-*-*-*-*-*-*')
 			for i,v in pairs(set_rolls) do
 				if set_rolls[i] == boo then
-					active_rolls[v] = {name = v, value = rollnum}
-					-- print(my_rolls[boo].name,my_rolls[boo].value)
-					windower.add_to_chat(204, '*-*-*-*-*-*-*-*-* [ '..set_rolls[i]..' = '..rollnum..' ] *-*-*-*-*-*-*-*-*')
-					if table.count(my_rolls) < 2 then
-						table.append(my_rolls,{name = boo, value = rollnum})
-					else 
-						my_rolls[1] = {name = boo, value = rollnum}
+					if table.length(my_rolls) < 3 then
+						table.append(my_rolls,{name = boo, value = rollNum})
+						active_rolls[boo] = {name = boo, value = rollNum}
+						-- print(my_rolls[boo].name,my_rolls[boo].value)
+						windower.add_to_chat(204, '*-*-*-*-*-*-*-*-* [ '..set_rolls[i]..' = '..rollNum..' ] *-*-*-*-*-*-*-*-*')
 					end
 				end
 			end
@@ -463,7 +395,7 @@ windower.register_event('action', function(act)
 			for i=0,5,1 do
 				if party['p'..i].mob.id == rollActor then
 					-- print('no wai')
-					active_rolls[boo] = {name=boo, value = rollnum}
+					active_rolls[boo] = {name=boo, value = rollNum}
 					break 
 				end
 			end  
