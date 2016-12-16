@@ -451,7 +451,7 @@ function init_gear_sets()
 														{ring1="Arvina Ringlet +1"})
 	sets.midcast['Blue Magic'].MagicalDex = set_combine(sets.midcast['Blue Magic'].Magical,
 	{})
-
+	sets.midcast['Blue Magic'].MagicalStr = set_combine(sets.midcast['Blue Magic'].Magical,{head="Jhakri Coronal +1",legs="Jhakri Slops +1",feet="Jhakri Pigaches +1"})
 	sets.midcast['Blue Magic']['Tenebral Crush'] = set_combine(sets.midcast['Blue Magic'].Magical,{head="Pixie Hairpin +1",ring2="Archon Ring"})
 	sets.midcast['Blue Magic'].MagicAccuracy = {ammo="Pemphredo Tathlum",
 	head="Carmine Mask +1",neck="Sanctity necklace",ear1="Digni. earring",ear2="Gwati Earring",
